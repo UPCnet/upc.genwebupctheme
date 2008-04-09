@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="upc.genwebupctheme.various"
+               version="20080409-01"
+               handler="upc.genwebupctheme.setuphandlers.setupVarious"
+               title="Tema genwebUPC: miscellaneous import steps">
+    <dependency step="skins" />
+    Various import steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+</import-steps>
