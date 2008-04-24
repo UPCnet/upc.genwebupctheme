@@ -5,9 +5,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Tema genwebUPC"
+      title="genweb UPC skin"
       directory="profiles/default"
-      description='Extension profile for the "Tema genwebUPC" Plone theme.'
+      description='Extension profile for the "genweb UPC skin" Plone theme.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
