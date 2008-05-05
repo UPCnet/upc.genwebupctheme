@@ -2,6 +2,11 @@ MANIFEST.in
 README.txt
 setup.cfg
 setup.py
+upc.genwebupctheme-configure.zcml
+docs/HISTORY.txt
+docs/INSTALL.txt
+docs/LICENSE.GPL
+docs/LICENSE.txt
 upc/__init__.py
 upc.genwebupctheme.egg-info/PKG-INFO
 upc.genwebupctheme.egg-info/SOURCES.txt
@@ -9,6 +14,7 @@ upc.genwebupctheme.egg-info/dependency_links.txt
 upc.genwebupctheme.egg-info/entry_points.txt
 upc.genwebupctheme.egg-info/namespace_packages.txt
 upc.genwebupctheme.egg-info/not-zip-safe
+upc.genwebupctheme.egg-info/paster_plugins.txt
 upc.genwebupctheme.egg-info/requires.txt
 upc.genwebupctheme.egg-info/top_level.txt
 upc/genwebupctheme/__init__.py
