@@ -35,6 +35,15 @@
          />
 -->
 
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
+
     <!-- Zope 3 browser resources -->
 
     <!-- Resource directory for images

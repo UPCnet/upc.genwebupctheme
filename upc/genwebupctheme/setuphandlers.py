@@ -7,5 +7,7 @@ def setupVarious(context):
 
     if context.readDataFile('upc.genwebupctheme_various.txt') is None:
         return
-
-    # Add additional setup code here
+    
+    site = context.getSite()
+    if not getattr(site,'banners_peu',False):
+        site.invokeFactory(id='banners_peu',title='banners_peu',type_name='Folder')        
