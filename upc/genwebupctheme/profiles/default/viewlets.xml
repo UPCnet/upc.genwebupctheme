@@ -15,6 +15,11 @@
        The 'based-on' attribute lets you inherit the viewlets ordering from an
        existing skin.
        -->
+       
+  <order manager="plone.portalheader" skinname="Tema genwebUPC"
+         based-on="Plone Default">
+    <viewlet name="upc.genweb.capsaleraSuperior" insert-before="*" />
+  </order>
   <order manager="plone.portalfooter" skinname="Tema genwebUPC"
          based-on="Plone Default">
     <!-- The definition of a viewlet accepts these parameters:

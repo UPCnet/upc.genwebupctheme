@@ -1,0 +1,275 @@
+/* CSS UPC GENWEB 3.0 */
+
+
+/************************************************************************************ GENERAL ******************************************************************/
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #333333;
+	font-size: 0.7em;
+	background: url(../img/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
+/*	background: #ffffff;*/
+}
+a:link {	color:#0076cc;	text-decoration: none;}
+a:visited {	color: #0076cc;	text-decoration: none;}
+a:hover {	color: #0076cc; 	text-decoration: underline;}
+a:active {	color: #0076cc; 	text-decoration: none;}
+img {border:none;} /*les imatges links sense resaltar amb línia*/
+
+ul{
+	margin: 0px;
+	padding: 0px;
+}
+
+form{ margin: 0px; }
+input.text, input.password{
+	font-size: 11px;
+	padding: 0px 1px 1px 1px;
+	border: 1px solid #FF6600; /*específic 1*/
+	background: url(../img/fonsInput.gif) repeat-x;
+}
+
+
+input.radio{
+	margin-right:5px;	
+	margin-bottom:-2px;
+	margin-top: 2px;
+	}
+
+input.button{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	margin-bottom:5px;
+	margin-top: 5px;
+	padding: 0px 1px;
+}
+
+.submitGo {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background: url(++resource++upc.genwebupctheme.images/go.gif) no-repeat right bottom;
+  overflow: hidden;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+}
+
+h1 {
+font-size:1.3em;
+font-weight:bold;
+color:#CC0000; /*específic3*/
+margin:0px;
+}
+
+
+#baner{
+	margin-bottom:20px;
+	text-align:right;
+}
+#baner img {	border: 1px solid #0076cc;	margin-bottom:20px;}
+
+
+
+
+
+
+#contenidor{
+	margin: 0px auto;
+	padding: 0;
+	width: 958px;
+}
+/********************************************************************** CAPÇALERA *******************************************************************************/
+/******************************************************************* ELEMENTS COMUNS ****************************************************************************/
+#capcalera{ }
+.barraCerca{
+margin: 0px 0px 0px 5px;
+float:right;
+}
+.go {
+position:relative;
+top:4px;
+padding-left:5px;
+}
+.quadradet{
+background-color:#FF6600; /*específic 1*/
+margin-bottom:1px;
+width:4px;
+height:5px;
+}
+.souA {margin: 5px 0px 60px 5px; font-size:0.9em;}
+.connexio {margin-top:-6px;}
+.connexio a{margin-left:25px;}
+.connexio b{color:#4D4D4D;}
+/********************************************************************** CONTINGUT *******************************************************************************/
+.contingut{
+	text-align: left;
+	line-height: 1.5em;
+}
+/* PER A COLUMNES PROPORCIONADES 200 - X - 150
+.columnaEsq{
+	float:left;
+	width:200px;
+}
+.columnaCentre{
+	margin-right: 175px;
+	margin-left:225px;
+}
+*/
+/* PER A COLUMNES X - 200 - 150 */
+.columnaMenu{
+	float:left;
+	width:200px;
+}
+.columnaCentreMenu{
+	margin-left:225px;
+	margin-bottom:20px;
+}
+.columnaEsq{
+	float:right;
+	width:200px;
+	margin-right: 25px;
+}
+
+.columnaCentre{
+	margin-right: 400px;
+}
+
+.columnaCentreCentrada{
+	margin-left:225px;
+	margin-right: 175px;
+}
+.columnaDreta{
+	width: 150px;
+	float: right;
+}
+.iconesContingut{
+text-align:right;
+float:right;
+width:150px;
+}
+.iconesContingut img{
+}
+.iconesContingut a{margin: 0px 5px;}
+/*********************************************************************** MENU LATERAL **********************************************************************/
+.titolSeccio{
+background:url(../img/submenuFons.png) no-repeat #ededed;
+width: 197px;
+font-family:Arial, Helvetica, sans-serif;
+text-transform:uppercase;
+color:#FFFFFF;
+font-size:1.75em;
+font-weight:bold;
+padding:15px 0px 0px 3px;
+}
+.titolSeccio .textetSeccioneta{
+	line-height: 1.1em;
+}
+.flotaTapa{
+background-color:#FFFFFF;
+height: 8px;
+margin-top:-4px;
+}
+#submenu{
+	margin: 5px 0px 0px 0px;
+	position: relative;
+	border-top:1px dashed #333333;
+}
+#submenu b{ color:#0076cc; }
+#submenu ul{ padding: 0px;}
+#submenu li{
+	padding: 5px 0px 5px 20px;
+	margin: 0px 0px;
+	background: url(../img/custom/fletxaGo.gif) no-repeat top left;
+	list-style-type: none;
+	border-bottom: 1px dashed #333333;
+	line-height:2em;
+
+}
+#submenu ul li ul li{
+	padding: 0px 0px 0px 10px;
+	margin: 5px 1px;
+	background: url(../img/custom/quadret.gif) no-repeat top left;
+	list-style-type: none;
+	line-height:1.5em;
+	border-bottom:none;
+	font-size:0.9em;
+}
+
+/***********************************/
+
+/********************************************************************** PEU *******************************************************************************/
+#peu{ 
+clear:both;
+float:none;
+margin-bottom:10px;
+}
+#signText{
+	line-height: 1.1em;
+	font-size: 0.9em;
+	border-top: 3px solid #ff6600; /*específic 1*/
+	padding-top: 4px;
+	margin-left: 225px;
+}
+.sobreElWeb{
+	float:right;
+	margin-top:-12px;
+}
+.bandaPeu{
+	float:left;
+	border-top: 18px solid #ff6600; /*específic 1*/
+	width:200px;
+}
+#bandaLogos{
+	line-height: 1.1em;
+	font-size: 0.9em;
+	border-top: 1px dashed #ff6600; /*específic 1*/
+	margin-left: 225px;
+	vertical-align:middle;
+}
+
+#bandaLogos img{
+	margin-right: 15px;
+	padding: 10px 0px;
+}
+
+/********************************************************************** DIV CARPETA I CARPETA INTEL·LIGENT *********************************************************/
+.divCarpeta{
+border-top: 1px dashed #999999;
+border-left: 1px solid #f6f6f6;
+border-right: 1px solid #f6f6f6;
+background:#ededed;
+background:url(../img/fonsT.png) repeat-x bottom;
+margin: 10px 0px 0px 15px;
+padding: 5px;
+}
+.divCarpeta ul li{
+	padding: 0px 0px 0px 12px;
+	margin: 5px 10px;
+	background: url(../img/custom/quadret.gif) no-repeat top left;
+	list-style-type: none;
+	line-height:1.5em;
+	border-bottom:none;
+	font-size:0.9em;
+}
+.divCarpeta small{
+}
+.divCarpeta p{
+line-height: 1em;
+margin-top:0px;
+margin-bottom:15px;
+}
+.divCarpetaTitol{
+background:url(../img/custom/triangle.gif) no-repeat top left;
+font-size:1.2em;
+font-weight:bold;
+color:#CC0000; /*específic3*/
+padding: 8px 0px 5px 15px;
+}
+.modificacio{
+color:#CC0000; /*específic 3*/
+text-align:right;
+font-size:0.9em;
+}
