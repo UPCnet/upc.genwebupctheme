@@ -1,8 +1,38 @@
-<div id="contenidor">
-   <!-- #################### CAPÇALERA ########################### -->
+<!--
+
    <div id="capcaplera">
    <div class="bandaSuperior"></div>
    
    
      <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">cerca avançada</a> 
        <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
+       
+-->
+
+<div id="capcaplera"
+    tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
+    tal:condition="view/site_actions"
+    i18n:domain="plone">
+    
+    <div class="bandaSuperior"></div>
+    <div class="barraCerca">
+    
+    <tal:block repeat="saction view/site_actions"
+        tal:attributes="id string:siteaction-${saction/id}">
+        <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> 
+        <a
+           href=""
+           tal:define="title saction/title;
+                       id saction/id;
+                       accesskey python: accesskeys.get(id, '');"
+           i18n:attributes="title"
+           i18n:translate=""
+           tal:content="title"
+           tal:attributes="href saction/url;
+                           title title;
+                           accesskey accesskey;"
+           >Site action</a>
+     
+     </tal:block>
+</div>
+</div>
