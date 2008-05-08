@@ -1,5 +1,25 @@
 <div id="peu">   
-   <div id="bandaLogos"><img src="++resource++upc.genwebupctheme.images/edited/gencat.gif" alt="Generalitat de Catalunya" /><img src="++resource++upc.genwebupctheme.images/edited/ubu.gif" alt="Ubuntu" /><img src="++resource++upc.genwebupctheme.images/edited/gencat.gif" alt="Generalitat de Catalunya" /></div>   
+
+	<div id="bandaLogos" tal:condition="view/bannersPeu">
+		<tal:block tal:repeat="obj python: view.bannersPeu()">		
+			<tal:items tal:define="tmp obj/getObject">
+			
+				<span tal:condition="tmp/Obrirennovafinestra">
+						<a	tal:attributes="href tmp/URLdesti" target="newwindow">									
+		         		<spam tal:replace="structure tmp/Imatge/tag"/>
+						</a>
+				</span>
+				
+				<span tal:condition="not: tmp/Obrirennovafinestra">	 
+				<a	tal:attributes="href tmp/URLdesti">
+		         		<spam tal:replace="structure tmp/Imatge/tag"/>
+				</a>
+				</span>
+				
+			</tal:items>       	 					
+		</tal:block>
+	</div>
+	
    <div class="bandaPeu"></div>
    <div id="signText">© <a href="http://www.upc.edu">UPC</a>. Universitat Politècnica de Catalunya. Servei de Comunicació i Promoció.<span class="sobreElWeb"><a href="#">Sobre aquest web</a></span></div>
 </div>

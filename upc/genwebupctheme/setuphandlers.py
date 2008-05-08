@@ -9,5 +9,5 @@ def setupVarious(context):
         return
     
     site = context.getSite()
-    if not getattr(site,'banners_peu',False):
-        site.invokeFactory(id='banners_peu',title='banners_peu',type_name='Folder')        
+    if not getattr(site,'logos_peu',False):
+        site.invokeFactory(id='logos_peu',title='logos_peu',type_name='Logos Container')        
