@@ -8,6 +8,6 @@ def setupVarious(context):
     if context.readDataFile('upc.genwebupctheme_various.txt') is None:
         return
     
-    site = context.getSite()
-    if not getattr(site,'logos_peu',False):
-        site.invokeFactory(id='logos_peu',title='logos_peu',type_name='Logos Container')        
+#    site = context.getSite()
+#    if not getattr(site,'logos_peu',False):
+#        site.invokeFactory(id='logos_peu',title='logos_peu',type_name='Logos Container')        
