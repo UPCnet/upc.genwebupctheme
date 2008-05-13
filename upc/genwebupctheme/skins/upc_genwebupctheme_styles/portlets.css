@@ -2,7 +2,7 @@
 
 /********************************************************************** PORTLETS ********************************************************************************/
 #portlet200{
-background:url(../img/custom/bar200.gif) no-repeat top; /*imatge customitzada*/
+background:url(++resource++upc.genwebupctheme.images/custom/bar200.gif) no-repeat top; /*imatge customitzada*/
 width:200px;
 height: 8px;
 font-size:0.05em;
@@ -11,7 +11,7 @@ font-size:0.05em;
 #baix200{
 width:200px;
 height:6px;
-background-image:url(../img/baix200.gif);
+background-image:url(++resource++upc.genwebupctheme.images/baix200.gif);
 font-size:0.05em;
 margin-bottom:20px;
 }
@@ -19,14 +19,14 @@ margin-bottom:20px;
 #portlet150{
 width:150px;
 height:9px;
-background-image:url(../img/custom/bar150.gif); /*imatge customitzada*/
+background-image:url(++resource++upc.genwebupctheme.images/custom/bar150.gif); /*imatge customitzada*/
 font-size:0.05em;
 }
 
 #baix150{
 width:150px;
 height:6px;
-background-image:url(../img/baix150.gif);
+background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
 font-size:0.05em;
 margin-bottom:20px;
 }
@@ -92,7 +92,7 @@ line-height:1em;
 /*********************************************************************** AGENDA **********************************************/
 .noticiesDalt{
 border-top: 1px solid #808080;
-background: url(../img/custom/triangle.gif) no-repeat; /*imatge customitzada*/
+background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
 background-position: 0px 3px;
 padding: 11px 11px 2px 11px;
 color:#4D4D4D;
@@ -102,7 +102,7 @@ text-align:left;
 
 .agendaDalt{
 border-top: 1px solid #808080;
-background: url(../img/custom/triangle.gif) no-repeat; /*imatge customitzada*/
+background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
 background-position: 0px 3px;
 padding: 11px;
 color:#4D4D4D;
@@ -115,7 +115,7 @@ margin: -36px 0px 1px 3px;
 }
 
 .agendaDataReposicio{
-background:url(../img/fonsCR.png) repeat-x;
+background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x;
 border-top:1px solid #999999;
 margin: 0px 0px 0px 0px;
 padding: 5px 25px 197px 0px;
@@ -153,7 +153,7 @@ line-height:6px;
 margin-top:1px;
 margin-bottom:20px;
 border: 1px solid #E6E6E6;
-background:url(../img/fonsT.png) repeat-x bottom;
+background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
 }
 
 

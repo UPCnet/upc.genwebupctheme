@@ -19,6 +19,7 @@
   <order manager="plone.portalheader" skinname="Tema genwebUPC"
          based-on="Plone Default">
     <viewlet name="upc.genweb.capsaleraSuperior" insert-before="*" />
+    <viewlet name="plone.global_sections" insert-afer="upc.genweb.logosSuperior" />
   </order>
   <order manager="plone.portalfooter" skinname="Tema genwebUPC"
          based-on="Plone Default">
@@ -41,10 +42,15 @@
 
   <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
     <viewlet name="plone.site_actions" />
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="plone.global_sections" />
--->
   </hidden>
+  
+  <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
+    <viewlet name="plone.logo" />
+  </hidden>
+
+  <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
+    <viewlet name="plone.searchbox" />
+  </hidden>  
 
   <hidden manager="plone.portalfooter" skinname="Tema genwebUPC">
     <viewlet name="plone.footer" />

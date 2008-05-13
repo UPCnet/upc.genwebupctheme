@@ -1,3 +1,7 @@
+/* Afegit per PloneTeam@UPCnet */
+
+
+
 /* CSS UPC GENWEB 3.0 */
 
 
@@ -8,7 +12,7 @@ body{
 	font-family: Verdana, Arial, Helvetica, sans-serif;
 	color: #333333;
 	font-size: 0.7em;
-	background: url(../img/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
+	background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
 /*	background: #ffffff;*/
 }
 a:link {	color:#0076cc;	text-decoration: none;}
@@ -27,7 +31,7 @@ input.text, input.password{
 	font-size: 11px;
 	padding: 0px 1px 1px 1px;
 	border: 1px solid #FF6600; /*específic 1*/
-	background: url(../img/fonsInput.gif) repeat-x;
+	background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;
 }
 
 
@@ -70,9 +74,6 @@ margin:0px;
 	text-align:right;
 }
 #baner img {	border: 1px solid #0076cc;	margin-bottom:20px;}
-
-
-
 
 
 /* Antic #contenidor ! */
@@ -155,7 +156,7 @@ width:150px;
 .iconesContingut a{margin: 0px 5px;}
 /*********************************************************************** MENU LATERAL **********************************************************************/
 .titolSeccio{
-background:url(../img/submenuFons.png) no-repeat #ededed;
+background:url(++resource++upc.genwebupctheme.images/submenuFons.png) no-repeat #ededed;
 width: 197px;
 font-family:Arial, Helvetica, sans-serif;
 text-transform:uppercase;
@@ -182,7 +183,7 @@ margin-top:-4px;
 #submenu li{
 	padding: 5px 0px 5px 20px;
 	margin: 0px 0px;
-	background: url(../img/custom/fletxaGo.gif) no-repeat top left;
+	background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
 	list-style-type: none;
 	border-bottom: 1px dashed #333333;
 	line-height:2em;
@@ -191,7 +192,7 @@ margin-top:-4px;
 #submenu ul li ul li{
 	padding: 0px 0px 0px 10px;
 	margin: 5px 1px;
-	background: url(../img/custom/quadret.gif) no-repeat top left;
+	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
 	list-style-type: none;
 	line-height:1.5em;
 	border-bottom:none;
@@ -241,14 +242,14 @@ border-top: 1px dashed #999999;
 border-left: 1px solid #f6f6f6;
 border-right: 1px solid #f6f6f6;
 background:#ededed;
-background:url(../img/fonsT.png) repeat-x bottom;
+background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
 margin: 10px 0px 0px 15px;
 padding: 5px;
 }
 .divCarpeta ul li{
 	padding: 0px 0px 0px 12px;
 	margin: 5px 10px;
-	background: url(../img/custom/quadret.gif) no-repeat top left;
+	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
 	list-style-type: none;
 	line-height:1.5em;
 	border-bottom:none;
@@ -262,7 +263,7 @@ margin-top:0px;
 margin-bottom:15px;
 }
 .divCarpetaTitol{
-background:url(../img/custom/triangle.gif) no-repeat top left;
+background:url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat top left;
 font-size:1.2em;
 font-weight:bold;
 color:#CC0000; /*específic3*/

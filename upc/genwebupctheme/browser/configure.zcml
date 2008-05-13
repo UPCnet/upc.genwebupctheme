@@ -24,6 +24,14 @@
          layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
+         
+     <browser:viewlet
+         name="upc.genweb.logosSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".logosSuperior.logosSuperior"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
 
 <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
      <browser:viewlet

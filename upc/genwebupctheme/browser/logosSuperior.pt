@@ -1,0 +1,19 @@
+<!--
+   <div id="capcaplera">
+   <div class="bandaSuperior"></div>
+   
+   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">cerca avançada</a> 
+   <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
+      
+-->
+
+<div id="logos">
+<!--   <div class="logosSuperior"></div>  -->
+
+    <div class="logo">
+        <img longdesc="marca de la Universitat Politècnica de Catalunya" alt="logo UPC" src="++resource++upc.genwebupctheme.images/custom/logoUPC.gif"/>
+    </div>
+    <div class="titolWeb">
+        <img longdesc="Títol de la Web" alt="Títol" src="++resource++upc.genwebupctheme.images/custom/titolWeb1.gif"/>
+    </div>
+</div>
