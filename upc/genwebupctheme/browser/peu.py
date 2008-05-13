@@ -17,3 +17,7 @@ class Peu(ViewletBase):
                                                sort_limit=5)[:5]  
         return banners
         
+    def test(self, cond, a, b):
+        if cond:
+            return a
+        return b
