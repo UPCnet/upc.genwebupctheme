@@ -13,8 +13,14 @@
     i18n:domain="plone">
     
     <div class="bandaSuperior"></div>
+    
     <div class="barraCerca">
-    Identifica't   <!-- falta que haga lo del translate  --> 
+    <a href=""
+       tal:attributes="href string:${view/portal_url}/login_form" 
+       i18n:translate="box_sign_in"> 
+       Please log in 
+    </a>
+      
     <tal:block repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}">
         
