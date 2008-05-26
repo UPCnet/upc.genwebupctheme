@@ -29,8 +29,16 @@ upc/genwebupctheme/browser/capsalera.py
 upc/genwebupctheme/browser/capsaleraSuperior.pt
 upc/genwebupctheme/browser/configure.zcml
 upc/genwebupctheme/browser/interfaces.py
+<<<<<<< .mine
+upc/genwebupctheme/browser/logoNeutre.pt
+upc/genwebupctheme/browser/logosSuperior.pt
 upc/genwebupctheme/browser/peu.pt
 upc/genwebupctheme/browser/peu.py
+upc/genwebupctheme/browser/portletLogin.pt
+=======
+upc/genwebupctheme/browser/peu.pt
+upc/genwebupctheme/browser/peu.py
+>>>>>>> .r73
 upc/genwebupctheme/browser/viewlet.pt
 upc/genwebupctheme/browser/viewlets.py
 upc/genwebupctheme/browser/images/README.txt

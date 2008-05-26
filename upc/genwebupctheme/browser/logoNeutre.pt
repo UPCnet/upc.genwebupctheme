@@ -7,12 +7,10 @@
       
 -->
 
+<div id="logoNeutre">
 
-<!--   <div class="logosSuperior"></div>  -->
-
-    <div class="logo">
-        <img longdesc="marca de la Universitat Politècnica de Catalunya" alt="logo UPC" src="++resource++upc.genwebupctheme.images/custom/logoUPC.gif"/>
+    <div class="logoNeutre">
+        <img longdesc="LogoNeutre" alt="logo" src="++resource++upc.genwebupctheme.images/custom/imatge.jpg"/>
     </div>
-    <div class="titolWeb">
-        <img longdesc="Títol de la Web" alt="Títol" src="++resource++upc.genwebupctheme.images/custom/titolWeb1.gif"/>
-    </div>
+    
+</div>

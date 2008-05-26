@@ -1,6 +1,10 @@
 Metadata-Version: 1.0
 Name: upc.genwebupctheme
+<<<<<<< .mine
+Version: 0.1dev-r57
+=======
 Version: 0.1dev-r53
+>>>>>>> .r73
 Summary: genwebUPC Tema
 Home-page: https://devel.upcnet.es/trac/genwebupc
 Author: PloneTeam@UPCnet

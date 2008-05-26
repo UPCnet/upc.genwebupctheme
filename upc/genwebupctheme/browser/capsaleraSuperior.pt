@@ -2,7 +2,12 @@
    <div id="capcaplera">
    <div class="bandaSuperior"></div>
    
-   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">cerca avançada</a> 
+   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> 
+   <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
+   <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" />
+   <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
+   <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
+   <a href="#">cerca avançada</a> 
    <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
       
 -->
@@ -39,16 +44,15 @@
            >Site action</a>
      </tal:block>
 
-
     <form name="searchform"
           action="search"
           tal:attributes="action string:${view/portal_url}/search">
 
-        <label for="searchGadget" class="hiddenStructure"
+        <!--<label for="searchGadget" class="hiddenStructure"
                     i18n:translate="text_search">Search Site</label>
 
-        <div class="LSBox">
-        <input name="SearchableText"
+        --><div class="LSBox">
+        <input class="text"
                type="text"
                size="18"
                value=""
@@ -64,34 +68,13 @@
                value =""
                 />
     
-        <!--
-        <div class="searchSection">
-            <input id="searchbox_currentfolder_only" 
-                   class="noborder"
-                   type="checkbox" 
-                   name="path" 
-                   tal:attributes="value view/folder_path"
-                   />
-            <label for="searchbox_currentfolder_only" 
-                   i18n:translate="label_searchbox_currentfolder_only"
-                   style="cursor: pointer">
-                only in current section
-            </label>
-        </div>-->
-
-        <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
-        <div>
+        <div class="LSResult" id="LSResult" style="">
+            <div class="LSShadow" id="LSShadow">
+            </div>
+        </div>
+        
+        </div>
     </form>
-
-    <div id="portal-advanced-search"
-           class="hiddenStructure"> 
-        <a href="#"
-           tal:attributes="href string:${view/portal_url}/search_form"
-           i18n:translate="label_advanced_search"
-           accesskey="5">
-            Advanced Search&hellip;
-        </a>
-    </div>
 
 </div>
 

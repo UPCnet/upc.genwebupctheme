@@ -19,8 +19,11 @@
   <order manager="plone.portalheader" skinname="Tema genwebUPC"
          based-on="Plone Default">
     <viewlet name="upc.genweb.capsaleraSuperior" insert-before="*" />
-    <viewlet name="plone.global_sections" insert-afer="upc.genweb.logosSuperior" />
+    <viewlet name="upc.genweb.logoNeutre" insert-afer="upc.genweb.capsaleraSuperior" />
+    <viewlet name="upc.genweb.portletLogin" insert-afer="upc.genweb.logoNeutre" /> 
+    <viewlet name="plone.global_sections" insert-afer="upc.genweb.portletLogin" />
   </order>
+  
   <order manager="plone.portalfooter" skinname="Tema genwebUPC"
          based-on="Plone Default">
     <!-- The definition of a viewlet accepts these parameters:
@@ -39,6 +42,10 @@
              insert-before="*" />
 -->
   </order>
+
+  <hidden manager="plone.portaltop" skinname="Tema genwebUPC">
+    <viewlet name="plone.personal_bar" />
+  </hidden>
 
   <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
     <viewlet name="plone.site_actions" />
