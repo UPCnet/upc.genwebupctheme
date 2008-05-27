@@ -50,8 +50,8 @@ input.button{
 }
 
 .submitGo {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  /*height: 16px;*/ /*upcnet*/
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -101,7 +101,7 @@ width:4px;
 height:5px;
 }
 .souA {margin: 5px 0px 60px 5px; font-size:0.9em;}
-.connexio {margin-top:-6px;}
+.connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
 /********************************************************************** CONTINGUT *******************************************************************************/

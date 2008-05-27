@@ -1,10 +1,10 @@
 <tal:block condition="view/show"
            i18n:domain="plone">
 
-<dl class="portlet portletLogin"
+<div class="connexio"
     tal:condition="view/available">
 
-    <dd class="portletItem odd"
+    <div class=""
         tal:define="ac_name view/login_name;
                     ac_password view/login_password">
         <form action="login_form"
@@ -20,7 +20,7 @@
             <input type="hidden" name="login_name" id="login_name" value="" />
             <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
 
-            <div class="connexio">
+            <div class="">
                 <label for=""
                        tal:attributes="for ac_name"
                        i18n:translate="label_login_name">Login Name</label>
@@ -58,25 +58,25 @@
             </div>
             
         </form>
-    </dd>
+    </div>
     
-</dl>
+</div>
 
-<dl class="portlet portletLogin"
+<div class="connexio"
     tal:condition="not:view/available">
 
-    <dt class="portletHeader">
+    <div class="">
         <a href="#" 
            class="tile"
            i18n:translate="box_sign_in">Log in</a>
-    </dt>
+    </div>
 
-    <dd class="portletItem"
+    <div class=""
         i18n:translate="login_portlet_disabled">
         Cookie authentication is disabled. 
         Login portlet not available.
-    </dd>
+    </div>
 
-</dl>
+</div>
 
 </tal:block>
