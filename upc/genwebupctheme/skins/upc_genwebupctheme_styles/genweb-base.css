@@ -274,3 +274,15 @@ color:#CC0000; /*específic 3*/
 text-align:right;
 font-size:0.9em;
 }
+
+
+
+
+/* UPCnet */
+#portal-breadcrumbs {
+font-size:0.9em;
+margin:5px 0px 40px 5px;
+border-bottom: 0px;
+padding-left:0em;
+padding-right:0em;
+}

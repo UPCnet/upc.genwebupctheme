@@ -46,7 +46,7 @@ text-decoration: underline; !important
  igual que anterior .menuPrincipal == #portal-globalnav 
 */
 
-#portal-globalnav {background: #Ededed url(++resource++upc.genwebupctheme.images/bgMenu.png) no-repeat bottom;text-align:center;font-family:Arial, Helvetica, Verdana, sans-serif;font-size:1.2em;text-transform:uppercase;}
+#portal-globalnav {background: #Ededed url(++resource++upc.genwebupctheme.images/bgMenu.png) no-repeat bottom;text-align:center;font-family:Arial, Helvetica, Verdana, sans-serif;font-size:1.2em;text-transform:uppercase; margin-top:4px;}
 #portal-globalnav li {line-height: 25px;padding:5px; margin-right: -1.8em;}
 #portal-globalnav li a {border-left: 4px solid #FFFFFF; border-right: 4px solid #FFFFFF; border-top: 0px; line-: 25px;padding:5px; color: #0076CC; text-transform:uppercase;}
 #portal-globalnav li.selected a {border-right: 4px solid #FFFFFF; border-left: 4px solid #FFFFFF; border-top: 0px; background-color: #808080; color: white; }
@@ -66,3 +66,15 @@ text-decoration: underline; !important
 }
 */
     
+/* Esta linea hace que el search salte */
+.LResult {
+ padding-top:0px;
+}
+    
+    
+.validacio {
+	margin-top: -22px;
+	font-size:0.9em;
+	color:#4D4D4D;
+
+}
