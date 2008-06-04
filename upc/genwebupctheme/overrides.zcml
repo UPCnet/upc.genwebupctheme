@@ -8,10 +8,10 @@
     
      <plone:portlet
         name="portlets.Calendar"
-        interface="plone.app.portlets.portlets.calendar.ICalendarPortlet"
-        assignment=".browser.calendar.Assignment"
-        renderer=".browser.calendar.Renderer"
-        addview=".browser.calendar.AddForm"
+        interface="upc.genwebupctheme.browser.calendar.ICalendarPortlet"
+        assignment="upc.genwebupctheme.browser.calendar.Assignment"
+        renderer="upc.genwebupctheme.browser.calendar.Renderer"
+        addview="upc.genwebupctheme.browser.calendar.AddForm"
          />
         
  </configure>
