@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="upc.genwebupctheme">     
+     
+<!--    <include package="plone.app.portlets" />-->
+    
+     <plone:portlet
+        name="portlets.Calendar"
+        interface="plone.app.portlets.portlets.calendar.ICalendarPortlet"
+        assignment=".browser.calendar.Assignment"
+        renderer=".browser.calendar.Renderer"
+        addview=".browser.calendar.AddForm"
+         />
+        
+ </configure>

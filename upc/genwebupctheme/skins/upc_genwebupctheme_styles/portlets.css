@@ -124,12 +124,14 @@ padding: 5px 25px 197px 0px;
 .agendaNumero{
 float:right;
 background-color:#0076cc;
-padding:4px 1px 3px 1px;
+/*padding:4px 1px 3px 1px;*/
+padding: 0px; /* UPCnet*/
 color:#FFFFFF;
 text-align:center;
 min-width: 24px;
 font-family: "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
 font-size:26px;
+margin-top:-4px;  /*UPCnet */
 }
 
 .agendaMes{
@@ -147,6 +149,7 @@ font-weight:normal;
 padding:0px;
 font-size:1.25em;
 line-height:6px;
+text-transform: lowercase;
 }
 
 .agendaContingut{
@@ -204,7 +207,7 @@ font-size:0.9em;
 
 #calendariVertical {
 float:right;
-margin-right: 23px;
+/* margin-right: 23px; UPCnet*/
 margin-top: -190px;
 line-height:1.2em;
 font-size:0.9em;
@@ -249,7 +252,7 @@ padding:0px;
 max-width:144px;
 }
 
-#daltCalendari{
+.portletHeader{
 background-color:#E8E2DF; /*específic6*/;
 height:5px;
 }
@@ -258,15 +261,16 @@ height:5px;
 text-align:center;
 }
 
-.avui{
+.todaynoevent{
 border: 1px solid #CC0000; /*específic3*/
 }
 
-.reunio{
+.todayevent{
 background-color: #DFE3D3; /*específic4*/
+border: 1px solid #CC0000; /*específic3*/
 }
 
-.esdeveniment{
+.event{
 background-color: #E0CECE; /*específic5*/
 }
 
@@ -292,4 +296,12 @@ height: 4px;
 background-color:#E8E2DF; 
 padding: 0px; 
 font-size:0.05em;
+}
+
+#calendar_text {
+	text-align: left;
+}
+
+#esdeveni_text {
+	 text-align: left;
 }

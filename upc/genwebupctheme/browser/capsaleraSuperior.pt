@@ -20,12 +20,32 @@
     <div class="bandaSuperior"></div>  
     
     <div class="barraCerca">
+    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" 
+        tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
+       tal:condition="here/portal_membership/isAnonymousUser"
        tal:attributes="href string:${view/portal_url}/login_form" 
-       i18n:translate="box_sign_in"> 
-       Please log in 
+       i18n:domain="upc.genwebupc"
+       i18n:translate="identificat"> 
+       Identifica't
     </a>
-      
+    
+<!--    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" -->
+<!--        tal:condition="not:here/portal_membership/isAnonymousUser"/>-->
+<!--    <a href=""-->
+<!--       tal:condition="not:here/portal_membership/isAnonymousUser"-->
+<!--       tal:attributes="href string:${view/portal_url}/logout" -->
+<!--       i18n:translate="logout"> -->
+<!--       Log out -->
+<!--    </a>-->
+    
+    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" />
+    <a href=""
+       tal:attributes="href string:${view/portal_url}/" 
+       > 
+       Inici 
+    </a>
+    
     <tal:block repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}">
         
@@ -43,6 +63,13 @@
                            accesskey accesskey;"
            >Site action</a>
      </tal:block>
+
+    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" />
+    <a href=""
+       tal:attributes="href string:${view/portal_url}/search_form"
+       i18n:translate="label_advanced_search">  
+       Advanced Search 
+    </a>
 
     <form name="searchform"
           action="search"

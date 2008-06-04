@@ -48,7 +48,7 @@
          layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
-
+         
 <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
      <browser:viewlet
          name="upc.someviewlet"

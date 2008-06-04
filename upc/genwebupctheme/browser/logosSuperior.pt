@@ -11,8 +11,12 @@
 <!--   <div class="logosSuperior"></div>  -->
 
     <div class="logo">
-        <img longdesc="marca de la Universitat Politècnica de Catalunya" alt="logo UPC" src="++resource++upc.genwebupctheme.images/custom/logoUPC.gif"/>
+        <a href="http://www.upc.es">
+            <img longdesc="marca de la Universitat Politècnica de Catalunya" alt="web" src="++resource++upc.genwebupctheme.images/custom/logoUPC.gif"/>
+        </a>
     </div>
     <div class="titolWeb">
-        <img longdesc="Títol de la Web" alt="Títol" src="++resource++upc.genwebupctheme.images/custom/titolWeb1.gif"/>
+        <a href="http://www.upcnet.es">
+            <img longdesc="Títol de la Web" alt="web" src="++resource++upc.genwebupctheme.images/custom/titolWeb1.gif"/>
+        </a>
     </div>

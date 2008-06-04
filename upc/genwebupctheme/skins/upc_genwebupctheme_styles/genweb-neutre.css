@@ -76,5 +76,22 @@ text-decoration: underline; !important
 	margin-top: -22px;
 	font-size:0.9em;
 	color:#4D4D4D;
-
+	padding-left: 5px;
 }
+
+.PortletCalendar {
+	float:right;
+    margin-right: 10px;
+    margin-top: -200px;
+    line-height:1.2em;
+    font-size:0.9em;
+}
+
+.portletHeader {
+    text-align: center;
+    
+}
+.text_dia {}
+.text_mes {}
+.text_number {}
+

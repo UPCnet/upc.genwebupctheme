@@ -286,3 +286,5 @@ border-bottom: 0px;
 padding-left:0em;
 padding-right:0em;
 }
+
+.barraCerca { text-transform: lowercase; }
