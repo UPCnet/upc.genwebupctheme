@@ -197,16 +197,16 @@ class Renderer(base.Renderer):
                                  default=self._ts.weekday_english(day, format='a')))
         return weekdays
 
-#    def dia_semana (self,day):
-#        """ le paso el dia y me lo pasa a texto"""
-#        dia = day+1
-#        if dia == 7:
-#            dia = 0
-#        return PLMF(self._ts. day_msgid(dia), default=self._ts.weekday_english(dia, format='a'))
-#        
-#    def mes (self,month):
-#        """ le paso el mes y me lo pasa a texto"""
-#        return PLMF(self._ts.month_msgid(month), default=self._ts.month_english(month, format='a'))
+    def dia_semana (self,day):
+        """ le paso el dia y me lo pasa a texto"""
+        dia = day+1
+        if dia == 7:
+            dia = 0
+        return PLMF(self._ts. day_msgid(dia), default=self._ts.weekday_english(dia, format='a'))
+        
+    def mes (self,month):
+        """ le paso el mes y me lo pasa a texto"""
+        return PLMF(self._ts.month_msgid(month), default=self._ts.month_english(month, format='a'))
 
 
     def isToday(self, day):

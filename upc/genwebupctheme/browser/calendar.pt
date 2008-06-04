@@ -20,13 +20,13 @@
         <span tal:content="python:view.mes(view.now[1])">
         text_week_day </span>
     </div>
-</div>
+</div><!--
 
        i18n:domain="upc.genwebupc"
        i18n:translate="identificat"> 
        Identifica't
 
-<div id="calendariVertical">
+--><div id="calendariVertical">
     <div id="calendar_text"
          i18n:domain="upc.genwebupc"
          i18n:translate="calendari_title"> 

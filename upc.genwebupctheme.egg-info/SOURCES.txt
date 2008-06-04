@@ -19,26 +19,24 @@ upc.genwebupctheme.egg-info/requires.txt
 upc.genwebupctheme.egg-info/top_level.txt
 upc/genwebupctheme/__init__.py
 upc/genwebupctheme/configure.zcml
+upc/genwebupctheme/overrides.zcml
 upc/genwebupctheme/profiles.zcml
 upc/genwebupctheme/setuphandlers.py
 upc/genwebupctheme/skins.zcml
 upc/genwebupctheme/tests.py
 upc/genwebupctheme/version.txt
 upc/genwebupctheme/browser/__init__.py
+upc/genwebupctheme/browser/calendar.pt
+upc/genwebupctheme/browser/calendar.py
 upc/genwebupctheme/browser/capsalera.py
 upc/genwebupctheme/browser/capsaleraSuperior.pt
 upc/genwebupctheme/browser/configure.zcml
 upc/genwebupctheme/browser/interfaces.py
-<<<<<<< .mine
 upc/genwebupctheme/browser/logoNeutre.pt
 upc/genwebupctheme/browser/logosSuperior.pt
 upc/genwebupctheme/browser/peu.pt
 upc/genwebupctheme/browser/peu.py
 upc/genwebupctheme/browser/portletLogin.pt
-=======
-upc/genwebupctheme/browser/peu.pt
-upc/genwebupctheme/browser/peu.py
->>>>>>> .r73
 upc/genwebupctheme/browser/viewlet.pt
 upc/genwebupctheme/browser/viewlets.py
 upc/genwebupctheme/browser/images/README.txt
@@ -99,6 +97,7 @@ upc/genwebupctheme/skins/upc_genwebupctheme_custom_images/CONTENT.txt
 upc/genwebupctheme/skins/upc_genwebupctheme_custom_templates/CONTENT.txt
 upc/genwebupctheme/skins/upc_genwebupctheme_styles/CONTENT.txt
 upc/genwebupctheme/skins/upc_genwebupctheme_styles/base_properties.props
+upc/genwebupctheme/skins/upc_genwebupctheme_styles/genweb-SCP-temp.css
 upc/genwebupctheme/skins/upc_genwebupctheme_styles/genweb-base.css
 upc/genwebupctheme/skins/upc_genwebupctheme_styles/genweb-estils.css
 upc/genwebupctheme/skins/upc_genwebupctheme_styles/genweb-neutre.css
