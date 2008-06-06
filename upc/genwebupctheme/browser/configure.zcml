@@ -48,7 +48,14 @@
          layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
-         
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />         
          <!--
          
      <browser:viewlet
