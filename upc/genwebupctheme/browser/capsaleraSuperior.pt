@@ -41,8 +41,9 @@
     
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" />
     <a href=""
-       tal:attributes="href string:${view/portal_url}/" 
-       > 
+       tal:attributes="href string:${view/portal_url}/"
+       i18n:domain="upc.genwebupc"
+       i18n:translate="inici"> 
        Inici 
     </a>
     

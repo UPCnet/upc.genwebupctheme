@@ -18,14 +18,22 @@
        
   <order manager="plone.portalheader" skinname="Tema genwebUPC"
          based-on="Plone Default">
+         
     <viewlet name="upc.genweb.capsaleraSuperior" 
        insert-before="*" />
-    <viewlet name="upc.genweb.logoNeutre" 
+       
+    <viewlet name="upc.genweb.logosSuperior" 
        insert-afer="upc.genweb.capsaleraSuperior" />
-    <viewlet name="upc.genweb.portletLogin" 
-       insert-afer="upc.genweb.logoNeutre" /> 
+       
+    <viewlet name="upc.genweb.logoNeutre" 
+       insert-afer="upc.genweb.logosSuperior" />
+       
+    <viewlet name="upc.genweb.eines" 
+       insert-afer="upc.genweb.logoNeutre" />
+        
     <viewlet name="plone.global_sections" 
-       insert-afer="upc.genweb.portletLogin" />
+       insert-afer="upc.genweb.eines" />
+       
   </order>
   
   <order manager="plone.portalfooter" skinname="Tema genwebUPC"

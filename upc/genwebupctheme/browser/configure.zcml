@@ -34,14 +34,6 @@
          />
 
      <browser:viewlet
-         name="upc.genweb.portletLogin"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.portletLogin"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
-
-     <browser:viewlet
          name="upc.genweb.logoNeutre"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.logoNeutre"
@@ -49,7 +41,25 @@
          permission="zope2.View"
          />
          
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
+         
+         <!--
+         
+     <browser:viewlet
+         name="upc.genweb.personalbar"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".personalbar.personalbar"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
+         
+--><!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
      <browser:viewlet
          name="upc.someviewlet"
          manager="plone.app.layout.viewlets.interfaces.IPortalFooter"

@@ -20,13 +20,9 @@
         <span tal:content="python:view.mes(view.now[1])">
         text_week_day </span>
     </div>
-</div><!--
+</div>
 
-       i18n:domain="upc.genwebupc"
-       i18n:translate="identificat"> 
-       Identifica't
-
---><div id="calendariVertical">
+<div id="calendariVertical">
     <div id="calendar_text"
          i18n:domain="upc.genwebupc"
          i18n:translate="calendari_title"> 
@@ -51,10 +47,11 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, prevMonthMonth, prevMonthYear, url_quote_plus(query_string)); 
                            class string:kssCalendarChange kssattr-year-${prevMonthYear} kssattr-month-${prevMonthMonth} calendarPrevious;"
            tal:condition="showPrevMonth"
-           i18n:attributes="title title_previous_month;">&laquo;</a>
+           i18n:attributes="title title_previous_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif"></a>
 
         <span i18n:translate="" tal:omit-tag=""> 
-            <span i18n:name="monthname"
+            <span class="calendariMes"
+                  i18n:name="monthname"
                   tal:content="view/monthName"
                   tal:omit-tag=""><b>monthname</b></span>
             <span i18n:name="year"
@@ -70,7 +67,7 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
                            class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
            tal:condition="showNextMonth"
-           i18n:attributes="title title_next_month;">&raquo;</a>
+           i18n:attributes="title title_next_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif"> </a>
         <span class="portletTopRight"></span>
     </dt>
 
@@ -79,8 +76,8 @@
                summary="Calendar"
                i18n:domain="plone"
                i18n:attributes="summary summary_calendar;">
-            <caption class="hiddenStructure"
-                     tal:content="view/monthName">Month name</caption>
+<!--              <caption class="hiddenStructure"
+                     tal:content="view/monthName">Month name</caption> --> 
             <thead>
                 <tr class="weekdays"
                     ><tal:data tal:repeat="weekday view/getWeekdays"
@@ -124,11 +121,15 @@
             </tbody>
        
         </table>
-<!--        <img src="++resource++upc.genwebupctheme.images/custom/plus.gif"> avui      -->
-    <div id="avui"
-         i18n:domain="upc.genwebupc"
-         i18n:translate="avui"> 
-         avui
+    
+    <div>
+        <img src="++resource++upc.genwebupctheme.images/custom/plus.gif">   
+        <span id="avui"
+              href="http://www.upc.es"
+              i18n:domain="upc.genwebupc"
+              i18n:translate="avui"> 
+         Avui
+         </span>
     </div>
 
         <span class="portletBottomLeft"></span>
