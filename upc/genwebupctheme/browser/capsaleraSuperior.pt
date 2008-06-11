@@ -20,7 +20,7 @@
     <div class="bandaSuperior"></div>  
     
     <div class="barraCerca">
-    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" 
+    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="q" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
        tal:condition="here/portal_membership/isAnonymousUser"
@@ -39,7 +39,7 @@
 <!--       Log out -->
 <!--    </a>-->
     
-    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" />
+    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="q" />
     <a href=""
        tal:attributes="href string:${view/portal_url}/"
        i18n:domain="upc.genwebupc"
@@ -50,7 +50,7 @@
     <tal:block repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}">
         
-        <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> 
+        <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="q" /> 
         <a
            href=""
            tal:define="title saction/title;
@@ -65,7 +65,7 @@
            >Site action</a>
      </tal:block>
 
-    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" />
+    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="q" />
     <a href=""
        tal:attributes="href string:${view/portal_url}/search_form"
        i18n:translate="label_advanced_search">  

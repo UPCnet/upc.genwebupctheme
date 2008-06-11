@@ -1,8 +1,7 @@
-<tal:block condition="view/show"
-           i18n:domain="plone">
+<tal:block i18n:domain="plone">
 
 <div class="validacio"
-    tal:condition="view/available">
+     tal:condition="view/show"> 
 
     <div class=""
         tal:define="ac_name view/login_name;
@@ -62,84 +61,78 @@
     
 </div>
 
-<div class="connexio"
-    tal:condition="not:view/available">
-
-    <div class="">
-        <a href="#" 
-           class="tile"
-           i18n:translate="box_sign_in">Log in</a>
-    </div>
-
-    <div class=""
-        i18n:translate="login_portlet_disabled">
-        Cookie authentication is disabled. 
-        Login portlet not available.
-    </div>
-
-</div>
-
 <!--  PERSONAL BAR  -->
 <div id="portal-personaltools-wrapper"
+     tal:condition="not:view/show"
      i18n:domain="plone">
 
-<h5 class="hiddenStructure" i18n:translate="heading_personal_tools">Personal tools</h5>
+  <h5 class="hiddenStructure" i18n:translate="heading_personal_tools">Personal tools</h5> 
 
 <ul id="portal-personaltools"
     class="visualInline">
-   <tal:block condition="not: view/anonymous">
+    
+    <b><span 
+             i18n:domain="upc.genwebupc"
+             i18n:translate="genweb-usuari">
+             Usuari:
+        </span>
+    </b>
+   <tal:block>
        <li><a 
            id="user-name"
-           tal:attributes="href view/homelink_url"
-          ><img src="" tal:replace="structure here/user.gif" />
-            <span class="visualCaseSensitive"
+           tal:attributes="href view/homelink_url">
+<!--           <img src="" tal:replace="structure here/user.gif" />-->
+           <span class="visualCaseSensitive"
                  tal:content="view/user_name">
                 John
-           </span
-       ></a></li>
+           </span>
+       </a></li>
    </tal:block>
    
+   
    &nbsp; &nbsp;
-    <b><span i18n:translate="genweb-opcionspathbar">Options:</span></b>
-<!--      <span tal:condition="python:context.permisosaRoot()">  -->
+    <b><span 
+             i18n:domain="upc.genwebupc"
+             i18n:translate="genweb-opcionspathbar">
+             Opcions:
+        </span>
+    </b>
     <span>
-   
-    <a id="user-name" i18n:translate="genweb-accesarrel" tal:attributes="href string:${view/portal_url}/folder_contents">Root folder</a>
+    <a  
+    i18n:domain="upc.genwebupc"
+    i18n:translate="genweb-accesarrel" 
+    tal:attributes="href string:${view/portal_url}/folder_contents">
+    Carpeta arrel</a>
     |
-    </span>
-    <a id="user-name" i18n:translate="Preferences" tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">Preferences</a>
+    <a 
+    i18n:translate="Preferences"
+    tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">
+    Preferències</a>
      |
-    <span>
-     <!--  tal:condition="python:portal.portal_membership.getAuthenticatedMember().has_role('Manager')" -->
-    <a id="user-name" i18n:translate="Site Setup" tal:attributes="href string:${view/portal_url}/plone_control_panel">Site setup</a>
+    <a 
+    i18n:domain="upc.genwebupc"
+    i18n:translate="genweb-recursos"
+    tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">
+    Recursos</a>
      |
-    </span>
-    <span >
-    <!--  tal:condition="python:here.checksecurity('Modify portal content', context)" -->
-    <a id="user-name" i18n:translate="Undo" tal:attributes="href string:${view/portal_url}/undo_form">Undo</a>
+    <a 
+    i18n:translate="Site Setup" 
+    tal:attributes="href string:${view/portal_url}/plone_control_panel">
+    Configuració del lloc</a>
+     |
+    
+    <a  
+    i18n:translate="Undo" 
+    tal:attributes="href string:${view/portal_url}/undo_form">
+    Desfés</a>
     |
-    </span>
-    <a id="user-name" i18n:translate="genweb-logout" tal:attributes="href string:${view/portal_url}/logout">Log out</a>
-   
-
-<!--      <tal:actions tal:repeat="action view/user_actions">
-        <li tal:define="icon python:view.getIconFor(action['category'], action['id'], None);
-                        class_name string:visualIcon actionicon-${action/category}-${action/id};
-                        class_name python:icon is not None and class_name or nothing;"
-            tal:attributes="class class_name">
-            <a href=""
-               tal:attributes="href action/url;
-                               class python:icon is not None and 'visualIconPadding' or nothing;"
-            ><tal:actionname i18n:translate="" 
-                             tal:content="action/title">dummy</tal:actionname
-            ></a>
-        </li>
-    </tal:actions>
--->
+    <a  
+    i18n:translate="genweb-logout" 
+    tal:attributes="href string:${view/portal_url}/logout">
+    Log out</a>
+   </span>
 
 </ul>
 </div>
-
-
 
 </tal:block>

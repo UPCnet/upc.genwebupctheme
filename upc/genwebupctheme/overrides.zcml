@@ -13,5 +13,5 @@
         renderer="upc.genwebupctheme.browser.calendar.Renderer"
         addview="upc.genwebupctheme.browser.calendar.AddForm"
          />
-        
+
  </configure>

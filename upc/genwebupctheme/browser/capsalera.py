@@ -1,22 +1,19 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
+from plone.app.layout.viewlets import common
+from plone.app.layout.globals.interfaces import IViewView
 from plone.memoize.instance import memoize
 from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
-from plone.app.layout.viewlets import common
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.app.layout.viewlets.common import ViewletBase
 from zope.interface import implements, alsoProvides
 from zope.component import getMultiAdapter
 from zope.viewlet.interfaces import IViewlet
 from zope.deprecation.deprecation import deprecate
-from plone.app.layout.globals.interfaces import IViewView 
 from AccessControl import getSecurityManager
 from Acquisition import aq_base, aq_inner
 from Products.CMFPlone.utils import safe_unicode
 from Products.Five.browser import BrowserView
-#from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-#from Products.CMFCore.utils import getToolByName
 from cgi import escape
 from urllib import quote_plus
 
@@ -71,9 +68,9 @@ class eines(ViewletBase):
     def show(self):
         if not self.portal_state.anonymous():
             return False
-        if not self.pas_info.hasLoginPasswordExtractor():
+        if not self.pas_info.hasLoginPasswordExtractor():         
             return False
-        page = self.request.get('URL', '').split('/')[-1]
+        page = self.request.get('URL', '').split('/')[-3]
         return page not in ('login_form', 'join_form')
 
     @property
@@ -125,6 +122,7 @@ class eines(ViewletBase):
         acl_users = getToolByName(self.context, 'acl_users')
         return getattr(acl_users, 'credentials_cookie_auth', None)
 
+    
 # Lo del personal_bar    
     def update(self):
         super(eines, self).update()
@@ -159,3 +157,22 @@ class eines(ViewletBase):
             else:
                 self.user_name = userid
 
+class GlobalSectionsViewlet(ViewletBase):
+    render = ViewPageTemplateFile('globalsections.pt')
+    
+    def update(self):
+        context_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_context_state')
+                
+        actions = context_state.actions()
+     
+        portal_tabs_view = getMultiAdapter((self.context, self.request),
+                                           name='portal_tabs_view')
+        self.portal_tabs = portal_tabs_view.topLevelTabs(actions=actions)
+        
+        selectedTabs = self.context.restrictedTraverse('selectedTabs')
+  
+        self.selected_tabs = selectedTabs('index_html',
+                                          self.context,
+                                          self.portal_tabs)
+        self.selected_portal_tab = self.selected_tabs['portal']

@@ -55,7 +55,16 @@
          class=".barraIdiomes.barraIdiomes"
          layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
-         />         
+         />  
+         
+    <browser:viewlet
+        name="plone.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader" 
+        class="upc.genwebupctheme.browser.capsalera.GlobalSectionsViewlet"
+        layer="upc.genwebupctheme.browser.interfaces.IThemeSpecific"
+        permission="zope2.View" 
+        />
+        
          <!--
          
      <browser:viewlet
