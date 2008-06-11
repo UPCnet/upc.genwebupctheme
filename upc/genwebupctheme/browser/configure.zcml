@@ -92,6 +92,15 @@
       for more information about registering images as Zope 3 browser
       resources.
       -->
+      
+    <browser:page
+        for="Products.CMFCore.interfaces.ISiteRoot"
+        name="genweb.homepage"
+        class=".homepageview.homePageView"
+        template="homepage.pt"
+        permission="zope2.View"
+        />
+        
     <browser:resourceDirectory
         name="upc.genwebupctheme.images"
         directory="images"

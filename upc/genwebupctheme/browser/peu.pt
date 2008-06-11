@@ -5,8 +5,10 @@
 			<tal:items tal:define="tmp obj/getObject">
 
 				<a	tal:attributes="href tmp/URLdesti; target python: view.test(tmp.Obrirennovafinestra,'newwindow','_self')">									
-         		<spam tal:replace="structure tmp/Imatge/tag"/>
+<!--         		<img tal:replace="structure python:view.resizeImage(tmp.Imatge,100,100)"/>-->
+         		<spam tal:replace="structure tmp/Imatge"/>
 				</a>
+<!--				<img tal:replace="structure python:tmp.Imatge.tag(scale='tile')"/>-->
 							
 			</tal:items>       	 					
 		</tal:block>

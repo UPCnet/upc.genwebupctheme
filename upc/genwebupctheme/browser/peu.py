@@ -1,6 +1,7 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from Products.CMFCore.utils import getToolByName
+from PIL import Image
 
 class Peu(ViewletBase):
     render = ViewPageTemplateFile('peu.pt')
@@ -21,3 +22,8 @@ class Peu(ViewletBase):
         if cond:
             return a
         return b
+    
+    def resizeImage(self, obj, alto, ancho):
+        import pdb;pdb.set_trace()
+        return obj
+#        return obj.resize((ancho, alto), Image.NEAREST)
