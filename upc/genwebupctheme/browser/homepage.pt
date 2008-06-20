@@ -288,34 +288,35 @@
 		    
 		    
 		    
-		    <table class="taulaDivs">
-		  <tr class="taulaDivs">
-		    <td class="taulaDivs taulaDivsTdE">    <!-- NOTICIES -->
-		    <div class="noticiesDalt">Notícies</div>
-		    <div class="agendaContingut">
-		     <ul>
-		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
-		      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
-		    </ul>
-		    <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
-		    </div>
-		    <!--fi notícies-->
-		</td>
-		    <td class="taulaDivs taulaDivsTdD">    <!-- NOTICIES -->
-		    <div class="noticiesDalt">Actualitat UPC</div>
-		    <div class="agendaContingut">
-		     <ul>
-		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a></li> 
-		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a></li> 
-		      <li><a href="#">Salviti ta et queret paften clam.</a></li>                                
-		    </ul>
-		    <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
-		    </div>
-		    <!--fi notícies-->
-		</td>
-		  </tr>
-		</table>
+			<table class="taulaDivs">
+			  <tr class="taulaDivs">
+			    <td class="taulaDivs taulaDivsTdE">    
+				    <div class="noticiesDalt">Notícies</div>
+				    <div class="agendaContingut">
+				     <ul>
+				      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
+				      <li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
+				      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
+				    </ul>
+				    <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
+				    </div>
+				</td>
+			    <td class="taulaDivs taulaDivsTdD">   
+			    
+			    
+			    
+<!--				    <div class="noticiesDalt">Actualitat UPC</div>-->
+<!--				    <div class="agendaContingut">-->
+<!--				     <ul>-->
+<!--				      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a></li> -->
+<!--				      <li><a href="#">Imnomatem ebat toits aus revendraf.</a></li> -->
+<!--				      <li><a href="#">Salviti ta et queret paften clam.</a></li>                                -->
+<!--				    </ul>-->
+<!--				    	<div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>-->
+<!--				    </div>-->
+				</td>
+			  </tr>
+			</table>
 		
 		
 		</div>
