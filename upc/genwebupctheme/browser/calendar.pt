@@ -34,11 +34,18 @@
          Esdeveniments i reunions.
         <br/> </div>
     <br>
+    
+   <!--  <tr class="arrodonimentTR">
+           <td class="arrodonimentTD" align="center">
+                <img class="imgCA" src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif" />
+           </td>
+    </tr>
+    -->
 
-<table style="border: medium none ; margin-top: 5px;">
-    <dt class="portletHeader">
+   <table style="border: medium none ; margin-top: 5px;">
+    <dt class="calendariMes">
 
-        <span class="portletTopLeft"></span>
+        <span class="cantoEC"></span>
         <a href="#" rel="nofollow"
            title="Previous month"
            tal:define="prevMonthMonth view/prevMonthMonth;
