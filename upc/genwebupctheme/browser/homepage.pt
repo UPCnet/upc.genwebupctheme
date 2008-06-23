@@ -37,15 +37,15 @@
 				      <input type="button" class="button" value="Vota" />
 				      </form>
 			      	
-			      	<div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més actualitat" /></a><a href="#">resultats</a></div>		      
+			      	<div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">resultats</a></div>		      
 			      <div class="flotaPlus">738 vots.</div>
 			    </div>
 			    
 				<div id="baix150"></div>  
 			    
 				<div id="baner">
-				   <a href="#"><img src="img/edited/eees_midagenweb.gif" alt="banner EEES" /></a>
-				   <a href="#"><img src="img/edited/EEESsessionsinformativesMidaGenweb.gif" /></a>
+				   <a href="#"><img src="++resource++upc.genwebupctheme.images/edited/eees_midagenweb.gif" alt="banner EEES" /></a>
+				   <a href="#"><img src="++resource++upc.genwebupctheme.images/edited/EEESsessionsinformativesMidaGenweb.gif" /></a>
 				</div>
 			</div>
 			
@@ -63,7 +63,7 @@
 			        <li><a href="#">Retroinformàtica. El passat del futur.</a><br /><small>10/04/81</small></li>
 			        <li><a href="#">Retroinformàtica. El passat del futur.</a><br /><small>10/04/81</small></li>            
 			      </ul>
-			    <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més actualitat" /></a><a href="#">més notícies</a></div>
+			    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">més notícies</a></div>
 		    </div>
 		    
 		    <div id="baix200"></div>
@@ -72,10 +72,10 @@
 		    <div id="caixaPortlet">
 			    <div class="titolPortlet"> Agenda</div>
 			      <ul>
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="img/custom/reunio.gif" /></li> 
+			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li> 
 			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
 			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="img/custom/reunio.gif" /></li> 
+			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li> 
 			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li>            
 			      </ul>
 			
@@ -89,15 +89,15 @@
 			      Esdeveniments i reunions.<br />   
 			      <table style="border:none; margin-top:5px">
 			         <tr class="arrodonimentTR">
-			           <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="img/daltCalendari.gif" /></td>
+			           <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif" /></td>
 			         </tr>
 			      </table>
 			
 				      <table>
 				        <tr id="daltCalendari">
-				      <td class="cantoEC"><img src="img/custom/fletxaE.gif" alt="Anterior" /></td>
+				      <td class="cantoEC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif" alt="Anterior" /></td>
 				      <td colspan="5" class="calendariMes"><b>Juny</b> 2008</td>
-				      <td class="cantoDC"><img src="img/custom/fletxaD.gif" alt="Següent" /></td>
+				      <td class="cantoDC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif" alt="Següent" /></td>
 				    </tr>
 						  <tbody>
 						    <tr>
@@ -157,7 +157,7 @@
 						  </tbody>
 				  <tfoot>
 				    <tr>
-				      <td class="ajustament" colspan="7"><div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més actualitat" /></a><a href="#">avui</a></div></td>
+				      <td class="ajustament" colspan="7"><div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">avui</a></div></td>
 				    </tr>
 				  </tfoot>
 				</table>
@@ -183,28 +183,28 @@
 		    <!-- dessota agenda -->
 		    <div class="agendaContingut agendaAjustament">
 		      <ul>
-		      	<li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="img/custom/reunio.gif" /></li> 
+		      	<li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li> 
 		      	<li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
 		      	<li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li> 
 		      	<li><a href="#">Lorem ipsum dolor suit sum nomis d fsdf sdfsdfsd fsdfsdf sdf sdfs dfsdfsdf sdfsdfnes trade gits fdfs dfsdf sdfsd fsdf</a><br />
 		      	  <small>13/11/06</small></li> 
-		      	<li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>30/09/76</small><img src="img/custom/reunio.gif" /></li>                                 
+		      	<li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>30/09/76</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li>                                 
 		      </ul>
-		      <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">tota l'agenda</a></div>
+		      <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">tota l'agenda</a></div>
 		      <div id="calendari">
 		      <b>Calendari</b><br />
 		      Esdeveniments i reunions.<br />
 		      <table style="border:none; margin-top:5px">
 		         <tr class="arrodonimentTR">
-		           <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="img/daltCalendari.gif" /></td>
+		           <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif" /></td>
 		         </tr>
 		      </table>
 		
 				      <table>
 				        <tr id="daltCalendari">
-				      <td class="cantoEC"><img src="img/custom/fletxaE.gif" alt="Anterior" /></td>
+				      <td class="cantoEC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif" alt="Anterior" /></td>
 				      <td colspan="5" class="calendariMes"><b>Juny</b> 2008</td>
-				      <td class="cantoDC"><img src="img/custom/fletxaD.gif" alt="Següent" /></td>
+				      <td class="cantoDC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif" alt="Següent" /></td>
 				    </tr>
 				  <tbody>
 				    <tr>
@@ -264,7 +264,7 @@
 				  </tbody>
 				  <tfoot>
 				    <tr>
-				      <td class="ajustament" colspan="7"><div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més actualitat" /></a><a href="#">avui</a></div></td>
+				      <td class="ajustament" colspan="7"><div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">avui</a></div></td>
 				    </tr>
 				  </tfoot>
 				</table>
@@ -282,41 +282,40 @@
 		      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
 		    </ul>
 		    
-		    <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
+		    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
 		    </div>
 		    <!--fi notícies-->
 		    
 		    
 		    
-			<table class="taulaDivs">
-			  <tr class="taulaDivs">
-			    <td class="taulaDivs taulaDivsTdE">    
-				    <div class="noticiesDalt">Notícies</div>
-				    <div class="agendaContingut">
-				     <ul>
-				      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-				      <li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
-				      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
-				    </ul>
-				    <div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
-				    </div>
-				</td>
-			    <td class="taulaDivs taulaDivsTdD">   
-			    
-			    
-			    
-<!--				    <div class="noticiesDalt">Actualitat UPC</div>-->
-<!--				    <div class="agendaContingut">-->
-<!--				     <ul>-->
-<!--				      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a></li> -->
-<!--				      <li><a href="#">Imnomatem ebat toits aus revendraf.</a></li> -->
-<!--				      <li><a href="#">Salviti ta et queret paften clam.</a></li>                                -->
-<!--				    </ul>-->
-<!--				    	<div id="portletPlus"><a href="#"><img src="img/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>-->
-<!--				    </div>-->
-				</td>
-			  </tr>
-			</table>
+		    <table class="taulaDivs">
+		  <tr class="taulaDivs">
+		    <td class="taulaDivs taulaDivsTdE">    <!-- NOTICIES -->
+		    <div class="noticiesDalt">Notícies</div>
+		    <div class="agendaContingut">
+		     <ul>
+		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
+		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
+		      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
+		    </ul>
+		    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
+		    </div>
+		    <!--fi notícies-->
+		</td>
+		    <td class="taulaDivs taulaDivsTdD">    <!-- NOTICIES -->
+		    <div class="noticiesDalt">Actualitat UPC</div>
+		    <div class="agendaContingut">
+		     <ul>
+		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a></li> 
+		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a></li> 
+		      <li><a href="#">Salviti ta et queret paften clam.</a></li>                                
+		    </ul>
+		    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
+		    </div>
+		    <!--fi notícies-->
+		</td>
+		  </tr>
+		</table>
 		
 		
 		</div>
