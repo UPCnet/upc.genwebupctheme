@@ -50,8 +50,20 @@ input.button{
 }
 
 .submitGo {
-  width: 16px;
-  /*height: 16px;*/ /*upcnet*/
+  width: 60px;
+  height: 20px;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  background: url(++resource++upc.genwebupctheme.images/cerca_ca.gif) no-repeat right bottom;
+  overflow: hidden;
+  cursor: pointer; /* hand-shaped cursor */
+  cursor: hand; /* for IE 5.x */
+}
+
+.submitLogin {
+  width: 20px;
+  height: 20px;
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -100,7 +112,11 @@ margin-bottom:1px;
 width:4px;
 height:5px;
 }
-.souA {margin: 5px 0px 60px 5px; font-size:0.9em;}
+
+.souA {
+    margin: 5px 0px 40px 0px; font-size:0.9em; padding-left:8px;
+    background: url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat top left;
+}
 .connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
@@ -288,3 +304,11 @@ padding-right:0em;
 }
 
 .barraCerca { text-transform: lowercase; }
+#searchGadget {
+background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0%;
+border:1px solid #FF6600;
+font-size:11px;
+padding:0px 1px 1px;	
+}
+
+

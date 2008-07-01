@@ -84,14 +84,31 @@ text-decoration: underline; !important
     font-size:0.9em;
 }
 
-.portletHeader {
-    text-align: center;
-    
-}
 .text_dia {}
 .text_mes {}
 .text_number {}
 
-.portal-languageselector {
-	display:none;
+.barra_idiomes {
+	float: right;
 }
+	
+
+.cantoES {
+	float: left;
+	background-color: #E8E2DF;
+}
+	
+.cantoDR {
+	align: right;
+	background-color: #E8E2DF;
+}
+
+.cantoEC {
+    text-align: left;
+      background-color: #E8E2DF;
+}
+
+.cantoDC {
+    text-align: right;
+    background-color: #E8E2DF;
+    }

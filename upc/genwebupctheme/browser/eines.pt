@@ -44,7 +44,7 @@
                        i18n:attributes="alt label_password;"/>
                        
                 <!--  <div class="formControls"> -->
-                <input class="submitGo"
+                <input class="submitLogin"
                        type="submit"
                        value=""/>
             </div>

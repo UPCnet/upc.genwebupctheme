@@ -15,6 +15,8 @@ class barraIdiomes(LanguageSelector):
     """Language selector for translatable content.
     """
 
+    render = ZopeTwoPageTemplateFile('barraIdiomes.pt')
+    
     def languages(self):
         results = LanguageSelector.languages(self)
         translatable = ITranslatable(self.context, None)
@@ -40,12 +42,15 @@ class barraIdiomes(LanguageSelector):
 
         return results
     
-    def dotorslash(self, code, prefLang):
-        if code=='ca':
-            return '·'
-        if code=='es' and prefLang=='ca':
-            return '·'
-        if code=='es' and prefLang=='en':
-            return '|'
-        if code=='en':
-            return '|'    
+    def dotorslash(self, code, num):
+        #tmp = []
+        #tmp = tmp.append(code)
+        #if len(tmp)== num:
+        #    return False
+        return True
+        #if code=='es' and prefLang=='ca':
+        #    return '2'
+        #if code=='es' and prefLang=='en':
+        #    return '3'
+                
+            

@@ -6,9 +6,9 @@
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="upc.genwebupc">
 
-<metal:block metal:fill-slot="top_slot"
-             tal:define="dummy python:request.set('eshomepage','True')" >
-             </metal:block>
+    <metal:block metal:fill-slot="top_slot"
+        tal:define="dummy python:request.set('eshomepage','True')">
+    </metal:block>
              
 <body>
 
@@ -79,89 +79,51 @@
 			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li>            
 			      </ul>
 			
-					<div class="agendaData agendaDataReposicio">
-					 <div class="agendaNumero">24</div>
-					 <div class="agendaMes"><div class="agendaDia">dimarts</div>Setembre</div>
-					</div>   
-					   
-			<div id="calendariVertical">
-			      <b>Calendari</b><br />
-			      Esdeveniments i reunions.<br />   
-			      <table style="border:none; margin-top:5px">
-			         <tr class="arrodonimentTR">
-			           <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif" /></td>
-			         </tr>
-			      </table>
+		<!--  CALENDARI -->	
+		
+		<div id="calendariVertical">
+			<div class="agendaData agendaDataReposicio">
+                <div class="agendaNumero"
+                     >
+                     23
+            </div>
+            
+            <div class="agendaMes">
+                <div class="agendaDia"
+                    > 
+                    dilluns
+                </div>
+            <span > 
+                Juny </span>
+            </div>
+            </div>
+        
+        <div id="calendariVertical">
+        </div>
+            <div id="calendar_text"
+                i18n:domain="upc.genwebupc"
+                i18n:translate="calendari_title"> 
+            Calendari
+            </div>
+            <div id="esdeveni_text"
+                i18n:domain="upc.genwebupc"
+                i18n:translate="esdeveniments_reunions"> 
+         Esdeveniments i reunions.
+        <br/> </div>
+    <br>
+         
+        
+        <!--   FI CALENDARI -->             
+
+					<table style="border:none; margin-top: 5px;"> 
+					<tr class="arrodonimentTR">
+                       <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif" /></td>
+                     </tr>
+					</table>
+
 			
-				      <table>
-				        <tr id="daltCalendari">
-				      <td class="cantoEC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif" alt="Anterior" /></td>
-				      <td colspan="5" class="calendariMes"><b>Juny</b> 2008</td>
-				      <td class="cantoDC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif" alt="Següent" /></td>
-				    </tr>
-						  <tbody>
-						    <tr>
-						      <th>dl</th>
-						      <th>dt</th>
-						      <th>dc</th>
-						      <th>dj</th>
-						      <th>dv</th>
-						      <th>ds</th>
-						      <th>dg</th>
-						    </tr>
-						    <tr>
-						      <td>1</td>
-						      <td>2</td>
-						      <td>3</td>
-						      <td>4</td>
-						      <td>5</td>
-						      <td>6</td>
-						      <td>7</td>
-						    </tr>
-						    <tr>
-						      <td>8</td>
-						      <td>9</td>
-						      <td class="avui">10</td>
-						      <td>11</td>
-						      <td>12</td>
-						      <td>13</td>
-						      <td>14</td>
-						    </tr>
-						    <tr>
-						      <td>15</td>
-						      <td>16</td>
-						      <td class="reunio">17</td>
-						      <td>18</td>
-						      <td>19</td>
-						      <td>20</td>
-						      <td>21</td>
-						    </tr>
-						    <tr>
-						      <td>22</td>
-						      <td>23</td>
-						      <td>24</td>
-						      <td>25</td>
-						      <td>26</td>
-						      <td class="esdeveniment">27</td>
-						      <td>28</td>
-						    </tr>
-						    <tr>
-						      <td>29</td>
-						      <td>30</td>
-						      <td>31</td>
-						      <td>&nbsp;</td>
-						      <td>&nbsp;</td>
-						      <td>&nbsp;</td>
-						      <td>&nbsp;</td>
-						    </tr>
-						  </tbody>
-				  <tfoot>
-				    <tr>
-				      <td class="ajustament" colspan="7"><div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">avui</a></div></td>
-				    </tr>
-				  </tfoot>
-				</table>
-			      </div>
+				      
+			 
 			      
 		    </div>
 		    <div id="baix200"></div>

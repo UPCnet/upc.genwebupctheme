@@ -31,7 +31,7 @@
      <viewlet name="upc.genweb.barraIdiomes" 
        insert-afer="upc.genweb.logoNeutre" />
        
-    <viewlet name="upc.genweb.eines" 
+      <viewlet name="upc.genweb.eines" 
        insert-afer="upc.genweb.barraIdiomes" />
         
     <viewlet name="plone.global_sections" 

@@ -3,16 +3,18 @@
 
 /* ESTILS D'ELEMENTS */
 .emmarcada{
-text-align:center;
-margin: 10px 0px;
+    text-align:center;
+    margin: 10px 0px;
 }
+
 .emmarcada img{
-border: 1px solid #999999;
-padding: 3px;
+    border: 1px solid #999999;
+    padding: 3px;
 }
+
 h1 {
-font-size:1.3em;
-font-weight:bold;
-color:#CC0000; /*especific3*/
-margin:0px 0px 5px 0px;
+    font-size:1.3em;
+    font-weight:bold;
+    color:#CC0000; /*especific3*/
+    margin:0px 0px 5px 0px;
 }

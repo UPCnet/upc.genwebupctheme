@@ -12,13 +12,13 @@
       
 -->
 
+
 <div id="capcaplera"
     tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
     tal:condition="view/site_actions"
     i18n:domain="plone">
     
-    <div class="bandaSuperior"></div>  
-    
+    <div class="bandaSuperior"></div>
     <div class="barraCerca">
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="q" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
@@ -76,10 +76,10 @@
           action="search"
           tal:attributes="action string:${view/portal_url}/search">
 
-        <!--<label for="searchGadget" class="hiddenStructure"
+        <label for="searchGadget" class="hiddenStructure"
                     i18n:translate="text_search">Search Site</label>
 
-        --><div class="LSBox">
+        <div class="LSBox">
         <input class="text"
                type="text"
                size="18"
@@ -91,7 +91,7 @@
                class="inputLabel" />
 
         <!--  <input class="searchButton" -->
-        <input class="submitGo"
+           <input class="submitGo"
                type="submit"
                value =""
                 />
@@ -102,8 +102,11 @@
         </div>
         
         </div>
+        
     </form>
 
 </div>
+
+
 
 </div>
