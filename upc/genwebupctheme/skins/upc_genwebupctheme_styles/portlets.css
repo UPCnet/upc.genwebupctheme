@@ -124,321 +124,6 @@ padding: 5px 25px 197px 0px;
 .agendaNumero{
 float:right;
 background-color:#0076cc;
-/*padding:4px 1px 3px 1px;*/
-padding: 0px; /* UPCnet*/
-color:#FFFFFF;
-text-align:center;
-min-width: 24px;
-font-family: "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
-font-size:26px;
-margin-top:-4px;  /*UPCnet */
-}
-
-.agendaMes{
-float:none;
-padding-top:3px;
-margin-right:28px;
-text-align:right;
-color:#4D4D4D;
-font-weight:bold;
-}
-
-.agendaDia{
-font-family: "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
-font-weight:normal;
-padding:0px;
-font-size:1.25em;
-line-height:6px;
-text-transform: lowercase;
-}
-
-.agendaContingut{
-margin-top:1px;
-margin-bottom:20px;
-border: 1px solid #E6E6E6;
-background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
-}
-
-
-.agendaContingut ul{
-list-style:none;
-padding: 5px 5px 5px 5px;
-text-align:left;
-}
-
-.ajendaAjsutament{/*es crea per l'UL*/
-}
-
-.agendaAjustament ul{
-min-height: 208px;
-padding: 5px 200px 5px 5px;
-}
-.taulaDivs{
-border-collapse: collapse;
-margin:0px;
-padding:0px;
-vertical-align:top;
-}
-.taulaDivsTdE{
-padding-right:5px;
-}
-.taulaDivsTdD{
-padding-left:5px;
-}
-
-.agendaContingut li{
-padding: 5px 5px;
-line-height: 1.2em;
-}
-
-.agendaContingut #portletPlus{
-text-align:left;
-margin: 0px 0px 5px 5px;
-}
-
-/*********************************************************************** CALENDARI **********************************************/
-#calendari {
-float:right;
-margin-right: 10px;
-margin-top: -200px;
-line-height:1.2em;
-font-size:0.9em;
-}
-
-#calendariVertical {
-float:right;
-/* margin-right: 23px; UPCnet*/
-margin-top: -190px;
-line-height:1.2em;
-font-size:0.9em;
-}
-
-#calendari table, #calendariVertical table{
-font-size:0.9em;
-}
-
-#calendari th, #calendariVertical th{
-border-bottom: 1px dashed #999999;
-color:#CC0000; /*específic3*/
-}
-
-#calendari table, tr, th, td, tbody, tfoot, #calendariVertical table, tr, th, td, tbody, tfoot {
-border-collapse:collapse;
-padding:3px;
-text-align:right;
-}
-
-#calendari table, #calendariVertical table{
-border-left: 1px solid #E8E2DF; /*específic6*/;
-border-right: 1px solid #E8E2DF; /*específic6*/;
-border-bottom: 1px solid #E8E2DF; /*específic6*/;
-background-color:#FFFFFF;
-}
-
-#calendari b, #calendariVertical b{
-color:#4D4D4D;
-font-size:1.1em;
-}
-
-.calendariArrodonit{
-margin: 5px 0px 0px 0px;
-background-color: #E8E2DF; /*específic6*/;
-font-size:0.05em;
-max-width:144px;
-padding:0px;
-}
-
-.calendariArrodonit img{
-max-width:144px;
-}
-
-.calendariMes{
-    text-align:center;
-    background-color: #E8E2DF;
-    width: 96px;
-}
-
-.todaynoevent{
-border: 1px solid #CC0000; /*específic3*/
-}
-
-.todayevent{
-background-color: #DFE3D3; /*específic4*/
-border: 1px solid #CC0000; /*específic3*/
-}
-
-.event{
-background-color: #E0CECE; /*específic5*/
-}
-
-.ajustament #portletPlus{
-text-align:right; !important
-}
-
-.reajustament img{
-width: 147px;!important
-}
-
-.reajustament{
-font-size:0.05em;
-width: 145px; !important
-}
-
-.arrodonimentTR{
-background-color:#FFFFFF; 
-height: 4px;
-}
-
-.arrodonimentTD{
-background-color:#E8E2DF; 
-padding: 0px; 
-font-size:0.05em;
-}
-
-#calendar_text {
-	text-align: left;
-}
-
-#esdeveni_text {
-	 text-align: left;
-}
-
-.divCarpetaTitol{
-font-size:1.25em;
-font-weight:bold;
-color:#CC0000; /*específic3*/
-margin:0px 0px 5px -5px;
-padding-left: 15px;
-background:url(++resource++upc.genwebupctheme.images/fletxaD.gif) no-repeat left;
-font-family:Arial, Helvetica, sans-serif;
-}
-
-/* CSS UPC GENWEB 3.0 */
-
-/********************************************************************** PORTLETS ********************************************************************************/
-#portlet200{
-background:url(++resource++upc.genwebupctheme.images/custom/bar200.gif) no-repeat top; /*imatge customitzada*/
-width:200px;
-height: 8px;
-font-size:0.05em;
-}
-
-#baix200{
-width:200px;
-height:6px;
-background-image:url(++resource++upc.genwebupctheme.images/baix200.gif);
-font-size:0.05em;
-margin-bottom:20px;
-}
-
-#portlet150{
-width:150px;
-height:9px;
-background-image:url(++resource++upc.genwebupctheme.images/custom/bar150.gif); /*imatge customitzada*/
-font-size:0.05em;
-}
-
-#baix150{
-width:150px;
-height:6px;
-background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
-font-size:0.05em;
-margin-bottom:20px;
-}
-
-#caixaPortlet{
-border-left: 1px solid #E6E6E6;
-border-right: 1px solid #E6E6E6;
-}
-
-#caixaPortlet ul{
-padding: 0px;
-list-style:none;
-}
-
-#caixaPortlet li{
-padding: 4px 5px 5px 5px;
-border-top: 1px dashed #999999;
-line-height: 1.2em;
-}
-
-#caixaPortlet li:first-child{
-border-top: 0px;
-}
-
-#caixaPortlet form{
-border-bottom:1px dashed #999999;
-margin-bottom:10px;
-padding: 0px 5px;
-}
-
-.titolPortlet{
-background-color:#E8E2DF; /*específic6*/
-color:#4D4D4D;
-font-weight:bold;
-padding: 1px 5px;
-}
-
-.separadorPortlet{
-border-top: 1px solid #999999;
-margin-top: 5px;
-}
-
-#portletPlus{
-padding: 0px 5px;
-text-align:right;
-line-height: 0px;
-margin-top:-3px;
-}
-
-#portletPlus img{
-margin-right: 5px;
-margin-bottom: 0px;
-vertical-align:text-bottom;
-}
-
-.flotaPlus{
-float:left;
-margin: -11px 0px 0px 5px;
-font-size:0.9em;
-line-height:1em;
-}
-
-/*********************************************************************** AGENDA **********************************************/
-.noticiesDalt{
-border-top: 1px solid #808080;
-background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
-background-position: 0px 3px;
-padding: 11px 11px 2px 11px;
-color:#4D4D4D;
-font-weight:bold;
-text-align:left;
-}
-
-.agendaDalt{
-border-top: 1px solid #808080;
-background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
-background-position: 0px 3px;
-padding: 11px;
-color:#4D4D4D;
-font-weight:bold;
-}
-
-.agendaData{
-float:none;
-margin: -36px 0px 1px 3px;
-}
-
-.agendaDataReposicio{
-background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x;
-border-top:1px solid #999999;
-margin: 0px 0px 0px 0px;
-padding: 5px 25px 197px 0px;
-}/*pelvertical*/
-
-.agendaNumero{
-float:right;
-background-color:#0076cc;
 padding:4px 1px 3px 1px;
 color:#FFFFFF;
 text-align:center;
@@ -570,7 +255,7 @@ height:5px;
 }
 
 .calendariMes{
-text-align:center;
+    text-align:center;
 }
 
 .avui{
@@ -607,4 +292,22 @@ height: 4px;
 background-color:#E8E2DF; 
 padding: 0px; 
 font-size:0.05em;
+}
+
+#calendar_text {
+    text-align: left;
+}
+
+#esdeveni_text {
+     text-align: left;
+}
+
+.divCarpetaTitol{
+font-size:1.25em;
+font-weight:bold;
+color:#CC0000; /*específic3*/
+margin:0px 0px 5px -5px;
+padding-left: 15px;
+background:url(++resource++upc.genwebupctheme.images/fletxaD.gif) no-repeat left;
+font-family:Arial, Helvetica, sans-serif;
 }
