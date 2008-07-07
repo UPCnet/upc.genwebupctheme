@@ -1,0 +1,11 @@
+.agendaDalt{
+    text-align: left;
+}
+
+.agendaNumero {
+    line-height: 0.8em;
+   }
+   
+.agendaDia {
+    text-transform: lowercase;
+    }

@@ -1,0 +1,67 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="upc.genwebupc">
+
+    <metal:block metal:fill-slot="top_slot"
+        tal:define="dummy python:request.set('eshomepage','True')">
+    </metal:block>
+    
+<body>
+    <div metal:fill-slot="main">
+    <metal:main-macro define-macro="main">
+
+<tal:block tal:define="entries view/getRSS"
+           tal:condition="entries">
+
+    <div id="contenidor">
+        <div class="contingut">
+            <div class="columnaEsq">
+
+<div id="portlet200"> </div>
+    <div id="caixaPortlet">
+    <div class="titolPortlet">
+        Actualitat UPC </div>
+        
+        <ul tal:repeat="entry entries">
+        <li>
+            <a href=""
+                tal:attributes="title entry/summary | nothing;
+                           href entry/url | nothing" target=newwindow>
+                <span tal:replace="entry/summary | nothing">
+                Notícies RSS
+                </span>
+            </a>
+        </li>
+        </ul>
+        <div class="titolPortlet separadorPortlet"> Notícies </div>
+        <ul tal:repeat="entry entries">
+        <li >
+            <a href=""
+                tal:attributes="title entry/summary | nothing;
+                           href entry/url | nothing" target=newwindow>
+                <span tal:replace="entry/summary | nothing">
+                Notícies RSS
+                </span>
+            </a>
+        </li>
+        </ul>
+        <div id="portletPlus">  
+            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
+            <a href="#"> més notícies </a> 
+        </div>
+    </div> 
+
+</div>
+</div>
+</div>
+</tal:block>
+
+</metal:main-macro>
+</div>
+</body>
+
+</html>

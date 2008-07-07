@@ -25,6 +25,21 @@
          permission="zope2.View"
          />
          
+     <browser:page
+         for="*"
+         name="upc.genweb.actualitatUPC"
+         class=".actualitatUPC.ActualitatUPCview"
+         permission="zope2.View"
+         template="actualitatUPC.pt"
+         />
+         
+      <browser:page
+         for="*"
+         name="upc.genweb.utils"
+         class=".utils.utilitats"
+         permission="zope2.View"
+         />
+         
      <browser:viewlet
          name="upc.genweb.logosSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"

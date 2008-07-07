@@ -2,6 +2,7 @@
     tal:define="available view/available;
                 languages view/languages;
                 showFlags view/showFlags;">
+                
     <div class="barra_idiomes"> 
     <span tal:repeat="lang languages">
         <span tal:condition="python:available and len(languages)>=2"
@@ -17,20 +18,10 @@
                                        title name" 
                        tal:content="name"
                               >Language           
+                    </a>
 
-                   </a>
-                    <!--   <span tal:content="lang">qse</span> -->  
-<!--                   <span tal:content="selected">qse</span> -->
-<!--                     <span tal:content="lang">qse</span> --><!--
-
-                    <span tal:condition="python:view.dotorslash(code, len(languages))"
-                          tal:content="name"></span>
-
-                    
---><!--                    <span tal:define="lang2 python:served_languages[0]" tal:condition="python: served_languages.index(lang2) == 0">|</span>-->
-<!--                    <span tal:define="lang2 python:served_languages[0]" tal:condition="python: served_languages.index(lang2) == numlang -1 ">·</span>-->
-<!--                    <span tal:define="lang2 python:served_languages[0]" tal:condition="python: served_languages.index( (prefLang, here.portal_languages.getNameForLanguageCode(prefLang)) ) == 0 and served_languages.index(lang2) == numlang - 2">|</span>-->
-<!--                    <span tal:define="lang2 python:served_languages[0]" tal:condition="python: served_languages.index( (prefLang, here.portal_languages.getNameForLanguageCode(prefLang)) ) == numlang -1 and served_languages.index(lang2) == numlang - 2">·</span>-->
+                    <span tal:content="python:view.dotorslash(code, selected)"> 
+                    </span>
                      
                 </id>
               </span> 

@@ -42,15 +42,15 @@ class barraIdiomes(LanguageSelector):
 
         return results
     
-    def dotorslash(self, code, num):
+    def dotorslash(self, code, selected):
         #tmp = []
         #tmp = tmp.append(code)
         #if len(tmp)== num:
         #    return False
-        return True
-        #if code=='es' and prefLang=='ca':
-        #    return '2'
-        #if code=='es' and prefLang=='en':
-        #    return '3'
-                
+        #return True
+        
+        if code=='es' and selected=='ca':
+            return '2'
+        if code=='es' and selected=='en':
+            return '3'             
             

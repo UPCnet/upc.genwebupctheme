@@ -46,7 +46,7 @@
 </table>
 
 <table>
-    <tbody>
+    <thead>
         <tr id="daltCalendari">
            <td class="cantoEC">
             
@@ -89,22 +89,19 @@
                 i18n:attributes="title title_next_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif"> </a>
             </td>
         </tr>
-    </tbody>
+    </thead>
     
 
     
-        <table class="ploneCalendar"
-               summary="Calendar"
-               i18n:domain="plone"
-               i18n:attributes="summary summary_calendar;">
-            <thead>
+        
+            <tbody>
                 <tr class="weekdays"
                     ><tal:data tal:repeat="weekday view/getWeekdays"
                         ><th scope="col"
                              tal:content="weekday">Su</th
                     ></tal:data>
                 </tr>
-            </thead>
+            </tbody>
             <tbody>
                 <tr tal:repeat="week view/getEventsForCalendar"
                     ><tal:block repeat="day week"
@@ -157,6 +154,6 @@
 </td>
 </tr>
 </tfoot>
-</table>
+
 
 </dl>
