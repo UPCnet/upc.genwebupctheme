@@ -41,16 +41,16 @@ class barraIdiomes(LanguageSelector):
                     data['url'] = self.context.absolute_url() + '?set_language=' + data['code']
 
         return results
-    
-    def dotorslash(self, code, selected):
-        #tmp = []
-        #tmp = tmp.append(code)
-        #if len(tmp)== num:
-        #    return False
-        #return True
+
+
+    def trim_selected_lang(self, languages):
+        otra=[]
+        for lang in languages:
+            if not lang['selected']:
+                otra.append(lang)
+        return otra
+                
+            
         
-        if code=='es' and selected=='ca':
-            return '2'
-        if code=='es' and selected=='en':
-            return '3'             
+
             

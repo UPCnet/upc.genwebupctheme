@@ -4,8 +4,22 @@
 
 .agendaNumero {
     line-height: 0.8em;
-   }
+}
    
 .agendaDia {
     text-transform: lowercase;
-    }
+}   
+    
+   
+
+
+.barra_idiomes{
+position:relative;
+z-index: 2;
+margin-top: -20px;
+margin-right: 5px;
+}
+
+#portal-languageselector {
+ display: none;
+}

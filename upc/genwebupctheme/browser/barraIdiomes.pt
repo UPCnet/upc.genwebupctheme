@@ -1,10 +1,12 @@
 <tal:langbar
     tal:define="available view/available;
                 languages view/languages;
-                showFlags view/showFlags;">
+                showFlags view/showFlags;
+                otra python:view.trim_selected_lang(languages)">
                 
     <div class="barra_idiomes"> 
-    <span tal:repeat="lang languages">
+
+    <span tal:repeat="lang otra">
         <span tal:condition="python:available and len(languages)>=2"
               tal:define="code lang/code;
                           selected lang/selected">
@@ -17,16 +19,16 @@
                        tal:attributes="href lang/url;
                                        title name" 
                        tal:content="name"
-                              >Language           
+                              >Language          
                     </a>
-
-                    <span tal:content="python:view.dotorslash(code, selected)"> 
-                    </span>
-                     
+                <span tal:condition="not:repeat/lang/end">  
+                    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
+                </span>                      
                 </id>
               </span> 
         </span>
+    
     </span>
-       
+                     
     </div>
 </tal:langbar>
