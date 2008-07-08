@@ -1,26 +1,13 @@
-<!--
-   <div id="capcaplera">
-   <div class="bandaSuperior"></div>
-   
-   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">cerca avanÃ§ada</a> 
-   <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
-      
--->
-
-
-<!--   <div class="logosSuperior"></div>  -->
-
     <div class="logo">
         <a href="http://www.upc.edu"> <!--he posat el link a .edu enlloc de .es-->
-            <!--<img longdesc="marca de la Universitat PolitÃšcnica de Catalunya" alt="web" src="++resource++upc.genwebupctheme.images/custom/logoUPC.gif"/>-->
-            <img longdesc="Web UPC. Universitat Politècnica de Catalunya" alt="Web UPC" src="++resource++upc.genwebupctheme.images/custom/logoUPC49.gif"/><!--afegit-->
+            <img longdesc="Web UPC. Universitat Politècnica de Catalunya" alt="Web UPC" src="++resource++upc.genwebupctheme.images/custom/LogoUPC.gif"/>
         </a>
-        <a href="http://www.upc.edu/fme" target="_blank"><!--afegit-->
-            <img longdesc="Web FME. Facultat de Matemàtica i Estadística" alt="Web FME" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/><!--afegit-->
+        <a href="http://www.upc.edu/fme" target="_blank">
+            <img longdesc="Web FME. Facultat de Matemàtica i Estadística" alt="Web FME" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
         </a><!--afegit-->
     </div>
     <div class="titolWeb">
-        <a href="http://www.upcnet.es">
+        <a href="http://www.upc.edu">
             <img longdesc="Tí­tol de la Web" alt="web" src="++resource++upc.genwebupctheme.images/custom/titolWeb1.gif"/>
         </a>
     </div>

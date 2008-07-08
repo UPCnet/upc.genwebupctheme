@@ -1,27 +1,10 @@
-<!--
-   <div id="capcaplera">
-   <div class="bandaSuperior"></div>
-   
-   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> 
-   <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
-   <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" />
-   <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
-   <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
-   <a href="#">cerca avanÃ§ada</a> 
-   <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
-      
--->
-
-
 <div id="capcaplera"
     tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};"
     tal:condition="view/site_actions"
     i18n:domain="plone">
     
-    <div class="bandaSuperior"></div>
-    <div class="barraCerca">
-
-
+   <div class="bandaSuperior"></div>
+   <div class="barraCerca">
     
     <form name="searchform"
           action="search"
@@ -41,7 +24,6 @@
                                id view/search_input_id"
                class="inputLabel" />
 
-        <!--  <input class="searchButton" -->
            <input class="submitGo" type="submit" value ="" />
     
         <div class="LSResult" id="LSResult" style="">
@@ -49,10 +31,7 @@
         </div>
         
         </div>
-     
     </form>
-
-
 
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
@@ -63,16 +42,6 @@
        i18n:translate="identificat"> 
        Identifica't
     </a>
-    
-<!--    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" -->
-<!--        tal:condition="not:here/portal_membership/isAnonymousUser"/>-->
-<!--    <a href=""-->
-<!--       tal:condition="not:here/portal_membership/isAnonymousUser"-->
-<!--       tal:attributes="href string:${view/portal_url}/logout" -->
-<!--       i18n:translate="logout"> -->
-<!--       Log out -->
-<!--    </a>-->
-
     
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
     <a href=""
@@ -107,12 +76,6 @@
        Advanced Search 
     </a>
 
-
-
-
-
-</div>
-
-
+   </div>
 
 </div>
