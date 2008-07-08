@@ -32,3 +32,100 @@
                      
     </div>
 </tal:langbar>
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      i18n:domain="plonepopoll">
+
+<body>
+    
+<div class="portlet" metal:define-macro="popollBox"
+     tal:define="result python:here.portal_catalog.searchResults( meta_type='PlonePopoll',
+                                                                   sort_on='Date',
+                                                                   sort_order='reverse',
+                                                                   review_state='published')[:1]"
+     tal:condition="python:len(result)==1">
+   <div class="portlet"
+        tal:define="here python:result[0].getObject();
+                    object_url python:here.absolute_url();">
+      <h5 tal:content="here/title">Poll</h5>
+      <div class="body">
+            <div class="portletItem even">
+               <B tal:replace="python:here.getPollQuestion()"> Plone Popoll Question </B>
+             </div>
+             <div class="portletItem odd">
+               <form tal:condition="python:not here.hasVoted() and here.isEnabled()"
+                     name="results" 
+                     action="" 
+                     method="post"
+                     enctype="multipart/form-data"
+                     tal:attributes="action string:${object_url}/PlonePopoll_vote" >
+                  <div tal:repeat="choice python: here.listPollChoices()" align=left>
+                     <input type="checkbox"
+                            class="noborder"
+                            name="choice:list"
+                            id="#"
+                            value="#" 
+                            tal:attributes="value repeat/choice/index;
+                            id string:cb${repeat/choice/index};"/>
+                      <span tal:define="choice_index repeat/choice/index;"
+                            tal:replace="choice">
+                        Choice
+                     </span>
+                  </div>
+                  <div align=left>
+                     <!-- Vote Button -->
+                     <input class="context"
+                            type="submit"
+                            name="vote"
+                            value="Vote"
+                            i18n:attributes="value"/>
+                  </div>
+
+                  <input type="hidden" name="form_submitted" value="1" tal:attributes="value template/id" /> 
+
+               </form>
+               </div>
+               <div class="portletFooter">
+               <table tal:condition="python:here.hasVoted() or here.isDisabled()"
+                      cellspacing="0"
+                      border="0"
+                      cellpadding="2">
+                  <tr tal:repeat="choice python: here.getResults()"
+                      align=left>
+                     <td tal:define="choice_id python:choice[0];
+                                     choice_count python:choice[1];
+                                     choice_percentage python:'%0.2f'%choice[2];
+                                     bar_percentage python:int(choice[2])">
+                        <IMG src="bar_1_10.gif"
+                             height="10"
+                             tal:attributes="width string:${bar_percentage}"> 
+                        <b tal:content="string:${choice_percentage}%">44%</b> 
+                        <BR/>
+                        <span tal:replace="choice_id">Choice 1</span> 
+                     </td>
+                  </tr>
+               </table>
+
+               <BR/>
+               [
+               <A tal:attributes="href string:${object_url}/portal_form/PlonePopoll_results">Results</A> 
+               |
+               <A tal:attributes="href string:${portal_url}/polls">Polls</A>
+               ]
+               <BR/>
+               Votes: <span tal:replace="python:here.getVotesCount()"/>
+            </div>
+      </div>
+   </div>
+
+</div>
+</body>
+
+</html>
+

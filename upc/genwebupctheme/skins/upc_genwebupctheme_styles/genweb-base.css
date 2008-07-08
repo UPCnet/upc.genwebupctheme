@@ -98,9 +98,11 @@ margin:0px;
 /******************************************************************* ELEMENTS COMUNS ****************************************************************************/
 #capcalera{ }
 .barraCerca{
-margin: 0px 0px 0px 5px;
-float:right;
+    margin: 5px 0px 0px 0px;
+    text-align: right;
+    float:none;
 }
+
 .go {
 position:relative;
 top:4px;

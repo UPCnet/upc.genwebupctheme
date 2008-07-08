@@ -78,5 +78,9 @@
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
   </hidden>
+  
+  <hidden manager="plone.portaltop" skinname="Tema genwebUPC">
+    <viewlet name="plone.app.i18n.locales.languageselector" />
+  </hidden> 
 
 </object>
