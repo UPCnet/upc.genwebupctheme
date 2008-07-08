@@ -7,7 +7,7 @@
    <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" />
    <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
    <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> 
-   <a href="#">cerca avançada</a> 
+   <a href="#">cerca avanÃ§ada</a> 
    <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
       
 -->
@@ -20,6 +20,40 @@
     
     <div class="bandaSuperior"></div>
     <div class="barraCerca">
+
+
+    
+    <form name="searchform"
+          action="search"
+          tal:attributes="action string:${view/portal_url}/search">
+
+        <label for="searchGadget" class="hiddenStructure"
+                    i18n:translate="text_search">Search Site</label>
+
+        <div class="LSBox">
+        <input class="text"
+               type="text"
+               size="18"
+               value=""
+               title=""
+               accesskey="4"
+               tal:attributes="value request/SearchableText|nothing;
+                               id view/search_input_id"
+               class="inputLabel" />
+
+        <!--  <input class="searchButton" -->
+           <input class="submitGo" type="submit" value ="" />
+    
+        <div class="LSResult" id="LSResult" style="">
+            <div class="LSShadow" id="LSShadow"></div>
+        </div>
+        
+        </div>
+     
+    </form>
+
+
+
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
@@ -38,6 +72,7 @@
 <!--       i18n:translate="logout"> -->
 <!--       Log out -->
 <!--    </a>-->
+
     
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
     <a href=""
@@ -72,38 +107,9 @@
        Advanced Search 
     </a>
 
-    <form name="searchform"
-          action="search"
-          tal:attributes="action string:${view/portal_url}/search">
 
-        <label for="searchGadget" class="hiddenStructure"
-                    i18n:translate="text_search">Search Site</label>
 
-        <div class="LSBox">
-        <input class="text"
-               type="text"
-               size="18"
-               value=""
-               title=""
-               accesskey="4"
-               tal:attributes="value request/SearchableText|nothing;
-                               id view/search_input_id"
-               class="inputLabel" />
 
-        <!--  <input class="searchButton" -->
-           <input class="submitGo"
-               type="submit"
-               value =""
-                />
-    
-        <div class="LSResult" id="LSResult" style="">
-            <div class="LSShadow" id="LSShadow">
-            </div>
-        </div>
-        
-        </div>
-        
-    </form>
 
 </div>
 
