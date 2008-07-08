@@ -90,6 +90,10 @@ text-decoration: underline; !important
 
 .barra_idiomes {
 	float: right;
+	position:relative;
+    z-index: 2;
+    margin-top: -20px;
+    margin-right: 5px;
 }
 	
 
