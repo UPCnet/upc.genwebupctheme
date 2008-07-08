@@ -219,11 +219,19 @@ border-bottom: 1px dashed #999999;
 color:#CC0000; /*específic3*/
 }
 
-#calendari table, tr, th, td, tbody, tfoot, #calendariVertical table, tr, th, td, tbody, tfoot {
+#calendari table, tr, th, td, tbody, tfoot 
+{
 border-collapse:collapse;
 padding:3px;
 text-align:right;
 }
+
+#calendariVertical table, tr, th, td, tbody, tfoot {
+border-collapse:collapse;
+padding:3px;
+text-align:right;	
+}
+
 
 #calendari table, #calendariVertical table{
 border-left: 1px solid #E8E2DF; /*específic6*/;
@@ -271,16 +279,16 @@ background-color: #E0CECE; /*específic5*/
 }
 
 .ajustament #portletPlus{
-text-align:right; !important
+text-align:right !important;
 }
 
 .reajustament img{
-width: 147px;!important
+width: 147px !important;
 }
 
 .reajustament{
 font-size:0.05em;
-width: 145px; !important
+width: 145px !important;
 }
 
 .arrodonimentTR{
