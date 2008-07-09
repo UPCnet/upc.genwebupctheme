@@ -3,46 +3,58 @@
 /********************************************************************** CAPÇALERA *******************************************************************************/
 /********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
 .bandaSuperior{
-height:6px;
-width:100%;
-background-color:#FF6600; /*específic1*/
-font-size:0.05em;
+    height:6px;
+    width:100%;
+    background-color:#FF6600; /*específic1*/
+    font-size:0.05em;
 }
-.logo
-{
-float:left;
-margin: 45px 0px 0px 25px;
+
+.logo {
+    margin:15px 0px 0px 25px;
 }
-.titolWeb
-{
-text-align:center;
-margin:0px 180px 0px 180px;
+
+.logo a {
+    margin-right:4px;
 }
+
+.titolWeb {
+    text-align:center;
+    margin:0px 180px 0px 180px;
+}
+
 .imatgeCapcalera{
-width:958px;
-height:95px;
-background-image:url(++resource++upc.genwebupctheme.images/custom/imatge.jpg);/*------ imatge del custom /!\ ----*/
-text-align:right;
+    width:958px;
+    height:95px;
+    background-image:url(++resource++upc.genwebupctheme.images/custom/imatge.jpg);/*------ imatge del custom /!\ ----*/
+    text-align:right;
 }
+
 .barraIdiomes{
-padding: 75px 5px 0px 0px;
+    padding: 75px 5px 0px 0px;
 }
 
-/*.barraUsuari{*/
-#portal-personaltools{
-/*padding: 75px 5px 0px 5px;*/
-/*float:left;*/
-font-size:0.9em;
-background-color: white;
-border-bottom: none;
-border-top: none;
-padding: 0px 0px 0px 0px;
-margin: -20px 0px 0px 5px;
-text-align: left;
-text-transform: none;
+#portal-personaltools {
+    font-size:0.9em;
+    background-color: white;
+    border-bottom: none;
+    border-top: none;
+    padding: 0px 0px 0px 0px;
+    margin: -20px 0px 0px 5px;
+    text-align: left;
+    text-transform: none;
 }
 
-#portal-globalnav {background: #Ededed url(++resource++upc.genwebupctheme.images/bgMenu.png) no-repeat bottom;text-align:center;font-family:Arial, Helvetica, Verdana, sans-serif;font-size:1.2em;text-transform:uppercase; margin-top:4px;}
+#portal-personaltools li a {
+    color:#0076CC;
+    text-decoration:none;
+}
+
+#portal-personaltools li a:hover {
+    color:#0076CC;
+    text-decoration:underline;
+}
+
+#portal-globalnav {background: #Ededed url(++resource++upc.genwebupctheme.images/bgMenu.png) no-repeat bottom;text-align:center;font-family:Arial, Helvetica, Verdana, sans-serif;font-size:1.2em;text-transform:uppercase; margin-top:4px; padding:0em; font-weight:bold;}
 #portal-globalnav li {line-height: 25px;padding:5px; margin-right: -1.8em; display: inline;}
 #portal-globalnav li a {border-left: 4px solid #FFFFFF; border-right: 4px solid #FFFFFF; border-top: 0px; line-height: 25px;padding:5px; color: #0076CC; text-transform:uppercase;}
 #portal-globalnav li.selected a {border-right: 4px solid #FFFFFF; border-left: 4px solid #FFFFFF; border-top: none; border-bottom: none; background-color: #808080; color: white; }
@@ -50,9 +62,9 @@ text-transform: none;
 #portal-globalnav li.selected a:hover {border-right: 4px solid #FFFFFF; border-left: 4px solid #FFFFFF; background-color:#CCCCCC; color: #FFFFFF; border-top: none; border-bottom: none;}
 
    
-/* Para más adelante, esta linea hace que el search salte */
+/* Ésta linea hace que el search salte */
 .LResult {
- padding-top:0px;
+    padding-top:0px;
 }
     
 .validacio {
@@ -82,7 +94,6 @@ text-transform: none;
     margin-right: 5px;
 }
     
-
 .cantoES {
     float: left;
     background-color: #E8E2DF;
@@ -95,10 +106,10 @@ text-transform: none;
 
 .cantoEC {
     text-align: left;
-      background-color: #E8E2DF;
+    background-color: #E8E2DF;
 }
 
 .cantoDC {
     text-align: right;
     background-color: #E8E2DF;
-    }
+}

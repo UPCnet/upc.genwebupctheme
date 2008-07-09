@@ -1,11 +1,4 @@
-/* Afegit per PloneTeam@UPCnet */
-
-
-
-/* CSS UPC GENWEB 3.0 */
-
-
-/************************************************************************************ GENERAL ******************************************************************/
+/**************** GENERAL ******************************/
 body{
     margin: 0px;
     padding: 0px;
@@ -13,35 +6,38 @@ body{
     color: #333333;
     font-size: 0.7em;
     background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
-/*  background: #ffffff;*/
 }
+
 a:link {    color:#0076cc;  text-decoration: none;}
 a:visited { color: #0076cc; text-decoration: none;}
 a:hover {   color: #0076cc;     text-decoration: underline;}
 a:active {  color: #0076cc;     text-decoration: none;}
 img {border:none;} /*les imatges links sense resaltar amb línia*/
 
-ul{
+ul {
     margin: 0px;
     padding: 0px;
 }
 
-form{ margin: 0px; }
-input.text, input.password{
+form { 
+	margin: 0px; 
+	padding: 0px;
+}
+
+input.text, input.password {
     font-size: 11px;
     padding: 0px 1px 1px 1px;
     border: 1px solid #FF6600; /*específic 1*/
     background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;
 }
 
-
-input.radio{
+input.radio {
     margin-right:5px;   
     margin-bottom:-2px;
     margin-top: 2px;
-    }
+}
 
-input.button{
+input.button {
     font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size:11px;
     margin-bottom:5px;
@@ -50,8 +46,8 @@ input.button{
 }
 
 .submitGo {
-  width: 60px;
-  height: 20px;
+  width: 55px;
+  height: 16px;
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -74,140 +70,149 @@ input.button{
 }
 
 h1 {
-font-size:1.3em;
-font-weight:bold;
-color:#CC0000; /*específic3*/
-margin:0px;
+    color:#CC0000;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:1.5em;
+    font-weight:bold;
+    margin:0px;
 }
 
-
-#baner{
+#baner {
     margin-bottom:20px;
     text-align:right;
 }
-#baner img {    border: 1px solid #0076cc;  margin-bottom:20px;}
 
+#baner img {    
+	border: 1px solid #0076cc;  
+	margin-bottom:20px;
+}
 
-/* Antic #contenidor ! */
 #visual-portal-wrapper{
     margin: 0px auto;
     padding: 0;
     width: 958px;
 }
-/********************************************************************** CAPÇALERA *******************************************************************************/
-/******************************************************************* ELEMENTS COMUNS ****************************************************************************/
+/******************************* CAPÇALERA ******************************/
+/**************************** ELEMENTS COMUNS ***************************/
 #capcalera{ }
 .barraCerca{
-    margin: 5px 0px 0px 0px;
+    margin: 4px 0px 0px 5px;
     text-align: right;
     float:none;
+    margin-top:7px;
+}
+
+.barraCerca img {
+    vertical-align: baseline;
 }
 
 .go {
-position:relative;
-top:4px;
-padding-left:5px;
+    position:relative;
+    top:4px;
+    padding-left:5px;
 }
-.quadradet{
-background-color:#FF6600; /*específic 1*/
-margin-bottom:1px;
-width:4px;
-height:5px;
+
+.quadradet {
+    background-color:#FF6600; /*específic 1*/
+    margin-bottom:1px;
+    width:4px;
+    height:5px;
 }
 
 .souA {
     margin: 5px 0px 40px 0px; font-size:0.9em; padding-left:8px;
     background: url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat top left;
 }
+
 .connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
-/********************************************************************** CONTINGUT *******************************************************************************/
+/************************** CONTINGUT ********************************/
 .contingut{
     text-align: left;
     line-height: 1.5em;
 }
-/* PER A COLUMNES PROPORCIONADES 200 - X - 150
-.columnaEsq{
+
+.columnaMenu {
     float:left;
     width:200px;
 }
-.columnaCentre{
-    margin-right: 175px;
-    margin-left:225px;
-}
-*/
-/* PER A COLUMNES X - 200 - 150 */
-.columnaMenu{
-    float:left;
-    width:200px;
-}
-.columnaCentreMenu{
+.columnaCentreMenu {
     margin-left:225px;
     margin-bottom:20px;
 }
-.columnaEsq{
+.columnaEsq {
     float:right;
     width:200px;
     margin-right: 25px;
 }
 
-.columnaCentre{
+.columnaCentre {
     margin-right: 400px;
 }
 
-.columnaCentreCentrada{
+.columnaCentreCentrada {
     margin-left:225px;
     margin-right: 175px;
 }
-.columnaDreta{
+
+.columnaDreta {
     width: 150px;
     float: right;
 }
-.iconesContingut{
-text-align:right;
-float:right;
-width:150px;
+
+.iconesContingut {
+    text-align:right;
+    float:right;
+    width:150px;
 }
+
 .iconesContingut img{
 }
-.iconesContingut a{margin: 0px 5px;}
-/*********************************************************************** MENU LATERAL **********************************************************************/
-.titolSeccio{
-background:url(++resource++upc.genwebupctheme.images/submenuFons.png) no-repeat #ededed;
-width: 197px;
-font-family:Arial, Helvetica, sans-serif;
-text-transform:uppercase;
-color:#FFFFFF;
-font-size:1.75em;
-font-weight:bold;
-padding:15px 0px 0px 3px;
+
+.iconesContingut a{
+    margin: 0px 5px;
 }
-.titolSeccio .textetSeccioneta{
+/*************************** MENU LATERAL ******************************/
+.titolSeccio{
+    background:url(++resource++upc.genwebupctheme.images/submenuFons.png) no-repeat #ededed;
+    width: 197px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    color:#FFFFFF;
+    font-size:1.75em;
+    font-weight:bold;
+    padding:15px 0px 0px 3px;
+}
+
+.titolSeccio .textetSeccioneta {
     line-height: 1.1em;
 }
-.flotaTapa{
-background-color:#FFFFFF;
-height: 8px;
-margin-top:-4px;
+
+.flotaTapa {
+    background-color:#FFFFFF;
+    height: 8px;
+    margin-top:-4px;
 }
-#submenu{
+
+#submenu {
     margin: 5px 0px 0px 0px;
     position: relative;
     border-top:1px dashed #333333;
 }
+
 #submenu b{ color:#0076cc; }
 #submenu ul{ padding: 0px;}
-#submenu li{
+#submenu li {
     padding: 5px 0px 5px 20px;
     margin: 0px 0px;
     background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
     list-style-type: none;
     border-bottom: 1px dashed #333333;
     line-height:2em;
-
 }
-#submenu ul li ul li{
+
+#submenu ul li ul li {
     padding: 0px 0px 0px 10px;
     margin: 5px 1px;
     background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
@@ -217,31 +222,33 @@ margin-top:-4px;
     font-size:0.9em;
 }
 
-/***********************************/
-
-/********************************************************************** PEU *******************************************************************************/
-#peu{ 
-clear:both;
-float:none;
-margin-bottom:10px;
+/************************** PEU ******************************************/
+#peu { 
+    clear:both;
+    float:none;
+    margin-bottom:10px;
 }
-#signText{
+
+#signText {
     line-height: 1.1em;
     font-size: 0.9em;
     border-top: 3px solid #ff6600; /*específic 1*/
     padding-top: 4px;
     margin-left: 225px;
 }
-.sobreElWeb{
+
+.sobreElWeb {
     float:right;
     margin-top:-12px;
 }
-.bandaPeu{
+
+.bandaPeu {
     float:left;
     border-top: 18px solid #ff6600; /*específic 1*/
     width:200px;
 }
-#bandaLogos{
+
+#bandaLogos {
     line-height: 1.1em;
     font-size: 0.9em;
     border-top: 1px dashed #ff6600; /*específic 1*/
@@ -249,22 +256,23 @@ margin-bottom:10px;
     vertical-align:middle;
 }
 
-#bandaLogos img{
+#bandaLogos img {
     margin-right: 15px;
     padding: 10px 0px;
 }
 
-/********************************************************************** DIV CARPETA I CARPETA INTEL·LIGENT *********************************************************/
-.divCarpeta{
-border-top: 1px dashed #999999;
-border-left: 1px solid #f6f6f6;
-border-right: 1px solid #f6f6f6;
-background:#ededed;
-background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
-margin: 10px 0px 0px 15px;
-padding: 5px;
+/************************* DIV CARPETA I CARPETA INTEL·LIGENT **************/
+.divCarpeta {
+    border-top: 1px dashed #999999;
+    border-left: 1px solid #f6f6f6;
+    border-right: 1px solid #f6f6f6;
+    background:#ededed;
+    background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
+    margin: 10px 0px 0px 15px;
+    padding: 5px;
 }
-.divCarpeta ul li{
+
+.divCarpeta ul li {
     padding: 0px 0px 0px 12px;
     margin: 5px 10px;
     background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
@@ -273,44 +281,104 @@ padding: 5px;
     border-bottom:none;
     font-size:0.9em;
 }
-.divCarpeta small{
-}
-.divCarpeta p{
-line-height: 1em;
-margin-top:0px;
-margin-bottom:15px;
-}
-.divCarpetaTitol{
-background:url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat top left;
-font-size:1.2em;
-font-weight:bold;
-color:#CC0000; /*específic3*/
-padding: 8px 0px 5px 15px;
-}
-.modificacio{
-color:#CC0000; /*específic 3*/
-text-align:right;
-font-size:0.9em;
+
+.divCarpeta small {
 }
 
+.divCarpeta p {
+    line-height: 1em;
+    margin-top:0px;
+    margin-bottom:15px;
+}
 
+.divCarpetaTitol {
+    background:url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat top left;
+    font-size:1.2em;
+    font-weight:bold;
+    color:#CC0000; /*específic3*/
+    padding: 8px 0px 5px 15px;
+}
 
+.modificacio {
+    color:#CC0000; /*específic 3*/
+    text-align:right;
+    font-size:0.9em;
+}
 
 /* UPCnet */
 #portal-breadcrumbs {
-font-size:0.9em;
-margin:5px 0px 40px 5px;
-border-bottom: 0px;
-padding-left:0em;
-padding-right:0em;
+    font-size:0.9em;
+    margin:5px 0px 40px 5px;
+    border-bottom: 0px;
+    padding-right:0em;
+    line-height:1em;
+    background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat scroll left top;
+    padding-left:8px;
 }
 
-.barraCerca { text-transform: lowercase; }
+#portal-breadcrumbs a {
+  text-decoration:none;
+}
+
+#portal-breadcrumbs a:hover {
+  text-decoration:underline;
+}
+#breadcrumbs-you-are-here{
+  font-weight:bold;
+}
+
+.barraCerca { 
+	text-transform: lowercase; 
+}
+
 #searchGadget {
-background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0%;
-border:1px solid #FF6600;
-font-size:11px;
-padding:0px 1px 1px;    
+    background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0%;
+    border:1px solid #FF6600;
+    font-size:11px;
+    padding:0px 1px 1px;    
 }
 
+.LSBox {
+    float: right;
+    margin: 0px !important;
+}
 
+#livesearchLegend {
+    line-height: 1em;
+    margin-left: -1px;
+    border: 1px solid #E6E6E6;
+    border-bottom: 0;
+    align: right;
+    margin-top: -2em;
+    padding:5px;
+}
+
+.livesearchContainer {
+    background:url(++resource++upc.genwebupctheme.images/fonsT.png) #f1f1f4 repeat-x scroll center bottom;
+    border:1px solid #E6E6E6;
+    color:#333333;
+    font-family:Verdana,Arial, Helvetica,sans-serif;
+    margin-top:0pt;
+    padding:0pt !important;
+    position:absolute;
+    right:0px;
+    text-align:left;
+    text-transform:none;
+    top:0pt;
+    visibility:visible;
+    white-space:normal;
+    width:24.3em;
+}
+
+.LSTable {
+    margin: 10px 0px 0px 0px;
+}
+.LSResult { 
+    left:0px;
+    margin:0px;
+}
+
+.image-inline {
+	border:1px solid #999999;
+    padding:3px;
+}
