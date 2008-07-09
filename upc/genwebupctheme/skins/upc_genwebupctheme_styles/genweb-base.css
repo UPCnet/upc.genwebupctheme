@@ -7,46 +7,46 @@
 
 /************************************************************************************ GENERAL ******************************************************************/
 body{
-	margin: 0px;
-	padding: 0px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #333333;
-	font-size: 0.7em;
-	background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
-/*	background: #ffffff;*/
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    color: #333333;
+    font-size: 0.7em;
+    background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
+/*  background: #ffffff;*/
 }
-a:link {	color:#0076cc;	text-decoration: none;}
-a:visited {	color: #0076cc;	text-decoration: none;}
-a:hover {	color: #0076cc; 	text-decoration: underline;}
-a:active {	color: #0076cc; 	text-decoration: none;}
+a:link {    color:#0076cc;  text-decoration: none;}
+a:visited { color: #0076cc; text-decoration: none;}
+a:hover {   color: #0076cc;     text-decoration: underline;}
+a:active {  color: #0076cc;     text-decoration: none;}
 img {border:none;} /*les imatges links sense resaltar amb línia*/
 
 ul{
-	margin: 0px;
-	padding: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 
 form{ margin: 0px; }
 input.text, input.password{
-	font-size: 11px;
-	padding: 0px 1px 1px 1px;
-	border: 1px solid #FF6600; /*específic 1*/
-	background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;
+    font-size: 11px;
+    padding: 0px 1px 1px 1px;
+    border: 1px solid #FF6600; /*específic 1*/
+    background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;
 }
 
 
 input.radio{
-	margin-right:5px;	
-	margin-bottom:-2px;
-	margin-top: 2px;
-	}
+    margin-right:5px;   
+    margin-bottom:-2px;
+    margin-top: 2px;
+    }
 
 input.button{
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:11px;
-	margin-bottom:5px;
-	margin-top: 5px;
-	padding: 0px 1px;
+    font-family:Verdana, Arial, Helvetica, sans-serif;
+    font-size:11px;
+    margin-bottom:5px;
+    margin-top: 5px;
+    padding: 0px 1px;
 }
 
 .submitGo {
@@ -82,17 +82,17 @@ margin:0px;
 
 
 #baner{
-	margin-bottom:20px;
-	text-align:right;
+    margin-bottom:20px;
+    text-align:right;
 }
-#baner img {	border: 1px solid #0076cc;	margin-bottom:20px;}
+#baner img {    border: 1px solid #0076cc;  margin-bottom:20px;}
 
 
 /* Antic #contenidor ! */
 #visual-portal-wrapper{
-	margin: 0px auto;
-	padding: 0;
-	width: 958px;
+    margin: 0px auto;
+    padding: 0;
+    width: 958px;
 }
 /********************************************************************** CAPÇALERA *******************************************************************************/
 /******************************************************************* ELEMENTS COMUNS ****************************************************************************/
@@ -124,45 +124,45 @@ height:5px;
 .connexio b{color:#4D4D4D;}
 /********************************************************************** CONTINGUT *******************************************************************************/
 .contingut{
-	text-align: left;
-	line-height: 1.5em;
+    text-align: left;
+    line-height: 1.5em;
 }
 /* PER A COLUMNES PROPORCIONADES 200 - X - 150
 .columnaEsq{
-	float:left;
-	width:200px;
+    float:left;
+    width:200px;
 }
 .columnaCentre{
-	margin-right: 175px;
-	margin-left:225px;
+    margin-right: 175px;
+    margin-left:225px;
 }
 */
 /* PER A COLUMNES X - 200 - 150 */
 .columnaMenu{
-	float:left;
-	width:200px;
+    float:left;
+    width:200px;
 }
 .columnaCentreMenu{
-	margin-left:225px;
-	margin-bottom:20px;
+    margin-left:225px;
+    margin-bottom:20px;
 }
 .columnaEsq{
-	float:right;
-	width:200px;
-	margin-right: 25px;
+    float:right;
+    width:200px;
+    margin-right: 25px;
 }
 
 .columnaCentre{
-	margin-right: 400px;
+    margin-right: 400px;
 }
 
 .columnaCentreCentrada{
-	margin-left:225px;
-	margin-right: 175px;
+    margin-left:225px;
+    margin-right: 175px;
 }
 .columnaDreta{
-	width: 150px;
-	float: right;
+    width: 150px;
+    float: right;
 }
 .iconesContingut{
 text-align:right;
@@ -184,7 +184,7 @@ font-weight:bold;
 padding:15px 0px 0px 3px;
 }
 .titolSeccio .textetSeccioneta{
-	line-height: 1.1em;
+    line-height: 1.1em;
 }
 .flotaTapa{
 background-color:#FFFFFF;
@@ -192,29 +192,29 @@ height: 8px;
 margin-top:-4px;
 }
 #submenu{
-	margin: 5px 0px 0px 0px;
-	position: relative;
-	border-top:1px dashed #333333;
+    margin: 5px 0px 0px 0px;
+    position: relative;
+    border-top:1px dashed #333333;
 }
 #submenu b{ color:#0076cc; }
 #submenu ul{ padding: 0px;}
 #submenu li{
-	padding: 5px 0px 5px 20px;
-	margin: 0px 0px;
-	background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
-	list-style-type: none;
-	border-bottom: 1px dashed #333333;
-	line-height:2em;
+    padding: 5px 0px 5px 20px;
+    margin: 0px 0px;
+    background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
+    list-style-type: none;
+    border-bottom: 1px dashed #333333;
+    line-height:2em;
 
 }
 #submenu ul li ul li{
-	padding: 0px 0px 0px 10px;
-	margin: 5px 1px;
-	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
-	list-style-type: none;
-	line-height:1.5em;
-	border-bottom:none;
-	font-size:0.9em;
+    padding: 0px 0px 0px 10px;
+    margin: 5px 1px;
+    background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
+    list-style-type: none;
+    line-height:1.5em;
+    border-bottom:none;
+    font-size:0.9em;
 }
 
 /***********************************/
@@ -226,32 +226,32 @@ float:none;
 margin-bottom:10px;
 }
 #signText{
-	line-height: 1.1em;
-	font-size: 0.9em;
-	border-top: 3px solid #ff6600; /*específic 1*/
-	padding-top: 4px;
-	margin-left: 225px;
+    line-height: 1.1em;
+    font-size: 0.9em;
+    border-top: 3px solid #ff6600; /*específic 1*/
+    padding-top: 4px;
+    margin-left: 225px;
 }
 .sobreElWeb{
-	float:right;
-	margin-top:-12px;
+    float:right;
+    margin-top:-12px;
 }
 .bandaPeu{
-	float:left;
-	border-top: 18px solid #ff6600; /*específic 1*/
-	width:200px;
+    float:left;
+    border-top: 18px solid #ff6600; /*específic 1*/
+    width:200px;
 }
 #bandaLogos{
-	line-height: 1.1em;
-	font-size: 0.9em;
-	border-top: 1px dashed #ff6600; /*específic 1*/
-	margin-left: 225px;
-	vertical-align:middle;
+    line-height: 1.1em;
+    font-size: 0.9em;
+    border-top: 1px dashed #ff6600; /*específic 1*/
+    margin-left: 225px;
+    vertical-align:middle;
 }
 
 #bandaLogos img{
-	margin-right: 15px;
-	padding: 10px 0px;
+    margin-right: 15px;
+    padding: 10px 0px;
 }
 
 /********************************************************************** DIV CARPETA I CARPETA INTEL·LIGENT *********************************************************/
@@ -265,13 +265,13 @@ margin: 10px 0px 0px 15px;
 padding: 5px;
 }
 .divCarpeta ul li{
-	padding: 0px 0px 0px 12px;
-	margin: 5px 10px;
-	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
-	list-style-type: none;
-	line-height:1.5em;
-	border-bottom:none;
-	font-size:0.9em;
+    padding: 0px 0px 0px 12px;
+    margin: 5px 10px;
+    background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
+    list-style-type: none;
+    line-height:1.5em;
+    border-bottom:none;
+    font-size:0.9em;
 }
 .divCarpeta small{
 }
@@ -310,7 +310,7 @@ padding-right:0em;
 background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0%;
 border:1px solid #FF6600;
 font-size:11px;
-padding:0px 1px 1px;	
+padding:0px 1px 1px;    
 }
 
 
