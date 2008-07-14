@@ -42,9 +42,10 @@ list-style:none;
 }
 
 #caixaPortlet li{
-padding: 4px 5px 5px 5px;
-border-top: 1px dashed #999999;
-line-height: 1.2em;
+    border-top: 1px dashed #999999;
+    line-height: 1.2em;
+    padding: 5px;
+    margin-bottom: 0px;
 }
 
 #caixaPortlet li:first-child{
@@ -219,17 +220,16 @@ border-bottom: 1px dashed #999999;
 color:#CC0000; /*específic3*/
 }
 
-#calendari table, tr, th, td, tbody, tfoot 
-{
+#calendari table,#calendari tr,#calendari th,#calendari td,#calendari tbody,#calendari tfoot, #calendariVertical table,#calendariVertical tr,#calendariVertical th,#calendariVertical td,#calendariVertical tbody,#calendariVertical tfoot {
 border-collapse:collapse;
 padding:3px;
 text-align:right;
 }
 
-#calendariVertical table, tr, th, td, tbody, tfoot {
+table, tr, th, td, tbody, tfoot {
 border-collapse:collapse;
 padding:3px;
-text-align:right;   
+text-align:left;   
 }
 
 
@@ -318,4 +318,24 @@ margin:0px 0px 5px -5px;
 padding-left: 15px;
 background:url(++resource++upc.genwebupctheme.images/fletxaD.gif) no-repeat left;
 font-family:Arial, Helvetica, sans-serif;
+}
+
+.portletItem {
+	margin-left: 0px;
+}
+
+.documentContent ul{
+    margin: 0px;
+}
+
+.documentContent {
+    font-size:100%;
+}
+
+.documentContent li a {
+    border-bottom: 0px;
+}
+
+.documentContent li a:hover {
+    text-decoration:underline;
 }

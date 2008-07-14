@@ -10,11 +10,13 @@
 }
 
 .logo {
-    margin:15px 0px 0px 25px;
+  margin:25px 0px 0px 25px;
+  min-width:160px;
+  float:left;
 }
 
 .logo a {
-    margin-right:4px;
+    margin-right:3px;
 }
 
 .titolWeb {
@@ -42,6 +44,7 @@
     margin: -20px 0px 0px 5px;
     text-align: left;
     text-transform: none;
+    color: #4d4d4d;
 }
 
 #portal-personaltools li a {
@@ -112,4 +115,31 @@
 .cantoDC {
     text-align: right;
     background-color: #E8E2DF;
+}
+
+.portletHeader {
+	background-color:#E8E2DF;
+    color:#4D4D4D;
+    font-weight:bold;
+    padding:1px 5px;
+}
+
+
+.agendaDalt{
+    text-align: left;
+}
+
+.agendaNumero {
+    line-height: 0.8em;
+}
+   
+.agendaDia {
+    text-transform: lowercase;
+}   
+
+.barra_idiomes {
+    position:relative;
+    z-index: 2;
+    margin-top: -20px;
+    margin-right: 5px;
 }

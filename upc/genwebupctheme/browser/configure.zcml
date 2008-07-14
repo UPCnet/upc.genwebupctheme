@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="upc.genwebupctheme">
 
     <!-- 'Tema genwebUPC' Zope 3 browser layer
@@ -128,10 +129,11 @@
       for more information about registering stylesheets as Zope 3 browser
       resources.
       -->
+      
     <browser:resourceDirectory
         name="upc.genwebupctheme.stylesheets"
         directory="stylesheets"
         layer=".interfaces.IThemeSpecific"
         />
-
+  
 </configure>

@@ -4,14 +4,21 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="upc.genwebupctheme">     
      
-<!--    <include package="plone.app.portlets" />-->
-    
      <plone:portlet
         name="portlets.Calendar"
         interface="upc.genwebupctheme.browser.calendar.ICalendarPortlet"
         assignment="upc.genwebupctheme.browser.calendar.Assignment"
         renderer="upc.genwebupctheme.browser.calendar.Renderer"
         addview="upc.genwebupctheme.browser.calendar.AddForm"
-         />
-
- </configure>
+         /><!--
+         
+    <plone:portlet
+        name="portlets.Navigation"
+        interface="upc.genwebupctheme.browser.navigation.INavigationPortlet"
+        assignment="upc.genwebupctheme.browser.navigation.Assignment"
+        renderer="upc.genwebupctheme.browser.navigation.Renderer"
+        addview="upc.genwebupctheme.browser.navigation.AddForm"
+        editview="upc.genwebupctheme.browser.navigation.EditForm"
+        />         
+         
+--></configure>

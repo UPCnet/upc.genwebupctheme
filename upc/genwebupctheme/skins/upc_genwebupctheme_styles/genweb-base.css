@@ -22,6 +22,7 @@ ul {
 form { 
 	margin: 0px; 
 	padding: 0px;
+	vertical-align: text-bottom;
 }
 
 input.text, input.password {
@@ -58,8 +59,8 @@ input.button {
 }
 
 .submitLogin {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   padding: 0px;
   margin: 0px;
   border: 0px;
@@ -77,6 +78,10 @@ h1 {
     margin:0px;
 }
 
+h1,h2{
+    border-bottom:0px;
+}
+	
 #baner {
     margin-bottom:20px;
     text-align:right;
@@ -99,7 +104,7 @@ h1 {
     margin: 4px 0px 0px 5px;
     text-align: right;
     float:none;
-    margin-top:7px;
+    margin-top: 7px;
 }
 
 .barraCerca img {
@@ -308,12 +313,12 @@ h1 {
 /* UPCnet */
 #portal-breadcrumbs {
     font-size:0.9em;
-    margin:5px 0px 40px 5px;
     border-bottom: 0px;
     padding-right:0em;
     line-height:1em;
     background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat scroll left top;
     padding-left:8px;
+    margin:5px 0px 40px;
 }
 
 #portal-breadcrumbs a {
@@ -332,6 +337,7 @@ h1 {
 }
 
 #searchGadget {
+	font-family:Verdana, Arial, Helvetica, sans-serif;
     background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0%;
     border:1px solid #FF6600;
     font-size:11px;
@@ -381,4 +387,8 @@ h1 {
 .image-inline {
 	border:1px solid #999999;
     padding:3px;
+}
+
+.idiomes a {
+    font-size:0.9em;
 }
