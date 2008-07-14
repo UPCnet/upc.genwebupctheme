@@ -72,8 +72,9 @@
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
     <a href=""
        tal:attributes="href string:${view/portal_url}/search_form"
-       i18n:translate="label_advanced_search">  
-       Advanced Search 
+       i18n:translate="cercaavancada"
+       i18n:domain="upc.genwebupc">  
+       Cerca Avançada 
     </a>
 
    </div>

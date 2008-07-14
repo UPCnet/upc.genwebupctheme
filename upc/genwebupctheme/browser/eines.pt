@@ -22,7 +22,9 @@
             <div class="">
                 <label for=""
                        tal:attributes="for ac_name"
-                       i18n:translate="label_login_name">Login Name</label>
+                       i18n:translate="nom_usuari"
+                       i18n:domain="upc.genwebupc">
+                       Usuari</label>
                 
                 <input class="text"
                        type="text"
@@ -127,9 +129,10 @@
     Desfés</a>
     |
     <a  
-    i18n:translate="genweb-logout" 
+    i18n:translate="genweb-logout"
+    i18n:domain="upc.genwebupc"
     tal:attributes="href string:${view/portal_url}/logout">
-    Log out</a>
+    Desconnecta</a>
    </span>
 
 </ul>
