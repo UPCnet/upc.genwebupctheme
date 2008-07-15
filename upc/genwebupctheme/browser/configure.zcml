@@ -1,8 +1,9 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
-    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="upc.genwebupctheme">
+
+   <include package=".boxlets" />
 
     <!-- 'Tema genwebUPC' Zope 3 browser layer
       Register views, viewlets and resources for this layer to make sure
@@ -129,11 +130,10 @@
       for more information about registering stylesheets as Zope 3 browser
       resources.
       -->
-      
     <browser:resourceDirectory
         name="upc.genwebupctheme.stylesheets"
         directory="stylesheets"
         layer=".interfaces.IThemeSpecific"
         />
-  
+
 </configure>
