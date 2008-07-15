@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="upc.genwebupctheme">
+
+    <browser:page
+        for="*"
+        name="box.Agenda"
+        class=".boxletsviews.agenda"
+        template="agenda.pt"
+        permission="zope2.View"
+        />
+
+</configure>

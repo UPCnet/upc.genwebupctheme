@@ -34,6 +34,9 @@ upc/genwebupctheme/browser/capsalera.py
 upc/genwebupctheme/browser/capsaleraSuperior.pt
 upc/genwebupctheme/browser/configure.zcml
 upc/genwebupctheme/browser/eines.pt
+upc/genwebupctheme/browser/globalsections.pt
+upc/genwebupctheme/browser/homepage.pt
+upc/genwebupctheme/browser/homepageview.py
 upc/genwebupctheme/browser/interfaces.py
 upc/genwebupctheme/browser/logoNeutre.pt
 upc/genwebupctheme/browser/logosSuperior.pt
@@ -93,8 +96,10 @@ upc/genwebupctheme/profiles/default/cssregistry.xml
 upc/genwebupctheme/profiles/default/import_steps.xml
 upc/genwebupctheme/profiles/default/jsregistry.xml
 upc/genwebupctheme/profiles/default/skins.xml
+upc/genwebupctheme/profiles/default/types.xml
 upc/genwebupctheme/profiles/default/upc.genwebupctheme_various.txt
 upc/genwebupctheme/profiles/default/viewlets.xml
+upc/genwebupctheme/profiles/default/types/Plone_Site.xml
 upc/genwebupctheme/skins/upc_genwebupctheme_custom_images/CONTENT.txt
 upc/genwebupctheme/skins/upc_genwebupctheme_custom_templates/CONTENT.txt
 upc/genwebupctheme/skins/upc_genwebupctheme_styles/CONTENT.txt
