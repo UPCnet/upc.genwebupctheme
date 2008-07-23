@@ -34,6 +34,14 @@
          permission="zope2.View"
          template="actualitatUPC.pt"
          />
+               
+     <browser:page
+         for="*"
+         name="upc.genweb.noticies"
+         class=".noticies.NoticiesView"
+         permission="zope2.View"
+         template="noticies.pt"
+         />
          
       <browser:page
          for="*"
