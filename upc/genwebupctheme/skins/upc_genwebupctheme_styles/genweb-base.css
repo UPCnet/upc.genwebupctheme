@@ -351,7 +351,7 @@ h1,h2{
 
 #livesearchLegend {
     border:0px;
-    background:url(liveSearchFletxa.gif) no-repeat;
+    background:url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat;
     line-height:1em;
     margin-left:auto;
     margin-top:-4em;
@@ -411,7 +411,7 @@ h1,h2{
     border:1px solid #666666; /*poseu-ho a 0 (zero) si creieu que desemmarcat no té problemes d'usabilitat*/
     border-top:1px solid #666666;
     padding-top:50px !important; /*separa una mica el contingut del menú d'edició*/
-    /*background: url(fonsT.png) repeat-x bottom;*/ /*una prova amb fons per marcar on acaba visualment*/
+    /*background: url(++resource++upc.genwebupctheme.images/custom/fonsT.png) repeat-x bottom;*/ /*una prova amb fons per marcar on acaba visualment*/
 }
 .contentViews li a {
     color:#0077cc;
@@ -492,7 +492,7 @@ dl.portalMessage dt {
     font-size:1.25em;
     font-weight:bold;
     padding:6px 10px 6px 10px;
-    background:url(fonsTG.png) repeat-x bottom #f9f9f9;
+    background:url(++resource++upc.genwebupctheme.images/custom/fonsTG.png) repeat-x bottom #f9f9f9;
     border-right:1px solid #ddd;border-bottom:1px solid #ddd;
 }
 #dashboard-info-message {
@@ -516,7 +516,7 @@ background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és
 }
 .info dt{ /*text de l'esquerra*/
     color:#333333 !important; /*color text, n'hi ha quatre també*/
-    background:url(missatge_avisMini.gif) no-repeat center left;
+    background:url(++resource++upc.genwebupctheme.images/custom/missatge_avisMini.gif) no-repeat center left;
 }
 .info dt img{/*ajusta la imatge*/
     padding-right:5px;}
@@ -525,7 +525,7 @@ background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és
 }
 .warning dt{ /*text de l'esquerra*/
     color:#333333 !important; /*color text, n'hi ha quatre també*/
-    background:url(missatge_avisMini.gif) no-repeat center left;
+    background:url(++resource++upc.genwebupctheme.images/custom/missatge_avisMini.gif) no-repeat center left;
 }
 dl.warning dd {
     background-color:#fdfbf3 !important;
@@ -536,9 +536,8 @@ dl.warning dd {
 h1, h2, h3, h4, h5, h6 {/*anul·lo el negre i tot això que no mola.*/
     font-family:Arial,Helvetica,Verdana,sans-serif;
 }
-h1, h2, h3, h4, h5, h6 {/*base.css (line 56)        /!\ HAS D'ESBORRAR AIXÒ PERQUÈ EL NEGRE NO S'IMPOSSI SOBRE EL #333333*/
-    color: #333333 !important;
-    /*color:Black;*/
+h1, h2, h3, h4, h5, h6 {/* ESBORRAR AIXÒ PERQUÈ EL NEGRE NO S'IMPOSSI SOBRE EL #333333*/
+    color: #CC00000;
 }
 h4 {/*h4 més gran, potser desrpés s'ha d'ajustar els h2,h2,h3,h5 i h6 perquè l'Arial visualment és més petita que la Verdana i s'ha d'incrementar aproximadament un 15%*/
     font-size:125%;
@@ -555,7 +554,7 @@ h1, h2 {
 }
 /********************************** CANVI DELS BOTONS DE PLONE (EN PROVES) ***************************************/
 .context, .formControls .actionButtons .button, .documentEditable * .context {
-    background:url(botoFons.gif) repeat-x center;
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center;
     border:1px solid #006DA3;
     color:white;
     font-size:90%;
@@ -572,7 +571,7 @@ select {/*afegit*/
 /********************************** COMMUTA AMB VOLUM ÉS UNA PROVA (Només FireFox de moment) ***************************************/
 
 .optionsToggle {
-    background:transparent url(commuta.gif) no-repeat scroll 0%;
+    background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll 0%;
     border:0px;
     color:#999999;
     font-size:85%;
