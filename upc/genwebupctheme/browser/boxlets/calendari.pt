@@ -1,0 +1,38 @@
+<tal:block tal:define="portal_url context/@@plone_portal_state/portal_url;
+                query_string view/getQueryString;
+                showPrevMonth view/showPrevMonth;
+                showNextMonth view/showNextMonth;
+                year view/year;">
+
+<div class="agendaData agendaDataReposicio">
+    <div class="agendaNumero" 
+         tal:content="python:view.now[2]">
+         number_day
+    </div>
+    <div class="agendaMes">
+        <div class="agendaDia"
+            tal:content="python:view.dia_semana(view.now[6])">
+            text_day
+        </div>
+        <span tal:content="python:view.mes(view.now[1])">
+        text_week_day </span>
+    </div>
+</div>
+
+<div id="calendariVertical">
+    <div id="calendar_text"
+         i18n:domain="upc.genwebupc"
+         i18n:translate="calendari_title"> 
+         Calendari
+    </div>
+    <div id="esdeveni_text"
+         i18n:domain="upc.genwebupc"
+         i18n:translate="esdeveniments_reunions"> 
+         Esdeveniments i reunions.
+        <br/> </div>
+    <br>
+    
+
+ </div>
+    
+</tal:block>

@@ -1,0 +1,33 @@
+<tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                            plone_view context/@@plone;">
+
+<div id="contenidor">
+<div class="taulaDivs taulaDivsTdD">
+<div class="noticiesDalt"> Notícies </div>
+<div class="agendaContingut">
+
+        <ul>
+        <li     tal:repeat="obj view/published_news_items">
+            <a href=""
+               class="tile"
+               tal:attributes="href obj/getURL;
+                               title obj/Description">
+
+                <span tal:replace="obj/pretty_title_or_id">
+                Notícies RSS
+                </span>
+                <br>
+                
+            </a>
+            <span class="portletItemDetails"
+                  tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
+        </li>
+        </ul>
+        <div id="portletPlus">  
+            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies"> </a> 
+            <a href="#"> més notícies </a> 
+        </div>
+    </div> 
+    </div>
+</div>
+</tal:newsitems>

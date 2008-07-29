@@ -3,11 +3,55 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="upc.genwebupctheme">
 
+<!-- Columna Esquerra (1) -->
+
     <browser:page
         for="*"
         name="box.Agenda"
         class=".boxletsviews.agenda"
         template="agenda.pt"
+        permission="zope2.View"
+        />
+        
+    <browser:page
+        for="*"
+        name="box.Noticies"
+        class=".boxletsviews.noticies"
+        template="noticies.pt"
+        permission="zope2.View"
+        />        
+        
+    <browser:page
+        for="*"
+        name="box.Noticies_Actualitat"
+        class=".boxletsviews.noticies_actualitat"
+        template="noticies_actualitat.pt"
+        permission="zope2.View"
+        />        
+        
+<!-- Columna Central (2) -->        
+        
+    <browser:page
+        for="*"
+        name="box.Actualitat_Noticies_mini"
+        class=".boxletsviews.noticies_actualitat"
+        template="actualitat_noticies_mini.pt"
+        permission="zope2.View"
+        />  
+
+    <browser:page
+        for="*"
+        name="box.Agenda_mini"
+        class=".boxletsviews.agenda"
+        template="agenda_mini.pt"
+        permission="zope2.View"
+        />   
+
+    <browser:page
+        for="*"
+        name="box.Calendari"
+        class=".boxletsviews.calendari"
+        template="calendari.pt"
         permission="zope2.View"
         />
 
