@@ -168,15 +168,50 @@ class noticies_actualitat (BrowserView):
                        sort_order='reverse',
                        sort_limit=limit)[:limit]
                        
+# boxlet del calendari
+def _render_cachekey(fun, self):
+    context = aq_inner(self.context)
+    if not self.updated:
+        self.update()
+
+    if self.calendar.getUseSession():
+        raise ram.DontCache()
+    else:
+        key = StringIO()
+        print >> key, getToolByName(context, 'portal_url')()
+        print >> key, cache.get_language(context, self.request)
+        print >> key, self.calendar.getFirstWeekDay()
+
+        year, month = self.getYearAndMonthToDisplay()
+        print >> key, year
+        print >> key, month
+
+        start = DateTime('%s/%s/1' % (year, month))
+        end = DateTime('%s/%s/1' % self.getNextMonth(year, month)) - 1
+
+        def add(brain):
+            key.write(brain.getPath())
+            key.write('\n')
+            key.write(brain.modified)
+            key.write('\n\n')
+
+        catalog = getToolByName(context, 'portal_catalog')
+        brains = catalog(
+            portal_type=self.calendar.getCalendarTypes(),
+            review_state=self.calendar.getCalendarStates(),
+            start={'query': end, 'range': 'max'},
+            end={'query': start, 'range': 'min'})
+
+        for brain in brains:
+            add(brain)
+
+        return key.getvalue()                       
                        
-                       
-class calendari (BrowserView):
+class calendari(BrowserView):
+    _template = ViewPageTemplateFile('calendari.pt')
 
     def __init__(self, context, request):
-        self.context = context
-        self.request = request        
-         
-    def __call__(self, context, request):
+        BrowserView.__init__(self, context, request)
 
         context = aq_inner(self.context)
         self.calendar = getToolByName(context, 'portal_calendar')
@@ -197,10 +232,13 @@ class calendari (BrowserView):
         self.monthName = PLMF(self._ts.month_msgid(month),
                               default=self._ts.month_english(month))
 
-        return xhtml_compress(self._template())
+        self.utils = getMultiAdapter((self.context, self.request),
+                                        name=u'upc.genweb.utils')
+        self.now = localtime()
+
 #    @ram.cache(_render_cachekey)
-    #def render(self):
-        
+    def __call__(self):
+        return xhtml_compress(self._template())
 
     def getEventsForCalendar(self):
         context = aq_inner(self.context)
@@ -291,18 +329,8 @@ class calendari (BrowserView):
         for day in self.calendar.getDayNumbers():
             weekdays.append(PLMF(self._ts.day_msgid(day, format='s'),
                                  default=self._ts.weekday_english(day, format='a')))
-        return weekdays
 
-    def dia_semana(self,day):
-        """ le paso el dia y me lo pasa a texto"""
-        dia = day+1
-        if dia == 7:
-            dia = 0
-        return PLMF(self._ts. day_msgid(dia), default=self._ts.weekday_english(dia, format='a'))
-        
-    def mes(self,month):
-        """ le paso el mes y me lo pasa a texto"""
-        return PLMF(self._ts.month_msgid(month), default=self._ts.month_english(month, format='a'))
+        return weekdays
 
     def isToday(self, day):
         """Returns True if the given day and the current month and year equals
@@ -323,6 +351,12 @@ class calendari (BrowserView):
             query_string = ''
         else:
             query_string = '%s&amp;' % query_string
-        return query_string  
+        return query_string
+
+#funciones añadidas al portlet    
+    def mes(self, mes):
+        return self.utils.mes(mes)
     
+    def dia_semana(self, dia):
+        return self.utils.dia_semana(dia)    
     
