@@ -17,6 +17,7 @@
  <property name="default_view">genweb.homepage</property>
  <property name="view_methods">
   <element value="genweb.homepage"/>
+  <element value="homepage"/>
   <element value="folder_listing"/>
   <element value="folder_summary_view"/>
   <element value="folder_tabular_view"/>
