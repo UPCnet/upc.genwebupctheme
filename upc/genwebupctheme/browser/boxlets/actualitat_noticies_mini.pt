@@ -1,47 +1,52 @@
 <tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                             plone_view context/@@plone;">
 
-<tal:block tal:define="entries view/getRSS"
-           tal:condition="entries">
-
-<div id="portlet200"> </div>
-    <div id="caixaPortlet">
-    <div class="titolPortlet"> Actualitat UPC </div>
-        <ul >
-        <li tal:repeat="entry entries">
-            <a href=""
-                tal:attributes="title entry/summary | nothing;
-                           href entry/url | nothing" target=newwindow>
-                <span tal:replace="entry/summary | nothing">
-                Notícies RSS
-                </span>
-            </a>
-        </li>
-        </ul>
-        
-        <div class="titolPortlet separadorPortlet"> Notícies </div>
-        <ul>
-        <li     tal:repeat="obj view/published_news_items">
-            <a href=""
-               class="tile"
-               tal:attributes="href obj/getURL;
-                               title obj/Description">
-                <span tal:replace="obj/pretty_title_or_id">
-                Notícies RSS
-                </span>
-                <br>
-            </a>
-            <span class="portletItemDetails"
-                  tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
-        </li>
-        </ul>
-        <div id="portletPlus">  
-            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
-            <a href="#"> més notícies </a> 
-        </div>
-    </div> 
-    <div id="baix200"> </div>
-        
-
-</tal:block>
+	<tal:block tal:define="entries view/getRSS"
+	           tal:condition="entries">
+	
+		<div id="portlet200"> </div>
+		
+	    <div id="caixaPortlet">
+	    
+	    	<div class="titolPortlet"> Actualitat UPC </div>
+	    	
+	        <ul>
+		        <li tal:repeat="entry entries">
+		            <a href=""
+		                tal:attributes="title entry/summary | nothing;
+		                           href entry/url | nothing" target=newwindow>
+		                <span tal:replace="entry/summary | nothing">
+		                Notícies RSS
+		                </span>
+		            </a>
+		        </li>
+	        </ul>
+	        
+	        <div class="titolPortlet separadorPortlet"> Notícies </div>
+	        
+	        <ul>
+		        <li tal:repeat="obj view/published_news_items">
+		            <a href=""
+		               class="tile"
+		               tal:attributes="href obj/getURL;
+		                               title obj/Description">
+		                <span tal:replace="obj/pretty_title_or_id">
+		                Notícies RSS
+		                </span>
+		                <br>
+		            </a>
+		            <span class="portletItemDetails"
+		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
+		        </li>
+	        </ul>
+	        
+	        <div id="portletPlus">  
+	            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
+	            <a href="#"> més notícies </a> 
+	        </div>
+	        
+	    </div> 
+	    <div id="baix200"> </div>
+	        	
+	</tal:block>
 </tal:newsitems>
