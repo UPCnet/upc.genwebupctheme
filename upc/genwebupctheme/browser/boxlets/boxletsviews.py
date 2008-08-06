@@ -383,8 +383,9 @@ class calendari_agenda(BrowserView):
     _template = ViewPageTemplateFile('agenda.pt')
 
     def __init__(self, context, request):
+        #del portlet de calendar
         BrowserView.__init__(self, context, request)
-
+        
         self.context = aq_inner(context)
         self.calendar = getToolByName(context, 'portal_calendar')
         self._ts = getToolByName(context, 'translation_service')
@@ -407,6 +408,13 @@ class calendari_agenda(BrowserView):
         self.utils = getMultiAdapter((self.context, self.request),
                                         name=u'upc.genweb.utils')
         self.now = localtime()
+
+        #del portlet de events
+        portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
+        self.portal_url = portal_state.portal_url()
+        self.portal = portal_state.portal()
+
+        self.have_events_folder = 'events' in self.portal.objectIds()
 
 #    @ram.cache(_render_cachekey)
     def __call__(self):
@@ -525,27 +533,51 @@ class calendari_agenda(BrowserView):
             query_string = '%s&amp;' % query_string
         return query_string
 
-#funciones añadidas al portlet    
+
+#funciones correspondientes a la parte genweb del boxlet    
     def mes(self, mes):
         return self.utils.mes(mes)
     
     def dia_semana(self, dia):
-        return self.utils.dia_semana(dia)    
-    
-    def getRSS (self):
-        items = []
-        url = 'http://www.upc.edu/catala/RSS/actualitatUpc.php'
-        d = feedparser.parse(url)
-        for item in d['items']:
-            try:
-                link = item.links[0]['href']
-                itemdict = {
-                    'title' : item.title,
-                    'url' : link,
-                    'summary' : item.get('description',''),
-                }
-            except AttributeError:
-                continue
-            items.append(itemdict)
-        return items
+        return self.utils.dia_semana(dia)
+        
+#funciones correspondientes a la parte de adquisicion de eventos    
+
+    @property
+    def available(self):
+        return len(self._data())
+
+    def published_events(self):
+        return self._data()
+
+    def all_events_link(self):
+        if self.have_events_folder:
+            return '%s/events' % self.portal_url
+        else:
+            return '%s/events_listing' % self.portal_url
+
+    def prev_events_link(self):
+        if (self.have_events_folder and
+            'aggregator' in self.portal['events'].objectIds() and
+            'previous' in self.portal['events']['aggregator'].objectIds()):
+            return '%s/events/aggregator/previous' % self.portal_url
+            
+        elif (self.have_events_folder and
+            'previous' in self.portal['events'].objectIds()):
+            return '%s/events/previous' % self.portal_url
+        else:
+            return None
+
+    @memoize
+    def _data(self):
+        context = aq_inner(self.context)
+        catalog = getToolByName(context, 'portal_catalog')
+        limit = 5
+        state = 'published'
+        return catalog(portal_type='Event',
+                       review_state=state,
+                       end={'query': DateTime(),
+                            'range': 'min'},
+                       sort_on='start',
+                       sort_limit=limit)[:limit]
         

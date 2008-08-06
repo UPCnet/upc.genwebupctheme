@@ -1,13 +1,15 @@
 <!-- PORTLET AGENDA UPC -->
 
-<tal:block tal:define="entries view/getRSS;
+<tal:block tal:define="entries view/published_events;
                 portal_url context/@@plone_portal_state/portal_url;
                 query_string view/getQueryString;
                 url_quote_plus nocall:view/url_quote_plus;
                 showPrevMonth view/showPrevMonth;
                 showNextMonth view/showNextMonth;
-                year view/year;"
-           tal:condition="entries">
+                year view/year;
+                toLocalizedTime nocall:context/@@plone/toLocalizedTime"                
+           tal:condition="entries"
+           i18n:domain="plone">
 
 <!-- CALCULAR FECHA -->
 <div class="agendaDalt">Agenda </div>
@@ -29,28 +31,35 @@
     
     <div class="agendaContingut agendaAjustament">
         <ul>
-        <li tal:repeat="entry entries">
+        <li tal:repeat="obj entries">
             <a href=""
-                tal:attributes="title entry/summary | nothing;
-                           href entry/url | nothing" target=newwindow>
-                <span tal:replace="entry/summary | nothing">
-                Notícies RSS
-                </span>
+               tal:attributes="href obj/getURL;
+                               title obj/Description">
+            <span tal:replace="obj/pretty_title_or_id">
+             Some Event 
+            </span>
             </a>
+            <br />
+            <small tal:content="python:toLocalizedTime(obj.start)">
+                May 5
+            </small>
         </li>
         </ul>
         <div id="portletPlus">  
             <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
-            <a href="#"> més notícies </a> 
+            <a href=""
+               tal:attributes="href view/all_events_link"
+               i18n:translate="box_upcoming_events">
+               Upcoming events&hellip;
+            </a>
         </div>
         
         
 <div id="calendari">
-    <div id="calendar_text"
-         i18n:domain="upc.genwebupc"
-         i18n:translate="calendari_title"> 
-         Calendari
-    </div>
+    <b i18n:domain="upc.genwebupc"
+       i18n:translate="calendari_title"> 
+       Calendari
+    </b>
     <div id="esdeveni_text"
          i18n:domain="upc.genwebupc"
          i18n:translate="esdeveniments_reunions"> 

@@ -5,251 +5,47 @@
       lang="en"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="upc.genwebupc">
-
-    <metal:block metal:fill-slot="top_slot"
-        tal:define="dummy python:request.set('eshomepage','True')">
-    </metal:block>
-             
+      
 <body>
+<metal:block fill-slot="top_slot"
+             tal:define="dummy python:request.set('disable_border',1)" />
+             
+<div metal:fill-slot="main">
+ <metal:main-macro define-macro="main">
 
-    <div metal:fill-slot="main">
-
-    <metal:main-macro define-macro="main">
-
-	<div id="contenidor">
-	
-		<div class="contingut">
-			<div class="columnaDreta">
-				
-				<div id="portlet150"></div>
-			    
-			    <div id="caixaPortlet">
-			    	<div class="titolPortlet">L'Enquesta</div>
-				      <ul>
-				        <li>Retroinformàtica. El passat del futur?</li>
-				      </ul>
-				      <form>
-				      <input name="Enquesta" type="radio" class="radio" />
-				      Sí.
-				      <br />
-				      <input name="Enquesta" type="radio" class="radio" />
-				      No.<br />
-				      <input type="button" class="button" value="Vota" />
-				      </form>
-			      	
-			      	<div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">resultats</a></div>		      
-			      <div class="flotaPlus">738 vots.</div>
-			    </div>
-			    
-				<div id="baix150"></div>  
-			    
-				<div id="baner">
-				   <a href="#"><img src="++resource++upc.genwebupctheme.images/edited/eees_midagenweb.gif" alt="banner EEES" /></a>
-				   <a href="#"><img src="++resource++upc.genwebupctheme.images/edited/EEESsessionsinformativesMidaGenweb.gif" /></a>
-				</div>
-			</div>
-			
-		<div class="columnaEsq">
-			<div id="portlet200"></div>     
-		    <div id="caixaPortlet">
-			    <div class="titolPortlet"> Actulatitat UPC</div>
-			      <ul>
-			        <li><a href="http://genweb.upc.edu/prototip/upc.genweb.actualitatUPC">Actualitat esquerra</a></li>
-			        <li><a href="http://gollum.upc.es:8300/demo/upc.genweb.actualitatUPC">Actualitat dreta</a></li>             
-			      </ul>
-			    <div class="titolPortlet separadorPortlet"> Notícies</div>
-			      <ul>
-			        <li><a href="#">Retroinformàtica. El passat del futur.</a><br /><small>10/04/81</small></li>
-			        <li><a href="#">Retroinformàtica. El passat del futur.</a><br /><small>10/04/81</small></li>
-			        <li><a href="#">Retroinformàtica. El passat del futur.</a><br /><small>10/04/81</small></li>            
-			      </ul>
-			    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">més notícies</a></div>
-		    </div>
-		    
-		    <div id="baix200"></div>
-		    
-		    <div id="portlet200"></div>     
-		    
-		    <div id="caixaPortlet">
-			    <div class="titolPortlet"> Agenda</div>
-			      <ul>
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li> 
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li> 
-			        <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li>            
-			      </ul>
-			
-		<!--  CALENDARI -->	
-		
-
-        
-        <!--   FI CALENDARI -->             
-
-			      
-		    </div>
-		    <div id="baix200"></div>
-		</div>
-		
-		<div class="columnaCentre">
-			<h1>Titular ben grandot</h1>
-		     Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Nam libero tempore, cum soluta nobis est eligendi optio, cumque nihil impedit, quo minus id, quod maxime placeat, facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet, ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-		    <br />
-		    <br />
-		    
-		    <!-- capçalera agenda -->
-		    <div class="agendaDalt">Agenda</div>
-		    <div class="agendaData">
-			    <div class="agendaNumero">24</div>
-			    <div class="agendaMes"><div class="agendaDia">dimarts</div>Setembre</div>
-		    </div>
-		    
-		    <!-- dessota agenda -->
-		    <div class="agendaContingut agendaAjustament">
-		      <ul>
-		      	<li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li> 
-		      	<li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
-		      	<li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li> 
-		      	<li><a href="#">Lorem ipsum dolor suit sum nomis d fsdf sdfsdfsd fsdfsdf sdf sdfs dfsdfsdf sdfsdfnes trade gits fdfs dfsdf sdfsd fsdf</a><br />
-		      	  <small>13/11/06</small></li> 
-		      	<li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>30/09/76</small><img src="++resource++upc.genwebupctheme.images/custom/reunio.gif" /></li>                                 
-		      </ul>
-		      <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">tota l'agenda</a></div>
-		      <div id="calendari">
-		      <b>Calendari</b><br />
-		      Esdeveniments i reunions.<br />
-		      <table style="border:none; margin-top:5px">
-		         <tr class="arrodonimentTR">
-		           <td class="arrodonimentTD" align="center" colspan="7"><img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif" /></td>
-		         </tr>
-		      </table>
-		
-				      <table>
-				        <tr id="daltCalendari">
-				      <td class="cantoEC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif" alt="Anterior" /></td>
-				      <td colspan="5" class="calendariMes"><b>Juny</b> 2008</td>
-				      <td class="cantoDC"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif" alt="Següent" /></td>
-				    </tr>
-				  <tbody>
-				    <tr>
-				      <th>dl</th>
-				      <th>dt</th>
-				      <th>dc</th>
-				      <th>dj</th>
-				      <th>dv</th>
-				      <th>ds</th>
-				      <th>dg</th>
-				    </tr>
-				    <tr>
-				      <td>1</td>
-				      <td>2</td>
-				      <td>3</td>
-				      <td>4</td>
-				      <td>5</td>
-				      <td>6</td>
-				      <td>7</td>
-				    </tr>
-				    <tr>
-				      <td>8</td>
-				      <td>9</td>
-				      <td class="avui">10</td>
-				      <td>11</td>
-				      <td>12</td>
-				      <td>13</td>
-				      <td>14</td>
-				    </tr>
-				    <tr>
-				      <td>15</td>
-				      <td>16</td>
-				      <td class="reunio">17</td>
-				      <td>18</td>
-				      <td>19</td>
-				      <td>20</td>
-				      <td>21</td>
-				    </tr>
-				    <tr>
-				      <td>22</td>
-				      <td>23</td>
-				      <td>24</td>
-				      <td>25</td>
-				      <td>26</td>
-				      <td class="esdeveniment">27</td>
-				      <td>28</td>
-				    </tr>
-				    <tr>
-				      <td>29</td>
-				      <td>30</td>
-				      <td>31</td>
-				      <td>&nbsp;</td>
-				      <td>&nbsp;</td>
-				      <td>&nbsp;</td>
-				      <td>&nbsp;</td>
-				    </tr>
-				  </tbody>
-				  <tfoot>
-				    <tr>
-				      <td class="ajustament" colspan="7"><div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat" /></a><a href="#">avui</a></div></td>
-				    </tr>
-				  </tfoot>
-				</table>
-		      </div>
-		    </div><!-- fi agenda -->
-		    
-		    <!-- NOTICIES -->
-		    
-		    <div class="noticiesDalt">Notícies</div>
-		    
-		    <div class="agendaContingut">
-		     <ul>
-		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
-		      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
-		    </ul>
-		    
-		    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
-		    </div>
-		    <!--fi notícies-->
-		    
-		    
-		    
-		    <table class="taulaDivs">
-		  <tr class="taulaDivs">
-		    <td class="taulaDivs taulaDivsTdE">    <!-- NOTICIES -->
-		    <div class="noticiesDalt">Notícies</div>
-		    <div class="agendaContingut">
-		     <ul>
-		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a><br /><small>10/04/08</small></li> 
-		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a><br /><small>1/05/07</small></li> 
-		      <li><a href="#">Salviti ta et queret paften clam.</a><br /><small>15/02/07</small></li>                                
-		    </ul>
-		    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
-		    </div>
-		    <!--fi notícies-->
-		</td>
-		    <td class="taulaDivs taulaDivsTdD">    <!-- NOTICIES -->
-		    <div class="noticiesDalt">Actualitat UPC</div>
-		    <div class="agendaContingut">
-		     <ul>
-		      <li><a href="#">Lorem ipsum dolor suit sum nomines tradegit</a></li> 
-		      <li><a href="#">Imnomatem ebat toits aus revendraf.</a></li> 
-		      <li><a href="#">Salviti ta et queret paften clam.</a></li>                                
-		    </ul>
-		    <div id="portletPlus"><a href="#"><img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies" /></a><a href="#">més notícies</a></div>
-		    </div>
-		    <!--fi notícies-->
-		</td>
-		  </tr>
-		</table>
-		
-		
-		</div>
-		</div><!-- FI CONTINGUT -->
-	
-	
-	</div>
-    
-    </metal:main-macro>
+  <div id="contenidor">
+    <div class="contingut">
+      <div class="columnaDreta" tal:define="boxesdreta view/getColumn3">
+      <!-- Columna dreta  -->
+      <div tal:repeat="box boxesdreta">
+        <div tal:replace="structure python:path('context/box.'+box)">
+            Caixetes dreta
+        </div>
+      </div>      
+      </div>
+      <div class="columnaEsq" tal:define="boxesesquerra view/getColumn2">
+      <!-- Columna esquerra  -->
+      <div tal:repeat="box boxesesquerra">
+        <div tal:replace="structure python:path('context/box.'+box)">
+            Caixetes esquerra
+        </div>
+      </div>
+      </div>
+      <div class="columnaCentre" tal:define="boxescentre view/getColumn1">
+      <!-- Columna Central -->
+      <div tal:define="front view/getFrontPage">
+        <h1 tal:content="front/title">Titol principal</h1>
+        <div tal:replace="structure front/body">Cos de la pagina principal</div>
+      </div>
+      <div tal:repeat="box boxescentre">
+        <div tal:replace="structure python:path('context/box.'+box)">
+            Caixetes centre
+        </div>
+      </div>
+      </div>
     </div>
-
+  </div>
+ </metal:main-macro>
+</div>
 </body>
 </html>

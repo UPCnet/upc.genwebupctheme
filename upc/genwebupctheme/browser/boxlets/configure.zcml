@@ -9,7 +9,6 @@
         for="*"
         name="box.Agenda"
         class=".boxletsviews.calendari_agenda"
-        template="agenda.pt"
         permission="zope2.View"
         />
         

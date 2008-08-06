@@ -491,7 +491,8 @@ dl.portalMessage dt {
     font-family:Arial, Helvetica, sans-serif;
     font-size:1.25em;
     font-weight:bold;
-    padding:6px 10px 6px 10px;
+    /* reajustament del padding */
+    padding:4px 10px 5px;
     background:url(++resource++upc.genwebupctheme.images/custom/fonsTG.png) repeat-x bottom #f9f9f9;
     border-right:1px solid #ddd;border-bottom:1px solid #ddd;
 }
@@ -579,4 +580,9 @@ select {/*afegit*/
     left:-4px;
     padding:5px 4px 3px;
     position:relative;
+}
+/* Victor: trec les boletes del mon de moment */
+#content a[href^="http:"], #content a.link-external {
+    background: none;
+    padding: 0px;
 }
