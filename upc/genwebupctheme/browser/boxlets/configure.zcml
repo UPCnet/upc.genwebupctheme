@@ -8,7 +8,7 @@
     <browser:page
         for="*"
         name="box.Agenda"
-        class=".boxletsviews.calendari_agenda"
+        class=".boxletsviews.agenda"
         permission="zope2.View"
         />
         
@@ -41,7 +41,7 @@
     <browser:page
         for="*"
         name="box.Agenda_mini"
-        class=".boxletsviews.agenda"
+        class=".boxletsviews.agendamini"
         template="agenda_mini.pt"
         permission="zope2.View"
         />   
