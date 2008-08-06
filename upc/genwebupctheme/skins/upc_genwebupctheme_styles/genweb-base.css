@@ -318,7 +318,7 @@ h1,h2{
     line-height:1em;
     background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat scroll left top;
     padding-left:8px;
-    margin:5px 0px 40px;
+    margin:5px 0px 10px;
 }
 
 #portal-breadcrumbs a {
@@ -410,7 +410,7 @@ h1,h2{
 .documentEditable .documentContent {/*authoring.css (line 369)*/
     border:1px solid #666666; /*poseu-ho a 0 (zero) si creieu que desemmarcat no té problemes d'usabilitat*/
     border-top:1px solid #666666;
-    padding-top:50px !important; /*separa una mica el contingut del menú d'edició*/
+    padding-top:10px !important; /*separa una mica el contingut del menú d'edició (vik,modificat, 50 era massa!) */
     /*background: url(++resource++upc.genwebupctheme.images/custom/fonsT.png) repeat-x bottom;*/ /*una prova amb fons per marcar on acaba visualment*/
 }
 .contentViews li a {
