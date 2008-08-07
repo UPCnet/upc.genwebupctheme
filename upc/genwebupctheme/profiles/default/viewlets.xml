@@ -1,86 +1,40 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration of the viewlet managers
-     for the "Tema genwebUPC" skin.
-     -->
-
 <object>
-
-  <!-- Viewlets keep the same ordering than the default skin ('Plone Default'
-       out of the box).
-       You can specify skinname="*" if you want changes apply for all skins.
-       Using "True"" for the 'make-default' parameter will make the 'skinname'
-       value set as default skinname. Means the name of the skin that would be
-       used in case the viewlets ordering was not specified for the currently
-       used skin.
-       The 'based-on' attribute lets you inherit the viewlets ordering from an
-       existing skin.
-       -->
-       
-  <order manager="plone.portalheader" skinname="Tema genwebUPC"
+    
+  <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre"
          based-on="Plone Default">
-         
     <viewlet name="upc.genweb.capsaleraSuperior" 
        insert-before="*" />
-       
     <viewlet name="upc.genweb.logosSuperior" 
        insert-afer="upc.genweb.capsaleraSuperior" />
-       
     <viewlet name="upc.genweb.logoNeutre" 
        insert-afer="upc.genweb.logosSuperior" />
- 
-     <viewlet name="upc.genweb.barraIdiomes" 
+    <viewlet name="upc.genweb.barraIdiomes" 
        insert-afer="upc.genweb.logoNeutre" />
-       
-      <viewlet name="upc.genweb.eines" 
+    <viewlet name="upc.genweb.eines" 
        insert-afer="upc.genweb.barraIdiomes" />
-        
     <viewlet name="plone.global_sections" 
        insert-afer="upc.genweb.eines" />
-       
   </order>
   
-  <order manager="plone.portalfooter" skinname="Tema genwebUPC"
+  <order manager="plone.portalfooter" skinname="Tema genwebUPC Neutre"
          based-on="Plone Default">
-    <!-- The definition of a viewlet accepts these parameters:
-         - name: quite self explanatory, the name of the viewlet.
-         - insert-before: name of the viewlet before which it must be added or
-           moved.
-         - insert-after: name of the viewlet after which it must be added
-           or moved.
-         - remove: supported but rarely needed, removes the viewlet from the
-           ordering list (doesn't mean that it hides the viewlet).
-         Note: insert-before and -after accept the value "*" which means
-         "all".
-         -->
-<!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-    <viewlet name="upc.someviewlet"
-             insert-before="*" />
--->
   </order>
 
-  <hidden manager="plone.portaltop" skinname="Tema genwebUPC">
+  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre">
     <viewlet name="plone.personal_bar" />
+    <viewlet name="plone.app.i18n.locales.languageselector" />
   </hidden>
 
-  <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
+  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre">
     <viewlet name="plone.site_actions" />
-  </hidden>
-  
-  <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
-    <viewlet name="plone.logo" />
-  </hidden>
-
-  <hidden manager="plone.portalheader" skinname="Tema genwebUPC">
+    <viewlet name="plone.logo" />    
     <viewlet name="plone.searchbox" />
-  </hidden>  
+  </hidden>
 
-  <hidden manager="plone.portalfooter" skinname="Tema genwebUPC">
+  <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Neutre">
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
   </hidden>
   
-  <hidden manager="plone.portaltop" skinname="Tema genwebUPC">
-    <viewlet name="plone.app.i18n.locales.languageselector" />
-  </hidden> 
-
 </object>

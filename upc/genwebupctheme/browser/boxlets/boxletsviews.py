@@ -57,6 +57,7 @@ class agenda(BrowserView,calendar_render):
         return xhtml_compress(self._template())
 
 #funciones correspondientes a la parte genweb del boxlet    
+
     def mes(self, mes):
         return self.utils.mes(mes)
     
@@ -175,8 +176,9 @@ class noticies(BrowserView):
                        sort_order='reverse',
                        sort_limit=limit)[:limit]
                        
+# Vistes de la columna 2
 
-class noticies_actualitat (BrowserView):
+class noticies_actualitat(BrowserView):
     
     def __init__(self, context, request):
         self.context = context

@@ -12,22 +12,20 @@
       and viewlets only within the 'Tema genwebUPC' theme.
       -->
     <interface
-        interface=".interfaces.IThemeSpecific"
+        interface=".interfaces.IThemeSpecificNeutre"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        name="Tema genwebUPC"
+        name="Tema genwebUPC Neutre"
         />
 
 <!-- Recursos Z3 -->        
     <browser:resourceDirectory
         name="upc.genwebupctheme.images"
         directory="images"
-        layer=".interfaces.IThemeSpecific"
         />
 
     <browser:resourceDirectory
         name="upc.genwebupctheme.stylesheets"
         directory="stylesheets"
-        layer=".interfaces.IThemeSpecific"
         />
 
 <!-- Utilitats i funcions comunes -->
@@ -45,7 +43,6 @@
          name="upc.genweb.eines"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.eines"
-         layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
      
@@ -53,7 +50,6 @@
          name="upc.genweb.barraIdiomes"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".barraIdiomes.barraIdiomes"
-         layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />  
 
@@ -62,7 +58,6 @@
          manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
          class=".peu.Peu"
          template="peu.pt"
-         layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
 
@@ -71,7 +66,7 @@
          name="upc.genweb.capsaleraSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.capsaleraSuperior"
-         layer=".interfaces.IThemeSpecific"
+         layer=".interfaces.IThemeSpecificNeutre"
          permission="zope2.View"
          />
          
@@ -79,7 +74,7 @@
          name="upc.genweb.logosSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.logosSuperior"
-         layer=".interfaces.IThemeSpecific"
+         layer=".interfaces.IThemeSpecificNeutre"
          permission="zope2.View"
          />
 
@@ -87,7 +82,7 @@
          name="upc.genweb.logoNeutre"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.logoNeutre"
-         layer=".interfaces.IThemeSpecific"
+         layer=".interfaces.IThemeSpecificNeutre"
          permission="zope2.View"
          />
         
@@ -96,6 +91,7 @@
       name="homepage"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".homepage.HomePageView"
+      layer=".interfaces.IThemeSpecificNeutre"
       permission="zope2.View"
       />
 
