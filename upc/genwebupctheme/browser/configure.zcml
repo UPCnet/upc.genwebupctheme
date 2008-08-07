@@ -17,36 +17,61 @@
         name="Tema genwebUPC"
         />
 
-    <!-- Viewlets registration -->
+<!-- Recursos Z3 -->        
+    <browser:resourceDirectory
+        name="upc.genwebupctheme.images"
+        directory="images"
+        layer=".interfaces.IThemeSpecific"
+        />
 
+    <browser:resourceDirectory
+        name="upc.genwebupctheme.stylesheets"
+        directory="stylesheets"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+<!-- Utilitats i funcions comunes -->
+      <browser:page
+         for="*"
+         name="upc.genweb.utils"
+         class=".utils.utilitats"
+         permission="zope2.View"
+         />
+
+<!-- Viewlets registration -->
+
+<!-- Viewlets comuns a tots els sabors -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />  
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecific"
+         permission="zope2.View"
+         />
+
+<!-- Neutre -->
      <browser:viewlet
          name="upc.genweb.capsaleraSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.capsaleraSuperior"
          layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
-         
-     <browser:page
-         for="*"
-         name="upc.genweb.actualitatUPC"
-         class=".actualitatUPC.ActualitatUPCview"
-         permission="zope2.View"
-         template="actualitatUPC.pt"
-         />
-               
-     <browser:page
-         for="*"
-         name="upc.genweb.noticies"
-         class=".noticies.NoticiesView"
-         permission="zope2.View"
-         template="noticies.pt"
-         />
-         
-      <browser:page
-         for="*"
-         name="upc.genweb.utils"
-         class=".utils.utilitats"
          permission="zope2.View"
          />
          
@@ -65,60 +90,7 @@
          layer=".interfaces.IThemeSpecific"
          permission="zope2.View"
          />
-         
-     <browser:viewlet
-         name="upc.genweb.eines"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.eines"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
-     
-     <browser:viewlet
-         name="upc.genweb.barraIdiomes"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".barraIdiomes.barraIdiomes"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />  
-         
-         <!--
-         
-     <browser:viewlet
-         name="upc.genweb.personalbar"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".personalbar.personalbar"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
-         
---><!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-     <browser:viewlet
-         name="upc.someviewlet"
-         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-         class=".viewlets.SomeViewlet"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
--->
-
-     <browser:viewlet
-         name="upc.genweb-peu"
-         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-         class=".peu.Peu"
-         template="peu.pt"
-         layer=".interfaces.IThemeSpecific"
-         permission="zope2.View"
-         />
-
-    <!-- Zope 3 browser resources -->
-
-    <!-- Resource directory for images
-      See upc/genwebupctheme/browser/images/README.txt
-      for more information about registering images as Zope 3 browser
-      resources.
-      -->
-      
+        
 <!-- Home Page Neutre --> 
     <browser:page
       name="homepage"
@@ -126,22 +98,7 @@
       class=".homepage.HomePageView"
       permission="zope2.View"
       />
-        
-    <browser:resourceDirectory
-        name="upc.genwebupctheme.images"
-        directory="images"
-        layer=".interfaces.IThemeSpecific"
-        />
 
-    <!-- Resource directory for stylesheets
-      See upc/genwebupctheme/browser/stylesheets/README.txt
-      for more information about registering stylesheets as Zope 3 browser
-      resources.
-      -->
-    <browser:resourceDirectory
-        name="upc.genwebupctheme.stylesheets"
-        directory="stylesheets"
-        layer=".interfaces.IThemeSpecific"
-        />
+
 
 </configure>
