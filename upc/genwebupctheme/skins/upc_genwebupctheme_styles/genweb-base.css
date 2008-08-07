@@ -586,3 +586,7 @@ select {/*afegit*/
     background: none;
     padding: 0px;
 }
+#portal-column-content {/*columns.css (line 19)*/
+margin:0em -1em;
+padding:1em 1em 0pt;
+}

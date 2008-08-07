@@ -1,4 +1,4 @@
-/* CSS UPC GENWEB 3.0 */
+/* CSS UPC GENWEB 3.0a */
 
 /********************************************************************** PORTLETS ********************************************************************************/
 #portlet200{
@@ -341,4 +341,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 .documentContent li a:hover {
     text-decoration:underline;
+}
+.documentContent li a:visited {/*public.css (line 92)*/
+	color:#0077cc;
 }
