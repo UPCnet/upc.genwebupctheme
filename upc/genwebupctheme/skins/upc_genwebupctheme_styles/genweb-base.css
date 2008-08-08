@@ -352,21 +352,42 @@ h1,h2{
 
 #livesearchLegend {
     border:0px;
-    background:url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat;
-    line-height:1em;
-    margin-left:auto;
-    margin-top:-4em;
-    padding:5px;
-    font-size:0.0em;/*ho poso per treure el text*/
+    background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat top right;
+    line-height:0em;
+    *line-height:0em;
+    margin-left:50%
+    margin-top:-5em;
+    *margin-top:0.5em;
+    padding:4px 70px;
+    font-size:0.0em;
+    *font-size:-1em;
+    z-index:1000;
+    *margin-bottom:0px;
 }
-
-
+fieldset {/*forms.css (line 80)*/
+border:0px solid white;
+background:transparent;
+margin:0em;
+padding:0em;
+width:auto;
+_color:transparent;
+}
+#livesearchLegend {/*public.css (line 299)*/
+border-color:none;
+border-top-color:transparent;
+border: none;
+border-style: hidden;
+border-width:0px;
+border-collapse:collapse;
+}
 .livesearchContainer {
-    background:#e6e6e6 url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
-    border:1px solid #666666;
+    background:none;
+    border:0px solid #666666;
     color:#333333;
+    _color:transparent;
     font-family:Verdana,Arial, Helvetica,sans-serif;
-    margin-top:0pt;
+    margin:0px;
+    margin-top:-0.35em;
     padding:0pt !important;
     position:absolute;
     right:0px;
@@ -384,15 +405,24 @@ h1,h2{
 .LSResult { 
     left:0px;
     margin:0px;
+    display:block;
+    padding-top:0px;
+    position:relative;
+    text-align:right;
+    z-index:3;
 }
 
 .LSIEFix {
-    background-color:#ededed;
+    border:1px solid #666;
+    background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom;
 }
 .LSRow {
     border:0px;
 }
-
+.LSShadow {
+white-space:normal !important;
+line-height:0em;
+}
 .image-inline {
 	border:1px solid #999999;
     padding:3px;
@@ -577,7 +607,7 @@ select {/*afegit*/
 #login-form input.context {/*forms.css (line 123)*/
 background-position:center center;
 margin-bottom:0em;
-padding:0px 10px 2px 20px;
+padding:0px 15px 2px 15px;
 *padding:0px 0px 2px 0px;
 _padding:0px 0px 2px 0px;
 }

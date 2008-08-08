@@ -108,12 +108,23 @@ background-position: 0px 3px;
 padding: 11px;
 color:#4D4D4D;
 font-weight:bold;
-font-size:15px;
+*position:absolute;
+*border:1px 0px 0px 0px;
+*border-top-width:1px;
+*width:533px;
+_position:static;
+_border-top:1px solid #808080;
+_width:auto;
+
 }
 
 .agendaData{
 float:none;
 margin: -36px 0px 1px 3px;
+*margin:0px 0px 1px 3px;
+*padding-top:3px;
+_padding-top:0px;
+_margin: -36px 0px 1px 3px;
 }
 
 .agendaDataReposicio{
@@ -130,9 +141,10 @@ padding:4px 1px 3px 1px;
 color:#FFFFFF;
 text-align:center;
 min-width: 24px;
-_width:24px;
+width:24px;
 font-family: "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
 font-size:26px;
+position: relative;
 }
 
 .agendaMes{
@@ -153,10 +165,11 @@ line-height:6px;
 }
 
 .agendaContingut{
-margin-top:1px;
+margin-top:5px;
 margin-bottom:20px;
 border: 1px solid #E6E6E6;
 background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
+position:relative;
 }
 
 
@@ -172,6 +185,8 @@ text-align:left;
 
 .agendaAjustament ul{
 min-height: 208px;
+height:auto !important;
+height:208px;
 padding: 5px 200px 5px 5px;
 }
 .taulaDivs{
@@ -182,9 +197,10 @@ vertical-align:top;
 }
 .taulaDivsTdE{
 padding-right:5px;
+width:50%;
 }
 .taulaDivsTdD{
-padding-left:5px;
+padding-left:0px;
 }
 
 .agendaContingut li{
@@ -225,7 +241,6 @@ color:#CC0000; /*específic3*/
 
 #calendari table,#calendari tr,#calendari th,#calendari td,#calendari tbody,#calendari tfoot, #calendariVertical table,#calendariVertical tr,#calendariVertical th,#calendariVertical td,#calendariVertical tbody,#calendariVertical tfoot {
 border-collapse:collapse;
-padding:3px;
 text-align:right;
 }
 
@@ -255,7 +270,16 @@ font-size:0.05em;
 max-width:144px;
 padding:0px;
 }
-
+.arrodonimentTD, .arrodonimentTR{
+padding:0px;
+font-size:0px;
+line-height:0px;
+}
+.imgCA{
+width:142px;
+*width:143px;
+_width:143px;
+}
 .calendariArrodonit img{
 max-width:144px;
 }
@@ -266,7 +290,8 @@ height:5px;
 }
 
 .calendariMes{
-    text-align:center;
+    text-align:center !important;
+    padding-top:2px;
 }
 
 .avui{
@@ -333,6 +358,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 .documentContent {
     font-size:100%;
+    padding:30px 0px 10px 0px !important;
 }
 
 .documentContent li a {
