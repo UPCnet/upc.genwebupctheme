@@ -10,8 +10,10 @@
 }
 
 .logo {
-  margin:25px 0px 0px 25px;
+  margin:35px 0px 0px 25px;
+  _margin:35px 0px 0px 15px;
   min-width:160px;
+  _width:160px;
   float:left;
 }
 
@@ -21,7 +23,7 @@
 
 .titolWeb {
     text-align:center;
-    margin:0px 180px 0px 180px;
+    margin:10px 180px 10px 180px;
 }
 
 .imatgeCapcalera{
@@ -72,6 +74,8 @@
     
 .validacio {
     margin-top: -22px;
+    *margin-top: -24px;
+    _margin-top: -24px;
     font-size:0.9em;
     color:#4D4D4D;
     padding-left: 5px;

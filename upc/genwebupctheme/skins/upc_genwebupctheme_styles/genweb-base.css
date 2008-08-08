@@ -13,6 +13,7 @@ a:visited { color: #0076cc; text-decoration: none;}
 a:hover {   color: #0076cc;     text-decoration: underline;}
 a:active {  color: #0076cc;     text-decoration: none;}
 img {border:none;} /*les imatges links sense resaltar amb línia*/
+.logo a:hover{text-decoration: none;}; /*soluciona subratllat hover ie6*/
 
 ul {
     margin: 0px;
@@ -397,8 +398,13 @@ h1,h2{
     padding:3px;
 }
 
-.idiomes a {
+.barra_idiomes {
     font-size:0.9em;
+    *font-size:0.85em;
+    _font-size:0.85em;
+    padding-top:2px;
+    *padding-top:0px;
+    _padding-top:0px;
 }
 
 
@@ -555,7 +561,7 @@ h1, h2 {
 }
 /********************************** CANVI DELS BOTONS DE PLONE (EN PROVES) ***************************************/
 .context, .formControls .actionButtons .button, .documentEditable * .context {
-    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center;
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
     border:1px solid #006DA3;
     color:white;
     font-size:90%;
@@ -567,6 +573,13 @@ input {
 select {/*afegit*/
     font-family:Verdana,Lucida,Helvetica,Arial,sans-serif;
     font-size:90%;
+}
+#login-form input.context {/*forms.css (line 123)*/
+background-position:center center;
+margin-bottom:0em;
+padding:0px 10px 2px 20px;
+*padding:0px 0px 2px 0px;
+_padding:0px 0px 2px 0px;
 }
 
 /********************************** COMMUTA AMB VOLUM ÉS UNA PROVA (Només FireFox de moment) ***************************************/
