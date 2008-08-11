@@ -28,7 +28,14 @@ from plone.app.portlets import cache
 
 from plone.app.portlets.portlets.calendar import Renderer as calendar_render
 from plone.app.portlets.portlets.news import Renderer as news_render
-from Products.PlonePopoll.browser.popoll import Renderer as enquesta_render
+
+#productes addicionals amb salvaguardes
+try:
+    from Products.PlonePopoll.browser.popoll import Renderer as enquesta_render
+except ImportError:
+    HAS_POPOLL = False
+else:
+    HAS_POPOLL = True
 
 PLMF = MessageFactory('plonelocales')
 
