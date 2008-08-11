@@ -94,7 +94,7 @@ def write(s):
 if not results:
     write('''<fieldset class="livesearchContainer">''')
 #    write('''<legend id="livesearchLegend">%s</legend>''' % ts.translate(legend_livesearch))
-    write('''<span id="livesearchLegend">%s</span>''' % ts.translate(legend_livesearch))
+    write('''<span id="livesearchLegend"></span>''')
     write('''<div class="LSIEFix">''')
     write('''<div id="LSNothingFound">%s</div>''' % ts.translate(label_no_results_found))
     write('''<div class="LSRow">''')
@@ -106,7 +106,7 @@ if not results:
 else:
     write('''<fieldset class="livesearchContainer">''')
 #    write('''<legend id="livesearchLegend">%s</legend>''' % ts.translate(legend_livesearch))
-    write('''<span id="livesearchLegend">%s</span>''' % ts.translate(legend_livesearch))
+    write('''<span id="livesearchLegend"></span>''')
     write('''<div class="LSIEFix">''')
     write('''<ul class="LSTable">''')
     for result in results[:limit]:
