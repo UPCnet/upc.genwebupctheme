@@ -34,7 +34,7 @@ try:
     from Products.PlonePopoll.browser.popoll import Renderer as enquesta_render
 except ImportError:
     HAS_POPOLL = False
-    enquesta_render = None
+    enquesta_render = news_render
 else:
     HAS_POPOLL = True
 
