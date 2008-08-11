@@ -123,6 +123,7 @@ h1,h2{
     margin-bottom:1px;
     width:4px;
     height:5px;
+    vertical-align:baseline;
 }
 
 .souA {
@@ -232,18 +233,25 @@ h1,h2{
 #peu { 
     clear:both;
     float:none;
-    margin-bottom:10px;
+    margin-bottom:0px;
 }
-
+.visualClear{
+margin-bottom:25px;
+*margin-bottom:0px;
+_margin-bottom:5px;
+}
 #signText {
     line-height: 1.1em;
     font-size: 0.9em;
     border-top: 3px solid #ff6600; /*específic 1*/
     padding-top: 4px;
-    margin-left: 225px;
+    margin-left: 25px;
+    float:left;
+    width:733px;
 }
 
 .sobreElWeb {
+    text-align:right;
     float:right;
     margin-top:-12px;
 }
@@ -252,6 +260,7 @@ h1,h2{
     float:left;
     border-top: 18px solid #ff6600; /*específic 1*/
     width:200px;
+    margin-top:0px;
 }
 
 #bandaLogos {
@@ -319,7 +328,8 @@ h1,h2{
     line-height:1em;
     background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat scroll left top;
     padding-left:8px;
-    margin:5px 0px 10px;
+    margin:5px 0px 15px;
+    *margin:5px 0px 30px;
 }
 
 #portal-breadcrumbs a {
@@ -352,17 +362,19 @@ h1,h2{
 
 #livesearchLegend {
     border:0px;
-    background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat top right;
+    background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat right top;
+    *background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat center 14px;
+    _background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat center 13px;
     line-height:0em;
-    *line-height:0em;
     margin-left:50%
     margin-top:-5em;
-    *margin-top:0.5em;
-    padding:4px 70px;
+    padding:7px 70px;
     font-size:0.0em;
-    *font-size:-1em;
     z-index:1000;
     *margin-bottom:0px;
+    *float:right;
+    *width:140px;
+    *height:14px;
 }
 fieldset {/*forms.css (line 80)*/
 border:0px solid white;
@@ -387,7 +399,7 @@ border-collapse:collapse;
     _color:transparent;
     font-family:Verdana,Arial, Helvetica,sans-serif;
     margin:0px;
-    margin-top:-0.35em;
+    margin-top:0.35em;
     padding:0pt !important;
     position:absolute;
     right:0px;
@@ -398,7 +410,25 @@ border-collapse:collapse;
     white-space:normal;
     width:24.3em;
 }
-
+* html .livesearchContainer {
+    padding: 0px !important;
+/*    padding-top: 0 !important;*/
+    background-color: none;
+/*    border: 0;*/
+}
+#LSHighlight,
+.LSHighlight {
+    background-color: none;
+    border: 0px solid none;
+    color: none;
+}
+#livesearchLegend {
+/*    line-height: 1em;
+    margin-top: -2em;
+    margin-left: -0.1em;*/
+    border: 0px solid #8cacbb;
+/*    border-bottom: 0;*/
+}
 .LSTable {
     margin: 10px 0px 0px 0px;
 }
@@ -432,9 +462,10 @@ line-height:0em;
     font-size:0.9em;
     *font-size:0.85em;
     _font-size:0.85em;
-    padding-top:2px;
+    padding-top:0px;
     *padding-top:0px;
     _padding-top:0px;
+    _margin-right:3px;
 }
 
 
@@ -528,9 +559,10 @@ dl.portalMessage dt {
     font-size:1.25em;
     font-weight:bold;
     /* reajustament del padding */
-    padding:4px 10px 5px;
-    background:url(++resource++upc.genwebupctheme.images/custom/fonsTG.png) repeat-x bottom #f9f9f9;
-    border-right:1px solid #ddd;border-bottom:1px solid #ddd;
+    padding:4px 10px 5px 30px;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    _border-bottom:0px solid #ddd;
 }
 #dashboard-info-message {
     padding:0em 0em 0.3em 0em;padding-top:0em;
@@ -546,30 +578,37 @@ dl.portalMessage {
 dl.portalMessage dd {
     line-height:1.25em;
     margin:0pt;
-    padding:0.6em 0.5em 0.5em 0.5em;
+    padding:0.55em 0.5em;
+    *padding:0.6em 0.5em 0.55em;
 }
 .info{
-background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
+background-color:#f2f6fa !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
 }
 .info dt{ /*text de l'esquerra*/
-    color:#333333 !important; /*color text, n'hi ha quatre també*/
-    background:url(++resource++upc.genwebupctheme.images/custom/missatge_avisMini.gif) no-repeat center left;
+    color:#00589a !important; /*color text, n'hi ha quatre també*/
+    background:url(info_message.gif) no-repeat bottom left #f9f9f9;
 }
-.info dt img{/*ajusta la imatge*/
-    padding-right:5px;}
 .warning{
     background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
 }
 .warning dt{ /*text de l'esquerra*/
     color:#333333 !important; /*color text, n'hi ha quatre també*/
-    background:url(++resource++upc.genwebupctheme.images/custom/missatge_avisMini.gif) no-repeat center left;
+    background:url(avis_message.gif) no-repeat bottom left #f9f9f9;
 }
 dl.warning dd {
     background-color:#fdfbf3 !important;
 }
-.warning dt img{/*ajusta la imatge*/
-    padding-right:5px;
+.error{
+background-color:#fcf4f2 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
 }
+.error dt{ /*text de l'esquerra*/
+    color:#c63103 !important; /*color text, n'hi ha quatre també*/
+    background:url(error_message.gif) no-repeat bottom left #f9f9f9;
+}
+dl.error dd {
+    background-color:#fcf4f2 !important;
+}
+
 h1, h2, h3, h4, h5, h6 {/*anul·lo el negre i tot això que no mola.*/
     font-family:Arial,Helvetica,Verdana,sans-serif;
 }
@@ -593,9 +632,20 @@ h1, h2 {
 .context, .formControls .actionButtons .button, .documentEditable * .context {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
     border:1px solid #006DA3;
+    *border:0px;
     color:white;
     font-size:90%;
-    padding:0px 1px 2px 1px;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;
+}
+.standalone, .documentEditable * .standalone {
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFonsClar.gif) repeat-x center center;
+    border:1px solid #8dcde3;
+    *border:0px;
+    color:#333;
+    font-size:90%;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;
 }
 input {
     font-family:Verdana,Lucida,Helvetica,Arial,sans-serif;
@@ -631,5 +681,178 @@ _padding:0px 0px 2px 0px;
 }
 #portal-column-content {/*columns.css (line 19)*/
 margin:0em -1em;
-padding:1em 1em 0pt;
+padding:0em 1em;
+*padding:1em 1em 0pt;
+_padding:1em 1em 0pt;
 }
+
+
+#portal-personaltools, .visualInline, #portal-personaltools-wrapper {
+background-color:transparent;
+}
+abbr, acronym, .explain {/*base.css (line 114)*/
+background-color:transparent;
+border-bottom:1px dashed #0076CC;
+color:#333;
+cursor:help;
+}
+.documentContent dd a {/*public.css (line 98)*/
+border-bottom:0px solid #CCCCCC;
+text-decoration:none;
+}
+
+/*historial*/
+dl.collapsible {/*authoring.css (line 294)*/
+border:1px solid #e6e6e6 !important;
+padding:0pt;
+}
+.expandedInlineCollapsible{
+border:1px solid #e6e6e6 !important;
+margin:1em;
+}
+.collapsedInlineCollapsible{
+border:0px solid #e6e6e6 !important;
+margin:1em 0em;
+}
+#history{
+margin:1em;}
+dl.collapsible dt.collapsibleHeader {/*authoring.css (line 299)*/
+margin:0pt 0pt 0em -1em;
+}
+dl.collapsedInlineCollapsible {/*authoring.css (line 349)*/
+border:medium none !important;
+}
+#portal-columns{
+margin-bottom:20px;
+}
+#portal-column-content {
+margin:0em -2em;
+*margin:0em -1em;
+}
+#region-content, .documentContent{
+padding:1em !important;
+*padding:0px !important;
+}
+#fieldset-default{
+margin-bottom:10px;
+}
+.documentContent p a {/*public.css (line 73)*/
+border-bottom:0px solid #CCCCCC;
+text-decoration:none;
+}
+.documentContent p a:hover {/*public.css (line 73)*/
+text-decoration:underline;
+}
+h1{/* modificat de <div class=titolProducte>*/
+/*background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaD.gif) no-repeat scroll 0px 7px;*/
+color:#CC0000;
+font-family:Arial,Helvetica,sans-serif;
+font-size:1.65em;
+font-weight:bold;
+margin:1em 0em 0.5em 0em;
+*margin:1em 0em 0em 0em;
+_margin:1em 0em 0.5em 0em;
+padding:0.2em 0.2em 0.2em 0px;
+position:static;
+}
+h2{/*el mateix que <div class=titolComplement>*/
+border-top:5px solid #E6E6E6;
+color:#4D4D4D;
+font-family:Arial,Helvetica,sans-serif;
+font-size:14px;
+font-weight:bold;
+margin-top:25px;
+padding-bottom:10px;
+padding-top:10px;
+}
+.discreet{ /*igual que sotaTitol*/
+margin-bottom:25px;
+margin-top:-10px;
+*margin-top:0px;
+_margin-top:-10px;
+padding-top:0px;
+color:#333;
+font-size:100%;
+font-weight:normal;
+}
+.documentContent ol {/*public.css (line 68)*/
+margin:0.5em 0pt 0pt 1.75em;
+*margin:0.5em 0pt 0pt 2.15em;
+}
+/*solucionar la tercerca columna per CSS*/
+.columnaDreta #portlet200{
+background:transparent url(++resource++upc.genwebupctheme.images/custom/bar150.gif) no-repeat scroll center top;
+width:150px;
+}
+.columnaDreta #baix200 {
+background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
+width:150px;
+}
+
+
+
+
+
+input {/*forms.css (line 30)*/
+background:White url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 50%;
+border-color:#ccc;
+border-style:solid;
+border-width:1px;
+color:#333;
+padding:1px 3px;
+font-family:"Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
+vertical-align:middle;
+visibility:visible;
+}
+.formHelp {/*forms.css (line 209)*/
+color:#b8b8b8;
+font-size:90%;
+margin:0pt 0pt 0.2em;
+}
+.formHelp:hover {/*forms.css (line 214)*/
+color:#333;
+cursor:default;
+}
+label {/*forms.css (line 92)*/
+font-weight:bold;
+color:#cc0000;
+}
+.validacio label{
+color:#4d4d4d;
+}
+legend {/*forms.css (line 87)*/
+*float:right;
+background:transparent none repeat scroll 0%;
+background-color:transparent;
+font-size:0%;
+*font-size:90%;
+padding:0em 0em 0.5em 0em;
+color:#cccccc;
+}
+fieldset{
+background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+border:1px solid #E6E6E6;
+padding:10px;
+}
+textarea {/*forms.css (line 22)*/
+padding:1px 3px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+/*Cerca d'usuaris*/
+.card {/*public.css (line 638)*/
+background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+border:1px solid #e6e6e6;
+float:left;
+margin:1em;
+padding:1em 0pt;
+text-align:center;
+width:110px;
+}
+a{color:#0077cc;text-decoration:none;}
+a:active{color:#0077cc;text-decoration:none;}
+a:link{color:#0077cc;text-decoration:none;}
+a:visited{color:#0077cc;text-decoration:none;}
+a:hover{color:#0077cc;text-decoration:underline;}
+a img{text-decoration:none;}
+a:hover img{text-decoration:none;}
+a:hover br{text-decoration:none;}
