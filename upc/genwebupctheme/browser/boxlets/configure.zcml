@@ -16,7 +16,6 @@
         for="*"
         name="box.Noticies"
         class=".boxletsviews.noticies"
-        template="noticies.pt"
         permission="zope2.View"
         />        
         
@@ -24,7 +23,6 @@
         for="*"
         name="box.Noticies_Actualitat"
         class=".boxletsviews.noticies_actualitat"
-        template="noticies_actualitat.pt"
         permission="zope2.View"
         />        
         
@@ -32,27 +30,32 @@
         
     <browser:page
         for="*"
-        name="box.Actualitat_Noticies_mini"
-        class=".boxletsviews.noticies_actualitat"
-        template="actualitat_noticies_mini.pt"
+        name="box.Actualitat_Noticies_petit"
+        class=".boxletsviews.noticies_actualitat_petit"
         permission="zope2.View"
         />  
 
     <browser:page
         for="*"
-        name="box.Agenda_mini"
-        class=".boxletsviews.agendamini"
-        template="agenda_mini.pt"
-        permission="zope2.View"
-        />   
-
-    <browser:page
-        for="*"
-        name="box.Calendari"
-        class=".boxletsviews.calendari"
-        template="calendari.pt"
+        name="box.Agenda_Calendari_petit"
+        class=".boxletsviews.agendaCalendariPetit"
         permission="zope2.View"
         />
+
+<!-- Columna dreta (3) -->
+        
+     <browser:page
+        for="*"
+        name="box.Agenda_mini"
+        class=".boxletsviews.agendamini"
+        permission="zope2.View"
+        />   
+    <browser:page
+        for="*"
+        name="box.Actualitat_Noticies_mini"
+        class=".boxletsviews.noticies_actualitat_mini"
+        permission="zope2.View"
+        />  
 
 	<browser:page
 		for="*"

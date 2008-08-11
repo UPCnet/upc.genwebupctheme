@@ -1,22 +1,27 @@
-<tal:block tal:define="entries view/getRSS"
+<tal:block tal:define="entries view/published_events;
+                       toLocalizedTime nocall:context/@@plone/toLocalizedTime"
            tal:condition="entries">
 
-<div id="portlet200"> </div>
+<div id="portlet150"> </div>
     <div id="caixaPortlet">
     <div class="titolPortlet"> Agenda </div>
    
         <ul>
-        <li tal:repeat="entry entries">
+        <li tal:repeat="obj entries">
             <a href=""
-                tal:attributes="title entry/summary | nothing;
-                           href entry/url | nothing" target=newwindow>
-                <span tal:replace="entry/summary | nothing">
-                Notícies RSS
-                </span>
+               tal:attributes="href obj/getURL;
+                               title obj/Description">
+            <span tal:replace="obj/pretty_title_or_id">
+             Some Event 
+            </span>
             </a>
+            <br />
+            <small tal:content="python:toLocalizedTime(obj.start)">
+                May 5
+            </small>
         </li>
         </ul>
         
 </div>
-<div id="baix200"> </div>
+<div id="baix150"> </div>
 </tal:block>

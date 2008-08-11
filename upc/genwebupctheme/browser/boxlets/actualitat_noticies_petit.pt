@@ -4,7 +4,7 @@
 	<tal:block tal:define="entries view/getRSS"
 	           tal:condition="entries">
 	
-		<div id="portlet150"> </div>
+		<div id="portlet200"> </div>
 		
 	    <div id="caixaPortlet">
 	    
@@ -46,7 +46,7 @@
 	        </div>
 	        
 	    </div> 
-	    <div id="baix150"> </div>
+	    <div id="baix200"> </div>
 	        	
 	</tal:block>
 </tal:newsitems>

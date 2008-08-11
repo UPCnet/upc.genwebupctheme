@@ -1,7 +1,8 @@
 <tal:block tal:define="entries view/getRSS;
                        toLocalizedTime nocall:context/@@plone/toLocalizedTime;
                        plone_view context/@@plone;"
-           tal:condition="entries">
+           tal:condition="entries"
+           i18n:domain="plone">
 
 	<table class="taulaDivs">
 		<tr class="taulaDivs">
@@ -19,13 +20,19 @@
 				                </span>
 				                						                
 				            </a>
-				            <span class="portletItemDetails"
-				                  tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
+				            <br />
+                            <small tal:content="python:toLocalizedTime(obj.Date)">
+                                May 5
+                            </small>
 				         </li>
 			         </ul>
 			        <div id="portletPlus">  
 			            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més notícies"> </a> 
-			            <a href="#"> més notícies </a> 
+                        <a href=""
+                            tal:attributes="href view/all_news_link"
+                            i18n:translate="box_more_news_link">
+                            More news&hellip;
+                        </a>
 			        </div>
 			    </div> 
 		    </td>
