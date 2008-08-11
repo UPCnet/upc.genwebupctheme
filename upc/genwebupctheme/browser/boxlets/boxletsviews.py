@@ -27,8 +27,20 @@ from Products.PythonScripts.standard import url_quote_plus
 from plone.app.portlets import cache
 
 from plone.app.portlets.portlets.calendar import Renderer as calendar_render
+from Products.PlonePopoll.browser.popoll import Renderer as enquesta_render
 
 PLMF = MessageFactory('plonelocales')
+
+class enquesta(BrowserView,enquesta_render):
+	_template = ViewPageTemplateFile('enquesta.pt')
+
+	def __init__(self, context, request):
+		self.polls = self._polls()
+		return
+
+	def __call__(self):
+		return xhtml_compress(self._template())
+
 
 
 class agenda(BrowserView,calendar_render):

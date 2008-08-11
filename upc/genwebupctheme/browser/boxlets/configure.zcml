@@ -54,4 +54,11 @@
         permission="zope2.View"
         />
 
+	<browser:page
+		for="*"
+		name="box.Enquesta"
+		class=".boxletsviews.enquesta"
+		permission="zope2.View"
+		/>
+
 </configure>
