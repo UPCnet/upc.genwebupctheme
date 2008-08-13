@@ -128,7 +128,9 @@ _margin: -36px 0px 1px 3px;
 }
 
 .agendaDataReposicio{
-background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x;
+background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 0px;
+*background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 2px;
+_background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 4px;
 border-top:1px solid #999999;
 margin: 0px 0px 0px 0px;
 padding: 5px 25px 197px 0px;
@@ -141,8 +143,8 @@ padding:4px 1px 3px 1px;
 color:#FFFFFF;
 text-align:center;
 min-width: 24px;
-width:24px;
-font-family: "Arial Narrow", "Helvetica Narrow", Arial, Helvetica, sans-serif;
+_width:24px;
+font-family: "Arial Narrow", "Helvetica Narrow", "Mikti Narrow", Arial, Helvetica, sans-serif;
 font-size:26px;
 position: relative;
 }
@@ -172,6 +174,9 @@ background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
 position:relative;
 }
 
+.agendaAjustament {
+_background:none; /*IE6 no sap posar imatges sota capes flotants, la treiem*/
+}
 
 .agendaContingut ul{
 list-style:none;
@@ -217,7 +222,9 @@ margin: 0px 0px 5px 5px;
 #calendari {
 float:right;
 margin-right: 10px;
+_margin-right:5px;
 margin-top: -200px;
+*margin-top: -195px;
 line-height:1.2em;
 font-size:0.9em;
 }
@@ -225,9 +232,12 @@ font-size:0.9em;
 #calendariVertical {
 float:right;
 margin-right: 23px;
+_margin-right:13px;
 margin-top: -190px;
+_margin-top: -185px;
 line-height:1.2em;
 font-size:0.9em;
+
 }
 
 #calendari table, #calendariVertical table{
@@ -256,6 +266,7 @@ border-left: 1px solid #E8E2DF; /*específic6*/;
 border-right: 1px solid #E8E2DF; /*específic6*/;
 border-bottom: 1px solid #E8E2DF; /*específic6*/;
 background-color:#FFFFFF;
+width:145px;
 }
 
 #calendari b, #calendariVertical b{
@@ -276,9 +287,7 @@ font-size:0px;
 line-height:0px;
 }
 .imgCA{
-width:142px;
-*width:143px;
-_width:143px;
+width:100%;
 }
 .calendariArrodonit img{
 max-width:144px;
@@ -370,4 +379,107 @@ font-family:Arial, Helvetica, sans-serif;
 }
 .documentContent li a:visited {/*public.css (line 92)*/
 	color:#0077cc;
+}
+
+
+#portal-column-one .visualPadding {
+padding:0em;
+}
+#portlet-prefs .portletHeader {
+background:none;
+padding: 0pt;
+margin: 0pt;
+}
+ul.configlets, ul#portal-sitemap {/*authoring.css (line 199)*/
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:1em 0pt;
+font-weight:normal;
+}
+ul.configlets li, ul#portal-sitemap li{
+font-familiy: Verdana, Arial, Helvetica, sans-serif;
+background:transparent url(++resource++upc.genwebupctheme.images/fletxaGo.gif) no-repeat scroll left top;
+border-bottom:1px dashed #333333;
+line-height:2em;
+list-style-type:none;
+margin:0px;
+padding:5px 0px 5px 20px;
+}
+ul.configlets li:first-child, ul#portal-sitemap li:first-child{
+border-top:1px dashed #333333;
+}
+ul.configlets li a img, ul#portal-sitemap li a img {
+float:right;
+}
+
+.portletItem {/*portlets.css (line 363)*/
+margin-left:0px;
+border-top:5px solid #E6E6E6;
+color:#4D4D4D;
+
+font-weight:bold;
+margin-top:25px;
+padding-bottom:10px;
+padding-top:10px;
+}
+.portletItem strong{
+font-size:14px;
+font-family:Arial,Helvetica,sans-serif;
+}
+dd {/*base.css (line 110)*/
+line-height:1.5em;
+margin-bottom:1em;
+}
+.portletHeader {/*genweb-neutre3.cs... (line 172)*/
+background-color:#E8E2DF;
+color:#4D4D4D;
+font-weight:bold;
+padding:1px 5px;
+}
+
+.navTreeItem {
+font-size:1.1em;}
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {/*navtree.css (line 52)*/
+background-color:transparent !important;
+border: 0x !important;
+color:#0077cc !important;
+}
+.navTreeItem a, dd.portletItem .navTreeItem a {/*navtree.css (line 44)*/
+border:0px !important;
+display:block;
+padding:0.15em 0.1em 0.3em 0.1em;
+text-decoration:none;
+color:#0077cc;
+}
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {/*navtree.css (line 52)*/
+background-color: none !important;
+border:0px !important;
+color:#0077cc;
+}
+.navTreeCurrentItem {/*navtree.css (line 58)*/
+background-color:transparent !important;
+border:0px solid white !important;
+color:#white;
+}
+.navTreeItem a:hover img, .navTreeItem a img:hover{text-decoration:none;}
+
+
+.documentDescription {
+font-weight: normal;
+margin:0px;
+padding: 0px;
+}
+p {
+padding:0px;
+margin:0px;
+}
+
+#portal-column-one {/*columns.css (line 13)*/
+float:left;
+padding:0pt;
+width:200px;
+}
+#portal-column-content.sl {/*columns.css (line 23)*/
+margin-left:227px;
 }

@@ -1,30 +1,11 @@
 /**************** GENERAL ******************************/
-body{
-    margin: 0px;
-    padding: 0px;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    color: #333333;
-    font-size: 0.7em;
-    background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/
-}
-
-a:link {    color:#0076cc;  text-decoration: none;}
-a:visited { color: #0076cc; text-decoration: none;}
-a:hover {   color: #0076cc;     text-decoration: underline;}
-a:active {  color: #0076cc;     text-decoration: none;}
+body{		margin: 0px;    padding: 0px;    font-family: Verdana, Arial, Helvetica, sans-serif;    color: #333333;    font-size: 0.7em;    background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/}
+a:link {    color:#0076cc;  text-decoration: none;}	a:visited { color: #0076cc; text-decoration: none;}	a:hover {   color: #0076cc;     text-decoration: underline;}	a:active {  color: #0076cc;     text-decoration: none;}
+a:focus { outline: none;}
 img {border:none;} /*les imatges links sense resaltar amb línia*/
 .logo a:hover{text-decoration: none;}; /*soluciona subratllat hover ie6*/
-
-ul {
-    margin: 0px;
-    padding: 0px;
-}
-
-form { 
-	margin: 0px; 
-	padding: 0px;
-	vertical-align: text-bottom;
-}
+ul {    margin: 0px;    padding: 0px;}
+form { margin: 0px; 	padding: 0px;	vertical-align: text-bottom;}
 
 input.text, input.password {
     font-size: 11px;
@@ -245,9 +226,9 @@ _margin-bottom:5px;
     font-size: 0.9em;
     border-top: 3px solid #ff6600; /*específic 1*/
     padding-top: 4px;
-    margin-left: 25px;
+    margin-left: 50px;
     float:left;
-    width:733px;
+    width:708px;
 }
 
 .sobreElWeb {
@@ -647,6 +628,15 @@ h1, h2 {
     padding:0px 3px 2px 3px;
     *padding:2px 2px 2px 2px;
 }
+.destructive, .documentEditable * .destructive {forms.css (line 156)
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFonsAlert.gif) repeat-x center center;
+    border:1px solid #8dcde3;
+    *border:0px;
+    color:#333;
+    font-size:90%;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;
+}
 input {
     font-family:Verdana,Lucida,Helvetica,Arial,sans-serif;
 }
@@ -699,12 +689,19 @@ cursor:help;
 .documentContent dd a {/*public.css (line 98)*/
 border-bottom:0px solid #CCCCCC;
 text-decoration:none;
+color:#0077cc;
+}
+.documentContent dd a:hover {/*public.css (line 98)*/
+text-decoration:underline;
 }
 
 /*historial*/
 dl.collapsible {/*authoring.css (line 294)*/
 border:1px solid #e6e6e6 !important;
 padding:0pt;
+}
+table.listing th {
+font-size: 0.9em;
 }
 .expandedInlineCollapsible{
 border:1px solid #e6e6e6 !important;
@@ -731,8 +728,11 @@ margin:0em -2em;
 }
 #region-content, .documentContent{
 padding:1em !important;
-*padding:0px !important;
+*padding:0pt !important;
 }
+
+
+
 #fieldset-default{
 margin-bottom:10px;
 }
@@ -765,6 +765,16 @@ margin-top:25px;
 padding-bottom:10px;
 padding-top:10px;
 }
+h3 {/*com h2*/
+border-top:5px solid #E6E6E6;
+color:#4D4D4D;
+font-family:Arial,Helvetica,sans-serif;
+font-size:14px;
+font-weight:bold;
+margin-top:25px;
+padding-bottom:10px;
+padding-top:10px;
+}
 .discreet{ /*igual que sotaTitol*/
 margin-bottom:25px;
 margin-top:-10px;
@@ -778,6 +788,10 @@ font-weight:normal;
 .documentContent ol {/*public.css (line 68)*/
 margin:0.5em 0pt 0pt 1.75em;
 *margin:0.5em 0pt 0pt 2.15em;
+}
+.documentContent ul {/*public.css (line 68)*/
+list-style-image:none;
+list-style-type:none;
 }
 /*solucionar la tercerca columna per CSS*/
 .columnaDreta #portlet200{
@@ -822,6 +836,7 @@ color:#4d4d4d;
 }
 legend {/*forms.css (line 87)*/
 *float:right;
+*display:none;
 background:transparent none repeat scroll 0%;
 background-color:transparent;
 font-size:0%;
@@ -833,6 +848,7 @@ fieldset{
 background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 border:1px solid #E6E6E6;
 padding:10px;
+margin:25px 0px;
 }
 textarea {/*forms.css (line 22)*/
 padding:1px 3px;
@@ -856,3 +872,209 @@ a:hover{color:#0077cc;text-decoration:underline;}
 a img{text-decoration:none;}
 a:hover img{text-decoration:none;}
 a:hover br{text-decoration:none;}
+
+
+input[id="title"] {
+color:#CC0000;
+font-family:Arial,Helvetica,sans-serif!important;
+font-size:1.65em;
+font-weight:bold!important;
+}
+.kssattr-atfieldname-title input {
+color:#CC0000;
+font-family:Arial,Helvetica,sans-serif!important;
+font-size:1.65em;
+font-weight:bold!important;
+}
+input[id="description"] {
+color:#333333;
+font-size:100%;
+font-weight:normal;
+}
+.kssattr-atfieldname-description textarea {
+color:#333333;
+font-size:100%;
+}
+
+/*retocs al fieldset del plone*/
+.formPanel {
+border: 1px solid #e6e6e6;
+}
+.formTab a:hover {
+text-decoration:none;
+}
+li.formTab a.selected {
+background: #f1f1f4;
+}
+}
+li.firstFormTab a {
+border-left:1px solid #e6e6e6;
+}
+li.formTab a {
+background:White none repeat scroll 0%;
+border-bottom:1px solid #e6e6e6;
+border-left:1px dotted #e6e6e6;
+border-top:1px solid #e6e6e6;
+margin:0pt;
+padding:0.125em 0.75em;
+text-decoration:none;
+}
+li.lastFormTab a {
+border-right:1px solid #e6e6e6;
+}
+li.formTab a:hover {
+background:#e6e6e6;
+}
+
+
+button {/*forms.css (line 61)*/
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    font-family:Verdana, Helvetica, Arial, sans-serif;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;
+}
+
+
+input.searchButton {
+    background:White url(botoFons_cerca.gif) no-repeat center left;
+    cursor:pointer;
+    text-transform:lowercase;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    padding:0px 3px 2px 17px;
+    *padding:2px 0px 2px 14px;
+}
+input.searchField {
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 50%;
+	border:1px solid #FF6600;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	padding:3px 1px 1px;
+}
+/*content-menu sense underlines*/
+.actionMenuHeader a:hover{
+text-decoration:none;
+}
+.actionMenuHeader a:hover {
+background:#cccccc;
+}
+.actionMenuContent a:hover {
+text-decoration:none;
+}
+.actionSeparator a {
+border-top:1px dotted #999!important;
+}
+
+
+.kupu-tb {/*kupuplone.css (line 80)*/
+background-color:#e6e6e6;
+border:1px solid #ccc;
+margin:0pt;
+padding-bottom:0px;
+width:99.5%;
+}
+.kupu-tb {/*kupustyles.css (line 83)*/
+background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+border-color:#ccc;
+margin-bottom:0.4em;
+padding:3px 3px 0px 3px;
+}
+.kupu-tb-buttons button {/*kupuplone.css (line 136)*/
+border:1px solid white;
+}
+span.kupu-tb-buttons button:hover {/*kupuplone.css (line 150)*/
+border:1px solid Gray;
+cursor:pointer;
+}
+iframe.kupu-editor-iframe {/*kupuplone.css (line 110)*/
+border-color:#e6e6e6;
+background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
+}
+iframe.kupu-editor-iframe:active {/*kupuplone.css (line 110)*/
+border-color:#e6e6e6;
+background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
+}
+
+#login-form {
+width:500px;
+}
+#login_form {
+margin:20px auto;
+}
+#forgotten-password{
+border-left:3px solid #ff6600;
+padding: 0px 0px 0px 10px;
+margin:5px 0px 0px 0px;
+}
+#forgotten-password h3{
+color: #cc0000;
+font-size: 1.65em;
+padding:0px;
+margin:0px 0px;
+line-height:1.15em;
+}
+#forgotten-password p{
+margin:3px 0px 0px 0px;
+}
+#forgotten-password a, #forgotten-password a:active, #forgotten-password a:link, #forgotten-password a:visited{
+color: #0077cc;
+text-decoration:none;
+}
+#forgotten-password a:hover{
+color:#0077cc;
+text-decoration:underline;
+}
+
+
+#Type_criteria, 
+#Title_criteria, 
+#Subject_criteria, 
+#start_criteria, 
+#sortable_title_criteria, 
+#SearchableText_criteria, 
+#review_state_criteria, 
+#path_criteria, 
+#modified_criteria, 
+#getRawRelatedItems_criteria, 
+#getId_criteria, 
+#expires_criteria, 
+#end_criteria, 
+#Description_criteria,
+#effective_criteria,
+#Creator_criteria, 
+#created_criteria {font-size:100%;}
+
+[type="submit"] {
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    font-family:Verdana, Helvetica, Arial, sans-serif;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;
+}
+
+ul.configlets li + input > li {
+background:none;
+border-bottom:0pt;
+line-height:1.5em;
+list-style-type:none;
+margin:0px;
+padding:0px;
+}
+
+blockquote {/*base.css (line 128)*/
+border-left:0px;
+font-family: "Times New Roman", Times, serif;
+font-style: italic: 
+color:#666666;
+margin-left:0pt;
+padding-left:0.5em;
+}
