@@ -1,0 +1,50 @@
+/*AJUSTA LES DIFERÈNCIES EN ELS BOTONS DE FF a IE*/
+.titular1{
+	background: url(../img/custom/fletxaD.gif) no-repeat 0px 9px;
+}
+/*DESPRECIAT
+#boto {
+ padding: 1px 0px 1px 18px;
+ } */
+.b_cancella{
+	 padding: 1px 0px 1px 18px;}
+.b_seguent{
+	 padding: 1px 0px 1px 18px;}
+.b_anterior{
+	 padding: 1px 0px 1px 18px;}
+.b_confirma{
+	 padding: 1px 0px 1px 18px;}
+.b_afegeix{
+	 padding: 1px 0px 1px 18px;}
+.b_edita{
+	 padding: 1px 0px 1px 18px;}
+.b_desa{
+	 padding: 1px 0px 1px 18px;}
+.b_neutre{
+	 padding: 1px 0px 1px 18px;}
+/*RESOL LA TAULA PER IE, sense OUTLINES (de fet aquí és el FF qui no ho fa bé*/
+.taulaRegistres .cap td{
+background:url(../img/borderTopDiagonal.gif) repeat-x;
+	border: 2px dotted #cccccc;
+	border-top:none;
+	padding-top:6px;
+	background-color: #ffffff;
+	color: #6b5c4f; 
+	font-weight: bold;
+}
+.taulaRegistres td {
+	background-color: #f1efee;
+	border:2px solid #ffffff;
+	padding: 4px;
+	text-align:center;
+}
+.taulaRegistres table{
+	border: 1px solid #cccccc;	
+	border-bottom:3px solid #cccccc;	
+	border-collapse:collapse;	
+}
+.calendari table{
+	border: 1px solid #cccccc;	
+	border-bottom:3px solid #cccccc;	
+	border-collapse:collapse;	
+}

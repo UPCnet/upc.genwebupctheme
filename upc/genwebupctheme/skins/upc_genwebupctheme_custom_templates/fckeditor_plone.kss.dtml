@@ -1,0 +1,22 @@
+/* <dtml-call expr="RESPONSE.setHeader('pragma','no-cache')"> */
+
+
+
+/* 
+Load fckeditor.
+
+*/
+
+div.fckContainer:load {
+    action-client: plone-initFCKeditor;
+}
+
+/* input field used to simulate the savekupu server action
+   which permit to save rich editor content inline */
+
+.fckSaveField:change {
+   action-server: savekupu;
+   savekupu-text: currentFormVarFromKssAttr("atfieldname", true);
+   savekupu-fieldname: kssAttr("atfieldname", true);
+}
+   

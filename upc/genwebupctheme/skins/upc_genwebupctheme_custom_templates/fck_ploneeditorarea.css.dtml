@@ -1,0 +1,21 @@
+/* <dtml-with base_properties> (do not remove this :) */
+
+body#content
+{
+    font-size: <dtml-var expr="'\x25' in fontBaseSize and  str(int(fontBaseSize.replace('\x25',''))*110/100) + '\x25' or '100\x25'">;
+    background:none;
+    padding: 10px !important;
+    margin: 0px !important;
+}
+
+
+body#content .SC_Panel {
+    background-color: &dtml-backgroundColor;;
+    margin-top: -5px !important;
+    margin-left: -10px !important;
+    padding:5px !important;
+    margin-right:10px !important;
+    margin-bottom:10px !important;
+}
+
+/* </dtml-with> */

@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<tal:defines
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="fckeditor"
+    >
+  <tal:globals define="global plone_view context/@@plone;
+                       foo plone_view/globalize" />
+  <Templates tal:define="templatesPath string:$portal_url/fcksamples/"
+             tal:attributes="imagesBasePath templatesPath">
+
+    <Template title="Índex de contingut" image="++resource++upc.genwebupctheme.images/template00.gif">
+        <Description>Per definir un índex amb enllaços al contingut de la mateixa pàgina. Enllaços definits amb àncores.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="llistatIndex">
+					<ul>
+					    <li><a href="#">JDuis tellus</a></li>
+					    <li><a href="#">Maecenas elit orci</a></li>
+					    <li><a href="#">At ipsum vitae est lacinia tincidunt</a></li>
+					    <li><a href="#">Eget suscipit eros purus in ante</a></li>
+					    <li><a href="#">Sed ultricies cursus lectus</a></li>
+					    <li><a href="#">Fusce tincidunt</a></li>
+					</ul>
+				</div>
+			<tal:cdata replace="structure string:]]&gt;" />  
+        </Html>
+    </Template>
+
+    <Template title="Text habitual" image="++resource++upc.genwebupctheme.images/template01.gif">
+        <Description>Per escriure text amb fins a tres jerarquies de titulars.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">Duis tellus</div>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
+				<div class="titular2">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				<div class="titular3">In hac habitasse platea dictumst</div>
+				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
+				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
+			<tal:cdata replace="structure string:]]&gt;" />  
+        </Html>
+    </Template>
+
+    <Template title="Fitxa amb imatge a l'esquerra" image="++resource++upc.genwebupctheme.images/template09.gif">
+        <Description>Per definir fitxes amb un títol, una imatge, una descripció o determinats atributs destacables.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">Lorem ipsum dolor sit amet</div>
+				<img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" class="imgEsquerra" />At ipsum vitae est lacinia tincidunt. Maecenas elit  orci, gravida ut, molestie non, venenatis vel, lorem. Sed lacinia. Suspendisse  potenti. Sed ultricies cursus lectus. In id magna sit amet nibh suscipit  euismod. Integer enim. Donec sapien ante, accumsan ut, sodales commodo, auctor  quis, lacus. Maecenas a elit lacinia urna posuere sodales. Curabitur pede pede,  molestie id, blandit vitae, varius ac, purus. Mauris at ipsum vitae est lacinia  tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem.  Sed lacinia. Suspendisse potenti.<br />
+				<br />
+				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
+				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.			
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+    <Template title="Text habitual amb text destacat" image="++resource++upc.genwebupctheme.images/template01.gif">
+        <Description>Per escriure text habitual.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				<div class="textDestacat">In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</div>
+				<div class="destacatBandejat">In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar  quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium  interdum, malesuada ac, augue. </div>
+				<div class="destacatQuadres">
+				<div class="destacatQuadresDins">In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.</div>
+				</div>
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+    <Template title="Titular 1 + text" image="++resource++upc.genwebupctheme.images/template011.gif">
+    	<Description>Per escriure text habitual.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.<br />
+				<br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+    <Template title="Titular 2 + text" image="++resource++upc.genwebupctheme.images/template012.gif">
+		<Description>Per escriure text habitual.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="llistat">
+				<div class="titular1">Sed ultricies cursus lectus</div>
+				<ul>
+				    <li>Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</li>
+				    <li>Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</li>
+				    <li>Fusce tincidunt, lorem nec dapibus consectetuer, leo orci mollis ipsum, eget suscipit eros purus in ante.</li>
+				    <li>At ipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem.</li>
+				    <li>Sed lacinia. Suspendisse potenti. Sed ultricies cursus lectus. In id magna sit amet nibh suscipit euismod.</li>
+				    <li>Fusce tincidunt, lorem nec dapibus consectetuer, leo orci mollis ipsum, eget suscipit eros purus in ante.</li>
+				    <li>At ipsum vitae est lacinia tincidunt. Maecenas elit orci, gravida ut, molestie non, venenatis vel, lorem.</li>
+				</ul>
+				</div>
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+    <Template title="Titular 3 + text" image="++resource++upc.genwebupctheme.images/template013.gif">
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.<br />
+				<br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+    <Template title="Text amb files i columnes" image="++resource++upc.genwebupctheme.images/template03.gif">
+        <Description>Per fer una estructura híbrida, formada pels dos elements anteriors.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<table class="columnes">
+				    <tbody>
+				        <tr>
+				            <td>
+				            <div class="titular1">In aliquam rhoncus sem</div>
+				            </td>
+				            <td>
+				            <div class="titular1">Ut facilisis</div>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td> Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
+				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.<br />
+				            Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis   tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum   diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est   nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id   eros. <br />
+				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst.   Donec aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus   tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</td>
+				            <td class="separadorV">               Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
+				            <div class="titular2">In aliquam rhoncus sem</div>
+				            Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				            <div class="titular3">In hac habitasse platea dictumst</div>
+				            Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
+				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</td>
+				        </tr>
+				    </tbody>
+				</table>
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>   
+
+
+    <Template title="Enllaços relacionats" image="++resource++upc.genwebupctheme.images/template06.gif">
+    	<Description>Per construir un document que conté un apartat d'enllaços relacionats.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div id="eRelacionats">
+				<div id="eRelacionats_border">
+				<div class="titular2">Enllacos relacionats</div>
+				<div class="llistat">
+				<ul>
+				    <li><a href="javascript:;">Manual d'identitat gràfica corporativa.</a></li>
+				    <li><a href="javascript:;">Finestra &quot;Actualitat UPC&quot;</a></li>
+				    <li><a href="javascript:;">Arxiu fotogràfic</a></li>
+				    <li><a href="javascript:;">Llibre d'estil del web upc.edu</a></li>
+				</ul>
+				</div>
+				</div>
+				</div>
+				
+				
+				<div class="titular1">Duis tellus</div>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
+				<div class="titular2">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+
+    <Template title="Taula de registres per files" image="++resource++upc.genwebupctheme.images/template07.gif">
+    	<Description>Per definir una taula de registres estructurada per columnes. Es pot ampliar en files i columnes.</Description>    	
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">Personal funcionari </div>
+				<div class="taulaRegistres">
+				<table>
+				    <tbody>
+				        <tr class="cap">
+				            <td>homes</td>
+				            <td>dones</td>
+				            <td>Total</td>
+				        </tr>
+				        <tr>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				    </tbody>
+				</table>
+				</div>
+				<br />
+				<br />
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+
+    <Template title="Taula de registres per files i columnes" image="++resource++upc.genwebupctheme.images/template08.gif">
+    	<Description>Per definir una taula de registres estructurada per files i columnes. Es pot ampliar en files i columnes.</Description>   	
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">Personal funcionari </div>
+				<div class="taulaRegistres">
+				<table>
+				    <tbody>
+				        <tr class="cap">
+				            <td>homes</td>
+				            <td>dones</td>
+				            <td>homes</td>
+				            <td>dones</td>
+				            <td>Total</td>
+				        </tr>
+				        <tr>
+				            <td class="fonsDestacat1">43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td class="fonsDestacat1">43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td class="fonsDestacat1">43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td class="fonsDestacat1">43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				        <tr>
+				            <td class="fonsDestacat1">43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>34</td>
+				            <td>43</td>
+				            <td>77</td>
+				        </tr>
+				    </tbody>
+				</table>
+				</div>
+				<br />
+				<br />
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+
+    <Template title="Fitxa amb imatge a l'esquerra" image="++resource++upc.genwebupctheme.images/template09.gif">
+    	<Description>Per definir fitxes amb un títol, una imatge, una descripció o determinats atributs destacables.</Description>    	
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="fletxa_fitxa"> </div>
+				<div class="fitxa">
+				<div class="titular1">Duis tellus</div>
+				<div class="titular2">At ipsum vitae est lacinia tincidunt</div>
+				<div class="align_left"><img alt="fotoMostra" src="++resource++upc.genwebupctheme.images/mostra.jpg" /></div>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
+				<div class="titular3">Lorem Ipsum</div>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				<div class="separadorH"> </div>
+				<div class="titular3">Duis tellus</div>
+				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.
+				<div class="separadorH"> </div>
+				<div class="titular3">Mauris Vestibulum</div>
+				Felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
+				<div class="separadorH"> </div>
+				<div class="titular3">gravida ac</div>
+				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</div>
+				<br />
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+    
+    <Template title="Fitxa amb imatge a la dreta" image="++resource++upc.genwebupctheme.images/template10.gif">
+    	<Description>Per definir fitxes amb un títol, una imatge, una descripció o determinats atributs destacables.</Description>    	
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="fletxa_fitxa"> </div>
+				<div class="fitxa">
+				<div class="titular1">Duis tellus</div>
+				<div class="titular2">At ipsum vitae est lacinia tincidunt</div>
+				<div class="align_right"><img alt="fotoMostra" src="++resource++upc.genwebupctheme.images/mostra.jpg" /></div>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
+				<div class="titular3">Lorem Ipsum</div>
+				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				<div class="separadorH"> </div>
+				<div class="titular3">Duis tellus</div>
+				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.
+				<div class="separadorH"> </div>
+				<div class="titular3">Mauris Vestibulum</div>
+				felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.                 </div>
+				<br />
+				<br />
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>    
+
+    <Template title="Calendari" image="++resource++upc.genwebupctheme.images/template11.gif">
+    	<Description>Per representar gràficament els esdeveniments o activitats d'un mes determinat. Es pot representar tot un any afegint successivament un mes darrera l'altre.</Description> 	
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="calendari">
+				<div class="titular2">Gener 2007 </div>
+				<table>
+				    <tbody>
+				        <tr>
+				            <td class="fonsDestacat2">dl</td>
+				            <td class="fonsDestacat2">dm</td>
+				            <td class="fonsDestacat2">dc</td>
+				            <td class="fonsDestacat2">dj</td>
+				            <td class="fonsDestacat2">dv</td>
+				            <td class="fonsDestacat2">ds</td>
+				            <td class="fonsDestacat2">dg</td>
+				        </tr>
+				        <tr>
+				            <td>1</td>
+				            <td>2</td>
+				            <td>3</td>
+				            <td>4</td>
+				            <td>5</td>
+				            <td>6</td>
+				            <td>7</td>
+				        </tr>
+				        <tr>
+				            <td>8</td>
+				            <td>9</td>
+				            <td>10</td>
+				            <td>11</td>
+				            <td>12</td>
+				            <td>13</td>
+				            <td>14</td>
+				        </tr>
+				        <tr>
+				            <td>15</td>
+				            <td>16</td>
+				            <td>17</td>
+				            <td>18</td>
+				            <td>19</td>
+				            <td>20</td>
+				            <td>21</td>
+				        </tr>
+				        <tr>
+				            <td>22</td>
+				            <td>23</td>
+				            <td>24</td>
+				            <td>25</td>
+				            <td>26</td>
+				            <td>27</td>
+				            <td>28</td>
+				        </tr>
+				        <tr>
+				            <td>29</td>
+				            <td>30</td>
+				            <td>31</td>
+				            <td> </td>
+				            <td> </td>
+				            <td> </td>
+				            <td> </td>
+				        </tr>
+				    </tbody>
+				</table>
+				</div>
+				<div class="notesCalendari">                 <span class="titular2">dijous 4.</span> inauguració centre XXX<br />
+				<span class="titular2">dimecres 17.</span> lliurament premis fotografia tecnociència<br />
+				<span class="titular2">dilluns 29.</span> conferència ETSAB</div>
+        	<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>    
+
+    
+    <Template title="Image and Text on the left" image="template1.gif">
+      <Description>One main image with a title and text that surround the image.</Description>
+      <Html>
+        <tal:cdata replace="structure string:&lt;![CDATA[" />
+          <p>
+            <img style="width:128px; height:96px" 
+                 class="image-left"
+                 tal:attributes="src string:${templatesPath}sampleimg4.jpg" />
+            Lorem ipsum dolor sit amet consectetuer neque semper cursus consequat In.<br />
+            Vestibulum est tristique accumsan felis tellus id Suspendisse Nam habitant nibh.<br/>
+          </p> 
+        <tal:cdata replace="structure string:]]&gt;" />        
+      </Html>
+    </Template>
+    
+    
+    
+    <Template title="Listing table" image="template2.gif">
+      <Description>A Plone table with even/odd rows</Description>
+      <Html>
+        <tal:cdata replace="structure string:&lt;![CDATA[" />
+          <table class="listing">
+            <thead>
+              <tr>
+                <th>
+                  Lorem ipsum
+                </th>
+                <th>
+                  dolor sit amet
+                </th>
+                <th>
+                  consectetuer neque
+                </th>
+                <th>
+                  semper cursus
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+             <tr class="odd">
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+             </tr>
+             <tr class="even">
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+             </tr> 
+             <tr class="odd">
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+             </tr>
+             <tr class="even">
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+                <td>
+                   Vestibulum est tristique accumsan
+                </td>
+             </tr>                 
+            </tbody>
+          </table>
+          <p>More text goes here.</p>
+        <tal:cdata replace="structure string:]]&gt;" /> 
+      </Html>
+    </Template>
+    <Template title="Photo Album" image="template3.gif">
+      <Description>A plone photo album</Description>
+      <Html>
+        <tal:cdata replace="structure string:&lt;![CDATA[" />
+          <h2>Photo Album Title</h2>
+          <div>
+            <div class="photoAlbumEntry"
+                 tal:repeat="photoNumber python:range(1,12)">
+               <tal:block define="photoId python:'sampleimg%i.jpg' %photoNumber;
+                                  photoUrl string:$templatesPath$photoId">
+                        <a tal:attributes="href photoUrl;
+                                           title photoId">
+                            <span class="photoAlbumEntryWrapper">
+                              <img tal:attributes="src photoUrl;
+                                                   alt photoId;
+                                                   title photoId"
+                                   tal:condition="python: photoNumber not in (1, 10)"                
+                                   style="width:128px; height:96px" />
+                              <img tal:attributes="src photoUrl;
+                                                   alt photoId;
+                                                   title photoId"
+                                   tal:condition="python: photoNumber== 10"                
+                                   style="width:96px; height:128px" />     
+                              <img tal:attributes="src photoUrl;
+                                                   alt photoId;
+                                                   title photoId"
+                                   tal:condition="python: photoNumber == 1"                
+                                   style="width:128px; height:83px" />                                                                    
+                            </span>
+                            <span class="photoAlbumEntryTitle"
+                                  tal:content="photoId">PhotoId</span>
+                        </a>
+              </tal:block>
+            </div>          
+            <div class="visualClear"><!-- --></div>            
+          </div>  
+        <tal:cdata replace="structure string:]]&gt;" /> 
+      </Html>
+    </Template>
+    <Template title="Text with image on background" image="template4.gif">
+      <Description>A background image with a transparent white text as overlay.</Description>
+      <Html>
+        <tal:cdata replace="structure string:&lt;![CDATA[" />
+          <div style="position:relative; padding:0">
+            <img style="width:450px; height:600px" 
+                 tal:attributes="src string:${templatesPath}sampleimg10.jpg" />
+            <div style="position:absolute;
+                        top:220px;
+                        height:310px;
+                        left:180px;
+                        width:200px;
+                        overflow:hidden;
+                        padding:20px;
+                        font-size:14px;
+                        color:black;
+                        background-color:white;
+                        opacity: 0.7;
+                        -moz-opacity: 0.7;
+                        -khtml-opacity: 0.7;                        
+                        filter:alpha(opacity=70); 
+                        " >
+                Lorem ipsum dolor sit amet consectetuer Vestibulum neque dolor felis malesuada. Id dolor magna enim pellentesque condimentum ante ullamcorper urna tellus id. At non Ut commodo consequat gravida sem vel tempus metus eleifend. Ridiculus pretium sit mauris pellentesque interdum tellus at id ante semper. Dictumst ut suscipit Phasellus Nulla montes massa ac elit condimentum id. Nullam elit justo mauris dictum dui fringilla justo.        
+            </div>                
+          </div>          
+        <tal:cdata replace="structure string:]]&gt;" />        
+      </Html>
+    </Template>    
+  </Templates>
+</tal:defines>
