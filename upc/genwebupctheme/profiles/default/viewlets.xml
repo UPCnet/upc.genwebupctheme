@@ -21,6 +21,10 @@
          based-on="Plone Default">
   </order>
 
+  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
+  </order>
+
   <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre">
     <viewlet name="plone.personal_bar" />
     <viewlet name="plone.app.i18n.locales.languageselector" />

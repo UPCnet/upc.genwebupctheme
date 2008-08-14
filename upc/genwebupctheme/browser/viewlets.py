@@ -1,6 +1,12 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 
+from plone.app.layout.viewlets.content import DocumentActionsViewlet 
+
+class DocumentActions(DocumentActionsViewlet):
+
+    render = ViewPageTemplateFile("document_actions.pt")
+
 # Sample code for a basic viewlet (In order to use it, you'll have to):
 # - Un-comment the following useable piece of code (viewlet python class).
 # - Rename the vielwet template file ('browser/viewlet.pt') and edit the
