@@ -1,84 +1,212 @@
 /**************** GENERAL ******************************/
-body{		margin: 0px;    padding: 0px;    font-family: Verdana, Arial, Helvetica, sans-serif;    color: #333333;    font-size: 0.7em;    background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/}
-a:link {    color:#0076cc;  text-decoration: none;}	a:visited { color: #0076cc; text-decoration: none;}	a:hover {   color: #0076cc;     text-decoration: underline;}	a:active {  color: #0076cc;     text-decoration: none;}
-a:focus { outline: none;}
+body {
+	margin: 0px; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #333333; font-size: 0.7em; background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/}
+a:link { color:#0076cc; text-decoration: none;}	a:visited { color: #0076cc; text-decoration: none;}	a:hover {   color: #0076cc;     text-decoration: underline;} a:active {  color: #0076cc;     text-decoration: none;} a:focus { outline: none;}
 img {border:none;} /*les imatges links sense resaltar amb línia*/
 .logo a:hover{text-decoration: none;}; /*soluciona subratllat hover ie6*/
-ul {    margin: 0px;    padding: 0px;}
-form { margin: 0px; 	padding: 0px;	vertical-align: text-bottom;}
+ul { margin: 0px; padding: 0px;}	form { margin: 0px; padding: 0px; vertical-align: text-bottom;}
+blockquote {/*base.css (line 128) border: especific5, color: especific2*/
+	border-left:15px solid #E0CECE;
+	border-bottom:1px solid #E0CECE;
+	color: #D96245; 
+	margin-left:0pt;
+	padding-left:0.5em;}
+pre {/*background: especific6*/
+	background-color:#E8E2DF;
+	border:1px solid #ccc;
+	color:#333;
+	font-family:Monaco,"Courier New",Courier,monospace;
+	font-size:99%;
+	overflow:auto;
+	padding:1em;}
+code, tt {/*base.css (line 134)*/
+	background-color:#99def6;
+	color:#333;
+	font-family:Monaco,"Courier New",Courier,monospace;
+	font-size:100%;
+	padding:0pt 0.1em;
+	font-style:normal;}
+legend {/*forms.css (line 87)*/
+	background:transparent none repeat scroll 0%;
+	background-color:transparent;
+	font-size:0%;
+	*font-size:90%;
+	*display:none;
+	padding:0em 0em 0.5em 0em;
+	color:#cccccc;}
+fieldset{
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+	border:1px solid #E6E6E6;
+	padding:10px;
+	margin:25px 0px;
+	width:auto;}
 
+fieldset[id] legend {
+	background:transparent none repeat scroll 0%;
+	background-color:transparent;
+	font-size:90%;
+	display:inline;
+	padding:0em 0em 0.5em 0em;
+	color:#cccccc;}
+	
+
+
+label {/*forms.css (line 92)*/
+	font-weight:bold;
+	color:#cc0000;}
+
+textarea {/*forms.css (line 22)*/
+	padding:1px 3px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;}	
+
+[type="submit"] {
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    font-family:Verdana, Helvetica, Arial, sans-serif;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;}
 input.text, input.password {
     font-size: 11px;
     padding: 0px 1px 1px 1px;
     border: 1px solid #FF6600; /*específic 1*/
-    background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;
-}
-
+    background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;}
 input.radio {
     margin-right:5px;   
     margin-bottom:-2px;
-    margin-top: 2px;
-}
-
+    margin-top: 2px;}
 input.button {
     font-family:Verdana, Arial, Helvetica, sans-serif;
     font-size:11px;
     margin-bottom:5px;
     margin-top: 5px;
-    padding: 0px 1px;
-}
-
+    padding: 0px 1px;}
 .submitGo {
-  width: 55px;
-  height: 16px;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  background: url(++resource++upc.genwebupctheme.images/cerca_ca.gif) no-repeat right bottom;
-  overflow: hidden;
-  cursor: pointer; /* hand-shaped cursor */
-  cursor: hand; /* for IE 5.x */
-}
-
+    width: 55px;
+    height: 16px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background: url(++resource++upc.genwebupctheme.images/cerca_ca.gif) no-repeat right bottom;
+    overflow: hidden;
+    cursor: pointer; /* hand-shaped cursor */
+    cursor: hand; /* for IE 5.x */}
 .submitLogin {
-  width: 16px;
-  height: 16px;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  background: url(++resource++upc.genwebupctheme.images/go.gif) no-repeat right bottom;
-  overflow: hidden;
-  cursor: pointer; /* hand-shaped cursor */
-  cursor: hand; /* for IE 5.x */
-}
-
+    width: 16px;
+    height: 16px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    background: url(++resource++upc.genwebupctheme.images/go.gif) no-repeat right bottom;
+    overflow: hidden;
+    cursor: pointer; /* hand-shaped cursor */
+    cursor: hand; /* for IE 5.x */}
+button {/*forms.css (line 61)*/
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    font-family:Verdana, Helvetica, Arial, sans-serif;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;}
+input.searchButton {
+    background:White url(botoFons_cerca.gif) no-repeat center left;
+    cursor:pointer;
+    text-transform:lowercase;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    padding:0px 3px 2px 17px;
+    *padding:2px 0px 2px 14px;}
+input.searchField {
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 50%;
+	border:1px solid #FF6600;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:11px;
+	padding:3px 1px 1px;}
+input[id="title"] {
+	color:#CC0000;
+	font-family:Arial,Helvetica,sans-serif!important;
+	font-size:1.65em;
+	font-weight:bold!important;}
+input[id="description"] {
+	color:#333333;
+	font-size:100%;
+	font-weight:normal;}
+input {/*forms.css (line 30)*/
+	background:White url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 50%;
+	border-color:#ccc;
+	border-style:solid;
+	border-width:1px;
+	color:#333;
+	padding:1px 3px;
+	font-family:Verdana,Helvetica,Arial,sans-serif;
+	vertical-align:middle;
+	visibility:visible;}	
+select {/*afegit*/
+    font-family:Verdana,Helvetica,Arial,sans-serif;
+    font-size:90%;}	
 h1 {
     color:#CC0000;
     font-family:Arial,Helvetica,sans-serif;
     font-size:1.5em;
     font-weight:bold;
-    margin:0px;
-}
-
+    margin:0px;}
 h1,h2{
-    border-bottom:0px;
-}
-	
-#baner {
-    margin-bottom:20px;
-    text-align:right;
-}
-
-#baner img {    
-	border: 1px solid #0076cc;  
-	margin-bottom:20px;
-}
+    border-bottom:0px;}
+h1{/* modificat de <div class=titolProducte>*/
+	/*background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaD.gif) no-repeat scroll 0px 7px;*/
+	color:#CC0000;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:1.65em;
+	font-weight:bold;
+	padding:0.2em 0.2em 0.2em 0px;
+	position:static;}
+h2{/*el mateix que <div class=titolComplement>*/
+	border-top:5px solid #E6E6E6;
+	color:#4D4D4D;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:25px;
+	padding-bottom:10px;
+	padding-top:10px;}
+h3 {/*com h2*/
+	border-top:5px solid #E6E6E6;
+	color:#4D4D4D;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:25px;
+	padding-bottom:10px;
+	padding-top:10px;}	
+h1, h2, h3, h4, h5, h6 {/*anul·lo el negre i tot això que no mola.*/
+    font-family:Arial,Helvetica,Verdana,sans-serif;}
+h1, h2, h3, h4, h5, h6 {/* ESBORRAR AIXÒ PERQUÈ EL NEGRE NO S'IMPOSSI SOBRE EL #333333*/
+    color: #CC00000;}
+h1 > img {/*imatge just abans del titol*/
+	padding-right:3px;}
+h4 {/*h4 més gran, potser desrpés s'ha d'ajustar els h2,h2,h3,h5 i h6 perquè l'Arial visualment és més petita que la Verdana i s'ha d'incrementar aproximadament un 15%*/
+    font-size:125%;}
+h1, h2 {
+    font-weight:bold;}	
+#baner { margin-bottom:20px; text-align:right;}
+#baner img {  border: 1px solid #0076cc;  margin-bottom:20px;}
 
 #visual-portal-wrapper{
     margin: 0px auto;
     padding: 0;
-    width: 958px;
-}
+    width: 958px;}
+	
+	
+	
+	
+	
+	
 /******************************* CAPÇALERA ******************************/
 /**************************** ELEMENTS COMUNS ***************************/
 #capcalera{ }
@@ -86,141 +214,77 @@ h1,h2{
     margin: 4px 0px 0px 5px;
     text-align: right;
     float:none;
-    margin-top: 7px;
-}
-
+    margin-top: 7px;}
 .barraCerca img {
-    vertical-align: baseline;
-}
-
+    vertical-align: baseline;}
 .go {
     position:relative;
     top:4px;
-    padding-left:5px;
-}
-
+    padding-left:5px;}
 .quadradet {
     background-color:#FF6600; /*específic 1*/
     margin-bottom:1px;
     width:4px;
     height:5px;
-    vertical-align:baseline;
-}
-
+    vertical-align:baseline;}
 .souA {
     margin: 5px 0px 40px 0px; font-size:0.9em; padding-left:8px;
-    background: url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat top left;
-}
-
+    background: url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat top left;}
 .connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
+
+
+
+
+
+
+
 /************************** CONTINGUT ********************************/
 .contingut{
     text-align: left;
-    line-height: 1.5em;
-}
-
+    line-height: 1.5em;}
 .columnaMenu {
     float:left;
-    width:200px;
-}
+    width:200px;}
 .columnaCentreMenu {
     margin-left:225px;
-    margin-bottom:20px;
-}
+    margin-bottom:20px;}
 .columnaEsq {
     float:right;
     width:200px;
-    margin-right: 25px;
-}
-
+    margin-right: 25px;}
 .columnaCentre {
-    margin-right: 400px;
-}
-
+    margin-right: 400px;}
 .columnaCentreCentrada {
     margin-left:225px;
-    margin-right: 175px;
-}
-
+    margin-right: 175px;}
 .columnaDreta {
     width: 150px;
-    float: right;
-}
-
+    float: right;}
 .iconesContingut {
     text-align:right;
     float:right;
-    width:150px;
-}
-
-.iconesContingut img{
-}
-
+    width:150px;}
+.iconesContingut img{}
 .iconesContingut a{
-    margin: 0px 5px;
-}
-/*************************** MENU LATERAL ******************************/
-.titolSeccio{
-    background:url(++resource++upc.genwebupctheme.images/submenuFons.png) no-repeat #ededed;
-    width: 197px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-transform:uppercase;
-    color:#FFFFFF;
-    font-size:1.75em;
-    font-weight:bold;
-    padding:15px 0px 0px 3px;
-}
-
-.titolSeccio .textetSeccioneta {
-    line-height: 1.1em;
-}
-
-.flotaTapa {
-    background-color:#FFFFFF;
-    height: 8px;
-    margin-top:-4px;
-}
-
-#submenu {
-    margin: 5px 0px 0px 0px;
-    position: relative;
-    border-top:1px dashed #333333;
-}
-
-#submenu b{ color:#0076cc; }
-#submenu ul{ padding: 0px;}
-#submenu li {
-    padding: 5px 0px 5px 20px;
-    margin: 0px 0px;
-    background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
-    list-style-type: none;
-    border-bottom: 1px dashed #333333;
-    line-height:2em;
-}
-
-#submenu ul li ul li {
-    padding: 0px 0px 0px 10px;
-    margin: 5px 1px;
-    background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
-    list-style-type: none;
-    line-height:1.5em;
-    border-bottom:none;
-    font-size:0.9em;
-}
-
+    margin: 0px 5px;}
+	
+	
+	
+	
+	
+	
+	
 /************************** PEU ******************************************/
 #peu { 
     clear:both;
     float:none;
-    margin-bottom:0px;
-}
+    margin-bottom:0px;}
 .visualClear{
-margin-bottom:25px;
-*margin-bottom:0px;
-_margin-bottom:5px;
-}
+	margin-bottom:25px;
+	*margin-bottom:0px;
+	_margin-bottom:5px;}
 #signText {
     line-height: 1.1em;
     font-size: 0.9em;
@@ -228,34 +292,32 @@ _margin-bottom:5px;
     padding-top: 4px;
     margin-left: 50px;
     float:left;
-    width:708px;
-}
-
+    width:708px;}
 .sobreElWeb {
     text-align:right;
     float:right;
-    margin-top:-12px;
-}
-
+    margin-top:-12px;}
 .bandaPeu {
     float:left;
     border-top: 18px solid #ff6600; /*específic 1*/
     width:200px;
-    margin-top:0px;
-}
-
+    margin-top:0px;}
 #bandaLogos {
     line-height: 1.1em;
     font-size: 0.9em;
     border-top: 1px dashed #ff6600; /*específic 1*/
-    margin-left: 225px;
-    vertical-align:middle;
-}
-
+    margin-left: 250px;
+    vertical-align:middle;}
 #bandaLogos img {
     margin-right: 15px;
-    padding: 10px 0px;
-}
+    padding: 10px 0px;}
+
+
+
+
+
+
+
 
 /************************* DIV CARPETA I CARPETA INTEL·LIGENT **************/
 .divCarpeta {
@@ -265,9 +327,7 @@ _margin-bottom:5px;
     background:#ededed;
     background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
     margin: 10px 0px 0px 15px;
-    padding: 5px;
-}
-
+    padding: 5px;}
 .divCarpeta ul li {
     padding: 0px 0px 0px 12px;
     margin: 5px 10px;
@@ -275,33 +335,30 @@ _margin-bottom:5px;
     list-style-type: none;
     line-height:1.5em;
     border-bottom:none;
-    font-size:0.9em;
-}
-
-.divCarpeta small {
-}
-
+    font-size:0.9em;}
+.divCarpeta small {}
 .divCarpeta p {
     line-height: 1em;
     margin-top:0px;
-    margin-bottom:15px;
-}
-
+    margin-bottom:15px;}
 .divCarpetaTitol {
     background:url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat top left;
     font-size:1.2em;
     font-weight:bold;
     color:#CC0000; /*específic3*/
-    padding: 8px 0px 5px 15px;
-}
-
+    padding: 8px 0px 5px 15px;}
 .modificacio {
     color:#CC0000; /*específic 3*/
     text-align:right;
-    font-size:0.9em;
-}
+    font-size:0.9em;}
 
-/* UPCnet */
+
+
+
+
+
+
+/************************* UPCnet **************/
 #portal-breadcrumbs {
     font-size:0.9em;
     border-bottom: 0px;
@@ -310,37 +367,24 @@ _margin-bottom:5px;
     background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat scroll left top;
     padding-left:8px;
     margin:5px 0px 15px;
-    *margin:5px 0px 30px;
-}
-
+    *margin:5px 0px 30px;}
 #portal-breadcrumbs a {
-  text-decoration:none;
-}
-
+	text-decoration:none;}
 #portal-breadcrumbs a:hover {
-  text-decoration:underline;
-}
+	text-decoration:underline;}
 #breadcrumbs-you-are-here{
-  font-weight:bold;
-}
-
+	font-weight:bold;}
 .barraCerca { 
-	text-transform: lowercase; 
-}
-
+	text-transform: lowercase; }
 #searchGadget {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
     background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0%;
     border:1px solid #FF6600;
     font-size:11px;
-    padding:0px 1px 1px;    
-}
-
+    padding:0px 1px 1px;}
 .LSBox {
     float: right;
-    margin: 0px !important;
-}
-
+    margin: 0px !important;}
 #livesearchLegend {
     border:0px;
     background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat right top;
@@ -355,24 +399,14 @@ _margin-bottom:5px;
     *margin-bottom:0px;
     *float:right;
     *width:140px;
-    *height:14px;
-}
-fieldset {/*forms.css (line 80)*/
-border:0px solid white;
-background:transparent;
-margin:0em;
-padding:0em;
-width:auto;
-_color:transparent;
-}
+    *height:14px;}
 #livesearchLegend {/*public.css (line 299)*/
-border-color:none;
-border-top-color:transparent;
-border: none;
-border-style: hidden;
-border-width:0px;
-border-collapse:collapse;
-}
+	border-color:none;
+	border-top-color:transparent;
+	border: none;
+	border-style: hidden;
+	border-width:0px;
+	border-collapse:collapse;}
 .livesearchContainer {
     background:none;
     border:0px solid #666666;
@@ -389,30 +423,20 @@ border-collapse:collapse;
     top:0pt;
     visibility:visible;
     white-space:normal;
-    width:24.3em;
-}
+    width:24.3em;}
 * html .livesearchContainer {
-    padding: 0px !important;
-/*    padding-top: 0 !important;*/
-    background-color: none;
-/*    border: 0;*/
-}
+    padding: 0px !important;/*    padding-top: 0 !important;*/
+    background-color: none;/*    border: 0;*/}
 #LSHighlight,
 .LSHighlight {
     background-color: none;
     border: 0px solid none;
-    color: none;
-}
-#livesearchLegend {
-/*    line-height: 1em;
-    margin-top: -2em;
-    margin-left: -0.1em;*/
-    border: 0px solid #8cacbb;
-/*    border-bottom: 0;*/
-}
+    color: none;}
+#livesearchLegend {/*    line-height: 1em;    margin-top: -2em;    margin-left: -0.1em;*/
+    border: 0px solid #8cacbb;/*    border-bottom: 0;*/}
 .LSTable {
     margin: 10px 0px 0px 0px;
-}
+    _padding:0px 10px;}
 .LSResult { 
     left:0px;
     margin:0px;
@@ -420,25 +444,30 @@ border-collapse:collapse;
     padding-top:0px;
     position:relative;
     text-align:right;
-    z-index:3;
-}
-
+    z-index:3;}
 .LSIEFix {
     border:1px solid #666;
-    background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom;
-}
+    background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom;}
 .LSRow {
-    border:0px;
-}
+    border:0px;}
+.LSRow img {
+    float:right;
+    vertical-align:middle;}
+.LSRow .discreet {
+    margin:0px;}
+.LSRow div.discreet {
+    border-bottom:1px dotted #e6e6e6;
+    padding-bottom:3px;
+    margin-bottom:3px;
+    margin-left: 0px !important;}
+.LSRow span.discreet {
+    font-size:90%;}
 .LSShadow {
-white-space:normal !important;
-line-height:0em;
-}
+	white-space:normal !important;
+	line-height:0em;}
 .image-inline {
 	border:1px solid #999999;
-    padding:3px;
-}
-
+    padding:3px;}
 .barra_idiomes {
     font-size:0.9em;
     *font-size:0.85em;
@@ -446,59 +475,58 @@ line-height:0em;
     padding-top:0px;
     *padding-top:0px;
     _padding-top:0px;
-    _margin-right:3px;
-}
+    _margin-right:3px;}
+
+
+
+
 
 
 
 
 /* AFEGITS del custom.css*/
-
-
 .documentEditable .documentContent {/*authoring.css (line 369)*/
     border:1px solid #666666; /*poseu-ho a 0 (zero) si creieu que desemmarcat no té problemes d'usabilitat*/
     border-top:1px solid #666666;
-    padding-top:10px !important; /*separa una mica el contingut del menú d'edició (vik,modificat, 50 era massa!) */
-    /*background: url(++resource++upc.genwebupctheme.images/custom/fonsT.png) repeat-x bottom;*/ /*una prova amb fons per marcar on acaba visualment*/
-}
+    padding-top:10px !important; /*separa una mica el contingut del menú d'edició (vik,modificat, 50 era massa!) */}
 .contentViews li a {
     color:#0077cc;
-    border:1px solid #666666;
-}
+    border:1px solid #666666;}
 .contentViews {
     background-color:transparent;
-    border-color:#666666;
-}
+    border-color:#666666;}
 .contentActions li {
-    border-left:1px solid #666666;
-}
+    border-left:1px solid #666666;}
 .contentActions {
     background-color:#EDEDED;
     border-left:1px solid #666666;
     border-right:1px solid #666666;
-    color:#666666;
-}
+    color:#666666;}
 .contentViews li a:hover {
     background-color:#ededed;
-    color:#666666;
-}
+    background:#ededed url(taulaMenu_bg_on.gif) repeat-x bottom left;
+    color:#666666;}
 .contentViews .selected a {
     background-color:#ededed;
+    background:#ededed url(taulaMenu_bg_on.gif) repeat-x bottom left;
     border-bottom:1px solid #ededed;
-    color:#666666;
-}
+    color:#666666;}
 .actionMenu .actionMenuContent ul {
     background:#ededed none repeat scroll 0% 50%;
-    border-color:#666666;
-}
+    border-color:#666666;}
 .actionMenu .actionMenuContent li a:hover {
     background-color:#cccccc;
-    color:White;
-}
-
+    color:White;}
 .actionMenu .actionMenuContent .actionSeparator a {
-    border-top:1px solid #666666;
-}
+    border-top:1px solid #666666;}
+	
+	
+	
+	
+	
+	
+	
+	
 /***********************************************************************************************************************************************
 TAULES DE CONTINGUT
 ***********************************************************************************************************************************************/
@@ -510,25 +538,42 @@ table.listing th, .stx table th {
     font-weight:normal;
     padding:0.25em 0.5em;
     text-transform:lowercase;
-    font-size:1.1em; /*afegit per fer el text un xic més gran, podeu treure-ho*/
-}
+    font-size:1.1em; /*afegit per fer el text un xic més gran, podeu treure-ho*/}
 table.listing td, .stx table td {
-    border-right:1px solid #666666;
-}
+    border-right:1px solid #666666;}
 table.listing, .stx table {
     border-bottom:1px solid #666666;
-    border-left:1px solid #666666;
-}
+    border-left:1px solid #666666;}
 .even {
-background-color:#f1f1f4;
-}
+	background-color:#f1f1f4;}
 .state-published {
-color:#333333 !important; /*ho deixo en grisUPC de mentre no s'anul·li o s'esborri aquest codi*/
-/*color:#436976 !important; --> hauríeu d'anul·lar això perquè no ho puc treure per aquí, així, si ho anul·lem aconseguirem el link del títol en blau i la resta en grisUPC.*/
-}
+	color:#0077cc !important; /*ho deixo en grisUPC de mentre no s'anul·li o s'esborri aquest codi*/	}
 .state-private {
-color:crimson !important; 
-}
+	color:crimson !important; 
+	background: transparent url(bullet_red.png) no-repeat right center !important;
+	padding-right: 15px !important;}
+span.state-private, td.state-private {background:none !important;}
+a. span.state-private {
+	background: transparent url(bullet_red.png) no-repeat right center !important;}
+.state-pending {
+	color:orange !important;
+	background: transparent url(bullet_orange.png) no-repeat right center !important;
+	padding-right: 15px !important;}
+span.state-pending, td.state-pending {background-image:none !important;}
+a. span.state-pending {
+	background: transparent url(bullet_orange.png) no-repeat right center !important;}
+.state-intranet {
+	color: #00b7f6 !important;
+	background: transparent url(bullet_blue.png) no-repeat right center !important;
+	padding-right: 15px !important;}
+span.state-intranet, td.state-intranet {background:none !important;}
+a. span.state-intranet {
+	background: transparent url(bullet_blue.png) no-repeat right center !important;}
+
+
+
+
+
 
 /************************ MISSATGE INFO SENSE IMATGE **************/
 dl.portalMessage dt {
@@ -543,72 +588,59 @@ dl.portalMessage dt {
     padding:4px 10px 5px 30px;
     border-right:1px solid #ddd;
     border-bottom:1px solid #ddd;
-    _border-bottom:0px solid #ddd;
-}
+    _border-bottom:0px solid #ddd;}
 #dashboard-info-message {
-    padding:0em 0em 0.3em 0em;padding-top:0em;
-}
+    padding:0em 0em 0.3em 0em;padding-top:0em;}
 dl.portalMessage {
     border:1px solid #ddd;
-    font-size:100%;
-}
+    font-size:100%;}
 .visualClear {
     clear:both;
-    display:block;
-}
+    display:block;}
 dl.portalMessage dd {
     line-height:1.25em;
     margin:0pt;
     padding:0.55em 0.5em;
-    *padding:0.6em 0.5em 0.55em;
-}
+    *padding:0.6em 0.5em 0.55em;}
 .info{
-background-color:#f2f6fa !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
-}
+	background-color:#f2f6fa !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
 .info dt{ /*text de l'esquerra*/
     color:#00589a !important; /*color text, n'hi ha quatre també*/
-    background:url(info_message.gif) no-repeat bottom left #f9f9f9;
-}
+    background:url(info_message.gif) no-repeat bottom left #f9f9f9;}
 .warning{
-    background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
-}
+    background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
 .warning dt{ /*text de l'esquerra*/
     color:#333333 !important; /*color text, n'hi ha quatre també*/
-    background:url(avis_message.gif) no-repeat bottom left #f9f9f9;
-}
+    background:url(avis_message.gif) no-repeat bottom left #f9f9f9;}
 dl.warning dd {
-    background-color:#fdfbf3 !important;
-}
+    background-color:#fdfbf3 !important;}
 .error{
-background-color:#fcf4f2 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/
-}
+	background-color:#fcf4f2 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
 .error dt{ /*text de l'esquerra*/
     color:#c63103 !important; /*color text, n'hi ha quatre també*/
-    background:url(error_message.gif) no-repeat bottom left #f9f9f9;
-}
+    background:url(error_message.gif) no-repeat bottom left #f9f9f9;}
 dl.error dd {
-    background-color:#fcf4f2 !important;
-}
+    background-color:#fcf4f2 !important;}
 
-h1, h2, h3, h4, h5, h6 {/*anul·lo el negre i tot això que no mola.*/
-    font-family:Arial,Helvetica,Verdana,sans-serif;
-}
-h1, h2, h3, h4, h5, h6 {/* ESBORRAR AIXÒ PERQUÈ EL NEGRE NO S'IMPOSSI SOBRE EL #333333*/
-    color: #CC00000;
-}
-h4 {/*h4 més gran, potser desrpés s'ha d'ajustar els h2,h2,h3,h5 i h6 perquè l'Arial visualment és més petita que la Verdana i s'ha d'incrementar aproximadament un 15%*/
-    font-size:125%;
-}
+
+
+
+
+
+
 /********************************** ANUL·LACIÓ D'ALGUNS ESTILS DE PLONE EN ENLLAÇOS ************************************/
 ul.configlets li a:visited {
-    color:#0076CC;
-}
+    color:#0076CC;}
 ul.configlets li a:hover {/*afegit*/
-    text-decoration:underline;
-}
-h1, h2 {
-    font-weight:bold;
-}
+    text-decoration:underline;}
+
+
+
+
+
+
+
+
 /********************************** CANVI DELS BOTONS DE PLONE (EN PROVES) ***************************************/
 .context, .formControls .actionButtons .button, .documentEditable * .context {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
@@ -617,8 +649,7 @@ h1, h2 {
     color:white;
     font-size:90%;
     padding:0px 3px 2px 3px;
-    *padding:2px 2px 2px 2px;
-}
+    *padding:2px 2px 2px 2px;}
 .standalone, .documentEditable * .standalone {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFonsClar.gif) repeat-x center center;
     border:1px solid #8dcde3;
@@ -626,412 +657,218 @@ h1, h2 {
     color:#333;
     font-size:90%;
     padding:0px 3px 2px 3px;
-    *padding:2px 2px 2px 2px;
-}
-.destructive, .documentEditable * .destructive {forms.css (line 156)
+    *padding:2px 2px 2px 2px;}
+.destructive, .documentEditable * .destructive {/*forms.css (line 156)*/
     background:url(++resource++upc.genwebupctheme.images/custom/botoFonsAlert.gif) repeat-x center center;
     border:1px solid #8dcde3;
     *border:0px;
     color:#333;
     font-size:90%;
     padding:0px 3px 2px 3px;
-    *padding:2px 2px 2px 2px;
-}
-input {
-    font-family:Verdana,Lucida,Helvetica,Arial,sans-serif;
-}
-select {/*afegit*/
-    font-family:Verdana,Lucida,Helvetica,Arial,sans-serif;
-    font-size:90%;
-}
+    *padding:2px 2px 2px 2px;}
 #login-form input.context {/*forms.css (line 123)*/
-background-position:center center;
-margin-bottom:0em;
-padding:0px 15px 2px 15px;
-*padding:0px 0px 2px 0px;
-_padding:0px 0px 2px 0px;
-}
+	background-position:center center;
+	margin-bottom:0em;
+	padding:0px 15px 2px 15px;
+	*padding:0px 0px 2px 0px;
+	_padding:0px 0px 2px 0px;}
+
+
+
+
+
+
+
 
 /********************************** COMMUTA AMB VOLUM ÉS UNA PROVA (Només FireFox de moment) ***************************************/
-
 .optionsToggle {
-    background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll 0%;
+    background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll left 2px;
+    *background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll 4px 5px;
     border:0px;
     color:#999999;
     font-size:85%;
     font-weight:bold !important;
     left:-4px;
     padding:5px 4px 3px;
-    position:relative;
-}
+    position:relative;}
 /* Victor: trec les boletes del mon de moment */
 #content a[href^="http:"], #content a.link-external {
     background: none;
     padding: 0px;
 }
 #portal-column-content {/*columns.css (line 19)*/
-margin:0em -1em;
-padding:0em 1em;
-*padding:1em 1em 0pt;
-_padding:1em 1em 0pt;
-}
-
-
+	/*margin:0em -1em;*/
+	/*padding:0em 1em;*/
+	/*padding:1em 1em 0pt;*/
+	/*_padding:1em 1em 0pt;*/}
 #portal-personaltools, .visualInline, #portal-personaltools-wrapper {
-background-color:transparent;
-}
+	background-color:transparent;}
 abbr, acronym, .explain {/*base.css (line 114)*/
-background-color:transparent;
-border-bottom:1px dashed #0076CC;
-color:#333;
-cursor:help;
-}
+	background-color:transparent;
+	border-bottom:1px dashed #0076CC;
+	color:#333;
+	cursor:help;}
 .documentContent dd a {/*public.css (line 98)*/
-border-bottom:0px solid #CCCCCC;
-text-decoration:none;
-color:#0077cc;
-}
+	border-bottom:0px solid #CCCCCC;
+	text-decoration:none;
+	color:#0077cc;}
 .documentContent dd a:hover {/*public.css (line 98)*/
-text-decoration:underline;
-}
-
+	text-decoration:underline;}
 /*historial*/
 dl.collapsible {/*authoring.css (line 294)*/
-border:1px solid #e6e6e6 !important;
-padding:0pt;
-}
+	border:1px solid #e6e6e6 !important;
+	padding:0pt;}
 table.listing th {
-font-size: 0.9em;
-}
+	font-size: 0.9em;}
 .expandedInlineCollapsible{
-border:1px solid #e6e6e6 !important;
-margin:1em;
-}
+	border:1px solid #e6e6e6 !important;
+	margin:1em;}
 .collapsedInlineCollapsible{
-border:0px solid #e6e6e6 !important;
-margin:1em 0em;
-}
+	border:0px solid #e6e6e6 !important;
+	margin:1em 0em;}
 #history{
-margin:1em;}
+	margin:1em;}
 dl.collapsible dt.collapsibleHeader {/*authoring.css (line 299)*/
-margin:0pt 0pt 0em -1em;
-}
+	margin:0pt 0pt 0em -1em;}
 dl.collapsedInlineCollapsible {/*authoring.css (line 349)*/
-border:medium none !important;
-}
+	border:medium none !important;}
 #portal-columns{
-margin-bottom:20px;
-}
+	margin-bottom:20px;}
 #portal-column-content {
-margin:0em -2em;
-*margin:0em -1em;
-}
+	margin:0em -2em;
+	*margin:0em -1em;}
 #region-content, .documentContent{
-padding:1em !important;
-*padding:0pt !important;
-}
-
-
-
+	padding:1em !important;}
 #fieldset-default{
-margin-bottom:10px;
-}
-.documentContent p a {/*public.css (line 73)*/
-border-bottom:0px solid #CCCCCC;
-text-decoration:none;
-}
+	margin-bottom:10px;}
+.documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {/*public.css (line 73)*/
+	border-bottom:0px solid #CCCCCC;
+	text-decoration:none;
+	color:#0077cc;}
 .documentContent p a:hover {/*public.css (line 73)*/
-text-decoration:underline;
-}
-h1{/* modificat de <div class=titolProducte>*/
-/*background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaD.gif) no-repeat scroll 0px 7px;*/
-color:#CC0000;
-font-family:Arial,Helvetica,sans-serif;
-font-size:1.65em;
-font-weight:bold;
-margin:1em 0em 0.5em 0em;
-*margin:1em 0em 0em 0em;
-_margin:1em 0em 0.5em 0em;
-padding:0.2em 0.2em 0.2em 0px;
-position:static;
-}
-h2{/*el mateix que <div class=titolComplement>*/
-border-top:5px solid #E6E6E6;
-color:#4D4D4D;
-font-family:Arial,Helvetica,sans-serif;
-font-size:14px;
-font-weight:bold;
-margin-top:25px;
-padding-bottom:10px;
-padding-top:10px;
-}
-h3 {/*com h2*/
-border-top:5px solid #E6E6E6;
-color:#4D4D4D;
-font-family:Arial,Helvetica,sans-serif;
-font-size:14px;
-font-weight:bold;
-margin-top:25px;
-padding-bottom:10px;
-padding-top:10px;
-}
+	text-decoration:underline;
+	color:#0077cc;}
 .discreet{ /*igual que sotaTitol*/
-margin-bottom:25px;
-margin-top:-10px;
-*margin-top:0px;
-_margin-top:-10px;
-padding-top:0px;
-color:#333;
-font-size:100%;
-font-weight:normal;
-}
+	margin-bottom:25px;
+	margin-top:0px;
+	padding-top:0px;
+	color:#333;
+	font-size:100%;
+	font-weight:normal;}
 .documentContent ol {/*public.css (line 68)*/
-margin:0.5em 0pt 0pt 1.75em;
-*margin:0.5em 0pt 0pt 2.15em;
-}
+	margin:0.5em 0pt 0pt 1.75em;
+	*margin:0.5em 0pt 0pt 2.15em;}
 .documentContent ul {/*public.css (line 68)*/
-list-style-image:none;
-list-style-type:none;
-}
+	list-style-image:none;
+	list-style-type:none;}
 /*solucionar la tercerca columna per CSS*/
 .columnaDreta #portlet200{
-background:transparent url(++resource++upc.genwebupctheme.images/custom/bar150.gif) no-repeat scroll center top;
-width:150px;
-}
+	background:transparent url(++resource++upc.genwebupctheme.images/custom/bar150.gif) no-repeat scroll center top;
+	width:150px;}
 .columnaDreta #baix200 {
-background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
-width:150px;
-}
-
-
-
-
-
-input {/*forms.css (line 30)*/
-background:White url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 50%;
-border-color:#ccc;
-border-style:solid;
-border-width:1px;
-color:#333;
-padding:1px 3px;
-font-family:"Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
-vertical-align:middle;
-visibility:visible;
-}
+	background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
+	width:150px;}
 .formHelp {/*forms.css (line 209)*/
-color:#b8b8b8;
-font-size:90%;
-margin:0pt 0pt 0.2em;
-}
+	color:#b8b8b8;
+	font-size:90%;
+	margin:0pt 0pt 0.2em;}
 .formHelp:hover {/*forms.css (line 214)*/
-color:#333;
-cursor:default;
-}
-label {/*forms.css (line 92)*/
-font-weight:bold;
-color:#cc0000;
-}
+	color:#333;
+	cursor:default;}
 .validacio label{
-color:#4d4d4d;
-}
-legend {/*forms.css (line 87)*/
-*float:right;
-*display:none;
-background:transparent none repeat scroll 0%;
-background-color:transparent;
-font-size:0%;
-*font-size:90%;
-padding:0em 0em 0.5em 0em;
-color:#cccccc;
-}
-fieldset{
-background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
-border:1px solid #E6E6E6;
-padding:10px;
-margin:25px 0px;
-}
-textarea {/*forms.css (line 22)*/
-padding:1px 3px;
-font-family:Verdana, Arial, Helvetica, sans-serif;
-}
+	color:#4d4d4d;}
 /*Cerca d'usuaris*/
 .card {/*public.css (line 638)*/
-background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
-border:1px solid #e6e6e6;
-float:left;
-margin:1em;
-padding:1em 0pt;
-text-align:center;
-width:110px;
-}
-a{color:#0077cc;text-decoration:none;}
-a:active{color:#0077cc;text-decoration:none;}
-a:link{color:#0077cc;text-decoration:none;}
-a:visited{color:#0077cc;text-decoration:none;}
-a:hover{color:#0077cc;text-decoration:underline;}
-a img{text-decoration:none;}
-a:hover img{text-decoration:none;}
-a:hover br{text-decoration:none;}
-
-
-input[id="title"] {
-color:#CC0000;
-font-family:Arial,Helvetica,sans-serif!important;
-font-size:1.65em;
-font-weight:bold!important;
-}
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+	border:1px solid #e6e6e6;
+	float:left;
+	margin:1em;
+	padding:1em 0pt;
+	text-align:center;
+	width:110px;}
 .kssattr-atfieldname-title input {
-color:#CC0000;
-font-family:Arial,Helvetica,sans-serif!important;
-font-size:1.65em;
-font-weight:bold!important;
-}
-input[id="description"] {
-color:#333333;
-font-size:100%;
-font-weight:normal;
-}
+	color:#CC0000;
+	font-family:Arial,Helvetica,sans-serif!important;
+	font-size:1.65em;
+	font-weight:bold!important;}
 .kssattr-atfieldname-description textarea {
-color:#333333;
-font-size:100%;
-}
-
+	color:#333333;
+	font-size:100%;}
 /*retocs al fieldset del plone*/
 .formPanel {
-border: 1px solid #e6e6e6;
-}
+	border: 1px solid #e6e6e6;}
 .formTab a:hover {
-text-decoration:none;
-}
+	text-decoration:none;}
 li.formTab a.selected {
-background: #f1f1f4;
-}
-}
+	background: #f1f1f4;}
 li.firstFormTab a {
-border-left:1px solid #e6e6e6;
-}
+	border-left:1px solid #e6e6e6;}
 li.formTab a {
-background:White none repeat scroll 0%;
-border-bottom:1px solid #e6e6e6;
-border-left:1px dotted #e6e6e6;
-border-top:1px solid #e6e6e6;
-margin:0pt;
-padding:0.125em 0.75em;
-text-decoration:none;
-}
+	background:White none repeat scroll 0%;
+	border-bottom:1px solid #e6e6e6;
+	border-left:1px dotted #e6e6e6;
+	border-top:1px solid #e6e6e6;
+	margin:0pt;
+	padding:0.125em 0.75em;
+	text-decoration:none;}
 li.lastFormTab a {
-border-right:1px solid #e6e6e6;
-}
+	border-right:1px solid #e6e6e6;}
 li.formTab a:hover {
-background:#e6e6e6;
-}
-
-
-button {/*forms.css (line 61)*/
-    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
-    border:1px solid #006DA3;
-    *border:0px;
-    color:white;
-    font-size:90%;
-    font-family:Verdana, Helvetica, Arial, sans-serif;
-    padding:0px 3px 2px 3px;
-    *padding:2px 2px 2px 2px;
-}
-
-
-input.searchButton {
-    background:White url(botoFons_cerca.gif) no-repeat center left;
-    cursor:pointer;
-    text-transform:lowercase;
-    border:1px solid #006DA3;
-    *border:0px;
-    color:white;
-    font-size:90%;
-    padding:0px 3px 2px 17px;
-    *padding:2px 0px 2px 14px;
-}
-input.searchField {
-	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 50%;
-	border:1px solid #FF6600;
-	font-family:Verdana,Arial,Helvetica,sans-serif;
-	font-size:11px;
-	padding:3px 1px 1px;
-}
+	background:#e6e6e6;}
 /*content-menu sense underlines*/
 .actionMenuHeader a:hover{
-text-decoration:none;
-}
+	text-decoration:none;}
 .actionMenuHeader a:hover {
-background:#cccccc;
-}
+	background:#cccccc;}
 .actionMenuContent a:hover {
-text-decoration:none;
-}
+	text-decoration:none;}
 .actionSeparator a {
-border-top:1px dotted #999!important;
-}
-
-
+	border-top:1px dotted #999!important;}
 .kupu-tb {/*kupuplone.css (line 80)*/
-background-color:#e6e6e6;
-border:1px solid #ccc;
-margin:0pt;
-padding-bottom:0px;
-width:99.5%;
-}
+	background-color:#e6e6e6;
+	border:1px solid #ccc;
+	margin:0pt;
+	padding-bottom:0px;
+	width:99.5%;}
 .kupu-tb {/*kupustyles.css (line 83)*/
-background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
-border-color:#ccc;
-margin-bottom:0.4em;
-padding:3px 3px 0px 3px;
-}
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+	border-color:#ccc;
+	margin-bottom:0.4em;
+	padding:3px 3px 0px 3px;}
 .kupu-tb-buttons button {/*kupuplone.css (line 136)*/
-border:1px solid white;
-}
+	border:1px solid white;}
 span.kupu-tb-buttons button:hover {/*kupuplone.css (line 150)*/
-border:1px solid Gray;
-cursor:pointer;
-}
+	border:1px solid Gray;
+	cursor:pointer;}
 iframe.kupu-editor-iframe {/*kupuplone.css (line 110)*/
-border-color:#e6e6e6;
-background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
-}
+	border-color:#e6e6e6;
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;}
 iframe.kupu-editor-iframe:active {/*kupuplone.css (line 110)*/
-border-color:#e6e6e6;
-background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
-}
-
+	border-color:#e6e6e6;
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;}
 #login-form {
-width:500px;
-}
+	width:500px;}
 #login_form {
-margin:20px auto;
-}
+	margin:20px auto;}
 #forgotten-password{
-border-left:3px solid #ff6600;
-padding: 0px 0px 0px 10px;
-margin:5px 0px 0px 0px;
-}
+	border-left:3px solid #ff6600;
+	padding: 0px 0px 0px 10px;
+	margin:5px 0px 0px 0px;}
 #forgotten-password h3{
-color: #cc0000;
-font-size: 1.65em;
-padding:0px;
-margin:0px 0px;
-line-height:1.15em;
-}
+	color: #cc0000;
+	font-size: 1.65em;
+	padding:0px;
+	margin:0px 0px;
+	line-height:1.15em;
+	border:0px;}
 #forgotten-password p{
-margin:3px 0px 0px 0px;
-}
+	margin:3px 0px 0px 0px;}
 #forgotten-password a, #forgotten-password a:active, #forgotten-password a:link, #forgotten-password a:visited{
-color: #0077cc;
-text-decoration:none;
-}
+	color: #0077cc;
+	text-decoration:none;}
 #forgotten-password a:hover{
-color:#0077cc;
-text-decoration:underline;
-}
-
-
+	color:#0077cc;
+	text-decoration:underline;}
 #Type_criteria, 
 #Title_criteria, 
 #Subject_criteria, 
@@ -1048,33 +885,91 @@ text-decoration:underline;
 #Description_criteria,
 #effective_criteria,
 #Creator_criteria, 
-#created_criteria {font-size:100%;}
-
-[type="submit"] {
-    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
-    border:1px solid #006DA3;
-    *border:0px;
-    color:white;
-    font-size:90%;
-    font-family:Verdana, Helvetica, Arial, sans-serif;
-    padding:0px 3px 2px 3px;
-    *padding:2px 2px 2px 2px;
-}
-
+#created_criteria {
+	font-size:100%;}
 ul.configlets li + input > li {
-background:none;
-border-bottom:0pt;
-line-height:1.5em;
-list-style-type:none;
-margin:0px;
-padding:0px;
+	background:none;
+	border-bottom:0pt;
+	line-height:1.5em;
+	list-style-type:none;
+	margin:0px;
+	padding:0px;}
+table.listing, .stx table {/*public.css (line 668)*/
+	border-collapse:collapse;
+	font-size:100%;}
+.template-zmi_docs .contents {/*kupuplone.css (line 334)*/
+	border:1px solid #e6e6e6;
+	background:white;
+	float:right;
+	font-size:90%;
+	margin:0pt 0pt 0.5em 0.5em;
+	padding:0px 0px 10px 10px;
+	width:30%;}
+.template-zmi_docs .topic-title {/*kupuplone.css (line 344)*/
+	background-color:white !important;
+	border-bottom:0px solid #e6e6e6;
+	font-weight:normal;
+	line-height:1.6em;
+	margin-top:0pt;
+	padding:5px 0px;
+	text-transform:lowercase;
+	font-weight: bold;}
+td.draggable:hover {/*especific5*/
+	background: #E0CECE;}
+tr.dragging td{
+	background:#DFE3D3 !important;}
+ul.formTabs {/*authoring.css (line 429)*/
+	display:block;
+	list-style-type:none;
+	margin:0px 0px -26px 0px;
+	*margin:0px 0px -25px 0px;
+	_margin:0px 0px -25px 0px;
+	padding:0pt;
+	position:relative;
+	text-align:center;}
+.context + br + .context {margin-top:5px;}
+img.sortdirection {width:10px !important; height:7px !important;}
+.fieldRequired {forms.css (line 195)
+	background:transparent url(https://devel.upcnet.es/neutre3/required.gif) no-repeat scroll left center;
+	color:#999;
+	font-size:83%;
+	text-transform:lowercase;
+	font-variant:small-caps;
+	padding:0pt 0pt 1pt 8px;
 }
 
-blockquote {/*base.css (line 128)*/
-border-left:0px;
-font-family: "Times New Roman", Times, serif;
-font-style: italic: 
-color:#666666;
-margin-left:0pt;
-padding-left:0.5em;
-}
+
+
+
+
+
+
+
+
+/****************esdeveniments************/
+dl dd {margin-left:20px;}
+#parent-fieldname-text {
+	margin: 15px 0px 25px 0px;}
+.eventDetails {/*public.css (line 798)*/
+	clear:none;
+	float:right;
+	margin:0pt 0pt 10px 10px;
+	min-width:200px;
+	max-width:300px;
+	width:inherit;}
+
+
+
+
+
+
+
+/****************per si de cas hi ha interferencies************/
+a{color:#0077cc;text-decoration:none;}
+a:active{color:#0077cc;text-decoration:none;}
+a:link{color:#0077cc;text-decoration:none;}
+a:visited{color:#0077cc;text-decoration:none;}
+a:hover{color:#0077cc;text-decoration:underline;}
+a img{text-decoration:none;}
+a:hover img{text-decoration:none;}
+a:hover br{text-decoration:none;}

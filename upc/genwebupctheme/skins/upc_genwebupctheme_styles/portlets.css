@@ -303,16 +303,20 @@ height:5px;
     padding-top:2px;
 }
 
-.avui{
+.avui, .todaynoevent{
 border: 1px solid #CC0000; /*específic3*/
 }
-
+.todayevent {
+border: 1px solid #CC0000; /*específic3*/
+background-color: #E0CECE; /*específic5*/
+}
 .reunio{
-background-color: #DFE3D3; /*específic4*/
+background:#DFE3D3 url(fonsCellaCalendari.gif) right bottom; /*específic4*/
 }
 
-.esdeveniment{
-background-color: #E0CECE; /*específic5*/
+.esdeveniment,
+.event{
+background:#E0CECE url(fonsCellaCalendari.gif) no-repeat center right; /*específic5*/
 }
 
 .ajustament #portletPlus{
@@ -466,7 +470,7 @@ color:#white;
 
 
 .documentDescription {
-font-weight: normal;
+color:#4d4d4d;
 margin:0px;
 padding: 0px;
 }
@@ -483,3 +487,63 @@ width:200px;
 #portal-column-content.sl {/*columns.css (line 23)*/
 margin-left:227px;
 }
+
+
+
+
+
+
+/*************************** MENU LATERAL ******************************/
+.titolSeccio{
+    background:url(++resource++upc.genwebupctheme.images/submenuFons.png) no-repeat #ededed;
+    width: 197px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-transform:uppercase;
+    color:#FFFFFF;
+    font-size:1.75em;
+    font-weight:bold;
+    padding:15px 0px 0px 3px;}
+.titolSeccio .textetSeccioneta {
+    line-height: 1.1em;}
+.flotaTapa {
+    background-color:#FFFFFF;
+    height: 8px;
+    margin-top:-4px;}
+ul.navTree {
+    margin: 5px 0px 0px 0px;
+    position: relative;}
+ul.navTreeLevel0 {
+    border-top:1px dashed #333333;
+    border-bottom: 1px dashed #333333;}
+ul.navTree div{ color:#0076cc; }
+ul.navTree li div a img {float:right;}
+ul.navTree{ padding: 0px;}
+ul.navTree li, .navTreeLevel0 {
+    padding: 5px 0px 5px 20px;
+    margin: 0px 0px;
+    background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
+    list-style-type: none;
+
+    line-height:1.5em;}
+ul.navTree li ul li, .navTreeLevel11 {
+    padding: 0px 0px 0px 10px;
+    margin: 5px 1px;
+    background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat left 3px;
+    list-style-type: none;
+    line-height:1.5em;
+    border-bottom:none;
+    font-size:0.9em;}
+.navTreeItem {
+    font-size:1.0em;
+    font-weight:normal;
+}
+.navTreeCurrentItem {
+    font-weight:bold;
+}
+#portal-sitemap {
+	background: none !important;
+	padding: 0px;}
+/*************************** VISTA SUMAMRY STaNDARD ******************************/
+.summary {
+	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat left 0px;
+	padding: 0px 0px 0px 10px;}
