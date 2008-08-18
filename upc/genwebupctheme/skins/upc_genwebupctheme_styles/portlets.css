@@ -78,7 +78,7 @@ margin-top:-3px;
 }
 
 #portletPlus img{
-margin-right: 5px;
+margin-right: 0px;
 margin-bottom: 0px;
 /*vertical-align:text-bottom;*/
 }
@@ -111,7 +111,7 @@ font-weight:bold;
 *position:absolute;
 *border:1px 0px 0px 0px;
 *border-top-width:1px;
-*width:533px;
+*width:512px;
 _position:static;
 _border-top:1px solid #808080;
 _width:auto;
@@ -316,7 +316,8 @@ background:#DFE3D3 url(fonsCellaCalendari.gif) right bottom; /*específic4*/
 
 .esdeveniment,
 .event{
-background:#E0CECE url(fonsCellaCalendari.gif) no-repeat center right; /*específic5*/
+background:#E0CECE url(fonsCellaCalendari.gif) right bottom; /*específic5*/
+*background:#E0CECE url(fonsCellaCalendari.gif) right top; /*específic5*/
 }
 
 .ajustament #portletPlus{
@@ -414,7 +415,7 @@ ul.configlets li:first-child, ul#portal-sitemap li:first-child{
 border-top:1px dashed #333333;
 }
 ul.configlets li a img, ul#portal-sitemap li a img {
-float:right;
+float:right; margin-top:2px;
 }
 
 .portletItem {/*portlets.css (line 363)*/
@@ -513,7 +514,8 @@ ul.navTree {
     margin: 5px 0px 0px 0px;
     position: relative;}
 ul.navTreeLevel0 {
-    border-top:1px dashed #333333;
+    border-top:1px dashed #333333;}
+ul.navTreeLevel0 li{
     border-bottom: 1px dashed #333333;}
 ul.navTree div{ color:#0076cc; }
 ul.navTree li div a img {float:right;}
@@ -537,9 +539,13 @@ ul.navTree li ul li, .navTreeLevel11 {
     font-size:1.0em;
     font-weight:normal;
 }
+.navTreeItem a:hover, 
+dd.portletItem .navTreeItem a:hover {
+    text-decoration:underline;}
 .navTreeCurrentItem {
-    font-weight:bold;
-}
+    font-weight:bold;}
+.navTreeItemInPath {
+    font-weight:bold;}
 #portal-sitemap {
 	background: none !important;
 	padding: 0px;}
@@ -547,3 +553,22 @@ ul.navTree li ul li, .navTreeLevel11 {
 .summary {
 	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat left 0px;
 	padding: 0px 0px 0px 10px;}
+
+
+/*************************** ICONES DOCUMENT ACTIONS ******************************/
+.documentActions {
+	border-top:0px solid #8CACBB;
+	float:right;
+	width:150px;
+	margin-top:0px;
+	height:25px;
+	background: url(fonsIconesAccions.gif) no-repeat bottom right;}
+.documentActions ul {
+	margin:0pt;
+	padding:0pt;}
+.documentActions li {
+	background-color:White;
+	display:inline;
+	font-size:85%;
+	margin:0pt;
+	padding:0pt 0pt 0pt 1em;}

@@ -609,9 +609,9 @@ dl.portalMessage dd {
     background:url(info_message.gif) no-repeat bottom left #f9f9f9;}
 .warning{
     background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
-.warning dt{ /*text de l'esquerra*/
+.warning dt, dl.warning dt{ /*text de l'esquerra*/
     color:#333333 !important; /*color text, n'hi ha quatre també*/
-    background:url(avis_message.gif) no-repeat bottom left #f9f9f9;}
+    background:url(alert_message.gif) no-repeat bottom left #f9f9f9 !important;}
 dl.warning dd {
     background-color:#fdfbf3 !important;}
 .error{
@@ -621,9 +621,19 @@ dl.warning dd {
     background:url(error_message.gif) no-repeat bottom left #f9f9f9;}
 dl.error dd {
     background-color:#fcf4f2 !important;}
-
-
-
+.documentContent dd a:visited {
+	background-color:transparent;
+	color:#0077cc;}
+.documentContent dd a:active {
+	background-color:transparent;
+	color:#0077cc;}
+.documentContent dd a:link {
+	background-color:transparent;
+	color:#0077cc;}
+.documentContent dd a:hover {
+	background-color:transparent;
+	color:#0077cc;
+	text-decoration:underline;}
 
 
 
@@ -683,12 +693,14 @@ ul.configlets li a:hover {/*afegit*/
 /********************************** COMMUTA AMB VOLUM ÉS UNA PROVA (Només FireFox de moment) ***************************************/
 .optionsToggle {
     background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll left 2px;
-    *background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll 4px 5px;
+    *background:transparent url(commutaIE7.gif) no-repeat scroll 2px 3px;
+    _background:white url(commutaIE6.gif) no-repeat scroll 0px 0px;
     border:0px;
     color:#999999;
     font-size:85%;
     font-weight:bold !important;
     left:-4px;
+    _left:0px;
     padding:5px 4px 3px;
     position:relative;}
 /* Victor: trec les boletes del mon de moment */
@@ -927,7 +939,7 @@ ul.formTabs {/*authoring.css (line 429)*/
 	padding:0pt;
 	position:relative;
 	text-align:center;}
-.context + br + .context {margin-top:5px;}
+.context + br + .context, button + br + button {margin-top:5px;}
 img.sortdirection {width:10px !important; height:7px !important;}
 .fieldRequired {forms.css (line 195)
 	background:transparent url(https://devel.upcnet.es/neutre3/required.gif) no-repeat scroll left center;
