@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object>
     
-  <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre"
+  <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre3"
          based-on="Plone Default">
     <viewlet name="upc.genweb.capsaleraSuperior" 
        insert-before="*" />
@@ -17,26 +17,30 @@
        insert-afer="upc.genweb.eines" />
   </order>
   
-  <order manager="plone.portalfooter" skinname="Tema genwebUPC Neutre"
+  <order manager="plone.portalfooter" skinname="Tema genwebUPC Neutre3"
          based-on="Plone Default">
   </order>
 
-  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre">
+  <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Neutre3">
+    <viewlet name="plone.abovecontenttitle.documentactions" />
+  </hidden>
+
+  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre3">
     <viewlet name="plone.abovecontenttitle.documentactions" />
   </order>
 
-  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre">
+  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre3">
     <viewlet name="plone.personal_bar" />
     <viewlet name="plone.app.i18n.locales.languageselector" />
   </hidden>
 
-  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre">
+  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
     <viewlet name="plone.site_actions" />
     <viewlet name="plone.logo" />    
     <viewlet name="plone.searchbox" />
   </hidden>
 
-  <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Neutre">
+  <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Neutre3">
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
   </hidden>

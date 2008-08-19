@@ -10,7 +10,7 @@
        persistence'.
        -->
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="Tema genwebUPC Neutre">
+   default_skin="Tema genwebUPC Neutre3">
 
  <!-- This list registers the folders that are stored in the skins directory
       of your product (on the filesystem) as Filesystem Directory Views within
@@ -38,7 +38,7 @@
        Note: insert-before (and -after) accepts the value "*" which means
        "all".
        -->
- <skin-path name="Tema genwebUPC Neutre" based-on="Plone Default">
+ <skin-path name="Tema genwebUPC Neutre3" based-on="Plone Default">
   <layer name="upc_genwebupctheme_custom_images"
      insert-after="custom"/>
   <layer name="upc_genwebupctheme_custom_templates"

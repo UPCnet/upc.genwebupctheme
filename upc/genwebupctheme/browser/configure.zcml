@@ -12,9 +12,15 @@
       and viewlets only within the 'Tema genwebUPC' theme.
       -->
     <interface
-        interface=".interfaces.IThemeSpecificNeutre"
+        interface=".interfaces.IThemeSpecificNeutre3"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        name="Tema genwebUPC Neutre"
+        name="Tema genwebUPC Neutre3"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificUnitats"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Tema genwebUPC Unitats"
         />
 
 <!-- Recursos Z3 -->        
@@ -61,12 +67,12 @@
          permission="zope2.View"
          />
 
-<!-- Neutre -->
+<!-- Neutre3 -->
      <browser:viewlet
          name="upc.genweb.capsaleraSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.capsaleraSuperior"
-         layer=".interfaces.IThemeSpecificNeutre"
+         layer=".interfaces.IThemeSpecificNeutre3"
          permission="zope2.View"
          />
          
@@ -74,7 +80,7 @@
          name="upc.genweb.logosSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.logosSuperior"
-         layer=".interfaces.IThemeSpecificNeutre"
+         layer=".interfaces.IThemeSpecificNeutre3"
          permission="zope2.View"
          />
 
@@ -82,16 +88,16 @@
          name="upc.genweb.logoNeutre"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.logoNeutre"
-         layer=".interfaces.IThemeSpecificNeutre"
+         layer=".interfaces.IThemeSpecificNeutre3"
          permission="zope2.View"
          />
         
-<!-- Home Page Neutre --> 
+<!-- Home Page Neutre3 --> 
     <browser:page
       name="homepage"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".homepage.HomePageView"
-      layer=".interfaces.IThemeSpecificNeutre"
+      layer=".interfaces.IThemeSpecificNeutre3"
       permission="zope2.View"
       />
 
