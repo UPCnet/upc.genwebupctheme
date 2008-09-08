@@ -1,3 +1,24 @@
+/**************** COLORS ******************************/
+/************** DE LA UPC *****************************/
+/**                                                  **/
+/**    TextUPC #333333                               **/
+/**    LinkUPC #0076cc                               **/
+/**    MariUPC #006da3                               **/
+/**    GrisUPC #4d4d4d                               **/
+/**    CianUPC #99def6                               **/
+/**                                                  **/
+/**                                                  **/
+/**    Espe1   #ff6600                               **/
+/**    Espe2   #d96245                               **/
+/**    Espe3   #cc0000                               **/
+/**    Espe4   #dfe3d3                               **/
+/**    Espe5   #e0cece                               **/
+/**    Espe6   #e8e2df                               **/
+/**                                                  **/
+/******************************************************/
+
+
+
 /**************** GENERAL ******************************/
 body {
 	margin: 0px; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #333333; font-size: 0.7em; background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/}
@@ -122,8 +143,23 @@ input.searchButton {
     font-size:90%;
     padding:0px 3px 2px 17px;
     *padding:2px 0px 2px 14px;}
+form.searchPage input.searchButton{
+    background-position:0px 0px;
+    *background-position:center left;
+    padding:0px 3px 2px 17px;
+    *padding:0px 0px 0px 14px;}
+form.searchPage {
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+	border:1px solid #E6E6E6;
+	padding:20px 10px 15px 10px;
+       margin-bottom:20px;
+}
+form.searchPage p.discreet{
+	margin-bottom:0px;
+	margin-top:10px;
+	font-size:90%;}
 input.searchField {
-	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 50%;
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
 	border:1px solid #FF6600;
 	font-family:Verdana,Arial,Helvetica,sans-serif;
 	font-size:11px;
@@ -138,7 +174,7 @@ input[id="description"] {
 	font-size:100%;
 	font-weight:normal;}
 input {/*forms.css (line 30)*/
-	background:White url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 50%;
+	background:White url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 0%;
 	border-color:#ccc;
 	border-style:solid;
 	border-width:1px;
@@ -290,9 +326,9 @@ h1, h2 {
     font-size: 0.9em;
     border-top: 3px solid #ff6600; /*específic 1*/
     padding-top: 4px;
-    margin-left: 50px;
+    margin-left: 25px;
     float:left;
-    width:708px;}
+    width:733px;}
 .sobreElWeb {
     text-align:right;
     float:right;
@@ -305,8 +341,8 @@ h1, h2 {
 #bandaLogos {
     line-height: 1.1em;
     font-size: 0.9em;
-    border-top: 1px dashed #ff6600; /*específic 1*/
-    margin-left: 250px;
+    border-top: 1px dashed #d96245; /*específic 2*/
+    margin-left: 225px;
     vertical-align:middle;}
 #bandaLogos img {
     margin-right: 15px;
@@ -384,7 +420,11 @@ h1, h2 {
     padding:0px 1px 1px;}
 .LSBox {
     float: right;
-    margin: 0px !important;}
+    margin: 0px !important;
+    padding-right:0px;
+    padding-left:3px;
+    *padding-left:0px;
+    _padding-left:0px;}
 #livesearchLegend {
     border:0px;
     background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat right top;
@@ -466,7 +506,7 @@ h1, h2 {
 	white-space:normal !important;
 	line-height:0em;}
 .image-inline {
-	border:1px solid #999999;
+	border:0px solid #999999;
     padding:3px;}
 .barra_idiomes {
     font-size:0.9em;
@@ -482,11 +522,10 @@ h1, h2 {
 
 
 
-
-
 /* AFEGITS del custom.css*/
 .documentEditable .documentContent {/*authoring.css (line 369)*/
-    border:1px solid #666666; /*poseu-ho a 0 (zero) si creieu que desemmarcat no té problemes d'usabilitat*/
+    border:0px solid #666666; /*poseu-ho a 0 (zero) si creieu que desemmarcat no té problemes d'usabilitat*/
+    border-bottom: 5px solid #e6e6e6;/*a zero per treure*/
     border-top:1px solid #666666;
     padding-top:10px !important; /*separa una mica el contingut del menú d'edició (vik,modificat, 50 era massa!) */}
 .contentViews li a {
@@ -547,28 +586,25 @@ table.listing, .stx table {
 .even {
 	background-color:#f1f1f4;}
 .state-published {
-	color:#0077cc !important; /*ho deixo en grisUPC de mentre no s'anul·li o s'esborri aquest codi*/	}
+	color:#0076cc !important; /*ho deixo en grisUPC de mentre no s'anul·li o s'esborri aquest codi*/	}
 .state-private {
-	color:crimson !important; 
-	background: transparent url(bullet_red.png) no-repeat right center !important;
-	padding-right: 15px !important;}
+	color:crimson !important;
+	background: transparent none no-repeat right center !important;}
 span.state-private, td.state-private {background:none !important;}
 a. span.state-private {
-	background: transparent url(bullet_red.png) no-repeat right center !important;}
+	background: none !important;}
 .state-pending {
 	color:orange !important;
-	background: transparent url(bullet_orange.png) no-repeat right center !important;
-	padding-right: 15px !important;}
+	background: transparent none no-repeat right center !important;}
 span.state-pending, td.state-pending {background-image:none !important;}
 a. span.state-pending {
-	background: transparent url(bullet_orange.png) no-repeat right center !important;}
+	background: transparent none no-repeat right center !important;}
 .state-intranet {
 	color: #00b7f6 !important;
-	background: transparent url(bullet_blue.png) no-repeat right center !important;
-	padding-right: 15px !important;}
+	background: transparent none no-repeat right center !important;}
 span.state-intranet, td.state-intranet {background:none !important;}
 a. span.state-intranet {
-	background: transparent url(bullet_blue.png) no-repeat right center !important;}
+	background: transparent none no-repeat right center !important;}
 
 
 
@@ -577,6 +613,7 @@ a. span.state-intranet {
 
 /************************ MISSATGE INFO SENSE IMATGE **************/
 dl.portalMessage dt {
+    background-color:transparent;
     float:left;
     line-height:1.25em;
     margin:0pt 0.5em 0pt 0pt;
@@ -593,7 +630,8 @@ dl.portalMessage dt {
     padding:0em 0em 0.3em 0em;padding-top:0em;}
 dl.portalMessage {
     border:1px solid #ddd;
-    font-size:100%;}
+    font-size:100%;
+}
 .visualClear {
     clear:both;
     display:block;}
@@ -615,7 +653,8 @@ dl.portalMessage dd {
 dl.warning dd {
     background-color:#fdfbf3 !important;}
 .error{
-	background-color:#fcf4f2 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
+	padding-top:0em!important;
+	background-color:#fcf4f2 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/	}
 .error dt{ /*text de l'esquerra*/
     color:#c63103 !important; /*color text, n'hi ha quatre també*/
     background:url(error_message.gif) no-repeat bottom left #f9f9f9;}
@@ -623,16 +662,16 @@ dl.error dd {
     background-color:#fcf4f2 !important;}
 .documentContent dd a:visited {
 	background-color:transparent;
-	color:#0077cc;}
+	color:#0076cc;}
 .documentContent dd a:active {
 	background-color:transparent;
-	color:#0077cc;}
+	color:#0076cc;}
 .documentContent dd a:link {
 	background-color:transparent;
-	color:#0077cc;}
+	color:#0076cc;}
 .documentContent dd a:hover {
 	background-color:transparent;
-	color:#0077cc;
+	color:#0076cc;
 	text-decoration:underline;}
 
 
@@ -709,10 +748,8 @@ ul.configlets li a:hover {/*afegit*/
     padding: 0px;
 }
 #portal-column-content {/*columns.css (line 19)*/
-	/*margin:0em -1em;*/
-	/*padding:0em 1em;*/
-	/*padding:1em 1em 0pt;*/
-	/*_padding:1em 1em 0pt;*/}
+	margin:0em;
+	padding:0em;}
 #portal-personaltools, .visualInline, #portal-personaltools-wrapper {
 	background-color:transparent;}
 abbr, acronym, .explain {/*base.css (line 114)*/
@@ -740,17 +777,21 @@ table.listing th {
 	margin:1em 0em;}
 #history{
 	margin:1em;}
+.reviewHistory, .contentHistory {
+	color:#4d4d4d;
+}
 dl.collapsible dt.collapsibleHeader {/*authoring.css (line 299)*/
 	margin:0pt 0pt 0em -1em;}
 dl.collapsedInlineCollapsible {/*authoring.css (line 349)*/
 	border:medium none !important;}
 #portal-columns{
 	margin-bottom:20px;}
-#portal-column-content {
-	margin:0em -2em;
-	*margin:0em -1em;}
 #region-content, .documentContent{
-	padding:1em !important;}
+	padding:1em 0em !important;}
+.documentEditable {
+	margin:0em; padding:0px !important;/*reajusta pel 0em del regioncontent de dalt*/}
+#content{
+	margin: 0px;}
 #fieldset-default{
 	margin-bottom:10px;}
 .documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {/*public.css (line 73)*/
@@ -841,7 +882,7 @@ li.formTab a:hover {
 	border:1px solid #ccc;
 	margin:0pt;
 	padding-bottom:0px;
-	width:99.5%;}
+	width:100%;}
 .kupu-tb {/*kupustyles.css (line 83)*/
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 	border-color:#ccc;
@@ -854,10 +895,12 @@ span.kupu-tb-buttons button:hover {/*kupuplone.css (line 150)*/
 	cursor:pointer;}
 iframe.kupu-editor-iframe {/*kupuplone.css (line 110)*/
 	border-color:#e6e6e6;
-	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;}
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
+	width:100.9%;}
 iframe.kupu-editor-iframe:active {/*kupuplone.css (line 110)*/
 	border-color:#e6e6e6;
-	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;}
+	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
+	width:100.9%;}
 #login-form {
 	width:500px;}
 #login_form {
@@ -909,6 +952,13 @@ ul.configlets li + input > li {
 table.listing, .stx table {/*public.css (line 668)*/
 	border-collapse:collapse;
 	font-size:100%;}
+
+table.listing tbody th {
+	font-weight:bold;
+	font-size:90%!important;}
+table.listing {
+	font-size:85%;}
+
 .template-zmi_docs .contents {/*kupuplone.css (line 334)*/
 	border:1px solid #e6e6e6;
 	background:white;
@@ -971,9 +1021,167 @@ dl dd {margin-left:20px;}
 	width:inherit;}
 
 
+/****************photoalbum************/
+.photoAlbumEntry {
+background-image:url(pollaroid.gif);
+background-repeat:no-repeat;
+float:left;
+height:185px;
+margin:0;
+padding:0 6px 0 9px;
+text-align:center;
+width:143px;
+}
+
+
+/****************kupu************/
+div.kupu-drawer {
+background-color:#ffffff;
+border:1px solid #ccc;
+font-family:"Lucida Grande",Verdana,Lucida,Helvetica,Arial,sans-serif;
+}
+div div.kupu-panels {
+background-color:transparent;
+}
+div.kupu-panels {
+background-color:transparent;
+}
+.kupu-dialog-button {
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
+    border:1px solid #006DA3;
+    *border:0px;
+    color:white;
+    font-size:90%;
+    padding:0px 3px 2px 3px;
+    *padding:2px 2px 2px 2px;
+text-transform:lowercase;
+}
+ul.kupu-tabs li {
+	background-color:#ededed;
+	border:1px solid #333;}
+div#kupu-librariesitems {
+	border-right:2px dotted #ededed;
+	width:120px;}
+div#kupu-resourceitems {
+	border-right:2px dotted #EDEDED;
+	width:190px;
+}
+.kupu-tabledrawer {
+left:auto;
+width:408px;
+}
+.kupu a {
+border-bottom:0px solid #CCCCCC !important;
+color:#0077cc !important;
+text-decoration:none !important;
+}
+.kupu a:hover {
+border-bottom:0px solid #CCCCCC !important;
+color:#0077cc !important;
+text-decoration:underline !important;
+}
 
 
 
+/****************mapa del lloc************/
+#portal-sitemap .navTreeLevel2 {
+border-left:0em;
+margin:0em;
+padding-left:0em;
+}
+#portal-sitemap .navTreeLevel2 li{
+background:transparent url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat scroll left 3px;
+border-bottom:medium none;
+font-size:0.9em;
+line-height:1.5em;
+list-style-type:none;
+margin:5px 1px;
+padding:0 0 0 10px;
+}
+ul#portal-sitemap li:first-child {
+border-top:0px dashed #333333;
+}
+.navTreeLevel2{
+font-size: 1.1em;
+}
+.navTreeLevel3{
+font-size:1.0em;
+}
+#portal-sitemap .navTreeLevel3 li {
+margin-left:5px;
+padding-left:10px;
+padding-top:2px;
+}
+
+
+
+
+/****************search results************/
+.searchResults{
+font-size:0.7em;
+}
+.searchResults dt:first-child{
+margin-top:25px;
+}
+.searchResults dd{
+font-size:1.35em;
+margin-bottom:0px;
+}
+.searchResults dt{
+margin-top:10px;
+}
+h1 span.discreet {
+font-size:0.75em;
+font-weight:bold;
+color:#4d4d4d;
+}
+
+/****************vista resum************/
+.tileHeadline {
+border:medium none;
+font-family:Arial,Helvetica,sans-serif;
+font-size:1.3em;
+font-weight:bold;
+margin:0px;
+padding:0px;
+background:transparent url(arrowRight.gif) no-repeat scroll left 3px;
+padding: 0px 0px 0px 15px;
+}
+.visualClear{
+margin-bottom:10px;}
+.summary {
+color:#0077cc !important;
+}
+.tileItem {
+background:#F7F7F7 url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x scroll center bottom;
+border-color:#CCCCCC #E6E6E6 #E6E6E6;
+border-style:solid;
+border-width:2px 1px 1px;
+margin:15px 0;
+padding:10px 10px 0px 10px;
+}
+.tileFooter{
+background: transparent url(++resource++upc.genwebupctheme.images/custom/plus.gif) no-repeat scroll left 4px;
+padding: 0px 0px 0px 15px;
+margin-top:15px;
+}
+/****************vista estandard************/
+dl dt span.summary {
+background:transparent !important;
+padding:0 0 0 0px;
+}
+
+/****************ajusta columnes************/
+[style="float: left; margin-right: 1em; width: 29%;"]{
+	margin-right:3.5em !important;
+}
+
+/****************link-feed afegeix icona i tal...************/
+.link-feed{
+background: transparent url(rss.gif) no-repeat left 1px;
+padding-left:14px;
+font-size:90%;
+}
 
 
 /****************per si de cas hi ha interferencies************/

@@ -246,30 +246,9 @@ background:url(../img/borderTopDiagonal.gif) repeat-x;
 	margin: 0px; padding:10px; margin-top:-36px;
 	background: url(../img/borderTopDiagonal.gif) repeat-x top;
 }
-.fletxa_fitxa{ clear: both; background: url(../img/puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0px 0px;}
+.fletxa_fitxa{ clear: both; background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0px 0px;}
 .fitxa .titular1{ margin: -0.2em 0em 1.2em 0em; padding:0.2em 0em 0.5em 0px; border:none; border-bottom: 2px dotted #a29386; background:none;}
 .fitxa .titular2{ margin-bottom: 1em; }
-
-/*
-.fitxa{
-	border-top: 1px solid #0075b7;
-	margin: -27px 0em 0.5em -18px; padding:0.75em 0em 0em 17px;
-}
-.fletxa_fitxa{ clear: both; background: url(../img/fitxaboletes.gif) no-repeat right 5px ; height: 45px; margin: 0px 0px 0px -26px;}
-.fitxa .titular1{ margin: -0.2em 0em 1.2em 0em; padding:0em 0em 0.3em 0px; border:none; border-bottom: 2px dotted #a29386; background:none;}
-.fitxa .titular2{ margin-bottom: 1em; }
-*/
-
-/*
-.fitxa{
-	border-top: 1px solid #0075b7;
-	margin: -27px 0em 0.5em -18px; padding:0.75em 0em 0em 17px;
-}
-.fletxa_fitxa{ clear: both; background: url(../img/fitxa.gif) no-repeat left 5px ; height: 35px; margin: 0px 0px 0px -18px;}
-.fitxa .titular1{ margin: -0.2em 0em 1.2em 0em; padding:0em 0em 0.3em 0px; border:none; border-bottom: 2px dotted #a29386; background:none;}
-.fitxa .titular2{ margin-bottom: 1em; }
-
-*/
 
 .fitxa img{background:#FFFFFF; padding: 0px 20px 10px 0px; margin: 0em 0px 0px 0px;}
 /*MODIFICADES BEN MODIFICADES LES IMATGES*/
