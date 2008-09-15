@@ -2,10 +2,15 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 
 from plone.app.layout.viewlets.content import DocumentActionsViewlet 
+from plone.app.layout.viewlets.common import PathBarViewlet
 
 class DocumentActions(DocumentActionsViewlet):
 
     render = ViewPageTemplateFile("document_actions.pt")
+
+class PathBar(PathBarViewlet):
+    
+    render = ViewPageTemplateFile('path_bar.pt')
 
 # Sample code for a basic viewlet (In order to use it, you'll have to):
 # - Un-comment the following useable piece of code (viewlet python class).

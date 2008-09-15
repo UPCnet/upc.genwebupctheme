@@ -12,6 +12,23 @@
         permission="zope2.View" 
         />
 
+    <!-- The breadcrumbs -->
+    <browser:viewlet
+        name="plone.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".browser.viewlets.PathBarViewlet"
+        permission="zope2.View" 
+        />
+    <!-- Portlet navigation -->
+    <plone:portlet
+        name="portlets.Navigation"
+        interface="plone.app.portlets.portlets.navigation.INavigationPortlet"
+        assignment="plone.app.portlets.portlets.navigation.Assignment"
+        renderer=".portlets.navigation.Renderer"
+        addview="plone.app.portlets.portlets.navigation.AddForm"
+        editview="plone.app.portlets.portlets.navigation.EditForm"
+        />
+
 <!--    
      <plone:portlet
         name="portlets.Calendar"
