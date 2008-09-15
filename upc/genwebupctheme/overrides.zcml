@@ -16,7 +16,7 @@
     <browser:viewlet
         name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".browser.viewlets.PathBarViewlet"
+        class=".browser.viewlets.PathBar"
         permission="zope2.View" 
         />
     <!-- Portlet navigation -->
@@ -29,22 +29,4 @@
         editview="plone.app.portlets.portlets.navigation.EditForm"
         />
 
-<!--    
-     <plone:portlet
-        name="portlets.Calendar"
-        interface="upc.genwebupctheme.browser.calendar.ICalendarPortlet"
-        assignment="upc.genwebupctheme.browser.calendar.Assignment"
-        renderer="upc.genwebupctheme.browser.calendar.Renderer"
-        addview="upc.genwebupctheme.browser.calendar.AddForm"
-         />
-         
-    <plone:portlet
-        name="portlets.Navigation"
-        interface="upc.genwebupctheme.browser.navigation.INavigationPortlet"
-        assignment="upc.genwebupctheme.browser.navigation.Assignment"
-        renderer="upc.genwebupctheme.browser.navigation.Renderer"
-        addview="upc.genwebupctheme.browser.navigation.AddForm"
-        editview="upc.genwebupctheme.browser.navigation.EditForm"
-        />         
-         
---></configure>
+</configure>
