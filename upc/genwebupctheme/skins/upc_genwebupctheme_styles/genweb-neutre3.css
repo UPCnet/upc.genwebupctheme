@@ -1,42 +1,30 @@
 /* CSS UPC GENWEB 3.0 */
 
-/********************************************************************** CAPÇALERA *******************************************************************************/
-/********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
+/********************************************************************** CAPCALERA *******************************************************************************/
+/********************************************************** ESPECIFICS MODEL IMATGE ALLARGADA *******************************************************************/
 .bandaSuperior{
     height:6px;
     width:100%;
-    background-color:#FF6600; /*específic1*/
-    font-size:0.05em;
-}
-
+    background-color:#FF6600; /*especific1*/
+    font-size:0.05em;}
 .logo {
-  margin:35px 0px 0px 25px;
-  _margin:35px 0px 0px 15px;
-  min-width:160px;
-  _width:160px;
-  float:left;
-}
-
+	margin:35px 0px 0px 25px;
+	min-width:160px;
+	float:left;
+	_margin:35px 0px 0px 15px;
+	_width:160px;}
 .logo a {
-    margin-right:3px;
-}
-
+    margin-right:3px;}
 .titolWeb {
     text-align:center;
-    margin:10px 180px 10px 180px;
-}
-
+    margin:10px 180px 10px 180px;}
 .imatgeCapcalera{
     width:958px;
     height:95px;
-    background-image:url(++resource++upc.genwebupctheme.images/custom/imatge.jpg);/*------ imatge del custom /!\ ----*/
-    text-align:right;
-}
-
+    background-image:url(++resource++upc.genwebupctheme.images/custom/imatge.jpg);/*------ imatge del custom  ----*/
+    text-align:right;}
 .barraIdiomes{
-    padding: 75px 5px 0px 0px;
-}
-
+    padding: 75px 5px 0px 0px;}
 #portal-personaltools {
     font-size:0.9em;
     background-color: white;
@@ -46,19 +34,13 @@
     margin: -20px 0px 0px 5px;
     text-align: left;
     text-transform: none;
-    color: #4d4d4d;
-}
-
+    color: #4d4d4d;}
 #portal-personaltools li a {
     color:#0076CC;
-    text-decoration:none;
-}
-
+    text-decoration:none;}
 #portal-personaltools li a:hover {
     color:#0076CC;
-    text-decoration:underline;
-}
-
+    text-decoration:underline;}
 #portal-globalnav {
 	background: #Ededed url(++resource++upc.genwebupctheme.images/bgMenu.png) no-repeat bottom;
 	text-align:center;
@@ -66,9 +48,9 @@
 	font-size:1.2em;
 	text-transform:uppercase; 
 	margin-top:6px; 
-	*margin-top:4px; 
 	padding:0em; 
-	font-weight:bold;}
+	font-weight:bold;
+	*margin-top:4px;}
 #portal-globalnav li {
 	line-height: 25px;
 	padding:5px; 
@@ -89,7 +71,7 @@
 	border-bottom: none; 
 	background-color: #808080; 
 	color: white;
-	padding:4px 5px 5px 5px;  
+	padding:4px 5px 5px 5px;
 	*padding:5px 5px 4px 5px;}
 #portal-globalnav li a:hover {
 	border-right: 4px solid #FFFFFF; 
@@ -99,7 +81,7 @@
 	text-decoration:underline; 
 	border-top: none; 
 	border-bottom: none;
-	padding:4px 5px 5px 5px;  
+	padding:4px 5px 5px 5px;
 	*padding:5px 5px 4px 5px;}
 #portal-globalnav li.selected a:hover {
 	border-right: 4px solid #FFFFFF; 
@@ -108,87 +90,57 @@
 	color: #FFFFFF; 
 	border-top: none; 
 	border-bottom: none;
-	padding:4px 5px 5px 5px;  
+	padding:4px 5px 5px 5px;
 	*padding:5px 5px 4px 5px;}
-
-   
-/* Ésta linea hace que el search salte */
 .LResult {
-    padding-top:0px;
-}
-    
+    padding-top:0px;}
 .validacio {
     margin-top: -22px;
-    *margin-top: -24px;
-    _margin-top: -24px;
     font-size:0.9em;
     color:#4D4D4D;
     padding-left: 5px;
-}
-
+    *margin-top: -24px;
+    _margin-top: -24px;}
 .PortletCalendar {
     float:right;
     margin-right: 10px;
     margin-top: -200px;
     line-height:1.2em;
-    font-size:0.9em;
-}
-
+    font-size:0.9em;}
 .text_dia {}
 .text_mes {}
 .text_number {}
-
 .barra_idiomes {
     float: right;
     position:relative;
     z-index: 2;
     margin-top: -20px;
-    margin-right: 5px;
-}
-    
+    margin-right: 5px;}
 .cantoES {
     float: left;
-    background-color: #E8E2DF;
-}
-    
+    background-color: #E8E2DF;}    
 .cantoDR {
     text-align: right;
-    background-color: #E8E2DF;
-}
-
+    background-color: #E8E2DF;}
 .cantoEC {
     text-align: left;
-    background-color: #E8E2DF;
-}
-
+    background-color: #E8E2DF;}
 .cantoDC {
     text-align: right;
-    background-color: #E8E2DF;
-}
-
+    background-color: #E8E2DF;}
 .portletHeader {
 	background-color:#E8E2DF;
     color:#4D4D4D;
     font-weight:bold;
-    padding:1px 5px;
-}
-
-
+    padding:1px 5px;}
 .agendaDalt{
-    text-align: left;
-}
-
+    text-align: left;}
 .agendaNumero {
-    line-height: 0.8em;
-}
-   
+    line-height: 0.8em;}   
 .agendaDia {
-    text-transform: lowercase;
-}   
-
+    text-transform: lowercase;}   
 .barra_idiomes {
     position:relative;
     z-index: 2;
     margin-top: -20px;
-    margin-right: 5px;
-}
+    margin-right: 5px;}

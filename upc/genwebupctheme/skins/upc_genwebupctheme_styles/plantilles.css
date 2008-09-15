@@ -35,7 +35,7 @@ input{
 /******************************/
 
 
-/********** alineació **************/
+/********** alineacio **************/
 .align_left{ 
 float:left;
 padding:0px 20px 10px 0px;
@@ -64,7 +64,7 @@ position:relative;
 	font-weight: bold;
 	margin: 0.5em 0px 0em 0.6em;
 	padding-top: 0.6em;
-	color: #cc0000; /* Específic 3 */	
+	color: #cc0000; /* Especific 3 */	
 	/*afegit en proves, tots els titulars en Arial*/
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:1.45em;		
@@ -76,8 +76,8 @@ position:relative;
 	padding:0.25em 0.2em 0.2em 14px;
 	background: url(../img/custom/fletxaD.gif) no-repeat 0px 7px;
 	font-weight: bold;
-	color: #cc0000; /* Específic 3 */
-	border-top: 2px dotted #DFE3D3; /*específic4*/
+	color: #cc0000; /* Especific 3 */
+	border-top: 2px dotted #DFE3D3; /*especific4*/
 	/*afegit en proves, tots els titulars en Arial*/
 	font-family:Arial, Helvetica, sans-serif;
 	font-size:1.3em;
@@ -87,7 +87,7 @@ position:relative;
 	margin-bottom: 0.5em;
 	margin-top: 0.75em;
 	font-weight: bold;
-	color: #cc0000; /* Específic 3 */
+	color: #cc0000; /* Especific 3 */
 	/*afegit en proves, tots els titulars en Arial*/
 	font-family:Arial, Helvetica, sans-serif;	
 	font-size:1.2em;
@@ -96,7 +96,7 @@ position:relative;
 	font-size: 1.05em;
 	margin-bottom: 0.5em;
 	margin-top: 1em;
-	color: #cc0000; /* Específic 3 */
+	color: #cc0000; /* Especific 3 */
 	/*afegit en proves, tots els titulars en Arial*/
 	font-family:Arial, Helvetica, sans-serif;	
 	font-size:1.1em;
@@ -137,7 +137,7 @@ position:relative;
 }
 /***********************************/
 
-/********** Enllaços relacionats -plantilla- **************/
+/********** Enllacos relacionats -plantilla- **************/
 #eRelacionats{
 	float: right;
 	width: 25%;
@@ -149,7 +149,7 @@ position:relative;
 #eRelacionats .titular2{ margin-top: 0px; }
 #eRelacionats .llistat ul{ margin: 0px; margin-bottom:-20px;}
 #eRelacionats .llistat li{ list-style-image:none; list-style: none;}
-#eRelacionats_border{border-left: 4px solid #FF6600; /*específic 1*/ padding-left:10px; }
+#eRelacionats_border{border-left: 4px solid #FF6600; /*especific 1*/ padding-left:10px; }
 /***********************************/
 
 /********** Calendari -plantilla- **************/
@@ -188,11 +188,15 @@ position:relative;
 	font-weight: bold;
 }
 .notesCalendari{ 
-border-left: 4px solid #FF6600; /*específic 1*/
+border-left: 4px solid #FF6600; /*especific 1*/
 padding-left: 10px; 
 padding-bottom: 1px;
 margin-top: 10px;
 margin-left:2px; }
+
+.TDRegulaCalendari{
+	padding-bottom:10px;
+}
 
 /***********************************/
 
@@ -239,7 +243,6 @@ background:url(../img/borderTopDiagonal.gif) repeat-x;
 
 /************************ fitxa -plantilla- ******************************************/
 .fitxa{
-
 	border: 1px solid #cccccc;
 /*	border-top: 2px solid #0075b7;	*/
 	border-bottom: 4px solid #cccccc;
@@ -254,11 +257,11 @@ background:url(../img/borderTopDiagonal.gif) repeat-x;
 /*MODIFICADES BEN MODIFICADES LES IMATGES*/
 .fitxa .align_right img{background:#FFFFFF; padding: 3px; border:1px solid #999999; margin: 0px;}
 .fitxa .align_left img{background:#FFFFFF; padding: 3px; border:1px solid #999999; margin: 0px;}
-.fitxa .separadorH{ margin-top:0px; border-bottom: 2px dotted #a29386; /* Específic 1 */}
+.fitxa .separadorH{ margin-top:0px; border-bottom: 2px dotted #a29386; /* Especific 1 */}
 /***********************************/
 .separadorV{ 
-/*border-left: 1px dashed #a29386; /* Específic 1 */
-border-left: 1px dashed #e6e6e6; /* Específic 1 */
+/*border-left: 1px dashed #a29386; /* Especific 1 */
+border-left: 1px dashed #e6e6e6; /* Especific 1 */
 }
 /********** formularis -plantilla- **************/
 .formulari input,textarea {
@@ -324,6 +327,8 @@ border-left: 1px dashed #e6e6e6; /* Específic 1 */
 	height: 22px;
 	width: 100px;
 }
+
+
 /***********************************/
 
 .avis{
@@ -349,7 +354,7 @@ border-left: 1px dashed #e6e6e6; /* Específic 1 */
 	padding:5px 10px 8px 10px;
 	background:#f8f7f5; /*color6*/
 }
-/*#banners img{ border: 1px solid #a29386;} /* Específic 1 */
+/*#banners img{ border: 1px solid #a29386;} /* Especific 1 */
 .taula img{ /*en principi no cal */
 	margin:0px;
 	float:none;
@@ -359,10 +364,6 @@ border-left: 1px dashed #e6e6e6; /* Específic 1 */
 	margin:0px;
 	float:none;
 }
-/*despreciat
-#boto {
-	font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}*/
-/*tipus de botons*/
 
 .b_cancella{
 	background-image: url(../img/fonsbotoCancella.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: none; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
@@ -405,5 +406,4 @@ font-family:Arial, Helvetica, sans-serif;
 	margin: 8px;
 	padding: 2px 4px 2px 4px ;
 	font-size: 0.95em;
-	
 }

@@ -30,6 +30,13 @@
 <!-- FIN CALCULAR FECHA -->
     
     <div class="agendaContingut agendaAjustament">
+
+
+<!-- taula irene -->
+<table>
+
+        <tr>
+            <td>
         <ul>
         <li tal:repeat="obj entries">
             <a href=""
@@ -53,8 +60,11 @@
                Upcoming events&hellip;
             </a>
         </div>
-        
-        
+
+
+            </td>
+            <td class="TDRegulaCalendari">
+<!-- ini calendari -->
 <div id="calendari">
     <b i18n:domain="upc.genwebupc"
        i18n:translate="calendari_title"> 
@@ -156,7 +166,7 @@
                                 ></tal:block
                             ></tal:isday
                             ><tal:notisday condition="not: daynumber"
-                                ><td></td
+                                ><td></td 
                             ></tal:notisday
                         ></tal:day
                     ></tal:block>
@@ -184,6 +194,18 @@
 </table>
     
 </div>
+
+<!-- fi calendari -->
+
+
+            </td>
+
+        </tr>
+    </table>
+
+
+        
+        
         
         
         

@@ -59,7 +59,7 @@ padding: 0px 5px;
 }
 
 .titolPortlet{
-background-color:#E8E2DF; /*específic6*/
+background-color:#E8E2DF; /*especific6*/
 color:#4D4D4D;
 font-weight:bold;
 padding: 1px 5px;
@@ -80,7 +80,6 @@ margin-top:-3px;
 #portletPlus img{
 margin-right: 0px;
 margin-bottom: 0px;
-/*vertical-align:text-bottom;*/
 }
 
 .flotaPlus{
@@ -108,32 +107,29 @@ background-position: 0px 3px;
 padding: 11px;
 color:#4D4D4D;
 font-weight:bold;
-*position:absolute;
-*border:1px 0px 0px 0px;
-*border-top-width:1px;
-*width:512px;
-_position:static;
-_border-top:1px solid #808080;
-_width:auto;
-
-}
+	*position:absolute;
+	*border:1px 0px 0px 0px;
+	*border-top-width:1px;
+	*width:532px;
+	_position:static;
+	_border-top:1px solid #808080;
+	_width:auto;}
 
 .agendaData{
 float:none;
 margin: -36px 0px 1px 3px;
-*margin:0px 0px 1px 3px;
-*padding-top:3px;
-_padding-top:0px;
-_margin: -36px 0px 1px 3px;
-}
+	*margin:0px 0px 1px 3px;
+	*padding-top:3px;
+	_padding-top:0px;
+	_margin: -36px 0px 1px 3px;}
 
 .agendaDataReposicio{
 background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 0px;
-*background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 2px;
-_background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 4px;
 border-top:1px solid #999999;
 margin: 0px 0px 0px 0px;
 padding: 5px 25px 197px 0px;
+	*background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 2px;
+	_background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 4px;
 }/*pelvertical*/
 
 .agendaNumero{
@@ -143,10 +139,10 @@ padding:4px 1px 3px 1px;
 color:#FFFFFF;
 text-align:center;
 min-width: 24px;
-_width:24px;
 font-family: "Arial Narrow", "Helvetica Narrow", "Mikti Narrow", Arial, Helvetica, sans-serif;
 font-size:26px;
 position: relative;
+_width:24px;
 }
 
 .agendaMes{
@@ -174,9 +170,6 @@ background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
 position:relative;
 }
 
-.agendaAjustament {
-_background:none; /*IE6 no sap posar imatges sota capes flotants, la treiem*/
-}
 
 .agendaContingut ul{
 list-style:none;
@@ -192,7 +185,7 @@ text-align:left;
 min-height: 208px;
 height:auto !important;
 height:208px;
-padding: 5px 200px 5px 5px;
+padding: 5px;
 }
 .taulaDivs{
 border-collapse: collapse;
@@ -222,22 +215,19 @@ margin: 0px 0px 5px 5px;
 #calendari {
 float:right;
 margin-right: 10px;
-_margin-right:5px;
-margin-top: -200px;
-*margin-top: -195px;
 line-height:1.2em;
 font-size:0.9em;
+_margin-right:5px;
 }
 
 #calendariVertical {
 float:right;
 margin-right: 23px;
-_margin-right:13px;
 margin-top: -190px;
-_margin-top: -185px;
 line-height:1.2em;
 font-size:0.9em;
-
+_margin-right:13px;
+_margin-top: -185px;
 }
 
 #calendari table, #calendariVertical table{
@@ -246,13 +236,12 @@ font-size:0.9em;
 
 #calendari th, #calendariVertical th{
 border-bottom: 1px dashed #999999;
-color:#CC0000; /*específic3*/
+color:#CC0000; /*especific3*/
 }
 
 #calendari table,#calendari tr,#calendari th,#calendari td,#calendari tbody,#calendari tfoot, #calendariVertical table,#calendariVertical tr,#calendariVertical th,#calendariVertical td,#calendariVertical tbody,#calendariVertical tfoot {
 border-collapse:collapse;
-text-align:right;
-}
+text-align:right;}
 
 table, tr, th, td, tbody, tfoot {
 border-collapse:collapse;
@@ -260,11 +249,16 @@ padding:3px;
 text-align:left;   
 }
 
+.TDRegulaCalendari{
+	padding-bottom:12px;
+	vertical-align:bottom;
+}
+
 
 #calendari table, #calendariVertical table{
-border-left: 1px solid #E8E2DF; /*específic6*/;
-border-right: 1px solid #E8E2DF; /*específic6*/;
-border-bottom: 1px solid #E8E2DF; /*específic6*/;
+border-left: 1px solid #E8E2DF; /*especific6*/;
+border-right: 1px solid #E8E2DF; /*especific6*/;
+border-bottom: 1px solid #E8E2DF; /*especific6*/;
 background-color:#FFFFFF;
 width:145px;
 }
@@ -276,7 +270,7 @@ font-size:1.1em;
 
 .calendariArrodonit{
 margin: 5px 0px 0px 0px;
-background-color: #E8E2DF; /*específic6*/;
+background-color: #E8E2DF; /*especific6*/;
 font-size:0.05em;
 max-width:144px;
 padding:0px;
@@ -294,7 +288,7 @@ max-width:144px;
 }
 
 #daltCalendari{
-background-color:#E8E2DF; /*específic6*/;
+background-color:#E8E2DF; /*especific6*/;
 height:5px;
 }
 
@@ -304,20 +298,20 @@ height:5px;
 }
 
 .avui, .todaynoevent{
-border: 1px solid #CC0000; /*específic3*/
+border: 1px solid #CC0000; /*especific3*/
 }
 .todayevent {
-border: 1px solid #CC0000; /*específic3*/
-background-color: #E0CECE; /*específic5*/
+border: 1px solid #CC0000; /*especific3*/
+background-color: #E0CECE; /*especific5*/
 }
 .reunio{
-background:#DFE3D3 url(fonsCellaCalendari.gif) right bottom; /*específic4*/
+background:#DFE3D3 url(fonsCellaCalendari.gif) right bottom; /*especific4*/
 }
 
 .esdeveniment,
 .event{
-background:#E0CECE url(fonsCellaCalendari.gif) right bottom; /*específic5*/
-*background:#E0CECE url(fonsCellaCalendari.gif) right top; /*específic5*/
+background:#E0CECE url(fonsCellaCalendari.gif) right bottom; /*especific5*/
+	*background:#E0CECE url(fonsCellaCalendari.gif) right top; /*especÃ­fic5*/
 }
 
 .ajustament #portletPlus{
@@ -355,7 +349,7 @@ font-size:0.05em;
 .divCarpetaTitol{
 font-size:1.25em;
 font-weight:bold;
-color:#CC0000; /*específic3*/
+color:#CC0000; /*especific3*/
 margin:0px 0px 5px -5px;
 padding-left: 15px;
 background:url(++resource++upc.genwebupctheme.images/fletxaD.gif) no-repeat left;

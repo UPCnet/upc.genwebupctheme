@@ -15,5 +15,5 @@
 	</div>
 	
    <div class="bandaPeu"></div>
-   <div id="signText">© <a href="http://www.upc.edu">UPC</a>. Universitat Politècnica de Catalunya. Servei de Comunicació i Promoció.<span class="sobreElWeb"><a href="#">Sobre aquest web</a></span></div>
+   <div id="signText">© <a href="http://www.upc.edu" target="_blank">UPC</a>. Universitat Politècnica de Catalunya. Servei de Comunicació i Promoció.<span class="sobreElWeb"><a href="#">Sobre aquest web</a></span></div>
 </div>

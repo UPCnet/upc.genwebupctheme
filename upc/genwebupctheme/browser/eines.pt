@@ -111,11 +111,10 @@
     tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">
     Preferències</a>
      |
-    <a 
+    <a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC/formacio" target="_blank"
     i18n:domain="upc.genwebupc"
-    i18n:translate="genweb-recursos"
-    tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">
-    Recursos</a>
+    i18n:translate="genweb-ajuda">
+    Ajuda</a>
      |
     <a 
     i18n:translate="Site Setup" 

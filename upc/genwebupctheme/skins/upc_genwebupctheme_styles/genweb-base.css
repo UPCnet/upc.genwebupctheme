@@ -1,60 +1,91 @@
-/**************** COLORS ******************************/
-/************** DE LA UPC *****************************/
-/**                                                  **/
-/**    TextUPC #333333                               **/
-/**    LinkUPC #0076cc                               **/
-/**    MariUPC #006da3                               **/
-/**    GrisUPC #4d4d4d                               **/
-/**    CianUPC #99def6                               **/
-/**                                                  **/
-/**                                                  **/
-/**    Espe1   #ff6600                               **/
-/**    Espe2   #d96245                               **/
-/**    Espe3   #cc0000                               **/
-/**    Espe4   #dfe3d3                               **/
-/**    Espe5   #e0cece                               **/
-/**    Espe6   #e8e2df                               **/
-/**                                                  **/
-/******************************************************/
+/*
+INCORPORA TOTS ELS CODIS PER A 
+	FIREFOX
+	EXPLORER 6
+	EXPLORER 7
+	SAFARI i CHROME
+	
+COLORS 
+	TextUPC #333333
+	LinkUPC #0076cc
+	MariUPC #006da3
+	GrisUPC #4d4d4d
+	CianUPC #99def6
+	Espe1   #ff6600
+	Espe2   #d96245
+	Espe3   #cc0000
+	Espe4   #dfe3d3
+	Espe5   #e0cece
+	Espe6   #e8e2df
+*/
 
 
-
-/**************** GENERAL ******************************/
+/* GENERAL */
 body {
-	margin: 0px; padding: 0px; font-family: Verdana, Arial, Helvetica, sans-serif; color: #333333; font-size: 0.7em; background: url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y #ffffff;/*#f6f6f6*/}
-a:link { color:#0076cc; text-decoration: none;}	a:visited { color: #0076cc; text-decoration: none;}	a:hover {   color: #0076cc;     text-decoration: underline;} a:active {  color: #0076cc;     text-decoration: none;} a:focus { outline: none;}
-img {border:none;} /*les imatges links sense resaltar amb línia*/
-.logo a:hover{text-decoration: none;}; /*soluciona subratllat hover ie6*/
-ul { margin: 0px; padding: 0px;}	form { margin: 0px; padding: 0px; vertical-align: text-bottom;}
-blockquote {/*base.css (line 128) border: especific5, color: especific2*/
+	margin: 0px; 
+	padding: 0px; 
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+	color: #333333; 
+	font-size: 0.7em; 
+	background:#ffffff url(++resource++upc.genwebupctheme.images/fons.png) center repeat-y;}
+a:link { 
+	color:#0076cc; 
+	text-decoration: none;}	
+a:visited { 
+	color: #0076cc; 
+	text-decoration: none;}	
+a:hover {   
+	color: #0076cc;     
+	text-decoration: underline;} 
+a:active {  
+	color: #0076cc;     
+	text-decoration: none;} 
+a:focus { 
+	outline: none;}
+img {
+	border:0px;} 
+.logo a:hover{
+	text-decoration: none;}
+ul { 
+	margin: 0px; 
+	padding: 0px;}	
+form { 
+	margin: 0px; 
+	padding: 0px; 
+	vertical-align: text-bottom;}
+blockquote {
 	border-left:15px solid #E0CECE;
 	border-bottom:1px solid #E0CECE;
 	color: #D96245; 
 	margin-left:0pt;
 	padding-left:0.5em;}
-pre {/*background: especific6*/
+
+pre {
 	background-color:#E8E2DF;
 	border:1px solid #ccc;
 	color:#333;
-	font-family:Monaco,"Courier New",Courier,monospace;
+	font-family:Monaco,'Courier New',Courier,monospace;
 	font-size:99%;
 	overflow:auto;
 	padding:1em;}
-code, tt {/*base.css (line 134)*/
+code, 
+tt {
 	background-color:#99def6;
 	color:#333;
-	font-family:Monaco,"Courier New",Courier,monospace;
+	font-family:Monaco,'Courier New',Courier,monospace;
 	font-size:100%;
 	padding:0pt 0.1em;
 	font-style:normal;}
-legend {/*forms.css (line 87)*/
+
+legend {
 	background:transparent none repeat scroll 0%;
 	background-color:transparent;
 	font-size:0%;
-	*font-size:90%;
-	*display:none;
 	padding:0em 0em 0.5em 0em;
-	color:#cccccc;}
+	color:#cccccc;
+	*font-size:90%;
+	*display:none;}
+
 fieldset{
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #E6E6E6;
@@ -69,30 +100,29 @@ fieldset[id] legend {
 	display:inline;
 	padding:0em 0em 0.5em 0em;
 	color:#cccccc;}
-	
 
-
-label {/*forms.css (line 92)*/
+label {
 	font-weight:bold;
 	color:#cc0000;}
-
-textarea {/*forms.css (line 22)*/
+textarea {
 	padding:1px 3px;
 	font-family:Verdana, Arial, Helvetica, sans-serif;}	
 
 [type="submit"] {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
     border:1px solid #006DA3;
-    *border:0px;
     color:white;
     font-size:90%;
     font-family:Verdana, Helvetica, Arial, sans-serif;
     padding:0px 3px 2px 3px;
+    *border:0px;
     *padding:2px 2px 2px 2px;}
-input.text, input.password {
+
+input.text, 
+input.password {
     font-size: 11px;
     padding: 0px 1px 1px 1px;
-    border: 1px solid #FF6600; /*específic 1*/
+    border: 1px solid #FF6600; 
     background: url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x;}
 input.radio {
     margin-right:5px;   
@@ -112,8 +142,7 @@ input.button {
     border: 0px;
     background: url(++resource++upc.genwebupctheme.images/cerca_ca.gif) no-repeat right bottom;
     overflow: hidden;
-    cursor: pointer; /* hand-shaped cursor */
-    cursor: hand; /* for IE 5.x */}
+    cursor: pointer;}
 .submitLogin {
     width: 16px;
     height: 16px;
@@ -122,38 +151,36 @@ input.button {
     border: 0px;
     background: url(++resource++upc.genwebupctheme.images/go.gif) no-repeat right bottom;
     overflow: hidden;
-    cursor: pointer; /* hand-shaped cursor */
-    cursor: hand; /* for IE 5.x */}
-button {/*forms.css (line 61)*/
+    cursor: pointer;}
+button {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
     border:1px solid #006DA3;
-    *border:0px;
     color:white;
     font-size:90%;
     font-family:Verdana, Helvetica, Arial, sans-serif;
     padding:0px 3px 2px 3px;
+    *border:0px;
     *padding:2px 2px 2px 2px;}
 input.searchButton {
     background:White url(botoFons_cerca.gif) no-repeat center left;
     cursor:pointer;
     text-transform:lowercase;
     border:1px solid #006DA3;
-    *border:0px;
     color:white;
     font-size:90%;
     padding:0px 3px 2px 17px;
+    *border:0px;
     *padding:2px 0px 2px 14px;}
 form.searchPage input.searchButton{
     background-position:0px 0px;
-    *background-position:center left;
     padding:0px 3px 2px 17px;
+    *background-position:center left;
     *padding:0px 0px 0px 14px;}
 form.searchPage {
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #E6E6E6;
 	padding:20px 10px 15px 10px;
-       margin-bottom:20px;
-}
+    margin-bottom:20px;}
 form.searchPage p.discreet{
 	margin-bottom:0px;
 	margin-top:10px;
@@ -164,17 +191,20 @@ input.searchField {
 	font-family:Verdana,Arial,Helvetica,sans-serif;
 	font-size:11px;
 	padding:3px 1px 1px;}
+
 input[id="title"] {
 	color:#CC0000;
-	font-family:Arial,Helvetica,sans-serif!important;
+	font-family:Arial,Helvetica,sans-serif !important;
 	font-size:1.65em;
-	font-weight:bold!important;}
+	font-weight:bold !important;}
+
 input[id="description"] {
 	color:#333333;
 	font-size:100%;
 	font-weight:normal;}
-input {/*forms.css (line 30)*/
-	background:White url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 0%;
+
+input {
+	background:#ffffff url(https://devel.upcnet.es/neutre3/input_background.gif) repeat-x scroll 0% 0%;
 	border-color:#ccc;
 	border-style:solid;
 	border-width:1px;
@@ -183,7 +213,7 @@ input {/*forms.css (line 30)*/
 	font-family:Verdana,Helvetica,Arial,sans-serif;
 	vertical-align:middle;
 	visibility:visible;}	
-select {/*afegit*/
+select {
     font-family:Verdana,Helvetica,Arial,sans-serif;
     font-size:90%;}	
 h1 {
@@ -194,15 +224,14 @@ h1 {
     margin:0px;}
 h1,h2{
     border-bottom:0px;}
-h1{/* modificat de <div class=titolProducte>*/
-	/*background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaD.gif) no-repeat scroll 0px 7px;*/
+h1{
 	color:#CC0000;
 	font-family:Arial,Helvetica,sans-serif;
 	font-size:1.65em;
 	font-weight:bold;
 	padding:0.2em 0.2em 0.2em 0px;
 	position:static;}
-h2{/*el mateix que <div class=titolComplement>*/
+h2{
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
 	font-family:Arial,Helvetica,sans-serif;
@@ -211,7 +240,7 @@ h2{/*el mateix que <div class=titolComplement>*/
 	margin-top:25px;
 	padding-bottom:10px;
 	padding-top:10px;}
-h3 {/*com h2*/
+h3 {
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
 	font-family:Arial,Helvetica,sans-serif;
@@ -220,19 +249,24 @@ h3 {/*com h2*/
 	margin-top:25px;
 	padding-bottom:10px;
 	padding-top:10px;}	
-h1, h2, h3, h4, h5, h6 {/*anul·lo el negre i tot això que no mola.*/
+h1, h2, h3, h4, h5, h6 {
     font-family:Arial,Helvetica,Verdana,sans-serif;}
-h1, h2, h3, h4, h5, h6 {/* ESBORRAR AIXÒ PERQUÈ EL NEGRE NO S'IMPOSSI SOBRE EL #333333*/
-    color: #CC00000;}
-h1 > img {/*imatge just abans del titol*/
+h1, h2, h3, h4, h5, h6 {
+    color: #CC0000;}
+
+h1 > img {
 	padding-right:3px;}
-h4 {/*h4 més gran, potser desrpés s'ha d'ajustar els h2,h2,h3,h5 i h6 perquè l'Arial visualment és més petita que la Verdana i s'ha d'incrementar aproximadament un 15%*/
+
+h4 {
     font-size:125%;}
 h1, h2 {
     font-weight:bold;}	
-#baner { margin-bottom:20px; text-align:right;}
-#baner img {  border: 1px solid #0076cc;  margin-bottom:20px;}
-
+#baner { 
+	margin-bottom:20px; 
+	text-align:right;}
+#baner img {  
+	border: 1px solid #0076cc;  
+	margin-bottom:20px;}
 #visual-portal-wrapper{
     margin: 0px auto;
     padding: 0;
@@ -243,9 +277,7 @@ h1, h2 {
 	
 	
 	
-/******************************* CAPÇALERA ******************************/
-/**************************** ELEMENTS COMUNS ***************************/
-#capcalera{ }
+/* CAPCALERA COMUNS */
 .barraCerca{
     margin: 4px 0px 0px 5px;
     text-align: right;
@@ -258,25 +290,23 @@ h1, h2 {
     top:4px;
     padding-left:5px;}
 .quadradet {
-    background-color:#FF6600; /*específic 1*/
+    background-color:#FF6600; 
     margin-bottom:1px;
     width:4px;
     height:5px;
     vertical-align:baseline;}
+
 .souA {
-    margin: 5px 0px 40px 0px; font-size:0.9em; padding-left:8px;
-    background: url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat top left;}
+    margin: 5px 0px 40px 0px; 
+	font-size:0.9em; 
+	padding-left:8px;
+    background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat top left;}
+
 .connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
 
-
-
-
-
-
-
-/************************** CONTINGUT ********************************/
+/* CONTINGUT */
 .contingut{
     text-align: left;
     line-height: 1.5em;}
@@ -291,7 +321,8 @@ h1, h2 {
     width:200px;
     margin-right: 25px;}
 .columnaCentre {
-    margin-right: 400px;}
+    margin-right: 25px;
+	width:558px;}
 .columnaCentreCentrada {
     margin-left:225px;
     margin-right: 175px;}
@@ -302,7 +333,6 @@ h1, h2 {
     text-align:right;
     float:right;
     width:150px;}
-.iconesContingut img{}
 .iconesContingut a{
     margin: 0px 5px;}
 	
@@ -312,7 +342,7 @@ h1, h2 {
 	
 	
 	
-/************************** PEU ******************************************/
+/* PEU */
 #peu { 
     clear:both;
     float:none;
@@ -324,7 +354,7 @@ h1, h2 {
 #signText {
     line-height: 1.1em;
     font-size: 0.9em;
-    border-top: 3px solid #ff6600; /*específic 1*/
+    border-top: 3px solid #ff6600;
     padding-top: 4px;
     margin-left: 25px;
     float:left;
@@ -333,15 +363,17 @@ h1, h2 {
     text-align:right;
     float:right;
     margin-top:-12px;}
+html*.sobreElWeb {     
+	margin-top:0px; }
 .bandaPeu {
     float:left;
-    border-top: 18px solid #ff6600; /*específic 1*/
+    border-top: 18px solid #ff6600; 
     width:200px;
     margin-top:0px;}
 #bandaLogos {
     line-height: 1.1em;
     font-size: 0.9em;
-    border-top: 1px dashed #d96245; /*específic 2*/
+    border-top: 1px dashed #d96245;
     margin-left: 225px;
     vertical-align:middle;}
 #bandaLogos img {
@@ -349,13 +381,7 @@ h1, h2 {
     padding: 10px 0px;}
 
 
-
-
-
-
-
-
-/************************* DIV CARPETA I CARPETA INTEL·LIGENT **************/
+/* DIV CARPETA I CARPETA INTELLIGENT */
 .divCarpeta {
     border-top: 1px dashed #999999;
     border-left: 1px solid #f6f6f6;
@@ -370,7 +396,7 @@ h1, h2 {
     background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat top left;
     list-style-type: none;
     line-height:1.5em;
-    border-bottom:none;
+    border-bottom:0px;
     font-size:0.9em;}
 .divCarpeta small {}
 .divCarpeta p {
@@ -381,10 +407,10 @@ h1, h2 {
     background:url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat top left;
     font-size:1.2em;
     font-weight:bold;
-    color:#CC0000; /*específic3*/
+    color:#CC0000; 
     padding: 8px 0px 5px 15px;}
 .modificacio {
-    color:#CC0000; /*específic 3*/
+    color:#CC0000;
     text-align:right;
     font-size:0.9em;}
 
@@ -394,7 +420,7 @@ h1, h2 {
 
 
 
-/************************* UPCnet **************/
+/* UPCnet */
 #portal-breadcrumbs {
     font-size:0.9em;
     border-bottom: 0px;
@@ -403,7 +429,7 @@ h1, h2 {
     background:transparent url(++resource++upc.genwebupctheme.images/fletxa4gris.png) no-repeat scroll left top;
     padding-left:8px;
     margin:5px 0px 15px;
-    *margin:5px 0px 30px;}
+    *margin:5px 0px 15px;}
 #portal-breadcrumbs a {
 	text-decoration:none;}
 #portal-breadcrumbs a:hover {
@@ -424,34 +450,33 @@ h1, h2 {
     padding-right:0px;
     padding-left:3px;
     *padding-left:0px;
-    _padding-left:0px;}
+	_padding-left:0px;}
 #livesearchLegend {
     border:0px;
     background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat right top;
     *background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat center 14px;
     _background:transparent url(++resource++upc.genwebupctheme.images/custom/liveSearchFletxa.gif) no-repeat center 13px;
     line-height:0em;
-    margin-left:50%
     margin-top:-5em;
     padding:7px 70px;
     font-size:0.0em;
     z-index:1000;
     *margin-bottom:0px;
+	*padding-top:40px;
     *float:right;
     *width:140px;
     *height:14px;}
-#livesearchLegend {/*public.css (line 299)*/
-	border-color:none;
+/*#livesearchLegend {
+	border-color:transparent;
 	border-top-color:transparent;
-	border: none;
+	border: 0px;
 	border-style: hidden;
 	border-width:0px;
-	border-collapse:collapse;}
+	border-collapse:collapse;}*/
 .livesearchContainer {
     background:none;
     border:0px solid #666666;
     color:#333333;
-    _color:transparent;
     font-family:Verdana,Arial, Helvetica,sans-serif;
     margin:0px;
     margin-top:0.35em;
@@ -463,20 +488,19 @@ h1, h2 {
     top:0pt;
     visibility:visible;
     white-space:normal;
-    width:24.3em;}
-* html .livesearchContainer {
-    padding: 0px !important;/*    padding-top: 0 !important;*/
-    background-color: none;/*    border: 0;*/}
+    width:24.3em;
+	_color:transparent;}
+html .livesearchContainer {
+    padding: 0px !important;
+    background-color: transparent;}
 #LSHighlight,
 .LSHighlight {
-    background-color: none;
-    border: 0px solid none;
-    color: none;}
-#livesearchLegend {/*    line-height: 1em;    margin-top: -2em;    margin-left: -0.1em;*/
-    border: 0px solid #8cacbb;/*    border-bottom: 0;*/}
+    background-color: transparent;
+    border: 0px;
+    color: transparent;}
 .LSTable {
     margin: 10px 0px 0px 0px;
-    _padding:0px 10px;}
+	_padding:0px 10px;}
 .LSResult { 
     left:0px;
     margin:0px;
@@ -510,10 +534,10 @@ h1, h2 {
     padding:3px;}
 .barra_idiomes {
     font-size:0.9em;
-    *font-size:0.85em;
-    _font-size:0.85em;
     padding-top:0px;
+	*font-size:0.85em;
     *padding-top:0px;
+	_font-size:0.85em;
     _padding-top:0px;
     _margin-right:3px;}
 
@@ -522,12 +546,12 @@ h1, h2 {
 
 
 
-/* AFEGITS del custom.css*/
-.documentEditable .documentContent {/*authoring.css (line 369)*/
-    border:0px solid #666666; /*poseu-ho a 0 (zero) si creieu que desemmarcat no té problemes d'usabilitat*/
-    border-bottom: 5px solid #e6e6e6;/*a zero per treure*/
+/* AFEGITS del custom.css */
+.documentEditable .documentContent {
+    border:0px solid #666666; 
+    border-bottom: 5px solid #e6e6e6;
     border-top:1px solid #666666;
-    padding-top:10px !important; /*separa una mica el contingut del menú d'edició (vik,modificat, 50 era massa!) */}
+    padding-top:10px !important; }
 .contentViews li a {
     color:#0077cc;
     border:1px solid #666666;}
@@ -566,10 +590,9 @@ h1, h2 {
 	
 	
 	
-/***********************************************************************************************************************************************
-TAULES DE CONTINGUT
-***********************************************************************************************************************************************/
-table.listing th, .stx table th {
+/* TAULES DE CONTINGUT */
+table.listing th, 
+.stx table th {
     background:#ededed none repeat scroll 0% 50%;
     border-bottom:1px solid #666666;
     border-right:1px solid #666666;
@@ -577,41 +600,49 @@ table.listing th, .stx table th {
     font-weight:normal;
     padding:0.25em 0.5em;
     text-transform:lowercase;
-    font-size:1.1em; /*afegit per fer el text un xic més gran, podeu treure-ho*/}
-table.listing td, .stx table td {
+    font-size:1.1em; }
+table.listing td, 
+.stx table td {
     border-right:1px solid #666666;}
-table.listing, .stx table {
+table.listing, 
+.stx table {
     border-bottom:1px solid #666666;
     border-left:1px solid #666666;}
 .even {
 	background-color:#f1f1f4;}
 .state-published {
-	color:#0076cc !important; /*ho deixo en grisUPC de mentre no s'anul·li o s'esborri aquest codi*/	}
+	color:#0076cc !important; }
 .state-private {
 	color:crimson !important;
-	background: transparent none no-repeat right center !important;}
-span.state-private, td.state-private {background:none !important;}
-a. span.state-private {
+	background: none !important;}
+span.state-private, 
+td.state-private {
+	background:none !important;}
+a span.state-private {
 	background: none !important;}
 .state-pending {
 	color:orange !important;
-	background: transparent none no-repeat right center !important;}
-span.state-pending, td.state-pending {background-image:none !important;}
-a. span.state-pending {
-	background: transparent none no-repeat right center !important;}
+	background: none !important;}
+span.state-pending, 
+td.state-pending {
+	background-image:none !important;}
+a span.state-pending {
+	background: none !important;}
 .state-intranet {
 	color: #00b7f6 !important;
-	background: transparent none no-repeat right center !important;}
-span.state-intranet, td.state-intranet {background:none !important;}
-a. span.state-intranet {
-	background: transparent none no-repeat right center !important;}
+	background: none !important;}
+span.state-intranet, 
+td.state-intranet {
+	background:none !important;}
+a span.state-intranet {
+	background: none !important;}
 
 
 
 
 
 
-/************************ MISSATGE INFO SENSE IMATGE **************/
+/* MISSATGE INFO SENSE IMATGE */
 dl.portalMessage dt {
     background-color:transparent;
     float:left;
@@ -621,11 +652,10 @@ dl.portalMessage dt {
     font-family:Arial, Helvetica, sans-serif;
     font-size:1.25em;
     font-weight:bold;
-    /* reajustament del padding */
     padding:4px 10px 5px 30px;
     border-right:1px solid #ddd;
     border-bottom:1px solid #ddd;
-    _border-bottom:0px solid #ddd;}
+	_border-bottom:0px solid #ddd;}
 #dashboard-info-message {
     padding:0em 0em 0.3em 0em;padding-top:0em;}
 dl.portalMessage {
@@ -639,24 +669,24 @@ dl.portalMessage dd {
     line-height:1.25em;
     margin:0pt;
     padding:0.55em 0.5em;
-    *padding:0.6em 0.5em 0.55em;}
+    _padding:0.6em 0.5em 0.55em;}
 .info{
-	background-color:#f2f6fa !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
-.info dt{ /*text de l'esquerra*/
-    color:#00589a !important; /*color text, n'hi ha quatre també*/
+	background-color:#f2f6fa !important; }
+.info dt{
+    color:#00589a !important; 
     background:url(info_message.gif) no-repeat bottom left #f9f9f9;}
 .warning{
-    background-color:#fdfbf3 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/}
-.warning dt, dl.warning dt{ /*text de l'esquerra*/
-    color:#333333 !important; /*color text, n'hi ha quatre també*/
+    background-color:#fdfbf3 !important; }
+.warning dt, dl.warning dt{ 
+    color:#333333 !important; 
     background:url(alert_message.gif) no-repeat bottom left #f9f9f9 !important;}
 dl.warning dd {
     background-color:#fdfbf3 !important;}
 .error{
-	padding-top:0em!important;
-	background-color:#fcf4f2 !important; /*color groc de fons de l'info, la idea és generar els quatre colors de les plantilles info, error, avís i fet(ok).*/	}
-.error dt{ /*text de l'esquerra*/
-    color:#c63103 !important; /*color text, n'hi ha quatre també*/
+	padding-top:0em !important;
+	background-color:#fcf4f2 !important;}
+.error dt{ 
+    color:#c63103 !important;
     background:url(error_message.gif) no-repeat bottom left #f9f9f9;}
 dl.error dd {
     background-color:#fcf4f2 !important;}
@@ -677,10 +707,10 @@ dl.error dd {
 
 
 
-/********************************** ANUL·LACIÓ D'ALGUNS ESTILS DE PLONE EN ENLLAÇOS ************************************/
+/* ANULLACIO DALGUNS ESTILS DE PLONE EN ENLLACOS */
 ul.configlets li a:visited {
     color:#0076CC;}
-ul.configlets li a:hover {/*afegit*/
+ul.configlets li a:hover {
     text-decoration:underline;}
 
 
@@ -690,32 +720,32 @@ ul.configlets li a:hover {/*afegit*/
 
 
 
-/********************************** CANVI DELS BOTONS DE PLONE (EN PROVES) ***************************************/
+/* CANVI DELS BOTONS DE PLONE */
 .context, .formControls .actionButtons .button, .documentEditable * .context {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
     border:1px solid #006DA3;
-    *border:0px;
     color:white;
     font-size:90%;
     padding:0px 3px 2px 3px;
+	*border:0px;
     *padding:2px 2px 2px 2px;}
 .standalone, .documentEditable * .standalone {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFonsClar.gif) repeat-x center center;
     border:1px solid #8dcde3;
-    *border:0px;
     color:#333;
     font-size:90%;
     padding:0px 3px 2px 3px;
+    *border:0px;
     *padding:2px 2px 2px 2px;}
-.destructive, .documentEditable * .destructive {/*forms.css (line 156)*/
+.destructive, .documentEditable * .destructive {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFonsAlert.gif) repeat-x center center;
     border:1px solid #8dcde3;
-    *border:0px;
     color:#333;
     font-size:90%;
     padding:0px 3px 2px 3px;
+	*border:0px;
     *padding:2px 2px 2px 2px;}
-#login-form input.context {/*forms.css (line 123)*/
+#login-form input.context {
 	background-position:center center;
 	margin-bottom:0em;
 	padding:0px 15px 2px 15px;
@@ -729,42 +759,41 @@ ul.configlets li a:hover {/*afegit*/
 
 
 
-/********************************** COMMUTA AMB VOLUM ÉS UNA PROVA (Només FireFox de moment) ***************************************/
+/* COMMUTA AMB VOLUM */
 .optionsToggle {
     background:transparent url(++resource++upc.genwebupctheme.images/custom/commuta.gif) no-repeat scroll left 2px;
-    *background:transparent url(commutaIE7.gif) no-repeat scroll 2px 3px;
-    _background:white url(commutaIE6.gif) no-repeat scroll 0px 0px;
     border:0px;
     color:#999999;
     font-size:85%;
     font-weight:bold !important;
     left:-4px;
-    _left:0px;
     padding:5px 4px 3px;
-    position:relative;}
-/* Victor: trec les boletes del mon de moment */
+    position:relative;
+	*background:transparent url(commutaIE7.gif) no-repeat scroll 2px 3px;
+	_background:white url(commutaIE6.gif) no-repeat scroll 0px 0px;
+    _left:0px;}
 #content a[href^="http:"], #content a.link-external {
     background: none;
     padding: 0px;
 }
-#portal-column-content {/*columns.css (line 19)*/
+#portal-column-content {
 	margin:0em;
 	padding:0em;}
 #portal-personaltools, .visualInline, #portal-personaltools-wrapper {
 	background-color:transparent;}
-abbr, acronym, .explain {/*base.css (line 114)*/
+abbr, acronym, .explain {
 	background-color:transparent;
 	border-bottom:1px dashed #0076CC;
 	color:#333;
 	cursor:help;}
-.documentContent dd a {/*public.css (line 98)*/
+.documentContent dd a {
 	border-bottom:0px solid #CCCCCC;
 	text-decoration:none;
 	color:#0077cc;}
-.documentContent dd a:hover {/*public.css (line 98)*/
+.documentContent dd a:hover {
 	text-decoration:underline;}
-/*historial*/
-dl.collapsible {/*authoring.css (line 294)*/
+
+dl.collapsible {
 	border:1px solid #e6e6e6 !important;
 	padding:0pt;}
 table.listing th {
@@ -780,58 +809,56 @@ table.listing th {
 .reviewHistory, .contentHistory {
 	color:#4d4d4d;
 }
-dl.collapsible dt.collapsibleHeader {/*authoring.css (line 299)*/
+dl.collapsible dt.collapsibleHeader {
 	margin:0pt 0pt 0em -1em;}
-dl.collapsedInlineCollapsible {/*authoring.css (line 349)*/
-	border:medium none !important;}
+dl.collapsedInlineCollapsible {
+	border:medium !important;}
 #portal-columns{
 	margin-bottom:20px;}
 #region-content, .documentContent{
 	padding:1em 0em !important;}
 .documentEditable {
-	margin:0em; padding:0px !important;/*reajusta pel 0em del regioncontent de dalt*/}
+	margin:0em; padding:0px !important;}
 #content{
 	margin: 0px;}
 #fieldset-default{
 	margin-bottom:10px;}
-.documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {/*public.css (line 73)*/
+.documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {
 	border-bottom:0px solid #CCCCCC;
 	text-decoration:none;
 	color:#0077cc;}
-.documentContent p a:hover {/*public.css (line 73)*/
+.documentContent p a:hover {
 	text-decoration:underline;
 	color:#0077cc;}
-.discreet{ /*igual que sotaTitol*/
+.discreet{ 
 	margin-bottom:25px;
 	margin-top:0px;
 	padding-top:0px;
 	color:#333;
 	font-size:100%;
 	font-weight:normal;}
-.documentContent ol {/*public.css (line 68)*/
+.documentContent ol {
 	margin:0.5em 0pt 0pt 1.75em;
 	*margin:0.5em 0pt 0pt 2.15em;}
-.documentContent ul {/*public.css (line 68)*/
+.documentContent ul {
 	list-style-image:none;
 	list-style-type:none;}
-/*solucionar la tercerca columna per CSS*/
 .columnaDreta #portlet200{
 	background:transparent url(++resource++upc.genwebupctheme.images/custom/bar150.gif) no-repeat scroll center top;
 	width:150px;}
 .columnaDreta #baix200 {
 	background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
 	width:150px;}
-.formHelp {/*forms.css (line 209)*/
+.formHelp {
 	color:#b8b8b8;
 	font-size:90%;
 	margin:0pt 0pt 0.2em;}
-.formHelp:hover {/*forms.css (line 214)*/
+.formHelp:hover {
 	color:#333;
 	cursor:default;}
 .validacio label{
 	color:#4d4d4d;}
-/*Cerca d'usuaris*/
-.card {/*public.css (line 638)*/
+.card {
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #e6e6e6;
 	float:left;
@@ -841,13 +868,13 @@ dl.collapsedInlineCollapsible {/*authoring.css (line 349)*/
 	width:110px;}
 .kssattr-atfieldname-title input {
 	color:#CC0000;
-	font-family:Arial,Helvetica,sans-serif!important;
+	font-family:Arial,Helvetica,sans-serif !important;
 	font-size:1.65em;
-	font-weight:bold!important;}
+	font-weight:bold !important;}
 .kssattr-atfieldname-description textarea {
 	color:#333333;
 	font-size:100%;}
-/*retocs al fieldset del plone*/
+
 .formPanel {
 	border: 1px solid #e6e6e6;}
 .formTab a:hover {
@@ -868,7 +895,7 @@ li.lastFormTab a {
 	border-right:1px solid #e6e6e6;}
 li.formTab a:hover {
 	background:#e6e6e6;}
-/*content-menu sense underlines*/
+
 .actionMenuHeader a:hover{
 	text-decoration:none;}
 .actionMenuHeader a:hover {
@@ -876,28 +903,28 @@ li.formTab a:hover {
 .actionMenuContent a:hover {
 	text-decoration:none;}
 .actionSeparator a {
-	border-top:1px dotted #999!important;}
-.kupu-tb {/*kupuplone.css (line 80)*/
+	border-top:1px dotted #999 !important;}
+.kupu-tb {
 	background-color:#e6e6e6;
 	border:1px solid #ccc;
 	margin:0pt;
 	padding-bottom:0px;
 	width:100%;}
-.kupu-tb {/*kupustyles.css (line 83)*/
+.kupu-tb {
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 	border-color:#ccc;
 	margin-bottom:0.4em;
 	padding:3px 3px 0px 3px;}
-.kupu-tb-buttons button {/*kupuplone.css (line 136)*/
+.kupu-tb-buttons button {
 	border:1px solid white;}
-span.kupu-tb-buttons button:hover {/*kupuplone.css (line 150)*/
+span.kupu-tb-buttons button:hover {
 	border:1px solid Gray;
 	cursor:pointer;}
-iframe.kupu-editor-iframe {/*kupuplone.css (line 110)*/
+iframe.kupu-editor-iframe {
 	border-color:#e6e6e6;
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
 	width:100.9%;}
-iframe.kupu-editor-iframe:active {/*kupuplone.css (line 110)*/
+iframe.kupu-editor-iframe:active {
 	border-color:#e6e6e6;
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsInput.gif) repeat-x scroll 0% 0%;
 	width:100.9%;}
@@ -949,17 +976,17 @@ ul.configlets li + input > li {
 	list-style-type:none;
 	margin:0px;
 	padding:0px;}
-table.listing, .stx table {/*public.css (line 668)*/
+table.listing, .stx table {
 	border-collapse:collapse;
 	font-size:100%;}
 
 table.listing tbody th {
 	font-weight:bold;
-	font-size:90%!important;}
+	font-size:90% !important;}
 table.listing {
 	font-size:85%;}
 
-.template-zmi_docs .contents {/*kupuplone.css (line 334)*/
+.template-zmi_docs .contents {
 	border:1px solid #e6e6e6;
 	background:white;
 	float:right;
@@ -967,7 +994,7 @@ table.listing {
 	margin:0pt 0pt 0.5em 0.5em;
 	padding:0px 0px 10px 10px;
 	width:30%;}
-.template-zmi_docs .topic-title {/*kupuplone.css (line 344)*/
+.template-zmi_docs .topic-title {
 	background-color:white !important;
 	border-bottom:0px solid #e6e6e6;
 	font-weight:normal;
@@ -976,29 +1003,30 @@ table.listing {
 	padding:5px 0px;
 	text-transform:lowercase;
 	font-weight: bold;}
-td.draggable:hover {/*especific5*/
+td.draggable:hover {
 	background: #E0CECE;}
 tr.dragging td{
 	background:#DFE3D3 !important;}
-ul.formTabs {/*authoring.css (line 429)*/
+ul.formTabs {
 	display:block;
 	list-style-type:none;
 	margin:0px 0px -26px 0px;
-	*margin:0px 0px -25px 0px;
-	_margin:0px 0px -25px 0px;
 	padding:0pt;
 	position:relative;
-	text-align:center;}
+	text-align:center;
+	*margin:0px 0px -25px 0px;
+	_margin:0px 0px -25px 0px;}
 .context + br + .context, button + br + button {margin-top:5px;}
-img.sortdirection {width:10px !important; height:7px !important;}
-.fieldRequired {forms.css (line 195)
+img.sortdirection {
+	width:10px !important; 
+	height:7px !important;}
+.fieldRequired {
 	background:transparent url(https://devel.upcnet.es/neutre3/required.gif) no-repeat scroll left center;
 	color:#999;
 	font-size:83%;
 	text-transform:lowercase;
 	font-variant:small-caps;
-	padding:0pt 0pt 1pt 8px;
-}
+	padding:0pt 0pt 1pt 8px;}
 
 
 
@@ -1008,11 +1036,11 @@ img.sortdirection {width:10px !important; height:7px !important;}
 
 
 
-/****************esdeveniments************/
+/* esdeveniments */
 dl dd {margin-left:20px;}
 #parent-fieldname-text {
 	margin: 15px 0px 25px 0px;}
-.eventDetails {/*public.css (line 798)*/
+.eventDetails {
 	clear:none;
 	float:right;
 	margin:0pt 0pt 10px 10px;
@@ -1021,7 +1049,7 @@ dl dd {margin-left:20px;}
 	width:inherit;}
 
 
-/****************photoalbum************/
+/* photoalbum */
 .photoAlbumEntry {
 background-image:url(pollaroid.gif);
 background-repeat:no-repeat;
@@ -1034,7 +1062,7 @@ width:143px;
 }
 
 
-/****************kupu************/
+/* kupu */
 div.kupu-drawer {
 background-color:#ffffff;
 border:1px solid #ccc;
@@ -1049,12 +1077,12 @@ background-color:transparent;
 .kupu-dialog-button {
     background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center;
     border:1px solid #006DA3;
-    *border:0px;
     color:white;
     font-size:90%;
     padding:0px 3px 2px 3px;
+	text-transform:lowercase;
+    *border:0px;
     *padding:2px 2px 2px 2px;
-text-transform:lowercase;
 }
 ul.kupu-tabs li {
 	background-color:#ededed;
@@ -1083,7 +1111,7 @@ text-decoration:underline !important;
 
 
 
-/****************mapa del lloc************/
+/* mapa del lloc */
 #portal-sitemap .navTreeLevel2 {
 border-left:0em;
 margin:0em;
@@ -1091,7 +1119,7 @@ padding-left:0em;
 }
 #portal-sitemap .navTreeLevel2 li{
 background:transparent url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat scroll left 3px;
-border-bottom:medium none;
+border-bottom:0px;
 font-size:0.9em;
 line-height:1.5em;
 list-style-type:none;
@@ -1116,7 +1144,7 @@ padding-top:2px;
 
 
 
-/****************search results************/
+/* search results */
 .searchResults{
 font-size:0.7em;
 }
@@ -1136,9 +1164,9 @@ font-weight:bold;
 color:#4d4d4d;
 }
 
-/****************vista resum************/
+/* vista resum */
 .tileHeadline {
-border:medium none;
+border:0px;
 font-family:Arial,Helvetica,sans-serif;
 font-size:1.3em;
 font-weight:bold;
@@ -1165,26 +1193,125 @@ background: transparent url(++resource++upc.genwebupctheme.images/custom/plus.gi
 padding: 0px 0px 0px 15px;
 margin-top:15px;
 }
-/****************vista estandard************/
+/* vista estandard */
 dl dt span.summary {
 background:transparent !important;
 padding:0 0 0 0px;
 }
+.template-folder_listing #content dl{
+	background:#F7F7F7 url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x scroll center bottom;
+	border-color:#CCCCCC #E6E6E6 #E6E6E6;
+	border-style:solid;
+	border-width:1px;
+	padding:10px 10px 0px 10px;
+	_padding:10px;}
+.template-folder_listing #content dl dt{
+	padding-left:10px;
+	background: transparent url(quadretGris.gif) no-repeat left 0px;
+	font-weight:normal;}
+.template-folder_listing #content dl dd{
+	margin: 5px 10px 15px 10px;
+	font-size:95%;}
+.template-folder_listing #content dl dt img{
+	float:right;
+	visibility:hidden;}
+.template-folder_listing #content dl#history{
+	background:transparent;
+	padding:0px;
+	margin:1em;}
+.template-folder_listing #content dl#history dd{
+	margin: 0px;}
+.template-folder_listing #content dl#history dt{
+	background:transparent url(treeCollapsed.gif) no-repeat scroll 6px 50%;
+	cursor:pointer;
+	display:inline;
+	float:none;
+	line-height:1em;
+	margin:0;
+	padding:0 0 0 22px;
+	position:static;}
+.template-folder_listing #content dl dt .documentByLine {
+	display:block;}
 
-/****************ajusta columnes************/
+
+
+/* ajusta columnes */
 [style="float: left; margin-right: 1em; width: 29%;"]{
 	margin-right:3.5em !important;
 }
 
-/****************link-feed afegeix icona i tal...************/
+/* linkfeed afegeix icona i tal */
 .link-feed{
 background: transparent url(rss.gif) no-repeat left 1px;
 padding-left:14px;
 font-size:90%;
 }
+/* modificacio menu vistes amb imatges */
+#plone-contentmenu-display #folder_summary_view{
+	background-image: url(vista_res.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 1px;
+	padding-left:25px;
+}
+#plone-contentmenu-display #folder_tabular_view{
+	background-image: url(vista_tab.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 1px;
+	padding-left:25px;
+}
+#plone-contentmenu-display #atct_album_view{
+	background-image: url(vista_img.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 1px;
+	padding-left:25px;
+}
+#plone-contentmenu-display #folder_listing{
+	background-image: url(vista_est.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 1px;
+	padding-left:25px;
+}
+#plone-contentmenu-display #homepage{
+	background-image: url(vista_ini.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 1px;
+	padding-left:25px;
+}
+/* modificacio menu estat amb imatges */
+#plone-contentmenu-workflow #workflow-transition-reject{
+	background-image: url(bullet_red.png);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+#plone-contentmenu-workflow #workflow-transition-retract{
+	background-image: url(bullet_blue.png);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+#plone-contentmenu-workflow #workflow-transition-submit{
+	background-image: url(bullet_orange.png);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+#plone-contentmenu-workflow #workflow-transition-publish{
+	background-image: url(bullet_green.png);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+.template- h1.documentFirstHeading img{
+	width: 23px !important;
+	height: 21px !important;
+}
+.formHelp img {
+	width: 16px !important;
+	height: 16px !important;
+}
 
-
-/****************per si de cas hi ha interferencies************/
+/** per si de cas hi ha interferencies */
 a{color:#0077cc;text-decoration:none;}
 a:active{color:#0077cc;text-decoration:none;}
 a:link{color:#0077cc;text-decoration:none;}

@@ -1,4 +1,4 @@
-/*AJUSTA LES DIFERÈNCIES EN ELS BOTONS DE FF a IE*/
+/*AJUSTA LES DIFERiNCIES EN ELS BOTONS DE FF a IE*/
 .titular1{
 	background: url(../img/custom/fletxaD.gif) no-repeat 0px 9px;
 }
@@ -22,7 +22,7 @@
 	 padding: 1px 0px 1px 18px;}
 .b_neutre{
 	 padding: 1px 0px 1px 18px;}
-/*RESOL LA TAULA PER IE, sense OUTLINES (de fet aquí és el FF qui no ho fa bé*/
+/*RESOL LA TAULA PER IE, sense OUTLINES (de fet aqui es el FF qui no ho fa be*/
 .taulaRegistres .cap td{
 background:url(../img/borderTopDiagonal.gif) repeat-x;
 	border: 2px dotted #cccccc;
