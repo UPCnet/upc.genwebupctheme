@@ -12,7 +12,7 @@ class Peu(ViewletBase):
         path_to_banners = urltool.getPortalPath() + '/' + 'logospeu'        
         portal_catalog = getToolByName(self, 'portal_catalog')
         banners = portal_catalog.searchResults(sort_on = 'getObjPositionInParent',
-                                               portal_type = 'Logos Footer',
+                                               portal_type = 'Logos_Footer',
                                                path = path_to_banners,
                                                review_state='published',
                                                sort_limit=5)[:5]
