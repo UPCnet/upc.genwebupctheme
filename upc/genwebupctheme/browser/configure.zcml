@@ -66,6 +66,13 @@
          template="peu.pt"
          permission="zope2.View"
          />
+         
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         permission="zope2.View"
+         />
 
 <!-- Neutre3 -->
      <browser:viewlet

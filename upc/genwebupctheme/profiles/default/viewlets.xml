@@ -29,6 +29,10 @@
     <viewlet name="plone.abovecontenttitle.documentactions" />
   </order>
 
+  <order manager="plone.belowcontent" skinname="Tema genwebUPC Neutre3">
+    <viewlet name="upc.genweb.darreramodificacio" />
+  </order>
+  
   <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre3">
     <viewlet name="plone.personal_bar" />
     <viewlet name="plone.app.i18n.locales.languageselector" />

@@ -12,6 +12,11 @@ class PathBar(PathBarViewlet):
     
     render = ViewPageTemplateFile('path_bar.pt')
 
+class DarreraModificacio(ViewletBase):
+    
+    render = ViewPageTemplateFile('darreramodificacio.pt')
+
+
 # Sample code for a basic viewlet (In order to use it, you'll have to):
 # - Un-comment the following useable piece of code (viewlet python class).
 # - Rename the vielwet template file ('browser/viewlet.pt') and edit the
