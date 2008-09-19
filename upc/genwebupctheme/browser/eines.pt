@@ -100,28 +100,34 @@
         </span>
     </b>
     <span>
+    <span tal:condition="python: user.has_role(['Manager','Editor'])">
     <a  
     i18n:domain="upc.genwebupc"
     i18n:translate="genweb-accesarrel" 
     tal:attributes="href string:${view/portal_url}/folder_contents">
     Carpeta arrel</a>
     |
+    </span>
     <a 
     i18n:translate="Preferences"
     tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">
     Preferències</a>
      |
+    <span tal:condition="python: user.has_role(['Manager','Editor'])">
     <a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC/formacio" target="_blank"
-    i18n:domain="upc.genwebupc"
-    i18n:translate="genweb-ajuda">
-    Ajuda</a>
+       i18n:domain="upc.genwebupc"
+       i18n:translate="genweb-ajuda">
+       Ajuda
+     </a>
      |
+    </span>
+    <span tal:condition="python: user.has_role(['Manager'])">
     <a 
     i18n:translate="Site Setup" 
     tal:attributes="href string:${view/portal_url}/plone_control_panel">
     Configuració del lloc</a>
      |
-    
+    </span>
     <a  
     i18n:translate="Undo" 
     tal:attributes="href string:${view/portal_url}/undo_form">
