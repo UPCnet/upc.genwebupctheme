@@ -42,6 +42,20 @@
         permission="zope2.View"
         />
 
+    <browser:page
+        for="*"
+        name="box.Actualitat_petit"
+        class=".boxletsviews.actualitat_petit"
+        permission="zope2.View"
+        />  
+
+    <browser:page
+        for="*"
+        name="box.Noticies_petit"
+        class=".boxletsviews.noticies_petit"
+        permission="zope2.View"
+        />  
+        
 <!-- Columna dreta (3) -->
         
      <browser:page
