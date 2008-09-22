@@ -17,6 +17,9 @@ from Products.Five.browser import BrowserView
 
 from zope.component import getMultiAdapter, getUtility
 from upc.genwebupc.browser.interfaces import IgenWebUtility
+from Products.ATContentTypes.interface.folder import IATFolder
+from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
+
 
 PLMF = MessageFactory('plonelocales')
 
@@ -46,3 +49,12 @@ class utilitats(BrowserView):
         """
         gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gwconfig
+    
+    def isFolder(self):
+        """ Funcio que retorna si es carpeta per tal de mostrar o no el last modified
+        """
+        if  IATFolder.providedBy(self.context) or IPloneSiteRoot.providedBy(self.context):
+            return True
+
+
+

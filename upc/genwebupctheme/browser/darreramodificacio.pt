@@ -1,4 +1,4 @@
-<div> 
+<div tal:define="utils context/@@upc.genweb.utils" tal:condition="python: not utils.isFolder()"> 
 <div class="fletxatop">
     <a href="#">
         <img alt="Top of page" title="Top of page" src="++resource++upc.genwebupctheme.images/feltxa16blava.png"/>
