@@ -1,13 +1,51 @@
+  <tal:capsalera define="utils context/@@upc.genweb.utils">
     <div class="logo">
-        <a href="http://www.upc.edu" target="_blank"> <!--he posat el link a .edu enlloc de .es-->
-            <img longdesc="Web UPC. Universitat PolitÃ¨cnica de Catalunya" title="Web UPC" alt="Web UPC" src="++resource++upc.genwebupctheme.images/custom/LogoUPC.gif"/>
+        
+        <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya"  src="++resource++upc.genwebupctheme.images/custom/LogoUPC.gif"/>
+        <map name="logoUPC" id="logoUPC"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya" /></map>
+
+
+        <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
+            <!-- titol en catala -->
+            <img
+                tal:condition="python:utils.pref_lang()=='ca'"
+                tal:attributes="title python: utils.getGWConfig().firmaunitat_ca" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
+
+            <!-- titol en castella -->
+            <img
+                tal:condition="python:utils.pref_lang()=='es'"
+                tal:attributes="title python: utils.getGWConfig().firmaunitat_es" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
+
+            <!-- titol en angles -->
+            <img
+                tal:condition="python:utils.pref_lang()=='en'"
+                tal:attributes="title python: utils.getGWConfig().firmaunitat_en" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
+
         </a>
-        <a href="http://www.upc.edu/fme" target="_blank">
-            <img longdesc="Web FME. Facultat de MatemÃ tica i EstadÃ­stica" title="Web FME"  alt="Web FME" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
-        </a><!--afegit-->
+
     </div>
+
+
     <div class="titolWeb">
         <a href="" tal:attributes="href string:${view/portal_url}/">
-            <img longdesc="TÃ­tol de la Web" alt="web" src="++resource++upc.genwebupctheme.images/custom/titolWeb1.gif"/>
+<!-- titol en catala -->
+            <img longdesc="Títol de la Web"               
+               tal:condition="python:utils.pref_lang()=='ca'"
+               tal:attributes="title python: utils.getGWConfig().titolespai_ca"
+               src="++resource++upc.genwebupctheme.images/custom/titolWeb_ca.gif"/>
+
+<!-- titol en castella -->
+            <img longdesc="Títol de la Web"               
+               tal:condition="python:utils.pref_lang()=='es'"
+               tal:attributes="title python: utils.getGWConfig().titolespai_es"
+               src="++resource++upc.genwebupctheme.images/custom/titolWeb_es.gif"/>
+
+<!-- titol en angles -->
+            <img longdesc="Títol de la Web"               
+               tal:condition="python:utils.pref_lang()=='en'"
+               tal:attributes="title python: utils.getGWConfig().titolespai_en"
+               src="++resource++upc.genwebupctheme.images/custom/titolWeb_en.gif"/>
         </a>
     </div>
+
+  </tal:capsalera>
