@@ -33,6 +33,12 @@
                             i18n:translate="box_more_news_link">
                             More news&hellip;
                         </a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a href=""
+                           tal:attributes="href view/all_news_link"
+                           i18n:translate="genweb_sindicat">
+                           <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> Sindica't
+                        </a>
 			        </div>
 			    </div> 
 		    </td>
@@ -51,10 +57,7 @@
 				          </a>
 				      </li>
 				     </ul>
-				     <div id="portletPlus">  
-				         <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
-				         <a href="#"> més notícies </a> 
-				     </div>
+
 				 </div> 
 			</td>
 		</tr> 		

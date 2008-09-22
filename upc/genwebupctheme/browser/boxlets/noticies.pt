@@ -31,8 +31,9 @@
         </a>
        &nbsp;&nbsp;&nbsp;
         <a href=""
-           tal:attributes="href view/all_news_link">
-          <img src="rss.gif" alet="Sindicaci&oacute; RSS" /> Sindica't
+           tal:attributes="href view/all_news_link"
+           i18n:translate="genweb_sindicat">
+          <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> Sindica't
         </a>
         </div>
     </div> 

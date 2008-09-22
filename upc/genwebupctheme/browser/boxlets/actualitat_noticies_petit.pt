@@ -42,7 +42,13 @@
 	        
 	        <div id="portletPlus">  
 	            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
-	            <a href="#"> més notícies </a> 
+	            <a href="#"> més notícies </a>
+	            &nbsp;&nbsp;&nbsp;
+	            <a href=""
+	               tal:attributes="href view/all_news_link"
+	               i18n:translate="genweb_sindicat">
+	               <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> Sindica't
+	            </a> 
 	        </div>
 	        
 	    </div> 

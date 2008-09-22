@@ -760,3 +760,51 @@ font-size:90%;
 .template-plonepopoll_view form.group fieldset{margin-top:0px !important;}
 .template-plonepopoll_view form.group fieldset ul li{font-weight:bold; color:#666666;}
 .template-plonepopoll_view form.group fieldset ul li div{padding:5px; border:1px dotted #e6e6e6; font-weight:normal !important;margin-bottom:10px;}
+
+.collage-header {background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom !important;}
+.collage-header span {
+color:#0077cc !important;
+margin-right:15px !important;}
+
+.expandable-section .expandable-label {
+float:left;
+margin-top:15px;
+line-height:14px;
+position:absolute;
+}
+.copy-object-icon, .paste-object-icon, .split-column-icon {
+background:transparent url(https://devel.upcnet.es/neutre3/++resource++collage-resources/icon-split.gif) no-repeat scroll left top;
+float:left;
+height:14px;
+padding-right:3px;
+width:14px;
+margin-top:15px;
+}
+.copy-object, .paste-object, .column-split {
+margin-top:15px;
+}
+expandable-section .expandable-label .expandable-icon {
+background:transparent url(https://devel.upcnet.es/neutre3/++resource++collage-resources/icon-plusminus.gif) no-repeat scroll left top;
+float:left;
+height:14px;
+margin-top:15px;
+width:14px;
+}
+.expandable-section{margin-left:0px !important;padding-left:0px !important;}
+
+#collage.edit .one-column .block_1 {
+width:99% !important;
+}
+#collage.edit .column-block {
+margin:2px !important;
+}
+#collage.edit .collage-item {
+margin:2px !important;
+}
+#collage .collage-row .block_1 div.collage-item {
+margin-right:0.2em !important;
+}
+.expandable-content .discreet{border-bottom:2px dotted #e6e6e6 !important; padding:3px !important; margin-bottom:5px !important;}
+form.collage-existing-items div label {font-size:100% !important;}
+form.collage-existing-items div {margin-bottom:5px !important;}
+form.collage-existing-items div select {font-size:120% !important;}
