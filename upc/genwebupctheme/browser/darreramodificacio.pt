@@ -1,3 +1,4 @@
+<div> 
 <div class="fletxatop">
     <a href="#">
         <img alt="Top of page" title="Top of page" src="++resource++upc.genwebupctheme.images/feltxa16blava.png"/>
@@ -24,4 +25,5 @@
             tal:omit-tag=""
             id="calendar-year">year</span>
     </span>
+</div>
 </div>
