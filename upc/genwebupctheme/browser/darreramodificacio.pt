@@ -1,4 +1,10 @@
-<div class="ultimamodificacio" tal:condition="python:here.getProperty('eshome')!='Si'">
+<div class="fletxatop">
+    <a href="#">
+        <img alt="Top of page" title="Top of page" src="++resource++upc.genwebupctheme.images/feltxa16blava.png"/>
+    </a>
+</div>
+
+<div class="ultimamodificacio">
                                 
     <tal:mod i18n:translate="box_last_modified">
         last modified
