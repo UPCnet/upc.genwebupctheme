@@ -55,7 +55,7 @@
         class=".boxletsviews.noticies_petit"
         permission="zope2.View"
         />  
-        
+
 <!-- Columna dreta (3) -->
         
      <browser:page
@@ -73,7 +73,7 @@
 
 	<browser:page
 		for="*"
-		name="box.Enquesta"
+		name="box.Enquesta_mini"
 		class=".boxletsviews.enquesta"
 		permission="zope2.View"
 		/>
