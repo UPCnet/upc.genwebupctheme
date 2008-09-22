@@ -29,6 +29,11 @@
            i18n:translate="box_more_news_link">
           More news&hellip;
         </a>
+       &nbsp;&nbsp;&nbsp;
+        <a href=""
+           tal:attributes="href view/all_news_link">
+          <img src="rss.gif" alet="Sindicaci&oacute; RSS" /> Sindica't
+        </a>
         </div>
     </div> 
     </div>

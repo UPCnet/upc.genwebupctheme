@@ -243,12 +243,12 @@ color:#CC0000; /*especific3*/
 border-collapse:collapse;
 text-align:right;}
 
+
 table, tr, th, td, tbody, tfoot {
 border-collapse:collapse;
 padding:3px;
 text-align:left;   
 }
-
 .TDRegulaCalendari{
 	padding-bottom:12px;
 	vertical-align:bottom;
@@ -256,9 +256,9 @@ text-align:left;
 
 
 #calendari table, #calendariVertical table{
-border-left: 1px solid #E8E2DF; /*especific6*/;
-border-right: 1px solid #E8E2DF; /*especific6*/;
-border-bottom: 1px solid #E8E2DF; /*especific6*/;
+border-left: 1px solid #E8E2DF; /*especific6*/
+border-right: 1px solid #E8E2DF; /*especific6*/
+border-bottom: 1px solid #E8E2DF; /*especific6*/
 background-color:#FFFFFF;
 width:145px;
 }
@@ -270,7 +270,7 @@ font-size:1.1em;
 
 .calendariArrodonit{
 margin: 5px 0px 0px 0px;
-background-color: #E8E2DF; /*especific6*/;
+background-color: #E8E2DF; /*especific6*/
 font-size:0.05em;
 max-width:144px;
 padding:0px;
@@ -288,7 +288,7 @@ max-width:144px;
 }
 
 #daltCalendari{
-background-color:#E8E2DF; /*especific6*/;
+background-color:#E8E2DF; /*especific6*/
 height:5px;
 }
 
@@ -311,7 +311,7 @@ background:#DFE3D3 url(fonsCellaCalendari.gif) right bottom; /*especific4*/
 .esdeveniment,
 .event{
 background:#E0CECE url(fonsCellaCalendari.gif) right bottom; /*especific5*/
-	*background:#E0CECE url(fonsCellaCalendari.gif) right top; /*especÃ­fic5*/
+	*background:#E0CECE url(fonsCellaCalendari.gif) right top; /*especific5*/
 }
 
 .ajustament #portletPlus{
@@ -386,8 +386,11 @@ padding:0em;
 }
 #portlet-prefs .portletHeader {
 background:none;
+text-align:right;
+font-size:90%;
 padding: 0pt;
 margin: 0pt;
+visibility:hidden;
 }
 ul.configlets, ul#portal-sitemap {/*authoring.css (line 199)*/
 list-style-image:none;
@@ -397,7 +400,7 @@ margin:1em 0pt;
 font-weight:normal;
 }
 ul.configlets li, ul#portal-sitemap li{
-font-familiy: Verdana, Arial, Helvetica, sans-serif;
+font-family: Verdana, Arial, Helvetica, sans-serif;
 background:transparent url(++resource++upc.genwebupctheme.images/fletxaGo.gif) no-repeat scroll left top;
 border-bottom:1px dashed #333333;
 line-height:2em;
@@ -416,11 +419,11 @@ float:right; margin-top:2px;
 margin-left:0px;
 border-top:5px solid #E6E6E6;
 color:#4D4D4D;
-
 font-weight:bold;
-margin-top:25px;
 padding-bottom:10px;
-padding-top:10px;
+}
+#portal-column-one .portletNavigationTree .portletItem{
+border-top:0px;
 }
 .portletItem strong{
 font-size:14px;
@@ -441,7 +444,7 @@ padding:1px 5px;
 font-size:1.1em;}
 .navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {/*navtree.css (line 52)*/
 background-color:transparent !important;
-border: 0x !important;
+border: 0px !important;
 color:#0077cc !important;
 }
 .navTreeItem a, dd.portletItem .navTreeItem a {/*navtree.css (line 44)*/
@@ -459,7 +462,7 @@ color:#0077cc;
 .navTreeCurrentItem {/*navtree.css (line 58)*/
 background-color:transparent !important;
 border:0px solid white !important;
-color:#white;
+color:white;
 }
 .navTreeItem a:hover img, .navTreeItem a img:hover{text-decoration:none;}
 
@@ -497,13 +500,19 @@ margin-left:227px;
     color:#FFFFFF;
     font-size:1.75em;
     font-weight:bold;
-    padding:15px 0px 0px 3px;}
+    padding:15px 0px 0px 3px;
+    margin-top:18px !important;
+    *margin-top:15px;}
+html*.titolSeccio{
+    margin-top:15px !important;
+}
 .titolSeccio .textetSeccioneta {
     line-height: 1.1em;}
 .flotaTapa {
     background-color:#FFFFFF;
     height: 8px;
-    margin-top:-4px;}
+    margin-top:-4px;
+    margin-bottom:-4px;}
 ul.navTree {
     margin: 5px 0px 0px 0px;
     position: relative;}
@@ -566,3 +575,188 @@ dd.portletItem .navTreeItem a:hover {
 	font-size:85%;
 	margin:0pt;
 	padding:0pt 0pt 0pt 1em;}
+
+
+
+
+/**************************************************************************** PRODUCTES **********************************************************************************/
+.field {
+clear:both;
+left:0;
+margin:0px !important;
+top:0;
+font-size:90%;
+}
+#question,#subject {
+font-size:95%;
+}
+.comment{
+	background:transparent none repeat scroll 0 0;
+	border:1px solid #e0cece;/*espe5*/
+	margin-bottom:1em;
+	padding:0.5em;
+}
+.commentBody {
+margin:0px 0px 1em 0px;
+font-size:95%;
+color:#4d4d4d;
+}
+.comment h3{
+border-bottom:1px dashed #dfe3d3; /*espe4*/
+font-weight:bold;
+color:#4d4d4d;
+margin-top:0px;
+}
+.comment h3 a {
+background-image:url(comment.gif);
+background-repeat:no-repeat;
+height:auto;
+line-height:1.6em;
+margin-bottom:1px;
+margin-left:-1px;
+min-height:1.6em;
+padding-left:18px;
+}
+
+.boardCommentDetails {
+background-color:transparent !important;
+border-color:#8CACBB !important;
+border-style:none !important;
+border-width:1px !important;
+font-size:85% !important;
+color:#999999 !important;
+padding:0.5em 0em !important;
+}
+.commentPortrait .portraitPhoto {
+height:80px !important;
+width:60px !important;
+padding:3px !important;
+border:1px solid #E6E6E6 !important;
+margin-top:-15px;
+background:white;
+}
+.commentPortrait {
+margin:0px !important;
+}
+.boardComment {
+border:0px !important;
+margin:2em 0px !important;
+position:relative !important;
+}
+.boardCommentBody {
+padding:0.5em 1em;
+border:1px solid #e6e6e6;
+border-bottom:0px;
+}
+.boardCommentHeaderTitleBlock{
+padding-left:0px !important;
+margin-left:0px !important;
+}
+.boardCommentReplyActions {
+padding:1em;
+right:1em;
+text-align:right;
+border:1px solid #e6e6e6;
+border-top:0px;
+background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+}
+.boardConversation .visualClear {
+margin-bottom:0px !important;
+}
+.link-parent {
+padding-left: 16px !important;
+background: transparent url(arrowUp.gif) no-repeat left 3px  !important;
+}
+.boardCommentReplyActions,.boardCommentActions{
+padding-top:25px !important;
+}
+.template-board_view .listing .discreet, .template-forum_view .listing .discreet{
+display:inline;
+}
+.forumTitleCell{
+font-weight: bold;
+}
+.poweredBy{
+visibility:hidden;
+}
+.template-board_view .documentDescription, .template-forum_view .documentDescription{
+margin-top:20px;
+}
+.template-board_view .visualClear, .template-forum_view .visualClear{
+margin-top:20px;
+}
+.template-board_view .listing, .template-forum_view .listing {
+margin:0px 0px 0px 0px;
+font-size:1em;
+}
+
+.discussion {
+padding-top:1em;
+border-top:1px dashed #e6e6e6;
+margin-top:1em;
+}
+table.listing .listingCheckbox {
+text-align:left !important;
+}
+.template-board_view .listing th {
+background:#dfe3d3 none repeat scroll 0 50% !important; /*espe*/
+font-size:1em;
+font-weight:bold;
+color:#4d4d4d;
+}
+.template-forum_view .listing th {
+background:#e0cece none repeat scroll 0 50% !important; /*espe5*/
+font-size:1em;
+font-weight:bold;
+color:#4d4d4d;
+}
+.template-board_view .even {
+/*background-color: #e8e2df;*/
+}
+.template-forum_view .documentFirstHeading img,.template-board_view .documentFirstHeading img {
+	visibility:hidden;
+	width:0px !important;
+}
+.template-forum_view .documentFirstHeading, .template-board_view .documentFirstHeading {
+	margin-left:-8px !important;
+}	
+
+.template-board_view #content ul.visualNoMarker {
+clear:right;
+padding: 5px 5px 1px 5px;
+border:1px solid #e6e6e6;
+background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom !important;
+}
+
+#content a[href^="mailto:"], #content a.link-mailto {
+background:transparent url(https://devel.upcnet.es/neutre3/mail_icon.gif) no-repeat scroll 0 0;
+padding:1px 0 1px 16px;
+}
+
+#parent-fieldname-eventUrl{
+	padding-left:15px !important;
+	background: transparent url(arrowRight.gif) no-repeat 0px 2px !important;
+}
+.template-event_view .vevent .summary {
+	color:#cc0000 !important;
+	background:none !important;
+	padding:0px !important;}
+
+.newsImage {
+border:1px solid #e6e6e6;
+padding:5px;
+background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom !important;
+}
+.newsImageContainer {
+float:right;
+margin:0 0 0.5em 1em;
+width:auto;
+}
+.kssattr-atfieldname-imageCaption {
+text-align:center;
+font-size:90%;
+}
+.template-plonepopoll_view form.group .documentDescription{padding-top:25px; font-size:1.2em;}
+.template-plonepopoll_view form.group fieldset{margin-top:0px !important;}
+.template-plonepopoll_view form.group fieldset ul li{font-weight:bold; color:#666666;}
+.template-plonepopoll_view form.group fieldset ul li div{padding:5px; border:1px dotted #e6e6e6; font-weight:normal !important;margin-bottom:10px;}

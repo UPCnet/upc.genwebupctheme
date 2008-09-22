@@ -26,10 +26,10 @@ li{ list-style-position:outside; list-style: none; margin-bottom: 0.5em;}
 
 /********** FORM **********/
 form{ margin: 0px; }
-input{
-	font-size: 0.8em;
+{
+	font-size: 0.9em;
 	padding: 0.1em 0.5em 0.05em 0.5em;
-	border: 1px solid #a29386; /* Específic 1 */
+	border: 1px solid #a29386; 
 }
 .fletxa{ border: 0px; margin: 0.25em 0px 0px 0px; padding: 0.1em 0em 0.05em 0em; }
 /******************************/
@@ -38,21 +38,21 @@ input{
 /********** alineacio **************/
 .align_left{ 
 float:left;
-padding:0px 20px 10px 0px;
+padding:5px 20px 10px 0px;
 background:#FFFFFF;
 position:relative; 
 }
 /*la imatge definida dessota*/
-.align_right{ float:right;padding:0px 0px 10px 20px;background:#FFFFFF;position:relative; }
+.align_right{ float:right;padding:5px 0px 10px 20px;background:#FFFFFF;position:relative; }
 .imgEsquerra{
 	float: left;
-	margin: 10px 10px 10px 1px;
+	margin: 5px 10px 10px 1px;
 	padding: 3px;
 	border:1px solid #cccccc;
 }
 .imgDreta{ 
 	float: right;
-	margin: 10px 1px 10px 10px;
+	margin: 5px 1px 10px 10px;
 	padding: 3px;
 	border:1px solid #cccccc;	
 }
@@ -71,16 +71,16 @@ position:relative;
 }
 /*REVISAT titular1*/
 .titular1{
-	font-size: 1.2em;
-	margin: 1em 0em 0.5em -1.1em;
-	padding:0.25em 0.2em 0.2em 14px;
+	margin: 1em 0em 0.5em -1px;
+	padding:0.35em 0.2em 0.2em 0px;
 	background: url(../img/custom/fletxaD.gif) no-repeat 0px 7px;
+	*background: url(../img/custom/fletxaD.gif) no-repeat 0px 9px;
 	font-weight: bold;
 	color: #cc0000; /* Especific 3 */
 	border-top: 2px dotted #DFE3D3; /*especific4*/
 	/*afegit en proves, tots els titulars en Arial*/
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:1.3em;
+	font-size:1.35em;
 }
 .titular2{
 	font-size: 1.1em;
@@ -105,7 +105,7 @@ position:relative;
 /***********************************/
 
 /********** COLUMNES **************/
-.columnes{ margin: 0em 0px 0px -1.7em; border-collapse: collapse; }
+.columnes{ margin: 0em 0px 0px -1.7em; border-collapse: collapse; line-height:1.5em; }
 .columnes td{ padding: 0em 1em 0em 1.7em; vertical-align: top; width:50%;}
 /***********************************/
 
@@ -396,7 +396,7 @@ font-family:Arial, Helvetica, sans-serif;
 /*s'usa arial i helvetica i l'interlineat de 1.25 a 1.2*/
 }
 .destacatQuadres {
-	background-image:url(../img/fonsDestacat.gif);
+	background-image:url(fonsDestacat.gif);
 	background-color:#beb4ab; /*color4*/
 	margin: 20px;
 	padding: 4px;	
@@ -407,3 +407,32 @@ font-family:Arial, Helvetica, sans-serif;
 	padding: 2px 4px 2px 4px ;
 	font-size: 0.95em;
 }
+
+
+/*solucions IE*/
+.taulaRegistres .cap td{
+background:url(../img/borderTopDiagonal.gif) repeat-x;
+	*border: 2px dotted #cccccc;
+	*border-top:none;
+	*padding-top:6px;
+	*background-color: #ffffff;
+	*color: #6b5c4f; 
+	*font-weight: bold;
+}
+.taulaRegistres td {
+	*background-color: #f1efee;
+	*border:2px solid #ffffff;
+	*padding: 4px;
+	*text-align:center;
+}
+.taulaRegistres table{
+	*border: 1px solid #cccccc;	
+	*border-bottom:3px solid #cccccc;	
+	*border-collapse:collapse;	
+}
+.calendari table{
+	*border: 1px solid #cccccc;	
+	*border-bottom:3px solid #cccccc;	
+	*border-collapse:collapse;	
+}
+

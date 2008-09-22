@@ -33,6 +33,7 @@
         </div>
     </form>
 
+    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Discreta'">
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
@@ -42,6 +43,7 @@
        i18n:translate="identificat"> 
        Identifica't
     </a>
+    </tal:identificacio>
     
     <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
     <a href=""

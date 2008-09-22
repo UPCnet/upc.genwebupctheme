@@ -98,7 +98,7 @@
                                 External Link
                             </a>
                         </span>
-
+<!--
                         <span class="documentByLine">
 
                             <span tal:condition="python: item_type == 'Event'"
@@ -154,13 +154,16 @@
                                 </metal:description>
                             </tal:byline>
                         </span>
+-->
 
                     </dt>
 
-                    <dd>
+                    <dd >
+<!--
                         <span tal:omit-tag="" tal:condition="not:item_description"> 
                             &nbsp; 
-                        </span> 
+                        </span>
+-->
                         <span class="description" tal:content="item_description">
                             description 
                         </span> 

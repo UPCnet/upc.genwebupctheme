@@ -1,5 +1,6 @@
 <tal:block i18n:domain="plone">
 
+<tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
 <div class="validacio"
      tal:condition="view/show"> 
 
@@ -62,6 +63,7 @@
     </div>
     
 </div>
+</tal:identificacio>
 
 <!--  PERSONAL BAR  -->
 <div id="portal-personaltools-wrapper"
