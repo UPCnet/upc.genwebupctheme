@@ -1,7 +1,7 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 
-from plone.app.layout.viewlets.content import DocumentActionsViewlet 
+from plone.app.layout.viewlets.content import DocumentActionsViewlet, DocumentBylineViewlet 
 from plone.app.layout.viewlets.common import PathBarViewlet
 
 class DocumentActions(DocumentActionsViewlet):
@@ -15,6 +15,10 @@ class PathBar(PathBarViewlet):
 class DarreraModificacio(ViewletBase):
     
     render = ViewPageTemplateFile('darreramodificacio.pt')
+
+class DocumentByLine(DocumentBylineViewlet):
+    
+    render = ViewPageTemplateFile('documentbyline.pt')
 
 
 # Sample code for a basic viewlet (In order to use it, you'll have to):

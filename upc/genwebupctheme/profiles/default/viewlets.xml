@@ -30,6 +30,8 @@
   </order>
 
   <order manager="plone.belowcontent" skinname="Tema genwebUPC Neutre3">
+    <viewlet name="plone.nextprevious" />
+    <viewlet name="plone.comments" />
     <viewlet name="upc.genweb.darreramodificacio" />
   </order>
   

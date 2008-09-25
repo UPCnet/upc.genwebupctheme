@@ -1,6 +1,6 @@
 <div tal:define="utils context/@@upc.genweb.utils" tal:condition="python: not utils.isFolder()"> 
 <div class="fletxatop">
-    <a href="#">
+    <a tal:attributes="href python:context.absolute_url()+'/#'">
         <img alt="Top of page" title="Top of page" src="++resource++upc.genwebupctheme.images/feltxa16blava.png"/>
     </a>
 </div>
@@ -17,13 +17,13 @@
             tal:content="python: utranslate(translation_service.month_msgid(month), default=month_english)"
             tal:omit-tag=""
             id="calendar-month-month">monthname</span>
-            
         <span i18n:name="year"
             tal:define="yearmonth here/ModificationDate; year python:yearmonth[0]+yearmonth[1]+yearmonth[2]+yearmonth[3];"
-            tal:content="string: $year"
+                tal:content="string: $year"
             tal:attributes="id string:calendar-year-$year;"
             tal:omit-tag=""
             id="calendar-year">year</span>
     </span>
 </div>
 </div>
+        
