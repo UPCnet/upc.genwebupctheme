@@ -22,7 +22,15 @@
 		        </li>
 	        </ul>
 	        
-	        <div class="titolPortlet separadorPortlet"> Notícies </div>
+	        <div class="titolPortlet separadorPortlet">
+
+	           <div class="icoRSS">
+          	          <a href=""
+             	          tal:define="utils context/@@upc.genweb.utils"
+             	          tal:attributes="href string:${utils/portal_url}news/aggregator/RSS">RSS <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+         	           </a>
+		      	  </div> Notícies
+	        </div>
 	        
 	        <ul>
 		        <li tal:repeat="obj view/published_news_items">
@@ -42,13 +50,11 @@
 	        
 	        <div id="portletPlus">  
 	            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
-	            <a href="#"> més notícies </a>
-	            &nbsp;&nbsp;&nbsp;
 	            <a href=""
 	               tal:attributes="href view/all_news_link"
-	               i18n:translate="genweb_sindicat">
-	               <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> Sindica't
-	            </a> 
+	               i18n:translate="box_more_news_link">
+	               More news&hellip;
+	            </a>
 	        </div>
 	        
 	    </div> 

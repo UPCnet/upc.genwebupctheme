@@ -132,7 +132,7 @@ class agendaCalendariPetit(agenda):
 
 class noticies(BrowserView, news_render):
     _template = ViewPageTemplateFile('noticies.pt')
-    
+
     def __call__(self):
         return xhtml_compress(self._template())
     

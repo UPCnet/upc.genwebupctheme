@@ -94,10 +94,11 @@ line-height:1em;
 border-top: 1px solid #808080;
 background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
 background-position: 0px 3px;
-padding: 11px 11px 2px 11px;
+padding: 9px 0px 4px 14px;
 color:#4D4D4D;
 font-weight:bold;
 text-align:left;
+font-size:1.15em;
 }
 
 .agendaDalt{
@@ -135,7 +136,7 @@ padding: 5px 25px 197px 0px;
 .agendaNumero{
 float:right;
 background-color:#0077cc;
-padding:4px 1px 3px 1px;
+padding:2px 1px 1px;
 color:#FFFFFF;
 text-align:center;
 min-width: 24px;
@@ -144,7 +145,8 @@ font-size:26px;
 position: relative;
 _width:24px;
 }
-
+.agendaContingut table {
+	width:100%;}
 .agendaMes{
 float:none;
 padding-top:3px;
@@ -163,7 +165,7 @@ line-height:6px;
 }
 
 .agendaContingut{
-margin-top:5px;
+margin-top:0px;
 margin-bottom:20px;
 border: 1px solid #E6E6E6;
 background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
@@ -261,6 +263,9 @@ border-right: 1px solid #E8E2DF; /*especific6*/
 border-bottom: 1px solid #E8E2DF; /*especific6*/
 background-color:#FFFFFF;
 width:145px;
+border-collapse: separate;
+border-spacing:1px;
+padding:0px;
 }
 
 #calendari b, #calendariVertical b{
@@ -284,14 +289,18 @@ line-height:0px;
 width:100%;
 }
 .calendariArrodonit img{
-max-width:144px;
+}
+.sobreCalendari{
+max-width:155px;
+_width:155px;
 }
 
 #daltCalendari{
 background-color:#E8E2DF; /*especific6*/
 height:5px;
 }
-
+#calendar-previous{float:left;}
+#calendar-next{float:right;}
 .calendariMes{
     text-align:center !important;
     padding-top:2px;
@@ -305,13 +314,12 @@ border: 1px solid #CC0000; /*especific3*/
 background-color: #E0CECE; /*especific5*/
 }
 .reunio{
-background:#DFE3D3 url(fonsCellaCalendari.gif) right bottom; /*especific4*/
+background:#DFE3D3; /*especific4*/
 }
 
 .esdeveniment,
 .event{
-background:#E0CECE url(fonsCellaCalendari.gif) right bottom; /*especific5*/
-	*background:#E0CECE url(fonsCellaCalendari.gif) right top; /*especific5*/
+background:#E0CECE; /*especific5*/
 }
 
 .ajustament #portletPlus{
@@ -491,67 +499,7 @@ margin-left:227px;
 
 
 
-/*************************** MENU LATERAL ******************************/
-.titolSeccio{
-    background:url(++resource++upc.genwebupctheme.images/submenuFons.png) no-repeat #ededed;
-    width: 197px;
-    font-family:Arial, Helvetica, sans-serif;
-    text-transform:uppercase;
-    color:#FFFFFF;
-    font-size:1.75em;
-    font-weight:bold;
-    padding:15px 0px 0px 3px;
-    margin-top:18px !important;
-    *margin-top:15px;}
-html*.titolSeccio{
-    margin-top:15px !important;
-}
-.titolSeccio .textetSeccioneta {
-    line-height: 1.1em;}
-.flotaTapa {
-    background-color:#FFFFFF;
-    height: 8px;
-    margin-top:-4px;
-    margin-bottom:-4px;}
-ul.navTree {
-    margin: 5px 0px 0px 0px;
-    position: relative;}
-ul.navTreeLevel0 {
-    border-top:1px dashed #333333;}
-ul.navTreeLevel0 li{
-    border-bottom: 1px dashed #333333;}
-ul.navTree div{ color:#0076cc; }
-ul.navTree li div a img {float:right;}
-ul.navTree{ padding: 0px;}
-ul.navTree li, .navTreeLevel0 {
-    padding: 5px 0px 5px 20px;
-    margin: 0px 0px;
-    background: url(++resource++upc.genwebupctheme.images/custom/fletxaGo.gif) no-repeat top left;
-    list-style-type: none;
 
-    line-height:1.5em;}
-ul.navTree li ul li, .navTreeLevel11 {
-    padding: 0px 0px 0px 10px;
-    margin: 5px 1px;
-    background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat left 3px;
-    list-style-type: none;
-    line-height:1.5em;
-    border-bottom:none;
-    font-size:0.9em;}
-.navTreeItem {
-    font-size:1.0em;
-    font-weight:normal;
-}
-.navTreeItem a:hover, 
-dd.portletItem .navTreeItem a:hover {
-    text-decoration:underline;}
-.navTreeCurrentItem {
-    font-weight:bold;}
-.navTreeItemInPath {
-    font-weight:bold;}
-#portal-sitemap {
-	background: none !important;
-	padding: 0px;}
 /*************************** VISTA SUMAMRY STaNDARD ******************************/
 .summary {
 	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat left 0px;
@@ -808,3 +756,11 @@ margin-right:0.2em !important;
 form.collage-existing-items div label {font-size:100% !important;}
 form.collage-existing-items div {margin-bottom:5px !important;}
 form.collage-existing-items div select {font-size:120% !important;}
+
+.icoRSS{
+	float:right;
+	font-size:10px;
+	font-weight:normal;}
+.icoRSS img{
+	vertical-align:text-top;
+	padding-top:2px;}

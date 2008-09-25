@@ -24,7 +24,14 @@ from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 PLMF = MessageFactory('plonelocales')
 
 class utilitats(BrowserView):
+
+    def portal_url(self):
+        context_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_context_state')
+
+        return context_state.current_base_url()
     
+
     def dia_semana(self,day):
         """ le paso el dia y me lo pasa a texto"""
         _ts = getToolByName(self, 'translation_service')

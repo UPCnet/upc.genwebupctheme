@@ -75,22 +75,18 @@
          i18n:translate="esdeveniments_reunions"> 
          Esdeveniments i reunions.
     </div>
-    <table style="border: medium none ; margin-top: 5px;">
-      <tbody>
+    <table class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;">
+      <thead>
         <tr class="arrodonimentTR">
             <td class="arrodonimentTD" align="center" colspan="7">
                 <img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif"/>
             </td>
         </tr>
-      </tbody>
-     
-    </table>
-    <table>
-    <thead>
+      </thead>
+     <tbody>
         <tr id="daltCalendari">
-           <td class="cantoEC">
-            
-           <a href="#" rel="nofollow"
+           <td class="calendariMes">
+                      <a href="#" rel="nofollow"
            title="Previous month"
            tal:define="prevMonthMonth view/prevMonthMonth;
                        prevMonthYear view/prevMonthYear"
@@ -99,10 +95,17 @@
                            class string:kssCalendarChange kssattr-year-${prevMonthYear} kssattr-month-${prevMonthMonth} calendarPrevious;"
            tal:condition="showPrevMonth"
            i18n:attributes="title title_previous_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif"></a>
-           
-           </td>
-            
-            <td class="calendariMes" colspan="5">
+    
+                <a href="#" rel="nofollow"
+               title="Next month"
+                tal:define="nextMonthMonth view/nextMonthMonth;
+                       nextMonthYear view/nextMonthYear"
+                tal:attributes="id python:showNextMonth and 'calendar-next' or '';
+                           href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
+                           class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
+                tal:condition="showNextMonth"
+                i18n:attributes="title title_next_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif"> </a>       
+
                 <span i18n:translate="" tal:omit-tag=""> 
                     <span style="color: red;" 
                     i18n:name="monthname"
@@ -116,20 +119,11 @@
                     year</span>
                 </span>
             </td>
-        
-            <td class="cantoDC">
-                <a href="#" rel="nofollow"
-               title="Next month"
-                tal:define="nextMonthMonth view/nextMonthMonth;
-                       nextMonthYear view/nextMonthYear"
-                tal:attributes="id python:showNextMonth and 'calendar-next' or '';
-                           href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
-                           class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
-                tal:condition="showNextMonth"
-                i18n:attributes="title title_next_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif"> </a>
-            </td>
         </tr>
-    </thead>
+    </tbody>    
+    </table>
+    <table>
+
     
            <tbody>
                 <tr class="weekdays"
