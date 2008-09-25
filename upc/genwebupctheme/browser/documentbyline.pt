@@ -1,4 +1,4 @@
-<span tal:condition="python: user.has_role([,'Manager','Editor'])">
+<span tal:condition="python: user.has_role(['Manager','Editor'])">
 <div class="documentByLine"
      id="plone-document-byline"
      i18n:domain="plone"
