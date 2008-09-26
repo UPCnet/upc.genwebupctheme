@@ -34,7 +34,7 @@
     </form>
 
     <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Discreta'">
-    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" 
+    <img class="quadradet" src="/++resource++upc.genwebupctheme.images/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
        tal:condition="here/portal_membership/isAnonymousUser"
@@ -45,7 +45,7 @@
     </a>
     </tal:identificacio>
     
-    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
+    <img class="quadradet" src="/++resource++upc.genwebupctheme.images/quadradet.gif"/>
     <a href=""
        tal:attributes="href string:${view/portal_url}/"
        i18n:domain="upc.genwebupc"
@@ -56,7 +56,7 @@
     <tal:block repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}">
         
-        <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/> 
+        <img class="quadradet" src="/++resource++upc.genwebupctheme.images/quadradet.gif"/> 
         <a
            href=""
            tal:define="title saction/title;
@@ -71,7 +71,7 @@
            >Site action</a>
      </tal:block>
 
-    <img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif"/>
+    <img class="quadradet" src="/++resource++upc.genwebupctheme.images/quadradet.gif"/>
     <a href=""
        tal:attributes="href string:${view/portal_url}/search_form"
        i18n:translate="cercaavancada"

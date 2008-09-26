@@ -1,7 +1,7 @@
   <tal:capsalera define="utils context/@@upc.genweb.utils">
     <div class="logo">
         
-        <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya"  src="++resource++upc.genwebupctheme.images/custom/LogoUPC.gif"/>
+        <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya"  src="/++resource++upc.genwebupctheme.images/custom/LogoUPC.gif"/>
         <map name="logoUPC" id="logoUPC"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya" /></map>
 
 
@@ -9,17 +9,17 @@
             <!-- titol en catala -->
             <img
                 tal:condition="python:utils.pref_lang()=='ca'"
-                tal:attributes="title python: utils.getGWConfig().firmaunitat_ca" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
+                tal:attributes="title python: utils.getGWConfig().firmaunitat_ca" src="/++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
 
             <!-- titol en castella -->
             <img
                 tal:condition="python:utils.pref_lang()=='es'"
-                tal:attributes="title python: utils.getGWConfig().firmaunitat_es" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
+                tal:attributes="title python: utils.getGWConfig().firmaunitat_es" src="/++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
 
             <!-- titol en angles -->
             <img
                 tal:condition="python:utils.pref_lang()=='en'"
-                tal:attributes="title python: utils.getGWConfig().firmaunitat_en" src="++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
+                tal:attributes="title python: utils.getGWConfig().firmaunitat_en" src="/++resource++upc.genwebupctheme.images/custom/logoPropi.gif"/>
 
         </a>
 
@@ -32,19 +32,19 @@
             <img longdesc="Títol de la Web"               
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="title python: utils.getGWConfig().titolespai_ca"
-               src="++resource++upc.genwebupctheme.images/custom/titolWeb_ca.gif"/>
+               src="/++resource++upc.genwebupctheme.images/custom/titolWeb_ca.gif"/>
 
 <!-- titol en castella -->
             <img longdesc="Títol de la Web"               
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="title python: utils.getGWConfig().titolespai_es"
-               src="++resource++upc.genwebupctheme.images/custom/titolWeb_es.gif"/>
+               src="/++resource++upc.genwebupctheme.images/custom/titolWeb_es.gif"/>
 
 <!-- titol en angles -->
             <img longdesc="Títol de la Web"               
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en"
-               src="++resource++upc.genwebupctheme.images/custom/titolWeb_en.gif"/>
+               src="/++resource++upc.genwebupctheme.images/custom/titolWeb_en.gif"/>
         </a>
     </div>
 
