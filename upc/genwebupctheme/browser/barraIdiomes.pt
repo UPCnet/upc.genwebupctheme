@@ -1,5 +1,6 @@
 <tal:langbar
-    tal:define="available view/available;
+    tal:define="portal_url context/@@plone_portal_state/portal_url;
+                available view/available;
                 languages view/languages;
                 showFlags view/showFlags;
                 otra python:view.trim_selected_lang(languages)">
@@ -22,7 +23,7 @@
                               >Language          
                     </a>
                 <span tal:condition="not:repeat/lang/end">  
-                    <img class="quadradet" src="/++resource++upc.genwebupctheme.images/quadradet.gif"/>
+                    <img class="quadradet" tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/quadradet.gif"/>
                 </span>                      
                 </id>
               </span> 
