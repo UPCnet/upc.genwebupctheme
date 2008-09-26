@@ -7,7 +7,10 @@
                 showPrevMonth view/showPrevMonth;
                 showNextMonth view/showNextMonth;
                 year view/year;
-                toLocalizedTime nocall:context/@@plone/toLocalizedTime"                
+                toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                number_day python:view.now[2];
+                month_day python:view.now[1];
+                year_day python:view.now[0]"
            tal:condition="entries"
            i18n:domain="plone">
 
@@ -36,7 +39,7 @@
 <table>
 
         <tr>
-            <td>
+            <td width="100%">
         <ul>
         <li tal:repeat="obj entries">
             <a href=""
@@ -75,7 +78,7 @@
          i18n:translate="esdeveniments_reunions"> 
          Esdeveniments i reunions.
     </div>
-    <table class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;">
+    <table class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
       <thead>
         <tr class="arrodonimentTR">
             <td class="arrodonimentTD" align="center" colspan="7">
@@ -122,7 +125,7 @@
         </tr>
     </tbody>    
     </table>
-    <table>
+    <table width="5%">
 
     
            <tbody>
@@ -166,22 +169,18 @@
                     ></tal:block>
                 </tr>
             </tbody>
-    
     <tfoot>
         <tr>
            <td class="ajustament" colspan="7">
            <div id="portletPlus">
-            <a href="#"> 
+            <a href=""
+               tal:attributes="href string:${portal_url}/search?${view/getReviewStateString}start.query:record:list:date=${number_day}-${month_day}-${year_day}+23%3A59%3A59&amp;start.range:record=max&amp;end.query:record:list:date=${number_day}-${month_day}-${year_day}+00%3A00%3A00&amp;end.range:record=min;"> 
                 <img alt="més actualitat" src="++resource++upc.genwebupctheme.images/custom/plus.gif">
             </a>
         
          <a id="avui"
               href=""
-              tal:define="number_day python:view.now[2];
-                          month_day python:view.now[1];
-                          year_day python:view.now[0]"
-              tal:attributes="href string:${portal_url}/search?${view/getReviewStateString}start.query:record:list:date=${number_day}-${month_day}-${year_day}+23%3A59%3A59&amp;start.
-range:record=max&amp;end.query:record:list:date=${number_day}-${month_day}-${year_day}+00%3A00%3A00&amp;end.range:record=min;"
+              tal:attributes="href string:${portal_url}/search?${view/getReviewStateString}start.query:record:list:date=${number_day}-${month_day}-${year_day}+23%3A59%3A59&amp;start.range:record=max&amp;end.query:record:list:date=${number_day}-${month_day}-${year_day}+00%3A00%3A00&amp;end.range:record=min;"
               i18n:domain="upc.genwebupc"
               i18n:translate="avui"> 
          Avui
