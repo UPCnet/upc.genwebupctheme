@@ -98,14 +98,16 @@ padding: 9px 0px 4px 14px;
 color:#4D4D4D;
 font-weight:bold;
 text-align:left;
-font-size:1.15em;
+font-size:1.1em;
 }
 
 .agendaDalt{
 border-top: 1px solid #808080;
 background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
 background-position: 0px 3px;
-padding: 11px;
+padding: 9px 11px 13px 14px;
+font-size:1.1em;
+font-size:1.1em;
 color:#4D4D4D;
 font-weight:bold;
 	*position:absolute;
@@ -114,7 +116,8 @@ font-weight:bold;
 	*width:532px;
 	_position:static;
 	_border-top:1px solid #808080;
-	_width:auto;}
+	_width:auto;
+}
 
 .agendaData{
 float:none;
@@ -134,19 +137,19 @@ padding: 5px 25px 197px 0px;
 }/*pelvertical*/
 
 .agendaNumero{
-float:right;
-background-color:#0077cc;
-padding:2px 1px 1px;
-color:#FFFFFF;
-text-align:center;
-min-width: 24px;
-font-family: "Arial Narrow", "Helvetica Narrow", "Mikti Narrow", Arial, Helvetica, sans-serif;
-font-size:26px;
-position: relative;
-_width:24px;
+float:right !important;
+background-color:#0077cc !important;
+padding:2px 1px 1px !important;
+color:#FFFFFF !important;
+text-align:center !important;
+min-width: 24px !important;
+font-family: "Arial Narrow", "Helvetica Narrow", "Mikti Narrow", Arial, Helvetica, sans-serif !important;
+font-size:26px !important;
+position: relative !important;
+_width:24px !important;
 }
 .agendaContingut table {
-	width:100%;}
+	/*width:100%;*/}
 .agendaMes{
 float:none;
 padding-top:3px;
@@ -224,13 +227,19 @@ _margin-right:5px;
 
 #calendariVertical {
 float:right;
-margin-right: 23px;
+margin-left: 23px;
+*margin-left: 21px;
 margin-top: -190px;
 line-height:1.2em;
 font-size:0.9em;
+*margin-right:26px;
 _margin-right:13px;
-_margin-top: -185px;
+*margin-top: -185px;
 }
+html*#calendariVertical {
+	margin-right: 28px;
+	_margin-right:0px;
+	_padding-right:17px; }
 
 #calendari table, #calendariVertical table{
 font-size:0.9em;
@@ -262,7 +271,7 @@ border-left: 1px solid #E8E2DF; /*especific6*/
 border-right: 1px solid #E8E2DF; /*especific6*/
 border-bottom: 1px solid #E8E2DF; /*especific6*/
 background-color:#FFFFFF;
-width:145px;
+*width:158px;
 border-collapse: separate;
 border-spacing:1px;
 padding:0px;
@@ -277,7 +286,7 @@ font-size:1.1em;
 margin: 5px 0px 0px 0px;
 background-color: #E8E2DF; /*especific6*/
 font-size:0.05em;
-max-width:144px;
+max-width:150px;
 padding:0px;
 }
 .arrodonimentTD, .arrodonimentTR{
@@ -292,8 +301,10 @@ width:100%;
 }
 .sobreCalendari{
 max-width:155px;
-_width:155px;
+width:150px;
+*width:157px;
 }
+html*.sobreCalendari { width:139px; }
 
 #daltCalendari{
 background-color:#E8E2DF; /*especific6*/
@@ -761,6 +772,107 @@ form.collage-existing-items div select {font-size:120% !important;}
 	float:right;
 	font-size:10px;
 	font-weight:normal;}
+.titolPortlet .icoRSS{
+	margin-top:-1px;
+	_margin-top:2px;
+}
 .icoRSS img{
 	vertical-align:text-top;
-	padding-top:2px;}
+	padding-top:1px;}
+/*formulari plone*/
+.pfg-form .field {padding:10px 0px 0px 0px;}
+.pfg-form  {padding-top:15px;}
+
+/*calendar system*/
+.calendar table {
+	background:yellow none repeat scroll 0;
+	border-color:#e6e6e6 !important;
+	border-style:solid;
+	border-width:1px !important;
+	color:windowtext !important;
+	cursor:default;
+	font-family:verdana, arial,sans-serif !important;
+	font-size:11px;
+}
+.calendar table thead{
+	background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom !important;}
+.calendar {
+background:transparent none repeat scroll 0 !important;
+border-color:#e6e6e6;
+border-style:solid;
+border-width:0px !important;
+color:#333333 !important;
+cursor:default;
+display:none;
+font-family:verdana, arial,sans-serif !important;
+font-size:11px;
+position:relative;
+}
+.calendar thead .daynames {
+background: #f1f1f1 !important;
+}
+.calendar tbody .day {
+padding:2px 4px 2px 2px;
+text-align:right;
+width:2em;
+background-color:transparent !important;
+}
+.calendar .button {
+background:transparent none repeat scroll 0 !important;
+border-color:buttonhighlight buttonshadow buttonshadow buttonhighlight;
+border-style:solid;
+border-width:0px !important;
+padding:1px;}
+
+.calendar thead .title {
+background:transparent !important;
+border:0px solid #000000 !important;
+color: #666 !important;
+font-size:10px !important;
+font-weight:bold;
+padding:1px;
+text-align:center;
+}
+.calendar table .wn {
+background:#f9f9f9 none repeat scroll 0 !important;
+border-right:1px solid #e6e6e6 !important;
+color:buttontext;
+padding:2px 3px 2px 2px;
+}
+.calendar thead .name {
+background:transparent none repeat scroll 0 !important;
+border-bottom:0px solid buttonshadow !important;
+color:buttontext;
+padding:2px;
+text-align:center;
+}
+.calendar thead .weekend {
+color:#CC0000 !important;
+}
+.calendar tfoot .ttip {
+background:#e6e6e6 none repeat scroll 0 !important;
+border-color:buttonshadow buttonhighlight buttonhighlight buttonshadow;
+border-style:solid;
+border-width:0px !important;
+color:#666 !important;
+padding:1px;
+text-align:center;
+font-size:10px !important;
+}
+
+.calendar tbody td.selected {
+background:#99DEF6 !important;
+border-color:#0077cc;
+border-style:solid;
+border-width:0px !important;
+color:#07c !important;
+font-weight:bold;
+padding:2px 2px 0;
+}
+.calendar tbody td.today {
+border-color:#0077cc !important;
+border-style:solid !important;
+border-width:1px !important;
+color:#666 !important;
+font-weight:bold;
+}

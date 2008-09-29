@@ -178,7 +178,10 @@ form.searchPage input.searchButton{
     background-position:0px 0px;
     padding:0px 3px 2px 17px;
     *background-position:center left;
-    *padding:0px 0px 0px 14px;}
+    *padding:0px 0px 0px 14px;
+    font-weight:normal;}
+.template-login_form .context {
+    font-weight:normal;}
 form.searchPage {
 	background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #E6E6E6;
@@ -322,32 +325,15 @@ h1, h2 {
 .contingut{
     text-align: left;
     line-height: 1.5em;}
-.columnaMenu {
-    float:left;
-    width:200px;}
-.columnaCentreMenu {
-    margin-left:225px;
-    margin-bottom:20px;}
 .columnaEsq {
 	float:right;
-	width:200px;
-	margin-right:25px;
-	*width:auto !important;
-	*padding-right:25px;
-	*margin-right:0px;
-	*max-width:200px;
-
-	_margin-right:25px;
-	_padding-right:0px;}
+	margin:0px;}
 .columnaCentre {
-    margin-right: 25px;
+	padding-right:25px;
 	width:558px;
 	float:right;}
-.columnaCentreCentrada {
-    margin-left:225px;
-    margin-right: 175px;}
 .columnaDreta {
-    width: 150px;
+    width: 150px !important;
     float: right;}
 .iconesContingut {
     text-align:right;
@@ -356,9 +342,15 @@ h1, h2 {
 .iconesContingut a{
     margin: 0px 5px;}
 	
-	
-	
-	
+.columnaEsq #portlet200,	
+.columnaEsq #caixaPortlet,
+.columnaEsq #baix200 {
+	margin-right:25px !important;
+	width:200px !important;
+}
+.columnaEsq #caixaPortlet {_width:100px;}
+.columnaEsq #caixaPortlet {
+	width:198px !important;}
 	
 	
 	
@@ -1270,21 +1262,6 @@ padding:0 0 0 0px;
 .template-folder_extended #content dl dt img, .template-folder_listing #content dl dt img{
 	float:right;
 	visibility:hidden;}
-.template-folder_extended #content dl#history, .template-folder_listing #content dl#history{
-	background:transparent;
-	padding:0px;
-	margin:0px 1em 1em 1em;}
-.template-folder_extended #content dl#history dd, .template-folder_listing #content dl#history dd{
-	margin: 0px;}
-.template-folder_extended #content dl#history dt, .template-folder_listing #content dl#history dt{
-	background:transparent url(treeCollapsed.gif) no-repeat scroll 6px 50%;
-	cursor:pointer;
-	display:inline;
-	float:none;
-	line-height:1em;
-	margin:0px;
-	padding:0 0 0 22px;
-	position:static;}
 .template-folder_extended #content dl dt .documentByLine, .template-folder_listing #content dl dt .documentByLine {
 	display:block;}
 
@@ -1349,6 +1326,12 @@ background-position:5px 1px;
 background-repeat:no-repeat;
 padding-left:25px;
 }
+#plone-contentmenu-display #atct_topic_view {
+background-image:url(vista_col.gif);
+background-position:5px 1px;
+background-repeat:no-repeat;
+padding-left:25px;
+}
 /* modificacio menu estat amb imatges */
 #plone-contentmenu-workflow #workflow-transition-reject{
 	background-image: url(bullet_red.png);
@@ -1383,17 +1366,24 @@ padding-left:25px;
 	height: 16px !important;
 }
 
-#content a[href^="https:"], #content a.link-https {
-background:transparent url(https://devel.upcnet.es/neutre3/lock_icon.gif) no-repeat scroll -2px 0;
-padding:1px 0px 1px 14px;
-}
+#content a[href^="https:"], 
+#content a.link-https {
+	background:transparent url(https://devel.upcnet.es/neutre3/lock_icon.gif) no-repeat scroll -2px 0;
+	padding:1px 0px 1px 14px;}
+#content .columnaEsq a[href^="https:"], 
+#content .columnaEsq a.link-https, 
+#content .columnaDreta a[href^="https:"], 
+#content .columnaDreta a.link-https {
+	*background:transparent url(https://devel.upcnet.es/neutre3/lock_icon.gif) no-repeat scroll -2px 5px;}
 #content a[href^="https://devel.upcnet.es/neutre3"] {
-background:transparent none repeat scroll 0 0;
-padding:0;
-}
+	background:transparent none repeat scroll 0 0;
+	padding:0;}
+#content .columnaEsq a[href^="https://devel.upcnet.es/neutre3"], 
+#content .columnaDreta a[href^="https://devel.upcnet.es/neutre3"],{
+	background:transparent none repeat scroll 0 0;
+	padding:0;}
 #portal-personaltools b span{
-color:#4d4d4d;
-}
+	color:#4d4d4d;}
 
 /** per mes preferencia que en els portlets */
 table.vertical tbody th {
@@ -1475,12 +1465,17 @@ ul.navTree li, .navTreeLevel0 {
     list-style-type: none;
     line-height:1.5em;}
 ul.navTreeLevel0 > li.navTreeCurrentNode, ul.navTreeLevel0 > li.navTreeItemInPath { /*assegurem-nos que funciona*/
-background:transparent url(FletxaGoDown.gif) no-repeat scroll left top !important;
+background:#f8f8f8 url(FletxaGoDown.gif) no-repeat scroll left top !important;
 line-height:1.5em;
 list-style-type:none;
 margin:0;
 padding:5px 0 5px 20px;
 }
+/*
+.navTreeCurrentItem {
+background:#f8f8f8 url(fletxaGo.gif) no-repeat scroll left top !important;
+}
+*/
 
 ul.navTree li ul li, .navTreeLevel11, .navTreeLevel1, .NavTreeItem {
     padding: 0px 0px 0px 10px;
@@ -1504,3 +1499,61 @@ dd.portletItem .navTreeItem a:hover {
 #portal-sitemap {
 	background: none !important;
 	padding: 0px;}
+
+/*colleccio*/
+.listingBar {
+	font-size:11px;
+	background:#F7F7F7 url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x scroll center bottom;
+	border-color:#E6E6E6;
+	border-style:solid;
+	border-width:1px;
+	padding:5px 0px;}
+.listingBar .next {
+	background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaD.gif) no-repeat scroll right bottom;
+	padding-right:15px;
+	float:right;}
+.listingBar .previous {
+	background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaE.gif) no-repeat scroll left bottom;
+	padding-left:15px;
+	float:left;}
+.listingBar a {
+	margin: 0px 3px;}
+.template-atct_topic_view .listing {font-size:1em;}
+.template-atct_topic_view .listing td img{padding-right:10px;}
+.template-atct_topic_view .listing th img{padding-left:5px;}
+.template-atct_album_view #content dl {
+	background:#F7F7F7 url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x scroll center bottom;
+	padding:5px 10px;
+	border:1px solid #E6E6E6;}
+.template-atct_album_view #content dl dd{
+	margin-bottom:5px;}
+.template-atct_album_view #content dl dt{
+	border-top:1px dashed #e6e6e6;
+	padding-top:5px;}
+.template-atct_album_view #content dl dt:first-child{
+	border-top:0px;}
+#content .listing{
+	width:100%;}
+
+/*anulla rareses a history*/
+#content dl#history, #content dl#history{
+	background:transparent;
+	padding:0px;
+	margin:0px 1em 1em 1em;}
+#content dl#history dd, #content dl#history dd{
+	margin: 0px;}
+#content dl#history dt, #content dl#history dt{
+	background:transparent url(treeCollapsed.gif) no-repeat scroll 6px 50%;
+	cursor:pointer;
+	display:inline;
+	float:none;
+	line-height:1em;
+	margin:0px;
+	padding:0 0 0 22px;
+	position:static;}
+#content dl#history .listing{
+	width:auto;}
+/*separador sou a*/
+.breadcrumbSeparator {
+	font-size:100%;
+	color:#666;}
