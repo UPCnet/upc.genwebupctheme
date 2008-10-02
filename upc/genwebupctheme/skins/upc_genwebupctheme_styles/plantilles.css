@@ -124,6 +124,20 @@ position:relative;
 	margin: 0px 0px 0px 23px;
 	list-style: url(++resource++upc.genwebupctheme.images/fletxa.gif) outside;
 }
+/********** LlistatEnllacos GW3 **************/
+.llistatEnllacos ul{
+	margin: -5px 0px 15px 0px;
+	padding: 10px 0px 5px 1px;
+	background-color: #F7F7F7;
+	background:url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x bottom #F7F7F7;
+    border: 1px solid #E6E6E6;	
+	border-top: 2px solid #CCcccc;
+}
+.llistatEnllacos li{
+	padding: 0px 0px 10px 0px;
+	list-style: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) outside;
+	margin: 0px 0px 0px 23px;
+}
 /***********************************/
 /**###**/
 /********** Llistat I -plantilla- **************/
@@ -436,3 +450,13 @@ background:url(../img/borderTopDiagonal.gif) repeat-x;
 	*border-collapse:collapse;	
 }
 
+/****************** IMATGE AMB TXT DAMUNT *************/
+.emmarcada{
+    text-align:center;
+    margin: 10px 0px;
+}
+
+.emmarcada img{
+    border: 1px solid #999999;
+    padding: 3px;
+}

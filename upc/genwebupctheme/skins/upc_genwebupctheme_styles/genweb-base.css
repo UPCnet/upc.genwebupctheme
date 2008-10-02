@@ -800,9 +800,10 @@ ul.configlets li a:hover {
 	background-color:transparent;}
 abbr, acronym, .explain {
 	background-color:transparent;
-	border-bottom:1px dashed #0076CC;
-	color:#333;
-	cursor:help;}
+	border-bottom:0px dashed #0076CC;
+	color:#333;}
+abbr span {
+	display: block;}
 .documentContent dd a {
 	border-bottom:0px solid #CCCCCC;
 	text-decoration:none;
@@ -1357,6 +1358,22 @@ padding-left:25px;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
+#plone-contentmenu-translate #translate_into_en {
+	background-image:url(en_lang.gif);
+	background-position:5px 1px;
+	background-repeat:no-repeat;
+	padding-left:25px;}
+#plone-contentmenu-translate #translate_into_es {
+	background-image:url(es_lang.gif);
+	background-position:5px 1px;
+	background-repeat:no-repeat;
+	padding-left:25px;}
+#plone-contentmenu-translate #translate_into_ca {
+	background-image:url(ca_lang.gif);
+	background-position:5px 1px;
+	background-repeat:no-repeat;
+	padding-left:25px;}
+
 .template- h1.documentFirstHeading img{
 	width: 23px !important;
 	height: 21px !important;
@@ -1388,7 +1405,9 @@ padding-left:25px;
 /** per mes preferencia que en els portlets */
 table.vertical tbody th {
 font-size: 150% !important;
+width:100px;
 }
+table.vertical .summary {color: #333 !important;}
 .fletxatop{text-align:right; margin-bottom:0px;padding-right:2px;}
 
 
@@ -1557,3 +1576,59 @@ dd.portletItem .navTreeItem a:hover {
 .breadcrumbSeparator {
 	font-size:100%;
 	color:#666;}
+
+/*chooser-right*/
+.chooser-right {padding-top: 10px !important;}
+
+/*categoria i etiqueta*/
+#category {
+	border:1px solid #f1f1f1;
+	background: #f9f9f9;
+	padding: 3px;
+	margin: 1em 0em;
+}
+#content .link-category {
+	color:#D96245 !important;/*espe2*/}
+
+/*autor, collaboradors, copyright*/
+#plone-document-byline {
+	padding-bottom:0.5em;
+	margin-bottom:1em;}
+
+/*ajustaments vista resum*/
+.tileImage {
+border:1px solid #e6e6e6;
+float:right;
+padding:3px;
+background:white;
+margin:0 0 0.5em 0.5em;
+}
+.link-plain {color:#0077cc !important;}
+
+
+/*ajustamnets finals FCK*/
+#btnOk {
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center !important;
+    border:1px solid #006DA3 !important;
+    color:white !important;
+    font-size:90% !important;
+    font-family:Verdana, Helvetica, Arial, sans-serif !important;
+    font-weight:bold !important;
+    padding:0px 3px 2px 3px !important;
+    *border:0px !important;
+    *padding:2px 2px 2px 2px !important;}
+#btnCancel {
+    background:url(++resource++upc.genwebupctheme.images/custom/botoFonsClar.gif) repeat-x center center !important;
+    border:1px solid #8dcde3 !important;
+    color:#333 !important;
+    font-size:90% !important;
+    padding:0px 3px 2px 3px !important;
+    font-weight:bold !important;
+    *border:0px !important;
+    *padding:2px 2px 2px 2px !important;}
+.PopupTitle {
+    font-size: 18px !important;
+    font-family: Arial, Helvetica, Verdana, sans-serif;}
+
+/*revisio documents*/
+#diff-table {margin-top:10px !important;}
