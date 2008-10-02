@@ -47,4 +47,13 @@
      insert-after="upc_genwebupctheme_custom_templates"/>
  </skin-path>
 
+ <skin-path name="Tema genwebUPC Unitats" based-on="Plone Default">
+  <layer name="upc_genwebupctheme_custom_images"
+     insert-after="custom"/>
+  <layer name="upc_genwebupctheme_custom_templates"
+     insert-after="upc_genwebupctheme_custom_images"/>
+  <layer name="upc_genwebupctheme_styles"
+     insert-after="upc_genwebupctheme_custom_templates"/>
+ </skin-path>
+
 </object>
