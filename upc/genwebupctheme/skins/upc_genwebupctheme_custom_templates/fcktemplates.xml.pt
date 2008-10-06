@@ -125,52 +125,6 @@
 
 
 
-<!-- TITULAR 1 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Titular 1 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular1.png">
-    	<Description>Per escriure text habitual.</Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="titular1">In aliquam rhoncus sem</div>
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<br /><br /><br /><br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR 1  -->
-
-
-
-<!-- TITULAR 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Titular 2 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular2.png">
-    	<Description>Per escriure text habitual.</Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="titular2">In aliquam rhoncus sem</div>
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<br /><br /><br /><br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR 2  -->
-
-
-
-<!-- TITULAR 3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Titular 3 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular3.png">
-    	<Description>Per escriure text habitual.</Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="titular3">In hac habitasse platea dictumst</div>
-				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros.
-				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliq
-				<br /><br /><br /><br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR 3  -->
-
-
-
 <!-- DESTACAT CLASSIC ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <Template title="DESTACAT CLASSIC" image="++resource++upc.genwebupctheme.images/FCKTdestacat.png">
         <Description>DESTACAT CLASSIC.</Description>
@@ -660,6 +614,65 @@
 <!-- //// FI IMATGE AMB TEXT DAMUNT  -->
 
 
+
+<!-- TITULAR GRIS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Titular Gris + text" image="++resource++upc.genwebupctheme.images/FCKTtitularGris.png">
+    	<Description>Per escriure text de bloc.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<h2>In aliquam rhoncus sem</h2>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				<br /><br /><br /><br /><br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+<!-- //// FI TITULAR GRIS  -->
+
+
+
+<!-- TITULAR 1 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Titular 1 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular1.png">
+    	<Description>Per escriure text habitual.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular1">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				<br /><br /><br /><br /><br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+<!-- //// FI TITULAR 1  -->
+
+
+
+<!-- TITULAR 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Titular 2 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular2.png">
+    	<Description>Per escriure text habitual.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular2">In aliquam rhoncus sem</div>
+				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				<br /><br /><br /><br /><br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+<!-- //// FI TITULAR 2  -->
+
+
+
+<!-- TITULAR 3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Titular 3 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular3.png">
+    	<Description>Per escriure text habitual.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="titular3">In hac habitasse platea dictumst</div>
+				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros.
+				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliq
+				<br /><br /><br /><br /><br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>
+<!-- //// FI TITULAR 3  -->
  
   </Templates>
 </tal:defines>

@@ -1333,8 +1333,22 @@ background-position:5px 1px;
 background-repeat:no-repeat;
 padding-left:25px;
 }
+#plone-contentmenu-display #board_view_global{
+background-image:url(forum_global.gif);
+background-position:5px 1px;
+background-repeat:no-repeat;
+padding-left:25px;
+}
+
+#plone-contentmenu-display #board_view{
+background-image:url(forum_taula.gif);
+background-position:5px 1px;
+background-repeat:no-repeat;
+padding-left:25px;
+}
+
 /* modificacio menu estat amb imatges */
-#plone-contentmenu-workflow #workflow-transition-reject{
+#plone-contentmenu-workflow #workflow-transition-reject, #plone-contentmenu-workflow #workflow-transition-hide{
 	background-image: url(bullet_red.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
@@ -1352,12 +1366,34 @@ padding-left:25px;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
-#plone-contentmenu-workflow #workflow-transition-publish{
+#plone-contentmenu-workflow #workflow-transition-publish, #plone-contentmenu-workflow #workflow-transition-open{
 	background-image: url(bullet_green.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
+#plone-contentmenu-workflow #workflow-transition-make_freeforall{
+	background-image: url(forum_lliure.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+#plone-contentmenu-workflow #workflow-transition-make_moderated{
+	background-image: url(forum_moderat.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+#plone-contentmenu-workflow #workflow-transition-make_private{
+	background-image: url(forum_privat.gif);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+
+
+
+
 #plone-contentmenu-translate #translate_into_en {
 	background-image:url(en_lang.gif);
 	background-position:5px 1px;

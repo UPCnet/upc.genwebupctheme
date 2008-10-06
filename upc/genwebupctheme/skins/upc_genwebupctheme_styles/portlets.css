@@ -128,12 +128,10 @@ margin: -36px 0px 1px 3px;
 	_margin: -36px 0px 1px 3px;}
 
 .agendaDataReposicio{
-background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 0px;
+
 border-top:1px solid #999999;
 margin: 0px 0px 0px 0px;
-padding: 5px 25px 197px 0px;
-	*background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 2px;
-	_background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px 4px;
+padding: 5px 25px 0px 0px;
 }/*pelvertical*/
 
 .agendaNumero{
@@ -169,7 +167,7 @@ line-height:6px;
 
 .agendaContingut{
 margin-top:0px;
-margin-bottom:20px;
+margin-bottom:0px;
 border: 1px solid #E6E6E6;
 background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
 position:relative;
@@ -215,29 +213,31 @@ line-height: 1.2em;
 text-align:left;
 margin: 0px 0px 5px 5px;
 }
-
+.agendaContingut tbody{
+margin-bottom:10px;
+;
+}
 /*********************************************************************** CALENDARI **********************************************/
 #calendari {
 float:right;
-margin-right: 10px;
+margin-right: 5px;
 line-height:1.2em;
 font-size:0.9em;
 _margin-right:5px;
 }
 
 #calendariVertical {
-float:right;
-margin-left: 23px;
-*margin-left: 21px;
-margin-top: -190px;
-line-height:1.2em;
-font-size:0.9em;
-*margin-right:26px;
-_margin-right:13px;
-*margin-top: -185px;
+	line-height:1.2em;
+	font-size:0.9em;
+	padding-top:3px;
+	padding-left:25px;
+	padding-right:25px;
+	*padding-left:20px;
+	*padding-right:20px;
+	background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px -34px;
 }
 html*#calendariVertical {
-	margin-right: 28px;
+	margin-right: 0px;
 	_margin-right:0px;
 	_padding-right:17px; }
 
@@ -674,14 +674,17 @@ color:#4d4d4d;
 .template-board_view .even {
 /*background-color: #e8e2df;*/
 }
-.template-forum_view .documentFirstHeading img,.template-board_view .documentFirstHeading img {
+.template-forum_view .documentFirstHeading img,.template-board_view .documentFirstHeading img, .template-board_view_global .documentFirstHeading img {
 	visibility:hidden;
 	width:0px !important;
 }
-.template-forum_view .documentFirstHeading, .template-board_view .documentFirstHeading {
+.template-forum_view .documentFirstHeading, .template-board_view .documentFirstHeading, .template-board_view_global .documentFirstHeading {
 	margin-left:-8px !important;
-}	
-
+}
+.template-board_view_global	.forumTitleCell a span, .template-board_view_global .forumMostRecentCell span {display:block !important; float:left !important;margin-bottom:3px !important;}
+.template-board_view_global .listing thead, .template-board_view_global .listing tbody, .template-board_view_global table.listing, .template-board_view_global .listing td, .template-board_view_global .listing th, .template-board_view_global .listing tr {border:0px; font-size:1em;}
+.template-board_view_global .listing th {font-weight:bold; font-size:1em !important; color:#666;background:transparent;border-bottom:1px solid #e6e6e6 !important;}
+.template-board_view_global table.listing {border-bottom: 3px solid #e6e6e6;padding-top:0px;}
 .template-board_view #content ul.visualNoMarker {
 clear:right;
 padding: 5px 5px 1px 5px;
@@ -958,6 +961,12 @@ visibility:hidden;
 	background:white;
 	margin-bottom: 10px;
 }
+.template-board_view .discreet img, .template-forum_view .discreet img{
+	border: 0px solid #e6e6e6;
+	padding: 0px;
+	background:transparent;
+	margin-bottom: 0px;
+}
 .visualNoPrint img {
 	border:0px;
 	padding: 0px;
@@ -1007,3 +1016,11 @@ li.formTab a.notify {
 	padding:3px;
 	border: 1px solid #e6e6e6;}
 
+/*********************************************** preparaci del S5 de presentacions **************************************/
+/*aixo es xungo i faig el q puc*/
+div#header {
+background-color:#0077cc !important;
+border-bottom:5px solid #333333 !important;
+color:White !important;
+line-height:1px;
+}
