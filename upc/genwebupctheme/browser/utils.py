@@ -16,7 +16,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
 
 from zope.component import getMultiAdapter, getUtility
-from upc.genwebupc.browser.interfaces import IgenWebUtility
+from upc.genwebupc.browser.interfaces import IgenWebUtility, IExtractInfo
 from Products.ATContentTypes.interface.folder import IATFolder
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 
@@ -63,5 +63,10 @@ class utilitats(BrowserView):
         if  IATFolder.providedBy(self.context) or IPloneSiteRoot.providedBy(self.context):
             return True
 
-
+    def getDatabaseInformation(self, id):
+        """ Retorna un objeto con las columnas de la tabla upc.unitat de la base de datos www-estudis 
+            de acuerdo al id de la escuela.
+        """
+        util = getUtility(IExtractInfo)
+        return util.getDatos(id)
 
