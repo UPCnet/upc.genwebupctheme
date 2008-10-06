@@ -46,16 +46,29 @@ class capsaleraSuperior(ViewletBase):
         self.folder_path = '/'.join(folder.getPhysicalPath())
 
         
-class logosSuperior(ViewletBase):
-    render = ViewPageTemplateFile('logosSuperior.pt')        
+class titolsMaster(ViewletBase):
+    render = ViewPageTemplateFile('master/titolsMaster.pt')        
+    
+class titols(ViewletBase):
+    render = ViewPageTemplateFile('titols.pt')    
         
-class logoNeutre(ViewletBase):
-    render = ViewPageTemplateFile('logoNeutre.pt')
+        
+class logoNeutre3(ViewletBase):
+    render = ViewPageTemplateFile('neutre3/logoNeutre3.pt')
+    
+class logoNeutre2(ViewletBase):
+    render = ViewPageTemplateFile('neutre2/logoNeutre2.pt')
+    
+class logoUnitat(ViewletBase):
+    render = ViewPageTemplateFile('unitat/logoUnitat.pt')    
+    
+class logoMaster(ViewletBase):
+    render = ViewPageTemplateFile('master/logoMaster.pt')    
+
 
 class eines(ViewletBase):
     render = ViewPageTemplateFile('eines.pt')
 
-#Del login
     def __init__(self, context, request, view, manager):
         ViewletBase.__init__(self, context, request, view, manager)
         

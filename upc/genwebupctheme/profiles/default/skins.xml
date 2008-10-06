@@ -10,7 +10,7 @@
        persistence'.
        -->
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="Tema genwebUPC Neutre3">
+   default_skin="Tema genwebUPC Unitat">
 
  <!-- This list registers the folders that are stored in the skins directory
       of your product (on the filesystem) as Filesystem Directory Views within
@@ -47,7 +47,7 @@
      insert-after="upc_genwebupctheme_custom_templates"/>
  </skin-path>
 
- <skin-path name="Tema genwebUPC Unitats" based-on="Plone Default">
+ <skin-path name="Tema genwebUPC Unitat" based-on="Plone Default">
   <layer name="upc_genwebupctheme_custom_images"
      insert-after="custom"/>
   <layer name="upc_genwebupctheme_custom_templates"
@@ -56,4 +56,31 @@
      insert-after="upc_genwebupctheme_custom_templates"/>
  </skin-path>
 
+ <skin-path name="Tema genwebUPC Master" based-on="Plone Default">
+  <layer name="upc_genwebupctheme_custom_images"
+     insert-after="custom"/>
+  <layer name="upc_genwebupctheme_custom_templates"
+     insert-after="upc_genwebupctheme_custom_images"/>
+  <layer name="upc_genwebupctheme_styles"
+     insert-after="upc_genwebupctheme_custom_templates"/>
+ </skin-path>
+ 
+ <skin-path name="Tema genwebUPC Neutre2" based-on="Plone Default">
+  <layer name="upc_genwebupctheme_custom_images"
+     insert-after="custom"/>
+  <layer name="upc_genwebupctheme_custom_templates"
+     insert-after="upc_genwebupctheme_custom_images"/>
+  <layer name="upc_genwebupctheme_styles"
+     insert-after="upc_genwebupctheme_custom_templates"/>
+ </skin-path>
+ 
+  <skin-path name="Tema genwebUPC Portal" based-on="Plone Default">
+  <layer name="upc_genwebupctheme_custom_images"
+     insert-after="custom"/>
+  <layer name="upc_genwebupctheme_custom_templates"
+     insert-after="upc_genwebupctheme_custom_images"/>
+  <layer name="upc_genwebupctheme_styles"
+     insert-after="upc_genwebupctheme_custom_templates"/>
+ </skin-path>
+ 
 </object>

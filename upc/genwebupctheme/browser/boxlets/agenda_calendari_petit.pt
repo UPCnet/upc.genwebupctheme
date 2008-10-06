@@ -1,6 +1,6 @@
 <tal:block tal:define="entries view/published_events;
                        toLocalizedTime nocall:context/@@plone/toLocalizedTime"
-           tal:condition="entries">
+           >
 
 <div id="portlet200"> </div>
     <div id="caixaPortlet">

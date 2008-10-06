@@ -9,7 +9,7 @@
 <body>
 <metal:block fill-slot="top_slot"
              tal:define="dummy python:request.set('disable_border',1)" />
-             
+         
 <div metal:fill-slot="main">
  <metal:main-macro define-macro="main">
 

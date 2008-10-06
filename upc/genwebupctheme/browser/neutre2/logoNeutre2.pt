@@ -1,0 +1,30 @@
+<tal:capsalera define="utils context/@@upc.genweb.utils;
+                         portal_url context/@@plone_portal_state/portal_url;">
+
+<div id="logoNeutre" tal:define="portal_url context/@@plone_portal_state/portal_url;">
+
+    <div class="logoNeutre">
+        <img longdesc="LogoNeutre" alt="" src="imatgeNeutre2.jpg"/>
+    </div>
+
+    <div class="logoNeutre">
+        <img longdesc="Títol de la Web" src="recerca_ca.jpg"               
+               tal:condition="python:utils.pref_lang()=='ca'"
+               tal:attributes="title python: utils.getGWConfig().titolespai_ca"
+        />
+    
+        <img longdesc="Títol de la Web" src="recerca_es.jpg"               
+               tal:condition="python:utils.pref_lang()=='es'"
+               tal:attributes="title python: utils.getGWConfig().titolespai_es"
+        />
+        
+        <img longdesc="Títol de la Web" src="recerca_en.jpg"               
+               tal:condition="python:utils.pref_lang()=='en'"
+               tal:attributes="title python: utils.getGWConfig().titolespai_en"
+        />
+    
+    </div>
+    
+</div>
+
+</tal:capsalera>

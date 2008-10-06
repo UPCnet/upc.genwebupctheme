@@ -10,7 +10,7 @@
 <div id="logoNeutre" tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
     <div class="logoNeutre">
-        <img longdesc="LogoNeutre" alt="" tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/custom/imatge.jpg"/>
+        <img longdesc="LogoNeutre" alt="" src="imatgeNeutre3.jpg"/>
     </div>
     
 </div>

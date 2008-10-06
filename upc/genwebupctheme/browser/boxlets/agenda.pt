@@ -8,7 +8,6 @@
                 showNextMonth view/showNextMonth;
                 year view/year;
                 toLocalizedTime nocall:context/@@plone/toLocalizedTime"                
-           tal:condition="entries"
            i18n:domain="plone">
 
 <!-- CALCULAR FECHA -->

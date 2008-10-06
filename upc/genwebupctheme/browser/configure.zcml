@@ -11,6 +11,7 @@
       You can also use this layer to override default Plone browser views
       and viewlets only within the 'Tema genwebUPC' theme.
       -->
+      
     <interface
         interface=".interfaces.IThemeSpecificNeutre3"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
@@ -63,7 +64,7 @@
 <!-- Viewlets registration -->
 
 <!-- Viewlets comuns a tots els sabors -->
-  <!-- Neutre3 -->
+  <!-- Comuns Neutre3 -->
      <browser:viewlet
          name="upc.genweb.eines"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -72,67 +73,6 @@
          permission="zope2.View"
          />
      
-     <browser:viewlet
-         name="upc.genweb.barraIdiomes"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".barraIdiomes.barraIdiomes"
-         layer=".interfaces.IThemeSpecificNeutre3"
-         permission="zope2.View"
-         />  
-
-     <browser:viewlet
-         name="upc.genweb-peu"
-         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-         class=".peu.Peu"
-         template="peu.pt"
-         layer=".interfaces.IThemeSpecificNeutre3"
-         permission="zope2.View"
-         />
-         
-     <browser:viewlet
-         name="upc.genweb.darreramodificacio"
-         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-         class=".viewlets.DarreraModificacio"
-         layer=".interfaces.IThemeSpecificNeutre3"
-         permission="zope2.View"
-         />
- <!-- Unitats -->
-     <browser:viewlet
-         name="upc.genweb.eines"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.eines"
-         layer=".interfaces.IThemeSpecificUnitat"
-         permission="zope2.View"
-         />
-     
-     <browser:viewlet
-         name="upc.genweb.barraIdiomes"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".barraIdiomes.barraIdiomes"
-         layer=".interfaces.IThemeSpecificUnitat"
-         permission="zope2.View"
-         />  
-
-     <browser:viewlet
-         name="upc.genweb-peu"
-         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-         class=".peu.Peu"
-         template="peu.pt"
-         layer=".interfaces.IThemeSpecificUnitat"
-         permission="zope2.View"
-         />
-         
-     <browser:viewlet
-         name="upc.genweb.darreramodificacio"
-         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-         class=".viewlets.DarreraModificacio"
-         layer=".interfaces.IThemeSpecificUnitat"
-         permission="zope2.View"
-         />
-
-
-<!-- Viewlets especifics -->
- <!-- Neutre3 -->
      <browser:viewlet
          name="upc.genweb.capsaleraSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -140,32 +80,327 @@
          layer=".interfaces.IThemeSpecificNeutre3"
          permission="zope2.View"
          />
-         
+
      <browser:viewlet
-         name="upc.genweb.logosSuperior"
+         name="upc.genweb.titols"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.logosSuperior"
+         class=".capsalera.titols"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />  
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
          layer=".interfaces.IThemeSpecificNeutre3"
          permission="zope2.View"
          />
 
      <browser:viewlet
-         name="upc.genweb.logoNeutre"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.logoNeutre"
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
          layer=".interfaces.IThemeSpecificNeutre3"
          permission="zope2.View"
          />
+         
+  <!-- Comuns Unitat -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titols"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titols"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />  
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+
+  <!-- Comuns Neutre2 -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titols"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titols"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />  
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+  
+   <!-- Comuns Master -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titolsMaster"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titolsMaster"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />  
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+  
+   
+  <!-- Comuns Portal -->
+  
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificPortal"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificPortal"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titols"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titols"
+         layer=".interfaces.IThemeSpecificPortal"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificPortal"
+         permission="zope2.View"
+         />  
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificPortal"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificPortal"
+         permission="zope2.View"
+         />
+
+<!-- Viewlets especifics -->
+ <!-- Específic Neutre3 -->
+     <browser:viewlet
+         name="upc.genweb.logoNeutre3"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoNeutre3"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+        
+<!-- Específic Neutre2 -->
+     <browser:viewlet
+         name="upc.genweb.logoNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+<!-- Específic Unitat -->
+     <browser:viewlet
+         name="upc.genweb.logoUnitat"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoUnitat"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+<!-- Específic Master -->
+     <browser:viewlet
+         name="upc.genweb.logoMaster"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoMaster"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+
+<!-- Específic Portal -->        
+        
         
 <!-- Home Page Neutre3 --> 
     <browser:page
       name="homepage"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      class=".homepage.HomePageView"
+      class=".neutre3.homepage.HomePageView"
       layer=".interfaces.IThemeSpecificNeutre3"
       permission="zope2.View"
       />
 
+<!-- Home Page Neutre2 -->
+    <browser:page
+      name="homepage"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".neutre2.homepage.HomePageView"
+      layer=".interfaces.IThemeSpecificNeutre2"
+      permission="zope2.View"
+      />
 
-
+<!-- Home Page Unitat -->
+    <browser:page
+      name="homepage"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".unitat.homepage.HomePageView"
+      layer=".interfaces.IThemeSpecificUnitat"
+      permission="zope2.View"
+      />
+      
+<!-- Home Page Master -->
+    <browser:page
+      name="homepage"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".master.homepage.HomePageView"
+      layer=".interfaces.IThemeSpecificMaster"
+      permission="zope2.View"
+      />
+      
+<!-- Home Page Portal -->
+    <browser:page
+      name="homepage"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".portal.homepage.HomePageView"
+      layer=".interfaces.IThemeSpecificPortal"
+      permission="zope2.View"
+      />
+      
 </configure>

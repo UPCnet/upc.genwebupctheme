@@ -1,54 +1,167 @@
 <?xml version="1.0"?>
 <object>
-    
-  <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre3"
-         based-on="Plone Default">
-    <viewlet name="upc.genweb.capsaleraSuperior" 
-       insert-before="*" />
-    <viewlet name="upc.genweb.logosSuperior" 
-       insert-afer="upc.genweb.capsaleraSuperior" />
-    <viewlet name="upc.genweb.logoNeutre" 
-       insert-afer="upc.genweb.logosSuperior" />
-    <viewlet name="upc.genweb.barraIdiomes" 
-       insert-afer="upc.genweb.logoNeutre" />
-    <viewlet name="upc.genweb.eines" 
-       insert-afer="upc.genweb.barraIdiomes" />
-    <viewlet name="plone.global_sections" 
-       insert-afer="upc.genweb.eines" />
-  </order>
-  
-  <order manager="plone.portalfooter" skinname="Tema genwebUPC Neutre3"
-         based-on="Plone Default">
-  </order>
-
-  <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Neutre3">
-    <viewlet name="plone.abovecontenttitle.documentactions" />
-  </hidden>
-
-  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre3">
-    <viewlet name="plone.abovecontenttitle.documentactions" />
-  </order>
-
-  <order manager="plone.belowcontent" skinname="Tema genwebUPC Neutre3">
-    <viewlet name="plone.nextprevious" />
-    <viewlet name="plone.comments" />
-    <viewlet name="upc.genweb.darreramodificacio" />
-  </order>
-  
-  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre3">
-    <viewlet name="plone.personal_bar" />
-    <viewlet name="plone.app.i18n.locales.languageselector" />
-  </hidden>
-
-  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
-    <viewlet name="plone.site_actions" />
-    <viewlet name="plone.logo" />    
-    <viewlet name="plone.searchbox" />
-  </hidden>
-
-  <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Neutre3">
-    <viewlet name="plone.footer" />
-    <viewlet name="plone.colophon" />
-  </hidden>
-  
+ <order manager="plone.portalheader" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="upc.genweb.capsaleraSuperior"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="upc.genweb.titolsMaster"/>
+  <viewlet name="upc.genweb.logoMaster"/>
+  <viewlet name="upc.genweb.barraIdiomes"/>
+  <viewlet name="upc.genweb.eines"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+ <order manager="plone.belowcontent" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.nextprevious"/>
+  <viewlet name="plone.comments"/>
+  <viewlet name="upc.genweb.darreramodificacio"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="upc.genweb.titolsNeutre3"/>
+  <viewlet name="upc.genweb.capsaleraSuperior"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="upc.genweb.titols"/>
+  <viewlet name="upc.genweb.logoNeutre3"/>
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="upc.genweb.barraIdiomes"/>
+  <viewlet name="upc.genweb.eines"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="Plone Default">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Plone Default">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portaltop" skinname="Plone Default">
+  <viewlet name="plone.header"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="plone.path_bar"/>
+ </order>
+ <order manager="plone.contentviews" skinname="Plone Default">
+  <viewlet name="plone.contentviews"/>
+  <viewlet name="plone.contentactions"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="upc.genweb.capsaleraSuperior"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="upc.genweb.titols"/>
+  <viewlet name="upc.genweb.logoNeutre2"/>
+  <viewlet name="upc.genweb.barraIdiomes"/>
+  <viewlet name="upc.genweb.eines"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portaltop" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.header"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.path_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+ </order>
+ <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+ <order manager="plone.belowcontent" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.nextprevious"/>
+  <viewlet name="plone.comments"/>
+  <viewlet name="upc.genweb.darreramodificacio"/>
+ </order>
+ <order manager="plone.portalheader" skinname="Tema genwebUPC Unitat">
+  <viewlet name="upc.genweb.capsaleraSuperior"/>
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="upc.genweb.titols"/>
+  <viewlet name="upc.genweb.barraIdiomes"/>
+  <viewlet name="upc.genweb.eines"/>
+  <viewlet name="upc.genweb.logoUnitat"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portaltop" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.header"/>
+  <viewlet name="plone.path_bar"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+ </order>
+ <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.site_actions"/>
+ </hidden>
+ <hidden manager="plone.portaltop" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+ </hidden>
+ <hidden manager="plone.belowcontenttitle" skinname="Tema genwebUPC Neutre3"/>
+ <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.logoUnitat"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="upc.genweb.logoUnitat"/>
+ </hidden>
+ <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </hidden>
+ <hidden manager="plone.belowcontent" skinname="Tema genwebUPC Neutre3"/>
+ <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.logo"/>
+ </hidden>
+ <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="plone.personal_bar"/>
+ </hidden>
+ <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.searchbox"/>
+ </hidden>
+ <hidden manager="plone.portaltop" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+ </hidden>
 </object>
