@@ -7,15 +7,45 @@
       i18n:domain="upc.genwebupc">
       
 <body>
+
 <metal:block fill-slot="top_slot"
              tal:define="dummy python:request.set('disable_border',1)" />
          
 <div metal:fill-slot="main">
  <metal:main-macro define-macro="main">
-
-  HOMEPAGE PORTAL
-  
-  
+HOMEPAGE PORTAL
+  <div id="contenidor">
+    <div class="contingut">
+      <div class="columnaDreta" tal:define="boxesdreta view/getColumn3">
+      <!-- Columna dreta  -->
+      <div tal:repeat="box boxesdreta">
+        <div tal:replace="structure python:path('context/box.'+box+'_mini')">
+            Caixetes dreta
+        </div>
+      </div>      
+      </div>
+      <div class="columnaEsq" tal:define="boxesesquerra view/getColumn2">
+      <!-- Columna esquerra  -->
+      <div tal:repeat="box boxesesquerra">
+        <div tal:replace="structure python:path('context/box.'+box+'_petit')">
+            Caixetes esquerra
+        </div>
+      </div>
+      </div>
+      <div class="columnaCentre" tal:define="boxescentre view/getColumn1">
+      <!-- Columna Central -->
+      <div tal:define="front view/getFrontPage">
+        <h1 tal:content="front/title">Titol principal</h1>
+        <div tal:replace="structure front/body">Cos de la pagina principal</div>
+      </div>
+      <div tal:repeat="box boxescentre">
+        <div tal:replace="structure python:path('context/box.'+box)">
+            Caixetes centre
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
  </metal:main-macro>
 </div>
 </body>
