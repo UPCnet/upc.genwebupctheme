@@ -1,0 +1,108 @@
+/* CSS UPC GENWEB 3.0 */
+
+/********************************************************************** CAPÇALERA *******************************************************************************/
+/********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
+body{
+margin-top:10px;
+}
+.logo
+{
+float:left;
+margin: 45px 0px 0px 25px;
+}
+.titolWeb
+{
+text-align:center;
+margin:0px 180px 0px 180px;
+}
+.imatgeCapcalera{
+width:706px;
+min-height:129px;
+background:url(../img/custom/imatge.jpg) no-repeat top center;/*------ imatge del custom /!\ ----*/
+margin:-58px 126px 0px 126px;
+
+}
+.barraIdiomes{
+float:right;
+padding: 10px 5px 0px 0px;
+}
+.barraUsuari{
+margin-right:150px;
+padding: 10px 0px 0px 5px;
+font-size:0.9em;
+}
+.banda{
+background:url(../img/custom/banda.gif) no-repeat;
+height:21px;
+margin: 10px 0px 50px 0px;
+}
+
+.daltMenu{
+height:110px;
+border-right: 2px solid #ffffff;
+}
+.alpha{
+background: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/pixelAlpha.png",sizingMethod="scale");
+}
+.daltMenuPrimer{
+border-left: 2px solid #ffffff;
+}
+.baixMenu{
+min-height:20px;
+text-align:left;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:1.2em;
+text-transform:uppercase;
+color:#cc0000; /*específic 2*/
+font-weight:bold;
+border-left: 2px solid #ff784d; /*específic1*/
+padding:4px 25px 1px 8px;
+vertical-align:top;
+}
+.descripcioMenu{
+text-align:left;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+padding:0px 9px;
+vertical-align:top;
+}
+.actiuMenu{
+height:8px;
+border-bottom:2px solid #ff784d; /*específic1*/
+}
+.seleccionatMenu{
+border-left:2px solid #ff784d; /*específic1*/
+border-right:2px solid #ff784d; /*específic1*/
+}
+.alphaCustom{
+background: none;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/custom/pixelAlphaCustom.png",sizingMethod="scale");
+}
+.liniaActivaEsq{
+float:left;
+width:151px;
+margin-top:-2px; /* internet explorer -3px*/
+border-top:2px solid #ff784d; /*específic1*/
+font-size:0em;
+}
+.liniaActivaDreta{
+float:right;
+width:151px;
+margin-top:-2px; /* internet explorer -3px*/
+border-top:2px solid #ff784d; /*específic1*/
+font-size:0em;
+}
+.degradat{
+background:url(../img/custom/degradat.gif) repeat-x;
+min-height:18px;
+margin-top:-2px; /* internet explorer -13px*/
+width:958px;
+padding-top:1px;
+}
+.imatgeCapcalera table{
+border-collapse:collapse;
+padding:0px;
+margin: 0px 25px;
+width: 656px;
+}
+

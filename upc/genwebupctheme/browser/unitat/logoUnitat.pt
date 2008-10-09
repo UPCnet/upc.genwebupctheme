@@ -7,10 +7,10 @@
       
 -->
 
-<div id="logoNeutre" tal:define="portal_url context/@@plone_portal_state/portal_url;">
+<div  tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
-    <div class="logoNeutre">
-        <img longdesc="LogoNeutre" alt="" src="imatgeUnitat.jpg"/>
+    <div class="imatgeCapcalera">
+        <img src="imatgeUnitat.jpg"/>
     </div>
     
 </div>

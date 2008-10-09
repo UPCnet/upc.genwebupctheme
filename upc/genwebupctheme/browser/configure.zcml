@@ -163,6 +163,15 @@
          layer=".interfaces.IThemeSpecificUnitat"
          permission="zope2.View"
          />
+         
+     <browser:viewlet
+         name="upc.genweb.barraColor"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.barraColor"
+         template="barra.pt"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />         
 
 
   <!-- Comuns Neutre2 -->

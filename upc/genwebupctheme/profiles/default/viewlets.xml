@@ -91,6 +91,7 @@
   <viewlet name="plone.searchbox"/>
   <viewlet name="plone.logo"/>
   <viewlet name="upc.genweb.titols"/>
+  <viewlet name="upc.genweb.barraColor"/>  
   <viewlet name="upc.genweb.barraIdiomes"/>
   <viewlet name="upc.genweb.eines"/>
   <viewlet name="upc.genweb.logoUnitat"/>

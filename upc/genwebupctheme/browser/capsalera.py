@@ -52,7 +52,6 @@ class titolsMaster(ViewletBase):
 class titols(ViewletBase):
     render = ViewPageTemplateFile('titols.pt')    
         
-        
 class logoNeutre3(ViewletBase):
     render = ViewPageTemplateFile('neutre3/logoNeutre3.pt')
     
@@ -65,6 +64,8 @@ class logoUnitat(ViewletBase):
 class logoMaster(ViewletBase):
     render = ViewPageTemplateFile('master/logoMaster.pt')    
 
+class barraColor (ViewletBase):
+    render = ViewPageTemplateFile('barra.pt')
 
 class eines(ViewletBase):
     render = ViewPageTemplateFile('eines.pt')

@@ -4,7 +4,7 @@
     tal:condition="view/site_actions"
     i18n:domain="plone">
     
-   <div class="bandaSuperior"></div>
+<!--     <div class="bandaSuperior"></div> -->
    <div class="barraCerca">
     
     <form name="searchform"
