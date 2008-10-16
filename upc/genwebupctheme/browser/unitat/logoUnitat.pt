@@ -1,16 +1,35 @@
-<!--
-   <div id="capcaplera">
-   <div class="bandaSuperior"></div>
-   
-   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">cerca avançada</a> 
-   <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
-      
--->
 
-<div  tal:define="portal_url context/@@plone_portal_state/portal_url;">
+    
 
-    <div class="imatgeCapcalera">
-        <img src="imatgeUnitat.jpg"/>
+
+
+<div class="imatgeCapcaleraUnitat">
+    <table>
+    <img src="imatgeUnitat.jpg"/>
+    <tbody>
+
+  <tr class="daltMenu">
+    <td class="daltMenu daltMenuPrimer"></td>
+    <td class="daltMenu"></td>
+    <td class="daltMenu"></td>
+    <td class="daltMenu" width="100%"></td>
+
+  </tr>
+  <tr>
+    <td class="baixMenu"><a href="#">Presentació </a></td>
+    <td class="baixMenu">Professors</td>
+    <td class="baixMenu"><a href="#">AXCVXCVlumnes</a></td>
+    <td class="baixMenu"><a href="#">Exalumnes</a></td>
+  </tr>
+
+  <tr>
+    <td class="descripcioMenu">Lorem ipsum</td>
+    <td class="descripcioMenu">Dolor consectueur est</td>
+    <td class="descripcioMenu">Semprem activatiam tral severent</td>
+    <td class="descripcioMenu">Grand</td>
+  </tr>
+</table>
+    
+        
     </div>
     
-</div>

@@ -16,14 +16,14 @@
 	_width:160px;}
 .logo a {
     margin-right:3px;}
-.logo img { float: left; }
+.logo img {
+	float: left; }
 .titolWeb {
     text-align:center;
     margin:10px 180px 10px 180px;}
 .imatgeCapcalera{
     width:958px;
     height:95px;
-    background-image:url(++resource++upc.genwebupctheme.images/custom/imatge.jpg);/*------ imatge del custom  ----*/
     text-align:right;}
 .barraIdiomes{
     padding: 75px 5px 0px 0px;}

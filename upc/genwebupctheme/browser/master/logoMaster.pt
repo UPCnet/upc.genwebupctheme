@@ -1,16 +1,10 @@
-<!--
-   <div id="capcaplera">
-   <div class="bandaSuperior"></div>
-   
-   <div class="barraCerca"><img class="quadradet" src="++resource++upc.genwebupctheme.images/quadradet.gif" alt="quadradet" /> <a href="#">identifica't</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">inici</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">mapa del lloc</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">contacte</a> <img class="quadradet" src="img/quadradet.gif" alt="quadradet" /> <a href="#">cerca avançada</a> 
-   <input name="paraula" type="text" class="text" size="15" /><input name="go" value="" class="submitGo" type="submit" /></div>
-      
--->
+<div tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
-<div id="logoNeutre" tal:define="portal_url context/@@plone_portal_state/portal_url;">
-
-    <div class="logoNeutre">
-        <img longdesc="LogoNeutre" alt="" src="imatgeMaster.jpg"/>
+    <div class="barraBrancaMaster">
+            Enginyeria Industrial <!--  /* el br va enl panel de control!*/ -->
     </div>
-    
+    <div>
+        <img longdesc="LogoMaster" alt="" src="imatgeMaster.jpg"/>
+    </div>
+        <div class="liniaPrincipalMaster"></div>
 </div>

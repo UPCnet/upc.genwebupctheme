@@ -1,56 +1,65 @@
 /* CSS UPC GENWEB 3.0 */
+/********************************************* CAPÇALERA ********************************************************************/
+/******************************************* ESPECÍFICS MODEL IMATGE ALLARGADA **********************************************/
 
-/********************************************************************** CAPÇALERA *******************************************************************************/
-/********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
-body{
-padding-top:5px;
-}
-.logo
-{
-float:left;
-padding-top:25px;
-padding-left:12px;
+
+.logoNeutre2 { 
+  float:left;
+  padding-top:25px;
+  padding-left:12px;
 }
 
-.titolWeb{
-text-align:left;
-margin-left:220px;
+.titolWebNeutre2 {
+  text-align:left;
+ /* margin-left:220px;*/
+  margin: 7px;
 }
-.cursMaster{
-font-family:Arial, Helvetica, Verdana, sans-serif;
-font-size:16px;
-color:#007dcb;
+
+.liniaPrincipalNeutre2{ 
+  height:4px;
+  width:100%;
+  margin:0px;
+  background-color:#FF6600; /*específic1*/
+  font-size:0.05em;
 }
-.imatgeCapcalera{
-margin-top:-96px;
-width:958px;
-height:96px;
-background: url(../img/custom/imatge.jpg) no-repeat top right;/*------ imatge del custom /!\ ----*/
-text-align:right;
+
+/*
+bodyNeutre2{
+  padding-top:5px;
 }
-.barraIdiomes{
-padding: 79px 5px 0px 0px;
-margin-bottom:0px;
-float:right;
+
+
+.cursMasterNeutre2{
+  font-family:Arial, Helvetica, Verdana, sans-serif;
+  font-size:16px;
+  color:#007dcb;
 }
-.barraUsuari{
-padding: 80px 5px 0px 8px;
-float:left;
-font-size:0.9em;
+
+.imatgeCapcaleraNeutre2{ 
+  margin-top:-96px;
+  width:958px;
+  height:39px;
+  text-align:right;
 }
-.barraTipus{
-width:200px;
-height:96px;
-background: url(../img/custom/recerca_ca.jpg) no-repeat bottom left;
+
+.barraIdiomesNeutre2{
+  padding: 79px 5px 0px 0px;
+  margin-bottom:0px;
+  float:right;
 }
-.liniaPrincipal{
-height:4px;
-width:100%;
-margin:0px;
-background-color:#FF6600; /*específic1*/
-font-size:0.05em;
+
+.barraUsuariNeutre2{
+  padding: 80px 5px 0px 8px;
+  float:left;
+  font-size:0.9em;
 }
-.clearAll{
-clear:both;
-padding: 0px;
+
+.barraTipusNeutre2{
+  width:200px;
+  height:96px;
 }
+
+.clearAllNeutre2{
+  clear:both;
+  padding: 0px;
+}*/

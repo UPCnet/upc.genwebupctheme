@@ -32,9 +32,9 @@ padding: 10px 0px 0px 5px;
 font-size:0.9em;
 }
 .banda{
-background:url(../img/custom/banda.gif) no-repeat;
-height:21px;
-margin: 10px 0px 50px 0px;
+background: no-repeat;
+/*height:21px;
+margin: 10px 0px 50px 0px;*/
 }
 
 .daltMenu{

@@ -1,15 +1,13 @@
 /* CSS UPC GENWEB 3.0 */
-
-/********************************************************************** CAPÇALERA *******************************************************************************/
+   /********************************************************************** CAPÇALERA *******************************************************************************/
 /********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
 body{
 padding-top:5px;
 }
-.logo
-{
-float:left;
-padding-top:13px;
-padding-left:12px;
+.logoMaster img{
+  float:left;
+  padding-top:13px;
+  padding-left:12px;
 }
 .banerMasters{
 float:right;
@@ -39,15 +37,14 @@ padding: 75px 5px 0px 5px;
 float:left;
 font-size:0.9em;
 }
-.barraBranca{
-width:177px;
-padding: 23px 5px 0px 5px;
-float:left;
-font-weight:bold;
-font-size:1.1em;
-color:#B0D73C; /*específic1*/
+.barraBrancaMaster{ 
+    padding: 46px 5px 0px;
+    float:left;
+    font-weight:bold;
+    font-size:1.1em;
+    color:#B0D73C; /*específic1*/
 }
-.liniaPrincipal{
+.liniaPrincipalMaster{
 height:6px;
 width:100%;
 background-color:#B0D73C; /*específic1*/
