@@ -1,15 +1,21 @@
+/* CSS UPC GENWEB 3.0 */
 
-.logo_u
+/********************************************************************** CAPÇALERA *******************************************************************************/
+/********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
+body{
+margin-top:10px;
+}
+.logo
 {
 float:left;
 margin: 45px 0px 0px 25px;
 }
-.titolWeb_u
+.titolWeb
 {
 text-align:center;
 margin:0px 180px 0px 180px;
 }
-.imatgeCapcalera_u{
+.imatgeCapcalera{
 width:706px;
 min-height:129px;
 background: no-repeat top center;
@@ -25,7 +31,7 @@ margin-right:150px;
 padding: 10px 0px 0px 5px;
 font-size:0.9em;
 }
-.banda_u{
+.banda{
 background: no-repeat;
 height:21px;
 margin: 10px 0px 50px 0px;
@@ -49,9 +55,9 @@ text-align:left;
 font-family:Verdana, Arial, Helvetica, sans-serif;
 font-size:1.2em;
 text-transform:uppercase;
-color:#cc0000; /*específic 2*/
+color:#cc0000; /*especí­fic 2*/
 font-weight:bold;
-border-left: 2px solid #ff784d; /*específic1*/
+border-left: 2px solid #ff784d; /*especí­fic1*/
 padding:4px 25px 1px 8px;
 vertical-align:top;
 }
@@ -63,11 +69,11 @@ vertical-align:top;
 }
 .actiuMenu{
 height:8px;
-border-bottom:2px solid #ff784d; /*específic1*/
+border-bottom:2px solid #ff784d; /*especí­fic1*/
 }
 .seleccionatMenu{
-border-left:2px solid #ff784d; /*específic1*/
-border-right:2px solid #ff784d; /*específic1*/
+border-left:2px solid #ff784d; /*especí­fic1*/
+border-right:2px solid #ff784d; /*especí­fic1*/
 }
 .alphaCustom{
 background:url(../img/custom/pixelAlphaCustom.png);
@@ -79,7 +85,7 @@ float:left;
 width:151px;
 margin-top:-1px; /* internet explorer -3px*/
 *margin-top:-2px; /* internet explorer -3px*/
-border-top:2px solid #ff784d; /*específic1*/
+border-top:2px solid #ff784d; /*especí­fic1*/
 font-size:0em;
 }
 .liniaActivaDreta{
@@ -88,7 +94,7 @@ width:151px;
 margin-top:-1px; /* internet explorer -3px*/
 *
 margin-top:-2px; /* internet explorer -3px*/
-border-top:2px solid #ff784d; /*específic1*/
+border-top:2px solid #ff784d; /*especí­fic1*/
 font-size:0em;
 }
 .degradat{
