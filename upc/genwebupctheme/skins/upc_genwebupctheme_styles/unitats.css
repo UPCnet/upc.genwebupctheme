@@ -15,17 +15,14 @@ margin: 45px 0px 0px 25px;
 text-align:center;
 margin:0px 180px 0px 180px;
 }
-.imatgeCapcalera{
-width:706px;
+.imatgeCapcaleraUnitat{
+background: transparent url(ImatgeUnitat.jpg) no-repeat scroll center top width:706px;
 min-height:129px;
 background: no-repeat top center;
 margin:0px 126px 0px 126px;
 
 }
-.barraIdiomes{
-float:right;
-padding: 10px 5px 0px 0px;
-}
+
 .barraUsuari{
 margin-right:150px;
 padding: 10px 0px 0px 5px;
@@ -33,8 +30,8 @@ font-size:0.9em;
 }
 .banda{
 background: no-repeat;
-height:21px;
-margin: 10px 0px 50px 0px;
+/*height:21px;*/
+margin: 10px 0px 10px 0px;
 }
 
 .daltMenu{
@@ -105,7 +102,7 @@ margin-top:1px; /* internet explorer -13px*/
 width:958px;
 padding-top:1px;
 }
-.imatgeCapcalera table{
+.imatgeCapcaleraUnitat table{
 border-collapse:collapse;
 padding:0px;
 margin: 0px 25px;
