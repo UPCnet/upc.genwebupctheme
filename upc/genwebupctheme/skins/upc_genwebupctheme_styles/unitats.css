@@ -1,22 +1,16 @@
-/* CSS UPC GENWEB 3.0 */
 
-/********************************************************************** CAPÇALERA *******************************************************************************/
-/********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
-body{
-margin-top:10px;
-}
-.logo
+.logo_u
 {
 float:left;
 margin: 45px 0px 0px 25px;
 }
-.titolWeb
+.titolWeb_u
 {
 text-align:center;
 margin:0px 180px 0px 180px;
 }
-.imatgeCapcaleraUnitat{
-width:506px;
+.imatgeCapcalera_u{
+width:706px;
 min-height:129px;
 background: no-repeat top center;
 margin:0px 126px 0px 126px;
@@ -31,10 +25,10 @@ margin-right:150px;
 padding: 10px 0px 0px 5px;
 font-size:0.9em;
 }
-.banda{
+.banda_u{
 background: no-repeat;
-/*height:21px;*/
-margin: 10px 0px 10px 0px;
+height:21px;
+margin: 10px 0px 50px 0px;
 }
 
 .daltMenu{
@@ -43,6 +37,8 @@ border-right: 2px solid #ffffff;
 }
 .alpha{
 background:url(../img/pixelAlpha.png);
+_background: none; /*ie6hack*/
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/pixelAlpha.png",sizingMethod="scale");
 }
 .daltMenuPrimer{
 border-left: 2px solid #ffffff;
@@ -75,11 +71,14 @@ border-right:2px solid #ff784d; /*específic1*/
 }
 .alphaCustom{
 background:url(../img/custom/pixelAlphaCustom.png);
+_background: none;
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/custom/pixelAlphaCustom.png",sizingMethod="scale");
 }
 .liniaActivaEsq{
 float:left;
 width:151px;
 margin-top:-1px; /* internet explorer -3px*/
+*margin-top:-2px; /* internet explorer -3px*/
 border-top:2px solid #ff784d; /*específic1*/
 font-size:0em;
 }
@@ -87,6 +86,8 @@ font-size:0em;
 float:right;
 width:151px;
 margin-top:-1px; /* internet explorer -3px*/
+*
+margin-top:-2px; /* internet explorer -3px*/
 border-top:2px solid #ff784d; /*específic1*/
 font-size:0em;
 }
@@ -94,6 +95,7 @@ font-size:0em;
 background:url(../img/custom/degradat.gif) repeat-x;
 min-height:18px;
 margin-top:1px; /* internet explorer -13px*/
+*margin-top:-2px; /* internet explorer -13px*/
 width:958px;
 padding-top:1px;
 }

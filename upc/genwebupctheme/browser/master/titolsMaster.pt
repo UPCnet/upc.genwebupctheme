@@ -1,7 +1,7 @@
 <tal:capsalera define="utils context/@@upc.genweb.utils;
                          portal_url context/@@plone_portal_state/portal_url;">
 
-<div class="clearAllMaster">                         
+<div class="clearAll_m">                         
     <div class="banerMasters">
         <a href="" tal:attributes="href string:${view/portal_url}/">
         <!-- titol en catala -->
@@ -18,7 +18,7 @@
                tal:attributes="title python: utils.getGWConfig().titolespai_en"/>
         </a>
     </div>                         
-    <div class="logoMaster">
+    <div class="logo_m">
         <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya"  src="LogoUPC.gif"/>
         <map name="logoUPC" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya" /></map>
         <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
@@ -36,7 +36,7 @@
                 tal:attributes="title python: utils.getGWConfig().firmaunitat_en"/>
         </a>
     </div>
-    <div class="titolWebMaster">
+    <div class="titolWeb_m">
         <a href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
             <img longdesc="Títol de la Web" src="titolWeb_ca.gif"               

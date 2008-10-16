@@ -1,10 +1,10 @@
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
-    <div class="barraBrancaMaster">
+    <div class="barraBranca_m">
             Enginyeria Industrial <!--  /* el br va enl panel de control!*/ -->
     </div>
-    <div>
+    <div class="imatgeCapcalera_m">
         <img longdesc="LogoMaster" alt="" src="imatgeMaster.jpg"/>
     </div>
-        <div class="liniaPrincipalMaster"></div>
+        <div class="liniaPrincipal_m"> </div>
 </div>

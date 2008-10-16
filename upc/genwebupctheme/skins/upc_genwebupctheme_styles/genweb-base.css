@@ -1676,5 +1676,6 @@ div.contacte h5 {color:#666;margin:0px !important;}
 div .contacteSpan {float:left; width:70px; text-align:right; margin-right:15px;font-weight:bold; color:#666; margin-left:20px;}
 div.contacte div.contacteSpan {float:left; width:70px; text-align:right; margin-right:15px;font-weight:bold; color:#666; margin-left:10px;}
 div.contacte div, div.contacte h5 {padding-bottom:5px;}
-iframe {width:958px;}
+iframe {width:908px;}
 div span.contacteSpan {display:block;}
+form fieldset {margin-top:0px !important; padding-top:0px !important;}
