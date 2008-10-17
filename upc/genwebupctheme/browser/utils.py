@@ -11,9 +11,11 @@ from Products.CMFPlone import PloneMessageFactory as _
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
 from zope.component import getMultiAdapter, getUtility
-from upc.genwebupc.browser.interfaces import IgenWebUtility, IExtractInfo
+from upc.genwebupc.browser.interfaces import IgenWebUtility
 from Products.ATContentTypes.interface.folder import IATFolder
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
+
+import MySQLdb
 
 PLMF = MessageFactory('plonelocales')
 
@@ -59,10 +61,23 @@ class utilitats(BrowserView):
         if  IATFolder.providedBy(self.context) or IPloneSiteRoot.providedBy(self.context):
             return True
 
-    def getDatabaseInformation(self, id):
+    def extraeDatosMysql(self, id):
         """ Retorna un objeto con las columnas de la tabla upc.unitat de la base de datos www-estudis 
             de acuerdo al id de la escuela.
         """
-        util = getUtility(IExtractInfo)
-        return util.getDatos(id)
+        
+        db=MySQLdb.connect(host='raiden.upc.es',user='www-estudis',passwd='bdestudis',db='www-estudis')
+        c=db.cursor()
+        c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
+        _results = c.fetchone()
+        
+        _dictResult = {}
+        _dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
+        c=0
 
+        for ii in _dictKeys: 
+            _dictResult[ii]=_results[c]
+            c=c+1
+            
+        return _dictResult
+    
