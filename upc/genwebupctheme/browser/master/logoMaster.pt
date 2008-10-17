@@ -1,8 +1,10 @@
-<div tal:define="portal_url context/@@plone_portal_state/portal_url;">
-
-    <div class="barraBranca_m">
-            Enginyeria Industrial <!--  /* el br va enl panel de control!*/ -->
-    </div>
+<div tal:define="portal_url context/@@plone_portal_state/portal_url;
+                                                utils context/@@upc.genweb.utils;">
+            
+     <div class="barraBranca_m" tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().titolcapsaleraMaster"> UPC </div>
+     <div class="barraBranca_m" tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().titolcapsaleraMaster"> UPC </div>
+     <div class="barraBranca_m" tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().titolcapsaleraMaster"> UPC  </div>
+    
     <div class="imatgeCapcalera_m">
         <img longdesc="LogoMaster" alt="" src="imatgeMaster.jpg"/>
     </div>

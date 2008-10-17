@@ -39,19 +39,26 @@
     <div class="titolWeb_m">
         <a href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
-            <img longdesc="Títol de la Web" src="titolWeb_ca.gif"               
+            <img longdesc="Títol de la Web" src="titolWebMaster_ca.gif"               
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="title python: utils.getGWConfig().titolespai_ca" />
             <!-- titol en castella -->
-            <img longdesc="Títol de la Web" src="titolWeb_es.gif"               
+            <img longdesc="Títol de la Web" src="titolWebMaster_es.gif"               
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="title python: utils.getGWConfig().titolespai_es" />
             <!-- titol en angles -->
-            <img longdesc="Títol de la Web" src="titolWeb_en.gif"               
+            <img longdesc="Títol de la Web" src="titolWebMaster_en.gif"               
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en" />
         </a>
+        <br/>
+
+        <span class="cursMaster" tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().edicio_ca"> 2008/2009 </span>
+        <span class="cursMaster" tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().edicio_es"> 2008/2009 </span>
+        <span class="cursMaster" tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().edicio_en"> 2008/2009  </span>
+
     </div>
+
 </div>
 
 </tal:capsalera>

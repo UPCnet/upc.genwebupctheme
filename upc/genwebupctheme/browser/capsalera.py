@@ -49,6 +49,9 @@ class capsaleraSuperior(ViewletBase):
 class titolsMaster(ViewletBase):
     render = ViewPageTemplateFile('master/titolsMaster.pt')        
     
+class titolsNeutre2(ViewletBase):
+    render = ViewPageTemplateFile('neutre2/titolsNeutre2.pt')
+    
 class titols(ViewletBase):
     render = ViewPageTemplateFile('titols.pt')    
         

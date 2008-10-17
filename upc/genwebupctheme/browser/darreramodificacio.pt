@@ -1,7 +1,7 @@
 <div tal:define="utils context/@@upc.genweb.utils" tal:condition="python: not utils.isFolder()"> 
 <div class="fletxatop">
     <a tal:attributes="href python:context.absolute_url()+'/#'">
-        <img alt="Top of page" title="Top of page" src="++resource++upc.genwebupctheme.images/feltxa16blava.png"/>
+        <img alt="Top of page" title="Top of page" src="fletxa16blava.png"/>
     </a>
 </div>
 

@@ -173,7 +173,6 @@
          permission="zope2.View"
          />         
 
-
   <!-- Comuns Neutre2 -->
      <browser:viewlet
          name="upc.genweb.eines"
@@ -190,15 +189,7 @@
          layer=".interfaces.IThemeSpecificNeutre2"
          permission="zope2.View"
          />
-
-     <browser:viewlet
-         name="upc.genweb.titols"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.titols"
-         layer=".interfaces.IThemeSpecificNeutre2"
-         permission="zope2.View"
-         />
-     
+   
      <browser:viewlet
          name="upc.genweb.barraIdiomes"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -341,6 +332,14 @@
          name="upc.genweb.logoNeutre2"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.logoNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+     
+     <browser:viewlet
+         name="upc.genweb.titolsNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titolsNeutre2"
          layer=".interfaces.IThemeSpecificNeutre2"
          permission="zope2.View"
          />

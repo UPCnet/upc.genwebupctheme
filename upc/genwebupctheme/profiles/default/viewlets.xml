@@ -64,7 +64,7 @@
   <viewlet name="plone.searchbox"/>
   <viewlet name="upc.genweb.capsaleraSuperior"/>
   <viewlet name="plone.logo"/>
-  <viewlet name="upc.genweb.titols"/>
+  <viewlet name="upc.genweb.titolsNeutre2"/>
   <viewlet name="upc.genweb.logoNeutre2"/>
   <viewlet name="upc.genweb.barraIdiomes"/>
   <viewlet name="upc.genweb.eines"/>
