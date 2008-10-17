@@ -1038,7 +1038,7 @@ tr.dragging td{
 ul.formTabs {
 	display:block;
 	list-style-type:none;
-	margin:0px 0px -26px 0px;
+	margin:0px 0px -25px 0px;
 	padding:0pt;
 	position:relative;
 	text-align:center;
@@ -1682,3 +1682,23 @@ div.contacte div, div.contacte h5 {padding-bottom:5px;}
 iframe {width:908px;}
 div span.contacteSpan {display:block;}
 /*form fieldset {margin-top:0px !important; padding-top:0px !important;}*/
+
+
+/*ajustaments visuals de genweb settings*/
+div.value {margin-bottom:20px !important;}
+table.ordered-selection-field {margin-bottom:10px !important;}
+fieldset#fieldset-genWebControlPanelinformacio input,  fieldset#fieldset-genWebControlPanelsabors input {width:700px;}
+fieldset#fieldset-genWebControlPanelespecifics input {width:100px;}
+fieldset#fieldset-genWebControlPanelinformacio div.field {margin-bottom:5px;}
+fieldset#fieldset-genWebControlPanelinformacio input#form.titolespai_en {padding-bottom:20px; !important}
+.widget input {margin-bottom:3px !important;}
+input[id="form.especific2"],input[id="form.especific4"],input[id="form.especific6"] {margin-bottom:15px !important;}
+input[id="form.titolespai_en"], input[id="form.firmaunitat_en"] {margin-bottom:15px !important;}
+select[id="form.columna1.from"],select[id="form.columna1.to"],
+select[id="form.columna2.from"],select[id="form.columna2.to"],
+select[id="form.columna3.from"],select[id="form.columna3.to"] {
+	min-width: 250px;}
+select[id="form.theme"] {min-width:200px;}
+
+
+
