@@ -10,6 +10,11 @@
   padding-right:25px;
 }
 
+.logo_n2 {
+ float:left;
+  min-width:160px;
+}
+
 .titolWebNeutre2 {
   text-align:left;
  /* margin-left:220px;*/
