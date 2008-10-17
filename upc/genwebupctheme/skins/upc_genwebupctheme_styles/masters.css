@@ -1,7 +1,10 @@
 .logo_m{
-  float:left;
-  padding-top:13px;
-  padding-left:12px;
+float:left;
+margin:25px 0 0 25px;
+min-width:160px;
+}
+.logo_m img {
+float:left;
 }
 .banerMasters{
 float:right;
@@ -9,7 +12,7 @@ padding-top:13px;
 }
 .titolWeb_m{
 text-align:left;
-margin-left:260px;
+margin-left:0px;
 }
 .cursMaster{
 font-family:Arial, Helvetica, Verdana, sans-serif;
@@ -17,7 +20,7 @@ font-size:16px;
 color:#007dcb;
 }
 .imatgeCapcalera_m{
-padding-right:158px;
+padding-right:180px;
 width:958px;
 height:85px;
 background: url(../img/custom/imatge.jpg) no-repeat top right;/*------ imatge del custom /!\ ----*/
@@ -35,10 +38,12 @@ float:left;
 font-size:0.9em;
 }
 .barraBranca_m{ 
-    padding: 46px 5px 0px;
+    width:175px;
+    padding: 51px 5px 0px;
     float:left;
     font-weight:bold;
     font-size:1.1em;
+    text-align:right;
     color:#B0D73C; /*específic1*/
 }
 .liniaPrincipal_m{

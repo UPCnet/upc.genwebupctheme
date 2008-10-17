@@ -294,10 +294,10 @@ h1, h2 {
 	
 /* CAPCALERA COMUNS */
 .barraCerca{
-    margin: 4px 0px 0px 5px;
+    margin: 7px 3px 0px 5px;
     text-align: right;
     float:none;
-    margin-top: 7px;}
+}
 .barraCerca img {
     vertical-align: baseline;}
 .go {
@@ -1669,6 +1669,9 @@ margin:0 0 0.5em 0.5em;
 /*revisio documents*/
 #diff-table {margin-top:10px !important;}
 
+/*revisio contenidor noticies i agenda*/
+#contenidor{ margin-top:20px;}
+.agendaDalt{ margin-top:20px;}
 
 /*contacte*/
 div.contacte {padding:10px !important; margin-bottom:10px;}
@@ -1678,4 +1681,4 @@ div.contacte div.contacteSpan {float:left; width:70px; text-align:right; margin-
 div.contacte div, div.contacte h5 {padding-bottom:5px;}
 iframe {width:908px;}
 div span.contacteSpan {display:block;}
-form fieldset {margin-top:0px !important; padding-top:0px !important;}
+/*form fieldset {margin-top:0px !important; padding-top:0px !important;}*/

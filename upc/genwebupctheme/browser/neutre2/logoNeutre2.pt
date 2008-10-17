@@ -13,7 +13,7 @@
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en" />
     </div>
-    <div class="titolWebNeutre2">
+    <div class="imatgeCapcaleraNeutre2">
         <img src="imatgeNeutre2.jpg" longdesc="Títol de la Web" alt="Títol"/>
     </div>
     <div class="liniaPrincipalNeutre2"></div>

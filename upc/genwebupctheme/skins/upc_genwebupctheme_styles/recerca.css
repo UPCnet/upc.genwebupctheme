@@ -5,8 +5,9 @@
 
 .logoNeutre2 { 
   float:left;
-  padding-top:25px;
-  padding-left:12px;
+  padding-top:36px;
+  padding-left:0px;
+  padding-right:25px;
 }
 
 .titolWebNeutre2 {
@@ -36,10 +37,10 @@ bodyNeutre2{
 }
 
 .imatgeCapcaleraNeutre2{ 
-  margin-top:-96px;
-  width:958px;
+  margin-top:0px;
   height:39px;
   text-align:right;
+  padding-left:250px;
 }
 
 .barraIdiomesNeutre2{
