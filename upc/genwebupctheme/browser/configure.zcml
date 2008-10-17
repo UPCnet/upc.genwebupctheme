@@ -410,5 +410,5 @@
       layer=".interfaces.IThemeSpecificPortal"
       permission="zope2.View"
       />
-      
+
 </configure>

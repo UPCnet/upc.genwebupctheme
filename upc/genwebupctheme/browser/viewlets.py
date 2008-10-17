@@ -12,6 +12,11 @@ class PathBar(PathBarViewlet):
     
     render = ViewPageTemplateFile('path_bar.pt')
 
+
+class PathBarRoot(PathBarViewlet):
+    
+    render = ViewPageTemplateFile('null.pt')
+
 class DarreraModificacio(ViewletBase):
     
     render = ViewPageTemplateFile('darreramodificacio.pt')
