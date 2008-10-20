@@ -62,8 +62,8 @@ class utilitats(BrowserView):
             return True
 
     def extraeDatosMysql(self, id):
-        """ Retorna un objeto con las columnas de la tabla upc.unitat de la base de datos www-estudis 
-            de acuerdo al id de la escuela.
+        """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis 
+            de acuerdo a un id.
         """
         
         db=MySQLdb.connect(host='raiden.upc.es',user='www-estudis',passwd='bdestudis',db='www-estudis')
