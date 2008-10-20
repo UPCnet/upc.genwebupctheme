@@ -16,11 +16,11 @@ text-align:center;
 margin:0px 180px 0px 180px;
 }
 .imatgeCapcaleraUnitat{
-background: transparent url(imatgeUnitat.jpg) no-repeat scroll center top width:706px;
-min-height:129px;
-background: no-repeat top center;
-margin:0px 126px 0px 126px;
-
+  background: url('imatgeUnitat.jpg');
+  /*background: transparent url('http://gollum:8300/unitats/imatgeUnitat.jpg') no-repeat scroll center top;*/
+  min-height:129px;
+  background: no-repeat top center;
+  margin:0px 126px 0px 126px;
 }
 
 .barraUsuari{
