@@ -294,7 +294,7 @@ h1, h2 {
 	
 /* CAPCALERA COMUNS */
 .barraCerca{
-    margin: 7px 3px 0px 5px;
+    margin: 7px 3px 0px 0px;
     text-align: right;
     float:none;
 }
@@ -1699,6 +1699,6 @@ select[id="form.columna2.from"],select[id="form.columna2.to"],
 select[id="form.columna3.from"],select[id="form.columna3.to"] {
 	min-width: 250px;}
 select[id="form.theme"] {min-width:200px;}
-
+select[id="form.tipusintranet"] {min-width:100px;}
 
 

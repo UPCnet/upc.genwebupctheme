@@ -1,6 +1,6 @@
 .logo_m{
 float:left;
-margin:25px 0 0 25px;
+margin:10px 0 0 25px;
 min-width:160px;
 }
 .logo_m img {
@@ -12,7 +12,7 @@ padding-top:13px;
 }
 .titolWeb_m{
 text-align:left;
-margin-left:0px;
+margin-left:255px;
 }
 .cursMaster{
 font-family:Arial, Helvetica, Verdana, sans-serif;
@@ -39,7 +39,7 @@ font-size:0.9em;
 }
 .barraBranca_m{ 
     width:175px;
-    padding: 51px 5px 0px;
+    padding: 0px 5px 0px;
     float:left;
     font-weight:bold;
     font-size:1.1em;
@@ -51,6 +51,7 @@ height:6px;
 width:100%;
 background-color:#B0D73C; /*específic1*/
 font-size:0.05em;
+margin:0 0 5px 0;
 }
 .clearAll_m{
 clear:both;
