@@ -11,7 +11,6 @@ setup(name='upc.genwebupctheme',
       classifiers=[
         "Framework :: Plone",
         "Framework :: Zope2",
-        "Framework :: Zope3",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
         ],
