@@ -410,5 +410,12 @@
       layer=".interfaces.IThemeSpecificPortal"
       permission="zope2.View"
       />
+<!-- CSS dinamic -->
+    <browser:page
+      name="dynamic.css"
+      for="*"
+      class=".dynamic.DynamicCssView"
+      permission="zope2.View"
+      />
 
 </configure>

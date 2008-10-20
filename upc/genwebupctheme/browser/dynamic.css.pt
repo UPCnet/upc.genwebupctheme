@@ -1,0 +1,28 @@
+<tal:dynamic define="utils context/@@upc.genweb.utils;
+                     e1 python:utils.getGWConfig().especific1;
+                     e2 python:utils.getGWConfig().especific2;
+                     e3 python:utils.getGWConfig().especific3;
+                     e4 python:utils.getGWConfig().especific4;
+                     e5 python:utils.getGWConfig().especific5;
+                     e6 python:utils.getGWConfig().especific6;">
+
+#bandaLogos{ 
+        border-top: <tal:propietat replace="e2">Especific2</tal:propietat>} 
+.bandaPeu{ 
+        border-top: <tal:propietat replace="e1">Especific1</tal:propietat>} 
+.signText{ 
+        border-top: <tal:propietat replace="e1">Especific1</tal:propietat>} 
+h1 { 
+        color: <tal:propietat replace="e3">Especific3</tal:propietat>} 
+.event { 
+        background: <tal:propietat replace="e6">Especific6</tal:propietat>} 
+.todaynoevent { 
+        border: <tal:propietat replace="e3">Especific3</tal:propietat>} 
+.arrodonimentTD { 
+        background-color: <tal:propietat replace="e6">Especific6</tal:propietat>} 
+#daltCalendari { 
+        background-color: <tal:propietat replace="e6">Especific6</tal:propietat>} 
+#searchGadget { 
+        border: 1px solid <tal:propietat replace="e1">Especific1</tal:propietat>}
+
+</tal:dynamic>
