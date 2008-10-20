@@ -19,8 +19,8 @@
 -->
 
 <!-- irene -->
-    <div class="titolSeccio">
-        <div class="textetSeccioneta">DEPARTAMENT PREseNTACI&oacute;</div>
+    <div class="titolSeccio" tal:define="utils context/@@upc.genweb.utils">
+        <div class="textetSeccioneta" tal:content="utils/getSectionFromURL">Seccio</div>
     </div>
     <div class="flotaTapa"></div>
 

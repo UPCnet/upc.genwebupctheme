@@ -80,4 +80,12 @@ class utilitats(BrowserView):
             c=c+1
             
         return _dictResult
-    
+
+    def getSectionFromURL(self):
+        context=self.context
+        portal_url=getToolByName(context, 'portal_url')
+        contentPath = portal_url.getRelativeContentPath(context)
+        if not contentPath:
+            return ''
+        else:
+            return contentPath[0]    
