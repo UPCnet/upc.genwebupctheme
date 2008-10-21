@@ -58,6 +58,9 @@ class titols(ViewletBase):
 class logoNeutre3(ViewletBase):
     render = ViewPageTemplateFile('neutre3/logoNeutre3.pt')
     
+class barraSuperior (ViewletBase):
+    render = ViewPageTemplateFile('neutre3/barraSuperior.pt')
+    
 class logoNeutre2(ViewletBase):
     render = ViewPageTemplateFile('neutre2/logoNeutre2.pt')
     
@@ -174,3 +177,6 @@ class eines(ViewletBase):
             else:
                 self.user_name = userid
 
+
+class einesNeutre2(eines):
+    render = ViewPageTemplateFile('neutre2/einesNeutre2.pt')    

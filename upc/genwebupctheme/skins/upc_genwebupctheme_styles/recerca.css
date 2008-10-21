@@ -12,7 +12,8 @@
 
 .logo_n2 {
  float:left;
-  min-width:160px;
+ min-width:160px;
+ /*margin: 25px 0px 0px 25px;*/
 }
 
 .titolWebNeutre2 {
@@ -28,7 +29,37 @@
   background-color:#FF6600; /*específic1*/
   font-size:0.05em;
 }
+ 
+#portal-personaltools-n2 li a {
+    color:#0076CC;
+    text-decoration:none;}
+#portal-personaltools-n2 li a:hover {
+    color:#0076CC;
+    text-decoration:underline;}
+ 
+#portal-personaltools-n2, .visualInline-n2, #portal-personaltools-wrapper-n2 {
+    background-color:transparent;
+}
 
+#portal-personaltools-n2 {
+    background-color:transparent;
+    border-bottom:medium none;
+    border-top:medium none;
+    color:#4D4D4D;
+    font-size:0.9em;
+    margin:-21px 0 0 5px;
+    padding:0;
+    text-align:left;
+    text-transform:none;
+    line-height:1.6em;
+    list-style-image:none;
+    list-style-position:outside;
+    list-style-type:none;
+    z-index: 1;
+    position: absolute;
+}
+ 
+ 
 /*
 bodyNeutre2{
   padding-top:5px;

@@ -175,14 +175,6 @@
 
   <!-- Comuns Neutre2 -->
      <browser:viewlet
-         name="upc.genweb.eines"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.eines"
-         layer=".interfaces.IThemeSpecificNeutre2"
-         permission="zope2.View"
-         />
-     
-     <browser:viewlet
          name="upc.genweb.capsaleraSuperior"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
          class=".capsalera.capsaleraSuperior"
@@ -190,14 +182,6 @@
          permission="zope2.View"
          />
    
-     <browser:viewlet
-         name="upc.genweb.barraIdiomes"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".barraIdiomes.barraIdiomes"
-         layer=".interfaces.IThemeSpecificNeutre2"
-         permission="zope2.View"
-         />  
-
      <browser:viewlet
          name="upc.genweb.darreramodificacio"
          manager="plone.app.layout.viewlets.interfaces.IBelowContent"
@@ -319,6 +303,14 @@
 
 <!-- Viewlets especifics -->
  <!-- Específic Neutre3 -->
+      <browser:viewlet
+         name="upc.genweb.barraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.barraSuperior"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+ 
      <browser:viewlet
          name="upc.genweb.logoNeutre3"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -335,7 +327,23 @@
          layer=".interfaces.IThemeSpecificNeutre2"
          permission="zope2.View"
          />
-     
+         
+     <browser:viewlet
+         name="upc.genweb.barraIdiomesNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomesNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />           
+         
+     <browser:viewlet
+         name="upc.genweb.einesNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.einesNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />         
+              
      <browser:viewlet
          name="upc.genweb.titolsNeutre2"
          manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
@@ -343,6 +351,7 @@
          layer=".interfaces.IThemeSpecificNeutre2"
          permission="zope2.View"
          />
+
 
 <!-- Específic Unitat -->
      <browser:viewlet

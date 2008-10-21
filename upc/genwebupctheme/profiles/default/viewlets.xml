@@ -25,6 +25,7 @@
   <viewlet name="plone.colophon"/>
  </order>
  <order manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="upc.genweb.barraSuperior"/> 
   <viewlet name="upc.genweb.titolsNeutre3"/>
   <viewlet name="upc.genweb.capsaleraSuperior"/>
   <viewlet name="plone.logo"/>
@@ -63,12 +64,10 @@
   <viewlet name="plone.site_actions"/>
   <viewlet name="plone.searchbox"/>
   <viewlet name="upc.genweb.capsaleraSuperior"/>
-  <viewlet name="plone.logo"/>
   <viewlet name="upc.genweb.titolsNeutre2"/>
   <viewlet name="upc.genweb.logoNeutre2"/>
-  <viewlet name="upc.genweb.barraIdiomes"/>
-  <viewlet name="upc.genweb.eines"/>
-  <viewlet name="plone.global_sections"/>
+  <viewlet name="upc.genweb.barraIdiomesNeutre2"/>
+  <viewlet name="upc.genweb.einesNeutre2"/>
  </order>
  <order manager="plone.portaltop" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.header"/>
@@ -143,7 +142,6 @@
  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.searchbox"/>
   <viewlet name="plone.site_actions"/>
-  <viewlet name="plone.logo"/>
  </hidden>
  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.app.i18n.locales.languageselector"/>

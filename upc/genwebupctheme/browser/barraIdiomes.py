@@ -14,7 +14,6 @@ from plone.app.i18n.locales.browser.selector import LanguageSelector
 class barraIdiomes(LanguageSelector):
     """Language selector for translatable content.
     """
-
     render = ZopeTwoPageTemplateFile('barraIdiomes.pt')
     
     def languages(self):
@@ -51,6 +50,7 @@ class barraIdiomes(LanguageSelector):
         return otra
                 
             
-        
-
-            
+class barraIdiomesNeutre2(barraIdiomes):
+    """Language selector for translatable content.
+    """
+    render = ZopeTwoPageTemplateFile('neutre2/barraIdiomesNeutre2.pt')

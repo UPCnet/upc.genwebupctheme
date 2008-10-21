@@ -1,7 +1,9 @@
 
 <div class="imatgeCapcaleraUnitat">
-    <table>
+
+     <table>
 <!--  <img src="imatgeUnitat.jpg"/>  -->  
+
     <tbody>
 
   <tr class="daltMenu">
@@ -25,7 +27,7 @@
     <td class="descripcioMenu">Grand</td>
   </tr>
 </table>
-    
+
         
     </div>
     
