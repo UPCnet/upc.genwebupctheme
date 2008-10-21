@@ -3,7 +3,7 @@
         tal:condition="python: not utils.isFolder()">
          
 <div class="fletxatop">
-    <a tal:attributes="href python:context.absolute_url()+'/#'">
+    <a tal:attributes="href python:context.absolute_url()+'/#amuntDeTot'">
         <img alt="Top of page" title="Top of page" tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/fletxa16blava.png"/>
     </a>
 </div>

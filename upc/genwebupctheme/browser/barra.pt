@@ -1,3 +1,9 @@
+<tal:barra  tal:define="portal_url context/@@plone_portal_state/portal_url;">
+
+
 <div class="banda">
-        <img src="banda.gif"/>
-</div>        
+        <img tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/banda.gif"/>
+</div>
+
+
+</tal:barra>        

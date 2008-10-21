@@ -3,7 +3,7 @@
                 portal_url context/@@plone_portal_state/portal_url;"
     tal:condition="view/site_actions"
     i18n:domain="plone">
-    
+    <a name="amuntDeTot"></a>
 <!--     <div class="bandaSuperior"></div> -->
    <div class="barraCerca">
     
