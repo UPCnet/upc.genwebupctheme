@@ -46,6 +46,10 @@ font-size:0.9em;
     text-align:right;
     color:#B0D73C; /*específic1*/
 }
+.barraBranca_m table{
+text-align:right !important;
+vertical-align:bottom !important;
+}
 .liniaPrincipal_m{
 height:6px;
 width:100%;
