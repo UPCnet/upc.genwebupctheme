@@ -3,18 +3,22 @@
 
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;">
     <div class="logoNeutre2">
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya" src="recerca_ca.jpg"               
+        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
                tal:condition="python:utils.pref_lang()=='ca'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_ca" />
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya" src="recerca_es.jpg"               
+               tal:attributes="title python: utils.getGWConfig().titolespai_ca;
+                                    src string:${portal_url}/++resource++upc.genwebupctheme.images/recerca_ca.jpg" />
+        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
                tal:condition="python:utils.pref_lang()=='es'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_es" />
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya" src="recerca_en.jpg"               
+               tal:attributes="title python: utils.getGWConfig().titolespai_es;
+                                    src string:${portal_url}/++resource++upc.genwebupctheme.images/recerca_es.jpg" />
+        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"               
                tal:condition="python:utils.pref_lang()=='en'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_en" />
+               tal:attributes="title python: utils.getGWConfig().titolespai_en;
+                                    src string:${portal_url}/++resource++upc.genwebupctheme.images/recerca_en.jpg" />
     </div>
     <div class="imatgeCapcaleraNeutre2">
-        <img src="imatgeNeutre2.jpg" longdesc="Títol de la Web" alt="Títol"/>
+        <img tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/imatgeNeutre2.jpg" 
+        longdesc="Títol de la Web" alt="Títol"/>
     </div>
     <div class="liniaPrincipalNeutre2"></div>
 </div>

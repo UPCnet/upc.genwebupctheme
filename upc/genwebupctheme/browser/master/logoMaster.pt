@@ -1,9 +1,8 @@
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;
                                                 utils context/@@upc.genweb.utils;">
-            
-
-
+          
 <table>
+
     <tbody><tr valign="bottom" height="74">
         <td width="25%"> </td>
         <td align="right" style="text-align:right">
@@ -11,14 +10,13 @@
         </td>
         </tr>
     </tbody>
+    
     <div class="imatgeCapcalera_m">
-        <img longdesc="LogoMaster" alt="" src="imatgeMaster.jpg"/>
+        <img longdesc="LogoMaster" alt="" 
+                tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/imatgeMaster.jpg"/>
     </div>
 </table> 
 
-    
-    <div class="imatgeCapcalera_m">
-        <img longdesc="LogoMaster" alt="" src="imatgeMaster.jpg"/>
-    </div>
+
         <div class="liniaPrincipal_m"> </div>
 </div>

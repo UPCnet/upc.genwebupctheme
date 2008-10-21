@@ -402,6 +402,14 @@
       permission="zope2.View"
       />
       
+    <browser:viewlet
+      name="genweb.global_sections_Unitats"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".global_sections_unitats.GlobalSectionsViewlet"
+      layer=".interfaces.IThemeSpecificUnitat"
+      permission="zope2.View" 
+      />
+      
 <!-- Home Page Master -->
     <browser:page
       name="homepage"
@@ -419,6 +427,7 @@
       layer=".interfaces.IThemeSpecificPortal"
       permission="zope2.View"
       />
+      
 <!-- CSS dinamic -->
     <browser:page
       name="dynamic.css"

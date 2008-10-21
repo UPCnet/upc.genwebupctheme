@@ -94,7 +94,7 @@
   <viewlet name="upc.genweb.barraIdiomes"/>
   <viewlet name="upc.genweb.eines"/>
   <viewlet name="upc.genweb.logoUnitat"/>
-  <viewlet name="plone.global_sections"/>
+  <viewlet name="genweb.global_sections_Unitats"/>
  </order>
  <order manager="plone.portaltop" skinname="Tema genwebUPC Unitat">
   <viewlet name="plone.header"/>
@@ -158,6 +158,7 @@
   <viewlet name="plone.site_actions"/>
   <viewlet name="plone.logo"/>
   <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.global_sections"/>
  </hidden>
  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Unitat">
   <viewlet name="plone.personal_bar"/>
