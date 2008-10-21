@@ -660,13 +660,13 @@ table.listing .listingCheckbox {
 text-align:left !important;
 }
 .template-board_view .listing th {
-background:#dfe3d3 none repeat scroll 0 50% !important; /*espe*/
+background:#dfe3d3 !important; /*espe*/
 font-size:1em;
 font-weight:bold;
 color:#4d4d4d;
 }
 .template-forum_view .listing th {
-background:#e0cece none repeat scroll 0 50% !important; /*espe5*/
+background:#e0cece !important; /*espe5*/
 font-size:1em;
 font-weight:bold;
 color:#4d4d4d;

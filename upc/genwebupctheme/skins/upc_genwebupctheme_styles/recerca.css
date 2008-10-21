@@ -4,17 +4,18 @@
 
 
 .logoNeutre2 { 
-  float:left;
   padding-top:36px;
   padding-left:0px;
   padding-right:25px;
+float:left;
 }
 
 .logo_n2 {
  float:left;
- min-width:160px;
- /*margin: 25px 0px 0px 25px;*/
+ min-width:200px;
+ margin: 25px 0px 0px 25px;
 }
+.logo_n2 img {float:left;}
 
 .titolWebNeutre2 {
   text-align:left;
@@ -28,6 +29,7 @@
   margin:0px;
   background-color:#FF6600; /*específic1*/
   font-size:0.05em;
+  margin-bottom:5px;
 }
  
 #portal-personaltools-n2 li a {

@@ -2,9 +2,7 @@
 
 /********************************************************************** CAPÇALERA *******************************************************************************/
 /********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
-body{
-margin-top:10px;
-}
+
 .logo
 {
 float:left;
@@ -18,7 +16,7 @@ margin:0px 180px 0px 180px;
 .imatgeCapcaleraUnitat{
   background: transparent url('imatgeUnitat.jpg') no-repeat scroll center top; 
   min-height:129px;
-  margin:0px 126px 0px 126px;
+  margin:20px 126px 0px 126px;
 }
 
 .barraUsuari{
@@ -87,8 +85,7 @@ font-size:0em;
 float:right;
 width:151px;
 margin-top:-1px; /* internet explorer -3px*/
-*
-margin-top:-2px; /* internet explorer -3px*/
+*margin-top:-2px; /* internet explorer -3px*/
 border-top:2px solid #ff784d; /*especí­fic1*/
 font-size:0em;
 }
