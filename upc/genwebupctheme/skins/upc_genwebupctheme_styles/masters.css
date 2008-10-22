@@ -49,6 +49,7 @@ font-size:0.9em;
 .barraBranca_m table{
 text-align:right !important;
 vertical-align:bottom !important;
+width: 150px !important;
 }
 .liniaPrincipal_m{
 height:6px;

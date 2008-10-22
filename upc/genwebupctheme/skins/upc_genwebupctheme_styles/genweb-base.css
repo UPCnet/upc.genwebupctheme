@@ -18,6 +18,17 @@ COLORS
 	Espe5   #e0cece
 	Espe6   #e8e2df
 */
+/***********************/
+/***                 ***/
+/***    ESTANDARD    ***/
+/***    1 #007dcc    ***/
+/***    2 #006da3    ***/
+/***    3 #3c718e    ***/
+/***    4 #b1c6d2    ***/
+/***    5 #e6e6e6    ***/
+/***    6 #f1f1f4    ***/
+/***                 ***/
+/***********************/
 
 
 /* GENERAL */
@@ -279,7 +290,11 @@ h1, h2 {
 #baner { 
 	text-align:right;
 	margin-bottom:10px;}
+/************************************************************************************************************ PROVA BANNER GRIS TO BLAU ***************/
 #baner img {  
+	border: 1px solid #e6e6e6;  
+	margin-bottom:10px;}
+#baner img:hover {
 	border: 1px solid #0076cc;  
 	margin-bottom:10px;}
 #visual-portal-wrapper{
@@ -1038,7 +1053,7 @@ tr.dragging td{
 ul.formTabs {
 	display:block;
 	list-style-type:none;
-	margin:0px 0px -25px 0px;
+	margin:0px 0px -26px 0px;
 	padding:0pt;
 	position:relative;
 	text-align:center;
@@ -1704,4 +1719,5 @@ select[id="form.columna3.from"],select[id="form.columna3.to"] {
 select[id="form.theme"] {min-width:200px;}
 select[id="form.tipusintranet"] {min-width:100px;}
 
-
+fieldset#fieldset-genWebControlPanelinformacio input[id="form.boolmaps"] {width:15px !important;}
+fieldset#fieldset-genWebControlPanelinformacio label[for="form.boolmaps"] {font-weight:normal !important;}

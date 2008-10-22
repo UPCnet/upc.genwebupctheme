@@ -6,23 +6,183 @@
                      e5 python:utils.getGWConfig().especific5;
                      e6 python:utils.getGWConfig().especific6;">
 
-#bandaLogos{ 
-        border-top: <tal:propietat replace="e2">Especific2</tal:propietat>} 
-.bandaPeu{ 
-        border-top: <tal:propietat replace="e1">Especific1</tal:propietat>} 
-.signText{ 
-        border-top: <tal:propietat replace="e1">Especific1</tal:propietat>} 
-h1 { 
-        color: <tal:propietat replace="e3">Especific3</tal:propietat>} 
-.event { 
-        background: <tal:propietat replace="e6">Especific6</tal:propietat>} 
-.todaynoevent { 
-        border: <tal:propietat replace="e3">Especific3</tal:propietat>} 
-.arrodonimentTD { 
-        background-color: <tal:propietat replace="e6">Especific6</tal:propietat>} 
-#daltCalendari { 
-        background-color: <tal:propietat replace="e6">Especific6</tal:propietat>} 
-#searchGadget { 
-        border: 1px solid <tal:propietat replace="e1">Especific1</tal:propietat>}
+input.password,
+input.text,
+input.searchField,
+#searchGadget
+	{border: 1px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 
+#forgotten-password
+	{border-left:3px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+
+#signText
+	{border-top: 3px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.bandaPeu
+	{border-top: 18px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+
+.quadradet
+	{background-color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
+
+
+blockquote,
+#content .link-category
+	{color: <tal:propietat replace="e2">Especific2</tal:propietat>;}
+#bandaLogos
+	{border-top:1px dashed <tal:propietat replace="e2">Especific2</tal:propietat>;}
+
+
+label,
+input[id="title"],
+h1, h4, h5, h6,
+h2.kssattr-atfieldname-title,
+.divCarpetaTitol,
+.modificacio,
+.kssattr-atfieldname-title input,
+#forgotten-password h3,
+.ultimamodificacio
+	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
+
+
+
+tr.dragging td
+	{background: <tal:propietat replace="e4">Especific4</tal:propietat>;}
+
+
+blockquote
+	{border-left:15px solid <tal:propietat replace="e5">Especific5</tal:propietat>;
+	border-bottom: 1px solid <tal:propietat replace="e5">Especific5</tal:propietat>;}
+td.draggable:hover
+	{background:<tal:propietat replace="e5">Especific5</tal:propietat>;}
+
+
+pre
+	{background-color:<tal:propietat replace="e5">Especific5</tal:propietat>;}
+
+
+
+
+#eRelacionats_border,
+.notesCalendari
+	{border-left:4px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.fitxa .titular1,
+.fitxa .separadorH
+	{border-bottom: 2px dotted <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.separadorV
+	{border-left: 1px dashed <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.formulari input,
+.formulari textarea,
+.formulari select
+	{border: 1px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.formulari input,
+.formulari textarea,
+.formulari select
+	{border-left: 5px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.formulari select > option
+	{border-bottom: 1px dotted <tal:propietat replace="e1">Especific1</tal:propietat>;}
+
+
+
+#titolPagina,
+.titular1,
+.titular2,
+.titular3
+	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
+
+
+
+.calendari .fonsDestacat1,
+.taulaRegistres .fonsDestacat1,
+.destacatQuadres
+	{background-color: <tal:propietat replace="e4">Especific4</tal:propietat>;}
+.titular1
+	{border-top: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
+
+
+
+.textDestacat,
+.destacatBandejat
+	{background: <tal:propietat replace="e6">Especific6</tal:propietat>;}
+
+
+
+
+#calendari th,
+#calendariVertical th,
+.divCarpetaTitol,
+.template-event_view .vevent .summary,
+.calendar thead .weekend
+	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
+.avui,
+.todaynoevent,
+.todayevent
+	{border: 1px solid <tal:propietat replace="e3">Especific3</tal:propietat>;}
+
+
+
+.reunio,
+.template-board_view .listing th
+	{background:<tal:propietat replace="e4">Especific4</tal:propietat>;}
+.comment h3
+	{border-bottom:1px dashed <tal:propietat replace="e5">Especific5</tal:propietat>;}
+
+
+
+.todayevent
+	{background-color: <tal:propietat replace="e5">Especific5</tal:propietat>;}
+.event,
+.template-forum_view .listing th
+	{background: <tal:propietat replace="e5">Especific5</tal:propietat>;}
+.comment
+	{border:1px solid <tal:propietat replace="e5">Especific5</tal:propietat>;}
+
+
+
+.titolPortlet,
+.calendariArrodonit,
+#daltCalendari,
+.arrodonimentTD,
+.portletHeader,
+.template-board_view .even
+	{background-color:<tal:propietat replace="e6">Especific6</tal:propietat>;}
+#calendari table,
+#calendariVertical table
+	{border-left: 1px solid <tal:propietat replace="e6">Especific6</tal:propietat>;
+	border-right: 1px solid <tal:propietat replace="e6">Especific6</tal:propietat>;
+	border-bottom: 1px solid <tal:propietat replace="e6">Especific6</tal:propietat>;}
+
+
+
+
+.cursMaster,
+.barraBranca_m
+	{color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
+.liniaPrincipal_m,
+.liniaPrincipalNeutre2,
+.bandaSuperior
+	{background-color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
+.baixMenu,
+.seleccionatMenu
+	{border-left:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.actiuMenu
+	{border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.seleccionatMenu
+	{border-right:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+.liniaActivaEsq,
+.liniaActivaDreta
+	{border-top:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+
+
+
+.baixMenu
+	{color:<tal:propietat replace="e2">Especific2</tal:propietat>;}
+
+
+
+.cantoES,
+.cantoDR,
+.cantoEC,
+.cantoDC,
+.portletHeader
+	{background-header:<tal:propietat replace="e6">Especific6</tal:propietat>;}
 </tal:dynamic>
+
