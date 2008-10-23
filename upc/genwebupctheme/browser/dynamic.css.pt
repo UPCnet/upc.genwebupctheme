@@ -64,9 +64,6 @@ pre
 #eRelacionats_border,
 .notesCalendari
 	{border-left:4px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
-.fitxa .titular1,
-.fitxa .separadorH
-	{border-bottom: 2px dotted <tal:propietat replace="e1">Especific1</tal:propietat>;}
 .separadorV
 	{border-left: 1px dashed <tal:propietat replace="e1">Especific1</tal:propietat>;}
 .formulari input,
@@ -96,8 +93,11 @@ pre
 	{background-color: <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .titular1
 	{border-top: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
-
-
+.fitxa .titular1,
+.fitxa .separadorH
+	{border-bottom: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
+.separadorV
+	{border-left: 1px dashed <tal:propietat replace="e4">Especific4</tal:propietat>;}
 
 .textDestacat,
 .destacatBandejat
