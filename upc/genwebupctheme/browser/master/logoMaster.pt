@@ -13,7 +13,7 @@
     
     <div class="imatgeCapcalera_m">
         <img longdesc="LogoMaster" alt="" 
-                tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/imatgeMaster.jpg"/>
+                tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
     </div>
 </table> 
 

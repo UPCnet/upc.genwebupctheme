@@ -8,39 +8,39 @@
             <img alt="Màsters Universitaris" 
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="title python: utils.getGWConfig().titolespai_ca;
-                                src string:${portal_url}/++resource++upc.genwebupctheme.images/logo_masters_ca.jpg" />
+                                src string:${portal_url}/logo_masters_ca.jpg" />
         <!-- titol en castella -->
             <img alt="Màsters Universitaris"
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="title python: utils.getGWConfig().titolespai_es;
-                                src string:${portal_url}/++resource++upc.genwebupctheme.images/logo_masters_es.jpg" />
+                                src string:${portal_url}/logo_masters_es.jpg" />
         <!-- titol en angles -->
             <img alt="Màsters Universitaris"             
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en;
-                                src string:${portal_url}/++resource++upc.genwebupctheme.images/logo_masters_en.jpg" />
+                                src string:${portal_url}/logo_masters_en.jpg" />
         </a>
     </div>                         
     <div class="logo_m">
         <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya"  
-        tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/LogoUPC.gif"/>
+        tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
         <map name="logoUPC" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya" /></map>
         <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
             <!-- titol en catala -->
             <img 
                 tal:condition="python:utils.pref_lang()=='ca'" 
                 tal:attributes="title python: utils.getGWConfig().firmaunitat_ca;
-                src string:${portal_url}/++resource++upc.genwebupctheme.images/logoPropi.gif"/>
+                src string:${portal_url}/logoPropi.gif"/>
             <!-- titol en castella -->
             <img 
                 tal:condition="python:utils.pref_lang()=='es'"
                 tal:attributes="title python: utils.getGWConfig().firmaunitat_es;
-                src string:${portal_url}/++resource++upc.genwebupctheme.images/logoPropi.gif"/>
+                src string:${portal_url}/logoPropi.gif"/>
             <!-- titol en angles -->
             <img 
                 tal:condition="python:utils.pref_lang()=='en'"
                 tal:attributes="title python: utils.getGWConfig().firmaunitat_en;
-                src string:${portal_url}/++resource++upc.genwebupctheme.images/logoPropi.gif"/>
+                src string:${portal_url}/logoPropi.gif"/>
         </a>
     </div>
     <div class="titolWeb_m">

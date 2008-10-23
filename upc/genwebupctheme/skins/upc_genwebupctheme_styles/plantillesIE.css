@@ -1,6 +1,6 @@
 /*AJUSTA LES DIFERiNCIES EN ELS BOTONS DE FF a IE*/
 .titular1{
-	background: url(../img/custom/fletxaD.gif) no-repeat 0px 9px;
+	background: url(custom/fletxaD.gif) no-repeat 0px 9px;
 }
 /*DESPRECIAT
 #boto {
@@ -24,7 +24,7 @@
 	 padding: 1px 0px 1px 18px;}
 /*RESOL LA TAULA PER IE, sense OUTLINES (de fet aqui es el FF qui no ho fa be*/
 .taulaRegistres .cap td{
-background:url(../img/borderTopDiagonal.gif) repeat-x;
+background:url(borderTopDiagonal.gif) repeat-x;
 	border: 2px dotted #cccccc;
 	border-top:none;
 	padding-top:6px;

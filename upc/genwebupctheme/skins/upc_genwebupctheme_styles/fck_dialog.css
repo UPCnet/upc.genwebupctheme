@@ -88,7 +88,7 @@ body, .BackColor
 
 #btnOk 
 {
-    background:url(++resource++upc.genwebupctheme.images/custom/botoFons.gif) repeat-x center center !important;
+    background:url(botoFons.gif) repeat-x center center !important;
     border:1px solid #006DA3 !important;
     color:white !important;
     font-size:90% !important;
@@ -102,7 +102,7 @@ body, .BackColor
 
 #btnCancel 
 {
-    background:url(++resource++upc.genwebupctheme.images/custom/botoFonsClar.gif) repeat-x center center !important;
+    background:url(botoFonsClar.gif) repeat-x center center !important;
     border:1px solid #8dcde3 !important;
     color:#333 !important;
     font-size:90% !important;

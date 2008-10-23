@@ -23,7 +23,7 @@
                               >Language          
                     </a>
                 <span tal:condition="not:repeat/lang/end">  
-                    <img class="quadradet" tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/quadradet.gif"/>
+                    <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
                 </span>                      
                 </id>
               </span> 

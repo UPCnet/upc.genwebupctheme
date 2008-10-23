@@ -2,7 +2,7 @@
 
 /********************************************************************** PORTLETS ********************************************************************************/
 #portlet200{
-background:url(++resource++upc.genwebupctheme.images/custom/bar200.gif) no-repeat top; /*imatge customitzada*/
+background:url(bar200.gif) no-repeat top; /*imatge customitzada*/
 width:200px;
 height: 8px;
 font-size:0.05em;
@@ -11,7 +11,7 @@ font-size:0.05em;
 #baix200{
 width:200px;
 height:6px;
-background-image:url(++resource++upc.genwebupctheme.images/baix200.gif);
+background-image:url(baix200.gif);
 font-size:0.05em;
 margin-bottom:20px;
 }
@@ -19,14 +19,14 @@ margin-bottom:20px;
 #portlet150{
 width:150px;
 height:9px;
-background-image:url(++resource++upc.genwebupctheme.images/custom/bar150.gif); /*imatge customitzada*/
+background-image:url(bar150.gif); /*imatge customitzada*/
 font-size:0.05em;
 }
 
 #baix150{
 width:150px;
 height:6px;
-background-image:url(++resource++upc.genwebupctheme.images/baix150.gif);
+background-image:url(baix150.gif);
 font-size:0.05em;
 margin-bottom:20px;
 }
@@ -92,7 +92,7 @@ line-height:1em;
 /*********************************************************************** AGENDA **********************************************/
 .noticiesDalt{
 border-top: 1px solid #808080;
-background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
+background: url(triangle.gif) no-repeat; /*imatge customitzada*/
 background-position: 0px 3px;
 padding: 9px 0px 4px 14px;
 color:#4D4D4D;
@@ -103,7 +103,7 @@ font-size:1.1em;
 
 .agendaDalt{
 border-top: 1px solid #808080;
-background: url(++resource++upc.genwebupctheme.images/custom/triangle.gif) no-repeat; /*imatge customitzada*/
+background: url(triangle.gif) no-repeat; /*imatge customitzada*/
 background-position: 0px 3px;
 padding: 9px 11px 13px 14px;
 font-size:1.1em;
@@ -169,7 +169,7 @@ line-height:6px;
 margin-top:0px;
 margin-bottom:0px;
 border: 1px solid #E6E6E6;
-background:url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x bottom;
+background:url(fonsT.png) repeat-x bottom;
 position:relative;
 }
 
@@ -234,7 +234,7 @@ _margin-right:5px;
 	padding-right:25px;
 	*padding-left:20px;
 	*padding-right:20px;
-	background:url(++resource++upc.genwebupctheme.images/fonsCR.png) repeat-x 0px -34px;
+	background:url(fonsCR.png) repeat-x 0px -34px;
 }
 html*#calendariVertical {
 	margin-right: 0px;
@@ -372,7 +372,7 @@ font-weight:bold;
 color:#CC0000; /*especific3*/
 margin:0px 0px 5px -5px;
 padding-left: 15px;
-background:url(++resource++upc.genwebupctheme.images/fletxaD.gif) no-repeat left;
+background:url(fletxaD.gif) no-repeat left;
 font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -421,7 +421,7 @@ font-weight:normal;
 }
 ul.configlets li, ul#portal-sitemap li{
 font-family: Verdana, Arial, Helvetica, sans-serif;
-background:transparent url(++resource++upc.genwebupctheme.images/fletxaGo.gif) no-repeat scroll left top;
+background:transparent url(fletxaGo.gif) no-repeat scroll left top;
 border-bottom:1px dashed #333333;
 line-height:2em;
 list-style-type:none;
@@ -514,7 +514,7 @@ margin-left:227px;
 
 /*************************** VISTA SUMAMRY STaNDARD ******************************/
 .summary {
-	background: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) no-repeat left 0px;
+	background: url(quadret.gif) no-repeat left 0px;
 	padding: 0px 0px 0px 10px;}
 
 
@@ -618,7 +618,7 @@ right:1em;
 text-align:right;
 border:1px solid #e6e6e6;
 border-top:0px;
-background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom;
+background:transparent url(fonsT.png) repeat-x scroll center bottom;
 }
 .boardConversation .visualClear {
 margin-bottom:0px !important;
@@ -689,11 +689,11 @@ color:#4d4d4d;
 clear:right;
 padding: 5px 5px 1px 5px;
 border:1px solid #e6e6e6;
-background:transparent url(++resource++upc.genwebupctheme.images/fonsT.png) repeat-x scroll center bottom !important;
+background:transparent url(fonsT.png) repeat-x scroll center bottom !important;
 }
 
 #content a[href^="mailto:"], #content a.link-mailto {
-background:transparent url(https://devel.upcnet.es/neutre3/mail_icon.gif) no-repeat scroll 0 0;
+background:transparent url(mail_icon.gif) no-repeat scroll 0 0;
 padding:1px 0 1px 16px;
 }
 
@@ -709,7 +709,7 @@ padding:1px 0 1px 16px;
 .newsImage {
 border:1px solid #e6e6e6;
 padding:5px;
-background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom !important;
+background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;
 }
 .newsImageContainer {
 float:right;
@@ -725,7 +725,7 @@ font-size:90%;
 .template-plonepopoll_view form.group fieldset ul li{font-weight:bold; color:#666666;}
 .template-plonepopoll_view form.group fieldset ul li div{padding:5px; border:1px dotted #e6e6e6; font-weight:normal !important;margin-bottom:10px;}
 
-.collage-header {background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom !important;}
+.collage-header {background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;}
 .collage-header span {
 color:#0077cc !important;
 margin-right:15px !important;}
@@ -737,7 +737,7 @@ line-height:14px;
 position:absolute;
 }
 .copy-object-icon, .paste-object-icon, .split-column-icon {
-background:transparent url(https://devel.upcnet.es/neutre3/++resource++collage-resources/icon-split.gif) no-repeat scroll left top;
+background:transparent url(icon-split.gif) no-repeat scroll left top;
 float:left;
 height:14px;
 padding-right:3px;
@@ -748,7 +748,7 @@ margin-top:15px;
 margin-top:15px;
 }
 expandable-section .expandable-label .expandable-icon {
-background:transparent url(https://devel.upcnet.es/neutre3/++resource++collage-resources/icon-plusminus.gif) no-repeat scroll left top;
+background:transparent url(icon-plusminus.gif) no-repeat scroll left top;
 float:left;
 height:14px;
 margin-top:15px;
@@ -800,7 +800,7 @@ form.collage-existing-items div select {font-size:120% !important;}
 	font-size:11px;
 }
 .calendar table thead{
-	background:#f9f9f9 url(++resource++upc.genwebupctheme.images/fonsTG.png) repeat-x scroll center bottom !important;}
+	background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;}
 .calendar {
 background:transparent none repeat scroll 0 !important;
 border-color:#e6e6e6;
@@ -893,7 +893,7 @@ font-weight:bold;
 	font-size:14px;}
 
 #document-toc .portletItem{ 
-background:#F7F7F7 url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x scroll center bottom;
+background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
 border-color:#CCCCCC #E6E6E6 #E6E6E6;
 border-style:solid;
 border-width:2px 1px 1px;
@@ -902,7 +902,7 @@ padding:10px 0 5px 1px;
 font-weight: normal;}
 
 #document-toc .portletItem li{ 
-list-style-image:url(++resource++upc.genwebupctheme.images/fletxa.gif);
+list-style-image:url(fletxa.gif);
 list-style-position:outside;
 list-style-type:disc;
 margin:0 0 0 5px;
@@ -910,7 +910,7 @@ padding:0 0 8px;}
 
 /*related items*/
 #relatedItemBox ul{
-background:#F7F7F7 url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x scroll center bottom;
+background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
 border-color:#CCCCCC #E6E6E6 #E6E6E6;
 border-style:solid;
 border-width:2px 1px 1px;
@@ -941,7 +941,7 @@ width:auto;}
 
 
 #relatedItemBox ul li{
-list-style-image:url(++resource++upc.genwebupctheme.images/custom/quadret.gif);
+list-style-image:url(quadret.gif);
 list-style-position:outside;
 list-style-type:disc;
 margin:0 0 0 23px;
@@ -974,12 +974,12 @@ visibility:hidden;
 
 /*navegacio per pagines*/
 .listingNext {
-	background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaD.gif) no-repeat scroll right bottom;
+	background:transparent url(fletxaD.gif) no-repeat scroll right bottom;
 	padding-right:20px;
 	float:right;}
 .listingNext img, .listingPrevious img {visibility:hidden; width:0;}
 .listingPrevious{
-	background:transparent url(++resource++upc.genwebupctheme.images/custom/fletxaE.gif) no-repeat scroll left bottom;
+	background:transparent url(fletxaE.gif) no-repeat scroll left bottom;
 	padding-left:20px;
 	float:left;}
 

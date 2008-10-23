@@ -2,7 +2,7 @@
 
 
 <div class="banda">
-        <img tal:attributes="src string:${portal_url}/++resource++upc.genwebupctheme.images/banda.gif"/>
+        <img tal:attributes="src string:${portal_url}/banda.gif"/>
 </div>
 
 

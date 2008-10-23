@@ -89,7 +89,7 @@ div#header {
 */
 
 div#footer {
-    background: White url(++resource++upc.genwebupctheme.images/custom/LogoUPC.gif) 10px 10px no-repeat; 
+    background: White url(LogoUPC.gif) 10px 10px no-repeat; 
     border-top: 1px solid #0077cc;    
     color: Black;
     font-size: 0.5em; 

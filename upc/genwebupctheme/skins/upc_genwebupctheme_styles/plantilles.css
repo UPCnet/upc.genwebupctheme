@@ -115,27 +115,27 @@ position:relative;
 	margin: 15px 0px 15px 0px;
 	padding: 10px 0px 5px 1px;
 	background-color: #F7F7F7;
-	background:url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x bottom #F7F7F7;
+	background:url(fonsTG.gif) repeat-x bottom #F7F7F7;
     border: 1px solid #E6E6E6;	
 	border-top: 2px solid #CCcccc;
 }
 .llistatIndex li{
 	padding: 0px 0px 8px 0px;
 	margin: 0px 0px 0px 23px;
-	list-style: url(++resource++upc.genwebupctheme.images/fletxa.gif) outside;
+	list-style: url(fletxa.gif) outside;
 }
 /********** LlistatEnllacos GW3 **************/
 .llistatEnllacos ul{
 	margin: -5px 0px 15px 0px;
 	padding: 10px 0px 5px 1px;
 	background-color: #F7F7F7;
-	background:url(++resource++upc.genwebupctheme.images/fonsTG.gif) repeat-x bottom #F7F7F7;
+	background:url(fonsTG.gif) repeat-x bottom #F7F7F7;
     border: 1px solid #E6E6E6;	
 	border-top: 2px solid #CCcccc;
 }
 .llistatEnllacos li{
 	padding: 0px 0px 10px 0px;
-	list-style: url(++resource++upc.genwebupctheme.images/custom/quadret.gif) outside;
+	list-style: url(quadret.gif) outside;
 	margin: 0px 0px 0px 23px;
 }
 /***********************************/
@@ -145,7 +145,7 @@ position:relative;
 .llistat ul{ margin: 0px 0px 0px 12px; }
 .llistat li{
 	padding: 0px 0px 6px 0px;
-	list-style: url(../img/quadretGris.gif) outside;
+	list-style: url(quadretGris.gif) outside;
 	list-style-position:inherit;
 	border-bottom: 1px dotted #CCCCCC;
 }
@@ -216,7 +216,7 @@ margin-left:2px; }
 
 /********** taulaRegistres -plantilla- **************/
 .taulaRegistres .cap td{
-background:url(../img/borderTopDiagonal.gif) repeat-x;
+background:url(borderTopDiagonal.gif) repeat-x;
 	border-left: 2px dotted #cccccc;
 	border-top:none;
 	border-bottom:2px dotted #cccccc;
@@ -261,7 +261,7 @@ background:url(../img/borderTopDiagonal.gif) repeat-x;
 /*	border-top: 2px solid #0075b7;	*/
 	border-bottom: 4px solid #cccccc;
 	margin: 0px; padding:10px; margin-top:-36px;
-	background: url(../img/borderTopDiagonal.gif) repeat-x top;
+	background: url(borderTopDiagonal.gif) repeat-x top;
 }
 .fletxa_fitxa{ clear: both; background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0px 0px;}
 .fitxa .titular1{ margin: -0.2em 0em 1.2em 0em; padding:0.2em 0em 0.5em 0px; border:none; border-bottom: 2px dotted #a29386; background:none;}
@@ -279,7 +279,7 @@ border-left: 1px dashed #e6e6e6; /* Especific 1 */
 }
 /********** formularis -plantilla- **************/
 .formulari input,textarea {
-	/*background: url(../img/custom/degradat.jpg) repeat-x;
+	/*background: url(degradat.jpg) repeat-x;
 	border: #a29386 1px solid;
 	margin: 0px 0px 10px 0px;
 	border-left-width: 6px;
@@ -304,7 +304,7 @@ border-left: 1px dashed #e6e6e6; /* Especific 1 */
 }
 
 .formulari select{
-	background: url(../img/custom/degradat.jpg) repeat-x;
+	background: url(degradat.jpg) repeat-x;
 	margin: 10px 0px 10px 0px;
 	border: #a29386 1px solid;
 	border-left:#a29386 5px solid;
@@ -320,7 +320,7 @@ border-left: 1px dashed #e6e6e6; /* Especific 1 */
 
 
 .formulari .botoblau1{
-	background: url(../img/botoblau1.gif) no-repeat center right;
+	background: url(botoblau1.gif) no-repeat center right;
 	padding: 2px 21px 2px 0px;
 	color:#0076cc;
 	border: 0px;
@@ -330,7 +330,7 @@ border-left: 1px dashed #e6e6e6; /* Especific 1 */
 }
 
 .formulari .botoblau2{
-	background: url(../img/botoblau2.gif) no-repeat center right;
+	background: url(botoblau2.gif) no-repeat center right;
 	padding: 2px 21px 2px 0px;
 	color:#ffffff;
 	border: 0px;
@@ -343,11 +343,11 @@ border-left: 1px dashed #e6e6e6; /* Especific 1 */
 /***********************************/
 
 .avis{
-	background: url(../img/avis.gif) no-repeat top left;
+	background: url(avis.gif) no-repeat top left;
 	padding-top: 7em;
 }
 .error{
-	background: url(../img/error.gif) no-repeat top left;
+	background: url(error.gif) no-repeat top left;
 	padding-top: 7em;
 }
 .avis_legal{
@@ -377,21 +377,21 @@ border-left: 1px dashed #e6e6e6; /* Especific 1 */
 }
 
 .b_cancella{
-	background-image: url(../img/fonsbotoCancella.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: none; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoCancella.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: none; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_seguent{
-	background-image: url(../img/fonsbotoSeguent.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoSeguent.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_anterior{
-	background-image: url(../img/fonsbotoAnterior.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoAnterior.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_confirma{
-	background-image: url(../img/fonsbotoConfirma.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoConfirma.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_afegeix{
-	background-image: url(../img/fonsbotoAfegeix.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoAfegeix.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_edita{
-	background-image: url(../img/fonsbotoEdita.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoEdita.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_desa{
-	background-image: url(../img/fonsbotoDesa.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoDesa.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 .b_neutre{
-	background-image: url(../img/fonsbotoNeutre.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
+	background-image: url(fonsbotoNeutre.png); background-repeat: repeat-x; background-position: center left; font-family: Arial, Helvetica, sans-serif; font-size: 13px; font-weight: bold; color:#FFFFFF; clip: rect(auto,auto,auto,auto); border: thin none #FFFFFF; padding: 1px 3px 1px 23px; margin: 0px; line-height:13px; text-align:center;}
 	
 	
 /*destacats genweb 1.5*/
@@ -422,7 +422,7 @@ font-family:Arial, Helvetica, sans-serif;
 
 /*solucions IE*/
 .taulaRegistres .cap td{
-background:url(../img/borderTopDiagonal.gif) repeat-x;
+background:url(borderTopDiagonal.gif) repeat-x;
 	*border: 2px dotted #cccccc;
 	*border-top:none;
 	*padding-top:6px;

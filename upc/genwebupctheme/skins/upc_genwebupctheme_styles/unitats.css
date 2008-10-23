@@ -14,7 +14,7 @@ text-align:center;
 margin:0px 180px 0px 180px;
 }
 .imatgeCapcaleraUnitat{
-  background: transparent url('imatgeUnitat.jpg') no-repeat scroll center top; 
+  background: transparent url(imatgeUnitat.jpg) no-repeat scroll center top; 
   min-height:129px;
   margin:20px 126px 0px 126px;
 }
@@ -35,9 +35,9 @@ height:110px;
 border-right: 2px solid #ffffff;
 }
 .alpha{
-background:url(../img/pixelAlpha.png);
+background:url(pixelAlpha.png);
 _background: none; /*ie6hack*/
-_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/pixelAlpha.png",sizingMethod="scale");
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlpha.png",sizingMethod="scale");
 }
 .daltMenuPrimer{
 border-left: 2px solid #ffffff;
@@ -69,9 +69,9 @@ border-left:2px solid #ff784d; /*especí­fic1*/
 border-right:2px solid #ff784d; /*especí­fic1*/
 }
 .alphaCustom{
-background:url(../img/custom/pixelAlphaCustom.png);
+background:url(pixelAlphaCustom.png);
 _background: none;
-_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/custom/pixelAlphaCustom.png",sizingMethod="scale");
+_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlphaCustom.png",sizingMethod="scale");
 }
 .liniaActivaEsq{
 float:left;
@@ -90,7 +90,7 @@ border-top:2px solid #ff784d; /*especí­fic1*/
 font-size:0em;
 }
 .degradat{
-background:url(../img/custom/degradat.gif) repeat-x;
+background:url(degradat.gif) repeat-x;
 min-height:18px;
 margin-top:1px; /* internet explorer -13px*/
 *margin-top:-2px; /* internet explorer -13px*/
