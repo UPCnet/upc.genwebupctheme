@@ -1024,3 +1024,54 @@ border-bottom:5px solid #333333 !important;
 color:White !important;
 line-height:1px;
 }
+
+
+/*********************************************** issue tracker **************************************/
+.issue-quick-search-box {
+float:left;
+padding:0 1em 1em 0;
+margin: 0 2.25em 0 0;
+width:30%;
+}
+#open-issues-by-state {
+padding:0 0em 1em 0;
+margin: 0;
+}
+a.datagridwidget-add-button, a.datagridwidget-add-button:hover {
+
+cursor:pointer;
+float:right;
+font-size:85%;
+padding:1px 1px 1px 15px;
+text-decoration:none;
+text-transform:lowercase;
+    background:url(botoFonsClar.gif) repeat-x center center !important;
+    border:1px solid #8dcde3 !important;
+    color:#333 !important;
+    font-size:90% !important;
+    padding:0px 3px 2px 3px !important;
+    font-weight:bold !important;
+    *border:0px !important;
+    *padding:2px 2px 2px 2px !important;}
+#archetypes-fieldname-defaultSeverity, 
+#archetypes-fieldname-availableReleases, 
+#archetypes-fieldname-availableAreas, 
+#archetypes-fieldname-description, 
+#archetypes-fieldname-helpText,
+#archetypes-fieldname-managers,
+#archetypes-fieldname-mailingList,
+#archetypes-fieldname-svnUrl { padding-top:10px;}
+
+/**********survey************/
+#archetypes-fieldname-thankYouMessage,
+#archetypes-fieldname-savedMessage,
+#archetypes-fieldname-savedMessage,
+#archetypes-fieldname-exitUrl,
+#archetypes-fieldname-confidential,
+#archetypes-fieldname-surveyNotificationEmail,
+#archetypes-fieldname-surveyNotificationMethod,
+#archetypes-fieldname-language,
+#archetypes-fieldname-expirationDate,
+#archetypes-fieldname-contributors,
+#archetypes-fieldname-rights,
+#archetypes-fieldname-excludeFromNav	{padding-top:10px;}

@@ -40,16 +40,16 @@ body {
 	font-size: 0.7em; 
 	background:#ffffff url(fons.png) center repeat-y;}
 a:link { 
-	color:#0076cc; 
+	color:#007dcc; 
 	text-decoration: none;}	
 a:visited { 
-	color: #0076cc; 
+	color: #007dcc; 
 	text-decoration: none;}	
 a:hover {   
-	color: #0076cc;     
+	color: #007dcc;     
 	text-decoration: underline;} 
 a:active {  
-	color: #0076cc;     
+	color: #007dcc;     
 	text-decoration: none;} 
 a:focus { 
 	outline: none;}
@@ -243,7 +243,8 @@ h1 {
     font-weight:bold;
     margin:0px;}
 h1,h2{
-    border-bottom:0px;}
+    border-bottom:0px;
+    line-height:1em;}
 h3 {
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
@@ -1256,8 +1257,8 @@ padding:0 0 0 0px;
 	_padding:10px;}
 .template-folder_extended #content dl dt, .template-folder_listing #content dl dt{
 	padding-left:10px;
-	background: transparent url(quadretGris.gif) no-repeat left 0px;
-	font-weight:bold;}
+	background: transparent url(fletxa.gif) no-repeat left 2px;
+	font-weight:normal;}
 .template-folder_extended #content dl dd, .template-folder_listing #content dl dd{
 	margin: 0px 10px 15px 10px;
 	font-size:90%;}

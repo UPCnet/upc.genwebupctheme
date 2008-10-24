@@ -77,6 +77,14 @@ pre
 .formulari select > option
 	{border-bottom: 1px dotted <tal:propietat replace="e1">Especific1</tal:propietat>;}
 
+.destacatBandejat
+	{border-bottom: 12px solid <tal:propietat replace="e2">Especific2</tal:propietat>;
+	border-top: 1px solid  <tal:propietat replace="e2">Especific2</tal:propietat>;}
+.taulaRegistres .fonsDestacat1,
+.calendari .fonsDestacat2,
+.taulaRegistres .fonsDestacat1,
+.taulaRegistres .cap td
+	{color:<tal:propietat replace="e2">Especific2</tal:propietat>;}
 
 
 #titolPagina,
@@ -87,8 +95,9 @@ pre
 
 
 
-.calendari .fonsDestacat1,
-.taulaRegistres .fonsDestacat1,
+
+.calendari .fonsDestacat2,
+.taulaRegistres .fonsDestacat2,
 .destacatQuadres
 	{background-color: <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .titular1
@@ -98,6 +107,10 @@ pre
 	{border-bottom: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .separadorV
 	{border-left: 1px dashed <tal:propietat replace="e4">Especific4</tal:propietat>;}
+
+.calendari .fonsDestacat1,
+.taulaRegistres .fonsDestacat1
+	{background-color: <tal:propietat replace="e5">Especific5</tal:propietat>;}
 
 .textDestacat,
 .destacatBandejat

@@ -1,11 +1,4 @@
-/* CSS Document */
-body{
-	margin: 0px;
-	padding: 0px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	color: #333333;
-	font-size: 0.7em;
-}
+#content { line-height: 1.5em;}
 a:link {
 	color:#0076cc;
 	text-decoration: none;
@@ -142,11 +135,11 @@ position:relative;
 /**###**/
 /********** Llistat I -plantilla- **************/
 .llistat { padding: 0px 0px 15px 0px; }
-.llistat ul{ margin: 0px 0px 0px 12px; }
+.llistat ul{ margin: 0px 0px 0px 12px; 
+		*margin: 0px 0px 0px 16px; }
 .llistat li{
 	padding: 0px 0px 6px 0px;
 	list-style: url(quadretGris.gif) outside;
-	list-style-position:inherit;
 	border-bottom: 1px dotted #CCCCCC;
 }
 /***********************************/
@@ -178,18 +171,23 @@ position:relative;
 	border-left: 0px dotted #cccccc;
 	}
 .calendari table{
+	*border:1px solid #cccccc;
 	border-bottom:3px solid #cccccc;
 	outline:1px solid #cccccc;
+	*outline:0px;
 	border-collapse:collapse;	
 }
+html*.calendari table{ 
+	border:1px solid #cccccc;
+	border-bottom:3px solid #cccccc;/*saf*/}
 .calendari td{
 	border-left: 2px solid #ffffff;
 	border-top:none;
 	border-bottom:2px solid #ffffff;
 	padding-top:6px;
 	background-color: #ffffff;
-	color: #6b5c4f; 
-	font-weight: bold;
+	color: #666; 
+	font-weight: normal;
 }
 .calendari .fonsDestacat1{
 	background-color: #beb4ab;
@@ -220,6 +218,7 @@ background:url(borderTopDiagonal.gif) repeat-x;
 	border-left: 2px dotted #cccccc;
 	border-top:none;
 	border-bottom:2px dotted #cccccc;
+	*border-bottom:0px;
 	padding-top:6px;
 	background-color: #ffffff;
 	color: #6b5c4f; 
@@ -231,7 +230,8 @@ background:url(borderTopDiagonal.gif) repeat-x;
 .taulaRegistres td {
 	background-color: #f1efee;
 	border-left:2px solid #ffffff;
-	border-bottom:2px solid #ffffff;	
+	border-bottom:2px solid #ffffff;
+	*border:2px solid #ffffff;	
 	padding: 4px;
 	text-align:center;
 }
@@ -239,10 +239,15 @@ background:url(borderTopDiagonal.gif) repeat-x;
 	border-left: 0px dotted #cccccc;
 }
 .taulaRegistres table{
+	*border: 1px solid #cccccc;
 	border-bottom:3px solid #cccccc;
 	outline:1px solid #cccccc;
+	*outline:0px;
 	border-collapse:collapse;	
 }
+html*.taulaRegistres table{ 
+	border:1px solid #cccccc;
+	border-bottom:3px solid #cccccc;/*saf*/}
 .taulaRegistres .fonsDestacat1{
 	background-color: #beb4ab;
 	color: #6b5c4f; 
@@ -457,3 +462,7 @@ background:url(borderTopDiagonal.gif) repeat-x;
     border: 1px solid #999999;
     padding: 3px;
 }
+
+/***ajusta FCKeditor en edit*/
+body#content {font-size:70%}
+body#content a {color:#007dcc; text-decoration:none;}
