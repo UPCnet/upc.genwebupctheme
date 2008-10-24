@@ -1,22 +1,49 @@
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;
                                                 utils context/@@upc.genweb.utils;">
           
-<table>
+          
 
-    <tbody><tr valign="bottom" height="74">
-        <td width="25%"> </td>
+<div class="barraBranca_m">
+<div> 
+<!--<table>
+    <tbody>
+        <tr valign="bottom" height="74">
+        <td width="45%"> </td>
         <td align="right" style="text-align:right">
               Titol de capsalera del master
         </td>
-        </tr>
-    </tbody>
-    
-    <div class="imatgeCapcalera_m">
+
+        <td class="imatgeCapcalera_m">
         <img longdesc="LogoMaster" alt="" 
                 tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
-    </div>
+        </td>
+        
+        </tr>
+    </tbody>
+</table>
+-->
+
+<table>
+    <tbody>
+        <tr valign="bottom" height="74">
+            <td width="155">
+              Titol de capsalera del master
+            </td>
+            <td class="imatgeCapcalera_m">
+                <img longdesc="LogoMaster" alt="" tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
+            </td>
+        </tr>
+    </tbody>
 </table> 
 
 
-        <div class="liniaPrincipal_m"> </div>
 </div>
+</div>
+
+<div class="liniaPrincipal_m"> </div>
+</div>
+
+
+
+
+
