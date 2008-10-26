@@ -83,9 +83,14 @@ class utilitats(BrowserView):
 
     def getSectionFromURL(self):
         context=self.context
-        portal_url=getToolByName(context, 'portal_url')
-        contentPath = portal_url.getRelativeContentPath(context)
+        #portal_url=getToolByName(context, 'portal_url')
+        tools = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_tools')       
+        
+        portal_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_portal_state')
+        contentPath = tools.url().getRelativeContentPath(context)
         if not contentPath:
             return ''
         else:
-            return contentPath[0]    
+            return portal_state.portal()[contentPath[0]].Title()
