@@ -541,17 +541,17 @@
                                                    alt photoId;
                                                    title photoId"
                                    tal:condition="python: photoNumber not in (1, 10)"                
-                                   style="width:128px; height:96px" />
+                                   id="estilImgPhotoAlbum1" />
                               <img tal:attributes="src photoUrl;
                                                    alt photoId;
                                                    title photoId"
                                    tal:condition="python: photoNumber== 10"                
-                                   style="width:96px; height:128px" />     
+                                   id="estilImgPhotoAlbum1" />     
                               <img tal:attributes="src photoUrl;
                                                    alt photoId;
                                                    title photoId"
                                    tal:condition="python: photoNumber == 1"                
-                                   style="width:128px; height:83px" />                                                                    
+                                   id="estilImgPhotoAlbum1" />                                                                    
                             </span>
                             <span class="photoAlbumEntryTitle"
                                   tal:content="photoId">PhotoId</span>
@@ -574,10 +574,10 @@
       <Html>
         <tal:cdata replace="structure string:&lt;![CDATA[" />
 <h2>Imatge amb text lateral</h2>
-<div style="margin: 0pt auto; position: relative;"><img 
+<div id="FCKTdiv1imatgedamunttext"><img 
 	tal:attributes="src string:${templatesPath}sampleimg9.jpg" alt="" />
-<div style="margin: 0pt auto; padding: 0px; overflow: hidden; position: absolute; top: 0px; height: 100%; left: 0px; width: 200px; font-size: 12px; font-family: Arial,Helvetica,Verdana,sans-serif; color: rgb(51, 51, 51); background-color: white; opacity: 0.8; filter:alpha(opacity=80);">
-<div style="padding: 10px;">Lorem ipsum dolor sit amet consectetuer Vestibulum neque dolor felis malesuada. Id dolor magna enim pellentesque condimentum ante ullamcorper urna tellus id. At non Ut commodo consequat gravida sem vel tempus metus eleifend. Ridiculus pretium sit mauris pellentesque interdum tellus at id ante see interdum tellus at id ante semper. Dictumst ut suscipit Phasellus Nulla montes massa ac elit condimentum id.</div>
+<div id="FCKTdiv2imatgedamunttext">
+<div id="FCKTdiv3imatgedamunttext">Lorem ipsum dolor sit amet consectetuer Vestibulum neque dolor felis malesuada. Id dolor magna enim pellentesque condimentum ante ullamcorper urna tellus id. At non Ut commodo consequat gravida sem vel tempus metus eleifend. Ridiculus pretium sit mauris pellentesque interdum tellus at id ante see interdum tellus at id ante semper. Dictumst ut suscipit Phasellus Nulla montes massa ac elit condimentum id.</div>
 </div>
 </div>
 
@@ -596,12 +596,12 @@
       <Html>
         <tal:cdata replace="structure string:&lt;![CDATA[" />
 <center>
-<table border="0" cellspacing="0" cellpadding="0" width="5%" style="margin: 0px auto -45px auto;">
+<table border="0" cellspacing="0" cellpadding="0" width="5%" id="FCKTtableimatgetext">
   <tr>
     <td valign="bottom" class="emmarcada">
             <img id="imgAmbTrans"  
                  tal:attributes="src string:${templatesPath}sampleimg10.jpg" />
-		<div style="margin: 0px 5px 5px; padding: 5px; position: relative; top: -45px; height: 30px; font-size: 14px; font-weight: bold; font-family: Arial,Helvetica,verdana,sans-serif; color: rgb(102, 102, 102); background-color: white; opacity: 0.9; filter:alpha(opacity=90);">
+		<div id="FCKTdivimatgetext">
 		Illum luptatum, blandit blandit erat suscipit tincidunt feugiat molestie in ex in hendrerit elit. <a href="#">Dignissim exerci</a></div>
                    
           </td>

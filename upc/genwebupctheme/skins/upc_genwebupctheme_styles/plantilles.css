@@ -466,3 +466,43 @@ background:url(borderTopDiagonal.gif) repeat-x;
 /***ajusta FCKeditor en edit*/
 body#content {font-size:70%}
 body#content a {color:#007dcc; text-decoration:none;}
+
+/**** FCKT *****/
+#FCKTtableimatgetext
+	{ margin: 0px auto -45px auto };
+#FCKTdivimatgetext
+	{margin: 0px 5px 5px; 
+	padding: 5px; 
+	position: relative; 
+	top: -45px; 
+	height: 30px; 
+	font-size: 14px; 
+	font-weight: bold; 
+	font-family: Arial,Helvetica,verdana,sans-serif; 
+	color: rgb(102, 102, 102); 
+	background-color: white; 
+	opacity: 0.9; 
+	filter:alpha(opacity=90);}
+#FCKTdiv1imatgedamunttext
+	{margin: 0pt auto; 
+	position: relative;}
+#FCKTdiv2imatgedamunttext
+	{margin: 0pt auto; 
+	padding: 0px; 
+	overflow: hidden; 
+	position: absolute; 
+	top: 0px; 
+	height: 100%; 
+	left: 0px; 
+	width: 200px; 
+	font-size: 12px; 
+	font-family: Arial,Helvetica,Verdana,sans-serif; 
+	color: rgb(51, 51, 51); 
+	background-color: white; 
+	opacity: 0.8; 
+	filter:alpha(opacity=80);}
+#FCKTdiv3imatgedamunttext
+	{padding:10px;}
+#estilImgPhotoAlbum1 {width:128px; height:96px;}
+#estilImgPhotoAlbum2 {width:96px; height:128px;}
+#estilImgPhotoAlbum3 {width:128px; height:83px;}

@@ -1063,11 +1063,14 @@ text-transform:lowercase;
 #archetypes-fieldname-svnUrl { padding-top:10px;}
 
 /**********survey************/
+#archetypes-fieldname-startby,
+#archetypes-fieldname-priority,
 #archetypes-fieldname-thankYouMessage,
 #archetypes-fieldname-savedMessage,
 #archetypes-fieldname-savedMessage,
 #archetypes-fieldname-exitUrl,
 #archetypes-fieldname-confidential,
+#archetypes-fieldname-location,
 #archetypes-fieldname-surveyNotificationEmail,
 #archetypes-fieldname-surveyNotificationMethod,
 #archetypes-fieldname-language,
@@ -1075,3 +1078,5 @@ text-transform:lowercase;
 #archetypes-fieldname-contributors,
 #archetypes-fieldname-rights,
 #archetypes-fieldname-excludeFromNav	{padding-top:10px;}
+body.template-survey_view h2.questionTitle label {color:#4d4d4d !important;}
+body.template-survey_overview form {margin-right:10px !important;}

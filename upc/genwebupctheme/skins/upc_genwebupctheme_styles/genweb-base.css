@@ -273,13 +273,13 @@ h1 {
 
 h2.kssattr-atfieldname-title {
 	border-top:0px solid #E6E6E6 !important;
-	color:#CC0000 !important;
+	color:#CC0000;
 	font-family:Arial,Helvetica,sans-serif !important;
 	font-size:1.65em !important;
 	font-weight:bold !important;
 	padding:0.2em 0.2em 0.2em 0px !important;
 	position:static !important;}
-
+h2.kssattr-atfieldname-title .formControls { font-size: 0.75em;}
 
 h1 > img {
 	padding-right:3px;}
@@ -1349,8 +1349,15 @@ background-repeat:no-repeat;
 padding-left:25px;
 }
 
+#plone-contentmenu-display #poi_tracker_view{
+background-image:url(vista_iss.gif);
+background-position:5px 1px;
+background-repeat:no-repeat;
+padding-left:25px;
+}
+
 /* modificacio menu estat amb imatges */
-#plone-contentmenu-workflow #workflow-transition-reject, #plone-contentmenu-workflow #workflow-transition-hide{
+#plone-contentmenu-workflow #workflow-transition-reject, #plone-contentmenu-workflow #workflow-transition-hide, #plone-contentmenu-workflow #workflow-transition-close, #plone-contentmenu-workflow #workflow-transition-complete{
 	background-image: url(bullet_red.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
@@ -1362,13 +1369,13 @@ padding-left:25px;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
-#plone-contentmenu-workflow #workflow-transition-submit{
+#plone-contentmenu-workflow #workflow-transition-submit {
 	background-image: url(bullet_orange.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
-#plone-contentmenu-workflow #workflow-transition-publish, #plone-contentmenu-workflow #workflow-transition-open{
+#plone-contentmenu-workflow #workflow-transition-publish, #plone-contentmenu-workflow #workflow-transition-open, #plone-contentmenu-workflow #workflow-transition-review {
 	background-image: url(bullet_green.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
@@ -1708,3 +1715,30 @@ select[id="form.tipusintranet"] {min-width:100px;}
 
 fieldset#fieldset-genWebControlPanelinformacio input[id="form.boolmaps"] {width:15px !important;}
 fieldset#fieldset-genWebControlPanelinformacio label[for="form.boolmaps"] {font-weight:normal !important;}
+
+/*escriptori*/
+#dashboard {width:958px;}
+#dashboard-portlets1, #dashboard-portlets2, #dashboard-portlets3 {
+	float:left;
+	padding:0em 26px 0 0;
+	width:220px;
+}
+#dashboard-portlets4 {width:220px;}
+div#dashboard > div > div {border:1px solid #ccc; margin-bottom:20px; background: #ffffff url(fonsT.png) repeat-x bottom left;}
+div#dashboard > div > div > dl {margin-top: 0px;}
+div#dashboard dd.portletItem form{margin-right:25px !important; padding-top:10px;}
+div#dashboard dt.portletCalendar dt.portletHeader a {}
+div#dashboard #banners a {margin:5px auto !important; align:center !important; display:block; border:1px solid #ccc; width:147px;margin-left:35px !important;}
+div#dashboard #banners a:hover {border:1px solid #007dcc;}
+div#dashboard table.ploneCalendar {border:1px solid #ccc; margin:5px 25px;}
+div#dashboard table.ploneCalendar td {text-align:center;}
+div#dashboard dl.portletCalendar dt a {float:none !important;}
+div#dashboard dl.portletCalendar dt.portletHeader {text-align:center;}
+div#dashboard .portletItem {border-top:0px;}
+div#dashboard .portletHeader {border-bottom:5px solid #e6e6e6;}
+div#dashboard dd {padding:5px; margin:0px !important;}
+div#dashboard .portlets-manager {border:0px; background:transparent !important;}
+div#dashboard #dashboard-portlets4 {padding-top:0px;}
+div#dashboard .portlets-manager .portletHeader {border:0px; margin:5px 0px;}
+div#dashboard dl.portlet {margin-bottom:0px;}
+div#dashboard .portletFooter {text-align:right;}
