@@ -1,7 +1,7 @@
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter, getUtility
-from upc.genwebupc.browser.interfaces import IgenWebUtility
+from upc.genwebupctheme.browser.interfaces import IgenWebUtility
 
 class HomePageView(BrowserView):
     __call__=ViewPageTemplateFile('homepage.pt')
