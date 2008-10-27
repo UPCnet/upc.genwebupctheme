@@ -418,6 +418,14 @@
       layer=".interfaces.IThemeSpecificMaster"
       permission="zope2.View"
       />
+
+<!-- Browser page info-general MASTERS -->
+    <browser:page
+      name="info-general"
+      for="*"
+      class=".master.information.infoGeneralView"
+      permission="zope2.View"
+      />
       
 <!-- Home Page Portal -->
     <browser:page
