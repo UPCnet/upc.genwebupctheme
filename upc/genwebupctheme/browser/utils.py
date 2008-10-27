@@ -19,6 +19,17 @@ import MySQLdb
 
 PLMF = MessageFactory('plonelocales')
 
+
+def getGWConfig(self):
+    """ Funcio que retorna la utility que conte les configuracions del controlpanel
+    """
+    try:
+        gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+    except: 
+        gwconfig = None
+    return gwconfig
+    
+
 class utilitats(BrowserView):
 
     def portal_url(self):
