@@ -11,7 +11,7 @@ from Products.CMFPlone import PloneMessageFactory as _
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
 from zope.component import getMultiAdapter, getUtility
-from upc.genwebupc.browser.interfaces import IgenWebUtility
+from upc.genwebupctheme.browser.interfaces import IgenWebUtility
 from Products.ATContentTypes.interface.folder import IATFolder
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 
@@ -52,7 +52,10 @@ class utilitats(BrowserView):
     def getGWConfig(self):
         """ Funcio que retorna la utility que conte les configuracions del controlpanel
         """
-        gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+        try:
+            gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+        except: 
+            gwconfig = None
         return gwconfig
     
     def isFolder(self):
