@@ -1,4 +1,5 @@
-<div id="peu" tal:define="utils context/@@upc.genweb.utils">   
+<div id="peu" tal:define="utils context/@@upc.genweb.utils" 
+                     i18n:domain="upc.genwebupc">   
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
 		<tal:block tal:repeat="obj python: view.bannersPeu()">		
@@ -9,16 +10,22 @@
          		<spam tal:replace="structure tmp/Imatge"/>
 				</a>
 <!--				<img tal:replace="structure python:tmp.Imatge.tag(scale='tile')"/>-->
-							
 			</tal:items>       	 					
 		</tal:block>
 	</div>
 	
    <div class="bandaPeu"></div>
    <div id="signText">© <a href="http://www.upc.edu" target="_blank">UPC</a>. Universitat Politècnica de Catalunya. 
-                        <span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció
-                        </span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció
-                        </span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció
-                        </span>.
-                        <span class="sobreElWeb"><a href="#">Sobre aquest web</a></span></div>
+        <span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció </span>
+        <span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció </span>
+        <span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció </span>.
+
+        <span class="sobreElWeb">
+            <a href="#"
+                i18n:translate="sobre-web">
+                Sobre aquest web
+            </a>
+        </span>
+        
+    </div>
 </div>

@@ -79,7 +79,7 @@
       <thead>
         <tr class="arrodonimentTR">
             <td class="arrodonimentTD" align="center" colspan="7">
-                <img class="imgCA" src="++resource++upc.genwebupctheme.images/daltCalendari.gif"/>
+                <img class="imgCA" src="daltCalendari.gif"/>
             </td>
         </tr>
       </thead>
@@ -94,7 +94,7 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, prevMonthMonth, prevMonthYear, url_quote_plus(query_string)); 
                            class string:kssCalendarChange kssattr-year-${prevMonthYear} kssattr-month-${prevMonthMonth} calendarPrevious;"
            tal:condition="showPrevMonth"
-           i18n:attributes="title title_previous_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaE.gif"></a>
+           i18n:attributes="title title_previous_month;"><img src="fletxaE.gif"></a>
     
                 <a href="#" rel="nofollow"
                title="Next month"
@@ -104,7 +104,7 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
                            class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
                 tal:condition="showNextMonth"
-                i18n:attributes="title title_next_month;"><img src="++resource++upc.genwebupctheme.images/custom/fletxaD.gif"> </a>       
+                i18n:attributes="title title_next_month;"><img src="fletxaD.gif"> </a>       
 
                 <span i18n:translate="" tal:omit-tag=""> 
                     <span style="color: red;" 

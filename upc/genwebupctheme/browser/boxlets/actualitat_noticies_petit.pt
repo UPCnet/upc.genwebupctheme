@@ -49,7 +49,7 @@
 	        </ul>
 	        
 	        <div id="portletPlus">  
-	            <a href="#"> <img src="++resource++upc.genwebupctheme.images/custom/plus.gif" alt="més actualitat"> </a> 
+	            <a href="#"> <img src="plus.gif" alt="més actualitat"> </a> 
 	            <a href=""
 	               tal:attributes="href view/all_news_link"
 	               i18n:translate="box_more_news_link">

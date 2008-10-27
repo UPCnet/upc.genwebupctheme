@@ -40,27 +40,26 @@ float:left;
     color:#0076CC;
     text-decoration:underline;}
  
-#portal-personaltools-n2, .visualInline-n2, #portal-personaltools-wrapper-n2 {
+#portal-personaltools, .visualInline-n2, #portal-personaltools-wrapper-n2 {
     background-color:transparent;
 }
 
 #portal-personaltools-n2 {
-    background-color:transparent;
-    border-bottom:medium none;
-    border-top:medium none;
-    color:#4D4D4D;
-    font-size:0.9em;
-    margin:-21px 0 0 5px;
-    padding:0;
-    text-align:left;
-    text-transform:none;
-    line-height:1.6em;
-    list-style-image:none;
-    list-style-position:outside;
-    list-style-type:none;
-    z-index: 1;
-    position: absolute;
+
+
+
+    border-bottom: none;
+    border-top: none;
+    padding: 0px 0px 0px 0px;
+    text-align: left;
+    text-transform: none;
+    color: #4d4d4d;
+    margin:-21px 0px 0px 5px;
+    
+    
 }
+ 
+ 
  
  
 /*
