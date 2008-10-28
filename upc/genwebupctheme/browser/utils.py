@@ -75,25 +75,36 @@ class utilitats(BrowserView):
         if  IATFolder.providedBy(self.context) or IPloneSiteRoot.providedBy(self.context):
             return True
 
-    def extraeDatosMysql(self, id):
-        """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis 
-            de acuerdo a un id.
-        """
-        
-        db=MySQLdb.connect(host='raiden.upc.es',user='www-estudis',passwd='bdestudis',db='www-estudis')
-        c=db.cursor()
-        c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
-        _results = c.fetchone()
+    def remapList2Dic(self, dictkeys, results):
         
         _dictResult = {}
-        _dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
+        _dictKeys = dictkeys
+        _results = results
         c=0
-
+        
         for ii in _dictKeys: 
             _dictResult[ii]=_results[c]
-            c=c+1
-            
+            c=c+1        
+
         return _dictResult
+
+    def connectDatabase(self):
+        return MySQLdb.connect(host='raiden.upc.es',user='www-estudis',passwd='bdestudis',db='www-estudis')
+    
+    def recodifica(self, str):
+        return str.decode('iso-8859-1').encode('utf-8')
+    
+    def getContacteDataSql(self, id):
+        """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis 
+            de acuerdo a un id.
+        """      
+        db = self.connectDatabase()
+        c=db.cursor()     
+        c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
+        results = c.fetchone()
+        dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
+           
+        return self.remapList2Dic(dictKeys,results)
 
     def getSectionFromURL(self):
         context=self.context
