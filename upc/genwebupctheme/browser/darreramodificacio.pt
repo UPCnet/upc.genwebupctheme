@@ -29,25 +29,10 @@
     </span>
 </div>
 
-<div class="ultimamodificacio" tal:condition="python:here.getProperty('eshome')!='Si'">
-                                
-       <tal:mod i18n:translate="box_last_modified">
-            last modified
-       </tal:mod>:
-       <span i18n:translate="" tal:omit-tag="">
-                        <span i18n:name="monthname"
-                              tal:define="yearmonth here/ModificationDate; month python:yearmonth[5]+yearmonth[6]; translation_service nocall:here/translation_service; month_english python:translation_service.month_english(month); utranslate nocall:here/utranslate;"
-                              tal:attributes="id string:calendar-month-$month_english"
-                              tal:content="python: utranslate(translation_service.month_msgid(month), default=month_english)"
-                              tal:omit-tag=""
-                              id="month">monthname</span>
-                        <span i18n:name="year"
-                             tal:define="yearmonth here/ModificationDate; year python:yearmonth[0]+yearmonth[1]+yearmonth[2]+yearmonth[3];"
-                              tal:content="string: $year"
-                              tal:attributes="id string:calendar-year-$year;"
-                              tal:omit-tag=""
-                              id="calendar-year">year</span>
-                    </span>
-</div>
-</div>
-        
+</div>        
+ 
+<div>
+
+
+
+

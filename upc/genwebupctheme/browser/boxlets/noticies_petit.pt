@@ -1,5 +1,6 @@
 <tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
-                            plone_view context/@@plone;">
+                            plone_view context/@@plone;"
+                            i18n:domain="plone">
 
 	<tal:block>
 	
@@ -33,7 +34,7 @@
 	        </ul>
 	        
 	        <div id="portletPlus">  
-	            <a href="#"> <img src="plus.gif" alt="més actualitat"> </a> 
+	            <a href="#"> <img src="plus.gif" alt="més notícies"> </a> 
 	            <a href=""
 	               tal:attributes="href view/all_news_link"
 	               i18n:translate="box_more_news_link">
