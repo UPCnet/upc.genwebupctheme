@@ -1,7 +1,6 @@
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter, getUtility
-from upc.genwebupctheme.browser.utils import utilitats
 from upc.genwebupctheme.browser import utils
 
 
