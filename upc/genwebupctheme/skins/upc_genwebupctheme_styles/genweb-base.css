@@ -1694,6 +1694,9 @@ div.contacte div, div.contacte h5 {padding-bottom:5px;}
 */
 /*div span.contacteSpan {display:block;}*/
 /*form fieldset {margin-top:0px !important; padding-top:0px !important;}*/
+.widget textarea {width:99%;}
+
+
 
 
 /*ajustaments visuals de genweb settings*/
@@ -1742,3 +1745,7 @@ div#dashboard #dashboard-portlets4 {padding-top:0px;}
 div#dashboard .portlets-manager .portletHeader {border:0px; margin:5px 0px;}
 div#dashboard dl.portlet {margin-bottom:0px;}
 div#dashboard .portletFooter {text-align:right;}
+
+
+/*detallet*/
+.fletxatop, .reviewHistory {margin-top:30px;}

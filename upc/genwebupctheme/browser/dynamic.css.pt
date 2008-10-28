@@ -134,7 +134,7 @@ pre
 
 .reunio,
 .template-board_view .listing th
-	{background:<tal:propietat replace="e4">Especific4</tal:propietat>;}
+	{background:<tal:propietat replace="e4">Especific4</tal:propietat> !important;}
 .comment h3
 	{border-bottom:1px dashed <tal:propietat replace="e5">Especific5</tal:propietat>;}
 
@@ -144,7 +144,7 @@ pre
 	{background-color: <tal:propietat replace="e5">Especific5</tal:propietat>;}
 .event,
 .template-forum_view .listing th
-	{background: <tal:propietat replace="e5">Especific5</tal:propietat>;}
+	{background: <tal:propietat replace="e5">Especific5</tal:propietat> !important;}
 .comment
 	{border:1px solid <tal:propietat replace="e5">Especific5</tal:propietat>;}
 
