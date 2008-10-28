@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<object name="portal_controlpanel" meta_type="Plone Control Panel Tool">
+
+ <configlet title="genWeb UPC settings" action_id="genweb"
+    appId="upc.genwebupc" category="Products"
+    condition_expr="python:True"
+    url_expr="string:${portal_url}/genwebupc-controlpanel"
+    visible="True">
+  <permission>Manage portal</permission>
+  
+  Afegim el panell de control del genwebupc
+  
+ </configlet>
+
+</object>
