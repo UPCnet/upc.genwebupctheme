@@ -2,6 +2,7 @@ from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.component import getMultiAdapter, getUtility
 from upc.genwebupctheme.browser.utils import utilitats
+from upc.genwebupctheme.browser import utils
 
 
 class HomePageView(BrowserView):
@@ -22,7 +23,7 @@ class HomePageView(BrowserView):
         """Funcio que agafa els valors de quines caixetes cal posar la
            home page del genweb
         """
-        gw_util = utilitats.getGWConfig()
+        gw_util = utils.getGWConfig()
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna1
         
@@ -30,7 +31,7 @@ class HomePageView(BrowserView):
         """Funcio que agafa els valors de quines caixetes cal posar la
            home page del genweb
         """
-        gw_util = utilitats.getGWConfig()
+        gw_util = utils.getGWConfig()
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna2
                 
@@ -38,6 +39,6 @@ class HomePageView(BrowserView):
         """Funcio que agafa els valors de quines caixetes cal posar la
            home page del genweb
         """
-        gw_util = utilitats.getGWConfig()
+        gw_util = utils.getGWConfig()
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna3

@@ -20,7 +20,7 @@ import MySQLdb
 PLMF = MessageFactory('plonelocales')
 
 
-def getGWConfig(self):
+def getGWConfig():
     """ Funcio que retorna la utility que conte les configuracions del controlpanel
     """
     try:
