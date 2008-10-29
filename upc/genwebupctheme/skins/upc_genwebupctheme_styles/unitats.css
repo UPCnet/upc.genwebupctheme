@@ -39,7 +39,7 @@ html*.daltMenu{
 height:103px;}
 }
 .daltMenu
-{*height:120px;}
+{*height:109px !important;}
 .alpha{
 background:url(pixelAlpha.png);
 _background: none; /*ie6hack*/
@@ -101,7 +101,7 @@ font-size:0em;
 }
 /*\*/
 html*.liniaActivaEsq, html*.liniaActivaDreta {width:152px;}
-.liniaActivaEsq, .liniaActivaDreta {*width:151px;}
+.liniaActivaEsq, .liniaActivaDreta {*width:151px !important;}
 .degradat{
 background:url(degradat.gif) repeat-x;
 min-height:18px;
@@ -112,8 +112,7 @@ padding-top:1px;
 }
 /*\*/
 html*.degradat{margin-top:0px; float:right;}
-.degradat {*float:none;*margin-top:-2px;
-}
+.degradat {*float:none !important;*margin-top:-2px !important;}
 .imatgeCapcaleraUnitat table{
 border-collapse:collapse;
 padding:0px;
