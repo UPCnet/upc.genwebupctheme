@@ -18,7 +18,7 @@ class GlobalSections(GlobalSectionsViewlet):
             return False
         else:
             return True
-        
+
     def claseDalt(self, esSelected, esPrimer):
         if esSelected and esPrimer:
             return 'daltMenu daltMenuPrimer'

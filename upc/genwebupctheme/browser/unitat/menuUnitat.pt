@@ -6,10 +6,11 @@
  <tbody>
 
   <tr class="daltMenu" tal:condition="not:esSeccio">
-    <td class="daltMenu daltMenuPrimer"></td>
-    <td class="daltMenu"></td>
-    <td class="daltMenu"></td>
-    <td class="daltMenu" width="100%"></td>
+    <tal:repeat tal:repeat="tab view/portal_tabs">
+    <td class="daltMenu" tal:attributes="class python:path('repeat/tab/start') and 'daltMenu daltMenuPrimer' or 'daltMenu';
+                                         width python:view.claseDaltUltim(path('repeat/tab/end'))">
+    </td>
+    </tal:repeat>
   </tr>
 
   <tr class="daltMenu" tal:condition="esSeccio">
