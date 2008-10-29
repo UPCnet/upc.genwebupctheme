@@ -93,12 +93,11 @@
   <viewlet name="upc.genweb.barraColor"/>  
   <viewlet name="upc.genweb.barraIdiomes"/>
   <viewlet name="upc.genweb.eines"/>
-  <viewlet name="upc.genweb.logoUnitat"/>
-  <viewlet name="genweb.global_sections_Unitats"/>
+  <viewlet name="plone.path_bar"/>
+  <viewlet name="upc.genweb.menuUnitat"/>
  </order>
  <order manager="plone.portaltop" skinname="Tema genwebUPC Unitat">
   <viewlet name="plone.header"/>
-  <viewlet name="plone.path_bar"/>
   <viewlet name="plone.personal_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
  </order>
@@ -162,6 +161,7 @@
  </hidden>
  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Unitat">
   <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.path_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
  </hidden>
 </object>

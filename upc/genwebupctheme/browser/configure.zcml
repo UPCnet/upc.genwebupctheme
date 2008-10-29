@@ -354,13 +354,21 @@
 
 
 <!-- Específic Unitat -->
-     <browser:viewlet
-         name="upc.genweb.logoUnitat"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.logoUnitat"
-         layer=".interfaces.IThemeSpecificUnitat"
-         permission="zope2.View"
-         />
+    <browser:viewlet
+      name="upc.genweb.menuUnitat"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".unitat.menuUnitat.GlobalSections"
+      layer=".interfaces.IThemeSpecificUnitat"
+      permission="zope2.View" 
+      />
+
+    <browser:viewlet
+        name="plone.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.PathBar"
+        layer=".interfaces.IThemeSpecificUnitat"
+        permission="zope2.View" 
+        />
 
 <!-- Específic Master -->
      <browser:viewlet
@@ -401,15 +409,7 @@
       layer=".interfaces.IThemeSpecificUnitat"
       permission="zope2.View"
       />
-      
-    <browser:viewlet
-      name="genweb.global_sections_Unitats"
-      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-      class=".global_sections_unitats.GlobalSectionsViewlet"
-      layer=".interfaces.IThemeSpecificUnitat"
-      permission="zope2.View" 
-      />
-      
+     
 <!-- Home Page Master -->
     <browser:page
       name="homepage"

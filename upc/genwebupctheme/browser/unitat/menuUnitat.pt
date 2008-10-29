@@ -1,0 +1,70 @@
+<tal:menu tal:define="esSeccio view/esSeccio">
+
+<div class="imatgeCapcaleraUnitat">
+
+<table>
+ <tbody>
+
+  <tr class="daltMenu" tal:condition="not:esSeccio">
+    <td class="daltMenu daltMenuPrimer"></td>
+    <td class="daltMenu"></td>
+    <td class="daltMenu"></td>
+    <td class="daltMenu" width="100%"></td>
+  </tr>
+
+  <tr class="daltMenu" tal:condition="esSeccio">
+    <tal:repeat tal:repeat="tab view/portal_tabs">
+    <td class="daltMenu" tal:attributes="class python:view.claseDalt(view.selected_portal_tab==tab['id'],path('repeat/tab/start'));
+                                         width python:view.claseDaltUltim(path('repeat/tab/end'))">
+    </td>
+    </tal:repeat>
+  </tr>
+
+  <tr tal:condition="not:esSeccio">
+    <td class="baixMenu" tal:repeat="tab view/portal_tabs">
+      <a href="" 
+         tal:content="tab/name"
+         tal:attributes="href tab/url;
+                         title tab/description|nothing">
+            Tab Name
+      </a>
+    </td>
+  </tr>
+
+  <tr tal:condition="esSeccio">
+    <td class="baixMenu" tal:repeat="tab view/portal_tabs"
+                         tal:attributes="class python:view.selected_portal_tab==tab['id'] and 'baixMenu alphaCustom' or 'baixMenu alpha'">
+      <a href="" 
+         tal:content="tab/name"
+         tal:attributes="href tab/url;
+                         title tab/description|nothing">
+            Tab Name
+      </a>
+    </td>
+  </tr>
+
+
+  <tr tal:condition="not:esSeccio">
+    <td class="descripcioMenu" tal:repeat="tab view/portal_tabs">
+      <tal:descripcio content="tab/description|nothing">Descripcio</tal:descripcio>
+    </td>
+  </tr>
+  
+  <tr tal:condition="esSeccio">
+    <td tal:repeat="tab view/portal_tabs"
+        tal:attributes="class python:view.selected_portal_tab==tab['id'] and 'seleccionatMenu alphaCustom' or 'actiuMenu'">
+    </td>
+  </tr>
+  
+ </tbody>  
+</table>
+
+</div>
+
+<tal:linies tal:condition="esSeccio">
+<div class="liniaActivaDreta"></div>
+<div class="liniaActivaEsq"></div>
+<div class="degradat"></div>
+</tal:linies>
+
+</tal:menu>

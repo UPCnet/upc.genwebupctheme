@@ -64,9 +64,6 @@ class barraSuperior (ViewletBase):
 class logoNeutre2(ViewletBase):
     render = ViewPageTemplateFile('neutre2/logoNeutre2.pt')
     
-class logoUnitat(ViewletBase):
-    render = ViewPageTemplateFile('unitat/logoUnitat.pt')    
-    
 class logoMaster(ViewletBase):
     render = ViewPageTemplateFile('master/logoMaster.pt')    
 
