@@ -13,7 +13,7 @@
         />
 
     <!-- The breadcrumbs -->
-
+    <!-- El viewlet null per treure el breadcrumbs de l'arrel-->
     <browser:viewlet
 	    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         name="plone.path_bar"
@@ -22,14 +22,20 @@
         permission="zope2.View" 
         />
     <browser:viewlet
+        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+        name="plone.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".browser.viewlets.PathBarRoot"
+        layer=".browser.interfaces.IThemeSpecificUnitat"
+        permission="zope2.View" 
+        />
+
+    <browser:viewlet
         name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".browser.viewlets.PathBar"
         permission="zope2.View" 
         />
-
-
-
         
      <!-- DocumentByline Modificado -->   
      <browser:viewlet

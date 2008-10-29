@@ -119,3 +119,8 @@ class utilitats(BrowserView):
             return ''
         else:
             return portal_state.portal()[contentPath[0]].Title()
+
+    def getFlavour(self):
+        portal_skins=getToolByName(self.context, 'portal_skins')
+        return portal_skins.getDefaultSkin()
+ 
