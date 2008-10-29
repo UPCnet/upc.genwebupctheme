@@ -31,9 +31,15 @@ margin: 10px 0px 10px 0px;
 }
 
 .daltMenu{
-height:110px;
+height:109px;
 border-right: 2px solid #ffffff;
 }
+/*\*/
+html*.daltMenu{
+height:103px;}
+}
+.daltMenu
+{*height:120px;}
 .alpha{
 background:url(pixelAlpha.png);
 _background: none; /*ie6hack*/
@@ -62,8 +68,11 @@ vertical-align:top;
 }
 .actiuMenu{
 height:8px;
-border-bottom:2px solid #ff784d; /*especí­fic1*/
+border-bottom:3px solid #ff784d; /*especí­fic1*/
+*border-bottom:2px solid #ff784d; /*especí­fic1*/
 }
+/*\*/
+html*.actiuMenu{border-bottom:2px solid #ff784d; /*especí­fic1*/}
 .seleccionatMenu{
 border-left:2px solid #ff784d; /*especí­fic1*/
 border-right:2px solid #ff784d; /*especí­fic1*/
@@ -72,11 +81,12 @@ border-right:2px solid #ff784d; /*especí­fic1*/
 background:url(pixelAlphaCustom.png);
 _background: none;
 _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlphaCustom.png",sizingMethod="scale");
+border-right:2px solid #ff784d;
 }
 .liniaActivaEsq{
 float:left;
 width:151px;
-margin-top:-1px; /* internet explorer -3px*/
+margin-top:-2px; /* internet explorer -3px*/
 *margin-top:-2px; /* internet explorer -3px*/
 border-top:2px solid #ff784d; /*especí­fic1*/
 font-size:0em;
@@ -84,18 +94,25 @@ font-size:0em;
 .liniaActivaDreta{
 float:right;
 width:151px;
-margin-top:-1px; /* internet explorer -3px*/
+margin-top:-2px; /* internet explorer -3px*/
 *margin-top:-2px; /* internet explorer -3px*/
 border-top:2px solid #ff784d; /*especí­fic1*/
 font-size:0em;
 }
+/*\*/
+html*.liniaActivaEsq, html*.liniaActivaDreta {width:152px;}
+.liniaActivaEsq, .liniaActivaDreta {*width:151px;}
 .degradat{
 background:url(degradat.gif) repeat-x;
 min-height:18px;
-margin-top:1px; /* internet explorer -13px*/
+margin-top:0px; /* internet explorer -13px*/
 *margin-top:-2px; /* internet explorer -13px*/
 width:958px;
 padding-top:1px;
+}
+/*\*/
+html*.degradat{margin-top:0px; float:right;}
+.degradat {*float:none;*margin-top:-2px;
 }
 .imatgeCapcaleraUnitat table{
 border-collapse:collapse;

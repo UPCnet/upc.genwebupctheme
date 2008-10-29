@@ -195,6 +195,7 @@ border-collapse: collapse;
 margin:0px;
 padding:0px;
 vertical-align:top;
+margin-top:20px;
 }
 .taulaDivsTdE{
 padding-right:5px;
@@ -1060,11 +1061,44 @@ text-transform:lowercase;
 #archetypes-fieldname-helpText,
 #archetypes-fieldname-managers,
 #archetypes-fieldname-mailingList,
-#archetypes-fieldname-svnUrl { padding-top:10px;}
+#archetypes-fieldname-svnUrl,
+#archetypes-fieldname-sendNotificationEmails,
+#archetypes-fieldname-creators { padding-top:10px;}
+
+/*colleccio*/
+select#customViewFields_options, select#customViewFields {min-width:300px; _width:300px;}
 
 /**********survey************/
+#archetypes-fieldname-formPrologue {margin-top:20px !important;}
+body.template-atct_edit #archetypes-fieldname-imageCaption {text-align:left;}
+
+#archetypes-fieldname-image,
+#archetypes-fieldname-imageCaption,
+#archetypes-fieldname-submitLabel,
+#archetypes-fieldname-resetLabel,
+#archetypes-fieldname-actionAdapter,
+#archetypes-fieldname-thanksPage,
+#archetypes-fieldname-formActionOverride,
+#archetypes-fieldname-onDisplayOverride,
+#archetypes-fieldname-afterValidationOverride,
+#archetypes-fieldname-headerInjection,
+#archetypes-fieldname-question,
+#archetypes-fieldname-choices,
+#archetypes-fieldname-categories,
+#archetypes-fieldname-category,
+#archetypes-fieldname-number_of_choices,
+#archetypes-fieldname-visible,
+#archetypes-fieldname-attendees,
+#archetypes-fieldname-eventType,
+#archetypes-fieldname-contactName,
+#archetypes-fieldname-startDate,
+#archetypes-fieldname-endDate,
 #archetypes-fieldname-startby,
+#archetypes-fieldname-endby,
 #archetypes-fieldname-priority,
+#archetypes-fieldname-percentCompleted,
+#archetypes-fieldname-taskOwner,
+#archetypes-fieldname-text,
 #archetypes-fieldname-thankYouMessage,
 #archetypes-fieldname-savedMessage,
 #archetypes-fieldname-savedMessage,
@@ -1080,3 +1114,4 @@ text-transform:lowercase;
 #archetypes-fieldname-excludeFromNav	{padding-top:10px;}
 body.template-survey_view h2.questionTitle label {color:#4d4d4d !important;}
 body.template-survey_overview form {margin-right:10px !important;}
+body.template-survey_view .even {background:white;}

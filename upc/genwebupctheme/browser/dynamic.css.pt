@@ -177,7 +177,10 @@ pre
 .seleccionatMenu
 	{border-left:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 .actiuMenu
-	{border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+	{border-bottom:3px solid <tal:propietat replace="e1">Especific1</tal:propietat>;
+	*border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+/*\*/
+html*.actiuMenu{border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 .seleccionatMenu
 	{border-right:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 .liniaActivaEsq,
@@ -197,5 +200,10 @@ pre
 .cantoDC,
 .portletHeader
 	{background-header:<tal:propietat replace="e6">Especific6</tal:propietat>;}
+
+
+
+.alphaCustom {border-right:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
+
 </tal:dynamic>
 

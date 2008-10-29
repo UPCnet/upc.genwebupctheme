@@ -1404,20 +1404,26 @@ padding-left:25px;
 
 
 #plone-contentmenu-translate #translate_into_en {
+	/*
 	background-image:url(en_lang.gif);
 	background-position:5px 1px;
 	background-repeat:no-repeat;
-	padding-left:25px;}
+	padding-left:25px;
+	*/}
 #plone-contentmenu-translate #translate_into_es {
+	/*
 	background-image:url(es_lang.gif);
 	background-position:5px 1px;
 	background-repeat:no-repeat;
-	padding-left:25px;}
+	padding-left:25px;
+	*/}
 #plone-contentmenu-translate #translate_into_ca {
+	/*
 	background-image:url(ca_lang.gif);
 	background-position:5px 1px;
 	background-repeat:no-repeat;
-	padding-left:25px;}
+	padding-left:25px;
+	*/}
 
 .template- h1.documentFirstHeading img{
 	width: 23px !important;

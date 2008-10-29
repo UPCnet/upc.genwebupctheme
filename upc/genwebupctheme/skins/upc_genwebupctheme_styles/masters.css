@@ -20,11 +20,11 @@ font-size:16px;
 color:#007dcb;
 }
 .imatgeCapcalera_m{
-padding-right:180px;
-width:958px;
+width:768px;
 height:85px;
 /*background: url(imatgeMaster.jpg) no-repeat top right;/*------ imatge del custom /!\ ----*/
 text-align:right;
+padding-bottom:0px !important;
 }
 .imatgeCapcalera_m img{ }
 
@@ -38,19 +38,20 @@ float:left;
 font-size:0.9em;
 }
 .barraBranca_m{ 
-    width:175px;
-    padding: 0px 5px 0px;
-    float:left;
+    width:958px;
+    padding: 0px;
     font-weight:bold;
     font-size:1.1em;
-    text-align:right;
     color:#B0D73C; /*específic1*/
 }
 .barraBranca_m table{
 text-align:right !important;
 vertical-align:bottom !important;
-width: 150px !important;
+width: 958px !important;
 }
+.titolBranca_m {margin: 5px; margin-bottom:18px;}
+.barraBranca_m table td { width:190px;    text-align:right !important;}
+.barraBranca_m table, .barraBranca_m tr, .barraBranca_m th, .barraBranca_m td, .barraBranca_m tbody, .barraBranca_m tfoot, .barraBranca_m thead { padding:0px !important;}
 .liniaPrincipal_m{
 height:6px;
 width:100%;
