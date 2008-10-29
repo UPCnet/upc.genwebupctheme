@@ -26,9 +26,7 @@
 <table>
     <tbody>
         <tr valign="bottom" height="74">
-            <td width="155">
-              Titol de capsalera del master
-            </td>
+            <td width="155"> <div class="titolBranca_m">Titol de capsalera del master</div></td> 
             <td class="imatgeCapcalera_m">
                 <img longdesc="LogoMaster" alt="" tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
             </td>
