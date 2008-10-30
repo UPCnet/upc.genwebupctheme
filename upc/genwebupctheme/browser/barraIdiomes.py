@@ -54,3 +54,9 @@ class barraIdiomesNeutre2(barraIdiomes):
     """Language selector for translatable content.
     """
     render = ZopeTwoPageTemplateFile('neutre2/barraIdiomesNeutre2.pt')
+    
+
+class barraIdiomesMaster(barraIdiomes):
+    """Language selector for translatable content.
+    """
+    render = ZopeTwoPageTemplateFile('master/barraIdiomesMaster.pt')

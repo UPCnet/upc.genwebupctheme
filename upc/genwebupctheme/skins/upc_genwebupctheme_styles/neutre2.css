@@ -33,34 +33,24 @@ float:left;
   margin-bottom:5px;
 }
  
-#portal-personaltools-n2 li a {
-    color:#0076CC;
-    text-decoration:none;}
-#portal-personaltools-n2 li a:hover {
-    color:#0076CC;
-    text-decoration:underline;}
- 
-#portal-personaltools, .visualInline-n2, #portal-personaltools-wrapper-n2 {
+#portal-personaltools{
     background-color:transparent;
+    z-index: 1;
+    position: absolute;
+    margin: -26px 0px 0px 5px;
 }
 
-#portal-personaltools-n2 {
-
-
-
-    border-bottom: none;
-    border-top: none;
-    padding: 0px 0px 0px 0px;
-    text-align: left;
-    text-transform: none;
-    color: #4d4d4d;
-    margin:-21px 0px 0px 5px;
+.barra_idiomes {
+    float: right;
+    position:relative;
+    z-index: 2;
+    margin-top: -25px;
+    margin-right: 5px;
+    }
     
-    
-}
- 
- 
- 
+.validacio {
+	margin-top: -28px;
+	}    
  
 /*
 bodyNeutre2{

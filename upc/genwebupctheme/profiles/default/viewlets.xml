@@ -109,6 +109,7 @@
   <viewlet name="plone.logo"/>
   <viewlet name="plone.searchbox"/>
   <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.global_sections"/>  
  </hidden>
  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Master">
   <viewlet name="plone.personal_bar"/>
@@ -118,9 +119,7 @@
  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
   <viewlet name="plone.site_actions"/>
   <viewlet name="plone.logo"/>
-  <viewlet name="plone.logoUnitat"/>
   <viewlet name="plone.searchbox"/>
-  <viewlet name="upc.genweb.logoUnitat"/>
  </hidden>
  <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Neutre3">
   <viewlet name="plone.abovecontenttitle.documentactions"/>
@@ -140,12 +139,17 @@
  </hidden>
  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
   <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.global_sections"/>  
  </hidden>
  <hidden manager="plone.portaltop" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.app.i18n.locales.languageselector"/>
   <viewlet name="plone.personal_bar"/>
  </hidden>
+ <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </hidden>  
  <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Unitat">
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </hidden>

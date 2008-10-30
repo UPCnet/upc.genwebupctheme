@@ -66,12 +66,12 @@
 </tal:identificacio>
 
 <!--  PERSONAL BAR  -->
-<div id="portal-personaltools-wrapper-n2"
+<div id="portal-personaltools-wrapper"
      tal:condition="not:view/show"
      i18n:domain="plone">
 
-<ul id="portal-personaltools-n2"
-    class="visualInline-n2">
+<ul id="portal-personaltools"
+    class="visualInline">
     
     <b><span 
              i18n:domain="upc.genwebupc"
@@ -79,6 +79,7 @@
              Usuari:
         </span>
     </b>
+    
    <tal:block>
        <li><a 
            id="user-name"
