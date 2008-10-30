@@ -9,6 +9,10 @@
     <tal:repeat tal:repeat="tab view/portal_tabs">
     <td class="daltMenu" tal:attributes="class python:path('repeat/tab/start') and 'daltMenu daltMenuPrimer' or 'daltMenu';
                                          width python:view.claseDaltUltim(path('repeat/tab/end'))">
+      <a href="" 
+         tal:attributes="href tab/url">
+        <img class="imgUnitatsClick" src="pixelTransparent.gif" width="100%" height="100%" />
+      </a>
     </td>
     </tal:repeat>
   </tr>
@@ -17,6 +21,7 @@
     <tal:repeat tal:repeat="tab view/portal_tabs">
     <td class="daltMenu" tal:attributes="class python:view.claseDalt(view.selected_portal_tab==tab['id'],path('repeat/tab/start'));
                                          width python:view.claseDaltUltim(path('repeat/tab/end'))">
+        <img class="imgUnitatsClick" src="pixelTransparent.gif" width="100%" height="100%" /> 
     </td>
     </tal:repeat>
   </tr>
