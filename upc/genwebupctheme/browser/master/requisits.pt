@@ -1,0 +1,31 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xml:lang="en" lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="upc.genwebupc">
+      
+	<body>
+	
+		<metal:block metal:fill-slot="top_slot"
+	    	         tal:define="dummy python:request.set('disable_border', 1)" />
+	    	
+		<metal:main fill-slot="main">
+		    <tal:main-macro metal:define-macro="main"
+       			tal:define="langtool nocall:context/portal_languages;
+                  			lang_code langtool/getPreferredLanguage;
+                  			global utils context/@@upc.genweb.utils">
+		
+		
+				<div tal:replace="structure provider:plone.abovecontenttitle" />
+		
+		
+        		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('com_accedir',lang_code))">Com accedir-hi</h1>
+		
+				
+			</tal:main-macro>
+		</metal:main>
+	
+	</body>
+</html>

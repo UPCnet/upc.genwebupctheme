@@ -6,3 +6,6 @@ class infoGeneralView(BrowserView):
 
 class competenciesView(BrowserView):
     __call__=ViewPageTemplateFile('competencies.pt')
+    
+class requisitsView(BrowserView):
+    __call__=ViewPageTemplateFile('requisits.pt')

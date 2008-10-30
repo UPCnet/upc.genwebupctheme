@@ -435,7 +435,16 @@
       class=".master.information.competenciesView"
       permission="zope2.View"
       />
-      
+
+<!-- Browser page requisits MASTERS -->
+
+    <browser:page
+      for="*"
+      name="requisits"
+      class=".master.information.requisitsView"
+      permission="zope2.View"
+      />
+         
 <!-- Home Page Portal -->
     <browser:page
       name="homepage"
