@@ -33,6 +33,7 @@ class GenWebControlPanelUtility(Persistent):
     columna1 = []
     columna2 = []
     columna3 = []
+    constrains = ['Document', 'Event', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage']
 
     # de la pestanya d'especifics
     especific1='#007dcc'
@@ -116,6 +117,16 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
             gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
             gw_util.columna3 = value
         return property(get, set)
+        
+    @apply
+    def constrains():
+        def get(self):
+            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+            return gw_util.constrains
+        def set(self, value):
+            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+            gw_util.constrains = value
+        return property(get, set)        
 
     @apply
     def especific1():
