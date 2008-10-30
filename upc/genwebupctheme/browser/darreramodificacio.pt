@@ -1,38 +1,28 @@
 <div tal:define="utils context/@@upc.genweb.utils;
-                    portal_url context/@@plone_portal_state/portal_url;"
+                portal_url context/@@plone_portal_state/portal_url"
         tal:condition="python: not utils.isFolder()"
         i18n:domain="plone">
          
-<div class="fletxatop">
-    <a tal:attributes="href python:context.absolute_url()+'/#amuntDeTot'">
-        <img alt="Top of page" title="Top of page" tal:attributes="src string:${portal_url}/fletxa16blava.png"/>
-    </a>
+	<div class="fletxatop">
+	    <a tal:attributes="href python:context.absolute_url()+'/#amuntDeTot'">
+        	<img alt="Top of page" title="Top of page" tal:attributes="src string:${portal_url}/fletxa16blava.png"/>
+    	</a>
+	</div>
+
+	<div class="ultimamodificacio">
+	    <tal:mod i18n:translate="box_last_modified">
+        	last modified
+    	</tal:mod>:
+        <span tal:define="view context/@@upc.genweb.utils;
+        				yearmonth here/ModificationDate; 
+        				month python:yearmonth[5]+yearmonth[6]" 
+			tal:attributes="id string:$month"
+        	tal:content="python:view.mes(month)"
+            >monthname</span>	        					
+		<span tal:define="view context/@@upc.genweb.utils;
+        				yearmonth here/ModificationDate; 
+                       	year python:yearmonth[0]+yearmonth[1]+yearmonth[2]+yearmonth[3]"
+        	tal:content="year"
+            id="year">year</span>
+	</div>
 </div>
-
-<div class="ultimamodificacio">
-                                
-    <tal:mod i18n:translate="box_last_modified">
-        last modified
-    </tal:mod>:
-
-    <span i18n:translate="" tal:omit-tag="">
-        <span i18n:name="monthname"
-            tal:define="yearmonth here/ModificationDate; month python:yearmonth[5]+yearmonth[6]; translation_service nocall:here/translation_service; month_english python:translation_service.month_english(month); utranslate nocall:here/utranslate;"
-            tal:attributes="id string:$month_english"
-            tal:content="python: utranslate(translation_service.month_msgid(month), default=month_english)"
-            id="monthname">monthname</span>
-        <span i18n:name="year"
-            tal:define="yearmonth here/ModificationDate; year python:yearmonth[0]+yearmonth[1]+yearmonth[2]+yearmonth[3];"
-                tal:content="string: $year"
-            tal:attributes="id string:calendar-year-$year;"
-            id="calendar-year">year</span>
-    </span>
-</div>
-
-</div>        
- 
-<div>
-
-
-
-
