@@ -1066,12 +1066,14 @@ text-transform:lowercase;
 #archetypes-fieldname-creators { padding-top:10px;}
 
 /*colleccio*/
-select#customViewFields_options, select#customViewFields {min-width:300px; _width:300px;}
+select#customViewFields_options, select#customViewFields, select#atendees_unselected, select#atendees_selected {min-width:300px; _width:300px;}
 
 /**********survey************/
 #archetypes-fieldname-formPrologue {margin-top:20px !important;}
 body.template-atct_edit #archetypes-fieldname-imageCaption {text-align:left;}
-
+#archetypes-fieldname-atendees,
+#archetypes-fieldname-agenda,
+#archetypes-fieldname-acta,
 #archetypes-fieldname-image,
 #archetypes-fieldname-imageCaption,
 #archetypes-fieldname-submitLabel,
@@ -1115,3 +1117,5 @@ body.template-atct_edit #archetypes-fieldname-imageCaption {text-align:left;}
 body.template-survey_view h2.questionTitle label {color:#4d4d4d !important;}
 body.template-survey_overview form {margin-right:10px !important;}
 body.template-survey_view .even {background:white;}
+
+td input + br  + input {margin-top:5px !important;}

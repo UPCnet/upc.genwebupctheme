@@ -45,6 +45,15 @@ background:url(pixelAlpha.png);
 _background: none; /*ie6hack*/
 _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlpha.png",sizingMethod="scale");
 }
+.imgUnitatsClick {
+height:109px;
+}
+html*.imgUnitatsClick{
+height:103px;}
+}
+.imgUnitatsClick {
+*height:109px !important;
+}
 .daltMenuPrimer{
 border-left: 2px solid #ffffff;
 }
