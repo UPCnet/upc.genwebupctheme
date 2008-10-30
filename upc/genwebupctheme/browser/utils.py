@@ -271,6 +271,23 @@ class utilitats(BrowserView):
         return self.remapList2Dic(dictKeys,results)
 
 
+    def getMasterRequisits(self, id_titulacio, id_estudi):
+        
+        db = self.connectDatabase()
+        c=db.cursor()     
+        c.execute("""SELECT acces_cat,acces_esp,acces_ing,m_criteris_adm_cat,m_criteris_adm_esp,m_criteris_adm_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
+        results = c.fetchone()
+        dictKeys = (    
+                    'acces_cat',                  
+                    'acces_esp',                  
+                    'acces_ing', 
+                    'm_criteris_adm_cat', 
+                    'm_criteris_adm_esp', 
+                    'm_criteris_adm_ing',
+                    )
+                               
+        return self.remapList2Dic(dictKeys,results)
+
     def getMasterCompentencies(self, id_titulacio, id_estudi):
         
         db = self.connectDatabase()

@@ -23,6 +23,37 @@
 		
         		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('com_accedir',lang_code))">Com accedir-hi</h1>
 		
+					<div class="plain" tal:define="data python: utils.getMasterRequisits(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
+					
+					<!-- ACCES -->
+						<span tal:condition="python: utils.recodifica(data['acces_'+utils.cambiaPrefijo(lang_code)])" tal:omit-tag="">
+					
+							<!-- en català -->
+			                    <span tal:condition="python:lang_code=='ca'" tal:omit-tag=""><b>Requisits generals</b><br />
+			                    Vegeu la <a href="http://www.upc.edu/web/sga/calendari/namo/namo_index.htm" target="_blank">normativa acadèmica</a></span>
+		
+							<!-- en espanyol -->
+		                        <span tal:condition="python:lang_code=='es'" tal:omit-tag=""><b>Requisitos generales</b><br />
+		                        Ver la <a href="http://www.upc.edu/web/sga/calendari/namo_castella/namo_index.htm" target="_blank">normativa académica</a></span>
+							
+							<!-- en anglès -->
+		                        <span tal:condition="python:lang_code=='en'" tal:omit-tag=""><b>General requirements</b><br />
+		                        See <a href="http://www.upc.edu/web/sga/calendari/namo_castella/namo_index.htm" target="_blank">academic regulations</a></span>
+
+                            <br /><br />
+
+                            <span tal:replace="structure python: utils.recodifica(data['acces_'+utils.cambiaPrefijo(lang_code)])">acces</span> 												
+						</span>
+
+					<!-- CRITERIS D'ADMISSIO -->
+						<span tal:condition="python: data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
+	                        <br /><br />
+	                        <div class="titular1" tal:content="python: utils.recodifica(utils.getTextMaster('criteris_admissio',lang_code))">criteris_admissio</div> 
+	                        <span tal:replace="structure python: utils.recodifica(data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)])">criteris</span>
+						</span>
+
+					</div>
+
 				
 			</tal:main-macro>
 		</metal:main>
