@@ -14,17 +14,30 @@
 		<metal:main fill-slot="main">
 		    <tal:main-macro metal:define-macro="main"
        			tal:define="langtool nocall:context/portal_languages;
-                  			lang_code langtool/getPreferredLanguage;">
+                  			lang_code langtool/getPreferredLanguage;
+                  			global utils context/@@upc.genweb.utils">
 		
 		
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-		        <h1 class="documentFirstHeading">Competències</h1>
+        		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">Competències</h1>
 		
-				<div class="plain" tal:define="global utils context/@@upc.genweb.utils">
-											   
+
+				<div class="plain" tal:define="data python: utils.getMasterCompentencies(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
 				
+				<!-- COMPETENCIES -->
+					<span tal:condition="python: data['m_competencies_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
+						<span tal:replace="structure python: data['m_competencies_'+utils.cambiaPrefijo(lang_code)]">competencies</span>
+					</span>
+						
+				<!-- SORTIDES PROFESSIONALS -->
+				         <span tal:condition="python: data['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
+	                         <br /><br />
+	                         <div class="titular1" tal:content="python: utils.recodifica(utils.getTextMaster('sortides_professionals',lang_code))">sortides_professionals</div> 
+	                         <span tal:content="structure python: utils.recodifica(data['sortides_professionals_'+utils.cambiaPrefijo(lang_code)])">sortides</span>
+				         </span>
+         				
 				</div>
 				
 			</tal:main-macro>
