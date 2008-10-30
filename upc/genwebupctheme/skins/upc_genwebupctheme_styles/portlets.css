@@ -1066,7 +1066,7 @@ text-transform:lowercase;
 #archetypes-fieldname-creators { padding-top:10px;}
 
 /*colleccio*/
-select#customViewFields_options, select#customViewFields, select#atendees_unselected, select#atendees_selected {min-width:300px; _width:300px;}
+select#customViewFields_options, select#customViewFields, select#atendees_unselected, select#atendees_selected, select#subject_existing_keywords {min-width:300px !important; _width:300px !important;}
 
 /**********survey************/
 #archetypes-fieldname-formPrologue {margin-top:20px !important;}
@@ -1119,3 +1119,21 @@ body.template-survey_overview form {margin-right:10px !important;}
 body.template-survey_view .even {background:white;}
 
 td input + br  + input {margin-top:5px !important;}
+
+
+/*** reunio ***/
+/* en proves */
+body.template-base_view div#archetypes-fieldname-acta, body.template-base_view div#archetypes-fieldname-agenda {
+	border-top:5px solid #E6E6E6;
+	margin-top:20px;}
+body.template-base_view div#archetypes-fieldname-acta label.formQuestion span, body.template-base_view div#archetypes-fieldname-agenda label.formQuestion span{
+	color:#4D4D4D;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	margin-top:10px;
+	width:729px;}
+body.template-base_view div#archetypes-fieldname-acta label.formQuestion, body.template-base_view div#archetypes-fieldname-agenda label.formQuestion  {color:white;}
+body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta, body.template-base_view div#archetypes-fieldname-agenda div#parent-fieldname-agenda  {margin-top:10px; border:0px; margin-bottom:20px; }
+body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta:hover, body.template-base_view div#archetypes-fieldname-agenda div#parent-fieldname-agenda:hover  {margin-top:10px; border:1px SOLID #666666; margin-bottom:20px; }
+kssattr-atfieldname-agenda {font-size:110% !important;}
