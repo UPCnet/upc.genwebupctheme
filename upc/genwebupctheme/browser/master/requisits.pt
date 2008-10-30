@@ -38,7 +38,7 @@
 							
 							<!-- en anglès -->
 		                        <span tal:condition="python:lang_code=='en'" tal:omit-tag=""><b>General requirements</b><br />
-		                        See <a href="http://www.upc.edu/web/sga/calendari/namo_castella/namo_index.htm" target="_blank">academic regulations</a></span>
+		                        See <a href="http://www.upc.edu/web/sga/calendari/namo_angles/namo_index.htm" target="_blank">academic regulations</a></span>
 
                             <br /><br />
 
@@ -47,7 +47,7 @@
 
 					<!-- CRITERIS D'ADMISSIO -->
 						<span tal:condition="python: data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
-	                        <br /><br />
+						<br /><br />
 	                        <div class="titular1" tal:content="python: utils.recodifica(utils.getTextMaster('criteris_admissio',lang_code))">criteris_admissio</div> 
 	                        <span tal:replace="structure python: utils.recodifica(data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)])">criteris</span>
 						</span>
