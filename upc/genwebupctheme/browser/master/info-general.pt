@@ -14,16 +14,16 @@
 		<metal:main fill-slot="main">
 		    <tal:main-macro metal:define-macro="main"
        			tal:define="langtool nocall:context/portal_languages;
-                  			lang_code langtool/getPreferredLanguage;">
+                  			lang_code langtool/getPreferredLanguage;
+                  			global utils context/@@upc.genweb.utils;">
 		
 		
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-		        <h1 class="documentFirstHeading">Informació General</h1>
+        		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('info_gral',lang_code))">Informació General</h1>
 		
-				<div class="plain" tal:define="global utils context/@@upc.genweb.utils;
-											   data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
+				<div class="plain" tal:define="data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
 											   
 					<!-- OBJECTIUS DOCENT  -->
 			        <div class="textDestacat"
