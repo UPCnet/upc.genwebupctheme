@@ -421,9 +421,18 @@
 
 <!-- Browser page info-general MASTERS -->
     <browser:page
+      for="*"    
       name="info-general"
-      for="*"
       class=".master.information.infoGeneralView"
+      permission="zope2.View"
+      />
+
+<!-- Browser page competencies MASTERS -->
+
+    <browser:page
+      for="*"
+      name="competencies"
+      class=".master.information.competenciesView"
       permission="zope2.View"
       />
       
