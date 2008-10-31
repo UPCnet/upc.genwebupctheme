@@ -30,26 +30,28 @@ float:left;
   margin:0px;
   background-color:#FF6600; /*específic1*/
   font-size:0.05em;
-  margin-bottom:5px;
+  margin:5px 0 5px 0;
 }
  
 #portal-personaltools{
     background-color:transparent;
     z-index: 1;
     position: absolute;
-    margin: -26px 0px 0px 5px;
+    margin: -29px 0px 0px 5px;
 }
 
 .barra_idiomes {
     float: right;
     position:relative;
     z-index: 2;
-    margin-top: -25px;
+    margin-top: -28px;
     margin-right: 5px;
     }
     
 .validacio {
-	margin-top: -28px;
+	margin-top: -24px;
+	float:left;
+	position:absolute;
 	}    
  
 /*

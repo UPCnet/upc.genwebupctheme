@@ -562,42 +562,42 @@ html .livesearchContainer {
 
 
 
-/* AFEGITS del custom.css */
+/* AFEGITS del custom.css */ /*on abans 666 ara 999*/
 .documentEditable .documentContent {
-    border:0px solid #666666; 
+    border:0px solid #999; 
     border-bottom: 0px solid #e6e6e6;
-    border-top:1px solid #666666;
+    border-top:1px solid #999;
     padding-top:10px !important; }
 .contentViews li a {
     color:#0077cc;
-    border:1px solid #666666;}
+    border:1px solid #999;}
 .contentViews {
     background-color:transparent;
-    border-color:#666666;}
+    border-color:#999;}
 .contentActions li {
-    border-left:1px solid #666666;}
+    border-left:1px solid #999;}
 .contentActions {
     background-color:#EDEDED;
-    border-left:1px solid #666666;
-    border-right:1px solid #666666;
-    color:#666666;}
+    border-left:1px solid #999;
+    border-right:1px solid #999;
+    color:#999;}
 .contentViews li a:hover {
     background-color:#ededed;
     background:#ededed url(taulaMenu_bg_on.gif) repeat-x bottom left;
-    color:#666666;}
+    color:#999;}
 .contentViews .selected a {
     background-color:#ededed;
     background:#ededed url(taulaMenu_bg_on.gif) repeat-x bottom left;
     border-bottom:1px solid #ededed;
-    color:#666666;}
+    color:#666;}
 .actionMenu .actionMenuContent ul {
     background:#ededed none repeat scroll 0% 50%;
-    border-color:#666666;}
+    border-color:#999;}
 .actionMenu .actionMenuContent li a:hover {
     background-color:#cccccc;
     color:White;}
 .actionMenu .actionMenuContent .actionSeparator a {
-    border-top:1px solid #666666;}
+    border-top:1px solid #999;}
 	
 	
 	
@@ -606,24 +606,24 @@ html .livesearchContainer {
 	
 	
 	
-/* TAULES DE CONTINGUT */
+/* TAULES DE CONTINGUT */ /*on abans 666 ara 999*/
 table.listing th, 
 .stx table th {
     background:#ededed none repeat scroll 0% 50%;
-    border-bottom:1px solid #666666;
-    border-right:1px solid #666666;
-    border-top:1px solid #666666;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    border-top:1px solid #999;
     font-weight:normal;
     padding:0.25em 0.5em;
     text-transform:lowercase;
     font-size:1.1em; }
 table.listing td, 
 .stx table td {
-    border-right:1px solid #666666;}
+    border-right:1px solid #999;}
 table.listing, 
 .stx table {
-    border-bottom:1px solid #666666;
-    border-left:1px solid #666666;}
+    border-bottom:1px solid #999;
+    border-left:1px solid #999;}
 .even {
 	background-color:#f1f1f4;}
 .state-published {

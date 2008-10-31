@@ -1136,4 +1136,5 @@ body.template-base_view div#archetypes-fieldname-acta label.formQuestion span, b
 body.template-base_view div#archetypes-fieldname-acta label.formQuestion, body.template-base_view div#archetypes-fieldname-agenda label.formQuestion  {color:white;}
 body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta, body.template-base_view div#archetypes-fieldname-agenda div#parent-fieldname-agenda  {margin-top:10px; border:0px; margin-bottom:20px; }
 body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta:hover, body.template-base_view div#archetypes-fieldname-agenda div#parent-fieldname-agenda:hover  {margin-top:10px; border:1px SOLID #666666; margin-bottom:20px; }
-kssattr-atfieldname-agenda {font-size:110% !important;}
+form#kss-inlineform-agenda div#archetypes-fieldname-agenda, form#kss-inlineform-agenda div.formControls, form#kss-inlineform-acta div#archetypes-fieldname-acta, form#kss-inlineform-acta div.formControls {font-size:112% !important; border-top:0px !important;}
+body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}

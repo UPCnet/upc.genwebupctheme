@@ -2,19 +2,19 @@
     background-color:transparent;
     z-index: 1;
     position: absolute;
-    margin: -28px 0px 0px 5px;
+    margin: -31px 0px 0px 5px;
 }
 
 .barra_idiomes {
     float: right;
     position:relative;
     z-index: 2;
-    margin-top: -27px;
+    margin-top: -30px;
     margin-right: 5px;
     }
     
 .validacio {
-	margin-top: -30px;
+	margin-top: -31px;
 	}  
 	
 	
@@ -78,7 +78,7 @@ height:6px;
 width:100%;
 background-color:#B0D73C; /*específic1*/
 font-size:0.05em;
-margin:0 0 5px 0;
+margin:5px 0 5px 0;
 }
 .clearAll_m{
 clear:both;
