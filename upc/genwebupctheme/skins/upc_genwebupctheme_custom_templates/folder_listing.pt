@@ -72,7 +72,8 @@
                                    ">
 
                     <dt metal:define-macro="listitem"
-                        tal:attributes="class python:test(item_type == 'Event', 'vevent', '')">
+                        tal:attributes="class python:test(item_type == 'Event', 'vevent', '')"
+                        tal:condition="python:not item.exclude_from_nav">
 
                         <span class="summary"
                               tal:attributes="class string:$item_type_class summary"
