@@ -12,47 +12,64 @@
     	tal:define="dummy python:request.set('disable_border', 1)" />
 
 	<div metal:fill-slot="main">
+	    <tal:main-macro metal:define-macro="main"	    				 
+			   			tal:define="langtool nocall:context/portal_languages;
+			              			lang_code langtool/getPreferredLanguage;
+			              			global utils context/@@upc.genweb.utils;">
+	
+	
+	    <tal:block tal:condition="python: utils.verificaIdUnitat(utils.getGWConfig().contacteid)">
+	
 		<div tal:replace="structure provider:plone.abovecontenttitle" />
 
 		<h1>Contacte</h1>
 
-		<div class="agendaContingut contacte" style="padding: 5px;"
-	 		 tal:define="global utils context/@@upc.genweb.utils">
-	 
+		<div class="agendaContingut contacte" style="padding: 5px;">
+	 		
+	 		<!-- NOMBRE -->
 			<h5 style="font-family: Arial,Helvetica,Verdana,sans-serif; font-size: 14px;"
-				tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['nom_esp'])"> Servei de Comunicació i Promoció
+				tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['nom_'+utils.cambiaPrefijo(lang_code)])"> Servei de Comunicació i Promoció
 			</h5>
 	
-			<div class="contacteSpan">Adreça</div>
+			<!-- DIRECCION -->
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']">Adreça</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet)			
 			</div>
 	
-			<div class="contacteSpan">Telèfon</div>
+			<!-- TELEFONO -->
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']">Telèfon</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono'])">93 401 76 76
 			</div>
-	
-			<div class="contacteSpan">Fax</div>
+			
+			<!-- FAX -->
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax']">Fax</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax'])">93 401 78 79
 			</div>
-	
-			<div class="contacteSpan">A/e</div>
+			
+			<!-- EMAIL -->
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['email']">A/e</div>
 			<div tal:define="mail python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['email'])">
 				<a 	tal:attributes="href python: 'mailto: ' + mail"
 		   		    tal:content="mail"></a>
 			</div>
 		</div>
 
-
-		<div class="contacteSpan">Direcció</div>
+		<!-- director -->
+		
+		<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']">Direcció</div>
 		<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['director'])">José Luís Vivanco
 		</div>
 		
+		<!-- Personal -->
+		
 		<div class="contacteSpan">Personal</div>
 		<div>
-			<a 	tal:attributes="href python: '#'"
-				tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['personal'])"></a>
+			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)"
+				tal:content="python: 'Directori'"></a>
 		</div>
-
+		
+		<!-- Planos y transportes -->
+		
 	  	<span tal:condition="python: not utils.getGWConfig().boolmaps" class="contacteSpan"><img src="googleMaps.gif"/></span>
 		<div tal:condition="python: not utils.getGWConfig().boolmaps">
 			<a 	tal:attributes="href python: '#'"
@@ -65,6 +82,9 @@
 	   		</span>
 	   		<div tal:replace="structure python: utils.getGWConfig().contactegmaps"></div>	
 		</div> 
+	
+	</tal:block>
+	
 
 	<h2>Formulari de contacte</h2>
 
@@ -126,7 +146,9 @@
 		    </span>
 		
 		</form>
-		
+
+	</tal:main-macro>
+
 </div>      
 
 </body>

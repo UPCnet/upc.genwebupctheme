@@ -93,7 +93,30 @@ class utilitats(BrowserView):
     
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
-    
+
+    def verificaIdUnitat(self, id):
+        try:
+            db = self.connectDatabase()
+            c=db.cursor()     
+            c.execute("""SELECT id_unitat FROM upc_unitat WHERE id_unitat = %s""", (id,))
+            results = c.fetchone()
+        except:
+            results = None
+        return results
+
+    def verificaIdEnlace(self, id):
+        db = self.connectDatabase()
+        c=db.cursor()     
+        c.execute("""SELECT personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
+        results = c.fetchone()
+        dictKeys = ('personal',)     
+        _result = self.remapList2Dic(dictKeys,results)       
+        if _result['personal'] == None or len(_result['personal']) < 8:
+            return "http://directori.upc.edu/directori/dadesUE.jsp?id=" + id
+        else:
+            return _result['personal']
+
+          
     def getContacteDataSql(self, id):
         """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis 
             de acuerdo a un id.
