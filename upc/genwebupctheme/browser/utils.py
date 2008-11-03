@@ -106,39 +106,6 @@ class utilitats(BrowserView):
            
         return self.remapList2Dic(dictKeys,results)
 
-    def getMasterInfoGeneralv1(self, id):
-        
-        db = self.connectDatabase()
-        c=db.cursor()     
-        c.execute("""SELECT * FROM upc_titulacio WHERE id_titulacio = %s""", (id,))
-        results = c.fetchone()
-        dictKeys = ('id_titulacio',
-                    'nom_cat',
-                    'nom_esp', 
-                    'nom_ing', 
-                    'descripcio_promocional_cat', 
-                    'descripcio_promocional_esp', 
-                    'descripcio_promocional_ing', 
-                    'acces_cat',                  
-                    'acces_esp',                  
-                    'acces_ing',                   
-                    'objectius_docents_cat',       
-                    'objectius_docents_esp',       
-                    'objectius_docents_ing',       
-                    'sortides_professionals_cat',  
-                    'sortides_professionals_esp',  
-                    'sortides_professionals_ing',  
-                    'm_id_orientacio',             
-                    'id_cicle',                    
-                    'es_master',                   
-                    'id_tipus',                    
-                    'id_ambit',                    
-                    'm_nom_titulacio_cat',         
-                    'm_nom_titulacio_esp',         
-                    'm_nom_titulacio_ing',) 
-          
-        return self.remapList2Dic(dictKeys,results)
-
     def cambiaPrefijo(self, lang):
         tmp = 'ing'
         if lang == 'ca':
