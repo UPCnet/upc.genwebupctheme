@@ -32,7 +32,6 @@ blockquote,
 
 
 label,
-input[id="title"],
 h1, h4, h5, h6,
 h2.kssattr-atfieldname-title,
 .divCarpetaTitol,
@@ -41,8 +40,11 @@ h2.kssattr-atfieldname-title,
 #forgotten-password h3,
 .ultimamodificacio
 	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
-
-
+h1.summary,
+.template-event_view .vevent h1.summary 
+	{color: <tal:propietat replace="e3">Especific3</tal:propietat> !important;}
+input[id="title"]
+	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
 
 tr.dragging td
 	{background: <tal:propietat replace="e4">Especific4</tal:propietat>;}

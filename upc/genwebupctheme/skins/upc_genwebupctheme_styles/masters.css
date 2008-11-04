@@ -1,3 +1,29 @@
+.taulaDades td{
+	vertical-align:top !important;
+	padding:4px 10px 10px 0px;
+	line-height:1.5em;
+	}
+.taulaDades td.titular2 {
+	text-align:right;
+	padding:5px 10px 10px 0px;
+	line-height: 1em;
+	}
+.taulaDades .separadorH {
+	border-top: 2px dotted #e6e6e6;
+	}
+.plain p strong, .plain strong {
+	margin-top:20px;
+	display:block;
+	}
+.plain ul li {
+    padding: 0px 0px 0px 12px;
+    margin: 8px 0px;
+    background: url(quadret.gif) no-repeat top left;
+    list-style-type: none;
+    line-height:1.5em;
+    border-bottom:0px;
+	
+	}
 #portal-personaltools{
     background-color:transparent;
     z-index: 1;

@@ -1071,11 +1071,12 @@ dl dd {margin-left:20px;}
 #parent-fieldname-text {
 	margin: 15px 0px 25px 0px;}
 .eventDetails {
-	clear:none;
+	clear:both;
 	float:right;
 	margin:5px 10px 10px 10px;
 	min-width:300px;
-	max-width:400px;}
+	max-width:400px;
+	_width:300px;}
 /*EVENT task*/
 .vertical{
 	min-width:300px;
@@ -1226,6 +1227,7 @@ background:transparent url(arrowRight.gif) no-repeat scroll left 3px;
 padding: 0px 0px 0px 15px;
 }
 .visualClear{
+clear:both;
 margin-bottom:10px;}
 .summary {
 color:#0077cc !important;
@@ -1756,3 +1758,7 @@ div#dashboard .portletFooter {text-align:right;}
 
 /*detallet*/
 .fletxatop, .reviewHistory {margin-top:30px;}
+
+
+/**** LINKS ****/
+#content a[href ^="https://devel.upcnet.es/neutre2"], #content a.link-https { background:none; padding:0px; }

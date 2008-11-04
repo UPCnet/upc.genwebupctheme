@@ -2,12 +2,18 @@
 /********************************************* CAPÇALERA ********************************************************************/
 /******************************************* ESPECÍFICS MODEL IMATGE ALLARGADA **********************************************/
 
+.imatgeCapcaleraNeutre2{ 
+  float:right;
+  margin-bottom:5px;
+  *margin-bottom:0px;}
 
 .logoNeutre2 { 
   padding-top:36px;
   padding-left:0px;
   padding-right:25px;
-float:left;
+  float:left;
+  margin-bottom:5px;
+  *margin-bottom:0px;
 }
 
 .logo_n2 {
@@ -31,6 +37,7 @@ float:left;
   background-color:#FF6600; /*específic1*/
   font-size:0.05em;
   margin:5px 0 5px 0;
+  clear:both;
 }
  
 #portal-personaltools{
@@ -50,10 +57,13 @@ float:left;
     
 .validacio {
 	margin-top: -24px;
+	*margin-top: -30px;
 	float:left;
 	position:absolute;
 	}    
- 
+html*.validacio {
+	margin-top: -30px;
+	} 
 /*
 bodyNeutre2{
   padding-top:5px;
@@ -66,12 +76,7 @@ bodyNeutre2{
   color:#007dcb;
 }
 
-.imatgeCapcaleraNeutre2{ 
-  margin-top:0px;
-  height:39px;
-  text-align:right;
-  padding-left:250px;
-}
+
 
 .barraIdiomesNeutre2{
   padding: 79px 5px 0px 0px;
