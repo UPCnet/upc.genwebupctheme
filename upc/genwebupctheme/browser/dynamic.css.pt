@@ -4,7 +4,21 @@
                      e3 python:utils.getGWConfig().especific3;
                      e4 python:utils.getGWConfig().especific4;
                      e5 python:utils.getGWConfig().especific5;
-                     e6 python:utils.getGWConfig().especific6;">
+                     e6 python:utils.getGWConfig().especific6;
+                     portal_url view/portal_url;
+                     es_anonim view/es_anonim;">
+
+<tal:es_anonim condition="es_anonim">
+    .navTreeItem a img {display:none}
+</tal:es_anonim>
+
+#content a[href ^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"], #content a.link-https { background:none; padding:0px; }
+
+#content .columnaEsq a[href^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"],
+#content .columnaEsq a.link-https, #content .columnaDreta a[href^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"],
+#content .columnaDreta a.link-https {
+    background:none; padding:0px;
+}
 
 input.password,
 input.text,
