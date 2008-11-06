@@ -22,6 +22,7 @@ from plone.fieldsets.fieldsets import FormFieldsets
 from persistent import Persistent
 
 from upc.genwebupctheme.browser.interfaces import *
+from upc.genwebupctheme.browser.utils import getGWConfig
 from plone.app.controlpanel.skins import ISkinsSchema 
 
 class GenWebControlPanelUtility(Persistent):
@@ -67,7 +68,8 @@ class GenWebControlPanelUtility(Persistent):
     titolcapsaleraMaster = 'Titol de capsalera del master'
     idestudiMaster = ''
     idtitulacioMaster = ''
-
+    masterdoctorado = 'Master'
+    
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
     adapts(IPloneSiteRoot)
@@ -378,7 +380,13 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
             gw_util.idtitulacioMaster = value
         return property(get, set)                    
     
-
+    @apply
+    def masterdoctorado():
+        def get(self):
+            return getGWConfig().masterdoctorado
+        def set(self, value):
+            getGWConfig().masterdoctorado = value
+        return property(get, set)
 
 general = FormFieldsets(ISkinsSchema['theme'], IgenWebControlPanelSchemaGeneral)
 general.id = 'genWebControlPanelgeneral'
