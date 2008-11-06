@@ -6,11 +6,14 @@
                      e5 python:utils.getGWConfig().especific5;
                      e6 python:utils.getGWConfig().especific6;
                      portal_url view/portal_url;
+                     language utils/pref_lang; 
                      es_anonim view/es_anonim;">
 
 <tal:es_anonim condition="es_anonim">
     .navTreeItem a img {display:none}
 </tal:es_anonim>
+
+.submitGo {background: transparent url(cerca_<tal:propietat replace="language">language</tal:propietat>.gif) repeat scroll 0 0;}
 
 #content a[href ^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"], #content a.link-https { background:none; padding:0px; }
 
