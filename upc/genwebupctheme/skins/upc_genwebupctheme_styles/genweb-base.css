@@ -472,7 +472,7 @@ html*.sobreElWeb {
     margin: 0px !important;
     padding-right:0px;
     padding-left:3px;
-    *padding-left:0px;
+    *padding-left:3px;
 	_padding-left:0px;}
 #livesearchLegend {
     border:0px;
@@ -645,11 +645,12 @@ td.state-pending {
 a span.state-pending {
 	background: none !important;}
 .state-intranet {
-	color: #00b7f6 !important;
+	color: #7d00cc !important;
 	background: none !important;}
 span.state-intranet, 
 td.state-intranet {
-	background:none !important;}
+	color: #7d00cc !important;
+	background: none !important;}
 a span.state-intranet {
 	background: none !important;}
 
@@ -1359,14 +1360,25 @@ padding-left:25px;
 }
 
 /* modificacio menu estat amb imatges */
-#plone-contentmenu-workflow #workflow-transition-reject, #plone-contentmenu-workflow #workflow-transition-hide, #plone-contentmenu-workflow #workflow-transition-close, #plone-contentmenu-workflow #workflow-transition-complete{
+/* 
+	PUBLICAT: blau
+	INTRANET: porpre
+	ESBORRANY: verd
+	PRIVAT: vermell
+*/
+
+#plone-contentmenu-workflow #workflow-transition-reject, 
+#plone-contentmenu-workflow #workflow-transition-hide, 
+#plone-contentmenu-workflow #workflow-transition-close, 
+#plone-contentmenu-workflow #workflow-transition-complete{
 	background-image: url(bullet_red.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
-#plone-contentmenu-workflow #workflow-transition-retract{
-	background-image: url(bullet_blue.png);
+#plone-contentmenu-workflow #workflow-transition-retract,
+#plone-contentmenu-workflow #workflow-transition-show{
+	background-image: url(bullet_green.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
 	padding-left:25px;
@@ -1377,12 +1389,22 @@ padding-left:25px;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
-#plone-contentmenu-workflow #workflow-transition-publish, #plone-contentmenu-workflow #workflow-transition-open, #plone-contentmenu-workflow #workflow-transition-review {
-	background-image: url(bullet_green.png);
+#plone-contentmenu-workflow #workflow-transition-publish, 
+#plone-contentmenu-workflow #workflow-transition-open, 
+#plone-contentmenu-workflow #workflow-transition-review {
+	background-image: url(bullet_blue.png);
 	background-repeat: no-repeat;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
+#plone-contentmenu-workflow #workflow-transition-publishtointranet,
+#plone-contentmenu-workflow #workflow-transition-retracttointranet {
+	background-image: url(bullet_purple.png);
+	background-repeat: no-repeat;
+	background-position: 5px 2px;
+	padding-left:25px;
+}
+/*propi del forum*/
 #plone-contentmenu-workflow #workflow-transition-make_freeforall{
 	background-image: url(forum_lliure.gif);
 	background-repeat: no-repeat;

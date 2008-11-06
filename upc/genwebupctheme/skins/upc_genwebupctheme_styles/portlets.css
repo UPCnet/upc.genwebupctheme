@@ -548,6 +548,13 @@ margin:0px !important;
 top:0;
 font-size:90%;
 }
+form[id="edit_form"] div.field {
+font-size:95%;
+padding-top:10px;
+}
+form[id="edit_form"] div.field div.field {
+padding-top:0px;
+}
 #question,#subject {
 font-size:95%;
 }

@@ -45,6 +45,7 @@
     z-index: 1;
     position: absolute;
     margin: -29px 0px 0px 5px;
+    width: 800px;
 }
 
 .barra_idiomes {
