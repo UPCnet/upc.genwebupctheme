@@ -14,6 +14,8 @@ from Products.CMFPlone.interfaces import IPloneSiteRoot
 from plone.app.controlpanel.form import ControlPanelForm
 from plone.app.controlpanel.widgets import DropdownChoiceWidget
 
+from zope.app.form.browser import RadioWidget as _RadioWidget
+
 from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
@@ -65,6 +67,7 @@ class GenWebControlPanelUtility(Persistent):
     
     # de la pestanya de sabors
     tipusintranet = 'Visible'
+    tipusNeutre2 = 'Default'
     titolcapsaleraMaster = 'Titol de capsalera del master'
     idestudiMaster = ''
     idtitulacioMaster = ''
@@ -349,6 +352,17 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
             gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
             gw_util.tipusintranet = value
         return property(get, set)
+
+    @apply
+    def tipusNeutre2():
+        def get(self):
+            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+            return gw_util.tipusNeutre2
+        def set(self, value):
+            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+            gw_util.tipusNeutre2 = value
+        return property(get, set)
+
 
     @apply
     def titolcapsaleraMaster():

@@ -152,7 +152,7 @@ input.button {
     padding: 0px;
     margin: 0px;
     border: 0px;
-    background: url(cerca_ca.gif) no-repeat right bottom;
+    /* background: url(cerca_ca.gif) no-repeat right bottom; */
     overflow: hidden;
     cursor: pointer;}
 .submitLogin {

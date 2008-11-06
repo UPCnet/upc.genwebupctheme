@@ -2,25 +2,36 @@
                               portal_url context/@@plone_portal_state/portal_url;">
 
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;">
-    <div class="logoNeutre2">
+
+    <div tal:condition="python: utils.getGWConfig().tipusNeutre2==('Recerca')"
+    			 class="logoNeutre2">
         <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
-               tal:condition="python:utils.pref_lang()=='ca'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_ca;
-                                    src string:${portal_url}/recerca_ca.jpg" />
+               tal:attributes="title python: utils.getGWConfig().tipusNeutre2;
+                                    src python:portal_url+'/recerca_'+ utils.pref_lang()+'.jpg'" />
+	</div>   
+	                                 
+	<div tal:condition="python: utils.getGWConfig().tipusNeutre2==('Intranet')"
+    			 class="logoNeutre2">
         <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
-               tal:condition="python:utils.pref_lang()=='es'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_es;
-                                    src string:${portal_url}/recerca_es.jpg" />
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"               
-               tal:condition="python:utils.pref_lang()=='en'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_en;
-                                    src string:${portal_url}/recerca_en.jpg" />
+               tal:attributes="title python: utils.getGWConfig().tipusNeutre2;
+                                    src python:portal_url+'/intranet_'+ utils.pref_lang()+'.jpg'" />                                    
+	</div> 
+	                                   
+	<div tal:condition="python: utils.getGWConfig().tipusNeutre2==('Default')"
+    			 class="logoNeutre2">
+        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
+               tal:attributes="title python: utils.getGWConfig().tipusNeutre2;
+                                    src python:portal_url+'/default_n2_'+ utils.pref_lang()+'.jpg'" />
+                                                       
     </div>
+
     <div class="imatgeCapcaleraNeutre2">
         <img tal:attributes="src string:${portal_url}/imatgeNeutre2.jpg" 
         longdesc="Títol de la Web" alt="Títol"/>
     </div>
+    
     <div class="liniaPrincipalNeutre2"></div>
+    
 </div>
   
 </tal:capsaleraNeutre2>
