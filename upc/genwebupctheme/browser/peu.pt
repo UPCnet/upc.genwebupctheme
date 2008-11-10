@@ -21,7 +21,7 @@
         <span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció </span>.
 
         <span class="sobreElWeb">
-            <a href="#"
+            <a href="accessibility-info"
                 i18n:translate="sobre-web">
                 Sobre aquest web
             </a>

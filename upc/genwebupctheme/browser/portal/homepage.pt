@@ -33,6 +33,7 @@ HOMEPAGE PORTAL
       </div>
       </div>
       <div class="columnaCentre" tal:define="boxescentre view/getColumn1">
+      <table><tr><td> 
       <!-- Columna Central -->
       <div tal:define="front view/getFrontPage">
         <h1 tal:content="front/title">Titol principal</h1>
@@ -43,6 +44,7 @@ HOMEPAGE PORTAL
             Caixetes centre
         </div>
       </div>
+      </td></tr></table> 
       </div>
     </div>
   </div>
