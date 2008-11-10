@@ -22,11 +22,11 @@
 				            <div>
 				            <div id="dalt200">&nbsp;</div>
 				            <div id="caixaPortlet">
-				            <h2>Enllaços Relacionats</h2>
+				            <h2>EnllaÃ§os Relacionats</h2>
 				            <ul>
-				                <li><a thref="#">Enllaç primer</a></li>
-				                <li><a thref="#">Enllaç primer</a></li>
-				                <li><a thref="#">Enllaç primer</a></li>
+				                <li><a thref="#">EnllaÃ§ primer</a></li>
+				                <li><a thref="#">EnllaÃ§ primer</a></li>
+				                <li><a thref="#">EnllaÃ§ primer</a></li>
 				            </ul>
 				            <br />
 				            <h2>Baners</h2>
@@ -37,9 +37,9 @@
 				            <br />
 				            <h2>Enllacos Extres</h2>
 				            <ul>
-			                <li><a thref="#">Enllaç primer</a></li>
-			                <li><a thref="#">Enllaç primer</a></li>
-			                <li><a thref="#">Enllaç primer</a></li>
+			                <li><a thref="#">EnllaÃ§ primer</a></li>
+			                <li><a thref="#">EnllaÃ§ primer</a></li>
+			                <li><a thref="#">EnllaÃ§ primer</a></li>
 			            </ul>
 			            </div>
 			            <div id="baix200">&nbsp;</div>
