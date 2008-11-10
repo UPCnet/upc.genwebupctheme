@@ -147,3 +147,38 @@
     z-index: 2;
     margin-top: -20px;
     margin-right: 5px;}
+
+/********************************************************************** columnes *******************************************************************************/
+/* CONTINGUT */
+.contingut{
+    text-align: left;
+    line-height: 1.5em;}
+.columnaEsq {
+	float:right;
+	margin:0px;}
+.columnaCentre {
+	padding-right:25px;
+	width:558px;
+	float:right;}
+.columnaDreta {
+    width: 150px !important;
+    float: right;}
+.iconesContingut {
+    text-align:right;
+    float:right;
+    width:150px;}
+.iconesContingut a{
+    margin: 0px 5px;}
+	
+.columnaEsq #portlet200,	
+.columnaEsq #caixaPortlet,
+.columnaEsq #baix200 {
+	margin-right:25px !important;
+	width:200px !important;
+}
+.columnaEsq #caixaPortlet {_width:100px;}
+.columnaEsq #caixaPortlet {
+	width:198px !important;}
+	
+	
+	

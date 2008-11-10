@@ -9,6 +9,50 @@
   <Templates tal:define="templatesPath string:$portal_url/fcksamples/"
              tal:attributes="imagesBasePath templatesPath">
 
+<!-- ENLLACOS DRETA ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Enllacos Dreta" image="++resource++upc.genwebupctheme.images/FCKTindex.png">
+        <Description>Per definir un Ã­ndex amb enllaÃ§os al contingut de la mateixa pÃ gina. EnllaÃ§os definits amb Ã ncores.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<table class="enllacosDreta">
+				    <tbody>
+				        <tr>
+				            <td>fgdgfdgfdgfdgf</td>
+				            <td class="columnaEnllacosDreta">
+				            <div>
+				            <div id="dalt200">&nbsp;</div>
+				            <div id="caixaPortlet">
+				            <h2>Enllaços Relacionats</h2>
+				            <ul>
+				                <li><a thref="#">Enllaç primer</a></li>
+				                <li><a thref="#">Enllaç primer</a></li>
+				                <li><a thref="#">Enllaç primer</a></li>
+				            </ul>
+				            <br />
+				            <h2>Baners</h2>
+					            <img   
+					                 tal:attributes="src string:${templatesPath}bn_1.gif" />
+					            <img   
+					                 tal:attributes="src string:${templatesPath}bn_2.gif" />
+				            <br />
+				            <h2>Enllacos Extres</h2>
+				            <ul>
+			                <li><a thref="#">Enllaç primer</a></li>
+			                <li><a thref="#">Enllaç primer</a></li>
+			                <li><a thref="#">Enllaç primer</a></li>
+			            </ul>
+			            </div>
+			            <div id="baix200">&nbsp;</div>
+			            </div>
+			            </td>
+			        </tr>
+			    </tbody>
+			</table>
+			<tal:cdata replace="structure string:]]&gt;" />  
+        </Html>
+    </Template>
+<!-- //// FI INDEX DE CONTINGUTS  -->
+
 <!-- INDEX DE CONTINGUTS ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <Template title="Ãndex de contingut" image="++resource++upc.genwebupctheme.images/FCKTindex.png">
         <Description>Per definir un Ã­ndex amb enllaÃ§os al contingut de la mateixa pÃ gina. EnllaÃ§os definits amb Ã ncores.</Description>

@@ -224,5 +224,8 @@ html*.actiuMenu{border-bottom:2px solid <tal:propietat replace="e1">Especific1</
 
 .alphaCustom {border-right:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 
+#portal-column-content fieldset > * input:focus,
+#portal-column-content fieldset > * textarea:focus {
+    border-color: <tal:propietat replace="e1">Especific1</tal:propietat>;}
 </tal:dynamic>
 

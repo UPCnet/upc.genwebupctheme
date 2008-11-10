@@ -15,6 +15,13 @@ background-image:url(baix200.gif);
 font-size:0.05em;
 margin-bottom:20px;
 }
+#dalt200{
+width:200px;
+height:6px;
+background-image:url(dalt200.gif);
+font-size:0.05px;
+margin-bottom:0px;
+}
 
 #portlet150{
 width:150px;

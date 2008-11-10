@@ -506,3 +506,20 @@ body#content a {color:#007dcc; text-decoration:none;}
 #estilImgPhotoAlbum1 {width:128px; height:96px;}
 #estilImgPhotoAlbum2 {width:96px; height:128px;}
 #estilImgPhotoAlbum3 {width:128px; height:83px;}
+
+
+
+table.enllacosDreta {width:100%;}
+table.enllacosDreta td {vertical-align:top;}
+table.enllacosDreta .columnaEnllacosDreta {width:200px;}
+table.enllacosDreta h2 {border-top:0px;margin:0px;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
+table.enllacosDreta li {
+	list-style-image:url(quadret.gif);
+	list-style-position:outside;
+	list-style-type:disc;
+	margin:0 0 0 35px;
+	padding:5px 5px 5px 0px !important;
+	line-height:1.5em;
+	border:0px !important;
+}
+table.enllacosDreta ul {padding-bottom:20px;}

@@ -56,14 +56,14 @@
 
 		<!-- director -->
 		
-		<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']">Direcció</div>
-		<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['director'])">José Luís Vivanco
+		<div class="contacteSpan contacteSpanBaix" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']">Direcció</div>
+		<div class="contacteSpanBaix" tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['director'])">José Luís Vivanco
 		</div>
 		
 		<!-- Personal -->
 		
-		<div class="contacteSpan">Personal</div>
-		<div>
+		<div class="contacteSpan contacteSpanBaix">Personal</div>
+		<div class="contacteSpanBaix">
 			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)"
 				tal:content="python: 'Directori'"></a>
 		</div>
@@ -125,7 +125,7 @@
 	                     tal:condition="description">
 	                    field description
 	                </div>
-	
+	 
 	                <div tal:condition="error"
 	                     tal:content="structure error">
 	                    The Error
