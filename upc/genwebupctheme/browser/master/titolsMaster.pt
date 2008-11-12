@@ -1,5 +1,7 @@
 <tal:capsalera define="utils context/@@upc.genweb.utils;
-                         portal_url context/@@plone_portal_state/portal_url;">
+	                   langtool nocall:context/portal_languages;
+	                   lang_code langtool/getPreferredLanguage;
+                       portal_url context/@@plone_portal_state/portal_url;">
 
 <div class="clearAll_m">                         
     <div class="banerMasters">
@@ -93,9 +95,11 @@
         </a>
         <br/>
 
-        <span class="cursMaster" tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().edicio_ca"> 2008/2009 </span>
-        <span class="cursMaster" tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().edicio_es"> 2008/2009 </span>
-        <span class="cursMaster" tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().edicio_en"> 2008/2009  </span>
+        <span 	class="cursMaster"
+        		i18n:domain="upc.genwebupc"
+        		i18n:translate="master_curso"
+        		tal:condition="python: lang_code!='en'">Curs</span> 
+        <span class="cursMaster" tal:content="python: utils.getGWConfig().titolcapsaleraMaster"> 2008/2009 </span>
 
     </div>
 

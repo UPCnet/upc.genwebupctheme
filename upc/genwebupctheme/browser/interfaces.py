@@ -68,10 +68,13 @@ class IgenWebControlPanelSchemaSabors(Interface):
     """
     tipusintranet = zope.schema.Choice(title=_(u'Tipus de intranet'), values=['Visible', 'Discreta'], required=False)
     tipusNeutre2 = zope.schema.Choice(title=_(u'Tipus Neutre2'), values=['Default', 'Recerca','Intranet'], required=False)
-    titolcapsaleraMaster = zope.schema.TextLine(title=_(u'Titol de capsalera del master'),required=False)
+    titolcapsaleraMaster = zope.schema.TextLine(title=_(u'curs master [2008/2009]'),required=False)
     idestudiMaster = zope.schema.TextLine(title=_(u'id_estudi'),required=False)
     idtitulacioMaster = zope.schema.TextLine(title=_(u'id_titulacio'),required=False)
     masterdoctorado =  zope.schema.Choice(title=_(u'si es master o master i doctorat'), values=['Master', 'Doctorat', 'Master i Doctorat'], required=False)
+    ambitdoctorat_ca = zope.schema.TextLine(title=_(u'Ambit doctorat - [catala]'),required=False)
+    ambitdoctorat_es = zope.schema.TextLine(title=_(u'Ambit doctorat - [castella]'),required=False)
+    ambitdoctorat_en = zope.schema.TextLine(title=_(u'Ambit doctorat - [angles]'),required=False)
     
 class IgenWebControlPanel(IgenWebControlPanelSchemaGeneral, ISkinsSchema, IgenWebControlPanelSchemaEspecifics, IgenWebControlPanelSchemaInformacio, IgenWebControlPanelSchemaSabors):
     """ Marker interface de la unio del schema especific de genweb i el dels skins estandar

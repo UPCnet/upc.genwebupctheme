@@ -1,0 +1,37 @@
+<tal:portlet define="utils context/@@upc.genweb.utils;">
+
+<tal:block tal:condition="python: not utils.getGWConfig().masterdoctorado==('Doctorat')">
+
+	<dd class="portletItem lastItem">
+		<ul class="navTree navTreeLevel0">
+			<li class="navTreeItem visualNoMarker navTreeFolderish">
+				<div tal:condition="python: utils.getGWConfig().masterdoctorado==('Master') or utils.getGWConfig().masterdoctorado==('Master i Doctorat')">								
+					<a href="info-general" tal:condition="python: utils.getGWConfig().masterdoctorado==('Master')">Informació general</a>
+					<a href="info-general" tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">Informació del Master</a>
+						<ul class="navTree navTreeLevel2">
+						<li class="navTreeItem visualNoMarker">
+						<a class="navItem2 visualIconPadding" href="competencies">Competències</a>
+						</li>
+						<li class="navTreeItem">
+						<a class="visualIconPadding" href="http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/50_p_cat.pdf" target="_blank">Pla d'estudis [pdf]</a>
+						</li>
+						<li class="navTreeItem visualNoMarker">
+						<a class="navItem2 visualIconPadding" href="requisits">Requisits d'accés</a>
+						</li>
+						<li class="navTreeItem visualNoMarker">
+						<a class="navItem2 visualIconPadding" href="http://www.upc.edu/catala/estudis/masters-eees/preinscripcio.php?lang=cat" target="_blank">Preinscripció tancada</a>
+						</li>
+						<li class="navTreeItem visualNoMarker">
+						<a class="navItem2 visualIconPadding" href="http://www.upc.edu/catala/estudis/masters-eees/matricula.php?lang=cat" target="_blank">Matrícula</a>
+						</li>
+						</ul>										
+				</div>
+								
+			</li>
+		</ul>
+		<span class="portletBottomLeft"/>
+		<span class="portletBottomRight"/>
+	</dd>
+
+</tal:block>
+</tal:portlet>

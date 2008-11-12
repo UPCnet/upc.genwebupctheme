@@ -68,10 +68,13 @@ class GenWebControlPanelUtility(Persistent):
     # de la pestanya de sabors
     tipusintranet = 'Visible'
     tipusNeutre2 = 'Default'
-    titolcapsaleraMaster = 'Titol de capsalera del master'
+    titolcapsaleraMaster = '2008/2009'
     idestudiMaster = ''
     idtitulacioMaster = ''
     masterdoctorado = 'Master'
+    ambitdoctorat_ca = ''
+    ambitdoctorat_es = ''
+    ambitdoctorat_en = ''
     
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
@@ -402,6 +405,30 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
             getGWConfig().masterdoctorado = value
         return property(get, set)
 
+    @apply
+    def ambitdoctorat_ca():
+        def get(self):
+            return getGWConfig().ambitdoctorat_ca
+        def set(self, value):
+            getGWConfig().ambitdoctorat_ca = value
+        return property(get, set)
+
+    @apply
+    def ambitdoctorat_es():
+        def get(self):
+            return getGWConfig().ambitdoctorat_es
+        def set(self, value):
+            getGWConfig().ambitdoctorat_es = value
+        return property(get, set)
+    
+    @apply
+    def ambitdoctorat_en():
+        def get(self):
+            return getGWConfig().ambitdoctorat_en
+        def set(self, value):
+            getGWConfig().ambitdoctorat_en = value
+        return property(get, set)
+    
 general = FormFieldsets(ISkinsSchema['theme'], IgenWebControlPanelSchemaGeneral)
 general.id = 'genWebControlPanelgeneral'
 general.label = _(u'label_gwcp_general', default=u'General')

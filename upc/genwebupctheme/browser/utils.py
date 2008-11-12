@@ -311,7 +311,20 @@ class utilitats(BrowserView):
 
         return _result
 
+
+
     def select_organitzadors(self, id_estudi):
+
+        db = self.connectDatabase()
+        c=db.cursor() 
+        c.execute("""SELECT DISTINCT uu.id_unitat, uu.nom_cat, uu.nom_esp, uu.nom_ing, uu.sigles, CASE WHEN sub.id=2 THEN 1 WHEN sub.id=1 THEN 2 ELSE 99 END orden_tipus FROM upc_on_simparteix uos,upc_unitat uu LEFT JOIN scp_unitat_basiques sub ON uu.id_unitat=sub.id_unitat WHERE uos.id_estudi=%s AND uos.id_unitat=uu.id_unitat""", (id_estudi,))
+        results = c.fetchone()
+
+        dictKeys = ('uu.id_unitat', 'uu.nom_cat', 'uu.nom_esp', 'uu.nom_ing', 'uu.sigles','orden_tipus',)    
+
+        return self.remapList2Dic(dictKeys,results)
+    
+    def select_organitzadors_old(self, id_estudi):
 
         db = self.connectDatabase()
         c=db.cursor() 
@@ -352,7 +365,19 @@ class utilitats(BrowserView):
             j=j+1
 
         return _result
+
+    def select_ambit(self, id_tit):
         
+        db = self.connectDatabase()
+        c=db.cursor()     
+        c.execute("""SELECT ua.nom_cat, ua.nom_esp, ua.nom_ing FROM upc_titulacio LEFT JOIN upc_ambits ua ON ua.id_ambit=upc_titulacio.id_ambit WHERE upc_titulacio.id_titulacio=%s""", (id_tit,))
+        results = c.fetchone()
+        dictKeys = ('ua.nom_cat', 
+                    'ua.nom_esp',
+                    'ua.nom_ing',)
+           
+        return self.remapList2Dic(dictKeys,results)
+           
     def recuperaLinkUnitats(self, id_unitat, lang):
         
         tipus = self.select_tipus(id_unitat)
@@ -398,10 +423,8 @@ class utilitats(BrowserView):
             return 'http://www.upc.edu'
   
         idioma = self.cambiaPrefijo(lang)
-        if idioma == 'ing':
-            idioma = 'ang'
-        
-        return 'http://www.upc.edu/catala/bddirectori/consultar/' + urltemp + '?id=' + str(id_unitat) + '&idioma=' + idioma
+        return 'http://www.upc.edu/unitats/fitxa_unitat.php?id_unitat=' + str(id_unitat) + '&tip=x&lang=' + idioma
+        ###return 'http://www.upc.edu/catala/bddirectori/consultar/' + urltemp + '?id=' + str(id_unitat) + '&idioma=' + idioma
 
     def select_participants(self, id_estudi):
 
@@ -419,7 +442,11 @@ class utilitats(BrowserView):
 
         return _result        
         
+    def fields2Dic(self, dc, de, di):
+        tmp = (dc, de, di)
+        dictKeys = ('doc_ca', 'doc_es', 'doc_en',)    
         
+        return self.remapList2Dic(dictKeys,tmp)
     
     def getSectionFromURL(self):
         context=self.context

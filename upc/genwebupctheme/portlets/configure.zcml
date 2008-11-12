@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="upc.genweb.banners">
+
+     <!-- Register the portlet -->
+
+     <!-- If the portlet has no configurable parameters, you can remove
+          the EditForm declaration in simpletaskportlet.py and delete
+          the 'editview' attribute from this statement.
+       -->
+
+     <plone:portlet
+         name="upc.genweb.masters.portlet"
+         interface=".mastersportlet.IMastersPortlet"
+         assignment=".mastersportlet.Assignment"
+         view_permission="zope2.View"
+         edit_permission="cmf.ManagePortal"
+         renderer=".mastersportlet.Renderer"
+         addview=".mastersportlet.AddForm"
+         />
+
+</configure>

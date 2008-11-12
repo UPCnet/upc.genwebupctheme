@@ -1,5 +1,8 @@
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;
-                                                utils context/@@upc.genweb.utils;">
+                 utils context/@@upc.genweb.utils;
+                 langtool nocall:context/portal_languages;
+                 lang_code langtool/getPreferredLanguage;
+                 data python: utils.select_ambit(utils.getGWConfig().idtitulacioMaster)">
           
           
 
@@ -25,8 +28,18 @@
 
 <table>
     <tbody>
-        <tr valign="bottom" height="74">
-            <td width="155"> <div class="titolBranca_m">Titol de capsalera del master</div></td> 
+        <tr valign="bottom" height="74">	
+            <td width="155"> 
+            	<div class="titolBranca_m" 
+            		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')"
+            	     tal:content="python: utils.fields2Dic(utils.getGWConfig().ambitdoctorat_ca,utils.getGWConfig().ambitdoctorat_es,utils.getGWConfig().ambitdoctorat_en)['doc_'+lang_code]">Titol de capsalera del master
+            	</div>
+            	<div class="titolBranca_m" 
+            		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Master') or utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
+            	     tal:content="python: utils.recodifica(data['ua.nom_'+utils.cambiaPrefijo(lang_code)])">Titol de capsalera del master
+            	</div>
+           	</td> 
+            
             <td class="imatgeCapcalera_m">
                 <img longdesc="LogoMaster" alt="" tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
             </td>
