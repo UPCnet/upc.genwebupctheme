@@ -117,22 +117,20 @@ font-size:1.1em;
 font-size:1.1em;
 color:#4D4D4D;
 font-weight:bold;
-	*position:absolute;
-	*border:1px 0px 0px 0px;
-	*border-top-width:1px;
-	*width:533px;
+/*
 	_position:static;
 	_border-top:1px solid #808080;
 	_width:auto;
+*/
 }
 
 .agendaData{
 float:none;
 margin: -36px 0px 1px 3px;
-	*margin:20px 0px 1px 0px;
-	*padding-top:3px;
+/*
 	_padding-top:0px;
-	_margin: -36px 0px 1px 3px;}
+	_margin: -36px 0px 1px 3px;
+*/}
 
 .agendaDataReposicio{
 
@@ -267,7 +265,7 @@ table, tr, th, td, tbody, tfoot {
 border-collapse:collapse;
 padding:3px;
 text-align:left;   
-margin: inherit;
+/*margin: inherit;*/
 }
 .TDRegulaCalendari{
 	padding-bottom:12px;

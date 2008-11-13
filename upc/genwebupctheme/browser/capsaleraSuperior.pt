@@ -34,18 +34,7 @@
         </div>
     </form>
 
-    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Discreta'">
-    <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
-        tal:condition="here/portal_membership/isAnonymousUser"/>
-    <a href=""
-       tal:condition="here/portal_membership/isAnonymousUser"
-       tal:attributes="href string:${view/portal_url}/login_form" 
-       i18n:domain="upc.genwebupc"
-       i18n:translate="identificat"> 
-       Identifica't
-    </a>
-    </tal:identificacio>
-    
+
     <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
     <a href=""
        tal:attributes="href string:${view/portal_url}/"
@@ -53,7 +42,8 @@
        i18n:translate="inici"> 
        Inici 
     </a>
-    
+
+
     <tal:block repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}">
         
@@ -71,6 +61,18 @@
                            accesskey accesskey;"
            >Site action</a>
      </tal:block>
+
+    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Discreta'">
+    <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
+        tal:condition="here/portal_membership/isAnonymousUser"/>
+    <a href=""
+       tal:condition="here/portal_membership/isAnonymousUser"
+       tal:attributes="href string:${view/portal_url}/login_form" 
+       i18n:domain="upc.genwebupc"
+       i18n:translate="identificat"> 
+       Identifica't
+    </a>
+    </tal:identificacio>
 
     <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
     <a href=""

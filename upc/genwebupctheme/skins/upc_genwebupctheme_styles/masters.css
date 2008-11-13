@@ -1,135 +1,102 @@
+/*es pot esborrar des d'aqui*/
 .taulaDades td{
 	vertical-align:top !important;
 	padding:4px 10px 10px 0px;
-	line-height:1.5em;
-	}
+	line-height:1.5em;}
 .taulaDades td.titular2 {
 	text-align:right;
 	padding:5px 10px 10px 0px;
-	line-height: 1em;
-	}
+	line-height: 1em;}
 .taulaDades .separadorH {
-	border-top: 2px dotted #e6e6e6;
-	}
+	border-top: 2px dotted #e6e6e6;}
 .plain p strong, .plain strong {
 	margin-top:20px;
-	display:block;
-	}
+	display:block;}
 .plain ul li {
     padding: 0px 0px 0px 12px;
     margin: 8px 0px;
     background: url(quadret.gif) no-repeat top left;
     list-style-type: none;
     line-height:1.5em;
-    border-bottom:0px;
-	
-	}
+    border-bottom:0px;}
+/*es pot esborrar fins aqui*/
 #portal-personaltools{
     background-color:transparent;
     z-index: 1;
     position: absolute;
-    margin: -31px 0px 0px 5px;
-}
-
+    margin: -31px 0px 0px 5px;}
 .barra_idiomes {
     float: right;
     position:relative;
     z-index: 2;
     margin-top: -30px;
-    margin-right: 5px;
-    }
-    
+    margin-right: 5px;}
 .validacio {
-	margin-top: -31px;
-	}  
-	
-	
-
+    margin-top: -31px;}  
 .logo_m{
-float:left;
-margin:10px 0 0 25px;
-min-width:160px;
-}
+    float:left;
+    margin:10px 0 0 25px;
+    min-width:160px;}
 .logo_m img {
-float:left;
-}
+    float:left;}
 .banerMasters{
-float:right;
-padding-top:13px;
-}
+    float:right;
+    padding-top:13px;}
 .titolWeb_m{
-text-align:left;
-margin-left:255px;
-}
+    text-align:left;
+    margin-left:255px;}
 .cursMaster{
-font-family:Arial, Helvetica, Verdana, sans-serif;
-font-size:16px;
-color:#007dcb;
-}
+    font-family:Arial, Helvetica, Verdana, sans-serif;
+    font-size:16px;
+    color:#007dcb;}
 .imatgeCapcalera_m{
-width:768px;
-height:85px;
-/*background: url(imatgeMaster.jpg) no-repeat top right;/*------ imatge del custom /!\ ----*/
-text-align:right;
-padding-bottom:0px !important;
-}
-.imatgeCapcalera_m img{ }
-
+    width:768px;
+    height:85px;
+    text-align:right;
+    padding-bottom:0px !important;}
 .barraIdiomes{
-padding: 67px 5px 0px 0px;
-margin-bottom:10px;
-}
+    padding: 67px 5px 0px 0px;
+    margin-bottom:10px;}
 .barraUsuari{
-padding: 75px 5px 0px 5px;
-float:left;
-font-size:0.9em;
-}
+    padding: 75px 5px 0px 5px;
+    float:left;
+    font-size:0.9em;}
 .barraBranca_m{ 
     width:958px;
     padding: 0px;
     font-weight:bold;
     font-size:1.1em;
-    color:#B0D73C; /*específic1*/
-}
+    color:#B0D73C; /*específic1*/}
 .barraBranca_m table{
-text-align:right !important;
-vertical-align:bottom !important;
-width: 958px !important;
-}
+    text-align:right !important;
+    vertical-align:bottom !important;
+    width: 958px !important;}
 .titolBranca_m {margin: 5px; margin-bottom:18px;}
 .barraBranca_m table td { width:190px;    text-align:right !important;}
 .barraBranca_m table, .barraBranca_m tr, .barraBranca_m th, .barraBranca_m td, .barraBranca_m tbody, .barraBranca_m tfoot, .barraBranca_m thead { padding:0px !important;}
 .liniaPrincipal_m{
-height:6px;
-width:100%;
-background-color:#B0D73C; /*específic1*/
-font-size:0.05em;
-margin:5px 0 5px 0;
-}
+    height:6px;
+    width:100%;
+    background-color:#B0D73C; /*específic1*/
+    font-size:0.05em;
+    margin:5px 0 5px 0;}
 .clearAll_m{
-clear:both;
-padding: 15px 0px 30px 0px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    clear:both;
+    padding: 15px 0px 30px 0px;}
+/*columnes*/
+.columnaEsq {
+    display:none;}
+.columnaCentre {
+	margin: 0;
+	width:auto;}
+.columnaDreta div + .columnaCentre {width:100% !important;}
+/*genweb settings*/
+#fieldset-genWebControlPanelgeneral select[id="form.columna2.from"], #fieldset-genWebControlPanelgeneral select[id="form.columna2.to"] {background:#e6e6e6;}
+#fieldset-genWebControlPanelgeneral select[id="form.columna2.from"] option, #fieldset-genWebControlPanelgeneral select[id="form.columna2.to"] option {color: #999;}
+button[onclick="javascript:from2to('form.columna2')"],button[onclick="javascript:to2from('form.columna2')"],button[onclick="javascript:moveUp('form.columna2')"],button[onclick="javascript:moveDown('form.columna2')"] {background: #e6e6e6;border:0px;}
+label[for="form.columna2"] {color:#ccc;}
+label[for="form.columna2"] + span {display:none;}
+/*flota tapa navigation*/	
 .portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none;}
-	
+/*contactePersonalitzat*/
+.iframeContacte iframe {width:538px;height:500px;}	

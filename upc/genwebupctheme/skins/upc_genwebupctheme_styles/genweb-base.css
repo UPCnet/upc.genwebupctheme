@@ -1,36 +1,35 @@
-/*
-INCORPORA TOTS ELS CODIS PER A 
-	FIREFOX
-	EXPLORER 6
-	EXPLORER 7
-	SAFARI i CHROME
+/* CONTINGUT*/
+.contingut{
+    text-align: left;
+    line-height: 1.5em;}
+.columnaEsq {
+	float:right;
+	margin-right:0px !important;
+	margin-left:0px;}
+.columnaCentre {
+	margin-left:0px;
+	padding:0px;
+	width:auto;
+	float:none;}
+.columnaDreta {
+    float: right;}
+.columnaEsq #portlet200,	
+.columnaEsq #caixaPortlet,
+.columnaEsq #baix200 {
+	margin-left:25px !important;
+	width:200px !important;}
+.columnaDreta #portlet150,	
+.columnaDreta #caixaPortlet,
+.columnaDreta #baix150,
+.columnaDreta #baner {
+	margin-left:25px !important;
+	width:150px !important;}
+.columnaEsq #caixaPortlet {_width:100px;}
+.columnaEsq #caixaPortlet {
+	width:198px !important;}
+.columnaDreta #caixaPortlet {
+	width:148px !important;} 	
 	
-COLORS 
-	TextUPC #333333
-	LinkUPC #0076cc
-	MariUPC #006da3
-	GrisUPC #4d4d4d
-	CianUPC #99def6
-	Espe1   #ff6600
-	Espe2   #d96245
-	Espe3   #cc0000
-	Espe4   #dfe3d3
-	Espe5   #e0cece
-	Espe6   #e8e2df
-*/
-/***********************/
-/***                 ***/
-/***    ESTANDARD    ***/
-/***    1 #007dcc    ***/
-/***    2 #006da3    ***/
-/***    3 #3c718e    ***/
-/***    4 #b1c6d2    ***/
-/***    5 #e6e6e6    ***/
-/***    6 #f1f1f4    ***/
-/***                 ***/
-/***********************/
-
-
 /* GENERAL */
 body {
 	margin: 0px; 
@@ -39,18 +38,12 @@ body {
 	color: #333333; 
 	font-size: 0.7em; 
 	background:#ffffff url(fons.png) center repeat-y;}
-a:link { 
+a:link, a:visited, a:active { 
 	color:#007dcc; 
-	text-decoration: none;}	
-a:visited { 
-	color: #007dcc; 
 	text-decoration: none;}	
 a:hover {   
 	color: #007dcc;     
 	text-decoration: underline;} 
-a:active {  
-	color: #007dcc;     
-	text-decoration: none;} 
 a:focus { 
 	outline: none;}
 img {
@@ -236,19 +229,13 @@ select {
 h1, h2, h3, h4, h5, h6 {
     color: #CC0000;
     font-family:Arial,Helvetica,Verdana,sans-serif;}
-h1 {
-    color:#CC0000;
-    font-family:Arial,Helvetica,sans-serif;
-    font-size:1.5em;
-    font-weight:bold;
-    margin:0px;}
 h1,h2{
     border-bottom:0px;
-    line-height:1em;}
+    line-height:1em;
+	font-weight:bold;}
 h3 {
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
-	font-family:Arial,Helvetica,sans-serif;
 	font-size:14px;
 	font-weight:bold;
 	margin-top:25px;
@@ -257,17 +244,13 @@ h3 {
 h2{
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
-	font-family:Arial,Helvetica,sans-serif;
 	font-size:14px;
-	font-weight:bold;
 	margin-top:25px;
 	padding-bottom:10px;
 	padding-top:10px;}
 h1 {
-	color:#CC0000;
-	font-family:Arial,Helvetica,sans-serif;
 	font-size:1.65em;
-	font-weight:bold;
+	margin:0px;
 	padding:0.2em 0.2em 0.2em 0px;
 	position:static;}
 
@@ -286,12 +269,11 @@ h1 > img {
 
 h4 {
     font-size:125%;}
-h1, h2 {
-    font-weight:bold;}	
 #baner { 
 	text-align:right;
 	margin-bottom:10px;}
-/************************************************************************************************************ PROVA BANNER GRIS TO BLAU ***************/
+
+/* PROVA BANNER GRIS TO BLAU */
 #baner img {  
 	border: 1px solid #e6e6e6;  
 	margin-bottom:10px;}
@@ -326,13 +308,11 @@ h1, h2 {
     width:4px;
     height:5px;
     vertical-align:baseline;}
-
 .souA {
     margin: 5px 0px 40px 0px; 
 	font-size:0.9em; 
 	padding-left:8px;
     background:transparent url(fletxa4gris.png) no-repeat top left;}
-
 .connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
@@ -376,8 +356,6 @@ html*.sobreElWeb {
 #bandaLogos img {
     margin-right: 15px;
     padding: 10px 0px;}
-
-
 /* DIV CARPETA I CARPETA INTELLIGENT */
 .divCarpeta {
     border-top: 1px dashed #999999;
@@ -410,7 +388,6 @@ html*.sobreElWeb {
     color:#CC0000;
     text-align:right;
     font-size:0.9em;}
-
 #portal-breadcrumbs {
     font-size:0.9em;
     border-bottom: 0px;
@@ -524,11 +501,6 @@ html .livesearchContainer {
     _padding-top:0px;
     _margin-right:3px;}
 
-
-
-
-
-
 /* AFEGITS del custom.css */ /*on abans 666 ara 999*/
 .documentEditable .documentContent {
     border:0px solid #999; 
@@ -565,13 +537,6 @@ html .livesearchContainer {
     color:White;}
 .actionMenu .actionMenuContent .actionSeparator a {
     border-top:1px solid #999;}
-	
-	
-	
-	
-	
-	
-	
 	
 /* TAULES DE CONTINGUT */ /*on abans 666 ara 999*/
 table.listing th, 
@@ -621,11 +586,6 @@ td.state-intranet {
 a span.state-intranet {
 	background: none !important;}
 
-
-
-
-
-
 /* MISSATGE INFO SENSE IMATGE */
 dl.portalMessage dt {
     background-color:transparent;
@@ -644,8 +604,7 @@ dl.portalMessage dt {
     padding:0em 0em 0.3em 0em;padding-top:0em;}
 dl.portalMessage {
     border:1px solid #ddd;
-    font-size:100%;
-}
+    font-size:100%;}
 .visualClear {
     clear:both;
     display:block;}
@@ -688,21 +647,11 @@ dl.error dd {
 	color:#0076cc;
 	text-decoration:underline;}
 
-
-
-
 /* ANULLACIO DALGUNS ESTILS DE PLONE EN ENLLACOS */
 ul.configlets li a:visited {
     color:#0076CC;}
 ul.configlets li a:hover {
     text-decoration:underline;}
-
-
-
-
-
-
-
 
 /* CANVI DELS BOTONS DE PLONE */
 .context, .formControls .actionButtons .button, .documentEditable * .context {
@@ -739,13 +688,6 @@ ul.configlets li a:hover {
 	*padding:0px 0px 2px 0px;
 	_padding:0px 0px 2px 0px;}
 
-
-
-
-
-
-
-
 /* COMMUTA AMB VOLUM */
 .optionsToggle {
     background:transparent url(commuta.gif) no-repeat scroll left 2px;
@@ -761,8 +703,7 @@ ul.configlets li a:hover {
     _left:0px;}
 #content a[href^="http:"], #content a.link-external {
     background: none;
-    padding: 0px;
-}
+    padding: 0px;}
 #portal-column-content {
 	margin:0em;
 	padding:0em;}
@@ -780,7 +721,6 @@ abbr span {
 	color:#0077cc;}
 .documentContent dd a:hover {
 	text-decoration:underline;}
-
 dl.collapsible {
 	border:0px solid #e6e6e6 !important;
 	padding:0pt;}
@@ -796,8 +736,7 @@ table.listing th {
 	margin:0em 1em 1em 1em;}
 .reviewHistory, .contentHistory {
 	color:#4d4d4d;
-	float:left;
-}
+	float:left;}
 dl.collapsible dt.collapsibleHeader {
 	margin:0pt 0pt 0em -1em;}
 dl.collapsedInlineCollapsible {
@@ -806,11 +745,9 @@ dl.collapsedInlineCollapsible {
 	padding-bottom:0px !important;
 	display:block;}
 .expandedInlineCollapsible{
-	margin-bottom:-15px !important;
-}
+	margin-bottom:-15px !important;}
 #history .listing {
-margin-bottom:25px;
-}
+	margin-bottom:25px;}
 #portal-columns{
 	margin-bottom:20px;}
 #region-content, .documentContent{
@@ -872,7 +809,6 @@ margin-bottom:25px;
 .kssattr-atfieldname-description textarea {
 	color:#333333;
 	font-size:100%;}
-
 .formPanel {
 	border: 1px solid #e6e6e6;}
 .formTab a:hover {
@@ -893,7 +829,6 @@ li.lastFormTab a {
 	border-right:1px solid #e6e6e6;}
 li.formTab a:hover {
 	background:#e6e6e6;}
-
 .actionMenuHeader a:hover{
 	text-decoration:none;}
 .actionMenuHeader a:hover {
@@ -977,13 +912,11 @@ ul.configlets li + input > li {
 table.listing, .stx table {
 	border-collapse:collapse;
 	font-size:100%;}
-
 table.listing tbody th {
 	font-weight:bold;
 	font-size:90% !important;}
 table.listing {
 	font-size:85%;}
-
 .template-zmi_docs .contents {
 	border:1px solid #e6e6e6;
 	background:white;
@@ -1026,14 +959,6 @@ img.sortdirection {
 	font-variant:small-caps;
 	padding:0pt 0pt 1pt 8px;}
 
-
-
-
-
-
-
-
-
 /* esdeveniments */
 dl dd {margin-left:20px;}
 #parent-fieldname-text {
@@ -1063,11 +988,9 @@ dl dd {margin-left:20px;}
 	font-size:125% !important;
 	color:#ccc;
 	text-align:right;
-	text-transform: capitalize !important;
-}
+	text-transform: capitalize !important;}
 .relatedItems{
-	clear:both;
-}
+	clear:both;}
 /* photoalbum */
 .photoAlbumEntry {
 background-image:url(pollaroid.gif);
@@ -1079,7 +1002,6 @@ padding:0 6px 0 9px;
 text-align:center;
 width:143px;
 }
-
 
 /* kupu */
 div.kupu-drawer {
@@ -1111,12 +1033,10 @@ div#kupu-librariesitems {
 	width:120px;}
 div#kupu-resourceitems {
 	border-right:2px dotted #EDEDED;
-	width:190px;
-}
+	width:190px;}
 .kupu-tabledrawer {
 left:auto;
-width:408px;
-}
+width:408px;}
 .kupu a {
 border-bottom:0px solid #CCCCCC !important;
 color:#0077cc !important;
@@ -1127,8 +1047,6 @@ border-bottom:0px solid #CCCCCC !important;
 color:#0077cc !important;
 text-decoration:underline !important;
 }
-
-
 
 /* mapa del lloc */
 #portal-sitemap .navTreeLevel2 {
@@ -1159,9 +1077,6 @@ margin-left:5px;
 padding-left:10px;
 padding-top:2px;
 }
-
-
-
 
 /* search results */
 .searchResults{
@@ -1237,7 +1152,6 @@ padding:0 0 0 0px;
 	visibility:hidden;}
 .template-folder_extended #content dl dt .documentByLine, .template-folder_listing #content dl dt .documentByLine {
 	display:block;}
-
 
 .ultimamodificacio{
 	margin-top:5px;
@@ -1327,13 +1241,6 @@ padding-left:25px;
 }
 
 /* modificacio menu estat amb imatges */
-/* 
-	PUBLICAT: blau
-	INTRANET: porpre
-	ESBORRANY: verd
-	PRIVAT: vermell
-*/
-
 #plone-contentmenu-workflow #workflow-transition-reject, 
 #plone-contentmenu-workflow #workflow-transition-hide, 
 #plone-contentmenu-workflow #workflow-transition-close, 
@@ -1390,9 +1297,6 @@ padding-left:25px;
 	background-position: 5px 2px;
 	padding-left:25px;
 }
-
-
-
 
 #plone-contentmenu-translate #translate_into_en {
 	/*
@@ -1474,20 +1378,12 @@ margin-left:10px;
 margin-right:25px;
 }
 
-
-
 /** per si de cas hi ha interferencies */
-a{color:#0077cc;text-decoration:none;}
-a:active{color:#0077cc;text-decoration:none;}
-a:link{color:#0077cc;text-decoration:none;}
-a:visited{color:#0077cc;text-decoration:none;}
+a,a:active,a:link,a:visited{color:#0077cc;text-decoration:none;}
 a:hover{color:#0077cc;text-decoration:underline;}
-a img{text-decoration:none;}
-a:hover img{text-decoration:none;}
-a:hover br{text-decoration:none;}
+a img,a:hover img,a:hover br{text-decoration:none;}
 
-
-/*************************** MENU LATERAL ******************************/
+/*MENU LATERAL*/
 .titolSeccio{
     background:url(submenuFons.png) no-repeat #ededed;
     width: 197px;
@@ -1500,8 +1396,7 @@ a:hover br{text-decoration:none;}
     margin-top:18px !important;
     *margin-top:15px;}
 html*.titolSeccio{
-    margin-top:15px !important;
-}
+    margin-top:15px !important;}
 .titolSeccio .textetSeccioneta {
     line-height: 1.1em;}
 .flotaTapa {
@@ -1525,19 +1420,12 @@ ul.navTree li, .navTreeLevel0 {
     background: url(fletxaGo.gif) no-repeat top left;
     list-style-type: none;
     line-height:1.5em;}
-ul.navTreeLevel0 > li.navTreeCurrentNode, ul.navTreeLevel0 > li.navTreeItemInPath { /*assegurem-nos que funciona*/
-background:#f8f8f8 url(FletxaGoDown.gif) no-repeat scroll left top !important;
+ul.navTreeLevel0 > li.navTreeCurrentNode, ul.navTreeLevel0 > li.navTreeItemInPath {
+background:#f8f8f8 url(fletxaGo.gif) no-repeat scroll left top !important;
 line-height:1.5em;
 list-style-type:none;
 margin:0;
-padding:5px 0 5px 20px;
-}
-/*
-.navTreeCurrentItem {
-background:#f8f8f8 url(fletxaGo.gif) no-repeat scroll left top !important;
-}
-*/
-
+padding:5px 0 5px 20px;}
 ul.navTree li ul li, .navTreeLevel11, .navTreeLevel1, .NavTreeItem {
     padding: 0px 0px 0px 10px;
     margin: 5px 1px;
@@ -1548,8 +1436,7 @@ ul.navTree li ul li, .navTreeLevel11, .navTreeLevel1, .NavTreeItem {
     font-size:0.9em;}
 .navTreeItem {
     font-size:1.0em;
-    font-weight:normal;
-}
+    font-weight:normal;}
 .navTreeItem a:hover, 
 dd.portletItem .navTreeItem a:hover {
     text-decoration:underline;}
@@ -1693,9 +1580,6 @@ div.contacte div, div.contacte h5 {padding-bottom:5px;}
 /*form fieldset {margin-top:0px !important; padding-top:0px !important;}*/
 .widget textarea {width:99%;}
 
-
-
-
 /*ajustaments visuals de genweb settings*/
 div.value {margin-bottom:20px !important;}
 table.ordered-selection-field {margin-bottom:10px !important;}
@@ -1746,15 +1630,11 @@ div#dashboard .portlets-manager .portletHeader {border:0px; margin:5px 0px;}
 div#dashboard dl.portlet {margin-bottom:0px;}
 div#dashboard .portletFooter {text-align:right;}
 
-
 /*detallet*/
 .fletxatop, .reviewHistory {margin-top:30px;}
 
-
 /**** LINKS ****/
 #content a[href ^="https://devel.upcnet.es/neutre2"], #content a.link-https { background:none; padding:0px; }
-
-
 
 /*repas novembre*/
 .template-folder_constraintypes_form .documentContent form .field {font-size:100%;}

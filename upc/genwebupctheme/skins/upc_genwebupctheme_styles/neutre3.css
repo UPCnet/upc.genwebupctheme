@@ -149,36 +149,40 @@
     margin-right: 5px;}
 
 /********************************************************************** columnes *******************************************************************************/
-/* CONTINGUT */
+/* CONTINGUT*/
 .contingut{
     text-align: left;
     line-height: 1.5em;}
 .columnaEsq {
 	float:right;
-	margin:0px;}
+	margin-right:0px !important;
+	margin-left:0px;}
 .columnaCentre {
-	padding-right:25px;
-	width:558px;
-	float:right;}
+	/*margin-left:225px;
+	float:left;*/
+	padding:0px;
+	width:555px;}
 .columnaDreta {
-    width: 150px !important;
     float: right;}
-.iconesContingut {
-    text-align:right;
-    float:right;
-    width:150px;}
-.iconesContingut a{
-    margin: 0px 5px;}
-	
+
+
 .columnaEsq #portlet200,	
 .columnaEsq #caixaPortlet,
 .columnaEsq #baix200 {
-	margin-right:25px !important;
+	margin-left:25px !important;
 	width:200px !important;
+}
+.columnaDreta #portlet150,	
+.columnaDreta #caixaPortlet,
+.columnaDreta #baix150,
+.columnaDreta #baner {
+	margin-left:25px !important;
+	width:150px !important;
 }
 .columnaEsq #caixaPortlet {_width:100px;}
 .columnaEsq #caixaPortlet {
 	width:198px !important;}
-	
+.columnaDreta #caixaPortlet {
+	width:148px !important;} 	
 	
 	
