@@ -16,9 +16,9 @@
 	
    <div class="bandaPeu"></div>
    <div id="signText">© <a href="http://www.upc.edu" target="_blank">UPC</a>. Universitat Politècnica de Catalunya. 
-        <span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció </span>
-        <span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció </span>
-        <span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció </span>.
+        <span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció</span>
+        <span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció</span>
+        <span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció</span>.
 
         <span class="sobreElWeb">
             <a href="accessibility-info"
