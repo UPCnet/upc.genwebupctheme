@@ -39,14 +39,14 @@ class IgenWebControlPanelSchemaGeneral(Interface):
 class IgenWebControlPanelSchemaEspecifics(Interface):
     """ Marker interface de la pestanya dels colors especifics i altres opcions        
     """
-    especific1 = zope.schema.TextLine(title=_(u'Eespecific 1'),)
+    especific1 = zope.schema.TextLine(title=_(u'Especific 1'),)
     especific2 = zope.schema.TextLine(title=_(u'Especific 2'),)
     especific3 = zope.schema.TextLine(title=_(u'Especific 3'),)
     especific4 = zope.schema.TextLine(title=_(u'Especific 4'),)
     especific5 = zope.schema.TextLine(title=_(u'Especific 5'),)
     especific6 = zope.schema.TextLine(title=_(u'Especific 6'),)
     
-    imatgedefonsprops = zope.schema.TextLine(title=_(u'Repeat de la imatge de fons'),required=False)
+    imatgedefonsprops = zope.schema.TextLine(title=_(u'Repeat imatge de fons'),required=False)
 
 
 class IgenWebControlPanelSchemaInformacio(Interface):

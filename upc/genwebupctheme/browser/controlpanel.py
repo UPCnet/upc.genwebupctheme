@@ -72,12 +72,12 @@ class GenWebControlPanelUtility(Persistent):
     tipusintranet = 'Visible'
     tipusNeutre2 = 'Default'
     titolcapsaleraMaster = '2008/2009'
-    idestudiMaster = ''
-    idtitulacioMaster = ''
+    idestudiMaster = '50'
+    idtitulacioMaster = '114'
     masterdoctorado = 'Master'
-    ambitdoctorat_ca = ''
-    ambitdoctorat_es = ''
-    ambitdoctorat_en = ''
+    ambitdoctorat_ca = 'Ambit doctorat - [catala]'
+    ambitdoctorat_es = 'Ambit doctorat - [castella]'
+    ambitdoctorat_en = 'Ambit doctorat - [english]'
     
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
@@ -167,8 +167,6 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
     def especific5():
         def get(self):
             return getGWConfig().especific5
-        
-        return getGWConfig()
         def set(self, value):
             getGWConfig().especific5 = escape(safe_unicode(value))
         return property(get, set)            
