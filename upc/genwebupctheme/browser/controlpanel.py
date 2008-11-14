@@ -75,9 +75,9 @@ class GenWebControlPanelUtility(Persistent):
     idestudiMaster = '50'
     idtitulacioMaster = '114'
     masterdoctorado = 'Master'
-    ambitdoctorat_ca = 'Ambit doctorat - [catala]'
-    ambitdoctorat_es = 'Ambit doctorat - [castella]'
-    ambitdoctorat_en = 'Ambit doctorat - [english]'
+    ambitdoctorat_ca = escape(safe_unicode('Àmbit doctorat - [català]'))
+    ambitdoctorat_es = escape(safe_unicode('Àmbit doctorat - [castellà]'))
+    ambitdoctorat_en = escape(safe_unicode('Àmbit doctorat - [english]'))
     
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
@@ -93,10 +93,8 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
 
     def get_theme(self):
         return self.context.getDefaultSkin()
-
     def set_theme(self, value):
-        self.context.default_skin = escape(safe_unicode(value))
-
+        self.context.default_skin = value
     theme = property(get_theme, set_theme)
 
     @apply
