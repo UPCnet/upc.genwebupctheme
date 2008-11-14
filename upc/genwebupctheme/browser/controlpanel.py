@@ -104,7 +104,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().columna1
         def set(self, value):
-            getGWConfig().columna1 = escape(safe_unicode(value))
+            getGWConfig().columna1 = value
         return property(get, set)
 
     @apply    
@@ -112,7 +112,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().columna2
         def set(self, value):
-            getGWConfig().columna2 = escape(safe_unicode(value))
+            getGWConfig().columna2 = value
         return property(get, set)
 
     @apply
@@ -120,7 +120,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().columna3
         def set(self, value):
-            getGWConfig().columna3 = escape(safe_unicode(value))
+            getGWConfig().columna3 = value
         return property(get, set)
         
     @apply
@@ -128,7 +128,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().constrains
         def set(self, value):
-            getGWConfig().constrains = escape(safe_unicode(value))
+            getGWConfig().constrains = value
         return property(get, set)        
 
     @apply
@@ -136,7 +136,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().especific1
         def set(self, value):
-            getGWConfig().especific1 = escape(safe_unicode(value))
+            getGWConfig().especific1 = value
         return property(get, set)
 
     @apply
@@ -144,7 +144,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().especific2
         def set(self, value):
-            getGWConfig().especific2 = escape(safe_unicode(value))
+            getGWConfig().especific2 = value
         return property(get, set)
 
     @apply
@@ -152,7 +152,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().especific3
         def set(self, value):
-            getGWConfig().especific3 = escape(safe_unicode(value))
+            getGWConfig().especific3 = value
         return property(get, set)
 
     @apply
@@ -160,7 +160,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().especific4
         def set(self, value):
-            getGWConfig().especific4 = escape(safe_unicode(value))
+            getGWConfig().especific4 = value
         return property(get, set)
 
     @apply
@@ -168,7 +168,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().especific5
         def set(self, value):
-            getGWConfig().especific5 = escape(safe_unicode(value))
+            getGWConfig().especific5 = value
         return property(get, set)            
 
     @apply
@@ -176,7 +176,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().especific6
         def set(self, value):
-            getGWConfig().especific6 = escape(safe_unicode(value))
+            getGWConfig().especific6 = value
         return property(get, set)
 
     @apply
@@ -184,7 +184,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().imatgedefonsprops
         def set(self, value):
-            getGWConfig().imatgedefonsprops = escape(safe_unicode(value))
+            getGWConfig().imatgedefonsprops = value
         return property(get, set)
 
     @apply
@@ -192,7 +192,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().barraidiomesbool
         def set(self, value):
-            getGWConfig().barraidiomesbool = escape(safe_unicode(value))
+            getGWConfig().barraidiomesbool = value
         return property(get, set)
 
     @apply
@@ -272,7 +272,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().enllaslogotip
         def set(self, value):
-            getGWConfig().enllaslogotip = escape(safe_unicode(value))
+            getGWConfig().enllaslogotip = value
         return property(get, set)
 
     @apply
@@ -280,7 +280,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().contacteid
         def set(self, value):
-            getGWConfig().contacteid = escape(safe_unicode(value))
+            getGWConfig().contacteid = value
         return property(get, set)
 
     @apply
@@ -288,7 +288,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().contactegmaps
         def set(self, value):
-            getGWConfig().contactegmaps = escape(safe_unicode(value))
+            getGWConfig().contactegmaps = value
         return property(get, set)
 
     @apply
@@ -296,7 +296,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().boolmaps
         def set(self, value):
-            getGWConfig().boolmaps = escape(safe_unicode(value))
+            getGWConfig().boolmaps = value
         return property(get, set)
 
     @apply
@@ -304,7 +304,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().tipusintranet
         def set(self, value):
-            getGWConfig().tipusintranet = escape(safe_unicode(value))
+            getGWConfig().tipusintranet = value
         return property(get, set)
 
     @apply
@@ -312,7 +312,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().tipusNeutre2
         def set(self, value):
-            getGWConfig().tipusNeutre2 = escape(safe_unicode(value))
+            getGWConfig().tipusNeutre2 = value
         return property(get, set)
 
 
@@ -329,7 +329,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().idestudiMaster
         def set(self, value):
-            getGWConfig().idestudiMaster = escape(safe_unicode(value))
+            getGWConfig().idestudiMaster = value
         return property(get, set)
 
     @apply
@@ -337,7 +337,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().idtitulacioMaster
         def set(self, value):
-            getGWConfig().idtitulacioMaster = escape(safe_unicode(value))
+            getGWConfig().idtitulacioMaster = value
         return property(get, set)                    
     
     @apply
@@ -345,7 +345,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().masterdoctorado
         def set(self, value):
-            getGWConfig().masterdoctorado = escape(safe_unicode(value))
+            getGWConfig().masterdoctorado = value
         return property(get, set)
 
     @apply
