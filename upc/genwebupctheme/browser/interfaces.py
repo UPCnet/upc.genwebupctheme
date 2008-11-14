@@ -30,23 +30,23 @@ class IgenWebUtility(Interface):
     
 class IgenWebControlPanelSchemaGeneral(Interface):
 
-    columna1 = zope.schema.List(__name__='columna1', title=u"Contingut de la columna 1",value_type=zope.schema.Choice(values=['Agenda', 'Noticies', 'Noticies_Actualitat']), default=[])
-    columna2 = zope.schema.List(__name__='columna2', title=u"Contingut de la columna 2",value_type=zope.schema.Choice(values=['Agenda_Calendari', 'Actualitat_Noticies','Actualitat','Noticies']), default=[])
-    columna3 = zope.schema.List(__name__='columna3', title=u"Contingut de la columna 3",value_type=zope.schema.Choice(values=['Agenda', 'Actualitat_Noticies','Banners', 'Enquesta']), default=[])
+    columna1 = zope.schema.List(__name__='columna1', title=u"Columna 1",value_type=zope.schema.Choice(values=['Agenda', 'Noticies', 'Noticies_Actualitat']), default=[])
+    columna2 = zope.schema.List(__name__='columna2', title=u"Columna 2",value_type=zope.schema.Choice(values=['Agenda_Calendari', 'Actualitat_Noticies','Actualitat','Noticies']), default=[])
+    columna3 = zope.schema.List(__name__='columna3', title=u"Columna 3",value_type=zope.schema.Choice(values=['Agenda', 'Actualitat_Noticies','Banners', 'Enquesta']), default=[])
     constrains = zope.schema.List(__name__='constrains', title=u"Contingut del menu afegir", description=u"Els elements de la columna de la dreta apareixeran al desplegable principal", value_type=zope.schema.Choice(values=['Document', 'Event', 'Favorite', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage', 'Survey', 'PlonePopoll', 'Ploneboard', 'PoiTracker', 'simpleTask', 'Meeting', 'Window', 'FormFolder']), default=[])
 
     
 class IgenWebControlPanelSchemaEspecifics(Interface):
     """ Marker interface de la pestanya dels colors especifics i altres opcions        
     """
-    especific1 = zope.schema.TextLine(title=_(u'Color especific 1'),)
-    especific2 = zope.schema.TextLine(title=_(u'Color especific 2'),)
-    especific3 = zope.schema.TextLine(title=_(u'Color especific 3'),)
-    especific4 = zope.schema.TextLine(title=_(u'Color especific 4'),)
-    especific5 = zope.schema.TextLine(title=_(u'Color especific 5'),)
-    especific6 = zope.schema.TextLine(title=_(u'Color especific 6'),)
+    especific1 = zope.schema.TextLine(title=_(u'Eespecific 1'),)
+    especific2 = zope.schema.TextLine(title=_(u'Especific 2'),)
+    especific3 = zope.schema.TextLine(title=_(u'Especific 3'),)
+    especific4 = zope.schema.TextLine(title=_(u'Especific 4'),)
+    especific5 = zope.schema.TextLine(title=_(u'Especific 5'),)
+    especific6 = zope.schema.TextLine(title=_(u'Especific 6'),)
     
-    imatgedefonsprops = zope.schema.TextLine(title=_(u'Tipus de repeat de la imatge de fons (?)'),required=False)
+    imatgedefonsprops = zope.schema.TextLine(title=_(u'Repeat de la imatge de fons'),required=False)
 
 
 class IgenWebControlPanelSchemaInformacio(Interface):
@@ -59,19 +59,19 @@ class IgenWebControlPanelSchemaInformacio(Interface):
     firmaunitat_es = zope.schema.TextLine(title=_(u'Firma de la unitat - [castella]'),required=False)
     firmaunitat_en = zope.schema.TextLine(title=_(u'Firma de la unitat - [angles]'),required=False)
     enllaslogotip = zope.schema.TextLine(title=_(u'Enllac logotip de la unitat'),required=False)
-    contacteid = zope.schema.TextLine(title=_(u'ID de la BBDD de UBs'),required=False)
-    contactegmaps = zope.schema.TextLine(title=_(u'Codi URL google maps'),required=False)
+    contacteid = zope.schema.TextLine(title=_(u'Contacta [id unitat]'),required=False)
+    contactegmaps = zope.schema.TextLine(title=_(u'Codi google maps'),required=False)
     boolmaps = zope.schema.Bool(title=_(u'per que aparegui o no el mapa del google maps'),required=False)
 
 class IgenWebControlPanelSchemaSabors(Interface):
     """ Marker interface de la pestanya de la informació sobre els sabors        
     """
-    tipusintranet = zope.schema.Choice(title=_(u'Tipus de intranet'), values=['Visible', 'Discreta'], required=False)
+    tipusintranet = zope.schema.Choice(title=_(u'Tipus d\'intranet'), values=['Visible', 'Discreta'], required=False)
     tipusNeutre2 = zope.schema.Choice(title=_(u'Tipus Neutre2'), values=['Default', 'Recerca','Intranet'], required=False)
-    titolcapsaleraMaster = zope.schema.TextLine(title=_(u'curs master [2008/2009]'),required=False)
+    titolcapsaleraMaster = zope.schema.TextLine(title=_(u'Curs del master [2008/2009]'),required=False)
     idestudiMaster = zope.schema.TextLine(title=_(u'id_estudi'),required=False)
     idtitulacioMaster = zope.schema.TextLine(title=_(u'id_titulacio'),required=False)
-    masterdoctorado =  zope.schema.Choice(title=_(u'si es master o master i doctorat'), values=['Master', 'Doctorat', 'Master i Doctorat'], required=False)
+    masterdoctorado =  zope.schema.Choice(title=_(u'Master o PhD'), values=['Master', 'Doctorat', 'Master i Doctorat'], required=False)
     ambitdoctorat_ca = zope.schema.TextLine(title=_(u'Ambit doctorat - [catala]'),required=False)
     ambitdoctorat_es = zope.schema.TextLine(title=_(u'Ambit doctorat - [castella]'),required=False)
     ambitdoctorat_en = zope.schema.TextLine(title=_(u'Ambit doctorat - [angles]'),required=False)

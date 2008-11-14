@@ -25,7 +25,10 @@ from persistent import Persistent
 
 from upc.genwebupctheme.browser.interfaces import *
 from upc.genwebupctheme.browser.utils import getGWConfig
-from plone.app.controlpanel.skins import ISkinsSchema 
+from plone.app.controlpanel.skins import ISkinsSchema
+
+from Products.CMFPlone.utils import safe_unicode
+from cgi import escape
 
 class GenWebControlPanelUtility(Persistent):
     """Clase que implementa la utilitat i la fa persistent
@@ -51,12 +54,12 @@ class GenWebControlPanelUtility(Persistent):
     barraidiomesbool = False
     
     # de la pestanya d'informació
-    titolespai_ca = 'Titol de lespai en catala'
-    titolespai_es ='Titol de lespai en castella'
-    titolespai_en = 'Titol de lespai en angles'
-    firmaunitat_ca = 'Firma de la unitat en catala'
-    firmaunitat_es = 'Firma de la unitat en castella'
-    firmaunitat_en = 'Firma de la unitat en angles'
+    titolespai_ca = escape(safe_unicode('Títol de l\'espai en català'))
+    titolespai_es = escape(safe_unicode('Títol de l\'espai en castellà'))
+    titolespai_en = escape(safe_unicode('Títol de l\'espai en anglés'))
+    firmaunitat_ca = escape(safe_unicode('Firma de la unitat en català'))
+    firmaunitat_es = escape(safe_unicode('Firma de la unitat en castellà'))
+    firmaunitat_en = escape(safe_unicode('Firma de la unitat en anglés'))
     edicio_ca = 'curs 2008/2009'
     edicio_es = 'curso 2008/2009'
     edicio_en = ' 2008/2009 Edition'
@@ -92,309 +95,251 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         return self.context.getDefaultSkin()
 
     def set_theme(self, value):
-        self.context.default_skin = value
+        self.context.default_skin = escape(safe_unicode(value))
 
     theme = property(get_theme, set_theme)
 
     @apply
     def columna1():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.columna1
+            return getGWConfig().columna1
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.columna1 = value
+            getGWConfig().columna1 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply    
     def columna2():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.columna2
+            return getGWConfig().columna2
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.columna2 = value
+            getGWConfig().columna2 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def columna3():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.columna3
+            return getGWConfig().columna3
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.columna3 = value
+            getGWConfig().columna3 = escape(safe_unicode(value))
         return property(get, set)
         
     @apply
     def constrains():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.constrains
+            return getGWConfig().constrains
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.constrains = value
+            getGWConfig().constrains = escape(safe_unicode(value))
         return property(get, set)        
 
     @apply
     def especific1():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.especific1
+            return getGWConfig().especific1
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.especific1 = value
+            getGWConfig().especific1 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def especific2():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.especific2
+            return getGWConfig().especific2
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.especific2 = value
+            getGWConfig().especific2 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def especific3():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.especific3
+            return getGWConfig().especific3
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.especific3 = value
+            getGWConfig().especific3 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def especific4():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.especific4
+            return getGWConfig().especific4
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.especific4 = value
+            getGWConfig().especific4 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def especific5():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.especific5
+            return getGWConfig().especific5
+        
+        return getGWConfig()
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.especific5 = value
+            getGWConfig().especific5 = escape(safe_unicode(value))
         return property(get, set)            
 
     @apply
     def especific6():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.especific6
+            return getGWConfig().especific6
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.especific6 = value
+            getGWConfig().especific6 = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def imatgedefonsprops():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.imatgedefonsprops
+            return getGWConfig().imatgedefonsprops
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.imatgedefonsprops = value
+            getGWConfig().imatgedefonsprops = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def barraidiomesbool():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.barraidiomesbool
+            return getGWConfig().barraidiomesbool
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.barraidiomesbool = value
+            getGWConfig().barraidiomesbool = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def titolespai_ca():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.titolespai_ca
+            return getGWConfig().titolespai_ca
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.titolespai_ca = value
+            getGWConfig().titolespai_ca = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def titolespai_en():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.titolespai_en
+            return getGWConfig().titolespai_en
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.titolespai_en = value
+            getGWConfig().titolespai_en = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def titolespai_es():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.titolespai_es
+            return getGWConfig().titolespai_es
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.titolespai_es = value
+            getGWConfig().titolespai_es = escape(safe_unicode(value))
         return property(get, set)
             
     @apply
     def firmaunitat_ca():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.firmaunitat_ca
+            return getGWConfig().firmaunitat_ca
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.firmaunitat_ca = value
+            getGWConfig().firmaunitat_ca = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def firmaunitat_en():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.firmaunitat_en
+            return getGWConfig().firmaunitat_en
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.firmaunitat_en = value
+            getGWConfig().firmaunitat_en = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def firmaunitat_es():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.firmaunitat_es
+            return getGWConfig().firmaunitat_es
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.firmaunitat_es = value
+            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def edicio_ca():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.edicio_ca
+            return getGWConfig().edicio_ca
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.firmaunitat_es = value
+            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
         return property(get, set)
     
     @apply
     def edicio_en():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.edicio_en
+            return getGWConfig().edicio_en
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.firmaunitat_es = value
+            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
         return property(get, set)
     
     @apply
     def edicio_es():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.edicio_es
+            return getGWConfig().edicio_es
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.firmaunitat_es = value
+            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
         return property(get, set)
     
     @apply
     def enllaslogotip():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.enllaslogotip
+            return getGWConfig().enllaslogotip
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.enllaslogotip = value
+            getGWConfig().enllaslogotip = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def contacteid():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.contacteid
+            return getGWConfig().contacteid
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.contacteid = value
+            getGWConfig().contacteid = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def contactegmaps():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.contactegmaps
+            return getGWConfig().contactegmaps
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.contactegmaps = value
+            getGWConfig().contactegmaps = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def boolmaps():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.boolmaps
+            return getGWConfig().boolmaps
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.boolmaps = value
+            getGWConfig().boolmaps = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def tipusintranet():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.tipusintranet
+            return getGWConfig().tipusintranet
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.tipusintranet = value
+            getGWConfig().tipusintranet = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def tipusNeutre2():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.tipusNeutre2
+            return getGWConfig().tipusNeutre2
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.tipusNeutre2 = value
+            getGWConfig().tipusNeutre2 = escape(safe_unicode(value))
         return property(get, set)
 
 
     @apply
     def titolcapsaleraMaster():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.titolcapsaleraMaster
+            return getGWConfig().titolcapsaleraMaster
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.titolcapsaleraMaster = value
+            getGWConfig().titolcapsaleraMaster = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def idestudiMaster():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.idestudiMaster
+            return getGWConfig().idestudiMaster
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.idestudiMaster = value
+            getGWConfig().idestudiMaster = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
     def idtitulacioMaster():
         def get(self):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            return gw_util.idtitulacioMaster
+            return getGWConfig().idtitulacioMaster
         def set(self, value):
-            gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-            gw_util.idtitulacioMaster = value
+            getGWConfig().idtitulacioMaster = escape(safe_unicode(value))
         return property(get, set)                    
     
     @apply
@@ -402,7 +347,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().masterdoctorado
         def set(self, value):
-            getGWConfig().masterdoctorado = value
+            getGWConfig().masterdoctorado = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
@@ -410,7 +355,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().ambitdoctorat_ca
         def set(self, value):
-            getGWConfig().ambitdoctorat_ca = value
+            getGWConfig().ambitdoctorat_ca = escape(safe_unicode(value))
         return property(get, set)
 
     @apply
@@ -418,7 +363,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().ambitdoctorat_es
         def set(self, value):
-            getGWConfig().ambitdoctorat_es = value
+            getGWConfig().ambitdoctorat_es = escape(safe_unicode(value))
         return property(get, set)
     
     @apply
@@ -426,8 +371,9 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().ambitdoctorat_en
         def set(self, value):
-            getGWConfig().ambitdoctorat_en = value
+            getGWConfig().ambitdoctorat_en = escape(safe_unicode(value))
         return property(get, set)
+    
     
 general = FormFieldsets(ISkinsSchema['theme'], IgenWebControlPanelSchemaGeneral)
 general.id = 'genWebControlPanelgeneral'

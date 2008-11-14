@@ -54,5 +54,13 @@
         addview="plone.app.portlets.portlets.navigation.AddForm"
         editview="plone.app.portlets.portlets.navigation.EditForm"
         />
+        
+    <!-- Render the browser title -->
+    <browser:viewlet
+        name="plone.htmlhead.title"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".browser.viewlets.TitleViewlet"
+        permission="zope2.View"
+        />         
 
 </configure>
