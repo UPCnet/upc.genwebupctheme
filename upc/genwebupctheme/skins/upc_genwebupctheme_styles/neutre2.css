@@ -1,65 +1,64 @@
 .imatgeCapcaleraNeutre2{ 
-    float:right;
-    margin-bottom:5px;
-    *margin-bottom:0px;}
+	float:right;
+	margin-bottom:5px;
+	*margin-bottom:0px}
 .logoNeutre2 { 
-    padding-top:36px;
-    padding-left:0px;
-    padding-right:25px;
-    float:left;
-    margin-bottom:5px;
-    *margin-bottom:0px;}
+	padding-top:36px;
+	padding-left:0px;
+	padding-right:25px;
+	float:left;
+	margin-bottom:5px;
+	*margin-bottom:0px}
 .logo_n2 {
-    float:left;
-    min-width:200px;
-    margin: 25px 0px 0px 25px;}
-.logo_n2 img {float:left;}
+	float:left;
+	min-width:200px;
+	margin: 25px 0px 0px 25px}
+.logo_n2 img {float:left}
 .titolWebNeutre2 {
-    text-align:left;
-    margin: 7px;}
+	text-align:left;
+	margin: 7px}
 .liniaPrincipalNeutre2{ 
-    height:4px;
-    width:100%;
-    margin:0px;
-    background-color:#FF6600; /*específic1*/
-    font-size:0.05em;
-    margin:5px 0 5px 0;
-    clear:both;}
+	height:4px;
+	width:100%;
+	background-color:#FF6600;
+	font-size:0.05em;
+	margin:5px 0;
+	clear:both}
 #portal-personaltools{
-    background-color:transparent;
-    z-index: 1;
-    position: absolute;
-    margin: -29px 0px 0px 5px;
-    width: 800px;}
+	background-color:transparent;
+	position: absolute;
+	margin: -29px 0px 0px 5px;
+	width: 800px}
 .barra_idiomes {
-    float: right;
-    position:relative;
-    z-index: 2;
-    margin-top: -28px;
-    margin-right: 5px;}
+	float: right;
+	position:relative;
+	z-index: 2;
+	margin-top: -28px;
+	margin-right: 5px}
 .validacio {
-    margin-top: -24px;
-    *margin-top: -30px;
-    float:left;
-    position:absolute;}
+	margin-top: -24px;
+	*margin-top: -30px;
+	float:left;
+	position:absolute}
 html*.validacio {
-    margin-top: -30px;} 
+	margin-top: -30px} 
 /*columnes*/
 .columnaEsq {
-    display:none;}
+	display:none}
 .columnaCentre {
-    float:none;
-    margin: 0;
-    width:auto;}
-/*.columnaDreta > div + .columnaEsq + .columnaCentre {width:100% !important;background:pink}*/
-
+	float:none;
+	margin: 0;
+	width:auto}
 /*genweb settings*/
-#fieldset-genWebControlPanelgeneral select[id="form.columna2.from"], #fieldset-genWebControlPanelgeneral select[id="form.columna2.to"] {background:#e6e6e6;}
-#fieldset-genWebControlPanelgeneral select[id="form.columna2.from"] option, #fieldset-genWebControlPanelgeneral select[id="form.columna2.to"] option {color: #999;}
-button[onclick="javascript:from2to('form.columna2')"],button[onclick="javascript:to2from('form.columna2')"],button[onclick="javascript:moveUp('form.columna2')"],button[onclick="javascript:moveDown('form.columna2')"] {background: #e6e6e6;border:0px;}
-label[for="form.columna2"] {color:#ccc;}
-label[for="form.columna2"] + span {display:none;}
+#fieldset-genWebControlPanelgeneral select[id="form.columna2.from"], #fieldset-genWebControlPanelgeneral select[id="form.columna2.to"] {background:#e6e6e6}
+#fieldset-genWebControlPanelgeneral select[id="form.columna2.from"] option, #fieldset-genWebControlPanelgeneral select[id="form.columna2.to"] option {color: #999}
+button[onclick="javascript:from2to('form.columna2')"],button[onclick="javascript:to2from('form.columna2')"],button[onclick="javascript:moveUp('form.columna2')"],button[onclick="javascript:moveDown('form.columna2')"] {background: #e6e6e6;border:0}
+label[for="form.columna2"] {color:#ccc}
+label[for="form.columna2"] + span {display:none}
+label[id="form.titolcapsaleraMaster"], label[id="form.idestudiMaster"], label[id="form.idtitulacioMaster"], label[id="form.masterdoctorado"], label[id="form.ambitdoctorat_ca"],  label[id="form.ambitdoctorat_es"],  label[id="form.ambitdoctorat_en"] {color:#ccc}
+input[id="form.titolcapsaleraMaster"], input[id="form.idestudiMaster"], input[id="form.idtitulacioMaster"], select[id="form.masterdoctorado"], input[id="form.ambitdoctorat_ca"],  input[id="form.ambitdoctorat_es"],  input[id="form.ambitdoctorat_en"] {background:#e6e6e6}
+select[id="form.masterdoctorado"] option {color: #999}
 /*flota tapa navegacio*/	
-.portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none;}
+.portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none}
 /*contactePersonalitzat*/
-.iframeContacte iframe {width:538px;height:500px;}
+.iframeContacte iframe {width:538px;height:500px}

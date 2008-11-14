@@ -1,188 +1,125 @@
-/* CSS UPC GENWEB 3.0 */
-
-/********************************************************************** CAPCALERA *******************************************************************************/
-/********************************************************** ESPECIFICS MODEL IMATGE ALLARGADA *******************************************************************/
 .bandaSuperior{
-    height:6px;
-    width:100%;
-    background-color:#FF6600; /*especific1*/
-    font-size:0.05em;}
+	height:6px;
+	width:100%;
+	background-color:#F60;
+	font-size:0.05em;}
 .logo {
-	margin:25px 0px 0px 25px;
+	margin:25px 0 0 25px;
 	min-width:160px;
 	float:left;
-	*margin:35px 0px 0px 25px;
-	_margin:35px 0px 0px 15px;
-	_width:160px;}
+	*margin:35px 0 0 25px;
+	_margin:35px 0 0 15px;
+	_width:160px}
 .logo a {
-    margin-right:3px;}
+	margin-right:3px}
 .logo img {
-	float: left; }
+	float: left}
 .titolWeb {
-    text-align:center;
-    margin:10px 180px 10px 180px;}
+	text-align:center;
+	margin:10px 180px}
 .imatgeCapcalera{
-    width:958px;
-    height:95px;
-    text-align:right;}
+	width:958px;
+	height:95px;
+	text-align:right}
 .barraIdiomes{
-    padding: 75px 5px 0px 0px;}
+	padding: 75px 5px 0 0}
 #portal-personaltools {
-    font-size:0.9em;
-    background-color: white;
-    border-bottom: none;
-    border-top: none;
-    padding: 0px 0px 0px 0px;
-    margin: -21px 0px 0px 5px;
-    text-align: left;
-    text-transform: none;
-    color: #4d4d4d;}
+	font-size:0.9em;
+	background-color: #fff;
+	border-bottom: 0;
+	border-top: 0;
+	padding: 0;
+	margin: -21px 0 0 5px;
+	text-align: left;
+	text-transform: none;
+	color: #4d4d4d}
 #portal-personaltools li a {
-    color:#0076CC;
-    text-decoration:none;}
+	color:#0076CC;
+	text-decoration:none}
 #portal-personaltools li a:hover {
-    color:#0076CC;
-    text-decoration:underline;}
+	text-decoration:underline}
 #portal-globalnav {
-	background: #Ededed url(bgMenu.png) no-repeat bottom;
+	background: #ededed url(bgMenu.png) no-repeat bottom;
 	text-align:center;
 	font-family:Arial, Helvetica, Verdana, sans-serif;
 	font-size:1.2em;
 	text-transform:uppercase; 
-	margin-top:0px; 
-	padding:0em; 
+	margin-top:0; 
+	padding:0; 
 	font-weight:bold;
-	*margin-top:4px;}
+	*margin-top:4px}
 #portal-globalnav li {
 	line-height: 25px;
 	padding:5px; 
 	margin-right: -1.8em; 
-	display: inline;}
+	display: inline}
 #portal-globalnav li a {
-	border-left: 4px solid #FFFFFF; 
-	border-right: 4px solid #FFFFFF; 
-	border-top: 0px; 
 	line-height: 25px;
 	padding:5px; 
 	color: #0076CC; 
-	text-transform:uppercase;}
+	text-transform:uppercase}
+#portal-globalnav li a, #portal-globalnav li.selected a, #portal-globalnav li a:hover, #portal-globalnav li.selected a:hover {
+	border-right: 4px solid #FFF; 
+	border-left: 4px solid #FFF; 
+	border-top: 0; 
+	border-bottom: 0}
+#portal-globalnav li.selected a, #portal-globalnav li a:hover, #portal-globalnav li.selected a:hover {
+	color: #FFF;
+	padding:4px 5px 5px 5px;
+	*padding:5px 5px 4px 5px}
+
 #portal-globalnav li.selected a {
-	border-right: 4px solid #FFFFFF; 
-	border-left: 4px solid #FFFFFF; 
-	border-top: none; 
-	border-bottom: none; 
-	background-color: #808080; 
-	color: white;
-	padding:4px 5px 5px 5px;
-	*padding:5px 5px 4px 5px;}
+	background-color: #808080}
 #portal-globalnav li a:hover {
-	border-right: 4px solid #FFFFFF; 
-	border-left: 4px solid #FFFFFF; 
 	color:#0076CC; 
-	background-color:#CCCCCC; 
-	text-decoration:underline; 
-	border-top: none; 
-	border-bottom: none;
-	padding:4px 5px 5px 5px;
-	*padding:5px 5px 4px 5px;}
+	background-color:#CCC; 
+	text-decoration:underline;}
 #portal-globalnav li.selected a:hover {
-	border-right: 4px solid #FFFFFF; 
-	border-left: 4px solid #FFFFFF; 
-	background-color:#CCCCCC; 
-	color: #FFFFFF; 
-	border-top: none; 
-	border-bottom: none;
-	padding:4px 5px 5px 5px;
-	*padding:5px 5px 4px 5px;}
+	background-color:#CCC}
 .LResult {
-    padding-top:0px;}
+	padding-top:0;}
 .validacio {
-    margin-top: -22px;
-    margin-bottom:5px;
-    font-size:0.9em;
-    color:#4D4D4D;
-    padding-left: 5px;
-    *margin-top: -24px;
-    _margin-top: -24px;}
+	margin-top: -22px;
+	margin-bottom:5px;
+	font-size:0.9em;
+	color:#4D4D4D;
+	padding-left: 5px;
+	*margin-top: -24px;
+	_margin-top: -24px;}
 .PortletCalendar {
-    float:right;
-    margin-right: 10px;
-    margin-top: -200px;
-    line-height:1.2em;
-    font-size:0.9em;}
-.text_dia {}
-.text_mes {}
-.text_number {}
+	float:right;
+	margin-right: 10px;
+	margin-top: -200px;
+	line-height:1.2em;
+	font-size:0.9em;}
 .barra_idiomes {
-    float: right;
-    position:relative;
-    z-index: 2;
-    margin-top: -20px;
-    margin-right: 5px;}
-.cantoES {
-    float: left;
-    background-color: #E8E2DF;}    
-.cantoDR {
-    text-align: right;
-    background-color: #E8E2DF;}
-.cantoEC {
-    text-align: left;
-    background-color: #E8E2DF;}
-.cantoDC {
-    text-align: right;
-    background-color: #E8E2DF;}
+	float: right;
+	position:relative;
+	z-index: 2;
+	margin-top: -20px;
+	margin-right: 5px;}
+.cantoES, .cantoEC {
+	float: left;
+	background-color: #E8E2DF}    
+.cantoDR, .cantoDC {
+	text-align: right;
+	background-color: #E8E2DF}
 .portletHeader {
 	background-color:#E8E2DF;
-    color:#4D4D4D;
-    font-weight:bold;
-    padding:1px 5px;}
+	color:#4D4D4D;
+	font-weight:bold;
+	padding:1px 5px}
 .agendaDalt{
-    text-align: left;}
+	text-align: left}
 .agendaNumero {
-    line-height: 0.8em;}   
+	line-height: 0.8em}   
 .agendaDia {
-    text-transform: lowercase;}   
+	text-transform: lowercase}   
 .barra_idiomes {
-    position:relative;
-    z-index: 2;
-    margin-top: -20px;
-    margin-right: 5px;}
-
-/********************************************************************** columnes *******************************************************************************/
-/* CONTINGUT*/
-.contingut{
-    text-align: left;
-    line-height: 1.5em;}
-.columnaEsq {
-	float:right;
-	margin-right:0px !important;
-	margin-left:0px;}
+	position:relative;
+	z-index: 2;
+	margin-top: -20px;
+	margin-right: 5px}
+/*columnes*/
 .columnaCentre {
-	/*margin-left:225px;
-	float:left;*/
-	padding:0px;
-	width:555px;}
-.columnaDreta {
-    float: right;}
-
-
-.columnaEsq #portlet200,	
-.columnaEsq #caixaPortlet,
-.columnaEsq #baix200 {
-	margin-left:25px !important;
-	width:200px !important;
-}
-.columnaDreta #portlet150,	
-.columnaDreta #caixaPortlet,
-.columnaDreta #baix150,
-.columnaDreta #baner {
-	margin-left:25px !important;
-	width:150px !important;
-}
-.columnaEsq #caixaPortlet {_width:100px;}
-.columnaEsq #caixaPortlet {
-	width:198px !important;}
-.columnaDreta #caixaPortlet {
-	width:148px !important;} 	
-	
-	
+	width:555px}

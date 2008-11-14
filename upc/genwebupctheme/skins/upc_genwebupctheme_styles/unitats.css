@@ -1,211 +1,101 @@
-/* CSS UPC GENWEB 3.0 */
-
-/********************************************************************** CAPÇALERA *******************************************************************************/
-/********************************************************** ESPECÍFICS MODEL IMATGE ALLARGADA *******************************************************************/
-
-.logo
-{
-float:left;
-/*margin: 45px 0px 0px 25px;*/
-}
-
-.titolWeb
-{
-text-align:center;
-margin:0px 180px 0px 180px;
-}
-
+.titolWeb {
+	margin:0 180px}
 .imatgeCapcaleraUnitat{
-  background: transparent url(imatgeUnitat.jpg) no-repeat scroll left top;
-  min-height:129px;
-  margin:20px 0px 0px 126px;
-}
-
+	background: transparent url(imatgeUnitat.jpg) no-repeat scroll left top;
+	min-height:129px;
+	margin:20px 0 0 126px}
 .validacio {
-color:#4D4D4D;
-font-size:0.9em;
-margin-bottom:5px;
-margin-top:-19px;
-padding-left:5px;
-}
-
+	margin-top:-19px}
 .barra_idiomes {
-margin-right:5px;
-margin-top:-19px;
-position:relative;
-z-index:2;
-}
-
+	margin-right:5px;
+	margin-top:-19px;
+	position:relative;
+	z-index:2;}
 .barraUsuari{
-margin-right:150px;
-padding: 10px 0px 0px 5px;
-font-size:0.9em;
-}
-
+	margin-right:150px;
+	padding: 10px 0 0 5px;
+	font-size:0.9em;}
 .banda{
-background: no-repeat;
-/*height:21px;*/
-margin: 10px 0px 10px 0px;
-}
-
+	background: no-repeat;
+	margin: 10px 0}
 .daltMenu{
-height:109px;
-border-right: 2px solid #ffffff;
-}
+	height:109px;
+	border-right: 2px solid #fff}
 /*\*/
 html*.daltMenu{
-height:103px;}
-}
+	height:103px}
 .daltMenu {*height:103px !important;}
-
-
 .alpha{
-background:url(pixelAlpha.png);
-_background: none; /*ie6hack*/
-_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlpha.png",sizingMethod="scale");
-}
-
-
+	background:url(pixelAlpha.png);
+	_background: none; 
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlpha.png",sizingMethod="scale");}
 .imgUnitatsClick {
-height:103px;
-}
+	height:103px}
 html*.imgUnitatsClick{
-height:97px;}
-}
+	height:97px}
 .imgUnitatsClick {
-*height:103px !important;
-}
-
-
+	*height:103px !important;}
 .daltMenuPrimer{
-border-left: 2px solid #ffffff;
-}
-
-
+	border-left: 2px solid #fff}
 .baixMenu{
-min-height:20px;
-text-align:left;
-font-family:Verdana, Arial, Helvetica, sans-serif;
-font-size:1.2em;
-text-transform:uppercase;
-color:#cc0000; /*especí­fic 2*/
-font-weight:bold;
-border-left: 2px solid #ff784d; /*especí­fic1*/
-padding:4px 25px 1px 8px;
-vertical-align:top;
-}
-
-
+	min-height:20px;
+	text-align:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:1.2em;
+	text-transform:uppercase;
+	color:#c00;
+	font-weight:bold;
+	border-left: 2px solid #ff784d;
+	padding:4px 25px 1px 8px;
+	vertical-align:top}
 .descripcioMenu{
-text-align:left;
-font-family:Verdana, Arial, Helvetica, sans-serif;
-padding:0px 9px;
-vertical-align:top;
-}
-
-
+	text-align:left;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding:0 9px;
+	vertical-align:top}
 .actiuMenu{
-height:8px;
-border-bottom:3px solid #ff784d; /*especí­fic1*/
-*border-bottom:2px solid #ff784d; /*especí­fic1*/
-}
+	height:8px;
+	border-bottom:3px solid #ff784d;
+	*border-bottom:2px solid #ff784d}
 /*\*/
-html*.actiuMenu{border-bottom:2px solid #ff784d; /*especí­fic1*/}
+html*.actiuMenu{border-bottom:2px solid #ff784d;}
 .seleccionatMenu{
-border-left:2px solid #ff784d; /*especí­fic1*/
-border-right:2px solid #ff784d; /*especí­fic1*/
-}
-
-
+	border-left:2px solid #ff784d;
+	border-right:2px solid #ff784d}
 .alphaCustom{
-background:url(pixelAlphaCustom.png);
-_background: none;
-_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlphaCustom.png",sizingMethod="scale");
-border-right:2px solid #ff784d;
-}
-
+	background:url(pixelAlphaCustom.png);
+	_background: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlphaCustom.png",sizingMethod="scale");
+	border-right:2px solid #ff784d}
 .liniaActivaEsq{
-float:left;
-width:151px;
-margin-top:-2px; /* internet explorer -3px*/
-*margin-top:-2px; /* internet explorer -3px*/
-border-top:2px solid #ff784d; /*especí­fic1*/
-font-size:0em;
-}
-
-.liniaActivaDreta{
-float:right;
-width:151px;
-margin-top:-2px; /* internet explorer -3px*/
-*margin-top:-2px; /* internet explorer -3px*/
-border-top:2px solid #ff784d; /*especí­fic1*/
-font-size:0em;
-}
-/*\*/
-html*.liniaActivaEsq, html*.liniaActivaDreta {width:152px;}
-
-.liniaActivaEsq, .liniaActivaDreta {*width:151px !important;}
-
-
-.degradat{
-background:url(degradat.gif) repeat-x;
-min-height:18px;
-margin-top:0px; /* internet explorer -13px*/
-*margin-top:-2px; /* internet explorer -13px*/
-width:958px;
-padding-top:1px;
-}
-/*\*/
-html*.degradat{margin-top:0px; float:right;}
-.degradat {*float:none !important;*margin-top:-2px !important;}
-
-.imatgeCapcaleraUnitat table{
-border-collapse:collapse;
-padding:0px;
-margin: 0px 25px;
-width: 656px;
-}
-
-
-td.baixMenu {white-space: nowrap;}
-
-
-
-
-
-/********************************************************************** columnes *******************************************************************************/
-/* CONTINGUT*/
-.contingut{
-    text-align: left;
-    line-height: 1.5em;}
-.columnaEsq {
-	float:right;
-	margin-right:0px !important;
-	margin-left:0px;}
-.columnaCentre {
-	margin-left:225px;
-	padding:0px;
 	float:left;
-	width:555px;}
-.columnaDreta {
-    float: right;}
-
-.columnaEsq #portlet200,	
-.columnaEsq #caixaPortlet,
-.columnaEsq #baix200 {
-	margin-left:25px !important;
-	width:200px !important;
-}
-.columnaDreta #portlet150,	
-.columnaDreta #caixaPortlet,
-.columnaDreta #baix150,
-.columnaDreta #baner {
-	margin-left:25px !important;
-	width:150px !important;
-}
-.columnaEsq #caixaPortlet {_width:100px;}
-.columnaEsq #caixaPortlet {
-	width:198px !important;}
-.columnaDreta #caixaPortlet {
-	width:148px !important;} 	
+	width:151px;
+	margin-top:-2px;
+	border-top:2px solid #ff784d;
+	font-size:0em}
+.liniaActivaDreta{
+	float:right;
+	width:151px;
+	margin-top:-2px;
+	border-top:2px solid #ff784d;
+	font-size:0em}
+/*\*/
+html*.liniaActivaEsq, html*.liniaActivaDreta {width:152px}
+.liniaActivaEsq, .liniaActivaDreta {*width:151px !important;}
+.degradat{
+	background:url(degradat.gif) repeat-x;
+	min-height:18px;
+	margin-top:0; 
+	*margin-top:-2px;
+	width:958px;
+	padding-top:1px}
+/*\*/
+html*.degradat{margin-top:0px; float:right}
+.degradat {*float:none !important;*margin-top:-2px !important;}
+.imatgeCapcaleraUnitat table{
+	border-collapse:collapse;
+	padding:0;
+	margin: 0 25px;
+	width: 656px}
+td.baixMenu {white-space: nowrap}
 		

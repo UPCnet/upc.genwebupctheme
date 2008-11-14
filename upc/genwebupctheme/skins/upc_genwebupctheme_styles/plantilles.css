@@ -1,292 +1,192 @@
 #content { line-height: 1.5em;}
-a:link {
-	color:#0076cc;
-	text-decoration: none;
-}
-a:visited {
-	color: #0076cc;
-	text-decoration: none;
-}
-a:hover {
-	color: #0076cc; 
-	text-decoration: underline;
-}
 ul{
-	margin: 0px;
-	padding: 0px;
-}
-ul li{ list-style-position:outside; list-style: none; margin-bottom: 0.5em;}
-ol li {list-style-position:outside; list-style: decimal; margin-bottom: 0.5em;}
-form{ margin: 0px; }
-
-
-.fletxa{ border: 0px; margin: 0.25em 0px 0px 0px; padding: 0.1em 0em 0.05em 0em; }
-
-
-
-
+	margin:0;padding:0;}
+ul li, ol li{ list-style-position:outside; list-style: none; margin-bottom: 0.5em;}
+ol li {list-style: decimal;}
+form{ margin: 0; }
+.fletxa{ border: 0; margin: 0.25em 0px 0px 0px; padding: 0.1em 0 0.05em 0; }
 .align_left{ 
-float:left;
-padding:5px 20px 10px 0px;
-background:#FFFFFF;
-position:relative; 
-}
-/*la imatge definida dessota*/
-.align_right{ float:right;padding:5px 0px 10px 20px;background:#FFFFFF;position:relative; }
+	float:left;
+	padding:5px 20px 10px 0;
+	background:#FFF;
+	position:relative;}
+.align_right{ float:right;padding:5px 0 10px 20px;background:#FFF;position:relative; }
 .imgEsquerra{
 	float: left;
 	margin: 5px 10px 10px 1px;
 	padding: 3px;
-	border:1px solid #cccccc;
-}
+	border:1px solid #ccc}
 .imgDreta{ 
 	float: right;
 	margin: 5px 1px 10px 10px;
 	padding: 3px;
-	border:1px solid #cccccc;	
-}
-/***********************************/
-
-/********** TITULARS **************/
-#titolPagina{
-	font-size: 1.3em;
-	font-weight: bold;
-	margin: 0.5em 0px 0em 0.6em;
-	padding-top: 0.6em;
-	color: #cc0000; 
+	border:1px solid #ccc}
+/*TITULARS*/
+.titular1, .titular2, .titular3 {
 	font-family:Arial, Helvetica, sans-serif;
-	font-size:1.45em;		
-}
-
+	color: #c00; 
+	font-weight: bold}
 .titular1{
-	margin: 1em 0em 0.5em -1px;
-	padding:0.35em 0.2em 0.2em 0px;
-	background: url(../img/custom/fletxaD.gif) no-repeat 0px 7px;
-	*background: url(../img/custom/fletxaD.gif) no-repeat 0px 9px;
-	font-weight: bold;
-	color: #cc0000; 
+	margin: 1em 0 0.5em -1px;
+	padding:0.35em 0.2em 0.2em 0;
+	background: url(../img/custom/fletxaD.gif) no-repeat 0 7px;
+	*background: url(../img/custom/fletxaD.gif) no-repeat 0 9px;
 	border-top: 2px dotted #DFE3D3; 
-	font-family:Arial, Helvetica, sans-serif;
-	font-size:1.35em;
-}
+	font-size:1.35em}
 .titular2{
 	font-size: 1.1em;
 	margin-bottom: 0.5em;
 	margin-top: 0.75em;
-	font-weight: bold;
-	color: #cc0000; 
-	font-family:Arial, Helvetica, sans-serif;	
-	font-size:1.2em;
-}
+	font-size:1.2em}
 .titular3{
 	font-size: 1.05em;
 	margin-bottom: 0.5em;
 	margin-top: 1em;
-	color: #cc0000; 
-	font-family:Arial, Helvetica, sans-serif;	
-	font-size:1.1em;
-	font-weight:bold;	
-}
-/***********************************/
-
-/********** COLUMNES **************/
-.columnes{ margin: 0em 0px 0px -1.7em; border-collapse: collapse; line-height:1.5em; }
-.columnes td{ padding: 0em 1em 0em 1.7em; vertical-align: top; width:50%;}
-/***********************************/
-
-/**###**/
-/********** LlistatIndex -plantilla- **************/
-.llistatIndex ul{
-	margin: 15px 0px 15px 0px;
-	padding: 10px 0px 5px 1px;
+	font-size:1.1em}
+/*COLUMNES*/
+.columnes{ margin: 0 0 0 -1.7em; border-collapse: collapse; line-height:1.5em}
+.columnes td{ padding: 0 1em 0 1.7em; vertical-align: top; width:50%}
+/*LlistatIndex, Llistat I i Llistat Enllacos GW3 */
+.llistatIndex ul, .llistatEnllacos ul{
+	margin: 15px 0 15px 0;
+	padding: 10px 0 5px 1px;
 	background-color: #F7F7F7;
 	background:url(fonsTG.gif) repeat-x bottom #F7F7F7;
-    border: 1px solid #E6E6E6;	
-	border-top: 2px solid #CCcccc;
-}
+	border: 1px solid #E6E6E6;	
+	border-top: 2px solid #CCC}
 .llistatIndex li{
-	padding: 0px 0px 8px 0px;
-	margin: 0px 0px 0px 23px;
-	list-style: url(fletxa.gif) outside;
-}
-/********** LlistatEnllacos GW3 **************/
+	padding: 0 0 8px 0;
+	margin: 0 0 0 23px;
+	list-style: url(fletxa.gif) outside;}
 .llistatEnllacos ul{
-	margin: -5px 0px 15px 0px;
-	padding: 10px 0px 5px 1px;
-	background-color: #F7F7F7;
-	background:url(fonsTG.gif) repeat-x bottom #F7F7F7;
-    border: 1px solid #E6E6E6;	
-	border-top: 2px solid #CCcccc;
-}
+	margin: -5px 0 15px 0}
 .llistatEnllacos li{
-	padding: 0px 0px 10px 0px;
+	padding: 0 0 10px 0;
 	list-style: url(quadret.gif) outside;
-	margin: 0px 0px 0px 23px;
-}
-/***********************************/
-/**###**/
-/********** Llistat I -plantilla- **************/
-.llistat { padding: 0px 0px 15px 0px; }
-.llistat ul{ margin: 0px 0px 0px 12px; 
-		*margin: 0px 0px 0px 16px; }
+	margin: 0 0 0 23px}
+.llistat { padding: 0 0 15px 0}
+.llistat ul{ margin: 0 0 0 12px; *margin: 0 0 0 16px}
 .llistat li{
-	padding: 0px 0px 6px 0px;
+	padding: 0 0 6px 0;
 	list-style: url(quadretGris.gif) outside;
-	border-bottom: 1px dotted #CCCCCC;
-}
-/***********************************/
-
-/********** Enllacos relacionats -plantilla- **************/
+	border-bottom: 1px dotted #CCC}
+/*Enllacos relacionats*/
 #eRelacionats{
 	float: right;
 	width: 25%;
 	margin-top: 10px;
 	margin-bottom: 15px;
-	padding: 0px 0px 4px 15px;
-	background:#FFFFFF;
-}
-#eRelacionats .titular2{ margin-top: 0px; }
+	padding: 0 0 4px 15px;
+	background:#FFF}
+#eRelacionats .titular2{ margin-top: 0}
 #eRelacionats .llistat ul{ margin: 0px; margin-bottom:-20px;}
 #eRelacionats .llistat li{ list-style-image:none; list-style: none;}
-#eRelacionats_border{border-left: 4px solid #FF6600; padding-left:10px; }
-/***********************************/
-
-/********** Calendari -plantilla- **************/
-
+#eRelacionats_border{border-left: 4px solid #FF6600; padding-left:10px;}
+/*Calendari*/
 .calendari table td{
 	background-color: #f1efee;
 	padding: 4px;
 	text-align:center;
-	width: 25px;	
-}
+	width: 25px;}
 .calendari td:first-child{
-	border-left: 0px dotted #cccccc;
-	}
+	border-left: 0px dotted #ccc;}
 .calendari table{
-	*border:1px solid #cccccc;
-	border-bottom:3px solid #cccccc;
-	outline:1px solid #cccccc;
+	*border:1px solid #ccc;
+	border-bottom:3px solid #ccc;
+	outline:1px solid #ccc;
 	*outline:0px;
-	border-collapse:collapse;	
-}
+	border-collapse:collapse;}
 html*.calendari table{ 
-	border:1px solid #cccccc;
-	border-bottom:3px solid #cccccc;/*saf*/}
+	border:1px solid #ccc;
+	border-bottom:3px solid #ccc;/*saf*/}
 .calendari td{
-	border-left: 2px solid #ffffff;
+	border-left: 2px solid #fff;
 	border-top:0px;
-	border-bottom:2px solid #ffffff;
+	border-bottom:2px solid #fff;
 	padding-top:6px;
-	background-color: #ffffff;
+	background-color: #fff;
 	color: #666; 
-	font-weight: normal;
-}
+	font-weight: normal}
 .calendari .fonsDestacat1{
 	background-color: #beb4ab;
 	color: #6b5c4f; 
-	font-weight: bold;
-}
+	font-weight: bold}
 .calendari .fonsDestacat2{
 	color: #6b5c4f;  
 	background-color: #cbb380;
-	font-weight: bold;
-}
+	font-weight: bold}
 .notesCalendari{ 
-border-left: 4px solid #FF6600; /*especific 1*/
-padding-left: 10px; 
-padding-bottom: 1px;
-margin-top: 10px;
-margin-left:2px; }
-
+	border-left: 4px solid #F60;
+	padding-left: 10px; 
+	padding-bottom: 1px;
+	margin-top: 10px;
+	margin-left:2px}
 .TDRegulaCalendari{
-	padding-bottom:10px;
-}
-
-/***********************************/
-
-/********** taulaRegistres -plantilla- **************/
+	padding-bottom:10px}
+/*taulaRegistres*/
 .taulaRegistres .cap td{
-background:url(borderTopDiagonal.gif) repeat-x;
-	border-left: 2px dotted #cccccc;
-	border-top:0px;
-	border-bottom:2px dotted #cccccc;
-	*border-bottom:0px;
+	background:url(borderTopDiagonal.gif) repeat-x;
+	border-left: 2px dotted #ccc;
+	border-top:0;
+	border-bottom:2px dotted #ccc;
+	*border-bottom:0;
 	padding-top:6px;
-	background-color: #ffffff;
+	background-color: #fff;
 	color: #6b5c4f; 
-	font-weight: bold;
-}
+	font-weight: bold;}
 .taulaRegistres .cap td:first-child{
-	border-left: 0px dotted #cccccc;
-}
+	border-left: 0px dotted #ccc;}
 .taulaRegistres td {
 	background-color: #f1efee;
-	border-left:2px solid #ffffff;
-	border-bottom:2px solid #ffffff;
-	*border:2px solid #ffffff;	
+	border-left:2px solid #fff;
+	border-bottom:2px solid #fff;
+	*border:2px solid #fff;	
 	padding: 4px;
-	text-align:center;
-}
+	text-align:center;}
 .taulaRegistres td:first-child{
-	border-left: 0px dotted #cccccc;
-}
+	border-left: 0px dotted #ccc;}
 .taulaRegistres table{
-	*border: 1px solid #cccccc;
-	border-bottom:3px solid #cccccc;
-	outline:1px solid #cccccc;
+	*border: 1px solid #ccc;
+	border-bottom:3px solid #ccc;
+	outline:1px solid #ccc;
 	*outline:0px;
-	border-collapse:collapse;	
-}
+	border-collapse:collapse;}
 html*.taulaRegistres table{ 
-	border:1px solid #cccccc;
-	border-bottom:3px solid #cccccc;/*saf*/}
+	border:1px solid #ccc;
+	border-bottom:3px solid #ccc;/*saf*/}
 .taulaRegistres .fonsDestacat1{
 	background-color: #beb4ab;
 	color: #6b5c4f; 
-	font-weight: bold;
-}
+	font-weight: bold;}
 .taulaRegistres .fonsDestacat2{
 	color: #6b5c4f; 
 	background-color: #cbb380;
-	font-weight: bold;
-}
-/***********************************/
-
-/************************ fitxa -plantilla- ******************************************/
+	font-weight: bold;}
+/*fitxa i separadors*/
 .fitxa{
-	border: 1px solid #cccccc;
-	border-bottom: 4px solid #cccccc;
+	border: 1px solid #ccc;
+	border-bottom: 4px solid #ccc;
 	margin: 0px; padding:10px; margin-top:-36px;
-	background: url(borderTopDiagonal.gif) repeat-x top;
-}
-.fletxa_fitxa{ clear: both; background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0px 0px;}
-.fitxa .titular1{ margin: -0.2em 0em 1.2em 0em; padding:0.2em 0em 0.5em 0px; border:0px; border-bottom: 2px dotted #a29386; background:none;}
-.fitxa .titular2{ margin-bottom: 1em; }
-
-.fitxa img{background:#FFFFFF; padding: 0px 20px 10px 0px; margin: 0em 0px 0px 0px;}
-/*MODIFICADES BEN MODIFICADES LES IMATGES*/
-.fitxa .align_right img{background:#FFFFFF; padding: 3px; border:1px solid #999999; margin: 0px;}
-.fitxa .align_left img{background:#FFFFFF; padding: 3px; border:1px solid #999999; margin: 0px;}
-.fitxa .separadorH{ margin-top:0px; border-bottom: 2px dotted #a29386; /* Especific 1 */}
-/***********************************/
-.separadorV{ 
-border-left: 1px dashed #e6e6e6;
-}
-
-
+	background: url(borderTopDiagonal.gif) repeat-x top;}
+.fletxa_fitxa{ clear: both; background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
+.fitxa .titular1{ margin: -0.2em 0 1.2em 0; padding:0.2em 0 0.5em 0; border:0px; border-bottom: 2px dotted #a29386; background:none;}
+.fitxa .titular2{ margin-bottom: 1em;}
+.fitxa img{background:#FFF; padding: 0 20px 10px 0; margin: 0;}
+.fitxa .align_right img{background:#FFF; padding: 3px; border:1px solid #999; margin: 0;}
+.fitxa .align_left img{background:#FFF; padding: 3px; border:1px solid #999; margin: 0;}
+.fitxa .separadorH{ margin-top:0; border-bottom: 2px dotted #a29386;}
+.separadorV{ border-left: 1px dashed #e6e6e6;}
+/*formulari*/
 .formulari input[type="checkbox"], input[type="radio"] {
 	border: 0px;
 	margin: 10px 0px 10px 0px;
 	vertical-align:middle;
-	background:#FFFFFF;
-}
+	background:#FFFFFF;}
 .formulari .radio {
 	border: 0px;
 	margin: 10px 0px 10px 0px;
 	vertical-align:middle;
-	background:#FFFFFF;
-}
-
+	background:#FFFFFF;}
 .formulari select{
 	background: url(degradat.jpg) repeat-x;
 	margin: 10px 0px 10px 0px;
@@ -294,15 +194,11 @@ border-left: 1px dashed #e6e6e6;
 	border-left:#a29386 5px solid;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	font-size:0.95em;	
-	padding-left: 2px;
-}
+	padding-left: 2px;}
 .formulari select > option{
 	border-bottom: 1px dotted #a29386;
 	background:white;
-	padding-left:7px;
-}
-
-
+	padding-left:7px;}
 .formulari .botoblau1{
 	background: url(botoblau1.gif) no-repeat center right;
 	padding: 2px 21px 2px 0px;
@@ -310,9 +206,7 @@ border-left: 1px dashed #e6e6e6;
 	border: 0px;
 	text-align: center;
 	height: 22px;
-	width: 100px;
-}
-
+	width: 100px;}
 .formulari .botoblau2{
 	background: url(botoblau2.gif) no-repeat center right;
 	padding: 2px 21px 2px 0px;
@@ -320,119 +214,88 @@ border-left: 1px dashed #e6e6e6;
 	border: 0px;
 	text-align: center;
 	height: 22px;
-	width: 100px;
-}
-
-
-/***********************************/
-
+	width: 100px;}
+/*errors i missatges gw3*/
 .avis{
 	background: url(avis.gif) no-repeat top left;
-	padding-top: 7em;
-}
+	padding-top: 7em;}
 .error{
 	background: url(error.gif) no-repeat top left;
-	padding-top: 7em;
-}
+	padding-top: 7em;}
 .avis_legal{
-	padding: 1em 0em 0em 0em;
-	
-}
+	padding: 1em 0 0 0;}
 .nota{
 	font-size: 0.9em;
-	margin-bottom: 10px;
-}
+	margin-bottom: 10px;}
 .textDestacat{
 	font-size: 1.1em;
 	line-height: 1.5em;
 	margin: 1em 0em 1em 0em;
 	padding:5px 10px 8px 10px;
-	background:#f8f7f5; /*color6*/
-}
+	background:#f8f7f5;}
 
 .taula img{ /*en principi no cal */
 	margin:0px;
-	float:none;
-}
+	float:none;}
 .imgBoto{
 	vertical-align:top;
 	margin:0px;
-	float:none;
-}
-
-
-	
+	float:none;}
 /*destacats genweb 1.5*/
 .destacatBandejat {
-background: #f8f7f5;
-border-top: 1px solid #996600;
-border-bottom: 12px solid #996600;
-padding: 5px 10px 7px 10px;
-margin: 20px;
-font-size: 1.6em;
-line-height: 1.2em;
-font-family:Arial, Helvetica, sans-serif;
-
-}
+	background: #f8f7f5;
+	border-top: 1px solid #960;
+	border-bottom: 12px solid #960;
+	padding: 5px 10px 7px 10px;
+	margin: 20px;
+	font-size: 1.6em;
+	line-height: 1.2em;
+	font-family:Arial, Helvetica, sans-serif;}
 .destacatQuadres {
 	background-image:url(fonsDestacat.gif);
-	background-color:#beb4ab; /*color4*/
+	background-color:#beb4ab;
 	margin: 20px;
-	padding: 4px;	
-}
+	padding: 4px;}
 .destacatQuadresDins {
-	background-color:#FFFFFF; /*sempre blanc*/
+	background-color:#FFF;
 	margin: 8px;
-	padding: 2px 4px 2px 4px ;
-	font-size: 0.95em;
-}
-
-
+	padding: 2px 4px;
+	font-size: 0.95em;}
 /*solucions IE*/
 .taulaRegistres .cap td{
 background:url(borderTopDiagonal.gif) repeat-x;
-	*border: 2px dotted #cccccc;
+	*border: 2px dotted #ccc;
 	*border-top:0px;
 	*padding-top:6px;
-	*background-color: #ffffff;
+	*background-color: #fff;
 	*color: #6b5c4f; 
-	*font-weight: bold;
-}
+	*font-weight: bold;}
 .taulaRegistres td {
 	*background-color: #f1efee;
-	*border:2px solid #ffffff;
+	*border:2px solid #fff;
 	*padding: 4px;
-	*text-align:center;
-}
+	*text-align:center;}
 .taulaRegistres table{
-	*border: 1px solid #cccccc;	
-	*border-bottom:3px solid #cccccc;	
-	*border-collapse:collapse;	
-}
+	*border: 1px solid #ccc;	
+	*border-bottom:3px solid #ccc;	
+	*border-collapse:collapse;}
 .calendari table{
-	*border: 1px solid #cccccc;	
-	*border-bottom:3px solid #cccccc;	
-	*border-collapse:collapse;	
-}
-
-/****************** IMATGE AMB TXT DAMUNT *************/
-.emmarcada{
-    text-align:center;
-    margin: 10px 0px;
-}
-
-.emmarcada img{
-    border: 1px solid #999999;
-    padding: 3px;
-}
-
-/***ajusta FCKeditor en edit*/
+	*border: 1px solid #ccc;	
+	*border-bottom:3px solid #ccc;	
+	*border-collapse:collapse;}
+/*ajusta FCKeditor en edit*/
 body#content {font-size:70%}
 body#content a {color:#007dcc; text-decoration:none;}
-
-/**** FCKT *****/
+/*imatge text damunt*/
+.emmarcada{
+    text-align:center;
+    margin: 10px 0;}
+.emmarcada img{
+    border: 1px solid #999;
+    padding: 3px;}
+/*FCKT*/
 #FCKTtableimatgetext
-	{ margin: 0px auto -45px auto; }
+	{margin: 0 auto -45px auto; }
 #FCKTdivimatgetext
 	{margin: 0px 5px 5px; 
 	padding: 5px; 
@@ -446,32 +309,30 @@ body#content a {color:#007dcc; text-decoration:none;}
 	background-color: white; 
 	opacity: 0.9; 
 	filter:alpha(opacity=90);}
-#FCKTdiv1imatgedamunttext
-	{margin: 0pt auto; 
+#FCKTdiv1imatgedamunttext {
+	margin: 0 auto; 
 	position: relative;}
-#FCKTdiv2imatgedamunttext
-	{margin: 0pt auto; 
-	padding: 0px; 
+#FCKTdiv2imatgedamunttext {
+	margin: 0 auto; 
+	padding: 0; 
 	overflow: hidden; 
 	position: absolute; 
-	top: 0px; 
+	top: 0; 
 	height: 100%; 
-	left: 0px; 
+	left: 0; 
 	width: 200px; 
 	font-size: 12px; 
 	font-family: Arial,Helvetica,Verdana,sans-serif; 
-	color: rgb(51, 51, 51); 
+	color: #333; 
 	background-color: white; 
 	opacity: 0.8; 
 	filter:alpha(opacity=80);}
-#FCKTdiv3imatgedamunttext
-	{padding:10px;}
+#FCKTdiv3imatgedamunttext{
+	padding:10px}
 #estilImgPhotoAlbum1 {width:128px; height:96px;}
 #estilImgPhotoAlbum2 {width:96px; height:128px;}
 #estilImgPhotoAlbum3 {width:128px; height:83px;}
-
-
-
+/*enllacos dreta*/
 table.enllacosDreta {width:100%;}
 table.enllacosDreta td {vertical-align:top;}
 table.enllacosDreta .columnaEnllacosDreta {width:200px;}
@@ -483,8 +344,7 @@ table.enllacosDreta li {
 	margin:0 0 0 35px;
 	padding:5px 5px 5px 0px !important;
 	line-height:1.5em;
-	border:0px !important;
-}
+	border:0px !important;}
 table.enllacosDreta ul {padding-bottom:20px;}
-table.enllacosDreta img {margin:0px 25px 10px 25px;border:1px solid #e6e6e6;}
-table.enllacosDreta .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #0076CC;}
+table.enllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
+table.enllacosDreta .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
