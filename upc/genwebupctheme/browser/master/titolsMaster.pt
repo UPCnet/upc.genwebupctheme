@@ -6,53 +6,92 @@
 <div class="clearAll_m">                         
     <div class="banerMasters">
     <span tal:condition="python: utils.getGWConfig().masterdoctorado==('Master')">
-        <a href="" tal:attributes="href string:${view/portal_url}/">
+        
         <!-- titol en catala -->
+        <a href="" tal:attributes="href python: 'http://mastersuniversitaris.upc.edu'">
             <img border="0" usemap="#MapaMasters"
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="title python: utils.getGWConfig().titolespai_ca;
                                 src string:${portal_url}/logo_masters_ca.jpg" />
- 
+ 		</a>
         <!-- titol en castella -->
+        <a href="" tal:attributes="href python: 'http://mastersuniversitarios.upc.edu'">
             <img border="0" usemap="#MapaMasters"
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="title python: utils.getGWConfig().titolespai_es;
                                 src string:${portal_url}/logo_masters_es.jpg" />
+		</a>                                
         <!-- titol en angles -->
+        <a href="" tal:attributes="href python: 'http://mastersdegrees.upc.edu'">
             <img border="0" usemap="#MapaMasters"             
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en;
                                 src string:${portal_url}/logo_masters_en.jpg" />
-                                
+		</a>                                
 			<map name="MapaMD" id="MapaMD">
             	<area shape="rect" coords="48,19,170,46" href="#masters" target="_blank" alt="Màsters Universitaris" />
     		</map>              
-		</a>
+		
 	</span>    		
-    		
-    <span tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">
-        <a href="" tal:attributes="href string:${view/portal_url}/">
+
+    <span tal:condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')">
+        
         <!-- titol en catala -->
-            <img width="172" height="65" border="0" usemap="#MapaMD"
+        <a href="" tal:attributes="href python: 'http://doctorat.upc.edu'">
+            <img border="0" usemap="#MapaMasters"
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="title python: utils.getGWConfig().titolespai_ca;
-                                src string:${portal_url}/logo_masters_doctorat_ca.jpg" />
+                                src string:${portal_url}/logo_doctorat_ca.jpg" />
+ 		</a>
         <!-- titol en castella -->
-            <img width="172" height="65" border="0" usemap="#MapaMD"
+        <a href="" tal:attributes="href python: 'http://doctorado.upc.edu'">
+            <img border="0" usemap="#MapaMasters"
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="title python: utils.getGWConfig().titolespai_es;
-                                src string:${portal_url}/logo_masters_doctorat_es.jpg" />
+                                src string:${portal_url}/logo_doctorat_es.jpg" />
+		</a>                                
         <!-- titol en angles -->
-            <img width="172" height="65" border="0" usemap="#MapaMD"             
+        <a href="" tal:attributes="href python: 'http://doctorate.upc.edu'">
+            <img border="0" usemap="#MapaMasters"             
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en;
-                                src string:${portal_url}/logo_masters_doctorat_en.jpg" />
-                                
+                                src string:${portal_url}/logo_doctorat_en.jpg" />
+		</a>                                
 			<map name="MapaMD" id="MapaMD">
-				<area shape="rect" coords="48,2,171,29" href="#masters" target="_blank" alt="màsters universitaris" /><area shape="rect" coords="59,32,169,63" href="#doctorat" target="_blank" alt="doctorat" />
+            	<area shape="rect" coords="48,19,170,46" href="#masters" target="_blank" alt="Màsters Universitaris" />
+    		</map>              
+		
+	</span>  
+    		
+    <span tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">
+        
+        <!-- titol en catala -->
+	    <img width="172" height="65" border="0" usemap="#MapaMD"
+	       tal:condition="python:utils.pref_lang()=='ca'"
+	       tal:attributes="title python: utils.getGWConfig().titolespai_ca;
+	                        src string:${portal_url}/logo_masters_doctorat_ca.jpg" />                      
+        <!-- titol en castella -->
+        <img width="172" height="65" border="0" usemap="#MapaMD"
+           tal:condition="python:utils.pref_lang()=='es'"
+           tal:attributes="title python: utils.getGWConfig().titolespai_es;
+                            src string:${portal_url}/logo_masters_doctorat_es.jpg" />                             
+        <!-- titol en angles -->
+        <img width="172" height="65" border="0" usemap="#MapaMD"             
+           tal:condition="python:utils.pref_lang()=='en'"
+           tal:attributes="title python: utils.getGWConfig().titolespai_en;
+                            src string:${portal_url}/logo_masters_doctorat_en.jpg" />
+                                                           
+			<map name="MapaMD" id="MapaMD" tal:condition="python:utils.pref_lang()=='ca'">
+				<area shape="rect" coords="48,2,171,29" href="http://mastersuniversitaris.upc.edu" target="_blank" alt="màsters universitaris" /><area shape="rect" coords="59,32,169,63" href="http://doctorat.upc.edu" target="_blank" alt="doctorat" />
 			</map>                            
-			
-	</a>
+
+			<map name="MapaMD" id="MapaMD" tal:condition="python:utils.pref_lang()=='es'">
+				<area shape="rect" coords="48,2,171,29" href="http://mastersuniversitarios.upc.edu" target="_blank" alt="màsters universitaris" /><area shape="rect" coords="59,32,169,63" href="http://doctorado.upc.edu" target="_blank" alt="doctorat" />
+			</map> 			
+
+			<map name="MapaMD" id="MapaMD" tal:condition="python:utils.pref_lang()=='en'">
+				<area shape="rect" coords="48,2,171,29" href="http://mastersdegrees.upc.edu" target="_blank" alt="màsters universitaris" /><area shape="rect" coords="59,32,169,63" href="http://doctorate.upc.edu" target="_blank" alt="doctorat" />
+			</map> 	
 	</span>     		
     		
     </div>                         
