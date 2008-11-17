@@ -234,7 +234,7 @@ class utilitats(BrowserView):
                     'beques_ing',               
                     'nota_pla_estudis_cat',     
                     'nota_pla_estudis_esp',     
-                    'nota_pla_estudis_ing',      
+                    'nota_pla_estudis_ing',                        
                     'orientacio_cat', 
                     'orientacio_esp', 
                     'orientacio_ing', 
@@ -447,6 +447,27 @@ class utilitats(BrowserView):
         dictKeys = ('doc_ca', 'doc_es', 'doc_en',)    
         
         return self.remapList2Dic(dictKeys,tmp)
+
+    def test(self, value, trueVal, falseVal):
+        """
+            helper method, mainly for setting html attributes.
+        """
+        if value:
+            return trueVal
+        else:
+            return falseVal
+
+    def select_plaEstudis(self, id_estudi):
+
+        db = self.connectDatabase()
+        c=db.cursor()     
+        c.execute("""SELECT upc_estudi.m_pla_estudis_cat, upc_estudi.m_pla_estudis_esp, upc_estudi.m_pla_estudis_ing FROM upc_estudi WHERE upc_estudi.id_estudi=%s""", (id_estudi,))
+        results = c.fetchone()
+        dictKeys = ('upc_estudi.m_pla_estudis_cat', 
+                    'upc_estudi.m_pla_estudis_esp',
+                    'upc_estudi.m_pla_estudis_ing',)
+           
+        return self.remapList2Dic(dictKeys,results)       
     
     def getSectionFromURL(self):
         context=self.context
