@@ -12,7 +12,7 @@ class HomePageView(BrowserView):
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
 
-        frontpageobj=portal_state.portal()['front-page']
+        frontpageobj=portal_state.portal().benvingut.getTranslation()
         page['title']=frontpageobj.Title()
         page['body']=frontpageobj.CookedBody()
 

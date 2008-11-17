@@ -13,7 +13,6 @@
          
 <div metal:fill-slot="main">
  <metal:main-macro define-macro="main">
-HOMEPAGE NEUTRE2
   <div id="contenidor">
     <div class="contingut">
       <div class="columnaDreta" tal:define="boxesdreta view/getColumn3">
