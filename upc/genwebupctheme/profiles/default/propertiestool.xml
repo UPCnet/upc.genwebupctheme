@@ -8,6 +8,10 @@
    <element value="Kupu"/>
    <element value="None"/>
   </property>
-  
- </object>
+ </object> 
+ 
+ <object name="fckeditor_properties" meta_type="Plone Property Sheet">
+  <property name="fck_default_skin" type="string">silver</property>
+ </object> 
+ 
 </object>
