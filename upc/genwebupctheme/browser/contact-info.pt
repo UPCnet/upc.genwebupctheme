@@ -70,11 +70,11 @@
 		
 		<!-- Planos y transportes -->
 		
-	  	<span tal:condition="python: not utils.getGWConfig().boolmaps" class="contacteSpan"><img src="googleMaps.gif"/></span>
-		<div tal:condition="python: not utils.getGWConfig().boolmaps">
-			<a 	tal:attributes="href python: '#'"
-				tal:content="python: 'Plànols i transports'"></a>
-		</div>
+<!--	  	<span tal:condition="python: not utils.getGWConfig().boolmaps" class="contacteSpan"><img src="googleMaps.gif"/></span>-->
+<!--		<div tal:condition="python: not utils.getGWConfig().boolmaps">-->
+<!--			<a 	tal:attributes="href python: '#'"-->
+<!--				tal:content="python: 'Plànols i transports'"></a>-->
+<!--		</div>-->
 			
 		<div class="iframeContacte" tal:condition="python: utils.getGWConfig().boolmaps">
 	  		<span class="contacteSpan">
