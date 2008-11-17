@@ -8,17 +8,16 @@ class Peu(ViewletBase):
 
     def bannersPeu(self):
         context = self.context
-        urltool = getToolByName(context, 'portal_url')
-        path_to_banners = urltool.getPortalPath() + '/' + 'logospeu'        
-        portal_catalog = getToolByName(self, 'portal_catalog')
-        banners = portal_catalog.searchResults(sort_on = 'getObjPositionInParent',
-                                               portal_type = 'Logos_Footer',
-                                               path = path_to_banners,
-                                               review_state='published',
-                                               sort_limit=5)[:5]
-        return banners
-    
-    
+        catalog = getToolByName(self, 'portal_catalog')
+        logos_container = catalog.searchResults(portal_type='Logos_Container',
+                                                 review_state='published')
+        if logos_container:
+            return catalog.searchResults(portal_type='Logos_Footer',
+                       review_state='published',
+                       path=logos_container[0].getPath(),
+                       sort_limit=5)[:5]
+        else:
+            return []
         
     def test(self, cond, a, b):
         if cond:
