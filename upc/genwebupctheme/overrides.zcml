@@ -60,7 +60,32 @@
         name="plone.htmlhead.title"
         manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
         class=".browser.viewlets.TitleViewlet"
+        layer=".browser.interfaces.IThemeSpecificUnitat"
         permission="zope2.View"
-        />         
+        />    
+        
+    <browser:viewlet
+        name="plone.htmlhead.title"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".browser.viewlets.TitleViewlet"
+        layer=".browser.interfaces.IThemeSpecificNeutre3"
+        permission="zope2.View"
+        />               
+        
+    <browser:viewlet
+        name="plone.htmlhead.title"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".browser.viewlets.TitleViewlet"
+        layer=".browser.interfaces.IThemeSpecificNeutre2"
+        permission="zope2.View"
+        />          
+
+    <browser:viewlet
+        name="plone.htmlhead.title"
+        manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+        class=".browser.viewlets.TitleViewlet"
+        layer=".browser.interfaces.IThemeSpecificMaster"
+        permission="zope2.View"
+        />  
 
 </configure>
