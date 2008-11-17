@@ -52,7 +52,7 @@
 							<!-- Preinscripcio -->
 			               <li class="navTreeItem visualNoMarker">
 			                <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/preinscripcio.php?lang='+utils.cambiaPrefijo(lang_code)"
+			                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/preinscripcio_'+utils.cambiaPrefijo(lang_code)+'.php'"
 			                   tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.recodifica(utils.getTextMaster('preinscripcio_open',lang_code)),utils.recodifica(utils.getTextMaster('preinscripcio_close',lang_code)))">preinscripcio</a>
 			
 			               </li>
@@ -70,7 +70,7 @@
 							<!-- Matricula -->
 			               <li class="navTreeItem visualNoMarker">
 			                <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/matricula.php?lang='+utils.cambiaPrefijo(lang_code)" 
+			                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/matricula_'+utils.cambiaPrefijo(lang_code)+'.php'" 
 			                   tal:content="python: utils.recodifica(utils.getTextMaster('matricula',lang_code))">matricula</a>
 			               </li>
 
