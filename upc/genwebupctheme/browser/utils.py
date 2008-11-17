@@ -377,54 +377,35 @@ class utilitats(BrowserView):
                     'ua.nom_ing',)
            
         return self.remapList2Dic(dictKeys,results)
-           
+
     def recuperaLinkUnitats(self, id_unitat, lang):
         
         tipus = self.select_tipus(id_unitat)
+        urltemp = 'x'
         
         for ii in tipus:
             if ii['sut.id id'] == 2:
                 subtipus = self.select_subTipus(id_unitat)
                 if subtipus['sub.id'] == 1:
-                    urltemp='mostrar_centre.php'
-                urltemp='mostrar_dep.php'
-            if ii['sut.id id'] == 4:
-                urltemp='mostrar_servgen.php'
-            
-            # en cas que el tipus sigui 6 (Entitats Vinculades)
+                    urltemp='21_12x'
+                if subtipus['sub.id'] == 2:
+                    urltemp='22'
+                if subtipus['sub.id'] == 3:
+                    urltemp='23'                    
             if ii['sut.id id'] == 6:
-                urltemp='mostrar_ens.php'
-            
-            # en cas que el tipus sigui 8 (Parcs tecnologics)
-            if ii['sut.id id'] == 8:
-                urltemp='mostrar_parc.php'
-            
-            # en cas que el tipus sigui 9 (Catedres)
-            if ii['sut.id id'] == 9:
-                urltemp='mostrar_cat.php'
-            
-            # en cas que el tipus sigui 12 (Centres Adscrits)
-            if ii['sut.id id'] == 12:
-                urltemp='mostrar_centre.php'
-            
-            # en cas que el tipus sigui 15 (Ens de recerca)
-            if ii['sut.id id'] == 15:
-                urltemp='mostrar_ens.php'
-            
-            # en cas que el tipus sigui 18 (Serveis)
-            if ii['sut.id id'] == 18:
-                urltemp='mostrar_serv.php'
+                urltemp='6'
 
-            if ii['sut.id id'] == 14:
-                return '#'
-            
-            # en cas que sigui UPC
-        if id_unitat=='910':
-            return 'http://www.upc.edu'
+            if ii['sut.id id'] == 9:
+                urltemp='9x'
+
+            if ii['sut.id id'] == 12:
+                urltemp='21_12x'
+
+            if ii['sut.id id'] == 15:
+                urltemp='15x'
   
         idioma = self.cambiaPrefijo(lang)
-        return 'http://www.upc.edu/unitats/fitxa_unitat.php?id_unitat=' + str(id_unitat) + '&tip=x&lang=' + idioma
-        ###return 'http://www.upc.edu/catala/bddirectori/consultar/' + urltemp + '?id=' + str(id_unitat) + '&idioma=' + idioma
+        return 'http://www.upc.edu/unitats/fitxa_unitat.php?id_unitat=' + str(id_unitat) + '&tip=' + urltemp + '&lang=' + idioma
 
     def select_participants(self, id_estudi):
 
