@@ -9,14 +9,13 @@ def setupVarious(context):
     import os,shutil
 
     #busquem l'ultima versio del fckeditor
-    buildout_folder = os.getcwd()
-    fckeditor_eggs = [dir for dir in os.listdir('%s/eggs/' % buildout_folder) if dir.upper().find('FCKEDITOR')>0]
-    fckeditor_eggs.sort()
-    fckeditor_path = fckeditor_eggs[-1]
+    import pdb;pdb.set_trace()
+    import upc.genwebupctheme
+    import Products.FCKeditor
     
-    #busquem on tenim el tema
-    genwebtheme_source = os.path.exists('%s/src/upc.genwebupctheme/' % buildout_folder) and 'src' or 'eggs'
+    fckeditor_path = os.path.dirname(Products.FCKeditor.__file__)
+    genwebtheme_path = os.path.dirname(upc.genwebupctheme.__file__)
     
     #sobreescrivim l'fckstrip
-    shutil.copyfile('%s/%s/upc.genwebupctheme/upc/genwebupctheme/skins/upc_genwebupctheme_custom_images/fck_strip.gif' % (buildout_folder,genwebtheme_source),
-                '%s/eggs/%s/Products/FCKeditor/skins/fckeditor/editor/skins/silver/fck_strip.gif' % (buildout_folder,fckeditor_path)) 
+    shutil.copyfile('%s/skins/upc_genwebupctheme_custom_images/fck_strip.gif' % (genwebtheme_path),
+                '%s/skins/fckeditor/editor/skins/silver/fck_strip.gif' % (fckeditor_path)) 
