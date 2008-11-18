@@ -13,7 +13,7 @@ class HomePageView(BrowserView):
                                         name=u'plone_portal_state')
 
         frontpageobj=portal_state.portal().benvingut.getTranslation()
-        page['title']=frontpageobj.Title()
+        #page['title']=frontpageobj.Title()
         page['body']=frontpageobj.CookedBody()
 
         return page

@@ -35,7 +35,7 @@
       <table><tr><td> 
       <!-- Columna Central -->
       <div tal:define="front view/getFrontPage">
-        <h1 tal:content="front/title">Titol principal</h1>
+        <!-- h1 tal:content="front/title">Titol principal</h1 -->
         <div tal:replace="structure front/body">Cos de la pagina principal</div>
       </div>
       <div tal:repeat="box boxescentre">
