@@ -95,7 +95,12 @@ class eines(ViewletBase):
         return self.auth() is not None and self.show()
 
     def login_form(self):
-        return '%s/login_form' % self.portal_state.portal_url()
+        url = self.portal_state.portal_url()
+        url_split = url.split(":")
+        if len(url_split)>0:
+            if url_split[0]=='http':
+                url = url.replace('http','https')  
+        return '%s/login_form' % url
 
     def mail_password_form(self):
         return '%s/mail_password_form' % self.portal_state.portal_url()
