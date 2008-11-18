@@ -7,9 +7,6 @@ def setupVarious(context):
     if context.readDataFile('upc.genwebupctheme_various.txt') is None:
         pass
     import os,shutil
-
-    #busquem l'ultima versio del fckeditor
-    import pdb;pdb.set_trace()
     import upc.genwebupctheme
     import Products.FCKeditor
     
