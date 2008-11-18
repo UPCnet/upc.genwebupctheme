@@ -32,6 +32,17 @@ def getGWConfig():
 
 class utilitats(BrowserView):
 
+    def llistaEstats(self):
+        """Retorna una llista dels estats dels workflows indicats
+        """
+        wtool = getToolByName(self,'portal_workflow')
+        workflows = ['genweb_simple','genweb_review']
+        estats = []
+        for w in workflows:
+            estats = estats + [s[0] for s in wtool.getWorkflowById(w).states.items()]
+    
+        return [w for w in wtool.listWFStatesByTitle() if w[0] in estats]
+        
     def portal_url(self):
         """ Funcion a que retorna el path 
         """
