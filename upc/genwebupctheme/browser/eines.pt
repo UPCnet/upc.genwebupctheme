@@ -67,18 +67,17 @@
 <!--  PERSONAL BAR  -->
 <div id="portal-personaltools-wrapper"
      tal:condition="not:view/show"
-     i18n:domain="plone">
+     i18n:domain="upc.genwebupc">
 
-  <h5 class="hiddenStructure" i18n:translate="heading_personal_tools">Personal tools</h5> 
+  <h5 class="hiddenStructure" i18n:domain="plone" i18n:translate="heading_personal_tools">Personal tools</h5> 
 
 <ul id="portal-personaltools"
     class="visualInline">
     
-    <b><span 
-             i18n:domain="upc.genwebupc"
-             i18n:translate="genweb-usuari">
-             Usuari:
-        </span>
+    <b>
+     <span i18n:translate="genweb-usuari_connectat">
+        User:
+     </span>
     </b>
    <tal:block>
        <li><a 
@@ -91,51 +90,49 @@
        </a></li>
    </tal:block>
    
-   
    &nbsp; &nbsp;
-    <b><span 
-             i18n:domain="upc.genwebupc"
-             i18n:translate="genweb-opcionspathbar">
-             Opcions:
-        </span>
+
+    <b>
+     <span i18n:translate="genweb-opcionspathbar">
+        Options:
+     </span>
     </b>
     <span>
     <span tal:condition="python: user.has_role(['Manager','Editor'])">
     <a  
-    i18n:domain="upc.genwebupc"
     i18n:translate="genweb-accesarrel" 
     tal:attributes="href string:${view/portal_url}/folder_contents">
     Carpeta arrel</a>
     |
     </span>
     <a 
-    i18n:translate="Preferences"
-    tal:attributes="href string:${view/portal_url}/plone_memberprefs_panel">
-    Preferències</a>
+    i18n:translate="genweb-preferencies"
+    tal:attributes="href string:${view/portal_url}/personalize_form">
+    Preferences</a>
      |
     <span tal:condition="python: user.has_role(['Manager','Editor'])">
     <a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC/formacio" target="_blank"
-       i18n:domain="upc.genwebupc"
        i18n:translate="genweb-ajuda">
-       Ajuda
+       Help
      </a>
      |
     </span>
     <span tal:condition="python: user.has_role(['Manager'])">
     <a 
+    i18n:domain="plone"
     i18n:translate="Site Setup" 
     tal:attributes="href string:${view/portal_url}/plone_control_panel">
-    Configuració del lloc</a>
+    Site Setup</a>
      |
     </span>
     <a  
+    i18n:domain="plone"
     i18n:translate="Undo" 
     tal:attributes="href string:${view/portal_url}/undo_form">
-    Desfés</a>
+    Undo</a>
     |
     <a  
     i18n:translate="genweb-logout"
-    i18n:domain="upc.genwebupc"
     tal:attributes="href string:${view/portal_url}/logout">
     Desconnecta</a>
    </span>
