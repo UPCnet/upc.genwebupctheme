@@ -75,6 +75,7 @@ class IgenWebControlPanelSchemaSabors(Interface):
     ambitdoctorat_ca = zope.schema.TextLine(title=_(u'Ambit doctorat - [catala]'),required=False)
     ambitdoctorat_es = zope.schema.TextLine(title=_(u'Ambit doctorat - [castella]'),required=False)
     ambitdoctorat_en = zope.schema.TextLine(title=_(u'Ambit doctorat - [angles]'),required=False)
+    admesos_visible = zope.schema.Bool(title=_(u'Admesos visible'),required=False)
     
 class IgenWebControlPanel(IgenWebControlPanelSchemaGeneral, ISkinsSchema, IgenWebControlPanelSchemaEspecifics, IgenWebControlPanelSchemaInformacio, IgenWebControlPanelSchemaSabors):
     """ Marker interface de la unio del schema especific de genweb i el dels skins estandar

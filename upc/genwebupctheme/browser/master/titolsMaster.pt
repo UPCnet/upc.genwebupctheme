@@ -136,8 +136,7 @@
 
         <span 	class="cursMaster"
         		i18n:domain="upc.genwebupc"
-        		i18n:translate="master_curso"
-        		tal:condition="python: lang_code!='en'">Curs</span> 
+        		i18n:translate="master_curso">Curs</span> 
         <span class="cursMaster" tal:content="python: utils.getGWConfig().titolcapsaleraMaster"> 2008/2009 </span>
 
     </div>

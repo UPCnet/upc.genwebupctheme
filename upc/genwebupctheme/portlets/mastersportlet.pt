@@ -58,15 +58,16 @@
 			               </li>
 
 							<!-- Llista d'admesos -->
-	<!--						<span tal:condition="python:admesos_visible">-->
-							<span tal:condition="python: True">
-				               <li class="navTreeItem visualNoMarker">
-				                <a class="navItem2 visualIconPadding" target='_blank'
-				                   tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/admesos.php?id_titulacio='+ str(utils.getGWConfig().idtitulacioMaster)" 
-				                   tal:content="python: utils.recodifica(utils.getTextMaster('llistat_admesos',lang_code))">llistat_admesos</a>
-				               </li>
-							</span>
-
+						<span tal:condition="python: utils.getGWConfig().admesos_visible">
+								<span tal:condition="python: True">
+					               <li class="navTreeItem visualNoMarker">
+					                <a class="navItem2 visualIconPadding" target='_blank'
+					                   tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/admesos.php?id_titulacio='+ str(utils.getGWConfig().idtitulacioMaster)" 
+					                   tal:content="python: utils.recodifica(utils.getTextMaster('llistat_admesos',lang_code))">llistat_admesos</a>
+					               </li>
+								</span>
+						</span>
+						
 							<!-- Matricula -->
 			               <li class="navTreeItem visualNoMarker">
 			                <a class="navItem2 visualIconPadding" target='_blank'
