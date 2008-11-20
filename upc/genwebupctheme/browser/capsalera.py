@@ -114,6 +114,15 @@ class eines(ViewletBase):
             name = '__ac_name'
         return name
 
+    def came_from(self):
+        current_page = self.context_state.current_page_url()
+        current_page_split = current_page.split(":")
+        if len(current_page_split)>0:
+            if current_page_split[0]=='http':
+                current_page = current_page.replace('http','https')
+        return current_page
+
+
     def login_password(self):
         auth = self.auth()
         passwd = None
