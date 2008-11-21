@@ -81,10 +81,12 @@ If you do not have an account here, head over to the
                 Forgot your password?
             </h3>
             
-            <p i18n:translate="genweb-si_heu_oblidat_la_contrasenya">
+            <p i18n:domain="upc.genwebupc" 
+               i18n:translate="genweb-si_heu_oblidat_la_contrasenya">
                 If you have forgotten your password,
                 <span i18n:name="click_here">
                     <a tal:attributes="href string:${portal_url}/canvidecontrasenya"
+                       i18n:domain="upc.genwebupc"
                        i18n:translate="genweb-per_recuperarla">click here to retrieve it</a></span>.
             </p>
             
