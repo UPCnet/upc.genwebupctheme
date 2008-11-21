@@ -1,0 +1,51 @@
+<tal:canvicontrassenya define="utils context/@@upc.genweb.utils;
+                              portal_url context/@@plone_portal_state/portal_url;">
+                              
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <script type="text/javascript" metal:fill-slot="javascript_head_slot">
+    </script>
+    <metal:block fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)"/>
+</head>
+
+<body>
+
+<div metal:fill-slot="main" >
+
+<h1 class="documentFirstHeading" i18n:translate="canvi_de_contrasenya">Canvi de contrasenya </h1>
+<div class="plain">
+
+<img tal:attributes="src python:'contrasenya_'+ utils.pref_lang() +'.gif'" alt="Contrasenya UPC" />
+<br /><br />
+
+<div class="titular2">
+Per entrar...
+</div>
+<p>
+Escriviu el vostre nom d'usuari amb un punt (nom.cognom) i <a href="https://gauss.upc.edu/gauss/canvicontrasenya/index.jsp" target="_blank"> canvieu la vostra contrasenya</a> si no ho heu fet des del 01/04/06.
+<br /><br /></p>
+
+<div class="titular2">
+Si heu oblidat la contrasenya...
+</div>
+<p>
+Entreu a la <a href="https://gauss.upc.edu/gauss/canvicontrasenya/contrasenyaOblidada.jsp" target="_blank"> gestió de contrasenyes</a> per recordar-la, modificar-la o canviar la vostra pregunta recordatori.
+<br /><br /></p>
+
+<div class="titular2">
+Si sou un nou usuari...
+</div>
+<p>
+Enregistreu-vos a la Intranet UPC per donar-vos d'<a href="https://gauss.upc.edu/gauss/canvicontrasenya/registreIntranet.jsp" target="_blank">alta de PDI/PAS</a>.
+</p>
+</div>
+</div>
+
+</body>
+</html>
+
+</tal:canvicontrassenya>

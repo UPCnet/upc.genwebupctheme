@@ -489,5 +489,13 @@
       template="sobre-el-web.pt"
       permission="zope2.View"
       />
+      
+    <browser:page
+      for="*"
+      name="canvidecontrasenya"
+      template="canvi-contrasenya.pt"
+      permission="zope2.View"
+      />      
+      
 
 </configure>

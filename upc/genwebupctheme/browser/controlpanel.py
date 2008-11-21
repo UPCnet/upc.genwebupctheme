@@ -36,9 +36,10 @@ class GenWebControlPanelUtility(Persistent):
     implements(IgenWebUtility)
     
     # de la pestanya general
-    columna1 = []
-    columna2 = []
-    columna3 = []
+    columna1 = ['Agenda', 'Noticies', 'Noticies_Actualitat']
+    columna2 = ['Agenda_Calendari', 'Actualitat_Noticies','Actualitat','Noticies']
+    columna3 = ['Agenda', 'Actualitat_Noticies','Banners','Enquesta']    
+    
     constrains = ['Document', 'Event', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage']
 
     # de la pestanya d'especifics

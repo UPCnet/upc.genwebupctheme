@@ -1,4 +1,9 @@
-<dl class="portlet portletPopoll"
+<tal:block tal:define="entries view/has_polls;
+                       toLocalizedTime nocall:context/@@plone/toLocalizedTime"
+           tal:condition="entries">
+
+<div id="portlet150"> </div>
+<div id="caixaPortlet"
     xmlns:tal="http://xml.zope.org/namespaces/tal"
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
@@ -6,23 +11,16 @@
     tal:condition="view/has_polls"
     i18n:domain="plonepopoll">
 
-  <tal:comment replace="nothing">
-    ##################
-    The Popoll portlet
-    ##################
-    $Id: popoll.pt 52252 2007-10-23 14:23:28Z zegor $
-  </tal:comment>
+  <div class="titolPortlet">
 
-  <dt class="portletHeader">
-    <span class="portletTopLeft"></span>
     <span i18n:translate="heading_portlet_polls"
 	  tal:condition="view/has_more_polls">Polls</span>
     <a tal:define="poll python:polls[0]"
        tal:condition="not:view/has_more_polls"
        tal:content="poll/title"
        tal:attributes="href poll/url">Poll title</a>
-    <span class="portletTopRight"></span>
-  </dt>
+
+  </div>
 
   <tal:poll tal:repeat="poll polls">
     <tal:block  tal:define="canVote poll/can_vote;">
@@ -112,5 +110,7 @@
       &nbsp,
       <span class="portletBottomRight"></span>
   </dd>
+</div>
+<div id="baix150"> </div>
 
-</dl>
+</tal:block>

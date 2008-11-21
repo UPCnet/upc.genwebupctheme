@@ -45,13 +45,15 @@ class TitleViewlet(ViewletBase):
         page_title = safe_unicode(self.page_title())
         
         lang= getToolByName(self, 'portal_languages').getPreferredLanguage()
-        
-        if lang == 'ca':
-            TITLE_GW= utils.getGWConfig().titolespai_ca
-        if lang == 'es':
-            TITLE_GW= utils.getGWConfig().titolespai_es
-        if lang == 'en':
-            TITLE_GW= utils.getGWConfig().titolespai_en
+        try:
+            if lang == 'ca':
+              TITLE_GW= utils.getGWConfig().titolespai_ca
+            if lang == 'es':
+              TITLE_GW= utils.getGWConfig().titolespai_es
+            if lang == 'en':
+              TITLE_GW= utils.getGWConfig().titolespai_en
+        except:
+            TITLE_GW = "Genweb UPC"
                                     
         if page_title == portal_title:
             return u"<title> %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('Universitat Politècnica de Catalunya')))

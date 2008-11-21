@@ -11,6 +11,7 @@ from zope.formlib import form
 from zope.interface import implements
 
 from plone.app.portlets.portlets import base
+
 from plone.memoize import ram
 from plone.memoize.compress import xhtml_compress
 from plone.memoize.instance import memoize
@@ -29,27 +30,67 @@ from plone.app.portlets import cache
 from plone.app.portlets.portlets.calendar import Renderer as calendar_render
 from plone.app.portlets.portlets.news import Renderer as news_render
 
-#productes addicionals amb salvaguardes
-try:
-    from Products.PlonePopoll.browser.popoll import Renderer as enquesta_render
-except ImportError:
-    HAS_POPOLL = False
-    enquesta_render = news_render
-else:
-    HAS_POPOLL = True
+from Products.PlonePopoll.browser.popoll import Renderer as enquesta_render
+from Products.PlonePopoll.browser.popoll import pollFeatures
 
 PLMF = MessageFactory('plonelocales')
 
 class enquesta(BrowserView,enquesta_render):
-	_template = ViewPageTemplateFile('enquesta.pt')
+    _template = ViewPageTemplateFile('enquesta.pt')
 
-	def __init__(self, context, request):
-		self.polls = self._polls()
-		return
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+        enquesta_render.update(self) 
+        self.polls = self._polls()
+        return
 
-	def __call__(self):
-		return xhtml_compress(self._template())
+    def __call__(self):
+        return xhtml_compress(self._template())
+    
+    def _polls(self):
+        # Note that we can't cache poll data since some of them are user dependant
+        context = aq_inner(self.context)
+        portal_catalog = getToolByName(context, 'portal_catalog')
+        plone_tool = getToolByName(context, 'plone_utils')
+        # I "love" the Plone 3 way to get the folderishness of a content :/
+        #globals_view = getMultiAdapter((self.context, self.request), name='plone')
+        #isStructuralFolder = globals_view.isStructuralFolder
+        selection_mode = 'newest'
+        number_of_polls = 3
 
+        if selection_mode == 'hidden':
+            results = []
+        elif selection_mode == 'newest':
+            results = portal_catalog.searchResults(
+                meta_type='PlonePopoll',
+                isEnabled=True,
+                sort_on='Date',
+                sort_order='reverse',
+                sort_limit=number_of_polls)[:number_of_polls]
+
+        elif selection_mode in ('branch', 'subbranches'):
+            folder = context
+            if not plone_tool.isStructuralFolder(context):
+                folder = context.getParentNode()
+            depth = (selection_mode == 'branch') and 1 or 1000
+            results = portal_catalog.searchResults(
+                meta_type='PlonePopoll',
+                path={'query': '/'.join(folder.getPhysicalPath()),'depth': depth},
+                isEnabled=True,
+                sort_on='Date',
+                sort_order='reverse',
+                sort_limit=number_of_polls)[:number_of_polls]
+
+        else:
+            # A specific poll
+            results = portal_catalog.searchResults(
+                meta_type='PlonePopoll',
+                UID=selection_mode)
+        if results:
+            return [pollFeatures(r.getObject()) for r in results]
+        return []
+   
 
 # Vistes de agenda i calendari
 class agenda(BrowserView,calendar_render):
