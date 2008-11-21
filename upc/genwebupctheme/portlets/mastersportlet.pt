@@ -3,7 +3,8 @@
 	tal:define="utils context/@@upc.genweb.utils;
 	            langtool nocall:context/portal_languages;
 	            lang_code langtool/getPreferredLanguage;
-	            url_actual python: request.ACTUAL_URL.split('/')[-1]">
+	            url_actual python: request.ACTUAL_URL.split('/')[-1];
+	            pURL python:context.portal_url()">
 	
 	<div tal:define="records python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
 		<dl class="portlet" id="portlet-navigation-tree">		
@@ -12,7 +13,7 @@
 		        
 					<li class="navTreeItem visualNoMarker" >
 		                <a tal:attributes="class python: utils.test(template.title=='Informacio General','navItem1 visualIconPadding navTreeCurrentItem','navItem1 visualIconPadding');
-		                                   href python: 'info-general'"
+		                                   href string:${pURL}/info-general"		                                  
 		                   tal:content="python: utils.recodifica(utils.getTextMaster('info_gral',lang_code))">InfoGeneral
 		                </a>
 		                					
@@ -23,7 +24,7 @@
 							<span tal:condition="python: records['m_competencies_'+utils.cambiaPrefijo(lang_code)] or records['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]">							
 				               <li class="navTreeItem visualNoMarker">
 					                <a tal:attributes="class python: utils.test(url_actual=='competencies','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-					                                   href python: 'competencies'"
+					                                   href string:${pURL}/competencies"
 					                   tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">Competències
 					                </a>
 				               </li>
@@ -43,7 +44,7 @@
 								<span tal:condition="python: records['acces_'+utils.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
 					               <li class="navTreeItem visualNoMarker">
 					                <a tal:attributes="class python: utils.test(url_actual=='requisits','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-					                                   href python: 'requisits'"
+					                                   href string:${pURL}/requisits"
 					                   tal:content="python:utils.recodifica(utils.getTextMaster('com_accedir',lang_code))">Com accedir-hi
 					                </a>
 					               </li>
