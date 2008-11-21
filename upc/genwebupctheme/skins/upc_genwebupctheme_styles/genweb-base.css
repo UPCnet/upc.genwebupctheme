@@ -10,7 +10,7 @@
 	margin-left:0;
 	padding:0;
 	width:auto;
-	float:none;}
+	float:right;}
 .columnaDreta {
 	float: right;}
 .columnaEsq #portlet200,	
@@ -30,31 +30,14 @@
 .columnaDreta #caixaPortlet {
 	width:148px !important;} 	
 /* GENERAL */
-body {
-	margin: 0; 
-	padding: 0; 
-	font-family: Verdana, Arial, Helvetica, sans-serif; 
-	color: #333; 
-	font-size: 0.7em; 
-	background:#fff url(fons.png) center repeat-y;}
-a:link, a:visited, a:active { 
-	color:#007dcc; 
-	text-decoration: none;}	
-a:hover { 
-	text-decoration: underline;} 
-a:focus { 
-	outline: none;}
-img {
-	border:0;} 
-.logo a:hover{
-	text-decoration: none;}
-ul { 
-	margin: 0; 
-	padding: 0;}	
-form { 
-	margin: 0; 
-	padding: 0; 
-	vertical-align: text-bottom;}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#fff url(fons.png) center repeat-y;}
+a:link, a:visited, a:active {color:#007dcc; text-decoration: none;}	
+a:hover {text-decoration: underline;} 
+a:focus {outline: none;}
+img {border:0;} 
+.logo a:hover{text-decoration: none;}
+ul {margin: 0;padding: 0;}	
+form { margin: 0; padding: 0; vertical-align: text-bottom;}
 blockquote {
 	border-left:15px solid #E0CECE;
 	border-bottom:1px solid #E0CECE;
@@ -119,7 +102,7 @@ input.text,
 input.password {
 	font-size: 11px;
 	padding: 0 1px 1px 1px;
-	border: 1px solid #FF6600; 
+	border: 1px solid #F60; 
 	background: url(fonsInput.gif) repeat-x;}
 input.radio {
 	margin-right:5px;   
@@ -141,7 +124,9 @@ input.button {
 	cursor: pointer;}
 .submitLogin {
 	width: 16px;
-	background: url(go.gif) no-repeat right bottom;}
+	background-repeat: no-repeat;
+	background-image: url(fletxes_strip.gif);
+	background-position: 0px -12px;}
 input.searchButton {
 	background:White url(botoFons_cerca.gif) no-repeat center left;
 	cursor:pointer;
@@ -238,15 +223,9 @@ h2.kssattr-atfieldname-title .formControls { font-size: 0.75em;}
 h1 > img {padding-right:3px;}
 h4 {font-size:125%;}
 /*baners*/
-#baner { 
-	text-align:right;
-	margin-bottom:10px;}
-#baner img {  
-	border: 1px solid #e6e6e6;  
-	margin-bottom:10px;}
-#baner img:hover {
-	border: 1px solid #0076cc;  
-	margin-bottom:10px;}
+#baner {text-align:right;margin-bottom:10px;}
+#baner img { border: 1px solid #e6e6e6;margin-bottom:10px;}
+#baner img:hover {border: 1px solid #0076cc;margin-bottom:10px;}
 #visual-portal-wrapper{
 	margin: 0px auto;
 	padding: 0;
@@ -268,28 +247,17 @@ h4 {font-size:125%;}
 	width:4px;
 	height:5px;
 	vertical-align:baseline;}
-.souA {
-	margin: 5px 0 40px 0; 
-	font-size:0.9em; 
-	padding-left:8px;
-	background:transparent url(fletxa4gris.png) no-repeat top left;}
 .connexio {margin-top:-15px;}
 .connexio a{margin-left:25px;}
 .connexio b{color:#4D4D4D;}
 
 /* PEU */
-#peu { 
-	clear:both;
-	float:none;
-	margin-bottom:0;}
-.visualClear{
-	margin-bottom:25px;
-	*margin-bottom:0;
-	_margin-bottom:5px;}
+#peu { clear:both;float:none;margin-bottom:0;}
+.visualClear{	margin-bottom:25px;	*margin-bottom:0; _margin-bottom:5px;}
 #signText {
 	line-height: 1.1em;
 	font-size: 0.9em;
-	border-top: 3px solid #ff6600;
+	border-top: 3px solid #f60;
 	padding-top: 4px;
 	margin-left: 25px;
 	float:left;
@@ -318,12 +286,14 @@ html*.sobreElWeb {
 	padding: 10px 0;}
 /*sou a*/
 #portal-breadcrumbs {
+	padding-left:8px;
+	background-repeat: no-repeat;
+	background-image: url(fletxes_strip.gif);
+	background-position: 0px 2px;
 	font-size:0.9em;
 	border-bottom: 0;
 	padding-right:0;
 	line-height:1em;
-	background:transparent url(fletxa4gris.png) no-repeat scroll left top;
-	padding-left:8px;
 	margin:5px 0 15px;
 	*margin:5px 0 15px;}
 #portal-breadcrumbs a {
@@ -701,9 +671,21 @@ dl.collapsedInlineCollapsible {
 .documentContent ol {
 	margin:0.5em 0 0 1.75em;
 	*margin:0.5em 0 0 2.15em;}
-.documentContent ul {
+/*.documentContent ul {
 	list-style-image:none;
-	list-style-type:none;}
+	list-style-type:none;}*/
+.documentContent ul li{
+list-style-image:url(quadret.gif);
+list-style-position:outside;
+list-style-type:square !important;
+margin-bottom:0.5em;
+}
+.documentContent ul {margin-left:1.5em;}
+.documentContent ul li ul {margin-left:2em;}
+.documentContent ul li ul li {list-style-image:url(quadretGris.gif);}
+ul.formTabs li{margin-left:0em;}
+.agendaContingut ul li, .columnaDreta ul li, .columnaEsq ul li {list-style-image:none;list-style-position:none;list-style-type:none !important;}
+.agendaContingut ul, .columnaDreta ul, .columnaEsq ul {margin-left:0em;}
 .columnaDreta #portlet200{
 	background:transparent url(bar150.gif) no-repeat scroll center top;
 	width:150px;}
@@ -1070,90 +1052,60 @@ dl dt span.summary {
 	padding-left:14px;
 	font-size:90%;}
 /*menu vistes*/
-#plone-contentmenu-display #folder_summary_view,
-#plone-contentmenu-display #folder_tabular_view,
-#plone-contentmenu-display #atct_album_view,
-#plone-contentmenu-display #folder_listing,
-#plone-contentmenu-display #homepage,
-#plone-contentmenu-display #folder_extended,
-#plone-contentmenu-display #atct_topic_view,
-#plone-contentmenu-display #board_view_global,
-#plone-contentmenu-display #board_view,
-#plone-contentmenu-display #poi_tracker_view {
+#folder_summary_view,
+#folder_tabular_view,
+#atct_album_view,
+#folder_listing,
+#homepage,
+#folder_extended,
+#atct_topic_view,
+#board_view_global,
+#board_view,
+#poi_tracker_view,
+#workflow-transition-reject, 
+#workflow-transition-hide, 
+#workflow-transition-close, 
+#workflow-transition-complete,
+#workflow-transition-retract,
+#workflow-transition-show,
+#workflow-transition-submit,
+#workflow-transition-publish, 
+#workflow-transition-open, 
+#workflow-transition-review,
+#workflow-transition-publishtointranet,
+#workflow-transition-retracttointranet,
+#workflow-transition-make_freeforall,
+#workflow-transition-make_moderated,
+#workflow-transition-make_private {
 	background-repeat: no-repeat;
-	background-position: 5px 1px;
+	background-image: url(actions_strip.gif);
 	padding-left:25px;}
-#plone-contentmenu-display #folder_summary_view{
-	background-image: url(vista_res.gif);}
-#plone-contentmenu-display #folder_tabular_view{
-	background-image: url(vista_tab.gif);}
-#plone-contentmenu-display #atct_album_view{
-	background-image: url(vista_img.gif);}
-#plone-contentmenu-display #folder_listing{
-	background-image: url(vista_est.gif);}
-#plone-contentmenu-display #homepage{
-	background-image: url(vista_ini.gif);}
-#plone-contentmenu-display #folder_extended {
-	background-image:url(vista_ext.gif);}
-#plone-contentmenu-display #atct_topic_view {
-	background-image:url(vista_col.gif);}
-#plone-contentmenu-display #board_view_global{
-	background-image:url(forum_global.gif);}
-#plone-contentmenu-display #board_view{
-	background-image:url(forum_taula.gif);}
-#plone-contentmenu-display #poi_tracker_view{
-	background-image:url(vista_iss.gif);}
+#folder_summary_view{background-position:5px -15px;}
+#folder_tabular_view{background-position:5px -31px;}
+#atct_album_view{background-position:5px -47px;}
+#folder_listing{background-position:5px -63px;}
+#homepage{background-position:5px 1px;}
+#folder_extended {background-position:5px -79px;}
+#atct_topic_view {background-position:5px -95px;}
+#board_view_global{background-position:5px -127px;}
+#board_view{background-position:5px -143px;}
+#poi_tracker_view{background-position:5px -111px;}
 /* menu estat*/
-#plone-contentmenu-workflow #workflow-transition-reject, 
-#plone-contentmenu-workflow #workflow-transition-hide, 
-#plone-contentmenu-workflow #workflow-transition-close, 
-#plone-contentmenu-workflow #workflow-transition-complete,
-#plone-contentmenu-workflow #workflow-transition-retract,
-#plone-contentmenu-workflow #workflow-transition-show,
-#plone-contentmenu-workflow #workflow-transition-submit,
-#plone-contentmenu-workflow #workflow-transition-publish, 
-#plone-contentmenu-workflow #workflow-transition-open, 
-#plone-contentmenu-workflow #workflow-transition-review,
-#plone-contentmenu-workflow #workflow-transition-publishtointranet,
-#plone-contentmenu-workflow #workflow-transition-retracttointranet,
-#plone-contentmenu-workflow #workflow-transition-make_freeforall,
-#plone-contentmenu-workflow #workflow-transition-make_moderated,
-#plone-contentmenu-workflow #workflow-transition-make_private {
-	background-repeat: no-repeat;
-	background-position: 5px 2px;
-	padding-left:25px;}
-#plone-contentmenu-workflow #workflow-transition-reject, 
-#plone-contentmenu-workflow #workflow-transition-hide, 
-#plone-contentmenu-workflow #workflow-transition-close, 
-#plone-contentmenu-workflow #workflow-transition-complete{
-	background-image: url(bullet_red.png);}
-#plone-contentmenu-workflow #workflow-transition-retract,
-#plone-contentmenu-workflow #workflow-transition-show{
-	background-image: url(bullet_green.png);}
-#plone-contentmenu-workflow #workflow-transition-submit {
-	background-image: url(bullet_orange.png);}
-#plone-contentmenu-workflow #workflow-transition-publish, 
-#plone-contentmenu-workflow #workflow-transition-open, 
-#plone-contentmenu-workflow #workflow-transition-review {
-	background-image: url(bullet_blue.png);}
-#plone-contentmenu-workflow #workflow-transition-publishtointranet,
-#plone-contentmenu-workflow #workflow-transition-retracttointranet {
-	background-image: url(bullet_purple.png);}
-/*propi del forum*/
-#plone-contentmenu-workflow #workflow-transition-make_freeforall{
-	background-image: url(forum_lliure.gif);}
-#plone-contentmenu-workflow #workflow-transition-make_moderated{
-	background-image: url(forum_moderat.gif);
-	background-repeat: no-repeat;}
-#plone-contentmenu-workflow #workflow-transition-make_private{
-	background-image: url(forum_privat.gif);
-	background-repeat: no-repeat;}
-
-
-
-
-
-
+#workflow-transition-reject, 
+#workflow-transition-hide, 
+#workflow-transition-close, 
+#workflow-transition-complete{background-position:5px -207px;}
+#workflow-transition-retract,
+#workflow-transition-show{background-position:5px -239px;}
+#workflow-transition-submit {background-position:5px -223px;}
+#workflow-transition-publish, 
+#workflow-transition-open, 
+#workflow-transition-review {background-position:5px -255px;}
+#workflow-transition-publishtointranet,
+#workflow-transition-retracttointranet {background-position:5px -271px;}
+#workflow-transition-make_freeforall{background-position:5px -159px;}
+#workflow-transition-make_moderated{background-position:5px -175px;}
+#workflow-transition-make_private{background-position:5px -191px;}
 
 
 
@@ -1179,6 +1131,8 @@ dl dt span.summary {
 #content .columnaDreta a[href^="https://devel.upcnet.es/neutre3"],{
 	background:transparent none repeat scroll 0 0;
 	padding:0;}
+#portal-personaltools li {
+	margin-left:0em;}
 #portal-personaltools b span{
 	color:#4d4d4d;}
 /** per mes preferencia que en els portlets */

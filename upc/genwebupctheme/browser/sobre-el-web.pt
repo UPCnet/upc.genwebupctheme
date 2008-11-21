@@ -19,19 +19,19 @@
 <!-- NOU -->
 <div class="llistatIndex">
 <ul>
-    <li><a href="accessibility-info#accessibilitat" i18n:translate="genweb-titol_accessibilitat">Accessibility</a></li>
-    <li><a href="accessibility-info#drets" i18n:translate="genweb-titol_drets">Intellectual property rights of this website</a> </li>
-    <li><a href="accessibility-info#avis" i18n:translate="genweb-titol_proteccio">Legal warning regarding personal data protection</a> </li>
-    <li><a href="accessibility-info#rss" i18n:translate="genweb-titol_rss">RSS headlines</a> </li>
+    <li><a href="sobre-el-web#accessibilitat" i18n:translate="genweb-titol_accessibilitat">Accessibility</a></li>
+    <li><a href="sobre-el-web#drets" i18n:translate="genweb-titol_drets">Intellectual property rights of this website</a> </li>
+    <li><a href="sobre-el-web#avis" i18n:translate="genweb-titol_proteccio">Legal warning regarding personal data protection</a> </li>
+    <li><a href="sobre-el-web#rss" i18n:translate="genweb-titol_rss">RSS headlines</a> </li>
 </ul>
-
 </div>
+
 <a name="accessibilitat"></a>
-<div class="titular1" i18n:translate="genweb-titol_accessibilitat">Accessibility</div>
+<h2 i18n:translate="genweb-titol_accessibilitat">Accessibility</h2>
 
     <p i18n:translate="text_size">Text size:</p>
 
-    <ul>
+    <ul><ul>
         <li><a href="javascript:setActiveStyleSheet('Large Text', 1);"
                                           title="Large Text"
                                           i18n:attributes="title title_large_text;"
@@ -44,9 +44,9 @@
                                           title="Small Text"
                                           i18n:attributes="title title_small_text;"
                                           i18n:translate="small_text">Small</a></li>
-    </ul>
+    </ul></ul>
                                               
-
+<br />
     <p>
     <span i18n:translate="description_accessibility_info1">
 This website has been generated with </span><a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC" target="_blank"><strong>GenWeb UPC</strong></a><span i18n:translate="description_accessibility_info2">, 
@@ -95,69 +95,6 @@ please contact the </span>
         <li i18n:translate="accesskey_accesskey_details"><code>0</code> &mdash; Access Key details</li>
     </ul>
 <p>&nbsp;</p>
-    <div class="titular3" i18n:translate="heading_access_keys_usage">Using access keys in different web browsers</div>
-
-    <dl>
-        <dt i18n:translate="label_ie5_win">Internet Explorer 5+ (Windows)</dt>
-        <dd i18n:translate="description_accesskey_ie5_win">
-        Hold down the <code>Alt</code> key, press the number or letter of the 
-        access key, release both keys then press <code>ENTER</code>.
-        </dd>
-
-        <dt i18n:translate="label_mozilla_win">Firefox, Mozilla and Netscape 7+ (Windows)</dt>
-        <dd i18n:translate="description_accesskey_mozilla_win">
-        Hold down the <code>Alt</code> key and press the number or letter of 
-        the access key.
-        </dd>
-
-        <dt i18n:translate="label_firefox2">Firefox 2 (Windows and Linux)</dt>
-        <dd i18n:translate="description_accesskey_firefox2">
-        Hold down the <code>Shift+Alt</code> key and press the number or letter of 
-        the access key.
-        </dd>
-
-        <dt i18n:translate="label_mozilla_mac">Firefox, Mozilla and Netscape 7+ (Mac OS X)</dt>
-        <dd i18n:translate="description_accesskey_mozilla_mac">
-        Hold down the <code>Ctrl</code> key and press the number or letter of 
-        the access key.
-        </dd>
-
-        <dt i18n:translate="label_safari_mac">Safari and Omniweb (Mac OS X)</dt>
-        <dd i18n:translate="description_accesskey_safari_mac">
-        Hold down the <code>Ctrl</code> key and press the number or letter of 
-        the access key.
-        </dd>
-
-        <dt i18n:translate="label_konqueror_linux">Konqueror (Linux)</dt>
-        <dd i18n:translate="description_accesskey_konqueror_linux">
-        Press and release the <code>Ctrl</code> key, then press the number or letter of 
-        the access key.
-        </dd>
-
-        <dt i18n:translate="label_ie4_win">Internet Explorer 4 (Windows)</dt>
-        <dd i18n:translate="description_accesskey_ie4_win">
-        Hold down the <code>Alt</code> key and press the number or letter of 
-        the access key.
-        </dd>
-        
-        <dt i18n:translate="label_ie5_mac">Internet Explorer 5+ (Mac)</dt>
-        <dd i18n:translate="description_accesskey_ie5_mac">
-        Hold down the <code>Ctrl</code> key and press the number or letter of 
-        the access key.
-        </dd>
-
-        <dt i18n:translate="label_ie4_mac">Internet Explorer 4.5 (Mac)</dt>
-        <dd i18n:translate="description_accesskey_ie4_mac">
-        Access keys are not supported, please use a different browser.
-        </dd>
-
-        <dt i18n:translate="label_netscape6_all">Netscape 6 and earlier (All platforms)</dt>
-        <dd i18n:translate="description_accesskey_netscape6_all">
-        Access keys are not supported, please use a different browser.
-        </dd>
-
-    </dl>
-
 
     <div class="titular2" i18n:translate="heading_accessibility_statement">Accessibility Statement</div>
 
@@ -191,7 +128,7 @@ please contact the </span>
 
 <!-- NOU -->
 <a name="drets"></a>
-    <div class="titular1" i18n:translate="genweb-titol_drets">Intellectual property rights of this website</div>
+    <h2 i18n:translate="genweb-titol_drets">Intellectual property rights of this website</h2>
     <p i18n:translate="genweb-info_drets">The texts, images, sounds, animation, 
         software and other content included in this website are the exclusive property of the Technical 
         University of Catalonia, or UPC.&nbsp;The UPC is suitably authorised to use the material published. 
@@ -200,7 +137,7 @@ please contact the </span>
     </p>
 
 <a name="avis"></a>
-    <div class="titular1" i18n:translate="genweb-titol_proteccio">Legal warning regarding personal data protection</div>
+    <h2 i18n:translate="genweb-titol_proteccio">Legal warning regarding personal data protection</h2>
     <p i18n:translate="genweb-info_proteccio">In accordance with legislation 15/1999 (13<sup>th</sup> December) concerning personal data 
         protection, any personal data that is collected by means of the online forms on this website 
         will be treated in a confidential manner and will be incorporated into the databases of the Technical 
@@ -214,7 +151,7 @@ please contact the </span>
     </p>
 
 <a name="rss"></a>
-    <div class="titular1" i18n:translate="genweb-titol_rss">RSS headlines</div>
+    <h2 i18n:translate="genweb-titol_rss">RSS headlines</h2>
     <p i18n:translate="genweb-info_rss">The RSS (abbreviation for <em><span>Really Simple Syndication</span></em>) is a news distribution channel 
         that facilitates access to the latest news of a Web site. It is a family of web feed formats used to 
         publish frequently updated digital content, such as blogs, news feeds or podcasts. <br />

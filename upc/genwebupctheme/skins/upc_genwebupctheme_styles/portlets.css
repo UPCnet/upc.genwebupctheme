@@ -727,7 +727,7 @@ background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;
 .newsImageContainer {
 float:right;
 margin:0 0 0.5em 1em;
-width:auto;
+clear:both;
 }
 .kssattr-atfieldname-imageCaption {
 text-align:center;

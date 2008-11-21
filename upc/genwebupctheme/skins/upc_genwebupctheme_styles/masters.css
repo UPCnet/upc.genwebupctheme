@@ -41,9 +41,9 @@
 .barraBranca_m{ 
 	width:958px;
 	padding: 0px;
-	font-weight:bold
-	font-size:1.1em
-	color:#B0D73C}
+	font-weight:bold;
+	font-size:1.1em;
+	color:#B0D73C;}
 .barraBranca_m table{
 	text-align:right !important;
 	vertical-align:bottom !important;
@@ -59,11 +59,12 @@
 	margin:5px 0 5px 0}
 .clearAll_m{
 	clear:both;
-	padding: 15px 0 30px 0}
+	padding: 0}
 /*columnes*/
 .columnaEsq {
 	display:none;}
 .columnaCentre {
+	float:none;
 	margin: 0;
 	width:auto}
 .columnaDreta div + .columnaCentre {width:100% !important;}
@@ -79,3 +80,20 @@ select[id="form.tipusNeutre2"] option {color: #999}
 .portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}	
+/*navegacio masters*/
+#navMasters .portletItem {
+	border-top:0px;
+	padding-bottom:0px;}
+#navMasters li {border-bottom:0px;}
+#navMasters .navTreeLevel2 li {
+	background:transparent url(quadret.gif) no-repeat scroll left 3px !important;
+	border-bottom:0px;
+	font-size:0.8em;
+	line-height:1.5em;
+	list-style-type:none;
+	margin:5px 1px;
+	padding:0 0 0 10px;}
+#navMasters dd, #navMasters dl {margin-bottom:-10px;}
+#navMasters 
+/*subpagines info masters*/
+.plain .taulaDades td.titular2 {text-align:right;}
