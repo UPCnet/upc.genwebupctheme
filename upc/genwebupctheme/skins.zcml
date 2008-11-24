@@ -5,8 +5,9 @@
    
    <!-- File System Directory Views registration -->
    <cmf:registerDirectory name="upc_genwebupctheme_custom_images" recursive="True" />
-   <cmf:registerDirectory name="upc_genwebupctheme_custom_templates" recursive="True" />
-   <cmf:registerDirectory name="upc_genwebupctheme_styles" recursive="True" />
+   <cmf:registerDirectory name="upc_genwebupctheme_custom_templates" />
+   <cmf:registerDirectory name="upc_genwebupctheme_styles" />
+  
 
    <!-- Note: This could also be done for all folders at once
         by replacing the previous lines with this one:
