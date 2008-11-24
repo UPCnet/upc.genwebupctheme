@@ -134,7 +134,7 @@ class utilitats(BrowserView):
         """      
         db = self.connectDatabase()
         c=db.cursor()     
-        c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
+        c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE codigo = %s""", (id,))
         results = c.fetchone()
         dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
            
