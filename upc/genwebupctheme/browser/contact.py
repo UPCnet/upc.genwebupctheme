@@ -50,8 +50,9 @@ class ContactForm(formbase.PageForm):
         titulo_web = portal.getProperty('title')
 
         str = "Heu rebut aquest correu perquè en/na"
+        str1 = "l'espai"
         subject = "Formulari Contacte"
-        message = "%s %s %s ha enviat comentaris sobre  Genweb que administreu a %s.\n\nEl missatge es:\n\n%s\n--\n%s" % (escape(safe_unicode(str)), escape(safe_unicode(data['nombre'])), escape(safe_unicode(data['destinatario'])), portal.absolute_url(),escape(safe_unicode(data['mensaje'])),from_name)
+        message = "%s %s %s ha\nenviat comentaris sobre %s Genweb que administreu a\n%s.\n\nEl missatge es:\n\n%s\n--\n%s" % (escape(safe_unicode(str)), escape(safe_unicode(data['nombre'])), escape(safe_unicode(data['destinatario'])),escape(safe_unicode(str1)), portal.absolute_url(),escape(safe_unicode(data['mensaje'])),from_name)
 
         mailhost.secureSend(message, to_address, to_address,
                             subject=subject, subtype='plain',
