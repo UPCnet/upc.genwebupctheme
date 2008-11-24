@@ -2,14 +2,11 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="upc.genwebupctheme">
-
+   
    <!-- File System Directory Views registration -->
-   <cmf:registerDirectory
-       name="upc_genwebupctheme_custom_images"/>
-   <cmf:registerDirectory
-       name="upc_genwebupctheme_custom_templates"/>
-   <cmf:registerDirectory
-       name="upc_genwebupctheme_styles"/>
+   <cmf:registerDirectory name="upc_genwebupctheme_custom_images" recursive="True" />
+   <cmf:registerDirectory name="upc_genwebupctheme_custom_templates" recursive="True" />
+   <cmf:registerDirectory name="upc_genwebupctheme_styles" recursive="True" />
 
    <!-- Note: This could also be done for all folders at once
         by replacing the previous lines with this one:
