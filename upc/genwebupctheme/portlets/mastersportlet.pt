@@ -59,7 +59,6 @@
 			               </li>
 
 							<!-- Llista d'admesos -->
-						<span tal:condition="python: utils.getGWConfig().admesos_visible">
 								<span tal:condition="python: True">
 					               <li class="navTreeItem visualNoMarker">
 					                <a class="navItem2 visualIconPadding" target='_blank'
@@ -67,8 +66,7 @@
 					                   tal:content="python: utils.recodifica(utils.getTextMaster('llistat_admesos',lang_code))">llistat_admesos</a>
 					               </li>
 								</span>
-						</span>
-						
+					
 							<!-- Matricula -->
 			               <li class="navTreeItem visualNoMarker">
 			                <a class="navItem2 visualIconPadding" target='_blank'

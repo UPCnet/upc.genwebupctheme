@@ -75,7 +75,6 @@ class IgenWebControlPanelSchemaSabors(Interface):
     ambitdoctorat_ca = zope.schema.TextLine(title=_(u'Ambit doctorat - [catala]'),required=False)
     ambitdoctorat_es = zope.schema.TextLine(title=_(u'Ambit doctorat - [castella]'),required=False)
     ambitdoctorat_en = zope.schema.TextLine(title=_(u'Ambit doctorat - [angles]'),required=False)
-    admesos_visible = zope.schema.Bool(title=_(u'Admesos visible'),required=False)
     
 class IgenWebControlPanel(IgenWebControlPanelSchemaGeneral, ISkinsSchema, IgenWebControlPanelSchemaEspecifics, IgenWebControlPanelSchemaInformacio, IgenWebControlPanelSchemaSabors):
     """ Marker interface de la unio del schema especific de genweb i el dels skins estandar
@@ -87,17 +86,17 @@ class IFormularioContact(Interface):
     """
     
     nombre = zope.schema.TextLine(title=_(u'Nom'),
-                                        description=_(u'Inseriu el vostre nom complet'),
+                                        description=_(u"Inseriu el vostre nom complet"),
                                         required=True)
                               
     destinatario = zope.schema.TextLine(title=_(u'A/e'),
-                                        description=_(u'Si us plau escriviu, la vostra adreça de correu  electrònic'),
+                                        description=_(u"Si us plau escriviu, la vostra adreça de correu  electrònic"),
                                         required=True)
  
     asunto = zope.schema.TextLine(title=_(u'Assumpte'),
-                                        description=_(u'Si us plau, entreu l\'assumpte del missatge que voleu enviar'),
+                                        description=_(u"Si us plau, entreu l\'assumpte del missatge que voleu enviar"),
                                         required=True)
 
     mensaje = zope.schema.Text(title=_(u'Missatge'),
-                                        description=_(u'Si us plau, escriviu el missatge que voleu enviar'),
+                                        description=_(u"Si us plau, escriviu el missatge que voleu enviar"),
                                         required=True)

@@ -79,7 +79,6 @@ class GenWebControlPanelUtility(Persistent):
     ambitdoctorat_ca = escape(safe_unicode('Àmbit doctorat - [català]'))
     ambitdoctorat_es = escape(safe_unicode('Àmbit doctorat - [castellà]'))
     ambitdoctorat_en = escape(safe_unicode('Àmbit doctorat - [english]'))
-    admesos_visible = True
     
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
@@ -370,14 +369,6 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
             return getGWConfig().ambitdoctorat_en
         def set(self, value):
             getGWConfig().ambitdoctorat_en = escape(safe_unicode(value))
-        return property(get, set)
-
-    @apply
-    def admesos_visible():
-        def get(self):
-            return getGWConfig().admesos_visible
-        def set(self, value):
-            getGWConfig().admesos_visible = value
         return property(get, set)
             
 general = FormFieldsets(ISkinsSchema['theme'], IgenWebControlPanelSchemaGeneral)
