@@ -37,13 +37,13 @@ def havePermissionAtRoot(self):
      pm= getToolByName(self, 'portal_membership')   
      tools = getMultiAdapter((self.context, self.request),
                                         name=u'plone_tools')       
-        
+     import pdb;pdb.set_trace()   
      proot = tools.url().getPortalObject()
      #proot=pu.getPortalObject()
      sm = getSecurityManager()
      user = pm.getAuthenticatedMember()
      
-     return sm.checkPermission('Modify portal content', proot) or user.has_role('WebMaster')    
+     return sm.checkPermission('Modify portal content', proot) or ('WebMaster' in user.getRoles())    
 
 class utilitats(BrowserView):
 
