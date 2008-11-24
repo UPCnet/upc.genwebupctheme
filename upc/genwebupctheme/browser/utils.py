@@ -105,6 +105,16 @@ class utilitats(BrowserView):
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
 
+    def verificaIdCodigo(self, id):
+        try:
+            db = self.connectDatabase()
+            c=db.cursor()     
+            c.execute("""SELECT codigo FROM upc_unitat WHERE codigo = %s""", (id,))
+            results = c.fetchone()
+        except:
+            results = None
+        return results
+
     def verificaIdUnitat(self, id):
         try:
             db = self.connectDatabase()
