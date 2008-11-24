@@ -21,6 +21,8 @@ from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
 from Products.LinguaPlone.interfaces import ITranslatable
 from plone.app.i18n.locales.browser.selector import LanguageSelector
 
+from upc.genwebupctheme.browser.utils import havePermissionAtRoot
+
 class capsaleraSuperior(ViewletBase):
     render = ViewPageTemplateFile('capsaleraSuperior.pt')
 
@@ -188,6 +190,9 @@ class eines(ViewletBase):
             else:
                 self.user_name = userid
 
+    def canSeeToolLink(self):
+        """Torna la funcio dels utils"""
+        return havePermissionAtRoot(self)
 
 class einesNeutre2(eines):
     render = ViewPageTemplateFile('neutre2/einesNeutre2.pt')    

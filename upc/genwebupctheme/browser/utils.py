@@ -15,6 +15,8 @@ from upc.genwebupctheme.browser.interfaces import IgenWebUtility
 from Products.ATContentTypes.interface.folder import IATFolder
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 
+from AccessControl import getSecurityManager
+
 import MySQLdb
 
 PLMF = MessageFactory('plonelocales')
@@ -28,7 +30,20 @@ def getGWConfig():
     except: 
         gwconfig = None
     return gwconfig
-    
+
+def havePermissionAtRoot(self):
+     """Funcio que retorna si es Editor a l'arrel"""
+     
+     pm= getToolByName(self, 'portal_membership')   
+     tools = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_tools')       
+        
+     proot = tools.url().getPortalObject()
+     #proot=pu.getPortalObject()
+     sm = getSecurityManager()
+     user = pm.getAuthenticatedMember()
+     
+     return sm.checkPermission('Modify portal content', proot) or user.has_role('WebMaster')    
 
 class utilitats(BrowserView):
 

@@ -25,7 +25,7 @@
                        tal:attributes="for ac_name"
                        i18n:translate="nom_usuari"
                        i18n:domain="upc.genwebupc">
-                       Usuari</label>
+                       User</label>
                 
                 <input class="text"
                        type="text"
@@ -98,11 +98,11 @@
      </span>
     </b>
     <span>
-    <span tal:condition="python: user.has_role(['Manager','Editor'])">
+    <span tal:condition="view/canSeeToolLink">
     <a  
     i18n:translate="genweb-accesarrel" 
     tal:attributes="href string:${view/portal_url}/folder_contents">
-    Carpeta arrel</a>
+    Root folder</a>
     |
     </span>
     <a 
@@ -110,7 +110,7 @@
     tal:attributes="href string:${view/portal_url}/personalize_form">
     Preferences</a>
      |
-    <span tal:condition="python: user.has_role(['Manager','Editor'])">
+    <span>
     <a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC/formacio" target="_blank"
        i18n:translate="genweb-ajuda">
        Help
@@ -122,19 +122,21 @@
     i18n:domain="plone"
     i18n:translate="Site Setup" 
     tal:attributes="href string:${view/portal_url}/plone_control_panel">
-    Site Setup</a>
+    Site setup</a>
      |
     </span>
+    <span tal:condition="view/canSeeToolLink">
     <a  
     i18n:domain="plone"
     i18n:translate="Undo" 
     tal:attributes="href string:${view/portal_url}/undo_form">
-    Undo</a>
+    Undo</a>    
     |
+    </span>
     <a  
     i18n:translate="genweb-logout"
     tal:attributes="href string:${view/portal_url}/logout">
-    Desconnecta</a>
+    Log out</a>
    </span>
 
 </ul>
