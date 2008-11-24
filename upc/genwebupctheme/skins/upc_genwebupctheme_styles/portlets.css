@@ -424,6 +424,7 @@ list-style-position:outside;
 list-style-type:none;
 margin:1em 0pt;
 font-weight:normal;
+margin-left: 0px !important;
 }
 ul.configlets li, ul#portal-sitemap li{
 font-family: Verdana, Arial, Helvetica, sans-serif;
@@ -433,6 +434,10 @@ line-height:2em;
 list-style-type:none;
 margin:0px;
 padding:5px 0px 5px 20px;
+list-style-image:none !important;
+list-style-position:outside;
+list-style-type:none !important;
+margin-bottom:0.5em;
 }
 ul.configlets li:first-child, ul#portal-sitemap li:first-child{
 border-top:1px dashed #333333;
@@ -454,6 +459,8 @@ border-top:0px;
 .portletItem strong{
 font-size:14px;
 font-family:Arial,Helvetica,sans-serif;
+padding-top:5px;
+display:block;
 }
 dd {/*base.css (line 110)*/
 line-height:1.5em;
@@ -735,7 +742,8 @@ font-size:90%;
 }
 .template-plonepopoll_view form.group .documentDescription{padding-top:25px; font-size:1.2em;}
 .template-plonepopoll_view form.group fieldset{margin-top:0px !important;}
-.template-plonepopoll_view form.group fieldset ul li{font-weight:bold; color:#666666;}
+.template-plonepopoll_view form.group fieldset ul {margin-left:0px;}
+.template-plonepopoll_view form.group fieldset ul li{font-weight:bold; color:#666666;list-style-image:none;list-style-type:none;margin:0px;}
 .template-plonepopoll_view form.group fieldset ul li div{padding:5px; border:1px dotted #e6e6e6; font-weight:normal !important;margin-bottom:10px;}
 
 .collage-header {background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;}
@@ -946,7 +954,8 @@ width:auto;}
 	background: transparent;
 	font-family:Arial,Helvetica,Verdana,sans-serif;
 	font-size:14px;
-	width:100%;}
+	width:100%;
+	*display:inline;}
 #clear-space-before-relatedItemBox{
 	border-bottom:5px solid #E6E6E6;
 	margin-top: 25px;
@@ -1150,3 +1159,19 @@ body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta,
 body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta:hover, body.template-base_view div#archetypes-fieldname-agenda div#parent-fieldname-agenda:hover  {margin-top:10px; border:1px SOLID #666666; margin-bottom:20px; }
 form#kss-inlineform-agenda div#archetypes-fieldname-agenda, form#kss-inlineform-agenda div.formControls, form#kss-inlineform-acta div#archetypes-fieldname-acta, form#kss-inlineform-acta div.formControls {font-size:112% !important; border-top:0px !important;}
 body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
+
+/*enquesta a la home*/
+.columnaDreta fieldset {margin:0px!important; padding:5px;background:none;border:0px;border-bottom:1px dashed #999;}
+.columnaDreta form, .columnaDreta h5 {margin:0px; padding:0px !important;border:0px !important;}
+.columnaDreta form .context {float:right;margin-top:10px;}
+.columnaDreta .portletItem {border:0px;}
+.columnaDreta .portletItem {margin:0px!important; padding:0px;display:inline;}
+.columnaDreta .portletFooter {display:none;}
+.columnaDreta .caixaPortlet {margin-left:0px!important;}
+.columnaDreta fieldset legend {display:none; font-size:100%;padding:0px !important;}
+.columnaDreta fieldset li {font-size:0.9em;}
+.columnaDreta fieldset strong {font-weight:normal; font-size:1.1em;}
+.columnaDreta form span {font-weight:0.9em!important;font-weight:normal;}
+.columnaDreta input {margin-bottom:0px!important;}
+.columnaDreta label {vertical-align:bottom;}
+/*.columnaDreta form div {padding-bottom:5px;margin-bottom:5px; border-bottom:1px dashed #999;}*/

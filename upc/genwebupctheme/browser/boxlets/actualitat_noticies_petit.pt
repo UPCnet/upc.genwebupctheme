@@ -8,30 +8,15 @@
 		
 	    <div id="caixaPortlet">
 	    
-	    	<div class="titolPortlet"> Actualitat UPC </div>
-	    	
-	        <ul>
-		        <li tal:repeat="entry entries">
-		            <a href=""
-		                tal:attributes="title entry/summary | nothing;
-		                           href entry/url | nothing" target=newwindow>
-		                <span tal:replace="entry/summary | nothing">
-		                Notícies RSS
-		                </span>
-		            </a>
-		        </li>
-	        </ul>
-	        
-	        <div class="titolPortlet separadorPortlet">
-
+	    	<div class="titolPortlet">
 	           <div class="icoRSS">
           	          <a href=""
              	          tal:define="utils context/@@upc.genweb.utils"
              	          tal:attributes="href string:${utils/portal_url}news/aggregator/RSS">RSS <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
          	           </a>
 		      	  </div> Notícies
-	        </div>
-	        
+	    	</div>
+	    	
 	        <ul>
 		        <li tal:repeat="obj view/published_news_items">
 		            <a href=""
@@ -56,6 +41,20 @@
 	               More news&hellip;
 	            </a>
 	        </div>
+
+	        
+	        <div class="titolPortlet separadorPortlet">Actualitat UPC</div>
+	        <ul>
+		        <li tal:repeat="entry entries">
+		            <a href=""
+		                tal:attributes="title entry/summary | nothing;
+		                           href entry/url | nothing" target=newwindow>
+		                <span tal:replace="entry/summary | nothing">
+		                Notícies RSS
+		                </span>
+		            </a>
+		        </li>
+	        </ul>	        
 	        
 	    </div> 
 	    <div id="baix200"> </div>

@@ -4,7 +4,7 @@
 	background-color:#F60;
 	font-size:0.05em;}
 .logo {
-	margin:25px 0 0 25px;
+	margin:30px 0 0 25px;
 	min-width:160px;
 	float:left;
 	*margin:35px 0 0 25px;
@@ -16,7 +16,7 @@
 	float: left}
 .titolWeb {
 	text-align:center;
-	margin:10px 180px}
+	margin:20px 180px}
 .imatgeCapcalera{
 	width:958px;
 	height:95px;
@@ -122,4 +122,4 @@
 	margin-right: 5px}
 /*columnes*/
 .columnaCentre {
-	width:555px}
+	width:555px;}

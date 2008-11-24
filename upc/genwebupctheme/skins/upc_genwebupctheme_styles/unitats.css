@@ -1,5 +1,6 @@
 .titolWeb {
-	margin:0 180px}
+	text-align:center;
+	margin:20px 180px}
 .imatgeCapcaleraUnitat{
 	background: transparent url(imatgeUnitat.jpg) no-repeat scroll left top;
 	min-height:129px;

@@ -12,13 +12,13 @@
 	margin-top: -31px}  
 .logo_m{
 	float:left;
-	margin:10px 0 0 25px;
+	margin:13px 0 0 25px;
 	min-width:160px}
 .logo_m img {
 	float:left}
 .banerMasters{
 	float:right;
-	padding-top:13px}
+	padding-top:5px}
 .titolWeb_m{
 	text-align:left;
 	margin-left:255px}
@@ -59,7 +59,7 @@
 	margin:5px 0 5px 0}
 .clearAll_m{
 	clear:both;
-	padding: 0}
+	padding: 15px 0 30px 0}
 /*columnes*/
 .columnaEsq {
 	display:none;}
@@ -77,7 +77,7 @@ label[for="form.columna2"] + span {display:none}
 select[id="form.tipusNeutre2"] {background:#e6e6e6}
 select[id="form.tipusNeutre2"] option {color: #999}
 /*flota tapa navigation*/	
-.portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none}
+.portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none;}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}	
 /*navegacio masters*/
@@ -85,15 +85,35 @@ select[id="form.tipusNeutre2"] option {color: #999}
 	border-top:0px;
 	padding-bottom:0px;}
 #navMasters li {border-bottom:0px;}
-#navMasters .navTreeLevel2 li {
+#navMasters ul.navTreeLevel2 li {
 	background:transparent url(quadret.gif) no-repeat scroll left 3px !important;
 	border-bottom:0px;
 	font-size:0.8em;
-	line-height:1.5em;
-	list-style-type:none;
 	margin:5px 1px;
-	padding:0 0 0 10px;}
-#navMasters dd, #navMasters dl {margin-bottom:-10px;}
-#navMasters 
+	padding:0px 0px 0px 10px;
+	line-height:1.5em;
+	list-style-type:none;}
+
+/*#navMasters #portlet-navigation-tree, #navMasters #portlet-navigation-tree .portletItem {margin-bottom:0px !important;}*/
+#portal-column-one .portletNavigationTree, #portal-column-one .portletNavigationTree ul {margin-top:0px;}
+#portal-column-one #navMasters #portlet-navigation-tree, #portal-column-one #navMasters #portlet-navigation-tree .portletItem {margin-bottom:0px;_margin-bottom:-10px;}
+/*corregeix navegacio sota navmasters*/
+
 /*subpagines info masters*/
-.plain .taulaDades td.titular2 {text-align:right;}
+.plain {margin-top:20px;line-height:1.5em;}
+.plain strong {padding-top:20px; display:block;}
+.plain br {margin-top:-20px;}
+.plain .separadorH {border-bottom:2px dotted #e6e6e6;}
+.plain .taulaDades td {padding:5px; vertical-align:top;}
+.plain .taulaDades td.titular2 {text-align:right;width:120px;}
+.plain .taulaDades td+td {font-weight:bold;font-size:1.1em;color:#666;}
+.plain .taulaDades td.titular2+td {font-weight:normal;}
+
+
+#navMasters .navTreeCurrentNode {
+background:#F8F8F8 url(fletxaGo.gif) no-repeat scroll left top !important;
+line-height:1.5em;
+list-style-type:none;
+margin:0;
+padding:5px 0 5px 20px;
+}

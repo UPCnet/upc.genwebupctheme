@@ -26,12 +26,13 @@
     <tal:block  tal:define="canVote poll/can_vote;">
       <dd class="portletItem">
 	<fieldset tal:omit-tag="not:view/has_more_polls">
+<!--
 	  <legend tal:condition="view/has_more_polls">
 	    <a href="" tal:content="poll/title"
 	       tal:attributes="href poll/url">The title</a>
 	  </legend>
-
-	  <h5 tal:content="poll/question">Question</h5>
+-->
+	  <a href="" tal:attributes="href poll/url"><h5 tal:content="poll/question">Question</h5></a>
 
 	  <form action="vote" name="results" method="post" enctype="multipart/form-data"
 	        tal:define="portal_url view/portal_url"
@@ -49,7 +50,7 @@
 				  id string:popoll_cb_${repeat/poll/index}_${repeat/choice/index};
 				  type poll/input_widget">
 	      <label tal:attributes="for string:popoll_cb_${repeat/poll/index}_${repeat/choice/index}"
-	             tal:content="python:choice[0]" style="font-weight: normal">Choice</label>
+	             tal:content="python:choice[0]">Choice</label>
 		<tal:results tal:condition="poll/show_results">
 		  <div
 		      tal:define="choice_count python: choice[1];

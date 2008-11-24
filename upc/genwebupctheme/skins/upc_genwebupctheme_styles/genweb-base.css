@@ -677,7 +677,7 @@ dl.collapsedInlineCollapsible {
 .documentContent ul li{
 list-style-image:url(quadret.gif);
 list-style-position:outside;
-list-style-type:square !important;
+list-style-type:square;/*he tret:  !important*/
 margin-bottom:0.5em;
 }
 .documentContent ul {margin-left:1.5em;}
