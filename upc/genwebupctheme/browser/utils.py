@@ -37,7 +37,6 @@ def havePermissionAtRoot(self):
      pm= getToolByName(self, 'portal_membership')   
      tools = getMultiAdapter((self.context, self.request),
                                         name=u'plone_tools')       
-     import pdb;pdb.set_trace()   
      proot = tools.url().getPortalObject()
      #proot=pu.getPortalObject()
      sm = getSecurityManager()
