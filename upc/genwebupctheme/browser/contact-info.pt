@@ -18,7 +18,7 @@
 			              			global utils context/@@upc.genweb.utils;">
 	
 	
-	    <tal:block tal:condition="python: utils.verificaIdCodigo(utils.getGWConfig().contacteid)">
+	    <tal:block tal:condition="python: utils.verificaIdUnitat(utils.getGWConfig().contacteid)">
 	
 		<div tal:replace="structure provider:plone.abovecontenttitle" />
 
