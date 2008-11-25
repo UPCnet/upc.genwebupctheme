@@ -67,7 +67,7 @@
   <viewlet name="upc.genweb.titolsNeutre2"/>
   <viewlet name="upc.genweb.logoNeutre2"/>
   <viewlet name="upc.genweb.barraIdiomesNeutre2"/>
-  <viewlet name="upc.genweb.einesNeutre2"/>
+  <viewlet name="upc.genweb.eines"/>
  </order>
  <order manager="plone.portaltop" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.header"/>

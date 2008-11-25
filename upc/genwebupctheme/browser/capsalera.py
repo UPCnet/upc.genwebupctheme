@@ -193,6 +193,3 @@ class eines(ViewletBase):
     def canSeeToolLink(self):
         """Torna la funcio dels utils"""
         return havePermissionAtRoot(self)
-
-class einesNeutre2(eines):
-    render = ViewPageTemplateFile('neutre2/einesNeutre2.pt')    
