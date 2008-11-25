@@ -1175,3 +1175,6 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 .columnaDreta input {margin-bottom:0px!important;}
 .columnaDreta label {vertical-align:bottom;}
 /*.columnaDreta form div {padding-bottom:5px;margin-bottom:5px; border-bottom:1px dashed #999;}*/
+
+/*formulari thanks page*/
+.template-fg_thankspage_view blockquote {border:1px solid #e6e6e6; border-left:15px solid #e6e6e6;padding:10px;margin:10px 0;}

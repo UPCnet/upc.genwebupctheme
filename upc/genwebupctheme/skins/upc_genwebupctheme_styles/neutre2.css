@@ -12,7 +12,8 @@
 .logo_n2 {
 	float:left;
 	min-width:200px;
-	margin: 10px 0px 0px 25px}
+	margin: 10px 0px 0px 25px;
+	*margin: 30px 0px 0px 25px;}
 .logo_n2 img {float:left}
 .clearAll_n2{
 	clear:both;

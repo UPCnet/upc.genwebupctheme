@@ -87,7 +87,8 @@ label {
 	color:#c00;}
 textarea {
 	padding:1px 3px;
-	font-family:Verdana, Arial, Helvetica, sans-serif;}	
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	width:98%;}	
 [type="submit"], button {
 	background:url(botoFons.gif) repeat-x center center;
 	border:1px solid #006DA3;
@@ -867,7 +868,7 @@ img.sortdirection {
 	font-variant:small-caps;
 	padding:0pt 0pt 1pt 8px;}
 /* esdeveniments */
-dl dd {margin-left:20px;}
+dl dd {margin-left:0px;}
 #parent-fieldname-text {
 	margin: 15px 0 25px 0;}
 .eventDetails {
@@ -1009,6 +1010,9 @@ h1 span.discreet {
 	background: transparent url(plus.gif) no-repeat scroll left 4px;
 	padding: 0 0 0 15px;
 	margin-top:15px;}
+/*elimina img vistes*/
+.collage-item dl dt span img, .collage-item tr td span img, .template-atct_album_view #content dl dt span img, .template-folder_summary_view #content dl dt span img, .template-folder_tabular_view #content tr td span img, .template-atct_topic_view #content dl dt span img{ float:right; display:none;}
+
 /* vista estandard */
 dl dt span.summary {
 	background:transparent !important;
@@ -1157,6 +1161,7 @@ table.vertical .summary {color: #333 !important;}
 .collage-item dl dd{
 	margin-left:10px;
 	margin-right:25px;}
+.template-folder_summary_view #content dl dt span a {padding-left:15px; background: url(quadret.gif) no-repeat 0px 0px !important;}
 /** per si de cas hi ha interferencies */
 a,a:active,a:link,a:visited{color:#0077cc;text-decoration:none;}
 a:hover{color:#0077cc;text-decoration:underline;}
@@ -1257,7 +1262,8 @@ dd.portletItem .navTreeItem a:hover {
 .listingBar a {
 	margin: 0 3px;}
 .template-atct_topic_view .listing {font-size:1em;}
-.template-atct_topic_view .listing td img{padding-right:10px;}
+.template-atct_topic_view .listing td img{display:none;}
+.template-atct_topic_view #content dl dt span a {background: url(quadret.gif) no-repeat 0 0 !important; padding-left:15px;}
 .template-atct_topic_view .listing th img{padding-left:5px;}
 .template-atct_album_view #content dl {
 	background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
