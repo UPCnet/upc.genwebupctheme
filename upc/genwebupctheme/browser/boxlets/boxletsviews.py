@@ -142,15 +142,9 @@ class agenda(BrowserView,calendar_render):
             return '%s/events_listing' % self.portal_url
 
     def prev_events_link(self):
-        events = self.portal.esdeveniments.getTranslation()
-        if (self.have_events_folder and
-            'aggregator' in self.portal[events].objectIds() and
-            'previous' in self.portal[events]['aggregator'].objectIds()):
-            return '%s/aggregator/previous' % events.absolute_url()
-            
-        elif (self.have_events_folder and
-            'previous' in self.portal[events].objectIds()):
-            return '%s/previous' % events.absolute_url()
+        previous_events = self.portal.esdeveniments.aggregator.anteriors.getTranslation()
+        if self.have_events_folder:
+            return '%s' % previous_events.absolute_url()
         else:
             return None
 
