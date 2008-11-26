@@ -12,6 +12,9 @@
   <viewlet name="upc.genweb.eines"/>
   <viewlet name="plone.global_sections"/>
  </order>
+ <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order> 
  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre3">
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
@@ -75,6 +78,10 @@
   <viewlet name="plone.path_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
  </order>
+ <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+
  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Unitat">
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
@@ -115,6 +122,9 @@
   <viewlet name="plone.personal_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
  </hidden>
+ <hidden manager="plone.belowcontentbody" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </hidden>  
  <hidden manager="plone.belowcontenttitle" skinname="Tema genwebUPC Neutre3"/>
  <hidden manager="plone.portalheader" skinname="Tema genwebUPC Neutre3">
   <viewlet name="plone.site_actions"/>
