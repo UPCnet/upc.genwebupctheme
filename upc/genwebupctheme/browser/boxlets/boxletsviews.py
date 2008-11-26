@@ -179,6 +179,12 @@ class noticies(BrowserView, news_render):
     def __call__(self):
         return xhtml_compress(self._template())
     
+    def all_news_link(self):
+        portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
+        portal = portal_state.portal()
+        news = portal.noticies.getTranslation()
+        return '%s' % news.absolute_url()
+    
     @memoize
     def _data(self):       
         context = aq_inner(self.context)

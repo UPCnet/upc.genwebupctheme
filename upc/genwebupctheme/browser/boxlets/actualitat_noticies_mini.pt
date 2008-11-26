@@ -1,5 +1,6 @@
 <tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
-                            plone_view context/@@plone;">
+                            plone_view context/@@plone;"
+                            i18n:domain="plone">
 
 	<tal:block tal:define="entries view/getRSS"
 	           tal:condition="entries">
