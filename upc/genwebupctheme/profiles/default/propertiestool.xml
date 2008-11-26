@@ -8,6 +8,7 @@
    <element value="Kupu"/>
    <element value="None"/>
   </property>
+  <property name="external_links_open_new_window" type="string">True</property>
  </object> 
  
  <object name="fckeditor_properties" meta_type="Plone Property Sheet">

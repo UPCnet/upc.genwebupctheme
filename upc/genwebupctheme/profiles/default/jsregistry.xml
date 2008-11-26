@@ -24,4 +24,7 @@
     enabled="True" expression=""  inline="False"/>
 -->
 
+<javascript cacheable="True" compression="safe" cookable="True"
+enabled="True" expression="" id="mark_special_links.js" inline="False"/>
+
 </object>
