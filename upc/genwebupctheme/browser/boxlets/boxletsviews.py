@@ -153,7 +153,7 @@ class agenda(BrowserView,calendar_render):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
-        state = 'published'
+        state = ['published','intranet']
         return catalog(portal_type='Event',
                        review_state=state,
                        end={'query': DateTime(),
@@ -184,7 +184,7 @@ class noticies(BrowserView, news_render):
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
-        state = 'published'
+        state = ['published','intranet']
         return catalog(portal_type='News Item',
                        review_state=state,
                        sort_on='Date',
