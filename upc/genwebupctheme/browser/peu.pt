@@ -20,8 +20,8 @@
 
         <span class="sobreElWeb">
             <a href="sobre-el-web"
-                i18n:translate="sobre-web">
-            	Sobre aquest web
+                i18n:translate="genweb-sobre_aquest_web">
+            	About this web
             </a>
         </span>
         

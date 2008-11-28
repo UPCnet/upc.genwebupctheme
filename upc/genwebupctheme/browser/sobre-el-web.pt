@@ -78,7 +78,7 @@ please contact the </span>
     </div>
 
 
-    <div class="titular3" i18n:translate="genweb-access_keys">Available access keys</div>
+    <div class="titular3" i18n:translate="heading_available_access_keys">Available access keys</div>
 
     <p i18n:translate="description_available_access_keys">This site uses a setup that closely matches most international 
        recommendations on access keys. These are: 
