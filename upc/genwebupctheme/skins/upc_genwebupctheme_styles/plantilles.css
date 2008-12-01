@@ -168,7 +168,7 @@ html*.taulaRegistres table{
 	border-bottom: 4px solid #ccc;
 	margin: 0px; padding:10px; margin-top:-36px;
 	background: url(borderTopDiagonal.gif) repeat-x top;}
-.fletxa_fitxa{ clear: both; background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
+.fletxa_fitxa{ background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
 .fitxa .titular1{ margin: -0.2em 0 1.2em 0; padding:0.2em 0 0.5em 0; border:0px; border-bottom: 2px dotted #a29386; background:none;}
 .fitxa .titular2{ margin-bottom: 1em;}
 .fitxa img{background:#FFF; padding: 0 20px 10px 0; margin: 0;}

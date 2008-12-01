@@ -32,15 +32,15 @@
     <p i18n:translate="text_size">Text size:</p>
 
     <ul><ul>
-        <li><a href="javascript:setActiveStyleSheet('Large Text', 1);"
+        <li><a href="javascript:setBaseFontSize('largeText', 1);"
                                           title="Large Text"
                                           i18n:attributes="title title_large_text;"
                                           i18n:translate="large_text">Large</a></li>
-        <li><a href="javascript:setActiveStyleSheet('',1);"
+        <li><a href="javascript:setBaseFontSize('',1);"
                                            title="Normal Text"
                                            i18n:attributes="title title_normal_text;"
                                            i18n:translate="normal_text">Normal</a></li>
-        <li><a href="javascript:setActiveStyleSheet('Small Text',1);"
+        <li><a href="javascript:setBaseFontSize('smallText',1);"
                                           title="Small Text"
                                           i18n:attributes="title title_small_text;"
                                           i18n:translate="small_text">Small</a></li>
@@ -58,14 +58,12 @@ a tool that allows to the creation and management of web pages according to the&
 <span i18n:translate="description_accessibility_info6">This site has been designed to be completely accessible and usable, working in accordance 
 with the W3C accessibility guidelines. If there is anything on this site &mdash;accessibility 
 or validation related&mdash; that is not according to this standard, 
-please contact the </span>
-<span><a href="/contact-info" 
+please contact the </span><span><a href="/contact-info" 
        i18n:translate="genweb-webmaster"
-       tal:attributes="href string:${portal_url}/contact-info">webmaster</a></span>
-.
+       tal:attributes="href string:${portal_url}/contact-info">webmaster</a></span>.
     </p>
     
-    <div class="titular2" i18n:translate="heading_access_keys">Access keys</div>
+    <div class="titular2" i18n:translate="genweb-heading_access_keys">Access keys</div>
 
     <div i18n:translate="description_access_keys">
     Access keys are a navigation device enabling you to get around this web site using your keyboard.
@@ -96,9 +94,9 @@ please contact the </span>
     </ul>
 <p>&nbsp;</p>
 
-    <div class="titular2" i18n:translate="heading_accessibility_statement">Accessibility Statement</div>
+    <div class="titular2" i18n:translate="genweb-heading_accessibility_statement">Accessibility statement</div>
 
-    <p i18n:translate="description_accessibility_statement">
+    <p i18n:translate="genweb-description_accessibility_statement">
     We have undertaken to use our knowledge and understanding of 
     the ways in which different people access the Internet, to develop a web site 
     that is clear and simple for everybody to use.

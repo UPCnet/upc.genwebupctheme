@@ -73,10 +73,12 @@ If you do not have an account here, head over to the
 
     <fieldset id="login-form">
 
-        <legend i18n:translate="heading_sign_in">Please log in</legend>
+        <legend i18n:domain="upc.genwebupc"
+                i18n:translate="genweb-heading_sign_in">Please log in using your <strong>UPC intranet user</strong></legend>
 
         <div id="forgotten-password"
              tal:condition="python:checkPermission('Mail forgotten password', here)">
+
             <h3 i18n:translate="box_forgot_password_option">
                 Forgot your password?
             </h3>

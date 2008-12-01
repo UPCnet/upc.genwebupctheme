@@ -330,6 +330,7 @@ border: 1px solid #CC0000; /*especific3*/
 .todayevent {
 border: 1px solid #CC0000; /*especific3*/
 background-color: #E0CECE; /*especific5*/
+letter-spacing:0.1em;
 }
 .reunio{
 background:#DFE3D3; /*especific4*/
@@ -338,6 +339,7 @@ background:#DFE3D3; /*especific4*/
 .esdeveniment,
 .event{
 background:#E0CECE; /*especific5*/
+letter-spacing:0.1em;
 }
 
 .ajustament #portletPlus{
@@ -535,7 +537,7 @@ margin-left:227px;
 .documentActions {
 	border-top:0px solid #8CACBB;
 	float:right;
-	width:150px;
+	width:200px;
 	margin-top:0px;
 	height:25px;
 	background: url(fonsIconesAccions.gif) no-repeat bottom right;}

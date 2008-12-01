@@ -16,32 +16,23 @@
 
 <div metal:fill-slot="main" >
 
-<h1 class="documentFirstHeading" i18n:translate="canvi_de_contrasenya">Canvi de contrasenya </h1>
+<h1 class="documentFirstHeading" i18n:translate="genweb-canvi_de_contrasenya">Change of password</h1>
 <div class="plain">
 
 <img tal:attributes="src python:'contrasenya_'+ utils.pref_lang() +'.gif'" alt="Contrasenya UPC" />
 <br /><br />
 
-<div class="titular2">
-Per entrar...
-</div>
-<p>
-Escriviu el vostre nom d'usuari amb un punt (nom.cognom) i <a href="https://gauss.upc.edu/gauss/canvicontrasenya/index.jsp" target="_blank"> canvieu la vostra contrasenya</a> si no ho heu fet des del 01/04/06.
-<br /><br /></p>
-
-<div class="titular2">
-Si heu oblidat la contrasenya...
-</div>
-<p>
-Entreu a la <a href="https://gauss.upc.edu/gauss/canvicontrasenya/contrasenyaOblidada.jsp" target="_blank"> gestió de contrasenyes</a> per recordar-la, modificar-la o canviar la vostra pregunta recordatori.
-<br /><br /></p>
-
-<div class="titular2">
-Si sou un nou usuari...
-</div>
-<p>
-Enregistreu-vos a la Intranet UPC per donar-vos d'<a href="https://gauss.upc.edu/gauss/canvicontrasenya/registreIntranet.jsp" target="_blank">alta de PDI/PAS</a>.
+<div class="titular2" i18n:translate="genweb-canvi_de_contrasenya1">Per entrar...</div>
+<p i18n:translate="genweb-canvi_de_contrasenya2">
+Put your UPC intranet username with a dot <strong>(name.surname)</strong> and <a href="https://gauss.upc.edu/gauss/canvicontrasenya/index.jsp" target="_blank">change your password</a> if you haven't already done so since 01/04/06.
 </p>
+<br /><br />
+<div class="titular2" i18n:translate="genweb-contrasenya_oblidada">If you have forgotten your password...</div>
+<p i18n:translate="genweb-contrasenya_oblidada1">Enter to <a href='https://gauss.upc.edu/gauss/canvicontrasenya/contrasenyaOblidada.jsp' target='_blank'>the password management page</a> to remember or modify it.</p><br /><br />
+
+<div class="titular2" i18n:translate="genweb-contrasenya_nouusuari">If you are a new user...</div>
+<p i18n:translate="genweb-contrasenya_nouusuari1">
+And you belong to PDI/PAS or associated staff with the universtiy, <a href="https://gauss.upc.edu/gauss/canvicontrasenya/registreIntranet.jsp" target="_blank">register</a> on the UPC intranet.</p>
 </div>
 </div>
 
