@@ -13,6 +13,37 @@
  
  <object name="fckeditor_properties" meta_type="Plone Property Sheet">
   <property name="fck_default_skin" type="string">silver</property>
+  <property name="fck_menu_styles" type="text">
+  <!--titulars i destacat --> 
+     &lt;Style name="Titular de Bloc" element="H2"&gt; 
+       &lt;Attribute name="class" value=" " /&gt; 
+     &lt;/Style&gt; 
+     &lt;Style name="Titular 1" element="div"&gt; 
+       &lt;Attribute name="class" value="titular1" /&gt; 
+     &lt;/Style&gt;   
+     &lt;Style name="Titular 2" element="div"&gt; 
+       &lt;Attribute name="class" value="titular2" /&gt; 
+     &lt;/Style&gt; 
+     &lt;Style name="Titular 3" element="div"&gt; 
+       &lt;Attribute name="class" value="titular3" /&gt; 
+     &lt;/Style&gt;   
+     &lt;Style name="Text destacat" element="div"&gt; 
+       &lt;Attribute name="class" value="textDestacat" /&gt; 
+     &lt;/Style&gt; 
+  <!--imatges floats, taula--> 
+     &lt;Style name="Imatge a l'esquerra" element="img"&gt; 
+       &lt;Attribute name="class" value="image-left" /&gt; 
+     &lt;/Style&gt; 
+     &lt;Style name="Imatge a la dreta" element="img"&gt; 
+       &lt;Attribute name="class" value="image-right" /&gt; 
+     &lt;/Style&gt; 
+     &lt;Style name="Fila marcada" element="tr"&gt; 
+       &lt;Attribute name="class" value="even" /&gt; 
+     &lt;/Style&gt; 
+     &lt;Style name="Ce·la marcada" element="td"&gt; 
+       &lt;Attribute name="class" value="even" /&gt; 
+     &lt;/Style&gt;</property>
+     
  </object> 
  
 </object>
