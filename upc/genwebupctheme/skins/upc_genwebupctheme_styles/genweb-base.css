@@ -66,7 +66,7 @@ legend {
 	background-color:transparent;
 	font-size:0%;
 	padding:0 0 0.5em 0;
-	color:#ccc;
+	color:#999;
 	*font-size:90%;
 	*display:none;}
 fieldset{
@@ -81,7 +81,14 @@ fieldset[id] legend {
 	font-size:90%;
 	display:inline;
 	padding:0 0 0.5em 0;
-	color:#ccc;}
+	color:#999;}
+#login-form legend { /*separat per ie6 com sempre*/
+	background:transparent none repeat scroll 0% !important;
+	background-color:transparent !important;
+	font-size:90% !important;
+	display:inline !important;
+	padding:0 0 0.5em 0 !important;
+	color:#999 !important;}
 label {
 	font-weight:bold;
 	color:#c00;}
@@ -977,7 +984,7 @@ ul#portal-sitemap li:first-child {
 .searchResults dt:first-child{
 	margin-top:25px;}
 .searchResults dd{
-	font-size:1.35em;
+	font-size:1.3em;
 	margin-bottom:0;}
 .searchResults dt{
 	margin-top:10px;}
@@ -1424,6 +1431,11 @@ div#dashboard .portletFooter {text-align:right;}
 .template-folder_constraintypes_form .documentContent form .field {font-size:100%;}
 .iframeContacte iframe {width:758px;height:300px;}
 .contacteSpanBaix {padding-bottom:10px;}
+ul.visualNoMarker, ol.visualNoMarker, ul.visualNoMarker li, ol.visualNoMarker li {
+list-style-image:none !important;
+list-style-type:none !important;
+}
+
 
 #portal-column-content fieldset > * input:focus,
 #portal-column-content fieldset > * textarea:focus {

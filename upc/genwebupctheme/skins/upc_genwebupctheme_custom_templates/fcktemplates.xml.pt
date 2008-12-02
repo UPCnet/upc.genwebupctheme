@@ -421,7 +421,7 @@
 				<div class="notesCalendari">                 
 				<span class="titular2">dijous 4.</span> inauguració centre XXX<br />
 				<span class="titular2">dimecres 17.</span> lliurament premis fotografia tecnociència<br />
-				<span class="titular2">dilluns 29.</span> conferència ETSAB</div>
+				<span class="titular2">dilluns 29.</span> conferència</div>
 				<br /><br />
         	<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
@@ -632,7 +632,7 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="titular3">In hac habitasse platea dictumst</div>
 				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros.
-				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliq
+				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa.
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>

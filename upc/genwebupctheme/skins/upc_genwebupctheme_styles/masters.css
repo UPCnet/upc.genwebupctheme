@@ -109,8 +109,8 @@ select[id="form.tipusNeutre2"] option {color: #999}
 .plain br {margin-top:-20px;}
 .plain .separadorH {border-bottom:2px dotted #e6e6e6;}
 .plain .taulaDades td {padding:5px; vertical-align:top;}
-.plain .taulaDades td.titular2 {text-align:right;width:120px;}
-.plain .taulaDades td+td {font-weight:bold;font-size:1.1em;color:#666;}
+.plain .taulaDades td.titular2 {text-align:right;width:120px;font-size:1.1em}
+.plain .taulaDades td+td {font-weight:bold;font-size:1.0em;color:#666;}
 .plain .taulaDades td.titular2+td {font-weight:normal;}
 
 

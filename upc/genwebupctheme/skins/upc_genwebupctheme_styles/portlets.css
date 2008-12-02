@@ -707,7 +707,7 @@ color:#4d4d4d;
 .template-board_view_global .listing thead, .template-board_view_global .listing tbody, .template-board_view_global table.listing, .template-board_view_global .listing td, .template-board_view_global .listing th, .template-board_view_global .listing tr {border:0px; font-size:1em;}
 .template-board_view_global .listing th {font-weight:bold; font-size:1em !important; color:#666;background:transparent;border-bottom:1px solid #e6e6e6 !important;}
 .template-board_view_global table.listing {border-bottom: 3px solid #e6e6e6;padding-top:0px;}
-.template-board_view #content ul.visualNoMarker {
+.template-board_view #content ul.visualNoMarker, #issue-quicksearch-box {
 clear:right;
 padding: 5px 5px 1px 5px;
 border:1px solid #e6e6e6;
@@ -737,6 +737,8 @@ background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;
 float:right;
 margin:0 0 0.5em 1em;
 clear:both;
+background: #fff;
+padding: 0 0 10px 10px;
 }
 .kssattr-atfieldname-imageCaption {
 text-align:center;
@@ -1161,6 +1163,7 @@ body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta,
 body.template-base_view div#archetypes-fieldname-acta div#parent-fieldname-acta:hover, body.template-base_view div#archetypes-fieldname-agenda div#parent-fieldname-agenda:hover  {margin-top:10px; border:1px SOLID #666666; margin-bottom:20px; }
 form#kss-inlineform-agenda div#archetypes-fieldname-agenda, form#kss-inlineform-agenda div.formControls, form#kss-inlineform-acta div#archetypes-fieldname-acta, form#kss-inlineform-acta div.formControls {font-size:112% !important; border-top:0px !important;}
 body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
+#parent-fieldname-agenda {font-size:110%;}
 
 /*enquesta a la home*/
 .columnaDreta fieldset {margin:0px!important; padding:5px;background:none;border:0px;border-bottom:1px dashed #999;}
