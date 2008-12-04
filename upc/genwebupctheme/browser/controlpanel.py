@@ -36,9 +36,9 @@ class GenWebControlPanelUtility(Persistent):
     implements(IgenWebUtility)
     
     # de la pestanya general
-    columna1 = ['Agenda', 'Noticies', 'Noticies_Actualitat']
-    columna2 = ['Agenda_Calendari', 'Actualitat_Noticies','Actualitat','Noticies']
-    columna3 = ['Agenda', 'Actualitat_Noticies','Banners','Enquesta']    
+    columna1 = []
+    columna2 = []
+    columna3 = []    
     
     constrains = ['Document', 'Event', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage']
 
@@ -196,6 +196,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
 
     @apply
     def titolespai_ca():
+        
         def get(self):
             return getGWConfig().titolespai_ca
         def set(self, value):
