@@ -239,13 +239,13 @@
     	<Description>Per definir una taula de registres estructurada per columnes. Es pot ampliar en files i columnes.</Description>    	
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="titular1">Personal funcionari </div>
+				<div class="titular1">Lorem vs Ipsum </div>
 				<div class="taulaRegistres">
 				<table>
 				    <tbody>
 				        <tr class="cap">
-				            <td>homes</td>
-				            <td>dones</td>
+				            <td>Lorem</td>
+				            <td>Ipsum</td>
 				            <td>Total</td>
 				        </tr>
 				        <tr>
@@ -289,20 +289,20 @@
     	<Description>Per definir una taula de registres estructurada per files i columnes. Es pot ampliar en files i columnes.</Description>   	
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="titular1">Personal funcionari </div>
+				<div class="titular1">Lorem vs Ipsum setmanal </div>
 				<div class="taulaRegistres">
 				<table>
 				    <tbody>
 				        <tr class="cap">
-				            <td>homes</td>
-				            <td>dones</td>
-				            <td>homes</td>
-				            <td>dones</td>
+				            <td>Lorem</td>
+				            <td>Ipsum</td>
+				            <td>Lorems</td>
+				            <td>Ipsums</td>
 				            <td>Total</td>
 					     <td> </td>
 				        </tr>
 				        <tr>
-				            <td class="fonsDestacat1">43</td>
+				            <td class="fonsDestacat1">DL</td>
 				            <td>34</td>
 				            <td>43</td>
 				            <td>34</td>
@@ -310,7 +310,7 @@
 				            <td>77</td>
 				        </tr>
 				        <tr>
-				            <td class="fonsDestacat1">43</td>
+				            <td class="fonsDestacat1">DT</td>
 				            <td>34</td>
 				            <td>43</td>
 				            <td>34</td>
@@ -318,7 +318,7 @@
 				            <td>77</td>
 				        </tr>
 				        <tr>
-				            <td class="fonsDestacat1">43</td>
+				            <td class="fonsDestacat1">DC</td>
 				            <td>34</td>
 				            <td>43</td>
 				            <td>34</td>
@@ -326,7 +326,7 @@
 				            <td>77</td>
 				        </tr>
 				        <tr>
-				            <td class="fonsDestacat1">43</td>
+				            <td class="fonsDestacat1">DJ</td>
 				            <td>34</td>
 				            <td>43</td>
 				            <td>34</td>
@@ -334,7 +334,7 @@
 				            <td>77</td>
 				        </tr>
 				        <tr>
-				            <td class="fonsDestacat1">43</td>
+				            <td class="fonsDestacat1">DV</td>
 				            <td>34</td>
 				            <td>43</td>
 				            <td>34</td>
@@ -358,7 +358,7 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="calendari">
-				<div class="titular2">Gener 2007 </div>
+				<div class="titular2">Gener 2009 </div>
 				<table>
 				    <tbody>
 				        <tr>
