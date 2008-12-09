@@ -63,6 +63,8 @@ label[id="form.titolcapsaleraMaster"], label[id="form.idestudiMaster"], label[id
 input[id="form.titolcapsaleraMaster"], input[id="form.idestudiMaster"], input[id="form.idtitulacioMaster"], select[id="form.masterdoctorado"], input[id="form.ambitdoctorat_ca"],  input[id="form.ambitdoctorat_es"],  input[id="form.ambitdoctorat_en"] {background:#e6e6e6}
 select[id="form.masterdoctorado"] option {color: #999}
 /*flota tapa navegacio*/	
+.portal-breadcumbs-null {height:15px;}
+#region-content, .documentContent {padding:0 0 1em 0 !important;}
 .portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}
