@@ -29,10 +29,9 @@
   <tr tal:condition="not:esSeccio">
     <td class="baixMenu" tal:repeat="tab view/portal_tabs">
       <a href="" 
-         tal:content="tab/name"
          tal:attributes="href tab/url;
                          title tab/description|nothing">
-            Tab Name
+      <span tal:replace="structure tab/name"></span>
       </a>
     </td>
   </tr>
@@ -41,11 +40,11 @@
     <td class="baixMenu" tal:repeat="tab view/portal_tabs"
                          tal:attributes="class python:view.selected_portal_tab==tab['id'] and 'baixMenu alphaCustom' or 'baixMenu alpha'">
       <a href="" 
-         tal:content="tab/name"
          tal:attributes="href tab/url;
                          title tab/description|nothing">
-            Tab Name
+      <span tal:replace="structure tab/name"></span>
       </a>
+
     </td>
   </tr>
 
