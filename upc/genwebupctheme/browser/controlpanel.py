@@ -40,7 +40,7 @@ class GenWebControlPanelUtility(Persistent):
     columna2 = []
     columna3 = []    
     
-    constrains = ['Document', 'Event', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage']
+    constrains = ['Document', 'Event', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage', 'Window']
 
     # de la pestanya d'especifics
     especific1='#007dcc'
