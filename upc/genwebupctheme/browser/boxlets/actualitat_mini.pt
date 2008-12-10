@@ -1,0 +1,30 @@
+<tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                            plone_view context/@@plone;"
+                            i18n:domain="plone">
+
+	<tal:block tal:define="entries view/getRSS"
+	           tal:condition="entries">
+	
+		<div id="portlet150"> </div>
+		
+	    <div id="caixaPortlet">
+	    
+	        <div class="titolPortlet">Actualitat UPC</div>
+	        <ul>
+		        <li tal:repeat="entry entries">
+		            <a href=""
+		                tal:attributes="title entry/summary | nothing;
+		                           href entry/url | nothing" target=newwindow>
+		                <span tal:replace="entry/summary | nothing">
+		                Notícies RSS
+		                </span>
+		            </a>
+		        </li>
+	        </ul>	        
+
+	        
+	    </div> 
+	    <div id="baix150"> </div>
+	        	
+	</tal:block>
+</tal:newsitems>

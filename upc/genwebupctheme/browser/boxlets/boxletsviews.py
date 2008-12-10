@@ -233,6 +233,9 @@ class noticies_actualitat_petit(noticies_actualitat):
 class noticies_actualitat_mini(noticies_actualitat):
     _template = ViewPageTemplateFile('actualitat_noticies_mini.pt')
 
+class actualitat_mini(noticies_actualitat):
+    _template = ViewPageTemplateFile('actualitat_mini.pt')
+
 class actualitat_petit(noticies_actualitat):
     _template = ViewPageTemplateFile('actualitat_petit.pt')
 

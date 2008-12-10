@@ -70,7 +70,12 @@
         class=".boxletsviews.noticies_actualitat_mini"
         permission="zope2.View"
         />  
-
+    <browser:page
+        for="*"
+        name="box.Actualitat_mini"
+        class=".boxletsviews.actualitat_mini"
+        permission="zope2.View"
+        />  
 	<browser:page
 		for="*"
 		name="box.Enquesta_mini"

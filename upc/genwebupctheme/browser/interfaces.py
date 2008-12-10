@@ -32,7 +32,7 @@ class IgenWebControlPanelSchemaGeneral(Interface):
 
     columna1 = zope.schema.List(__name__='columna1', title=u"Columna 1",value_type=zope.schema.Choice(values=['Agenda', 'Noticies', 'Noticies_Actualitat']), default=[])
     columna2 = zope.schema.List(__name__='columna2', title=u"Columna 2",value_type=zope.schema.Choice(values=['Agenda_Calendari', 'Actualitat_Noticies','Actualitat','Noticies']), default=[])
-    columna3 = zope.schema.List(__name__='columna3', title=u"Columna 3",value_type=zope.schema.Choice(values=['Agenda', 'Actualitat_Noticies','Banners', 'Enquesta']), default=[])
+    columna3 = zope.schema.List(__name__='columna3', title=u"Columna 3",value_type=zope.schema.Choice(values=['Agenda', 'Actualitat_Noticies','Banners', 'Enquesta','Actualitat']), default=[])
     constrains = zope.schema.List(__name__='constrains', title=u"Contingut del menu afegir", description=u"Els elements de la columna de la dreta apareixeran al desplegable principal", value_type=zope.schema.Choice(values=['Document', 'Event', 'Favorite', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage', 'Survey', 'PlonePopoll', 'Ploneboard', 'PoiTracker', 'simpleTask', 'Meeting', 'Window', 'FormFolder']), default=[])
 
     
