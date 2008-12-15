@@ -14,36 +14,61 @@
  <object name="fckeditor_properties" meta_type="Plone Property Sheet">
   <property name="fck_default_skin" type="string">silver</property>
   <property name="fck_menu_styles" type="text">
-  <!--titulars i destacat --> 
-     &lt;Style name="Titular de Bloc" element="H2"&gt; 
-       &lt;Attribute name="class" value=" " /&gt; 
-     &lt;/Style&gt; 
-     &lt;Style name="Titular 1" element="div"&gt; 
-       &lt;Attribute name="class" value="titular1" /&gt; 
-     &lt;/Style&gt;   
-     &lt;Style name="Titular 2" element="div"&gt; 
-       &lt;Attribute name="class" value="titular2" /&gt; 
-     &lt;/Style&gt; 
-     &lt;Style name="Titular 3" element="div"&gt; 
-       &lt;Attribute name="class" value="titular3" /&gt; 
-     &lt;/Style&gt;   
-     &lt;Style name="Text destacat" element="div"&gt; 
-       &lt;Attribute name="class" value="textDestacat" /&gt; 
-     &lt;/Style&gt; 
-  <!--imatges floats, taula--> 
-     &lt;Style name="Imatge a l'esquerra" element="img"&gt; 
-       &lt;Attribute name="class" value="image-left" /&gt; 
-     &lt;/Style&gt; 
-     &lt;Style name="Imatge a la dreta" element="img"&gt; 
-       &lt;Attribute name="class" value="image-right" /&gt; 
-     &lt;/Style&gt; 
-     &lt;Style name="Fila marcada" element="tr"&gt; 
-       &lt;Attribute name="class" value="even" /&gt; 
-     &lt;/Style&gt; 
-     &lt;Style name="Ce·la marcada" element="td"&gt; 
-       &lt;Attribute name="class" value="even" /&gt; 
-     &lt;/Style&gt;</property>
-     
+	  &lt;Style name="Sense format" element="div"&gt; 
+		&lt;Attribute name="class" value="" /&gt;
+		&lt;/Style&gt;  
+		&lt;Style name="Titular de Bloc" element="h2"&gt;  
+		&lt;Attribute name="class" value="" /&gt; 
+		&lt;/Style&gt;  
+		&lt;Style name="Titular 1" element="div"&gt;  
+		&lt;Attribute name="class" value="titular1" /&gt;  
+		&lt;/Style&gt;    
+		&lt;Style name="Titular 2" element="div"&gt; 
+		&lt;Attribute name="class" value="titular2" /&gt;  
+		&lt;/Style&gt;  
+		&lt;Style name="Titular 3" element="div"&gt; 
+		&lt;Attribute name="class" value="titular3" /&gt;  
+		&lt;/Style&gt;    
+		&lt;Style name="Text destacat" element="div"&gt;  
+		&lt;Attribute name="class" value="textDestacat" /&gt;  
+		&lt;/Style&gt;  
+		&lt;Style name="Imatge a l'esquerra" element="img"&gt;  
+		&lt;Attribute name="class" value="image-left" /&gt;  
+		&lt;/Style&gt; 
+		&lt;Style name="Imatge a la dreta" element="img"&gt;  
+		&lt;Attribute name="class" value="image-right" /&gt;  
+		&lt;/Style&gt;  
+		&lt;Style name="Fila marcada" element="tr"&gt;  
+		&lt;Attribute name="class" value="even" /&gt;  
+		&lt;/Style&gt;  
+		&lt;Style name="Cel·la normal" element="td"&gt;  
+		&lt;Attribute name="class" value="" /&gt;  
+		&lt;/Style&gt; 
+		&lt;Style name="Cel·la marcada" element="td"&gt;  
+		&lt;Attribute name="class" value="even" /&gt; 
+		&lt;/Style&gt; 
+		&lt;Style name="Cel·la destacada 1" element="td"&gt;  
+		&lt;Attribute name="class" value="fonsDestacat1" /&gt;  
+		&lt;/Style&gt; 
+		&lt;Style name="Cel·la destacada 2" element="td"&gt;  
+		&lt;Attribute name="class" value="fonsDestacat2" /&gt; 
+		&lt;/Style&gt;</property>
+    <property name="fck_toolbar" type="string">Custom</property>
+    <property name="fck_custom_toolbar" type="text">[
+    ['Source','DocProps','-','Save','Preview','-','Templates'],
+    
+['Cut','Copy','Paste','PasteText','PasteWord','-','Print','rtSpellCheck'],
+    ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
+    
+['Bold','Italic','Underline','StrikeThrough','-','Subscript','Superscript'],
+    ['OrderedList','UnorderedList','-','Outdent','Indent'],
+    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
+    ['Link','Unlink','Anchor'],
+    
+['Image','Flash','flvPlayer','Table','Rule','SpecialChar','UniversalKey','Smiley'],
+    ['Style'],
+    ['FitWindow','-','About']
+   ]</property>    
  </object> 
  
 </object>

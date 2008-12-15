@@ -49,9 +49,9 @@
 <br />
     <p>
     <span i18n:translate="description_accessibility_info1">
-This website has been generated with </span><a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC" target="_blank"><strong>GenWeb UPC v3</strong></a><span i18n:translate="description_accessibility_info2">, 
+This website has been generated with </span><a href="https://www.upc.edu/comunicacio/www/genweb-upc" target="_blank"><strong>Genweb UPC v3</strong></a><span i18n:translate="description_accessibility_info2">, 
 a tool that allows to the creation and management of web pages according to the&nbsp;UPC institutional style guide.<br /><br /></span>
-<a href="https://www.upc.edu/comunicacio/www/GenWeb-UPC" target="_blank"><strong>GenWeb UPC v3</strong></a> <span i18n:translate="description_accessibility_info3"> is a project co-authored by the </span>
+<a href="https://www.upc.edu/comunicacio/www/genweb-upc" target="_blank"><strong>Genweb UPC v3</strong></a> <span i18n:translate="description_accessibility_info3"> is a project co-authored by the </span>
 <a i18n:translate="scp_titol" href="http://www.upc.edu/comunicacio" target="_blank">Comunication and Promotion Service</a> 
 <span i18n:translate="description_accessibility_info4">of UPC and </span><a href="http://www.upcnet.es" target="_blank">UPCnet</a> 
 <span i18n:translate="description_accessibility_info5">developed with the Open Source Content Management System </span><a href="http://plone.org" target="_blank">Plone</a>. 

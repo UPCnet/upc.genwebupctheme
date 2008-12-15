@@ -25,7 +25,8 @@
   <tal:poll tal:repeat="poll polls">
     <tal:block  tal:define="canVote poll/can_vote;">
       <dd class="portletItem">
-	<fieldset tal:omit-tag="not:view/has_more_polls">
+	<fieldset>
+<!-- 	ABANS EL FIELDSET TENIA tal:omit-tag="not:view/has_more_polls" -->
 <!--
 	  <legend tal:condition="view/has_more_polls">
 	    <a href="" tal:content="poll/title"

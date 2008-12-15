@@ -1423,10 +1423,10 @@ div#dashboard .portletFooter {text-align:right;}
 
 /*detallet*/
 .fletxatop, .reviewHistory {margin-top:30px;}
+form[action$="controlpanel"] legend {font-size:11px !important;}
 
 /**** LINKS ****/
 #content a[href ^="https://devel.upcnet.es/neutre2"], #content a.link-https { background:none; padding:0px; }
-
 /*repas novembre*/
 .template-folder_constraintypes_form .documentContent form .field {font-size:100%;}
 .iframeContacte iframe {width:758px;height:300px;}
