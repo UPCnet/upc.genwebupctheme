@@ -1,12 +1,11 @@
 /* - print.css - */
-@media print {
 /*
 UPC PRINT GENWEB v3
 */
 
 body {
     font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 11pt !important;
+    font-size: 5pt !important;
 }
 h1, h2, h3, h4, h5, h6 {
     border: none;
@@ -103,6 +102,11 @@ div.top,
     display: none;
 }
 
+/*.logoNeutre3 {
+	display: none;
+}
+*/
+
 /* canvi mides per destacar al document */
 img {width:200%; height:200%;}
 .logo img {
@@ -146,5 +150,4 @@ img {width:200%; height:200%;}
 	font-size:9pt;
 	padding:5pt;
 	border:2pt dashed #999;
-}
 }
