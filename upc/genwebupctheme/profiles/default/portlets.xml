@@ -1,8 +1,31 @@
 <?xml version="1.0"?>
-<!-- This file is used to register new types of portlets. It can also
-     be used to register completely new column types. See CMFPlone's version
-     of this file for more information.
-  -->
+<portlets>
+ <assignment remove="True" name="calendar" category="context" key="/"
+    manager="plone.rightcolumn" type="portlets.Calendar">
+ </assignment>
+  <assignment remove="True" name="events" category="context" key="/"
+    manager="plone.rightcolumn" type="portlets.Events">
+ </assignment>
+ <assignment remove="True" name="news" category="context" key="/"
+    manager="plone.rightcolumn" type="portlets.News">
+ </assignment>
+ <assignment remove="True" name="review" category="context" key="/"
+    manager="plone.rightcolumn" type="portlets.Review">
+ </assignment>
+ <assignment remove="True" name="login" category="context" key="/"
+    manager="plone.leftcolumn" type="portlets.Login">
+ </assignment>
+ 
+    <assignment 
+      name="navigation" 
+      category="context" 
+      key="/"
+      manager="plone.leftcolumn" 
+      type="portlets.Navigation">
+     
+      <property name="bottomLevel">2</property>    
+ </assignment>
+
 <portlets>
 
     <portlet
@@ -16,5 +39,5 @@
       title="Example portlet"
        description=""
      />
- 
+   
 </portlets>
