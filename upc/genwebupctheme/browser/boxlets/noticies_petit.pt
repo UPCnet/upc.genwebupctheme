@@ -1,6 +1,8 @@
 <tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
-                            plone_view context/@@plone;"
-                            i18n:domain="plone">
+                            plone_view context/@@plone;
+                            news_items view/published_news_items"
+                tal:condition="news_items"
+                i18n:domain="plone">
 
 	<tal:block>
 	
@@ -18,7 +20,7 @@
 	        </div>
 	        
 	        <ul>
-		        <li tal:repeat="obj view/published_news_items">
+		        <li tal:repeat="obj news_items">
 		            <a href=""
 		               class="tile"
 		               tal:attributes="href obj/getURL;

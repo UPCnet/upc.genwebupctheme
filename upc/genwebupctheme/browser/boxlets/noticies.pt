@@ -1,5 +1,7 @@
 <tal:newsitems tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
-                           plone_view context/@@plone;"
+                           plone_view context/@@plone;
+                           news_items view/published_news_items"
+               tal:condition="news_items"
                i18n:domain="plone">
 
 <div id="contenidor"> 
@@ -14,7 +16,7 @@
         </div>
     <div class="agendaContingut">
         <ul>
-        <li tal:repeat="obj view/published_news_items">
+        <li tal:repeat="obj news_items">
             <a href=""
                class="tile"
                tal:attributes="href obj/getURL;

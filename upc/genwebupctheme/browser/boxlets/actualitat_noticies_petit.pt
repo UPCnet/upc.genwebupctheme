@@ -1,5 +1,6 @@
 <tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
-                            plone_view context/@@plone;"
+                            plone_view context/@@plone;
+                            news_items view/published_news_items"
                             i18n:domain="plone">
 
 	<tal:block tal:define="entries view/getRSS"
@@ -8,7 +9,8 @@
 		<div id="portlet200"> </div>
 		
 	    <div id="caixaPortlet">
-	    
+	        
+	      <tal:block condition="news_items">  
 	    	<div class="titolPortlet">
 	           <div class="icoRSS">
           	          <a href=""
@@ -19,7 +21,7 @@
 	    	</div>
 	    	
 	        <ul>
-		        <li tal:repeat="obj view/published_news_items">
+		        <li tal:repeat="obj news_items">
 		            <a href=""
 		               class="tile"
 		               tal:attributes="href obj/getURL;
@@ -33,7 +35,7 @@
 		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
 		        </li>
 	        </ul>
-	        
+
 	        <div id="portletPlus">  
 	            <a href="#"> <img src="plus.gif" alt="més actualitat"> </a> 
 	            <a href=""
@@ -42,9 +44,9 @@
 	               More news&hellip;
 	            </a>
 	        </div>
-
+	      </tal:block>  
 	        
-	        <div class="titolPortlet separadorPortlet">Actualitat UPC</div>
+	        <div tal:attributes="class python:news_items and 'titolPortlet separadorPortlet' or 'titolPortlet'">Actualitat UPC</div>
 	        <ul>
 		        <li tal:repeat="entry entries">
 		            <a href=""

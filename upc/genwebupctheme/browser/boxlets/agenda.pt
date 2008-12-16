@@ -8,7 +8,8 @@
                 showNextMonth view/showNextMonth;
                 year view/year;
                 toLocalizedTime nocall:context/@@plone/toLocalizedTime"                
-           i18n:domain="plone">
+           i18n:domain="plone"
+           tal:condition="entries">
 
 <!-- CALCULAR FECHA -->
 <div class="agendaDalt">Agenda </div>
