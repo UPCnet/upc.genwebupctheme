@@ -44,6 +44,13 @@ def havePermissionAtRoot(self):
      
      return sm.checkPermission('Modify portal content', proot) or ('WebMaster' in user.getRoles())    
 
+def portal_url(self):
+        """ Funcion a que retorna el path 
+        """
+        context_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_context_state')
+        return context_state.current_base_url()
+
 class utilitats(BrowserView):
 
     def llistaEstats(self):

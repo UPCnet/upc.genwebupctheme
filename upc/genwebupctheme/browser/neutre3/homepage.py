@@ -12,10 +12,14 @@ class HomePageView(BrowserView):
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
 
-        frontpageobj=portal_state.portal().benvingut.getTranslation()
+        try:
+            frontpageobj=portal_state.portal().benvingut.getTranslation()
+            page['body']=frontpageobj.CookedBody()
+        except:
+            page['body']=""
+        
         #page['title']=frontpageobj.Title()
-        page['body']=frontpageobj.CookedBody()
-
+        
         return page
 
     def getColumn1(self):
@@ -41,3 +45,18 @@ class HomePageView(BrowserView):
         gw_util = utils.getGWConfig()
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna3
+
+    def existObjectsNeeded(self):
+        """Funcio que mira si existeixen els objectes que son necessaris pel bon funcionament del espai
+           TODO: Fer que comprovi mes objectes, per ara nomes comprova la pagina principal en catala
+        """
+        portal_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_portal_state')
+        portal = portal_state.portal()
+        return getattr(portal,'benvingut',False)
+
+    def getSetupLink(self):
+        """Funcio que dona l'enllas al formulari de creacio dels elements per defecte
+        """
+        return utils.portal_url(self) + "/setup-view"
+    
