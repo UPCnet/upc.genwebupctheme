@@ -12,4 +12,13 @@
   
  </configlet>
 
+
+ <configlet title="FCKeditor preferences" action_id="fckeditor_member_prefs" 
+    appId="FCKeditor" category="Member" 
+    condition_expr="not:object/portal_membership/isAnonymousUser" 
+    url_expr="string:$portal_url/prefs_fckeditor_member" 
+    visible="False">
+   <permission>View</permission>
+ </configlet>
+
 </object>
