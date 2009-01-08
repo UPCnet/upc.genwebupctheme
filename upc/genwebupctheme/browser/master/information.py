@@ -1,19 +1,25 @@
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
+from zope.interface import Interface, implements
 
 class IinfoGeneral(Interface):
-   """ Marker interface """
+	""" Marker interface """
 
 class Icompetencies(Interface):
-   """ Makrer"""
+	""" Marker interface """
+
+class Irequisits(Interface):
+	""" Marker interface """
 
 class infoGeneralView(BrowserView):
     implements(IinfoGeneral)
     __call__=ViewPageTemplateFile('info-general.pt')
 
 class competenciesView(BrowserView):
-    __call__=ViewPageTemplateFile('competencies.pt')
+	implements(Icompetencies)
+	__call__=ViewPageTemplateFile('competencies.pt')
     
 class requisitsView(BrowserView):
-    __call__=ViewPageTemplateFile('requisits.pt')
+	implements(Irequisits)
+	__call__=ViewPageTemplateFile('requisits.pt')
