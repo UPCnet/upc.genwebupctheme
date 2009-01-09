@@ -59,9 +59,11 @@ class ContactForm(formbase.PageForm):
                             subject=subject, subtype='plain',
                             charset=email_charset, debug=False,
                             From=source)
+
+        confirm = _(u"Mail sent.")
+        IStatusMessage(self.request).addStatusMessage(confirm, type='info')
         
-#        confirm = _(u"Thank you! Your request has been sent successfully.")
-#        IStatusMessage(self.request).addStatusMessage(confirm, type='info')
-        
-        self.request.response.redirect(portal.absolute_url())
+#        self.request.response.redirect(portal.absolute_url())
+        self.request.response.redirect('contact_feedback')
+ 
         return ''
