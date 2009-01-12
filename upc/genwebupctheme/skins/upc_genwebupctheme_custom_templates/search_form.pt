@@ -182,8 +182,9 @@
                 </span>
                 <br />
                 <div style="float:left; margin-right: 2em;"
-                     tal:define="allTypes python:putils.getUserFriendlyTypes();
-                             typeLists python:here.createMultiColumnList(allTypes, numCols=2, sort_on='self');"
+                     tal:define="view context/@@upc.genweb.utils;
+                                 allTypes view/llistaContents;
+                                 typeLists python:here.createMultiColumnList(allTypes, numCols=2, sort_on='self');"
                      tal:repeat="sublist typeLists">
                     <tal:items repeat="type sublist">
                     <input type="checkbox"

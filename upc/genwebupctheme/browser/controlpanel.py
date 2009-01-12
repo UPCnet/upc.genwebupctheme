@@ -55,12 +55,12 @@ class GenWebControlPanelUtility(Persistent):
     barraidiomesbool = False
     
     # de la pestanya d'informació
-    titolespai_ca = escape(safe_unicode('Títol de l\'espai en català'))
-    titolespai_es = escape(safe_unicode('Títol de l\'espai en castellà'))
-    titolespai_en = escape(safe_unicode('Títol de l\'espai en anglés'))
-    firmaunitat_ca = escape(safe_unicode('Firma de la unitat en català'))
-    firmaunitat_es = escape(safe_unicode('Firma de la unitat en castellà'))
-    firmaunitat_en = escape(safe_unicode('Firma de la unitat en anglés'))
+    titolespai_ca = safe_unicode('Títol de l\'espai en català')
+    titolespai_es = safe_unicode('Títol de l\'espai en castellà')
+    titolespai_en = safe_unicode('Títol de l\'espai en anglés')
+    firmaunitat_ca = safe_unicode('Firma de la unitat en català.')
+    firmaunitat_es = safe_unicode('Firma de la unitat en castellà.')
+    firmaunitat_en = safe_unicode('Firma de la unitat en anglés.')
     edicio_ca = 'curs 2008/2009'
     edicio_es = 'curso 2008/2009'
     edicio_en = ' 2008/2009 Edition'
@@ -76,9 +76,9 @@ class GenWebControlPanelUtility(Persistent):
     idestudiMaster = '50'
     idtitulacioMaster = '114'
     masterdoctorado = 'Master'
-    ambitdoctorat_ca = escape(safe_unicode('Àmbit doctorat - [català]'))
-    ambitdoctorat_es = escape(safe_unicode('Àmbit doctorat - [castellà]'))
-    ambitdoctorat_en = escape(safe_unicode('Àmbit doctorat - [english]'))
+    ambitdoctorat_ca = safe_unicode('Àmbit doctorat - [català]')
+    ambitdoctorat_es = safe_unicode('Àmbit doctorat - [castellà]')
+    ambitdoctorat_en = safe_unicode('Àmbit doctorat - [english]')
     
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
@@ -200,7 +200,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().titolespai_ca
         def set(self, value):
-            getGWConfig().titolespai_ca = escape(safe_unicode(value))
+            getGWConfig().titolespai_ca = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -208,7 +208,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().titolespai_en
         def set(self, value):
-            getGWConfig().titolespai_en = escape(safe_unicode(value))
+            getGWConfig().titolespai_en = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -216,7 +216,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().titolespai_es
         def set(self, value):
-            getGWConfig().titolespai_es = escape(safe_unicode(value))
+            getGWConfig().titolespai_es = safe_unicode(value)
         return property(get, set)
             
     @apply
@@ -224,7 +224,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().firmaunitat_ca
         def set(self, value):
-            getGWConfig().firmaunitat_ca = escape(safe_unicode(value))
+            getGWConfig().firmaunitat_ca = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -232,7 +232,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().firmaunitat_en
         def set(self, value):
-            getGWConfig().firmaunitat_en = escape(safe_unicode(value))
+            getGWConfig().firmaunitat_en = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -240,7 +240,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().firmaunitat_es
         def set(self, value):
-            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
+            getGWConfig().firmaunitat_es = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -248,7 +248,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().edicio_ca
         def set(self, value):
-            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
+            getGWConfig().firmaunitat_es = safe_unicode(value)
         return property(get, set)
     
     @apply
@@ -256,7 +256,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().edicio_en
         def set(self, value):
-            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
+            getGWConfig().firmaunitat_es = safe_unicode(value)
         return property(get, set)
     
     @apply
@@ -264,7 +264,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().edicio_es
         def set(self, value):
-            getGWConfig().firmaunitat_es = escape(safe_unicode(value))
+            getGWConfig().firmaunitat_es = safe_unicode(value)
         return property(get, set)
     
     @apply
@@ -321,7 +321,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().titolcapsaleraMaster
         def set(self, value):
-            getGWConfig().titolcapsaleraMaster = escape(safe_unicode(value))
+            getGWConfig().titolcapsaleraMaster = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -353,7 +353,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().ambitdoctorat_ca
         def set(self, value):
-            getGWConfig().ambitdoctorat_ca = escape(safe_unicode(value))
+            getGWConfig().ambitdoctorat_ca = safe_unicode(value)
         return property(get, set)
 
     @apply
@@ -361,7 +361,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().ambitdoctorat_es
         def set(self, value):
-            getGWConfig().ambitdoctorat_es = escape(safe_unicode(value))
+            getGWConfig().ambitdoctorat_es = safe_unicode(value)
         return property(get, set)
     
     @apply
@@ -369,7 +369,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         def get(self):
             return getGWConfig().ambitdoctorat_en
         def set(self, value):
-            getGWConfig().ambitdoctorat_en = escape(safe_unicode(value))
+            getGWConfig().ambitdoctorat_en = safe_unicode(value)
         return property(get, set)
             
 general = FormFieldsets(ISkinsSchema['theme'], IgenWebControlPanelSchemaGeneral)

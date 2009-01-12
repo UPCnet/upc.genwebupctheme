@@ -63,6 +63,20 @@ class utilitats(BrowserView):
             estats = estats + [s[0] for s in wtool.getWorkflowById(w).states.items()]
     
         return [w for w in wtool.listWFStatesByTitle() if w[0] in estats]
+
+    def llistaContents(self):
+        """Retorna tots els tipus de contingut, exclosos els de la llista types_to_exclude 
+        """
+        types_to_exclude = ['Banner', 'BannerContainer', 'CollageAlias', 'CollageColumn', 'CollageRow', 'Favorite', 'Large Plone Folder', 'Logos_Container', 'Logos_Footer', 'PoiPscTracker', 'SubSurvey', 'SurveyMatrix', 'SurveyMatrixQuestion', 'SurveySelectQuestion', 'SurveyTextQuestion',]
+        portal_state = getMultiAdapter((self.context, self.request),
+                                        name=u'plone_portal_state')
+        ptypes = portal_state.friendly_types()
+        import pdb;pdb.set_trace()
+        for typeEx in types_to_exclude:
+            if typeEx in ptypes:
+                ptypes.remove(typeEx)
+        
+        return ptypes
         
     def portal_url(self):
         """ Funcion a que retorna el path 
