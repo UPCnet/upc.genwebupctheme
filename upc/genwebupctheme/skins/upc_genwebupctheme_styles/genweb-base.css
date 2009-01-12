@@ -230,6 +230,8 @@ h2.kssattr-atfieldname-title {
 h2.kssattr-atfieldname-title .formControls { font-size: 0.75em;}
 h1 > img {padding-right:3px;}
 h4 {font-size:125%;}
+h1.documentFirstHeading {clear:left;}
+h1.documentFirstHeading img {display:none;}
 /*baners*/
 #baner {text-align:right;margin-bottom:10px;}
 #baner img { border: 1px solid #e6e6e6;margin-bottom:10px;}
@@ -1020,7 +1022,17 @@ h1 span.discreet {
 /*elimina img vistes*/
 .collage-item dl dt span img, .collage-item tr td span img, .template-atct_album_view #content dl dt span img, .template-folder_summary_view #content dl dt span img, .template-folder_tabular_view #content tr td span img, .template-atct_topic_view #content dl dt span img{ float:right; display:none;}
 
-/* vista estandard */
+/* vista estandard i colleccio simulant-la */
+.template-atct_topic_view table.listing {
+	background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
+	border-color:#CCC #E6E6E6 #E6E6E6;
+	border-style:solid;
+	border-width:1px;
+	padding:10px 10px 0 10px;
+	_padding:10px;}
+.template-atct_topic_view table.listing th, .template-atct_topic_view table.listing td, .template-atct_topic_view table.listing tr {
+	background: transparent;
+	border:0 !important;}
 dl dt span.summary {
 	background:transparent !important;
 	padding:0 0 0 0px;}
@@ -1031,6 +1043,12 @@ dl dt span.summary {
 	border-width:1px;
 	padding:10px 10px 0 10px;
 	_padding:10px;}
+.template-atct_topic_view table.listing td {
+	padding-left:20px;
+	background: transparent url(fletxa.gif) no-repeat 10px 4px;
+	font-weight:normal;
+	padding-bottom:10px;
+	}
 .template-folder_extended #content dl dt, .template-folder_listing #content dl dt{
 	padding-left:10px;
 	background: transparent url(fletxa.gif) no-repeat left 2px;
@@ -1434,6 +1452,7 @@ form[action$="controlpanel"] legend {font-size:11px !important;}
 ul.visualNoMarker, ol.visualNoMarker, ul.visualNoMarker li, ol.visualNoMarker li {
 list-style-image:none !important;
 list-style-type:none !important;
+clear:both !important;
 }
 
 
@@ -1441,4 +1460,20 @@ list-style-type:none !important;
 #portal-column-content fieldset > * textarea:focus {
     border-color: #007dcc;
     border-width: 1px;
-    background:#f3f3f3;}
+    background:#f3f3f3;
+    outline:none;}
+#portal-column-content fieldset input[type="submit"]:focus, #portal-column-content fieldset input.standalone:focus, #portal-column-content fieldset input.context:focus,
+#portal-column-content fieldset input[type="submit"]:active, #portal-column-content fieldset input.standalone:active, #portal-column-content fieldset input.context:active{
+    border-color: #007dcc;
+    border-width: 1px;
+    background:#3af;
+    outline:none;}   
+}
+
+#parent-fieldname-subject ul {margin-left:0 !important;}
+#parent-fieldname-subject ul li {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	margin-bottom:0.5em;
+	}

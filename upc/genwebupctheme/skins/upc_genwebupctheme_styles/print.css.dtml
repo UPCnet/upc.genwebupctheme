@@ -1,13 +1,30 @@
+/***************************************
+****************************************/
+/***************************************
+
+> ocultar imatges de menus
+> mida dels logos i imatge de model
+> canviar els page-breake-before
+> ocultar icones
+> controlar Verdanes
+> estructurar signatura i banda de logos
+
+
+****************************************/
+/***************************************
+****************************************/
+
 /* - print.css - */
 /*
 UPC PRINT GENWEB v3
 */
 
 body {
-    font-family: Verdana, Helvetica, Arial, sans-serif;
-    font-size: 5pt !important;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 9pt !important;
+    line-height:13pt !important;
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .titular1, .titular2, .titular3 {
     border: none;
     font-weight:bold;
     font-family: Helvetica, Arial, Verdana, sans-serif;
@@ -25,7 +42,7 @@ ul {
     font-weight: bold;
 }
 pre {
-    border: 1pt dotted black;
+    border: 0.25pt dotted black;
     white-space: pre;
     font-size: 8pt;
     overflow: auto;
@@ -33,41 +50,46 @@ pre {
 }
 table.listing,
 table.listing td {
-    border: 1pt solid black;
+    border: 0.25pt solid black;
     border-collapse: collapse;
 }
 a {
-    color: Black !important;
+    color: #007dcc !important;
     padding: 0 !important;
-    text-decoration: none !important;
+    text-decoration: underline !important;
 }
 a:link, a:visited {
-    color: #520;
+    color: #007dcc;
     background: transparent;
 }
 
 /* Page break class for use when printing */
 div.pageBreak {
+    /*
     page-break-before: always;
+    */
 }
 
 /* Uncomment these to get link addresses inserted along with the link text
-   when you print.
+   when you print.*/
 #content a:link:after, 
 #content a:visited:after {
    content: " [" attr(href) "] ";
 }
-*/
+
 /*titulars i derivats*/
-h1 {font-size: 16pt;}
-h2 {font-size: 14pt;}
-.titular1, h3 {font-size: 13pt;}
-.titular2, h4 {font-size: 12pt;}
-.titular3, h5 {font-size: 11pt;}
+h1 {font-size: 15pt;margin-top: 20pt; color:#557C95;}
+h2 {font-size: 13pt;margin-top: 15pt; color:#4d4d4d;}
+.titular1, h3 {font-size: 12pt;margin-top: 15pt; color:#557C95;}
+.titular2, h4 {font-size: 12pt;margin-top: 15pt; color:#557C95;}
+.titular3, h5 {font-size: 11pt;margin-top: 10pt; color:#557C95;}
 h6 {font-size: 10pt;}
 
 /* oculta elements irrellevants per imprimir */
 #capcalera,
+.validacio,
+.barra_idiomes,
+.barraCerca,
 #link-presentation,
 .fletxatop,
 div.top,
@@ -102,52 +124,62 @@ div.top,
     display: none;
 }
 
-/*.logoNeutre3 {
+/*imatges dels models*/
+.logoNeutre3 {
 	display: none;
 }
-*/
 
 /* canvi mides per destacar al document */
-img {width:200%; height:200%;}
+h2, h3, .ultimaModificacio {border-top:2pt solid #ccc; padding-top:5pt; margin-top:5pt;}
 .logo img {
-	width:400%; 
-	height:400%;
+	width:6% !important; 
+	height:6% !important;
 	border: 0px;
 	float:left;
 }
-.titolWeb {
-	width:400%; 
-	height:400%;
+.titolWeb {float:none;}
+.titolWeb img {
+	width:80% !important; 
+	height:80% !important;
 	border: 0px;
-	float:left;
+	float:none;
 }	
 
 #signText {
 	font-weight:bold;
-	font-size:10pt;
+	font-size:7pt;
 	color:#666;
 }
 #bandaLogos {
-	float:left;
+	float:none;
+	border-top: 0.25pt dashed #666;
+	border-bottom: 0.25pt dashed #999;
+	padding:10pt 0;
+	margin:10pt 0;
 }
-
+#bandaLogos img {border:0;}
 .ultimamodificacio {
-	font-size:9pt;
+	font-size:7pt;
 	font-style:italic;
+	display:block;
+	text-align:right;
 }
 .textDestacat {
-	font-size:11pt;
-	padding:5pt;
-	border:1pt solid black;
-}
-.destacatBandejat {
-	font-size:13pt;
-	padding:5pt;
-	border:1pt solid black;
-	border-botom:	8pt solid black;
-}
-.destacatQuadresDins {
 	font-size:9pt;
 	padding:5pt;
-	border:2pt dashed #999;
+	border:0.25pt solid black;
 }
+.destacatBandejat {
+	font-size:11pt;
+	padding:5pt;
+	border:0.25pt solid black;
+	border-botom:	2pt solid black;
+}
+.destacatQuadres,
+.destacatQuadresDins {
+	font-size:7pt;
+	padding:5pt;
+	border:0.25pt dashed #999;
+}
+#estilImgPhotoAlbum1 {width:33%;height:33%;}
+.fitxa {border:0.25pt solid black; padding:5pt;}

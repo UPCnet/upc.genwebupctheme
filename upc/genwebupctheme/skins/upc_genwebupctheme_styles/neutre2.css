@@ -68,3 +68,6 @@ select[id="form.masterdoctorado"] option {color: #999}
 .portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}
+#portal-column-content {
+margin-left:227px !important;
+}

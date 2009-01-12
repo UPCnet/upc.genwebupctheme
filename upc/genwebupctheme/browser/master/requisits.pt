@@ -30,15 +30,15 @@
 					
 							<!-- en català -->
 			                    <span tal:condition="python:lang_code=='ca'" tal:omit-tag=""><b>Requisits generals</b><br />
-			                    Vegeu la <a href="http://www.upc.edu/web/sga/calendari/namo/namo_index.htm" target="_blank">normativa acadèmica</a></span>
+			                    Vegeu <a href="http://upc.edu/estudis-upc/masters-eees/requisits_cat.php" target="_blank">complir els requisits acadèmics d'accés a un Màster Universitari</a>.</span>
 		
 							<!-- en espanyol -->
 		                        <span tal:condition="python:lang_code=='es'" tal:omit-tag=""><b>Requisitos generales</b><br />
-		                        Ver la <a href="http://www.upc.edu/web/sga/calendari/namo_castella/namo_index.htm" target="_blank">normativa académica</a></span>
+		                        Ver <a href="http://www.upc.edu/estudis-upc/masters-eees/requisits_esp.php" target="_blank">cumplir los requisitos académicos de acceso a un Máster Universitario</a>.</span>
 							
 							<!-- en anglès -->
 		                        <span tal:condition="python:lang_code=='en'" tal:omit-tag=""><b>General requirements</b><br />
-		                        See <a href="http://www.upc.edu/web/sga/calendari/namo_angles/namo_index.htm" target="_blank">academic regulations</a></span>
+		                        See <a href="http://www.upc.edu/estudis-upc/masters-eees/requisits_ing.php" target="_blank">academic regulations</a>.</span>
 
                             <br /><br />
 

@@ -23,7 +23,7 @@
 	padding: 75px 5px 0 0}
 #portal-personaltools {
 	font-size:0.9em;
-	background-color: #fff;
+	background-color: transparent;
 	border-bottom: 0;
 	border-top: 0;
 	padding: 0;
@@ -122,3 +122,6 @@
 /*columnes*/
 .columnaCentre {
 	width:555px;}
+#portal-column-content.sl {/*columns.css (line 23)*/
+margin-left:227px;
+}

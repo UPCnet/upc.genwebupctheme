@@ -614,16 +614,20 @@ height:80px !important;
 width:60px !important;
 padding:3px !important;
 border:1px solid #E6E6E6 !important;
-margin-top:-15px;
 background:white;
 }
 .commentPortrait {
 margin:0px !important;
+position:relative;
+top:-15px;
 }
 .boardComment {
 border:0px !important;
 margin:2em 0px !important;
 position:relative !important;
+}
+.boardCommentContent {
+min-height:80px;
 }
 .boardCommentBody {
 padding:0.5em 1em;
@@ -700,9 +704,9 @@ color:#4d4d4d;
 	visibility:hidden;
 	width:0px !important;
 }
-.template-forum_view .documentFirstHeading, .template-board_view .documentFirstHeading, .template-board_view_global .documentFirstHeading {
+/*.template-forum_view .documentFirstHeading, .template-board_view .documentFirstHeading, .template-board_view_global .documentFirstHeading {
 	margin-left:-8px !important;
-}
+}*/
 .template-board_view_global	.forumTitleCell a span, .template-board_view_global .forumMostRecentCell span {display:block !important; float:left !important;margin-bottom:3px !important;}
 .template-board_view_global .listing thead, .template-board_view_global .listing tbody, .template-board_view_global table.listing, .template-board_view_global .listing td, .template-board_view_global .listing th, .template-board_view_global .listing tr {border:0px; font-size:1em;}
 .template-board_view_global .listing th {font-weight:bold; font-size:1em !important; color:#666;background:transparent;border-bottom:1px solid #e6e6e6 !important;}
