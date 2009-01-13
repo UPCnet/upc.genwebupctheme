@@ -1,0 +1,15 @@
+<tal:block tal:define="langtool nocall:context/portal_languages;
+                       lang_code langtool/getPreferredLanguage;
+                       global utils context/@@upc.genweb.utils;">
+
+<div id="portal-breadcrumbs">
+  <span id="breadcrumbs-you-are-here">Esteu aquí:</span>
+    <a href="http://localhost:8300/masters">Inici</a>
+   <span class="breadcrumbSeparator"> » </span>
+  <span dir="ltr">
+    <span tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">competencies</span>
+  </span>
+</div>
+
+</tal:block>
+
