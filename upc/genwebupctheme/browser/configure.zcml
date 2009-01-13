@@ -421,14 +421,6 @@
 
 <!-- Browser page info-general MASTERS -->
 
-<!--    <browser:page-->
-<!--      for="upc.genwebupctheme.browser.master.information.IinfoGeneral"-->
-<!--      name="breadcrumbs_view"-->
-<!-- 	  class=".master.breadcrumbs.infoGeneral"-->
-<!-- 	  permission="zope.Public"-->
-<!-- 	  allowed_attributes="breadcrumbs"-->
-<!-- 	  />-->
-
     <browser:page
       for="*"    
       name="info-general"
@@ -438,14 +430,6 @@
 
 <!-- Browser page competencies MASTERS -->
 
-<!--    <browser:page-->
-<!--      for="upc.genwebupctheme.browser.master.information.Icompetencies"-->
-<!--      name="breadcrumbs_view"-->
-<!-- 	  class=".master.breadcrumbs.competencies"-->
-<!-- 	  permission="zope.Public"-->
-<!-- 	  allowed_attributes="breadcrumbs"-->
-<!-- 	  />-->
-
     <browser:page
       for="*"
       name="competencies"
@@ -454,14 +438,6 @@
       />
 
 <!-- Browser page requisits MASTERS -->
-
-<!--    <browser:page-->
-<!--      for="upc.genwebupctheme.browser.master.information.Irequisits"-->
-<!--      name="breadcrumbs_view"-->
-<!-- 	  class=".master.breadcrumbs.requisits"-->
-<!-- 	  permission="zope.Public"-->
-<!-- 	  allowed_attributes="breadcrumbs"-->
-<!-- 	  />-->
 
     <browser:page
       for="*"
