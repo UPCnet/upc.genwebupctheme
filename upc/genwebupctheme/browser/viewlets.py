@@ -8,6 +8,8 @@ from cgi import escape
 from upc.genwebupctheme.browser import utils
 from Products.CMFCore.utils import getToolByName
 
+from upc.genwebupctheme.browser.master.information import IinfoGeneral
+
 class DocumentActions(DocumentActionsViewlet):
 
     render = ViewPageTemplateFile("document_actions.pt")
@@ -18,8 +20,13 @@ class PathBar(PathBarViewlet):
 
 
 class PathBarRoot(PathBarViewlet):
-    
-    render = ViewPageTemplateFile('null.pt')
+
+    def __init__(self, context, request, view, manager=None):
+        super(PathBarViewlet, self).__init__(context,request,view, manager)
+        if IinfoGeneral.providedBy(self.view):
+            render = ViewPageTemplateFile('null.pt')
+
+#    render =  ViewPageTemplateFile('null.pt')
 
 class DarreraModificacio(ViewletBase):
     
