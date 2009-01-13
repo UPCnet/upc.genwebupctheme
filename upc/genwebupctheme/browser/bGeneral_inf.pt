@@ -2,9 +2,9 @@
                        lang_code langtool/getPreferredLanguage;
                   	   global utils context/@@upc.genweb.utils;">
 	
-<div id="portal-breadcrumbs">
-  <span id="breadcrumbs-you-are-here">Esteu aquí:</span>
-    <a href="http://localhost:8300/masters">Inici</a>
+<div id="portal-breadcrumbs" i18n:domain="plone">
+  <span id="breadcrumbs-you-are-here" i18n:translate="you_are_here">You are here:</span>
+    <a i18n:translate="tabs_home" tal:attributes="href view/navigation_root_url">Home</a>
    <span class="breadcrumbSeparator"> » </span>
   <span dir="ltr">
     <span tal:content="python: utils.recodifica(utils.getTextMaster('info_gral',lang_code))">information</span>
