@@ -51,7 +51,7 @@ class ContactForm(formbase.PageForm):
 
         str = "Heu rebut aquest correu perquè en/na"
         str1 = "l'espai"
-        source = "%s <%s>" % (data['nombre'], data['destinatario'])
+        source = "%s <%s>" % (escape(safe_unicode(data['nombre'])), escape(safe_unicode(data['destinatario'])))
         subject = "[Formulari Contacte] %s" % (escape(safe_unicode(data['asunto'])))
         message = "%s %s %s ha\nenviat comentaris sobre %s Genweb que administreu a\n%s.\n\nEl missatge es:\n\n%s\n--\n%s" % (escape(safe_unicode(str)), escape(safe_unicode(data['nombre'])), escape(safe_unicode(data['destinatario'])),escape(safe_unicode(str1)), portal.absolute_url(),escape(safe_unicode(data['mensaje'])),from_name)
 
