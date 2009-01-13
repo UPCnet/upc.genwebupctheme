@@ -8,4 +8,9 @@
     condition_expr="" url_expr="string:${object_url}/sharing" visible="False">
   <permission value="Manage properties"/>
  </action>
+  <action title="Properties" action_id="metadata" category="object"
+    condition_expr="" url_expr="string:${object_url}/properties"
+    visible="False">
+  <permission value="Modify portal content"/>
+ </action>
 </object>

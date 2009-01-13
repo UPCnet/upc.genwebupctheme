@@ -2,6 +2,7 @@
 <object name="portal_actions" meta_type="Plone Actions Tool"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <action-provider name="portal_workflow"/>
+ <!-- Comento aquesta linia perque surten dos pestanyes de log al Poi!
  <action-provider name="portal_types">
   <action title="Log" action_id="log" category="object"
      condition_expr="nocall: object/@@log|nothing"
@@ -9,8 +10,9 @@
    <permission>View</permission>
   </action>
  </action-provider>
+ -->
  <action-provider name="portal_actions"/>
-  
+ 
  <object name="portal_tabs" meta_type="CMF Action Category">
   <property name="title"></property>
   <object name="index_html" meta_type="CMF Action" i18n:domain="plone">

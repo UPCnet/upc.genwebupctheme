@@ -165,15 +165,15 @@ body
 
 .TB_Button_Off, .TB_Combo_Off
 {
-	opacity: 0.70; /* Safari, Opera and Mozilla */
-	filter: alpha(opacity=70); /* IE */
-	/* -moz-opacity: 0.70; Mozilla (Old) */
+   opacity: 0.80; /* Safari, Opera and Mozilla */
+   filter: alpha(opacity=80); /* IE */
+   /* -moz-opacity: 0.80; Mozilla (Old) */
 }
 
 .TB_Button_Disabled
 {
-    opacity: 0.20; /* Safari, Opera and Mozilla */
-    filter: gray() alpha(opacity=20); /* IE */
+   opacity: 0.20; /* Safari, Opera and Mozilla */
+   filter: gray() alpha(opacity=20); /* IE */
 }
 
 .TB_Button_Padding
