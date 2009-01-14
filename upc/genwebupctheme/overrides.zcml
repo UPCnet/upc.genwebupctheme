@@ -88,4 +88,12 @@
         permission="zope2.View"
         />  
 
+    <browser:page
+        name="log"
+        for="Products.Poi.interfaces.ITracker"
+        permission="cmf.ChangeLocalRoles"
+        class="Products.Poi.browser.log.LogView"
+        template="log.pt"
+     />
+
 </configure>
