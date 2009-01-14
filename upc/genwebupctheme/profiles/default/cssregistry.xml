@@ -1,72 +1,111 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration for the portal_css tool. -->
-
-<object name="portal_css">
-
- <stylesheet title=""
-    id="++resource++upc.genwebupctheme.stylesheets/main.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>
-
- <stylesheet title=""
-    id="genweb-estils.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>
-
- <stylesheet title=""
-    id="genweb-base.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>
-    
-<stylesheet title=""
-    id="genweb-SCP-temp.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>    
-
-<stylesheet title=""
-    id="plantilles.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>    
-    
-<stylesheet title=""
-    id="plantillesIE.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>    
-    
- <stylesheet title=""
-    id="neutre3.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>
-
-<stylesheet title=""
-    id="unitats.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Unitat'"/>    
-    
-<stylesheet title=""
-    id="neutre2.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Neutre2'"/>    
-
-<stylesheet title=""
-    id="masters.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Master'"/>    
-
-<stylesheet title=""
-    id="dynamic.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="False" compression="safe" cookable="True"
-    enabled="1" expression=""/>
-
+<object name="portal_css" meta_type="Stylesheets Registry" autogroup="False">
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="not: portal/portal_membership/isAnonymousUser"
+    id="member.css" media="screen" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:portal.restrictedTraverse('@@plone_portal_state').is_rtl()"
+    id="RTL.css" media="screen" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="base.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="public.css" media="screen" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="columns.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="authoring.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="portlets.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="controlpanel.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="False" expression="" id="mobile.css" media="handheld"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="deprecated.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="navtree.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="invisibles.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="forms.css" media="screen" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="ploneKss.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:portal.kupu_library_tool.isKupuEnabled(REQUEST=request)"
+    id="kupustyles.css" media="" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:portal.kupu_library_tool.isKupuEnabled(REQUEST=request)"
+    id="kupuplone.css" media="" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:portal.kupu_library_tool.isKupuEnabled(REQUEST=request)"
+    id="kupudrawerstyles.css" media="" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="False"
+    enabled="on" expression="object/@@collage|nothing" id="collage.css"
+    media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="Plone Survey Results" cacheable="True" compression="safe"
+    cookable="True" enabled="on"
+    expression="python:object.template.id == 'survey_view_results'"
+    id="survey_results.css" media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="False"
+    enabled="on" expression="" id="popoll.css" media="screen" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression=""
+    id="++resource++upc.genwebupctheme.stylesheets/main.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="genweb-estils.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="genweb-base.css" media="all"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="genweb-SCP-temp.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="plantilles.css" media="all"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="plantillesIE.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="neutre3.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Unitat'"
+    id="unitats.css" media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Neutre2'"
+    id="neutre2.css" media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Master'"
+    id="masters.css" media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="False" compression="safe" cookable="True"
+    enabled="on" expression="" id="dynamic.css" media="all" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="ploneCustom.css" media="all"
+    rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on" expression="" id="print.css" media="print" rel="stylesheet"
+    rendering="import"/>
 </object>
