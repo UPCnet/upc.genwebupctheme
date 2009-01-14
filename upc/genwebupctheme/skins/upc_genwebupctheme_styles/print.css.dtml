@@ -21,8 +21,13 @@ UPC PRINT GENWEB v3
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 9pt !important;
+    font-size: 150% !important;
+    *font-size: 75% !important; /*ajustament per a IE*/
     line-height:13pt !important;
+    background:none !important;
+}
+@media print and (-webkit-min-device-pixel-ratio:0) {
+    body { font-size: 50% !important; }/*saf*/
 }
 h1, h2, h3, h4, h5, h6, .titular1, .titular2, .titular3 {
     border: none;
@@ -41,49 +46,7 @@ ul {
 .documentDescription {
     font-weight: bold;
 }
-pre {
-    border: 0.25pt dotted black;
-    white-space: pre;
-    font-size: 8pt;
-    overflow: auto;
-    padding: 1em 0;
-}
-table.listing,
-table.listing td {
-    border: 0.25pt solid black;
-    border-collapse: collapse;
-}
-a {
-    color: #007dcc !important;
-    padding: 0 !important;
-    text-decoration: underline !important;
-}
-a:link, a:visited {
-    color: #007dcc;
-    background: transparent;
-}
 
-/* Page break class for use when printing */
-div.pageBreak {
-    /*
-    page-break-before: always;
-    */
-}
-
-/* Uncomment these to get link addresses inserted along with the link text
-   when you print.*/
-#content a:link:after, 
-#content a:visited:after {
-   content: " [" attr(href) "] ";
-}
-
-/*titulars i derivats*/
-h1 {font-size: 15pt;margin-top: 20pt; color:#557C95;}
-h2 {font-size: 13pt;margin-top: 15pt; color:#4d4d4d;}
-.titular1, h3 {font-size: 12pt;margin-top: 15pt; color:#557C95;}
-.titular2, h4 {font-size: 12pt;margin-top: 15pt; color:#557C95;}
-.titular3, h5 {font-size: 11pt;margin-top: 10pt; color:#557C95;}
-h6 {font-size: 10pt;}
 
 /* oculta elements irrellevants per imprimir */
 #capcalera,
@@ -129,8 +92,6 @@ div.top,
 	display: none;
 }
 
-/* canvi mides per destacar al document */
-h2, h3, .ultimaModificacio {border-top:2pt solid #ccc; padding-top:5pt; margin-top:5pt;}
 .logo img {
 	width:6% !important; 
 	height:6% !important;
@@ -145,41 +106,48 @@ h2, h3, .ultimaModificacio {border-top:2pt solid #ccc; padding-top:5pt; margin-t
 	float:none;
 }	
 
-#signText {
-	font-weight:bold;
-	font-size:7pt;
-	color:#666;
+
+#visual-portal-wrapper {
+margin:0 auto;
+padding:0;
+width:100% !important;
 }
-#bandaLogos {
-	float:none;
-	border-top: 0.25pt dashed #666;
-	border-bottom: 0.25pt dashed #999;
-	padding:10pt 0;
-	margin:10pt 0;
+#portal-column-content.sl {
+margin-left:0px !important;
 }
-#bandaLogos img {border:0;}
-.ultimamodificacio {
-	font-size:7pt;
-	font-style:italic;
-	display:block;
-	text-align:right;
+.logo_m img {width:33%; height:33%;}
+.logo_m {margin-left:0px; width:20%; *width:10%}
+
+html>body*.logo_m {
+    height:15%;
 }
-.textDestacat {
-	font-size:9pt;
-	padding:5pt;
-	border:0.25pt solid black;
+
+.titolWeb_m a img {width:90%; height:90%;}
+.cursMaster {font-size:110%;}
+.titolWeb_m {margin-top:0px;*margin-left:0;*float:left;}
+
+html>body*.titolWeb_m a img {
+    height:3.5%;
 }
-.destacatBandejat {
-	font-size:11pt;
-	padding:5pt;
-	border:0.25pt solid black;
-	border-botom:	2pt solid black;
+
+
+.imatgeCapcalera_m {display:none;}
+.barraBranca_m table tbody tr td {width:100%; text-align:left !important;}
+.barraBranca_m table {width:100% !important;}
+.barraBranca_m {width:100%;}
+#signText {width:100%}
+.bandaPeu, .sobreElWeb, .banerMasters {display:none;}
+
+a {
+    text-decoration: underline !important;
 }
-.destacatQuadres,
-.destacatQuadresDins {
-	font-size:7pt;
-	padding:5pt;
-	border:0.25pt dashed #999;
-}
-#estilImgPhotoAlbum1 {width:33%;height:33%;}
-.fitxa {border:0.25pt solid black; padding:5pt;}
+
+*.liniaPrincipal_m {border-top-width:5px !important;border-top-style:solid !important;}
+
+#content a:link:after, 
+.plain a:link:after, 
+#content a:visited:after, 
+.plain a:visited:after {
+   content: " [" attr(href) "] ";
+   font-style: italic;
+   text-decoration:none !important;}

@@ -39,7 +39,8 @@ input.searchField,
 
 .quadradet
 	{background-color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
-
+.liniaPrincipal_m
+	{border-color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
 
 blockquote,
 #content .link-category
@@ -102,6 +103,7 @@ pre
 .taulaRegistres .fonsDestacat1,
 .calendari .fonsDestacat2,
 .taulaRegistres .fonsDestacat1,
+.fonsDestacat1, .fonsDestacat2,
 .taulaRegistres .cap td
 	{color:<tal:propietat replace="e2">Especific2</tal:propietat>;}
 
@@ -114,7 +116,7 @@ pre
 
 
 
-
+.fonsDestacat2,
 .calendari .fonsDestacat2,
 .taulaRegistres .fonsDestacat2,
 .destacatQuadres
@@ -126,7 +128,7 @@ pre
 	{border-bottom: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .separadorV
 	{border-left: 1px dashed <tal:propietat replace="e4">Especific4</tal:propietat>;}
-
+.fonsDestacat1,
 .calendari .fonsDestacat1,
 .taulaRegistres .fonsDestacat1
 	{background-color: <tal:propietat replace="e5">Especific5</tal:propietat>;}

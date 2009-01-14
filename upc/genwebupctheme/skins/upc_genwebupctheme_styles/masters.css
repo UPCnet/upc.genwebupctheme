@@ -15,16 +15,17 @@
 	margin-top: -31px}  
 .logo_m{
 	float:left;
-	margin:13px 0 0 25px;
+	margin:8px 0 0 25px;
 	min-width:160px}
 .logo_m img {
 	float:left}
 .banerMasters{
 	float:right;
-	padding-top:5px}
+	padding-top:0px}
 .titolWeb_m{
 	text-align:left;
-	margin-left:255px}
+	margin-left:255px;
+	margin-top:3px;}
 .cursMaster{
 	font-family:Arial, Helvetica, Verdana, sans-serif;
 	font-size:16px;
@@ -87,14 +88,16 @@ select[id="form.tipusNeutre2"] option {color: #999}
 /*navegacio masters*/
 #navMasters .portletItem {
 	border-top:0px;
-	padding-bottom:0px;}
+	padding-bottom:0px;
+	_margin-bottom:10px !important;
+	}
 #navMasters li {border-bottom:0px;}
 #navMasters ul.navTreeLevel2 li {
 	background:transparent url(quadret.gif) no-repeat scroll left 3px !important;
 	border-bottom:0px;
 	font-size:0.8em;
 	margin:5px 1px;
-	padding:0px 0px 0px 10px;
+	padding:0px 0px 0px 10px !important;
 	line-height:1.5em;
 	list-style-type:none;}
 
@@ -102,7 +105,7 @@ select[id="form.tipusNeutre2"] option {color: #999}
 #portal-column-one .portletNavigationTree, #portal-column-one .portletNavigationTree ul {margin-top:0px;}
 #portal-column-one #navMasters #portlet-navigation-tree, #portal-column-one #navMasters #portlet-navigation-tree .portletItem {margin-bottom:0px;_margin-bottom:-10px;}
 /*corregeix navegacio sota navmasters*/
-.portal-breadcumbs-null {height:15px;}
+.portal-breadcumbs-null {height:11px;}
 #region-content, .documentContent {padding:0 0 1em 0 !important;}
 /*subpagines info masters*/
 .plain {margin-top:20px;line-height:1.5em;}
@@ -122,3 +125,6 @@ list-style-type:none;
 margin:0;
 padding:5px 0 5px 20px;
 }
+.contentViews li a {padding-bottom: 2px;}
+/*retocs path ie per interferencia del info master*/
+#portal-column-one {*padding-top:10px;}

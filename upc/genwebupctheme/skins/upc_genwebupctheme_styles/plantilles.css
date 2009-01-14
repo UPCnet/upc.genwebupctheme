@@ -115,6 +115,16 @@ html*.calendari table{
 	color: #6b5c4f;  
 	background-color: #cbb380;
 	font-weight: bold}
+/*formatar a l'FCK amb taula sense format*/
+.fonsDestacat2 {	
+	color: #6b5c4f;  
+	background-color: #cbb380;
+	font-weight: bold}
+.fonsDestacat1 {
+	background-color: #beb4ab;
+	color: #6b5c4f; 
+	font-weight: bold}
+
 .notesCalendari{ 
 	border-left: 4px solid #F60;
 	padding-left: 10px; 

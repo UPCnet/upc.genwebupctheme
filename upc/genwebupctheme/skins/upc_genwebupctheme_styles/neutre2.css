@@ -44,6 +44,7 @@
 	*margin-top: -30px;
 	float:left;
 	position:absolute}
+html>/**/body .validacio, x:-moz-any-link, x:default {margin-top:-29px;} /* FF3 */
 html*.validacio {
 	margin-top: -30px} 
 /*columnes*/
@@ -63,11 +64,10 @@ label[id="form.titolcapsaleraMaster"], label[id="form.idestudiMaster"], label[id
 input[id="form.titolcapsaleraMaster"], input[id="form.idestudiMaster"], input[id="form.idtitulacioMaster"], select[id="form.masterdoctorado"], input[id="form.ambitdoctorat_ca"],  input[id="form.ambitdoctorat_es"],  input[id="form.ambitdoctorat_en"] {background:#e6e6e6}
 select[id="form.masterdoctorado"] option {color: #999}
 /*flota tapa navegacio*/	
-.portal-breadcumbs-null {height:15px;}
+.portal-breadcumbs-null {height:11px;}
 #region-content, .documentContent {padding:0 0 1em 0 !important;}
 .portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}
-#portal-column-content {
-margin-left:227px !important;
-}
+#portal-column-content {margin-left:227px !important;}
+.template-plone_control_panel #portal-column-content {margin-left:0px !important;}

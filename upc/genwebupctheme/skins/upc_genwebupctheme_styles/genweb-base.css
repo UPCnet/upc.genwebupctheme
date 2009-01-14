@@ -882,10 +882,12 @@ dl dd {margin-left:0px;}
 	margin: 15px 0 25px 0;}
 .eventDetails {
 	clear:both;
-	float:right;
-	margin:5px 10px 10px 10px;
+	float:right;	
+	padding:5px 10px 10px 10px;
 	min-width:300px;
 	max-width:400px;
+	background:#fff;
+	position:relative;
 	_width:300px;}
 /*EVENT task*/
 .vertical{
@@ -1036,7 +1038,7 @@ h1 span.discreet {
 dl dt span.summary {
 	background:transparent !important;
 	padding:0 0 0 0px;}
-.template-folder_extended #content dl, .template-folder_listing #content dl{
+.template-atct_topic_view #content dl, .template-folder_extended #content dl, .template-folder_listing #content dl{
 	background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
 	border-color:#CCC #E6E6E6 #E6E6E6;
 	border-style:solid;
@@ -1049,14 +1051,16 @@ dl dt span.summary {
 	font-weight:normal;
 	padding-bottom:10px;
 	}
-.template-folder_extended #content dl dt, .template-folder_listing #content dl dt{
+.template-atct_topic_view #content dl dt span a {background-image:none !important; padding-left:0 !important;}
+.template-atct_topic_view table.listing th {background:#f3f3f3;border-bottom:1px solid #e6e6e6 !important;}
+.template-atct_topic_view #content dl dt, .template-folder_extended #content dl dt, .template-folder_listing #content dl dt{
 	padding-left:10px;
 	background: transparent url(fletxa.gif) no-repeat left 2px;
 	font-weight:normal;}
-.template-folder_extended #content dl dd, .template-folder_listing #content dl dd{
+.template-atct_topic_view #content dl dd, .template-folder_extended #content dl dd, .template-folder_listing #content dl dd{
 	margin: 0 10px 15px 10px;
 	font-size:90%;}
-.template-folder_extended #content dl dt img, .template-folder_listing #content dl dt img{
+.template-atct_topic_view #content dl dt img, .template-folder_extended #content dl dt img, .template-folder_listing #content dl dt img{
 	float:right;
 	visibility:hidden;}
 .template-folder_extended #content dl dt .documentByLine, .template-folder_listing #content dl dt .documentByLine {
@@ -1167,7 +1171,7 @@ dl dt span.summary {
 /** per mes preferencia que en els portlets */
 table.vertical tbody th {
 	font-size: 150% !important;
-	width:100px;}
+	width:115px;}
 table.vertical .summary {color: #333 !important;}
 .fletxatop{text-align:right; margin-bottom:0;padding-right:2px;}
 
@@ -1186,7 +1190,6 @@ table.vertical .summary {color: #333 !important;}
 .collage-item dl dd{
 	margin-left:10px;
 	margin-right:25px;}
-.template-folder_summary_view #content dl dt span a {padding-left:15px; background: url(quadret.gif) no-repeat 0px 0px !important;}
 /** per si de cas hi ha interferencies */
 a,a:active,a:link,a:visited{color:#0077cc;text-decoration:none;}
 a:hover{color:#0077cc;text-decoration:underline;}
@@ -1288,7 +1291,6 @@ dd.portletItem .navTreeItem a:hover {
 	margin: 0 3px;}
 .template-atct_topic_view .listing {font-size:1em;}
 .template-atct_topic_view .listing td img{display:none;}
-.template-atct_topic_view #content dl dt span a {background: url(quadret.gif) no-repeat 0 0 !important; padding-left:15px;}
 .template-atct_topic_view .listing th img{padding-left:5px;}
 .template-atct_album_view #content dl {
 	background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
