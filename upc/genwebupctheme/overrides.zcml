@@ -93,7 +93,7 @@
         for="Products.Poi.interfaces.ITracker"
         permission="cmf.ChangeLocalRoles"
         class="Products.Poi.browser.log.LogView"
-        template="log.pt"
+        template="browser/productes/log.pt"
      />
 
 </configure>
