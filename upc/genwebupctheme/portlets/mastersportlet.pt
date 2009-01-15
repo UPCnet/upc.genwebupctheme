@@ -26,13 +26,17 @@
 					                   tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">Competències 
 					                </a></div></li></span>
 
-					<!-- Pla estudis -->
-					<!-- aquest tal fa fallar el peu de la pagina i no ho puc reparar -->
-					<tal:block tal:define="data python: utils.select_plaEstudis(utils.getGWConfig().idestudiMaster)">
-				       <li class="navTreeItem" tal:condition="python: data['upc_estudi.m_pla_estudis_'+utils.cambiaPrefijo(lang_code)]"><div>				
-				       <a class="visualIconPadding" target="_blank"
-				                          tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(utils.getGWConfig().idestudiMaster)+'_p_'+utils.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
-				                          tal:content="python: utils.recodifica(utils.getTextMaster('pla_estudis',lang_code))">Pla d'estudis [pdf] </a></div></li></tal:block>		
+                    <!-- Pla estudis -->
+                    <!-- aquest tal fa fallar el peu de la pagina i no ho puc reparar -->
+                    <tal:block tal:define="data python: utils.select_plaEstudis(utils.getGWConfig().idestudiMaster)">
+                       <li class="navTreeItem" tal:condition="python: data['upc_estudi.m_pla_estudis_'+utils.cambiaPrefijo(lang_code)]">
+                         <a class="visualIconPadding" target="_blank"
+                               tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(utils.getGWConfig().idestudiMaster)+'_p_'+utils.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
+                               tal:content="python: utils.recodifica(utils.getTextMaster('pla_estudis',lang_code))">Pla d'estudis [pdf]
+                         </a>
+                       </li>
+                    </tal:block>
+
 
 					<!-- Requisits d'accés -->
 					<span tal:condition="python: records['acces_'+utils.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
