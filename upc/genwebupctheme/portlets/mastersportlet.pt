@@ -6,68 +6,78 @@
 	            url_actual python: request.ACTUAL_URL.split('/')[-1];
 	            pURL python:context.portal_url()">
 	
-	<div tal:define="records python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
-		<dl class="portlet" id="portlet-navigation-tree">		
-		     <dd class="portletItem lastItem">
-		        <ul class="portletNavigationTree navTreeLevel0">
-		        
-				<li class="navTreeItem visualNoMarker" >
-				<div><a tal:attributes="class python: utils.test(url_actual=='info-general','navItem1 visualIconPadding navTreeCurrentItem','navItem1 visualIconPadding');
-		                                   href string:${pURL}/info-general"		                                  
-		                   tal:content="python: utils.recodifica(utils.getTextMaster('info_gral',lang_code))">InfoGeneral </a>
+ <div tal:define="records python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
+  <dl class="portlet" id="portlet-navigation-tree">		
+   <dd class="portletItem lastItem">
+    <ul class="portletNavigationTree navTreeLevel0">
+	        
+	 <li class="navTreeItem visualNoMarker" >
+	  <div><a tal:attributes="class python: utils.test(url_actual=='info-general','navItem1 visualIconPadding navTreeCurrentItem','navItem1 visualIconPadding');
+		                      href string:${pURL}/info-general"		                                  
+		      tal:content="python: utils.recodifica(utils.getTextMaster('info_gral',lang_code))">InfoGeneral</a>
+	  </div>
+     </li>
+           
+       <div>
+	    <ul tal:condition="python: url_actual=='info-general' or url_actual=='competencies' or url_actual=='requisits'" class="navTree navTreeLevel2">
 
-				</div><div>
-				<ul tal:condition="python: url_actual=='info-general' or url_actual=='competencies' or url_actual=='requisits'" class="navTree navTreeLevel2">
-					<!-- Competencies -->
-					<span tal:condition="python: records['m_competencies_'+utils.cambiaPrefijo(lang_code)] or records['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]">
-					<li class="navTreeItem visualNoMarker"><div>
-					<a tal:attributes="class python: utils.test(url_actual=='competencies','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-					                                   href string:${pURL}/competencies"
-					                   tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">Competències 
-					                </a></div></li></span>
+		 <!-- Competencies -->
+	     <span tal:condition="python: records['m_competencies_'+utils.cambiaPrefijo(lang_code)] or records['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]">
+          <li class="navTreeItem visualNoMarker">
+            <div><a tal:attributes="class python: utils.test(url_actual=='competencies','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
+				                    href string:${pURL}/competencies"
+				    tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">Competències</a>
+            </div>
+          </li>
+         </span>
 
-                    <!-- Pla estudis -->
-                    <!-- aquest tal fa fallar el peu de la pagina i no ho puc reparar -->
-                    <tal:block tal:define="data python: utils.select_plaEstudis(utils.getGWConfig().idestudiMaster)">
-                       <li class="navTreeItem" tal:condition="python: data['upc_estudi.m_pla_estudis_'+utils.cambiaPrefijo(lang_code)]">
-                         <a class="visualIconPadding" target="_blank"
-                               tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(utils.getGWConfig().idestudiMaster)+'_p_'+utils.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
-                               tal:content="python: utils.recodifica(utils.getTextMaster('pla_estudis',lang_code))">Pla d'estudis [pdf]
-                         </a>
-                       </li>
-                    </tal:block>
+         <!-- Pla estudis -->
+         <!-- aquest tal fa fallar el peu de la pagina i no ho puc reparar -->
+         <tal:block tal:define="data python: utils.select_plaEstudis(utils.getGWConfig().idestudiMaster)">
+           <li class="navTreeItem" tal:condition="python: data['upc_estudi.m_pla_estudis_'+utils.cambiaPrefijo(lang_code)]">
+              <a class="visualIconPadding" target="_blank"
+               tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(utils.getGWConfig().idestudiMaster)+'_p_'+utils.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
+               tal:content="python: utils.recodifica(utils.getTextMaster('pla_estudis',lang_code))">Pla d'estudis [pdf] </a>
+           </li>
+         </tal:block>
 
+	     <!-- Requisits d'accés -->
+	     <span tal:condition="python: records['acces_'+utils.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
+		  <li class="navTreeItem visualNoMarker">
+		   	<a tal:attributes="class python: utils.test(url_actual=='requisits','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
+		                       href string:${pURL}/requisits"
+		       tal:content="python:utils.recodifica(utils.getTextMaster('com_accedir',lang_code))">Com accedir-hi</a>
+           </li>
+         </span>
 
-					<!-- Requisits d'accés -->
-					<span tal:condition="python: records['acces_'+utils.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
-					<li class="navTreeItem visualNoMarker"><div>
-					<a tal:attributes="class python: utils.test(url_actual=='requisits','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-					                                   href string:${pURL}/requisits"
-					                   tal:content="python:utils.recodifica(utils.getTextMaster('com_accedir',lang_code))">Com accedir-hi </a></div></li></span>
+         <!-- Preinscripcio -->
+		 <li class="navTreeItem visualNoMarker">
+		   <a class="navItem2 visualIconPadding" target='_blank'
+		     tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/preinscripcio_'+utils.cambiaPrefijo(lang_code)+'.php'"
+		     tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.recodifica(utils.getTextMaster('preinscripcio_open',lang_code)),utils.recodifica(utils.getTextMaster('preinscripcio_close',lang_code)))">preinscripcio</a>
+         </li>
 
-					<!-- Preinscripcio -->
-			              <li class="navTreeItem visualNoMarker"><div>
-			              <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/preinscripcio_'+utils.cambiaPrefijo(lang_code)+'.php'"
-			                   tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.recodifica(utils.getTextMaster('preinscripcio_open',lang_code)),utils.recodifica(utils.getTextMaster('preinscripcio_close',lang_code)))">preinscripcio </a></div></li>
+         <!-- Llista d'admesos -->
+		 <li class="navTreeItem visualNoMarker">
+		   <a class="navItem2 visualIconPadding" target='_blank'
+		             tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/admesos.php?id_titulacio='+ str(utils.getGWConfig().idtitulacioMaster)" 
+		             tal:content="python: utils.recodifica(utils.getTextMaster('llistat_admesos',lang_code))">llistat_admesos</a>
+         </li>
 
-					<!-- Llista d'admesos --><div>
-			              <li class="navTreeItem visualNoMarker"><div>
-			              <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/admesos.php?id_titulacio='+ str(utils.getGWConfig().idtitulacioMaster)" 
-			                   tal:content="python: utils.recodifica(utils.getTextMaster('llistat_admesos',lang_code))">llistat_admesos </a></div></li>
+         <!-- Matricula -->
+		 <li class="navTreeItem visualNoMarker">
+		   <a class="navItem2 visualIconPadding" target='_blank'
+                     tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/matricula_'+utils.cambiaPrefijo(lang_code)+'.php'" 
+		             tal:content="python: utils.recodifica(utils.getTextMaster('matricula',lang_code))">matricula</a>
+         </li>
 
-					<!-- Matricula -->
-			              <li class="navTreeItem visualNoMarker"><div>
-			              <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/matricula_'+utils.cambiaPrefijo(lang_code)+'.php'" 
-			                   tal:content="python: utils.recodifica(utils.getTextMaster('matricula',lang_code))">matricula </a></div></li>
-				</ul></div></li>
-		        </ul>
-		        <!--<span class="portletBottomLeft"></span>
-		        <span class="portletBottomRight"></span>-->
-		   </dd>
-		</dl>
-	</div>
+	    </ul>
+       </div>
+     </ul>
+         <!--<span class="portletBottomLeft"></span>
+         <span class="portletBottomRight"></span>-->
+   </dd>
+  </dl>
+ </div>
 </div>
 
