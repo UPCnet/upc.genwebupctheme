@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.interface import Interface
 from zope.component import adapts
 from zope.formlib.form import FormFields
@@ -8,6 +9,7 @@ from zope.component import getUtility
 
 from Products.CMFCore.utils import getToolByName
 from Products.CMFDefault.formlib.schema import SchemaAdapterBase
+from Products.CMFDefault.formlib.schema import ProxyFieldProperty
 from Products.CMFPlone import PloneMessageFactory as _
 from Products.CMFPlone.interfaces import IPloneSiteRoot
 
@@ -30,55 +32,11 @@ from plone.app.controlpanel.skins import ISkinsSchema
 from Products.CMFPlone.utils import safe_unicode
 from cgi import escape
 
-class GenWebControlPanelUtility(Persistent):
+class GenWebControlPanelUtility(object):
     """Clase que implementa la utilitat i la fa persistent
     """
     implements(IgenWebUtility)
-    
-    # de la pestanya general
-    columna1 = []
-    columna2 = []
-    columna3 = []    
-    
-    constrains = ['Document', 'Event', 'File', 'Folder', 'Image', 'Link', 'News Item', 'Topic', 'Collage', 'Window']
 
-    # de la pestanya d'especifics
-    especific1='#007dcc'
-    especific2='#006DA3'
-    especific3='#557c95'
-    especific4='#aeb4b8'
-    especific5='#e6e6e6'
-    especific6='#f3f3f3'
-
-    imatgedefonsprops='repeat-y'
-
-    barraidiomesbool = False
-    
-    # de la pestanya d'informació
-    titolespai_ca = safe_unicode('Títol de l\'espai en català')
-    titolespai_es = safe_unicode('Títol de l\'espai en castellà')
-    titolespai_en = safe_unicode('Títol de l\'espai en anglés')
-    firmaunitat_ca = safe_unicode('Firma de la unitat en català.')
-    firmaunitat_es = safe_unicode('Firma de la unitat en castellà.')
-    firmaunitat_en = safe_unicode('Firma de la unitat en anglés.')
-    edicio_ca = 'curs 2008/2009'
-    edicio_es = 'curso 2008/2009'
-    edicio_en = ' 2008/2009 Edition'
-    enllaslogotip = 'http://www.upc.edu'
-    contacteid = '200'
-    contactegmaps = '<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;s=AARTsJqzARj-Z8VnW5pkPMLMmZbqrJcYpw&amp;ll=41.390075,2.115383&amp;spn=0.007727,0.013733&amp;z=16&amp;output=embed"></iframe>'
-    boolmaps = True
-    
-    # de la pestanya de sabors
-    tipusintranet = 'Visible'
-    tipusNeutre2 = 'Default'
-    titolcapsaleraMaster = '2008/2009'
-    idestudiMaster = '50'
-    idtitulacioMaster = '114'
-    masterdoctorado = 'Master'
-    ambitdoctorat_ca = safe_unicode('Àmbit doctorat - [català]')
-    ambitdoctorat_es = safe_unicode('Àmbit doctorat - [castellà]')
-    ambitdoctorat_en = safe_unicode('Àmbit doctorat - [english]')
     
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
@@ -87,290 +45,304 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
 
     def __init__(self, context):
         super(GenWebControlPanelAdapter, self).__init__(context)
-        self.context = getToolByName(context, 'portal_skins')
+        self.contextps = getToolByName(context, 'portal_skins')
         self.jstool = getToolByName(context, 'portal_javascripts')
         ptool = getToolByName(context, 'portal_properties')
         self.props = ptool.site_properties
+        self.context = ptool.genwebupc_properties
 
     def get_theme(self):
-        return self.context.getDefaultSkin()
+        return self.contextps.getDefaultSkin()
     def set_theme(self, value):
-        self.context.default_skin = value
+        self.contextps.default_skin = value
     theme = property(get_theme, set_theme)
 
-    @apply
-    def columna1():
-        def get(self):
-            return getGWConfig().columna1
-        def set(self, value):
-            getGWConfig().columna1 = value
-        return property(get, set)
+    columna1 = ProxyFieldProperty(IgenWebControlPanel['columna1'])
+    columna2 = ProxyFieldProperty(IgenWebControlPanel['columna2'])
+    columna3 = ProxyFieldProperty(IgenWebControlPanel['columna3'])
 
-    @apply    
-    def columna2():
-        def get(self):
-            return getGWConfig().columna2
-        def set(self, value):
-            getGWConfig().columna2 = value
-        return property(get, set)
-
-    @apply
-    def columna3():
-        def get(self):
-            return getGWConfig().columna3
-        def set(self, value):
-            getGWConfig().columna3 = value
-        return property(get, set)
-        
-    @apply
-    def constrains():
-        def get(self):
-            return getGWConfig().constrains
-        def set(self, value):
-            getGWConfig().constrains = value
-        return property(get, set)        
-
-    @apply
-    def especific1():
-        def get(self):
-            return getGWConfig().especific1
-        def set(self, value):
-            getGWConfig().especific1 = value
-        return property(get, set)
-
-    @apply
-    def especific2():
-        def get(self):
-            return getGWConfig().especific2
-        def set(self, value):
-            getGWConfig().especific2 = value
-        return property(get, set)
-
-    @apply
-    def especific3():
-        def get(self):
-            return getGWConfig().especific3
-        def set(self, value):
-            getGWConfig().especific3 = value
-        return property(get, set)
-
-    @apply
-    def especific4():
-        def get(self):
-            return getGWConfig().especific4
-        def set(self, value):
-            getGWConfig().especific4 = value
-        return property(get, set)
-
-    @apply
-    def especific5():
-        def get(self):
-            return getGWConfig().especific5
-        def set(self, value):
-            getGWConfig().especific5 = value
-        return property(get, set)            
-
-    @apply
-    def especific6():
-        def get(self):
-            return getGWConfig().especific6
-        def set(self, value):
-            getGWConfig().especific6 = value
-        return property(get, set)
-
-    @apply
-    def imatgedefonsprops():
-        def get(self):
-            return getGWConfig().imatgedefonsprops
-        def set(self, value):
-            getGWConfig().imatgedefonsprops = value
-        return property(get, set)
-
-    @apply
-    def barraidiomesbool():
-        def get(self):
-            return getGWConfig().barraidiomesbool
-        def set(self, value):
-            getGWConfig().barraidiomesbool = value
-        return property(get, set)
-
-    @apply
-    def titolespai_ca():
-        
-        def get(self):
-            return getGWConfig().titolespai_ca
-        def set(self, value):
-            getGWConfig().titolespai_ca = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def titolespai_en():
-        def get(self):
-            return getGWConfig().titolespai_en
-        def set(self, value):
-            getGWConfig().titolespai_en = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def titolespai_es():
-        def get(self):
-            return getGWConfig().titolespai_es
-        def set(self, value):
-            getGWConfig().titolespai_es = safe_unicode(value)
-        return property(get, set)
-            
-    @apply
-    def firmaunitat_ca():
-        def get(self):
-            return getGWConfig().firmaunitat_ca
-        def set(self, value):
-            getGWConfig().firmaunitat_ca = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def firmaunitat_en():
-        def get(self):
-            return getGWConfig().firmaunitat_en
-        def set(self, value):
-            getGWConfig().firmaunitat_en = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def firmaunitat_es():
-        def get(self):
-            return getGWConfig().firmaunitat_es
-        def set(self, value):
-            getGWConfig().firmaunitat_es = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def edicio_ca():
-        def get(self):
-            return getGWConfig().edicio_ca
-        def set(self, value):
-            getGWConfig().firmaunitat_es = safe_unicode(value)
-        return property(get, set)
+    constrains = ProxyFieldProperty(IgenWebControlPanel['constrains'])
     
-    @apply
-    def edicio_en():
-        def get(self):
-            return getGWConfig().edicio_en
-        def set(self, value):
-            getGWConfig().firmaunitat_es = safe_unicode(value)
-        return property(get, set)
+    especific1 = ProxyFieldProperty(IgenWebControlPanel['especific1'])
+    especific2 = ProxyFieldProperty(IgenWebControlPanel['especific2'])
+    especific3 = ProxyFieldProperty(IgenWebControlPanel['especific3'])
+    especific4 = ProxyFieldProperty(IgenWebControlPanel['especific4'])
+    especific5 = ProxyFieldProperty(IgenWebControlPanel['especific5'])
+    especific6 = ProxyFieldProperty(IgenWebControlPanel['especific6'])
     
-    @apply
-    def edicio_es():
-        def get(self):
-            return getGWConfig().edicio_es
-        def set(self, value):
-            getGWConfig().firmaunitat_es = safe_unicode(value)
-        return property(get, set)
+    imatgedefonsprops = ProxyFieldProperty(IgenWebControlPanel['imatgedefonsprops'])
+
+    titolespai_ca = ProxyFieldProperty(IgenWebControlPanel['titolespai_ca'])
+    titolespai_es = ProxyFieldProperty(IgenWebControlPanel['titolespai_es'])
+    titolespai_en = ProxyFieldProperty(IgenWebControlPanel['titolespai_en'])
+    firmaunitat_ca = ProxyFieldProperty(IgenWebControlPanel['firmaunitat_ca'])
+    firmaunitat_es = ProxyFieldProperty(IgenWebControlPanel['firmaunitat_es'])
+    firmaunitat_en = ProxyFieldProperty(IgenWebControlPanel['firmaunitat_en'])
+    enllaslogotip = ProxyFieldProperty(IgenWebControlPanel['enllaslogotip'])
+    contacteid = ProxyFieldProperty(IgenWebControlPanel['contacteid'])
+    contactegmaps = ProxyFieldProperty(IgenWebControlPanel['contactegmaps'])
+    boolmaps = ProxyFieldProperty(IgenWebControlPanel['boolmaps'])
     
-    @apply
-    def enllaslogotip():
-        def get(self):
-            return getGWConfig().enllaslogotip
-        def set(self, value):
-            getGWConfig().enllaslogotip = value
-        return property(get, set)
-
-    @apply
-    def contacteid():
-        def get(self):
-            return getGWConfig().contacteid
-        def set(self, value):
-            getGWConfig().contacteid = value
-        return property(get, set)
-
-    @apply
-    def contactegmaps():
-        def get(self):
-            return getGWConfig().contactegmaps
-        def set(self, value):
-            getGWConfig().contactegmaps = value
-        return property(get, set)
-
-    @apply
-    def boolmaps():
-        def get(self):
-            return getGWConfig().boolmaps
-        def set(self, value):
-            getGWConfig().boolmaps = value
-        return property(get, set)
-
-    @apply
-    def tipusintranet():
-        def get(self):
-            return getGWConfig().tipusintranet
-        def set(self, value):
-            getGWConfig().tipusintranet = value
-        return property(get, set)
-
-    @apply
-    def tipusNeutre2():
-        def get(self):
-            return getGWConfig().tipusNeutre2
-        def set(self, value):
-            getGWConfig().tipusNeutre2 = value
-        return property(get, set)
-
-
-    @apply
-    def titolcapsaleraMaster():
-        def get(self):
-            return getGWConfig().titolcapsaleraMaster
-        def set(self, value):
-            getGWConfig().titolcapsaleraMaster = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def idestudiMaster():
-        def get(self):
-            return getGWConfig().idestudiMaster
-        def set(self, value):
-            getGWConfig().idestudiMaster = value
-        return property(get, set)
-
-    @apply
-    def idtitulacioMaster():
-        def get(self):
-            return getGWConfig().idtitulacioMaster
-        def set(self, value):
-            getGWConfig().idtitulacioMaster = value
-        return property(get, set)                    
     
-    @apply
-    def masterdoctorado():
-        def get(self):
-            return getGWConfig().masterdoctorado
-        def set(self, value):
-            getGWConfig().masterdoctorado = value
-        return property(get, set)
-
-    @apply
-    def ambitdoctorat_ca():
-        def get(self):
-            return getGWConfig().ambitdoctorat_ca
-        def set(self, value):
-            getGWConfig().ambitdoctorat_ca = safe_unicode(value)
-        return property(get, set)
-
-    @apply
-    def ambitdoctorat_es():
-        def get(self):
-            return getGWConfig().ambitdoctorat_es
-        def set(self, value):
-            getGWConfig().ambitdoctorat_es = safe_unicode(value)
-        return property(get, set)
+    tipusintranet = ProxyFieldProperty(IgenWebControlPanel['tipusintranet'])
+    tipusNeutre2 = ProxyFieldProperty(IgenWebControlPanel['tipusNeutre2'])
+    titolcapsaleraMaster = ProxyFieldProperty(IgenWebControlPanel['titolcapsaleraMaster'])    
+    idestudiMaster = ProxyFieldProperty(IgenWebControlPanel['idestudiMaster'])    
+    idtitulacioMaster = ProxyFieldProperty(IgenWebControlPanel['idtitulacioMaster'])    
+    masterdoctorado = ProxyFieldProperty(IgenWebControlPanel['masterdoctorado'])
+    ambitdoctorat_ca = ProxyFieldProperty(IgenWebControlPanel['ambitdoctorat_ca'])
+    ambitdoctorat_es = ProxyFieldProperty(IgenWebControlPanel['ambitdoctorat_es'])
+    ambitdoctorat_en = ProxyFieldProperty(IgenWebControlPanel['ambitdoctorat_en'])
     
-    @apply
-    def ambitdoctorat_en():
-        def get(self):
-            return getGWConfig().ambitdoctorat_en
-        def set(self, value):
-            getGWConfig().ambitdoctorat_en = safe_unicode(value)
-        return property(get, set)
+#    @apply
+#    def columna1():
+#        def get(self):
+#            return getGWConfig().columna1
+#        def set(self, value):
+#            getGWConfig().columna1 = value
+#        return property(get, set)
+#
+#    @apply    
+#    def columna2():
+#        def get(self):
+#            return getGWConfig().columna2
+#        def set(self, value):
+#            getGWConfig().columna2 = value
+#        return property(get, set)
+#
+#    @apply
+#    def columna3():
+#        def get(self):
+#            return getGWConfig().columna3
+#        def set(self, value):
+#            getGWConfig().columna3 = value
+#        return property(get, set)
+#        
+#    @apply
+#    def constrains():
+#        def get(self):
+#            return getGWConfig().constrains
+#        def set(self, value):
+#            getGWConfig().constrains = value
+#        return property(get, set)        
+#
+#    @apply
+#    def especific1():
+#        def get(self):
+#            return getGWConfig().especific1
+#        def set(self, value):
+#            getGWConfig().especific1 = value
+#        return property(get, set)
+#
+#    @apply
+#    def especific2():
+#        def get(self):
+#            return getGWConfig().especific2
+#        def set(self, value):
+#            getGWConfig().especific2 = value
+#        return property(get, set)
+#
+#    @apply
+#    def especific3():
+#        def get(self):
+#            return getGWConfig().especific3
+#        def set(self, value):
+#            getGWConfig().especific3 = value
+#        return property(get, set)
+#
+#    @apply
+#    def especific4():
+#        def get(self):
+#            return getGWConfig().especific4
+#        def set(self, value):
+#            getGWConfig().especific4 = value
+#        return property(get, set)
+#
+#    @apply
+#    def especific5():
+#        def get(self):
+#            return getGWConfig().especific5
+#        def set(self, value):
+#            getGWConfig().especific5 = value
+#        return property(get, set)            
+#
+#    @apply
+#    def especific6():
+#        def get(self):
+#            return getGWConfig().especific6
+#        def set(self, value):
+#            getGWConfig().especific6 = value
+#        return property(get, set)
+#
+#    @apply
+#    def imatgedefonsprops():
+#        def get(self):
+#            return getGWConfig().imatgedefonsprops
+#        def set(self, value):
+#            getGWConfig().imatgedefonsprops = value
+#        return property(get, set)
+#
+#    @apply
+#    def barraidiomesbool():
+#        def get(self):
+#            return getGWConfig().barraidiomesbool
+#        def set(self, value):
+#            getGWConfig().barraidiomesbool = value
+#        return property(get, set)
+#
+#    @apply
+#    def titolespai_ca():
+#        
+#        def get(self):
+#            return getGWConfig().titolespai_ca
+#        def set(self, value):
+#            getGWConfig().titolespai_ca = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def titolespai_en():
+#        def get(self):
+#            return getGWConfig().titolespai_en
+#        def set(self, value):
+#            getGWConfig().titolespai_en = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def titolespai_es():
+#        def get(self):
+#            return getGWConfig().titolespai_es
+#        def set(self, value):
+#            getGWConfig().titolespai_es = safe_unicode(value)
+#        return property(get, set)
+#            
+#    @apply
+#    def firmaunitat_ca():
+#        def get(self):
+#            return getGWConfig().firmaunitat_ca
+#        def set(self, value):
+#            getGWConfig().firmaunitat_ca = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def firmaunitat_en():
+#        def get(self):
+#            return getGWConfig().firmaunitat_en
+#        def set(self, value):
+#            getGWConfig().firmaunitat_en = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def firmaunitat_es():
+#        def get(self):
+#            return getGWConfig().firmaunitat_es
+#        def set(self, value):
+#            getGWConfig().firmaunitat_es = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def enllaslogotip():
+#        def get(self):
+#            return getGWConfig().enllaslogotip
+#        def set(self, value):
+#            getGWConfig().enllaslogotip = value
+#        return property(get, set)
+#
+#    @apply
+#    def contacteid():
+#        def get(self):
+#            return getGWConfig().contacteid
+#        def set(self, value):
+#            getGWConfig().contacteid = value
+#        return property(get, set)
+#
+#    @apply
+#    def contactegmaps():
+#        def get(self):
+#            return getGWConfig().contactegmaps
+#        def set(self, value):
+#            getGWConfig().contactegmaps = value
+#        return property(get, set)
+#
+#    @apply
+#    def boolmaps():
+#        def get(self):
+#            return getGWConfig().boolmaps
+#        def set(self, value):
+#            getGWConfig().boolmaps = value
+#        return property(get, set)
+#
+#    @apply
+#    def tipusintranet():
+#        def get(self):
+#            return getGWConfig().tipusintranet
+#        def set(self, value):
+#            getGWConfig().tipusintranet = value
+#        return property(get, set)
+#
+#    @apply
+#    def tipusNeutre2():
+#        def get(self):
+#            return getGWConfig().tipusNeutre2
+#        def set(self, value):
+#            getGWConfig().tipusNeutre2 = value
+#        return property(get, set)
+#
+#
+#    @apply
+#    def titolcapsaleraMaster():
+#        def get(self):
+#            return getGWConfig().titolcapsaleraMaster
+#        def set(self, value):
+#            getGWConfig().titolcapsaleraMaster = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def idestudiMaster():
+#        def get(self):
+#            return getGWConfig().idestudiMaster
+#        def set(self, value):
+#            getGWConfig().idestudiMaster = value
+#        return property(get, set)
+#
+#    @apply
+#    def idtitulacioMaster():
+#        def get(self):
+#            return getGWConfig().idtitulacioMaster
+#        def set(self, value):
+#            getGWConfig().idtitulacioMaster = value
+#        return property(get, set)                    
+#    
+#    @apply
+#    def masterdoctorado():
+#        def get(self):
+#            return getGWConfig().masterdoctorado
+#        def set(self, value):
+#            getGWConfig().masterdoctorado = value
+#        return property(get, set)
+#
+#    @apply
+#    def ambitdoctorat_ca():
+#        def get(self):
+#            return getGWConfig().ambitdoctorat_ca
+#        def set(self, value):
+#            getGWConfig().ambitdoctorat_ca = safe_unicode(value)
+#        return property(get, set)
+#
+#    @apply
+#    def ambitdoctorat_es():
+#        def get(self):
+#            return getGWConfig().ambitdoctorat_es
+#        def set(self, value):
+#            getGWConfig().ambitdoctorat_es = safe_unicode(value)
+#        return property(get, set)
+#    
+#    @apply
+#    def ambitdoctorat_en():
+#        def get(self):
+#            return getGWConfig().ambitdoctorat_en
+#        def set(self, value):
+#            getGWConfig().ambitdoctorat_en = safe_unicode(value)
+#        return property(get, set)
             
 general = FormFieldsets(ISkinsSchema['theme'], IgenWebControlPanelSchemaGeneral)
 general.id = 'genWebControlPanelgeneral'

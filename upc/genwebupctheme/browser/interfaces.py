@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from plone.theme.interfaces import IDefaultPloneLayer
 from Products.CMFPlone import PloneMessageFactory as _
 from zope.interface import Interface, Attribute
@@ -18,10 +19,6 @@ class IThemeSpecificNeutre2(IDefaultPloneLayer):
 
 class IThemeSpecificMaster(IDefaultPloneLayer):
     """Marker interface del sabor Master
-    """
-
-class IThemeSpecificPortal(IDefaultPloneLayer):
-    """Marker interface del sabor Portal
     """
 
 class IgenWebUtility(Interface):

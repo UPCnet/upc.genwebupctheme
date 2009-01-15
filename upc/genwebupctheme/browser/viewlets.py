@@ -58,11 +58,11 @@ class TitleViewlet(ViewletBase):
         lang= getToolByName(self, 'portal_languages').getPreferredLanguage()
         try:
             if lang == 'ca':
-              TITLE_GW= utils.getGWConfig().titolespai_ca
+              TITLE_GW= utils.getGWConfig(self.context).titolespai_ca
             if lang == 'es':
-              TITLE_GW= utils.getGWConfig().titolespai_es
+              TITLE_GW= utils.getGWConfig(self.context).titolespai_es
             if lang == 'en':
-              TITLE_GW= utils.getGWConfig().titolespai_en
+              TITLE_GW= utils.getGWConfig(self.context).titolespai_en
         except:
             TITLE_GW = "Genweb UPC"
                                     

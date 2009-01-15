@@ -1,9 +1,11 @@
 <componentregistry>
 <adapters/>
+<!--
 <utilities>
  <utility interface="upc.genwebupctheme.browser.interfaces.IgenWebUtility"
   component="upc.genwebupctheme.browser.controlpanel.GenWebControlPanelUtility"
   name="GenWebControlPanelUtility"/>
 </utilities>
+-->
 </componentregistry>
 

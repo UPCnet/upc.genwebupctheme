@@ -26,7 +26,7 @@ class HomePageView(BrowserView):
         """Funcio que agafa els valors de quines caixetes cal posar la
            home page del genweb
         """
-        gw_util = utils.getGWConfig()
+        gw_util = utils.getGWConfig(self)
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna1
         
@@ -34,7 +34,7 @@ class HomePageView(BrowserView):
         """Funcio que agafa els valors de quines caixetes cal posar la
            home page del genweb
         """
-        gw_util = utils.getGWConfig()
+        gw_util = utils.getGWConfig(self)
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna2
                 
@@ -42,7 +42,7 @@ class HomePageView(BrowserView):
         """Funcio que agafa els valors de quines caixetes cal posar la
            home page del genweb
         """
-        gw_util = utils.getGWConfig()
+        gw_util = utils.getGWConfig(self)
         #gw_util = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
         return gw_util.columna3
 

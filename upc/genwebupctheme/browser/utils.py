@@ -22,14 +22,21 @@ import MySQLdb
 PLMF = MessageFactory('plonelocales')
 
 
-def getGWConfig():
+def getGWConfig(self):
     """ Funcio que retorna la utility que conte les configuracions del controlpanel
     """
+#    try:
+#        gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+#    except: 
+#        gwconfig = None
+#    return gwconfig
+    ptool = getToolByName(self.context, 'portal_properties')    
     try:
-        gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-    except: 
+        gwconfig = ptool.genwebupc_properties
+    except:
         gwconfig = None
-    return gwconfig
+    
+    return gwconfig        
 
 def havePermissionAtRoot(self):
      """Funcio que retorna si es Editor a l'arrel"""
@@ -109,11 +116,18 @@ class utilitats(BrowserView):
     def getGWConfig(self):
         """ Funcio que retorna la utility que conte les configuracions del controlpanel
         """
+#        try:
+#            gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
+#        except: 
+#            gwconfig = None
+#        return gwconfig
+        ptool = getToolByName(self.context, 'portal_properties')    
         try:
-            gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-        except: 
+            gwconfig = ptool.genwebupc_properties
+        except:
             gwconfig = None
-        return gwconfig
+    
+        return gwconfig     
     
     def isFolder(self):
         """ Funcio que retorna si es carpeta per tal de mostrar o no el last modified

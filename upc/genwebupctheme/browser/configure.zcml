@@ -36,12 +36,6 @@
         name="Tema genwebUPC Master"
         />
 
-    <interface
-        interface=".interfaces.IThemeSpecificPortal"
-        type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        name="Tema genwebUPC Portal"
-        />
-        
 <!-- Recursos Z3 -->        
     <browser:resourceDirectory
         name="upc.genwebupctheme.images"
@@ -257,58 +251,6 @@
          permission="zope2.View"
          />
   
-   
-  <!-- Comuns Portal -->
-  
-     <browser:viewlet
-         name="upc.genweb.eines"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.eines"
-         layer=".interfaces.IThemeSpecificPortal"
-         permission="zope2.View"
-         />
-     
-     <browser:viewlet
-         name="upc.genweb.capsaleraSuperior"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.capsaleraSuperior"
-         layer=".interfaces.IThemeSpecificPortal"
-         permission="zope2.View"
-         />
-
-     <browser:viewlet
-         name="upc.genweb.titols"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".capsalera.titols"
-         layer=".interfaces.IThemeSpecificPortal"
-         permission="zope2.View"
-         />
-     
-     <browser:viewlet
-         name="upc.genweb.barraIdiomes"
-         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-         class=".barraIdiomes.barraIdiomes"
-         layer=".interfaces.IThemeSpecificPortal"
-         permission="zope2.View"
-         />  
-
-     <browser:viewlet
-         name="upc.genweb.darreramodificacio"
-         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-         class=".viewlets.DarreraModificacio"
-         layer=".interfaces.IThemeSpecificPortal"
-         permission="zope2.View"
-         />
-
-     <browser:viewlet
-         name="upc.genweb-peu"
-         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-         class=".peu.Peu"
-         template="peu.pt"
-         layer=".interfaces.IThemeSpecificPortal"
-         permission="zope2.View"
-         />
-
 <!-- Viewlets especifics -->
  <!-- Específic Neutre3 -->
       <browser:viewlet
@@ -446,15 +388,6 @@
       permission="zope2.View"
       />
          
-<!-- Home Page Portal -->
-    <browser:page
-      name="homepage"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      class=".portal.homepage.HomePageView"
-      layer=".interfaces.IThemeSpecificPortal"
-      permission="zope2.View"
-      />
-      
 <!-- CSS dinamic -->
     <browser:page
       name="dynamic.css"
