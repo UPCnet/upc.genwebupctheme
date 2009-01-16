@@ -3,10 +3,10 @@
 
   <object name="genwebupc_properties" meta_type="Plone Property Sheet">
     <property name="title">Configuracio del Genweb</property>
-    <property name="columna1" type="lines"/>
-    <property name="columna2" type="lines"/>
-    <property name="columna3" type="lines"/>
-    <property name="constrains" type="lines">
+    <property name="columna1" type="lines" purge="False"/>
+    <property name="columna2" type="lines" purge="False"/>
+    <property name="columna3" type="lines" purge="False"/>
+    <property name="constrains" type="lines" purge="False">
         <element value="Document"/>
         <element value="Event"/>
         <element value="File"/>
@@ -19,34 +19,34 @@
         <element value="Window"/>
     </property>
 
-    <property name="especific1" type="string">#007dcc</property>
-    <property name="especific2" type="string">#006DA3</property>
-    <property name="especific3" type="string">#557c95</property>
-    <property name="especific4" type="string">#aeb4b8</property>
-    <property name="especific5" type="string">#e6e6e6</property>
-    <property name="especific6" type="string">#f3f3f3</property>
-    <property name="imatgedefonsprops" type="string">repeat-y</property>
+    <property name="especific1" type="string" purge="True">#007dcc</property>
+    <property name="especific2" type="string" purge="False">#006DA3</property>
+    <property name="especific3" type="string" purge="False">#557c95</property>
+    <property name="especific4" type="string" purge="False">#aeb4b8</property>
+    <property name="especific5" type="string" purge="False">#e6e6e6</property>
+    <property name="especific6" type="string" purge="False">#f3f3f3</property>
+    <property name="imatgedefonsprops" type="string" purge="False">repeat-y</property>
 
-    <property name="titolespai_ca" type="string">Títol de l'espai en català</property>
-    <property name="titolespai_es" type="string">Titol de l'espai en castellà</property>
-    <property name="titolespai_en" type="string">Títol de l'espai en anglés</property>
-    <property name="firmaunitat_ca" type="string">Firma de la unitat en català.</property>
-    <property name="firmaunitat_es" type="string">Firma de la unitat en castellà.</property>
-    <property name="firmaunitat_en" type="string">Firma de la unitat en anglés.</property>
-    <property name="enllaslogotip" type="string">http://www.upc.edu</property>
-    <property name="contacteid" type="string">200</property>
-    <property name="contactegmaps" type="string">&lt;iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;s=AARTsJqzARj-Z8VnW5pkPMLMmZbqrJcYpw&amp;ll=41.390075,2.115383&amp;spn=0.007727,0.013733&amp;z=16&amp;output=embed"&gt;&lt;/iframe&gt;</property>
-    <property name="boolmaps" type="boolean">True</property>
+    <property name="titolespai_ca" type="string" purge="False">Títol de l'espai en català</property>
+    <property name="titolespai_es" type="string" purge="False">Titol de l'espai en castellà</property>
+    <property name="titolespai_en" type="string" purge="False">Títol de l'espai en anglés</property>
+    <property name="firmaunitat_ca" type="string" purge="False">Firma de la unitat en català.</property>
+    <property name="firmaunitat_es" type="string" purge="False">Firma de la unitat en castellà.</property>
+    <property name="firmaunitat_en" type="string" purge="False">Firma de la unitat en anglés.</property>
+    <property name="enllaslogotip" type="string" purge="False">http://www.upc.edu</property>
+    <property name="contacteid" type="string" purge="False">200</property>
+    <property name="contactegmaps" type="string" purge="False">&lt;iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;s=AARTsJqzARj-Z8VnW5pkPMLMmZbqrJcYpw&amp;ll=41.390075,2.115383&amp;spn=0.007727,0.013733&amp;z=16&amp;output=embed"&gt;&lt;/iframe&gt;</property>
+    <property name="boolmaps" type="boolean" purge="False">True</property>
     
-    <property name="tipusintranet" type="string">Visible</property>
-    <property name="tipusNeutre2" type="string">Default</property>
-    <property name="titolcapsaleraMaster" type="string">2008/2009</property>
-    <property name="idestudiMaster" type="string">50</property>
-    <property name="idtitulacioMaster" type="string">114</property>
-    <property name="masterdoctorado" type="string">Master</property>
-    <property name="ambitdoctorat_ca" type="string">Àmbit doctorat - [català]</property>
-    <property name="ambitdoctorat_es" type="string">Àmbit doctorat - [castellà]</property>
-    <property name="ambitdoctorat_en" type="string">Àmbit doctorat - [anglés]</property>
+    <property name="tipusintranet" type="string" purge="False">Visible</property>
+    <property name="tipusNeutre2" type="string" purge="False">Default</property>
+    <property name="titolcapsaleraMaster" type="string" purge="False">2008/2009</property>
+    <property name="idestudiMaster" type="string" purge="False">50</property>
+    <property name="idtitulacioMaster" type="string" purge="False">114</property>
+    <property name="masterdoctorado" type="string" purge="False">Master</property>
+    <property name="ambitdoctorat_ca" type="string" purge="False">Àmbit doctorat - [català]</property>
+    <property name="ambitdoctorat_es" type="string" purge="False">Àmbit doctorat - [castellà]</property>
+    <property name="ambitdoctorat_en" type="string" purge="False">Àmbit doctorat - [anglés]</property>
 
   </object>
   

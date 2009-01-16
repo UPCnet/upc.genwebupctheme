@@ -23,13 +23,8 @@ PLMF = MessageFactory('plonelocales')
 
 
 def getGWConfig(self):
-    """ Funcio que retorna la utility que conte les configuracions del controlpanel
+    """ Funcio que retorna les configuracions del controlpanel
     """
-#    try:
-#        gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-#    except: 
-#        gwconfig = None
-#    return gwconfig
     ptool = getToolByName(self.context, 'portal_properties')    
     try:
         gwconfig = ptool.genwebupc_properties
@@ -114,13 +109,8 @@ class utilitats(BrowserView):
         return lt.getPreferredLanguage()
 
     def getGWConfig(self):
-        """ Funcio que retorna la utility que conte les configuracions del controlpanel
+        """ Funcio que retorna les configuracions del controlpanel
         """
-#        try:
-#            gwconfig = getUtility(IgenWebUtility, "GenWebControlPanelUtility")
-#        except: 
-#            gwconfig = None
-#        return gwconfig
         ptool = getToolByName(self.context, 'portal_properties')    
         try:
             gwconfig = ptool.genwebupc_properties
