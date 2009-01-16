@@ -23,8 +23,8 @@
     cacheable="False" compression="safe" cookable="False"
     enabled="True" expression=""  inline="False"/>
 -->
-
+<!-- Treiem el mark_special_links per a que funcioni el collage. Igual deixa de funcionar alguna altre cosa... -->
 <javascript cacheable="True" compression="safe" cookable="True"
-enabled="True" expression="" id="mark_special_links.js" inline="False"/>
+enabled="False" expression="" id="mark_special_links.js" inline="False"/>
 
 </object>

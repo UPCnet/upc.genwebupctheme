@@ -19,7 +19,7 @@
         <element value="Window"/>
     </property>
 
-    <property name="especific1" type="string" purge="True">#007dcc</property>
+    <property name="especific1" type="string" purge="False">#007dcc</property>
     <property name="especific2" type="string" purge="False">#006DA3</property>
     <property name="especific3" type="string" purge="False">#557c95</property>
     <property name="especific4" type="string" purge="False">#aeb4b8</property>
