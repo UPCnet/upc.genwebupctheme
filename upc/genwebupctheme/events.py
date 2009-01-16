@@ -5,7 +5,7 @@ from upc.genwebupctheme.browser.interfaces import IgenWebControlPanelSchemaGener
 
 def folderAdded(folder,event):
     if ISiteRoot.providedBy(folder.aq_parent):
-        gw_util = utils.getGWConfig()
+        gw_util = utils.getGWConfig(folder)
         folder.setConstrainTypesMode(1)
         folder.setLocallyAllowedTypes(tuple([i.value for i in gw_schema._v_attrs['constrains'].value_type.vocabulary.__iter__()]))
         folder.setImmediatelyAddableTypes(tuple(gw_util.constrains))
