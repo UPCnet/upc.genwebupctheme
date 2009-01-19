@@ -154,7 +154,7 @@ class agenda(BrowserView,calendar_render):
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
         state = ['published','intranet']
-        return catalog(portal_type='Event',
+        return catalog(portal_type=('Event','Meeting'),
                        review_state=state,
                        end={'query': DateTime(),
                             'range': 'min'},
