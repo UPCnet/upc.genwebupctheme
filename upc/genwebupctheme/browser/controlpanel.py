@@ -32,12 +32,6 @@ from plone.app.controlpanel.skins import ISkinsSchema
 from Products.CMFPlone.utils import safe_unicode
 from cgi import escape
 
-class GenWebControlPanelUtility(object):
-    """Clase que implementa la utilitat i la fa persistent
-    """
-    implements(IgenWebUtility)
-
-    
 class GenWebControlPanelAdapter(SchemaAdapterBase):
 
     adapts(IPloneSiteRoot)
