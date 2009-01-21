@@ -105,7 +105,7 @@
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="ploneCustom.css" media="all"
     rel="stylesheet" rendering="import"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+ <stylesheet title="" position-bottom="True" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="print.css" media="print" rel="stylesheet"
     rendering="import"/>
 </object>
