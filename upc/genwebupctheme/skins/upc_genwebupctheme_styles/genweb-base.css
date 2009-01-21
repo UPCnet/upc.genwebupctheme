@@ -1479,3 +1479,7 @@ clear:both !important;
 	list-style-type:none;
 	margin-bottom:0.5em;
 	}
+
+/*ajustament columnes collage*/
+#collage .two-columns-largeleft .block_1, #collage .two-columns-largeright .block_2 {width:519px !important;}
+#collage .two-columns-largeleft .block_2, #collage .two-columns-largeright .block_1 {width:200px !important;}

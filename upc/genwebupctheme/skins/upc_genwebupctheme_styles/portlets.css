@@ -151,8 +151,8 @@ font-size:26px !important;
 position: relative !important;
 _width:24px !important;
 }
-.agendaContingut table {
-	/*width:100%;*/}
+html>body*.agendaContingut table {
+	width:100%;}
 .agendaMes{
 float:none;
 padding-top:3px;
@@ -760,7 +760,12 @@ font-size:90%;
 .template-plonepopoll_view form.group fieldset ul li{font-weight:bold; color:#666666;list-style-image:none;list-style-type:none;margin:0px;}
 .template-plonepopoll_view form.group fieldset ul li div{padding:5px; border:1px dotted #e6e6e6; font-weight:normal !important;margin-bottom:10px;}
 
+.expandable-section ul li {list-style:none !important; list-style-image:none !important; list-style-type:none !important; padding-right:20px !important;}
+.expandable-section div.field {font-size:110%}
+.expandable-section ul { margin-left:0em !important;}
+/*
 .collage-header {background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;}
+
 .collage-header span {
 color:#0077cc !important;
 margin-right:15px !important;}
@@ -807,6 +812,9 @@ margin-right:0.2em !important;
 form.collage-existing-items div label {font-size:100% !important;}
 form.collage-existing-items div {margin-bottom:5px !important;}
 form.collage-existing-items div select {font-size:120% !important;}
+*/
+
+
 
 .icoRSS{
 	float:right;

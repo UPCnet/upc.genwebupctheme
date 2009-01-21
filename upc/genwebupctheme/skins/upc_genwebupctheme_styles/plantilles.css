@@ -132,7 +132,8 @@ html*.calendari table{
 	margin-top: 10px;
 	margin-left:2px}
 .TDRegulaCalendari{
-	padding-bottom:10px}
+	padding-bottom:10px
+	max-width:150px;}
 /*taulaRegistres*/
 .taulaRegistres .cap td{
 	background:url(borderTopDiagonal.gif) repeat-x;

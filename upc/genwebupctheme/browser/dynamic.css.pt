@@ -187,7 +187,6 @@ pre
 
 
 
-.cursMaster,
 .barraBranca_m
 	{color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
 .liniaPrincipal_m,
