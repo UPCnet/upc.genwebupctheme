@@ -73,7 +73,6 @@ class utilitats(BrowserView):
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
         ptypes = portal_state.friendly_types()
-        import pdb;pdb.set_trace()
         for typeEx in types_to_exclude:
             if typeEx in ptypes:
                 ptypes.remove(typeEx)
