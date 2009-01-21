@@ -1483,3 +1483,16 @@ clear:both !important;
 /*ajustament columnes collage*/
 #collage .two-columns-largeleft .block_1, #collage .two-columns-largeright .block_2 {width:519px !important;}
 #collage .two-columns-largeleft .block_2, #collage .two-columns-largeright .block_1 {width:200px !important;}
+
+.TB_Button_Off, .TB_Combo_Off
+{
+   opacity: 0.80; /* Safari, Opera and Mozilla */
+   filter: alpha(opacity=80); /* IE */
+   /* -moz-opacity: 0.80; Mozilla (Old) */
+}
+
+.TB_Button_Disabled
+{
+   opacity: 0.20; /* Safari, Opera and Mozilla */
+   filter: gray() alpha(opacity=20); /* IE */
+}

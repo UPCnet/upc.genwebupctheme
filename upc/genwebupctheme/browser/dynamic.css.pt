@@ -39,7 +39,7 @@ input.searchField,
 
 .quadradet
 	{background-color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
-.liniaPrincipal_m
+.liniaPrincipal_m, .bandaSuperior, .liniaPrincipalNeutre2
 	{border-color:<tal:propietat replace="e1">Especific1</tal:propietat>;}
 
 blockquote,
