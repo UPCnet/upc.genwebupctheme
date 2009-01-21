@@ -76,9 +76,6 @@
     enabled="on" expression="" id="genweb-base.css" media="all"
     rel="stylesheet" rendering="import"/>
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="genweb-SCP-temp.css" media="screen"
-    rel="stylesheet" rendering="import"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="plantilles.css" media="all"
     rel="stylesheet" rendering="import"/>
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
