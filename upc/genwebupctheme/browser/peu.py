@@ -23,8 +23,4 @@ class Peu(ViewletBase):
         if cond:
             return a
         return b
-    
-    def resizeImage(self, obj, alto, ancho):
-        import pdb;pdb.set_trace()
-        return obj
-#        return obj.resize((ancho, alto), Image.NEAREST)
+        
