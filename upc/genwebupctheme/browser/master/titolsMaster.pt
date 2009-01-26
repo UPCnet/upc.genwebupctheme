@@ -114,6 +114,7 @@
         tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
         <map name="logoUPC" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya" /></map>
         <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
+		<span tal:condition="python: utils.getGWConfig().enllaslogotip">
             <!-- titol en catala -->
             <img 
                 tal:condition="python:utils.pref_lang()=='ca'" 
@@ -129,6 +130,7 @@
                 tal:condition="python:utils.pref_lang()=='en'"
                 tal:attributes="title python: utils.getGWConfig().firmaunitat_en;
                 src string:${portal_url}/logoPropi.gif"/>
+        </span>
         </a>
     </div>
     <div class="titolWeb_m">
