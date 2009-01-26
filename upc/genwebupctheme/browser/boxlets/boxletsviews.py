@@ -45,6 +45,12 @@ class enquesta(BrowserView,enquesta_render):
         self.polls = self._polls()
         return
 
+    def has_polls(self):
+        return len(self.polls) > 0
+    
+    def has_more_polls(self):
+        return len(self.polls) > 1
+
     def __call__(self):
         return xhtml_compress(self._template())
     
@@ -58,13 +64,14 @@ class enquesta(BrowserView,enquesta_render):
         #isStructuralFolder = globals_view.isStructuralFolder
         selection_mode = 'newest'
         number_of_polls = 3
-
+        state = ['published','intranet']
         if selection_mode == 'hidden':
             results = []
         elif selection_mode == 'newest':
             results = portal_catalog.searchResults(
                 meta_type='PlonePopoll',
                 isEnabled=True,
+                review_state = state,                
                 sort_on='Date',
                 sort_order='reverse',
                 sort_limit=number_of_polls)[:number_of_polls]
@@ -75,16 +82,17 @@ class enquesta(BrowserView,enquesta_render):
                 folder = context.getParentNode()
             depth = (selection_mode == 'branch') and 1 or 1000
             results = portal_catalog.searchResults(
+                review_state = state,
                 meta_type='PlonePopoll',
                 path={'query': '/'.join(folder.getPhysicalPath()),'depth': depth},
                 isEnabled=True,
                 sort_on='Date',
                 sort_order='reverse',
                 sort_limit=number_of_polls)[:number_of_polls]
-
         else:
             # A specific poll
             results = portal_catalog.searchResults(
+                review_state = state,
                 meta_type='PlonePopoll',
                 UID=selection_mode)
         if results:
