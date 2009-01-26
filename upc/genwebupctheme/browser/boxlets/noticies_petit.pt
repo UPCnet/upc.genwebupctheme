@@ -14,7 +14,7 @@
 	          <div class="icoRSS">
           	        <a href=""
              	        tal:define="utils context/@@upc.genweb.utils"
-             	        tal:attributes="href string:${utils/portal_url}news/aggregator/RSS">RSS 
+             	        tal:attributes="href view/rss_news_link">RSS
              	        <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
          	         </a>
         	   </div> 

@@ -180,6 +180,12 @@ class noticies(BrowserView, news_render):
 
     def __call__(self):
         return xhtml_compress(self._template())
+
+    def rss_news_link(self):
+        portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
+        portal = portal_state.portal()
+        news = portal.noticies.getTranslation()
+        return '%s%s' % (news.absolute_url(), '/aggregator/RSS')
     
     def all_news_link(self):
         portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')

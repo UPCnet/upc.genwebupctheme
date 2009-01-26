@@ -16,3 +16,6 @@ def setupVarious(context):
     #sobreescrivim l'fckstrip
     shutil.copyfile('%s/skins/upc_genwebupctheme_custom_images/fck_strip.gif' % (genwebtheme_path),
                 '%s/skins/fckeditor/editor/skins/silver/fck_strip.gif' % (fckeditor_path)) 
+    #sobreescrivim el fck_editor.css
+    shutil.copyfile('%s/skins/upc_genwebupctheme_styles/fck_editor.css' % (genwebtheme_path),
+                '%s/skins/fckeditor/editor/skins/silver/fck_editor.css' % (fckeditor_path)) 
