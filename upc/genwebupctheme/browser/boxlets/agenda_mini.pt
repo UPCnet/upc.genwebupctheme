@@ -4,7 +4,7 @@
 
 <div id="portlet150"> </div>
     <div id="caixaPortlet">
-    <div class="titolPortlet"> Agenda </div>
+    <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="titolPortlet"> Agenda </div>
    
         <ul>
         <li tal:repeat="obj entries">

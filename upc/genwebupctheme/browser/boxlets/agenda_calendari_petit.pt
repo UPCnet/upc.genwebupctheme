@@ -5,7 +5,8 @@
 
 <div id="portlet200"> </div>
     <div id="caixaPortlet">
-    <div class="titolPortlet"> Agenda </div>
+    <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda"
+         class="titolPortlet"> Agenda </div>
    
         <ul>
         <li tal:repeat="obj entries">
@@ -48,11 +49,6 @@
         text_week_day </span>
     </div>
 </div>
-
-
-
-
-
 
 <div id="calendariVertical">
     <b i18n:domain="upc.genwebupc"

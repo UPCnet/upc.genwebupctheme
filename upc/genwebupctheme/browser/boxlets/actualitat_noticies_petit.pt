@@ -15,9 +15,11 @@
 	           <div class="icoRSS">
           	          <a href=""
              	          tal:define="utils context/@@upc.genweb.utils"
-             	          tal:attributes="href string:${utils/portal_url}news/aggregator/RSS">RSS <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+             	          tal:attributes="href string:${utils/portal_url}news/aggregator/RSS">RSS 
+             	          <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
          	           </a>
-		      	  </div> Notícies
+		      	  </div>
+		      	  <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span>
 	    	</div>
 	    	
 	        <ul>
@@ -46,7 +48,8 @@
 	        </div>
 	      </tal:block>  
 	        
-	        <div tal:attributes="class python:news_items and 'titolPortlet separadorPortlet' or 'titolPortlet'">Actualitat UPC</div>
+	        <div i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitat"
+	             tal:attributes="class python:news_items and 'titolPortlet separadorPortlet' or 'titolPortlet'">Actualitat UPC</div>
 	        <ul>
 		        <li tal:repeat="entry entries">
 		            <a href=""
