@@ -81,13 +81,14 @@ margin-top: 5px;
 padding: 0px 5px;
 text-align:right;
 line-height: 0px;
-margin-top:-3px;
+margin-top:0px;
 }
 
 #portletPlus img{
 margin-right: 0px;
 margin-bottom: 0px;
 }
+#portletPlus.miniEsde {font-size:80%;padding: 0 5px 0 0 !important;}
 
 .flotaPlus{
 float:left;
@@ -135,7 +136,7 @@ margin: -36px 0px 1px 3px;
 .agendaDataReposicio{
 
 border-top:1px solid #999999;
-margin: 0px 0px 0px 0px;
+margin: 5px 0px 0px 0px;
 padding: 5px 25px 0px 0px;
 }/*pelvertical*/
 
@@ -924,6 +925,9 @@ border-width:1px !important;
 color:#666 !important;
 font-weight:bold;
 }
+.calendar tbody .rowhilite td {
+    background:#FFF !important; color:#333 !important;
+} 
 /*index continguts automatic plone*/
 #document-toc .portletHeader {
 	border-top:5px solid #E6E6E6;

@@ -33,13 +33,13 @@
 		                </span>
 		                <br>
 		            </a>
-		            <span class="portletItemDetails"
-		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</span>
+		            <small
+		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</small>
 		        </li>
 	        </ul>
 
 	        <div id="portletPlus">  
-	            <a href="#"> <img src="plus.gif" alt="més actualitat"> </a> 
+	            <a href="#"><img src="plus.gif" alt="+"></a> 
 	            <a href=""
 	               tal:attributes="href view/all_news_link"
 	               i18n:translate="box_more_news_link">

@@ -483,9 +483,23 @@ a span.state-private {
 	background: none !important;}
 span.state-pending, 
 td.state-pending {
+	color:orange !important;
 	background-image:none !important;}
 a span.state-pending {
+	color:orange !important;
 	background: none !important;}
+.state-esborrany {
+	color: #7dcc00 !important;
+	background: none !important;}
+span.state-esborrany,
+td.state-esborrany {
+	color: #7dcc00 !important;
+	background: none !important;}
+}
+a span.state-esborrany {
+	color: #7dcc00 !important;
+	background: none !important;
+}
 .state-intranet {
 	color: #7d00cc !important;
 	background: none !important;}
@@ -494,6 +508,7 @@ td.state-intranet {
 	color: #7d00cc !important;
 	background: none !important;}
 a span.state-intranet {
+	color: #7d00cc !important;
 	background: none !important;}
 /*missatges info*/
 dl.portalMessage dt {
@@ -1105,6 +1120,9 @@ dl dt span.summary {
 #workflow-transition-publish, 
 #workflow-transition-open, 
 #workflow-transition-review,
+#workflow-transition-retiraaesborrany,
+#workflow-transition-publicaalaintranet,
+#workflow-transition-retiraalaintranet,
 #workflow-transition-publishtointranet,
 #workflow-transition-retracttointranet,
 #workflow-transition-make_freeforall,
@@ -1124,16 +1142,19 @@ dl dt span.summary {
 #board_view{background-position:5px -143px;}
 #poi_tracker_view{background-position:5px -111px;}
 /* menu estat*/
-#workflow-transition-reject, 
 #workflow-transition-hide, 
 #workflow-transition-close, 
 #workflow-transition-complete{background-position:5px -207px;}
 #workflow-transition-retract,
+#workflow-transition-reject, 
+#workflow-transition-retiraaesborrany,
 #workflow-transition-show{background-position:5px -239px;}
 #workflow-transition-submit {background-position:5px -223px;}
 #workflow-transition-publish, 
 #workflow-transition-open, 
 #workflow-transition-review {background-position:5px -255px;}
+#workflow-transition-retiraalaintranet,
+#workflow-transition-publicaalaintranet,
 #workflow-transition-publishtointranet,
 #workflow-transition-retracttointranet {background-position:5px -271px;}
 #workflow-transition-make_freeforall{background-position:5px -159px;}
@@ -1483,7 +1504,8 @@ clear:both !important;
 /*ajustament columnes collage*/
 #collage .two-columns-largeleft .block_1, #collage .two-columns-largeright .block_2 {width:519px !important;}
 #collage .two-columns-largeleft .block_2, #collage .two-columns-largeright .block_1 {width:200px !important;}
-
+#collage.edit .two-columns-largeleft .block_1, #collage .two-columns-largeright .block_2 {width:505px !important;}
+#collage.edit .two-columns-largeleft .block_2, #collage .two-columns-largeright .block_1 {width:200px !important;}
 .TB_Button_Off, .TB_Combo_Off
 {
    opacity: 0.80; /* Safari, Opera and Mozilla */

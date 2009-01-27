@@ -1,5 +1,6 @@
 <tal:block tal:define="entries view/published_events;
                        toLocalizedTime nocall:context/@@plone/toLocalizedTime"
+           i18n:domain="plone"
            tal:condition="entries">
 
 <div id="portlet150"> </div>
@@ -21,6 +22,14 @@
             </small>
         </li>
         </ul>
+        <div id="portletPlus" class="miniEsde">  
+            <a href="#"><img src="plus.gif" alt="+"></a> 
+            <a href="" 
+               tal:attributes="href view/all_events_link"
+               i18n:translate="box_upcoming_events">
+               Upcoming events&hellip;
+            </a>
+        </div>
         
 </div>
 <div id="baix150"> </div>
