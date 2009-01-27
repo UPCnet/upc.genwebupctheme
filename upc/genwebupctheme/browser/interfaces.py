@@ -82,18 +82,18 @@ class IFormularioContact(Interface):
     """Define the fields of our form
     """
     
-    nombre = zope.schema.TextLine(title=_(u'Nom'),
-                                        description=_(u"Inseriu el vostre nom complet"),
+    nombre = zope.schema.TextLine(title=_('label_sender_fullname'),
+                                        description=_("help_sender_fullname"),
                                         required=True)
                               
-    destinatario = zope.schema.TextLine(title=_(u'A/e'),
-                                        description=_(u"Si us plau escriviu, la vostra adreça de correu  electrònic"),
+    destinatario = zope.schema.TextLine(title=_('label_sender_from_address'),
+                                        description=_("help_sender_from_address"),
                                         required=True)
  
-    asunto = zope.schema.TextLine(title=_(u'Assumpte'),
-                                        description=_(u"Si us plau, entreu l\'assumpte del missatge que voleu enviar"),
+    asunto = zope.schema.TextLine(title=_('label_subject'),
+                                        description=_("help_subject"),
                                         required=True)
 
-    mensaje = zope.schema.Text(title=_(u'Missatge'),
-                                        description=_(u"Si us plau, escriviu el missatge que voleu enviar"),
+    mensaje = zope.schema.Text(title=_('label_message'),
+                                        description=_("help_message"),
                                         required=True)

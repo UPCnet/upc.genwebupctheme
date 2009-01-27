@@ -115,6 +115,7 @@
 	                      title="Required"
 	                      i18n:attributes="title title_required;"
 	                      i18n:translate="label_required"
+	                      i18n:domain="plone"
 	                      tal:condition="widget/required">
 	                    (Required)
 	                </span>

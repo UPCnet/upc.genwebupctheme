@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from zope.formlib import form
 from upc.genwebupctheme.browser.interfaces import IFormularioContact
 
@@ -30,7 +31,7 @@ class ContactForm(formbase.PageForm):
     destinatario = property(get_email_from_name)
 
     
-    @form.action("Send")
+    @form.action(_(u"label_send"))
     def action_send(self, action, data):
         """Send the email to the configured mail address in properties and redirect to the
         front page, showing a status message to say the message was received.
