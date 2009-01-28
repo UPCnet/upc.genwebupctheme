@@ -100,8 +100,8 @@
                <a
                  href="#" 
                  tal:attributes="href url;
-                                 class string:$item_wf_state_class"
-                 tal:content="result/pretty_title_or_id" />
+                                 class string:$item_wf_state_class">
+                 <span tal:replace="structure result/pretty_title_or_id">Un resultat</span></a>
             </dt>
             
             <dd>
