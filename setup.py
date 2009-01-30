@@ -4,7 +4,7 @@ version = '3.0'
 
 setup(name='upc.genwebupctheme',
       version=version,
-      description="genwebUPC Tema",
+      description="Paquet del skin del Genweb UPC",
       long_description="""\
 """,
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
