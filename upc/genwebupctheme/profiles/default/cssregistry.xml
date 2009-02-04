@@ -66,21 +66,11 @@
     enabled="on" expression="" id="popoll.css" media="screen" rel="stylesheet"
     rendering="import"/>
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression=""
-    id="++resource++upc.genwebupctheme.stylesheets/main.css" media="screen"
-    rel="stylesheet" rendering="import"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="genweb-estils.css" media="screen"
-    rel="stylesheet" rendering="import"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="genweb-base.css" media="all"
     rel="stylesheet" rendering="import"/>
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="plantilles.css" media="all"
-    rel="stylesheet" rendering="import"/>
- <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="plantillesIE.css" media="screen"
-    rel="stylesheet" rendering="import"/>
+    rel="stylesheet" rendering="link"/>
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="neutre3.css" media="all" rel="stylesheet"
     rendering="import"/>
