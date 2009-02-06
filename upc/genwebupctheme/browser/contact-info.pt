@@ -22,7 +22,7 @@
 	
 		<div tal:replace="structure provider:plone.abovecontenttitle" />
 
-		<h1>Contacte</h1>
+		<h1 i18n:translate="genweb_contacte">Contact</h1>
 
 		<div class="agendaContingut contacte" style="padding: 5px;">
 	 		
@@ -32,22 +32,22 @@
 			</h5>
 	
 			<!-- DIRECCION -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']">Adreça</div>
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']" i18n:translate="genweb_adreca">Address</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet)			
 			</div>
 	
 			<!-- TELEFONO -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']">Telèfon</div>
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']" i18n:translate="genweb_telefon">Telephone</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono'])">93 401 76 76
 			</div>
 			
 			<!-- FAX -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax']">Fax</div>
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax']" i18n:translate="genweb_fax">Fax</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax'])">93 401 78 79
 			</div>
 			
 			<!-- EMAIL -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['email']">A/e</div>
+			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['email']" i18n:translate="genweb_ae">E-mail</div>
 			<div tal:define="mail python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['email'])">
 				<a 	tal:attributes="href python: 'mailto: ' + mail"
 		   		    tal:content="mail"></a>
@@ -56,13 +56,13 @@
 
 		<!-- director -->
 		
-		<div class="contacteSpan contacteSpanBaix" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']">Direcció</div>
+		<div class="contacteSpan contacteSpanBaix" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']" i18n:translate="genweb_direccio">Director</div>
 		<div class="contacteSpanBaix" tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['director'])">José Luís Vivanco
 		</div>
 		
 		<!-- Personal -->
 		
-		<div class="contacteSpan contacteSpanBaix">Personal</div>
+		<div class="contacteSpan contacteSpanBaix" i18n:translate="genweb_personal">Staff</div>
 		<div class="contacteSpanBaix">
 			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)"
 				tal:content="python: 'Directori'"></a>
@@ -86,7 +86,7 @@
 	</tal:block>
 	
 
-	<h2>Formulari de contacte</h2>
+	<h2 i18n:translate="genweb_formContacte">Contact form</h2>
 
 		<form action="."
 		      tal:attributes="action request/URL"
