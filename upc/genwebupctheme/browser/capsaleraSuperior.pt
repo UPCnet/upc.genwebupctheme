@@ -6,7 +6,7 @@
     <a name="amuntDeTot"></a>
 <!--     <div class="bandaSuperior"></div> -->
    <div class="barraCerca">
-    
+
     <form name="searchform"
           action="search"
           tal:attributes="action string:${view/portal_url}/search">
@@ -15,7 +15,8 @@
                     i18n:translate="text_search">Search Site</label>
 
         <div class="LSBox">
-        <input class="text"
+        <input name="SearchableText"
+               class="text"
                type="text"
                size="18"
                value=""
