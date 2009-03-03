@@ -275,7 +275,7 @@ h1.documentFirstHeading img {display:none;}
 .sobreElWeb {
 	text-align:right;
 	float:right;
-	margin-top:-12px;}
+	/*margin-top:-12px;*/}
 html*.sobreElWeb {     
 	margin-top:0px; 
        *margin-top:-12px;
