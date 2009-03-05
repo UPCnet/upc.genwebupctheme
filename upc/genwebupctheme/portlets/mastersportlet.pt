@@ -50,7 +50,8 @@
 					<!-- Llista d'admesos -->
 			              <li class="navTreeItem visualNoMarker"><div>
 			              <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:attributes="href python:'http://www.upc.edu/catala/estudis/masters-eees/admesos.php?id_titulacio='+ str(utils.getGWConfig().idtitulacioMaster)" 
+			                   tal:condition="python: records['m_llistat_admesos']=='pdf'"
+			                   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+ str(utils.getGWConfig().idestudiMaster) + '_l.pdf'" 
 			                   tal:content="python: utils.recodifica(utils.getTextMaster('llistat_admesos',lang_code))">llistat_admesos </a></div></li>
 
 					<!-- Matricula -->

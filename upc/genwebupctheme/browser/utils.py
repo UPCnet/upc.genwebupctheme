@@ -367,11 +367,17 @@ class utilitats(BrowserView):
         db = self.connectDatabase()
         c=db.cursor() 
         c.execute("""SELECT DISTINCT uu.id_unitat, uu.nom_cat, uu.nom_esp, uu.nom_ing, uu.sigles, CASE WHEN sub.id=2 THEN 1 WHEN sub.id=1 THEN 2 ELSE 99 END orden_tipus FROM upc_on_simparteix uos,upc_unitat uu LEFT JOIN scp_unitat_basiques sub ON uu.id_unitat=sub.id_unitat WHERE uos.id_estudi=%s AND uos.id_unitat=uu.id_unitat""", (id_estudi,))
-        results = c.fetchone()
+        results = c.fetchall()
 
         dictKeys = ('uu.id_unitat', 'uu.nom_cat', 'uu.nom_esp', 'uu.nom_ing', 'uu.sigles','orden_tipus',)    
 
-        return self.remapList2Dic(dictKeys,results)
+        _result = []
+        j=0
+        for i in results:
+            _result.append(self.remapList2Dic(dictKeys,results[j]))
+            j=j+1
+
+        return _result 
     
     def select_organitzadors_old(self, id_estudi):
 

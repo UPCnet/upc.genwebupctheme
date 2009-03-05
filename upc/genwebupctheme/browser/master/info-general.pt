@@ -109,12 +109,14 @@
 					        <tr tal:condition="python: utils.select_organitzadors(utils.getGWConfig().idestudiMaster)">
 					            <td tal:content="python: utils.recodifica(utils.getTextMaster('unitats_organitzadores',lang_code))" class="titular2">unitats_organitzadores</td>
 					            <td>
-					               <span tal:define="organitzadors python:utils.select_organitzadors(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
-					                     <div><a tal:attributes="href python: utils.recuperaLinkUnitats(organitzadors['uu.id_unitat'],lang_code)" target="_blank"
+					               <span tal:repeat="organitzadors python:utils.select_organitzadors(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
+
+					                     <div><a tal:attributes="href python: utils.recuperaLinkUnitats(str(organitzadors['uu.id_unitat']),lang_code)" target="_blank"
 					                             tal:content="python: utils.recodifica(organitzadors['uu.nom_'+utils.cambiaPrefijo(lang_code)])">UPC</a>
 					                     <span tal:condition="python:organitzadors['uu.sigles']"
 					                           tal:content="python:'  ('+utils.recodifica(organitzadors['uu.sigles'])+')'"
 					                           tal:omit-tag="">sigles</span></div>
+					                            
 					               </span>
 					            </td>
 					        </tr>
