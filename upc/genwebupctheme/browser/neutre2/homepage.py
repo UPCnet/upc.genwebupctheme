@@ -8,17 +8,19 @@ class HomePageView(BrowserView):
     __call__=ViewPageTemplateFile('homepage.pt')
 
     def getFrontPage(self):
+        """
+        Funcio que retorna la pagina principal del espai. Te en compte els permissos de lusuari validat, amb un
+        restrictedTraverse sobre lobjecte (tenint en compte lidioma) 
+        """
         page = {}
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
-
-        try:
-            frontpageobj=portal_state.portal().benvingut.getTranslation()
-            page['body']=frontpageobj.CookedBody()
-        except:
-            page['body']=""
+        portal=portal_state.portal()
         
-        #page['title']=frontpageobj.Title()
+        FrontPageObj = portal.benvingut.getTranslation()
+        idFrontPageObj = FrontPageObj.id
+        traversal = portal.restrictedTraverse(idFrontPageObj)
+        page['body']=FrontPageObj.CookedBody()
         
         return page
 

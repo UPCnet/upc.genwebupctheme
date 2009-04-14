@@ -18,7 +18,7 @@
     <dd>No es troba un o alguns dels objectes necessaris pel bon funcionament de l'espai, si us plau, procediu a la creació dels objectes en <a tal:attributes="href view/getSetupLink">aquest formulari</a>. Gràcies.</dd>
   </dl>
 
-  <div id="contenidor">
+  <div id="contenidor" tal:condition="view/existObjectsNeeded">
     <div class="contingut">
       <div class="columnaDreta" tal:define="boxesdreta view/getColumn3">
       <!-- Columna dreta  -->
