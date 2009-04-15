@@ -15,6 +15,7 @@ class Peu(ViewletBase):
             return catalog.searchResults(portal_type='Logos_Footer',
                        review_state='published',
                        path=logos_container[0].getPath(),
+                       sort_on='getObjPositionInParent',
                        sort_limit=5)[:5]
         else:
             return []
