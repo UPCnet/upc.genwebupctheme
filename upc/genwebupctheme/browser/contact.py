@@ -31,7 +31,7 @@ class ContactForm(formbase.PageForm):
     destinatario = property(get_email_from_name)
 
     
-    @form.action(_(u"label_send"))
+    @form.action(_(u"label_send", default=u'Send'))
     def action_send(self, action, data):
         """Send the email to the configured mail address in properties and redirect to the
         front page, showing a status message to say the message was received.
