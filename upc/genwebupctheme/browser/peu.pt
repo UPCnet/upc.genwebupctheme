@@ -18,12 +18,12 @@
   
    <div id="signText"> 
         <span class="sobreElWeb">
-            <a href="sobre-el-web"
+            <a accesskey="0" href="sobre-el-web"
                 i18n:translate="genweb-sobre_aquest_web">
             	About this web
             </a>
         </span>
-        © <a href="http://www.upc.edu" target="_blank">UPC</a>. Universitat Politècnica de Catalunya. 
+        © <a href="http://www.upc.edu" target="newwindow">UPC</a>. Universitat Politècnica de Catalunya. 
         
         <span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció.</span>
 

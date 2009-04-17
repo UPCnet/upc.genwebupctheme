@@ -8,27 +8,10 @@
 
 <div class="barraBranca_m">
 <div> 
-<!--<table>
-    <tbody>
-        <tr valign="bottom" height="74">
-        <td width="45%"> </td>
-        <td align="right" style="text-align:right">
-              Titol de capsalera del master
-        </td>
-
-        <td class="imatgeCapcalera_m">
-        <img longdesc="LogoMaster" alt="" 
-                tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
-        </td>
-        
-        </tr>
-    </tbody>
-</table>
--->
 
 <table>
     <tbody>
-        <tr valign="bottom" height="74">	
+        <tr valign="bottom">	
             <td width="155"> 
             	<div class="titolBranca_m" 
             		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')"
@@ -41,7 +24,7 @@
            	</td> 
             
             <td class="imatgeCapcalera_m">
-                <img longdesc="LogoMaster" alt="" tal:attributes="src string:${portal_url}/imatgeMaster.jpg"/>
+                <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg; alt python: utils.recodifica(data['ua.nom_'+utils.cambiaPrefijo(lang_code)])"/>
             </td>
         </tr>
     </tbody>

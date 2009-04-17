@@ -31,10 +31,10 @@
 				tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['nom_'+utils.cambiaPrefijo(lang_code)])"> Servei de Comunicació i Promoció
 			</h5>
 	
-			<!-- DIRECCION -->
+			<!-- DIRECCION --><address>
 			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']" i18n:translate="genweb_adreca">Address</div>
 			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet)			
-			</div>
+			</div></adDress>
 	
 			<!-- TELEFONO -->
 			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']" i18n:translate="genweb_telefon">Telephone</div>
@@ -78,7 +78,7 @@
 			
 		<div class="iframeContacte" tal:condition="python: utils.getGWConfig().boolmaps">
 	  		<span class="contacteSpan">
-	      		<img src="googleMaps.gif"/>
+	      		<img alt="Google Maps" src="googleMaps.gif"/>
 	   		</span>
 	   		<div tal:replace="structure python: utils.getGWConfig().contactegmaps"></div>	
 		</div> 

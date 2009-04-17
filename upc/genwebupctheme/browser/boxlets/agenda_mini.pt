@@ -3,8 +3,8 @@
            i18n:domain="plone"
            tal:condition="entries">
 
-<div id="portlet150"> </div>
-    <div id="caixaPortlet">
+<div class="portlet150"> </div>
+    <div class="caixaPortlet">
     <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="titolPortlet"> Agenda </div>
    
         <ul>
@@ -23,7 +23,7 @@
         </li>
         </ul>
         <div id="portletPlus" class="miniEsde">  
-            <a href="#"><img src="plus.gif" alt="+"></a> 
+            <a href="#"><img src="plus.gif" alt="+"/></a> 
             <a href="" 
                tal:attributes="href view/all_events_link"
                i18n:translate="box_upcoming_events">
@@ -32,5 +32,5 @@
         </div>
         
 </div>
-<div id="baix150"> </div>
+<div class="baix150"> </div>
 </tal:block>

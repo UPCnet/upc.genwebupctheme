@@ -1,3 +1,4 @@
+.hiddenStructure {display:none;}
 /* CONTINGUT*/
 .contingut{
 	text-align: left;
@@ -13,6 +14,26 @@
 	float:right;}
 .columnaDreta {
 	float: right;}
+
+
+.columnaEsq .portlet200,	
+.columnaEsq .caixaPortlet,
+.columnaEsq .baix200 {
+	margin-left:25px !important;
+	width:200px !important;}
+.columnaDreta .portlet150,	
+.columnaDreta .caixaPortlet,
+.columnaDreta .baix150,
+.columnaDreta #baner {
+	margin-left:25px !important;
+	width:150px !important;}
+.columnaEsq .caixaPortlet {_width:100px;}
+.columnaEsq .caixaPortlet {
+	width:198px !important;}
+.columnaDreta #caixaPortlet {
+	width:148px !important;} 	
+
+/* Canviats ID per CLASS
 .columnaEsq #portlet200,	
 .columnaEsq #caixaPortlet,
 .columnaEsq #baix200 {
@@ -29,11 +50,13 @@
 	width:198px !important;}
 .columnaDreta #caixaPortlet {
 	width:148px !important;} 	
+
+*/
 /* GENERAL */
 body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#fff url(fons.png) center repeat-y;}
 a:link, a:visited, a:active {color:#007dcc; text-decoration: none;}	
 a:hover {text-decoration: underline;} 
-a:focus {outline: none;}
+/*a:focus {outline: none;}*/
 img {border:0;} 
 .logo a:hover{text-decoration: none;}
 ul {margin: 0;padding: 0;}	
@@ -60,6 +83,11 @@ tt {
 	font-size:100%;
 	padding:0 0.1em;
 	font-style:normal;}
+kbd {font-size:1.25em;}
+code {
+	font-size:110%;
+	padding:0.1em;
+	}
 /*forms*/
 legend {
 	background:transparent none repeat scroll 0%;
@@ -210,7 +238,7 @@ h3 {
 h2{
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
-	font-size:14px;
+	font-size:1.25em;
 	margin-top:25px;
 	padding-bottom:10px;
 	padding-top:10px;}
@@ -277,9 +305,7 @@ h1.documentFirstHeading img {display:none;}
 	float:right;
 	/*margin-top:-12px;*/}
 html*.sobreElWeb {     
-	margin-top:0px; 
-       *margin-top:-12px;
-       _margin-top:-12px;}
+	margin-top:0px; }
 .bandaPeu {
 	float:left;
 	border-top: 18px solid #ff6600; 
@@ -711,10 +737,10 @@ margin-bottom:0.5em;
 ul.formTabs li{margin-left:0em;}
 .agendaContingut ul li, .columnaDreta ul li, .columnaEsq ul li {list-style-image:none;list-style-position:none;list-style-type:none !important;}
 .agendaContingut ul, .columnaDreta ul, .columnaEsq ul {margin-left:0em;}
-.columnaDreta #portlet200{
+.columnaDreta .portlet200{
 	background:transparent url(bar150.gif) no-repeat scroll center top;
 	width:150px;}
-.columnaDreta #baix200 {
+.columnaDreta .baix200 {
 	background-image:url(baix150.gif);
 	width:150px;}
 .formHelp {
@@ -1077,7 +1103,7 @@ dl dt span.summary {
 	font-size:90%;}
 .template-atct_topic_view #content dl dt img, .template-folder_extended #content dl dt img, .template-folder_listing #content dl dt img{
 	float:right;
-	visibility:hidden;}
+	display:none;}
 .template-folder_extended #content dl dt .documentByLine, .template-folder_listing #content dl dt .documentByLine {
 	display:block;}
 .ultimamodificacio{
@@ -1181,10 +1207,13 @@ dl dt span.summary {
 #content a[href^="https://devel.upcnet.es/neutre3"] {
 	background:transparent none repeat scroll 0 0;
 	padding:0;}
+/*
 #content .columnaEsq a[href^="https://devel.upcnet.es/neutre3"], 
 #content .columnaDreta a[href^="https://devel.upcnet.es/neutre3"],{
 	background:transparent none repeat scroll 0 0;
 	padding:0;}
+*/
+#baner a[href^="https:"], #baner a.link-https {background:none !important; padding:0 !important;}
 #portal-personaltools li {
 	margin-left:0em;}
 #portal-personaltools b span{
@@ -1274,7 +1303,7 @@ ul.navTreeLevel0 > li.navTreeCurrentNode, ul.navTreeLevel0 > li.navTreeItemInPat
 ul.navTree li ul li, .navTreeLevel11, .navTreeLevel1, .NavTreeItem {
 	padding: 0 0 0 10px;
 	margin: 5px 1px;
-	background: url(quadret.gif) no-repeat left 3px !important;
+	background: url(quadret.gif) no-repeat left 1px !important;
 	list-style-type: none;
 	line-height:1.5em;
 	border-bottom:none;
@@ -1411,6 +1440,7 @@ div.contacte h5 {color:#666;margin:0px !important;}
 div .contacteSpan {float:left; width:70px; text-align:right; margin-right:15px;font-weight:bold; color:#666; margin-left:20px;}
 div.contacte div.contacteSpan {float:left; width:70px; text-align:right; margin-right:15px;font-weight:bold; color:#666; margin-left:10px;}
 div.contacte div, div.contacte h5 {padding-bottom:5px;}
+div.contacte address {font-style:normal;}
 .widget textarea {width:99%;}
 /*ajustaments visuals de genweb settings*/
 div.value {margin-bottom:20px !important;}
@@ -1461,9 +1491,11 @@ div#dashboard #dashboard-portlets4 {padding-top:0px;}
 div#dashboard .portlets-manager .portletHeader {border:0px; margin:5px 0px;}
 div#dashboard dl.portlet {margin-bottom:0px;}
 div#dashboard .portletFooter {text-align:right;}
-
+div#dashboard table.ploneCalendar strong {font: bold 100% Verdana, Arial, sans-serif; padding-top:0;}
+div#dashboard table.ploneCalendar thead {color:#999; background:#f3f3f3;}
 /*detallet*/
-.fletxatop, .reviewHistory {margin-top:30px;}
+.fletxatop {margin-top:30px;}
+/* .reviewHistory tret el margin top*/
 form[action$="controlpanel"] legend {font-size:11px !important;}
 
 /**** LINKS ****/
@@ -1484,13 +1516,13 @@ clear:both !important;
     border-color: #007dcc;
     border-width: 1px;
     background:#f3f3f3;
-    outline:none;}
+    /*outline:none;*/}
 #portal-column-content fieldset input[type="submit"]:focus, #portal-column-content fieldset input.standalone:focus, #portal-column-content fieldset input.context:focus,
 #portal-column-content fieldset input[type="submit"]:active, #portal-column-content fieldset input.standalone:active, #portal-column-content fieldset input.context:active{
     border-color: #007dcc;
     border-width: 1px;
     background:#3af;
-    outline:none;}   
+    /*outline:none;*/}   
 }
 
 #parent-fieldname-subject ul {margin-left:0 !important;}
@@ -1518,3 +1550,6 @@ clear:both !important;
    opacity: 0.20; /* Safari, Opera and Mozilla */
    filter: gray() alpha(opacity=20); /* IE */
 }
+
+/*pagina no trobada*/
+.template-default_error_message #region-content .documentFirstHeading {color: crimson !important; font-size:2.5em !important;}

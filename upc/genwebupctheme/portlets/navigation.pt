@@ -1,4 +1,14 @@
 <tal:block i18n:domain="plone">
+
+<!-- irene -->
+    <div class="titolSeccio" tal:define="utils context/@@upc.genweb.utils">
+        <div class="textetSeccioneta"><span tal:replace="structure utils/getSectionFromURL">Seccio</span></div>
+    </div>
+    <div class="flotaTapa"></div>
+
+<!-- fi irene -->
+
+
 <dl class="portlet portletNavigationTree"  
     tal:define="root view/navigation_root">
 <!--
@@ -17,14 +27,6 @@
         <span class="portletTopRight"></span>
     </dt>
 -->
-
-<!-- irene -->
-    <div class="titolSeccio" tal:define="utils context/@@upc.genweb.utils">
-        <div class="textetSeccioneta"><span tal:replace="structure utils/getSectionFromURL">Seccio</span></div>
-    </div>
-    <div class="flotaTapa"></div>
-
-<!-- fi irene -->
 
     <dd class="portletItem lastItem">
         <ul class="navTree navTreeLevel0">

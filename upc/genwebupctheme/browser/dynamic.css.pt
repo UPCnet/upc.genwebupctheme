@@ -111,7 +111,10 @@ pre
 #titolPagina,
 .titular1,
 .titular2,
-.titular3
+.titular3,
+#content h4,
+#content h5,
+#content h6
 	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
 
 
@@ -121,7 +124,8 @@ pre
 .taulaRegistres .fonsDestacat2,
 .destacatQuadres
 	{background-color: <tal:propietat replace="e4">Especific4</tal:propietat>;}
-.titular1
+.titular1,
+#content h4
 	{border-top: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .fitxa .titular1,
 .fitxa .separadorH

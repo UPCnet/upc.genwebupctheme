@@ -5,21 +5,21 @@
 
     <div tal:condition="python: utils.getGWConfig().tipusNeutre2==('Recerca')"
     			 class="logoNeutre2">
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
+        <img  alt="logo UPC"             
                tal:attributes="title python: utils.getGWConfig().tipusNeutre2;
                                     src python:portal_url+'/recerca_'+ utils.pref_lang()+'.jpg'" />
 	</div>   
 	                                 
 	<div tal:condition="python: utils.getGWConfig().tipusNeutre2==('Intranet')"
     			 class="logoNeutre2">
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
+        <img  alt="logo UPC"              
                tal:attributes="title python: utils.getGWConfig().tipusNeutre2;
                                     src python:portal_url+'/intranet_'+ utils.pref_lang()+'.jpg'" />                                    
 	</div> 
 	                                   
 	<div tal:condition="python: utils.getGWConfig().tipusNeutre2==('Default')"
     			 class="logoNeutre2">
-        <img  alt="logo UPC" longdesc="marca de la Universitat Politècnica de Catalunya"                
+        <img  alt="UPC logo"              
                tal:attributes="title python: utils.getGWConfig().tipusNeutre2;
                                     src python:portal_url+'/default_n2_'+ utils.pref_lang()+'.jpg'" />
                                                        
@@ -27,7 +27,7 @@
 
     <div class="imatgeCapcaleraNeutre2">
         <img tal:attributes="src string:${portal_url}/imatgeNeutre2.jpg" 
-        longdesc="Títol de la Web" alt="Títol"/>
+        alt="Títol"/>
     </div>
     
     <div class="liniaPrincipalNeutre2"></div>

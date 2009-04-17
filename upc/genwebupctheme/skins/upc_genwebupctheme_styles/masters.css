@@ -83,7 +83,7 @@ label[for="form.columna2"] + span {display:none}
 select[id="form.tipusNeutre2"] {background:#e6e6e6}
 select[id="form.tipusNeutre2"] option {color: #999}
 /*flota tapa navigation*/	
-.portletNavigationTree .titolSeccio, .portletNavigationTree .flotaTapa {display:none;}
+.titolSeccio, .flotaTapa {display:none;}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}	
 /*navegacio masters*/

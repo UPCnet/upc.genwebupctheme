@@ -77,7 +77,9 @@
                         <span class="summary"
                               tal:attributes="class string:$item_type_class summary"
                               tal:condition="python:item_type != 'Link'">
-                            <img tal:replace="structure item_icon/html_tag" />
+                            <img
+					tal:attributes="alt string:$item_type"
+					tal:replace="structure item_icon/html_tag" />
                             <a href="#"
                                tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
                                                class string:${item_wf_state_class} url"
@@ -89,7 +91,8 @@
                         <span class=""
                               tal:attributes="class string:$item_type_class"
                               tal:condition="python:item_type == 'Link'">
-                            <img tal:replace="structure item_icon/html_tag" />
+                            <img tal:replace="structure item_icon/html_tag"	
+					tal:attributes="alt item_icon/html_tag" />
                             <a href="#"
                                class="link-plain"
                                tal:content="item_title_or_id"

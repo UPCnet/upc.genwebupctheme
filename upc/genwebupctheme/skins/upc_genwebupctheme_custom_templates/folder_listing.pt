@@ -88,7 +88,6 @@
                         </span>
 
                         <span class=""
-                              tal:attributes="class string:$item_type_class"
                               tal:condition="python:item_type == 'Link'">
                             <img tal:replace="structure item_icon/html_tag" />
                             <a href="#"

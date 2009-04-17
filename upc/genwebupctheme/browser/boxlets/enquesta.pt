@@ -2,8 +2,8 @@
                        toLocalizedTime nocall:context/@@plone/toLocalizedTime"
            tal:condition="entries">
 
-<div id="portlet150"> </div>
-<div id="caixaPortlet"
+<div class="portlet150"> </div>
+<div class="caixaPortlet"
     xmlns:tal="http://xml.zope.org/namespaces/tal"
     xmlns:metal="http://xml.zope.org/namespaces/metal"
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
@@ -113,6 +113,6 @@
       <span class="portletBottomRight"></span>
   </dd>
 </div>
-<div id="baix150"> </div>
+<div class="baix150"> </div>
 
 </tal:block>

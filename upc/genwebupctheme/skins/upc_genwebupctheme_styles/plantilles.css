@@ -1,3 +1,6 @@
+/*ajustaments dalt200 ie6. es un problema amb els espais i la tipo que te lie*/
+#content #dalt200, #content #baix200 {_background-repeat:no-repeat;_line-height:0px;color:#fff;}
+
 #content { line-height: 1.5em;}
 ul{
 	margin:0;padding:0;}
@@ -26,19 +29,19 @@ form{ margin: 0; }
 	font-family:Arial, Helvetica, sans-serif;
 	color: #c00; 
 	font-weight: bold}
-.titular1{
+.titular1, #content h4{
 	margin: 1em 0 0.5em -1px;
 	padding:0.35em 0.2em 0.2em 0;
 	background: url(../img/custom/fletxaD.gif) no-repeat 0 7px;
 	*background: url(../img/custom/fletxaD.gif) no-repeat 0 9px;
 	border-top: 2px dotted #DFE3D3; 
 	font-size:1.3em}
-.titular2{
+.titular2, #content h5{
 	font-size: 1.1em;
 	margin-bottom: 0.5em;
 	margin-top: 0.75em;
 	font-size:1.3em}
-.titular3{
+.titular3, #content h6{
 	font-size: 1.05em;
 	margin-bottom: 0.5em;
 	margin-top: 1em;
@@ -180,8 +183,8 @@ html*.taulaRegistres table{
 	margin: 0px; padding:10px; margin-top:-36px;
 	background: url(borderTopDiagonal.gif) repeat-x top;}
 .fletxa_fitxa{ background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
-.fitxa .titular1{ margin: -0.2em 0 1.2em 0; padding:0.2em 0 0.5em 0; border:0px; border-bottom: 2px dotted #a29386; background:none;}
-.fitxa .titular2{ margin-bottom: 1em;}
+.fitxa h4{ display:block;margin: -0.2em 0 1.2em 0 !important; padding:0.2em 0 0.5em 0; border:0px; border-bottom: 2px dotted #a29386; background:none;border-top:0 !important;}
+.fitxa h5{ margin-bottom: 1em;}
 .fitxa img{background:#FFF; padding: 0 20px 10px 0; margin: 0;}
 .fitxa .align_right img{background:#FFF; padding: 3px; border:1px solid #999; margin: 0;}
 .fitxa .align_left img{background:#FFF; padding: 3px; border:1px solid #999; margin: 0;}
@@ -340,9 +343,9 @@ body#content a {color:#007dcc; text-decoration:none;}
 	filter:alpha(opacity=80);}
 #FCKTdiv3imatgedamunttext{
 	padding:10px}
-#estilImgPhotoAlbum1 {width:128px; height:96px;}
-#estilImgPhotoAlbum2 {width:96px; height:128px;}
-#estilImgPhotoAlbum3 {width:128px; height:83px;}
+.estilImgPhotoAlbum1 {width:128px; height:96px;}
+.estilImgPhotoAlbum2 {width:96px; height:128px;}
+.estilImgPhotoAlbum3 {width:128px; height:83px;}
 /*enllacos dreta*/
 table.enllacosDreta {width:100%;}
 table.enllacosDreta td {vertical-align:top;}
@@ -359,3 +362,19 @@ table.enllacosDreta li {
 table.enllacosDreta ul {padding-bottom:20px;}
 table.enllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
 table.enllacosDreta .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
+
+/*cancella classes kupu als floats imatges*/
+.image-left {
+   float: left;
+   clear: both;
+   margin: 0.5em 1em 0.5em 0;
+   padding:10px;
+   border: 1px solid #e6e6e6;
+}
+.image-right {
+   float: right;
+   clear: both;
+   margin: 0.5em;
+   padding:10px;
+   border: 1px solid #e6e6e6;
+}

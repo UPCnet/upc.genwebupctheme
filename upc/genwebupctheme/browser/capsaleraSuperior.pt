@@ -3,7 +3,7 @@
                 portal_url context/@@plone_portal_state/portal_url;"
     tal:condition="view/site_actions"
     i18n:domain="plone">
-    <a name="amuntDeTot"></a>
+    <a id="amuntDeTot"></a>
 <!--     <div class="bandaSuperior"></div> -->
    <div class="barraCerca">
 
@@ -16,7 +16,6 @@
 
         <div class="LSBox">
         <input name="SearchableText"
-               class="text"
                type="text"
                size="18"
                value=""
@@ -24,7 +23,7 @@
                accesskey="4"
                tal:attributes="value request/SearchableText|nothing;
                                id view/search_input_id"
-               class="inputLabel" />
+               class="text inputLabel" />
 
            <input class="submitGo" type="submit" value ="" />
     
@@ -36,8 +35,8 @@
     </form>
 
 
-    <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
-    <a href=""
+    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+    <a accesskey="1" href=""
        tal:attributes="href string:${view/portal_url}/"
        i18n:domain="upc.genwebupc"
        i18n:translate="inici"> 
@@ -48,7 +47,7 @@
     <tal:block repeat="saction view/site_actions"
         tal:attributes="id string:siteaction-${saction/id}">
         
-        <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
+        <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
         <a
            href=""
            tal:define="title saction/title;
@@ -64,7 +63,7 @@
      </tal:block>
 
     <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Discreta'">
-    <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
+    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
        tal:condition="here/portal_membership/isAnonymousUser"
@@ -75,8 +74,8 @@
     </a>
     </tal:identificacio>
 
-    <img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
-    <a href=""
+    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+    <a accesskey="5" href=""
        tal:attributes="href string:${view/portal_url}/search_form"
        i18n:translate="cercaavancada"
        i18n:domain="upc.genwebupc">  

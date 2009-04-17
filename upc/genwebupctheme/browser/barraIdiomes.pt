@@ -12,8 +12,7 @@
               tal:define="code lang/code;
                           selected lang/selected">
              <span tal:condition="not: selected"> 
-                <id class="idiomes" >
-                <span><img class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/></span>
+                <span><img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/></span>
                     <a tal:define="flag lang/flag|nothing;
                                    name lang/native"
                        i18n:translate=""
@@ -24,7 +23,6 @@
                               >Language          
                     </a>
                       
-                </id>
               </span> 
         </span>
     

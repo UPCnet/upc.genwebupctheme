@@ -188,7 +188,7 @@
     </div>
 <script type="text/javascript"
         tal:attributes="src string:${portal_url}/hide_columns.js;"></script>
-<div id="kss-spinner"><img tal:attributes="src string:${portal_url}/spinner.gif" alt="" /></div>
+<div id="kss-spinner"><img tal:attributes="src string:${portal_url}/spinner.gif" alt="loading" /></div>
 </body>
 </html>
 </metal:page>

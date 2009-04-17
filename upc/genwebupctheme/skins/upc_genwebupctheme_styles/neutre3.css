@@ -28,11 +28,11 @@
 	border-top: 0;
 	padding: 0;
 	margin: -21px 0 0 5px;
-	text-align: left;
+	text-align: left !important;
 	text-transform: none;
 	color: #4d4d4d}
 #portal-personaltools li a {
-	color:#0076CC;
+	color:#007dCC;
 	text-decoration:none}
 #portal-personaltools li a:hover {
 	text-decoration:underline}
@@ -41,31 +41,31 @@
 	text-align:center;
 	font-family:Arial, Helvetica, Verdana, sans-serif;
 	font-size:1.2em;
-	text-transform:uppercase; 
 	margin-top:0; 
-	padding:0; 
+	padding:0 0 0 2em; 
 	font-weight:bold;
 	*margin-top:4px}
 #portal-globalnav li {
 	line-height: 25px;
 	padding:5px; 
-	margin-left: -1.75em; 
-	display: inline}
+	margin-left: -2em; 
+	display: inline;}
 #portal-globalnav li a {
 	line-height: 25px;
-	padding:5px; 
-	color: #0076CC; 
-	text-transform:uppercase}
+	padding:5px 10px; 
+	color: #007dCC;
+	font-size:1.1em;
+	text-transform: none;}
 #portal-globalnav li a, #portal-globalnav li.selected a, #portal-globalnav li a:hover, #portal-globalnav li.selected a:hover {
-	border-right: 4px solid #FFF; 
-	border-left: 4px solid #FFF; 
+	border-right: 5px solid #FFF; 
+	border-left: 5px solid #FFF; 
 	border-top: 0; 
 	border-bottom: 0}
 
 #portal-globalnav li.selected a, #portal-globalnav li a:hover, #portal-globalnav li.selected a:hover {
 	color: #FFF;
-	padding:4px 5px 5px 5px;
-	*padding:5px 5px 4px 5px}
+	padding:2px 10px 4px 10px;
+	*padding:3px 10px 3px 10px}
 
 #portal-globalnav li.selected a {
 	background-color: #808080}

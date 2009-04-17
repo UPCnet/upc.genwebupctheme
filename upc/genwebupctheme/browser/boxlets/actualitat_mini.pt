@@ -5,9 +5,9 @@
 	<tal:block tal:define="entries view/getRSS"
 	           tal:condition="entries">
 	
-		<div id="portlet150"> </div>
+		<div class="portlet150"> </div>
 		
-	    <div id="caixaPortlet">
+	    <div class="caixaPortlet">
 	    
 	        <div i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitat" class="titolPortlet">Actualitat UPC</div>
 	        <ul>
@@ -24,7 +24,7 @@
 
 	        
 	    </div> 
-	    <div id="baix150"> </div>
+	    <div class="baix150"> </div>
 	        	
 	</tal:block>
 </tal:newsitems>

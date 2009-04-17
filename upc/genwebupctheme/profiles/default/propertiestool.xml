@@ -101,6 +101,12 @@
 		&lt;/Style&gt; 
 		&lt;Style name="Cel·la destacada 2" element="td"&gt;  
 		&lt;Attribute name="class" value="fonsDestacat2" /&gt; 
+		&lt;/Style&gt;
+		&lt;Style name="Quadre de text Pre" element="pre"&gt;  
+		&lt;Attribute name="class" value="" /&gt;  
+		&lt;/Style&gt;
+		&lt;Style name="Text Code" element="code"&gt;
+		&lt;Attribute name="class" value="" /&gt;  
 		&lt;/Style&gt;</property>
     <property name="fck_toolbar" type="string">Custom</property>
     <property name="fck_custom_toolbar" type="text">[

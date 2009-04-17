@@ -4,8 +4,8 @@
            tal:condition="entries"
            >
 
-<div id="portlet200"> </div>
-    <div id="caixaPortlet">
+<div class="portlet200"> </div>
+    <div class="caixaPortlet">
     <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda"
          class="titolPortlet"> Agenda </div>
    
@@ -24,8 +24,8 @@
             </small>
         </li>
         </ul>
-        <div id="portletPlus">  
-            <a href="#"><img src="plus.gif" alt="+"></a> 
+        <div class="portletPlus">  
+            <a href="#"><img src="plus.gif" alt="+"/></a> 
             <a href=""
                tal:attributes="href view/all_events_link"
                i18n:translate="box_upcoming_events">
@@ -72,10 +72,16 @@
     </span>
     
     <table class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
+	<caption class="hiddenStructure"
+		i18n:domain="upc.genwebupc"
+	       i18n:translate="calendari_title"> 
+       	Calendari
+	</caption>
       <thead>
         <tr class="arrodonimentTR">
             <td class="arrodonimentTD" align="center" colspan="7">
-                <img class="imgCA" src="daltCalendari.gif"/>
+                <img class="imgCA" src="daltCalendari.gif"
+                    tal:attributes="alt  view/monthName;"/>/>
             </td>
         </tr>
       </thead>
@@ -90,7 +96,7 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, prevMonthMonth, prevMonthYear, url_quote_plus(query_string)); 
                            class string:kssCalendarChange kssattr-year-${prevMonthYear} kssattr-month-${prevMonthMonth} calendarPrevious;"
            tal:condition="showPrevMonth"
-           i18n:attributes="title title_previous_month;"><img src="fletxaE.gif"></a>
+           i18n:attributes="title title_previous_month;"><img src="fletxaE.gif" alt="«"/></a>
     
                 <a href="#" rel="nofollow"
                title="Next month"
@@ -100,7 +106,7 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
                            class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
                 tal:condition="showNextMonth"
-                i18n:attributes="title title_next_month;"><img src="fletxaD.gif"> </a>       
+                i18n:attributes="title title_next_month;"><img src="fletxaD.gif" alt="»"/> </a>       
 
                 <span i18n:translate="" tal:omit-tag=""> 
                     <span style="color: red;" 
@@ -169,5 +175,5 @@
 
 </div>
 
-<div id="baix200"> </div>
+<div class="baix200"> </div>
 </tal:block>

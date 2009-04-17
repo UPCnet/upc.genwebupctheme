@@ -1,21 +1,21 @@
 /* CSS UPC GENWEB 3.0a */
 
 /********************************************************************** PORTLETS ********************************************************************************/
-#portlet200{
+.portlet200{
 background:url(bar200.gif) no-repeat top; /*imatge customitzada*/
 width:200px;
 height: 8px;
 font-size:0.05em;
 }
-
-#baix200{
+/*conservo uns ids per si algu feia servir la plantilla antiga*/
+.baix200, #baix200{
 width:200px;
 height:6px;
 background-image:url(baix200.gif);
 font-size:0.05em;
 margin-bottom:20px;
 }
-#dalt200{
+.dalt200, #dalt200{
 width:200px;
 height:6px;
 background-image:url(dalt200.gif);
@@ -23,14 +23,14 @@ font-size:0.05px;
 margin-bottom:0px;
 }
 
-#portlet150{
+.portlet150{
 width:150px;
 height:9px;
 background-image:url(bar150.gif); /*imatge customitzada*/
 font-size:0.05em;
 }
 
-#baix150{
+.baix150{
 width:150px;
 height:6px;
 background-image:url(baix150.gif);
@@ -38,28 +38,28 @@ font-size:0.05em;
 margin-bottom:20px;
 }
 
-#caixaPortlet{
+.caixaPortlet,#caixaPortlet{
 border-left: 1px solid #E6E6E6;
 border-right: 1px solid #E6E6E6;
 }
 
-#caixaPortlet ul{
+.caixaPortlet ul{
 padding: 0px;
 list-style:none;
 }
 
-#caixaPortlet li{
+.caixaPortlet li{
     border-top: 1px dashed #999999;
     line-height: 1.2em;
     padding: 5px;
     margin-bottom: 0px;
 }
 
-#caixaPortlet li:first-child{
+.caixaPortlet li:first-child{
 border-top: 0px;
 }
 
-#caixaPortlet form{
+.caixaPortlet form{
 border-bottom:1px dashed #999999;
 margin-bottom:10px;
 padding: 0px 5px;
@@ -77,18 +77,18 @@ border-top: 1px solid #999999;
 margin-top: 5px;
 }
 
-#portletPlus{
+.portletPlus{
 padding: 0px 5px;
 text-align:right;
 line-height: 0px;
 margin-top:0px;
 }
 
-#portletPlus img{
+.portletPlus img{
 margin-right: 0px;
 margin-bottom: 0px;
 }
-#portletPlus.miniEsde {font-size:80%;padding: 0 5px 0 0 !important;}
+.portletPlus.miniEsde {font-size:80%;padding: 0 5px 0 0 !important;}
 
 .flotaPlus{
 float:left;
@@ -202,6 +202,7 @@ margin:0px;
 padding:0px;
 vertical-align:top;
 margin-top:20px;
+width:100%;
 }
 .taulaDivsTdE{
 padding-right:5px;

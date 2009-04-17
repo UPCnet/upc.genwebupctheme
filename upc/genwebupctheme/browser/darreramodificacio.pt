@@ -16,7 +16,7 @@
         <span tal:define="view context/@@upc.genweb.utils;
         				yearmonth here/ModificationDate; 
         				month python:yearmonth[5]+yearmonth[6]" 
-			tal:attributes="id string:$month"
+			tal:attributes="id string:m$month"
         	tal:content="python:view.mes(month)"
             >monthname</span>	        					
 		<span tal:define="view context/@@upc.genweb.utils;

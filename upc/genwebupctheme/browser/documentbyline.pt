@@ -1,5 +1,5 @@
 <span tal:condition="python: user.has_role(['Manager','Editor'])">
-<div class="documentByLine"
+<!-- abans div --><span class="documentByLine"
      id="plone-document-byline"
      i18n:domain="plone"
      tal:condition="view/show">
@@ -41,7 +41,7 @@
           i18n:translate="time_expired">expired</span>
   </tal:expired>
 
-  <div class="documentContributors"
+  <!-- abans div --><span class="documentContributors"
        tal:condition="here/Contributors"
        i18n:translate="text_contributors">
     Contributors:
@@ -50,13 +50,13 @@
           tal:content="python: ', '.join(here.Contributors())">
       Mary
     </span>
-  </div>
+  <!-- abans div --></span>
 
   <tal:rights condition="here/Rights">
-    <div tal:replace="here/Rights">
+    <!-- abans div --><span tal:replace="here/Rights">
       Copyleft NiceCorp Inc.
-    </div>
+    <!-- abans div --></span>
   </tal:rights>
 
-</div>
+<!-- abans div --></span>
 </span>

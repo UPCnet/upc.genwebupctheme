@@ -74,24 +74,20 @@
 <ul id="portal-personaltools"
     class="visualInline">
     
-    <b>
-     <span i18n:translate="genweb-usuari_connectat">
-        User:
-     </span>
-    </b>
+    
+     
+    
    <tal:block>
-       <li><a 
+       <li><b><span i18n:translate="genweb-usuari_connectat">
+        User:
+     </span></b> <a 
            id="user-name"
            tal:attributes="href view/homelink_url">
            <span class="visualCaseSensitive"
-                 tal:content="view/user_name">
-                John
-           </span>
-       </a></li>
+                 tal:content="view/user_name">John</span></a></li>
    </tal:block>
    
-   &nbsp; &nbsp;
-
+<li>
     <b>
      <span i18n:translate="genweb-opcionspathbar">
         Options:
@@ -111,7 +107,7 @@
     Preferences</a>
      |
     <span>
-    <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="_blank"
+    <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="newwindow"
        i18n:translate="genweb-ajuda">
        Help
      </a>
@@ -138,7 +134,7 @@
     tal:attributes="href string:${view/portal_url}/logout">
     Log out</a>
    </span>
-
+</li>
 </ul>
 </div>
 
