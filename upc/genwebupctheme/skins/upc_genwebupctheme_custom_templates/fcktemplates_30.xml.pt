@@ -38,12 +38,12 @@
         <Description>Com utilitzar la jerarquia de títols</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>Duis tellus</h4>
+				<div class="titular1">Duis tellus</div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
-				<h5>In aliquam rhoncus sem</h5>
+				<div class="titular2">In aliquam rhoncus sem</div>
 				<img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" class="imgEsquerra" />
 				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<h6>In hac habitasse platea dictumst</h6>
+				<div class="titular3">In hac habitasse platea dictumst</div>
 				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
 				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
 				<br /><br />
@@ -59,15 +59,14 @@
         <Description>A cada columna s'hi poden afegir altres plantilles.</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<table class="columnes" summary="dues columnes">
-				<caption>Dues columnes de text</caption>
+				<table class="columnes">
 				    <tbody>
 				        <tr>
 				            <td>
-				            <h4>In aliquam rhoncus sem</h4>
+				            <div class="titular1">In aliquam rhoncus sem</div>
 				            </td>
 				            <td>
-				            <h4>Ut facilisis</h4>
+				            <div class="titular1">Ut facilisis</div>
 				            </td>
 				        </tr>
 				        <tr>
@@ -76,9 +75,9 @@
 				            Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis   tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum   diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est   nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id   eros. <br />
 				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst.   Donec aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus   tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</td>
 				            <td class="separadorV">               Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
-				            <h5>In aliquam rhoncus sem</h5>
+				            <div class="titular2">In aliquam rhoncus sem</div>
 				            Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				            <h6>In hac habitasse platea dictumst</h6>
+				            <div class="titular3">In hac habitasse platea dictumst</div>
 				            Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
 				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</td>
 				        </tr>
@@ -139,49 +138,48 @@
         <Description>Afegeix enllaços i contingut de suport.</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<table class="enllacosDreta" summary="columna suport">
-				<caption>Columna Suport</caption>
+				<table class="enllacosDreta">
 				    <tbody>
 				        <tr>
 				            <td>
 							<!--columna esquerra-->
-				<h4>Duis tellus</h4>
+				<div class="titular1">Duis tellus</div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
-				<h5>In aliquam rhoncus sem</h5>
+				<div class="titular2">In aliquam rhoncus sem</div>
 				<img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" class="imgEsquerra" />
 				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<h6>In hac habitasse platea dictumst</h6>
+				<div class="titular3">In hac habitasse platea dictumst</div>
 				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
 				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
 				<br /><br />
 							<!-- ////fi columna esquerra-->
 						</td>
-						<td class="columnaseparador20"> </td>
+						<td width="20px"> </td>
 				            <td class="columnaEnllacosDreta">
 				            <div>
-				            <div class="dalt200"> </div>
-				            <div class="caixaPortlet">
+				            <div id="dalt200"> </div>
+				            <div id="caixaPortlet">
 				            <h2>Enllaços Relacionats</h2>
 				            <ul>
 				                <li><a href="#">Enllaç primer</a></li>
-				                <li><a href="#">Enllaç segon</a></li>
-				                <li><a href="#">Enllaç tercer</a></li>
+				                <li><a href="#">Enllaç primer</a></li>
+				                <li><a href="#">Enllaç primer</a></li>
 				            </ul>
 				            <br />
-				            <h2>Bàners</h2>
-					            <a href="#"><img alt="bàner mostra"   
+				            <h2>Baners</h2>
+					            <a href="#"><img   
 					                 tal:attributes="src string:${templatesPath}bn_1.gif" /></a>
-					            <a href="#"><img alt="bàner mostra"
+					            <a href="#"><img   
 					                 tal:attributes="src string:${templatesPath}bn_2.gif" /></a>
 				            <br />
 				            <h2>Enllacos Extres</h2>
 				            <ul>
 			                <li><a href="#">Enllaç primer</a></li>
-			                <li><a href="#">Enllaç segon</a></li>
-			                <li><a href="#">Enllaç tercer</a></li>
+			                <li><a href="#">Enllaç primer</a></li>
+			                <li><a href="#">Enllaç primer</a></li>
 			            </ul>
 			            </div>
-			            <div class="baix200"> </div>
+			            <div id="baix200"> </div>
 			            </div>
 			            </td>
 			        </tr>
@@ -199,7 +197,7 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="llistat">
-				<h4>Sed ultricies cursus lectus</h4>
+				<div class="titular1">Sed ultricies cursus lectus</div>
 				<ul>
 				    <li>Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</li>
 				    <li>Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</li>
@@ -241,10 +239,9 @@
     	<Description>Per definir una taula de registres estructurada per columnes. Es pot ampliar en files i columnes.</Description>    	
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>Lorem vs Ipsum </h4>
+				<div class="titular1">Lorem vs Ipsum </div>
 				<div class="taulaRegistres">
-				<table summary="taula registres">
-				<caption>Taula registres</caption>
+				<table>
 				    <tbody>
 				        <tr class="cap">
 				            <td>Lorem</td>
@@ -292,10 +289,9 @@
     	<Description>Per definir una taula de registres estructurada per files i columnes. Es pot ampliar en files i columnes.</Description>   	
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>Lorem vs Ipsum setmanal </h4>
+				<div class="titular1">Lorem vs Ipsum setmanal </div>
 				<div class="taulaRegistres">
-				<table summary="taula registres">
-				<caption>Taula resgistres</caption>
+				<table>
 				    <tbody>
 				        <tr class="cap">
 				            <td>Lorem</td>
@@ -362,9 +358,8 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="calendari">
-				<h5>Gener 2009 </h5>
-				<table summary="calendari">
-				<caption>Calendari</caption>
+				<div class="titular2">Gener 2009 </div>
+				<table>
 				    <tbody>
 				        <tr>
 				            <td class="fonsDestacat2">dl</td>
@@ -442,20 +437,20 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="fletxa_fitxa"> </div>
 				<div class="fitxa">
-				<h4>Duis tellus</h4>
-				<h5>At ipsum vitae est lacinia tincidunt</h5>
+				<div class="titular1">Duis tellus</div>
+				<div class="titular2">At ipsum vitae est lacinia tincidunt</div>
 				<div class="align_left"><img alt="fotoMostra" src="++resource++upc.genwebupctheme.images/mostra.jpg" /></div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
-				<h6>Lorem Ipsum</h6>
+				<div class="titular3">Lorem Ipsum</div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 				<div class="separadorH"> </div>
-				<h6>Duis tellus</h6>
+				<div class="titular3">Duis tellus</div>
 				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.
 				<div class="separadorH"> </div>
-				<h6>Mauris Vestibulum</h6>
+				<div class="titular3">Mauris Vestibulum</div>
 				Felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
 				<div class="separadorH"> </div>
-				<h6>gravida ac</h6>
+				<div class="titular3">gravida ac</div>
 				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</div>
 				<br /><br />
         	<tal:cdata replace="structure string:]]&gt;" /> 
@@ -472,17 +467,17 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="fletxa_fitxa"> </div>
 				<div class="fitxa">
-				<h4>Duis tellus</h4>
-				<h5>At ipsum vitae est lacinia tincidunt</h5>
+				<div class="titular1">Duis tellus</div>
+				<div class="titular2">At ipsum vitae est lacinia tincidunt</div>
 				<div class="align_right"><img alt="fotoMostra" src="++resource++upc.genwebupctheme.images/mostra.jpg" /></div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
-				<h6>Lorem Ipsum</h6>
+				<div class="titular3">Lorem Ipsum</div>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
 				<div class="separadorH"> </div>
-				<h6>Duis tellus</h6>
+				<div class="titular3">Duis tellus</div>
 				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.
 				<div class="separadorH"> </div>
-				<h6>Mauris Vestibulum</h6>
+				<div class="titular3">Mauris Vestibulum</div>
 				felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</div>
 				<br /><br />
         	<tal:cdata replace="structure string:]]&gt;" /> 
@@ -510,17 +505,17 @@
                                                    alt photoId;
                                                    title photoId"
                                    tal:condition="python: photoNumber not in (1, 10)"                
-                                   class="estilImgPhotoAlbum1" />
+                                   id="estilImgPhotoAlbum1" />
                               <img tal:attributes="src photoUrl;
                                                    alt photoId;
                                                    title photoId"
                                    tal:condition="python: photoNumber== 10"                
-                                   class="estilImgPhotoAlbum2" />     
+                                   id="estilImgPhotoAlbum1" />     
                               <img tal:attributes="src photoUrl;
                                                    alt photoId;
                                                    title photoId"
                                    tal:condition="python: photoNumber == 1"                
-                                   class="estilImgPhotoAlbum3" />                                                                    
+                                   id="estilImgPhotoAlbum1" />                                                                    
                             </span>
                             <span class="photoAlbumEntryTitle"
                                   tal:content="photoId">PhotoId</span>
@@ -544,9 +539,9 @@
         <tal:cdata replace="structure string:&lt;![CDATA[" />
 <h2>Imatge amb text lateral</h2>
 <div id="FCKTdiv1imatgedamunttext"><img 
-	tal:attributes="src string:${templatesPath}sampleimg9.jpg" alt="foto mostra" />
+	tal:attributes="src string:${templatesPath}sampleimg9.jpg" alt="" />
 <div id="FCKTdiv2imatgedamunttext">
-<div id="FCKTdiv3imatgedamunttext">Lorem ipsum dolor sit amet consectetuer Vestibulum neque dolor felis malesuada. Id dolor magna enim pellentesque condimentum ante ullamcorper urna tellus id. At non Ut commodo consequat gravida sem vel tempus metus eleifend. Ridiculus pretium sit mauris pellentesque interdum tellus at id ante see interdum tellus at id ante semper.</div>
+<div id="FCKTdiv3imatgedamunttext">Lorem ipsum dolor sit amet consectetuer Vestibulum neque dolor felis malesuada. Id dolor magna enim pellentesque condimentum ante ullamcorper urna tellus id. At non Ut commodo consequat gravida sem vel tempus metus eleifend. Ridiculus pretium sit mauris pellentesque interdum tellus at id ante see interdum tellus at id ante semper. Dictumst ut suscipit Phasellus Nulla montes massa ac elit condimentum id.</div>
 </div>
 </div>
 
@@ -565,11 +560,10 @@
       <Html>
         <tal:cdata replace="structure string:&lt;![CDATA[" />
 <center>
-<table border="0" cellspacing="0" cellpadding="0" width="5%" id="FCKTtableimatgetext" summary="imatge amb text superposat">
-				<caption>Imatge amb text superposat</caption>
+<table border="0" cellspacing="0" cellpadding="0" width="5%" id="FCKTtableimatgetext">
   <tr>
     <td valign="bottom" class="emmarcada">
-            <img alt="foto mostra" id="imgAmbTrans"  
+            <img id="imgAmbTrans"  
                  tal:attributes="src string:${templatesPath}sampleimg10.jpg" />
 		<div id="FCKTdivimatgetext">
 		Illum luptatum, blandit blandit erat suscipit tincidunt feugiat molestie in ex in hendrerit elit. <a href="#">Dignissim exerci</a></div>
@@ -606,7 +600,7 @@
     	<Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>In aliquam rhoncus sem</h4>
+				<div class="titular1">In aliquam rhoncus sem</div>
 				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
@@ -621,7 +615,7 @@
     	<Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h5>In aliquam rhoncus sem</h5>
+				<div class="titular2">In aliquam rhoncus sem</div>
 				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
@@ -636,7 +630,7 @@
     	<Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h6>In hac habitasse platea dictumst</h6>
+				<div class="titular3">In hac habitasse platea dictumst</div>
 				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros.
 				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa.
 				<br /><br />

@@ -9,7 +9,7 @@
 <!-- fi irene -->
 
 
-<dl class="portlet portletNavigationTree"  
+<dl class="portlet portletNavigationTree" id="portlet-navigation-tree"  
     tal:define="root view/navigation_root">
 <!--
     <dt class="portletHeader">

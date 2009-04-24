@@ -14,7 +14,7 @@
 	float:left;
 	min-width:200px;
 	margin: 10px 0px 0px 25px;
-	*margin: 25px 0px 0px 25px;
+	*margin: 15px 0px 0px 25px;
 	}
 .logo_n2 img {float:left}
 .clearAll_n2{
@@ -22,8 +22,8 @@
 	padding: 0}
 .titolWeb_n2 {
 	text-align:center;
-	margin:20px 180px;
-	*margin:15px 180px;}
+	margin:10px 180px 15px 180px;
+	*margin:5px 180px 15px 180px;}
 .liniaPrincipalNeutre2{ 
 	height:4px;
 	width:100%;
@@ -45,6 +45,7 @@
 .validacio {
 	margin-top: -24px;
 	*margin-top: -30px;
+	margin-top /*\**/:-30px\9;
 	float:left;
 	position:absolute}
 html>/**/body .validacio, x:-moz-any-link, x:default {margin-top:-29px;} /* FF3 */

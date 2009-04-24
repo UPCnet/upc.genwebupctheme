@@ -117,12 +117,11 @@ pre
 #content h6
 	{color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
 
-
-
+.destacatQuadres
+	{background-color: <tal:propietat replace="e3">Especific3</tal:propietat>;}
 .fonsDestacat2,
 .calendari .fonsDestacat2,
-.taulaRegistres .fonsDestacat2,
-.destacatQuadres
+.taulaRegistres .fonsDestacat2
 	{background-color: <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .titular1,
 #content h4

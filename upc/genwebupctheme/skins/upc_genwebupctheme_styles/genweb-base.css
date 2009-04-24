@@ -6,14 +6,16 @@
 .columnaEsq {
 	float:right;
 	margin-right:0px !important;
-	margin-left:0;}
+	margin-left:0;
+	margin-top:10px;}
 .columnaCentre {
 	margin-left:0;
 	padding:0;
 	width:auto;
 	float:right;}
 .columnaDreta {
-	float: right;}
+	float: right;
+	margin-top:10px;}
 
 
 .columnaEsq .portlet200,	
@@ -50,7 +52,6 @@
 	width:198px !important;}
 .columnaDreta #caixaPortlet {
 	width:148px !important;} 	
-
 */
 /* GENERAL */
 body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#fff url(fons.png) center repeat-y;}
@@ -354,29 +355,31 @@ html*.sobreElWeb {
 	padding-left:3px;
 	*padding-left:3px;
 	_padding-left:0;}
+
+
+
+html .livesearchContainer {
+	padding: 0px !important;
+	background-color: transparent;}
 #livesearchLegend {
 	border:0px;
 	background:transparent url(liveSearchFletxa.gif) no-repeat right top;
-	*background:transparent url(liveSearchFletxa.gif) no-repeat center 14px;
-	_background:transparent url(liveSearchFletxa.gif) no-repeat center 13px;
 	line-height:0em;
 	margin-top:-5em;
 	padding:7px 70px;
 	font-size:0.0em;
-	z-index:1000;
-	*margin-bottom:0;
-	*padding-top:40px;
-	*float:right;
-	*width:140px;
-	*height:14px;}
+	z-index:1000;}
+
+#livesearchLegend {width:0px !important; height:20px !important; display:block;margin-top:-1em; margin-bottom: -25px !important;}
 .livesearchContainer {
 	background:none;
+	background-color: transparent;
 	border:0px solid #666666;
 	color:#333333;
 	font-family:Verdana,Arial, Helvetica,sans-serif;
 	margin:0px;
-	margin-top:0.35em;
-	padding:0pt !important;
+	margin-top:-0.35em;
+	padding:0px !important;
 	position:absolute;
 	right:0px;
 	text-align:left;
@@ -386,9 +389,12 @@ html*.sobreElWeb {
 	white-space:normal;
 	width:24.3em;
 	_color:transparent;}
-html .livesearchContainer {
-	padding: 0px !important;
-	background-color: transparent;}
+/*saf i chr*/
+/*\*/
+html>body*#livesearchLegend {margin-top:0.35em;}
+/**/
+
+
 #LSHighlight,
 .LSHighlight {
 	background-color: transparent;
@@ -736,6 +742,9 @@ margin-bottom:0.5em;
 .documentContent ul li ul li {list-style-image:url(quadretGris.gif);}
 ul.formTabs li{margin-left:0em;}
 .agendaContingut ul li, .columnaDreta ul li, .columnaEsq ul li {list-style-image:none;list-style-position:none;list-style-type:none !important;}
+
+#parent-fieldname-subject ul {margin-left:0;}
+
 .agendaContingut ul, .columnaDreta ul, .columnaEsq ul {margin-left:0em;}
 .columnaDreta .portlet200{
 	background:transparent url(bar150.gif) no-repeat scroll center top;
@@ -1006,7 +1015,7 @@ div#kupu-resourceitems {
 	margin:0;
 	padding-left:0;}
 #portal-sitemap .navTreeLevel2 li{
-	background:transparent url(quadret.gif) no-repeat scroll left 3px;
+	background:transparent url(quadret.gif) no-repeat scroll left 1px;
 	border-bottom:0;
 	font-size:0.9em;
 	line-height:1.5em;
@@ -1259,7 +1268,7 @@ a img,a:hover img,a:hover br{text-decoration:none;}
 
 /*MENU LATERAL*/
 .titolSeccio{
-	background:url(submenuFons.png) no-repeat #ededed;
+	background:url(submenuFons.png) no-repeat #e6e6e6;
 	width: 197px;
 	font-family:Arial, Helvetica, sans-serif;
 	text-transform:uppercase;
@@ -1300,7 +1309,7 @@ ul.navTreeLevel0 > li.navTreeCurrentNode, ul.navTreeLevel0 > li.navTreeItemInPat
 	list-style-type:none;
 	margin:0;
 	padding:5px 0 5px 20px;}
-ul.navTree li ul li, .navTreeLevel11, .navTreeLevel1, .NavTreeItem {
+ul.navTree li ul li, .navTreeLevel11, .NavTreeItem {
 	padding: 0 0 0 10px;
 	margin: 5px 1px;
 	background: url(quadret.gif) no-repeat left 1px !important;
@@ -1474,8 +1483,10 @@ fieldset#fieldset-genWebControlPanelinformacio label[for="form.boolmaps"] {font-
 }
 #dashboard-portlets4 {width:220px;}
 div#dashboard > div > div {border:1px solid #ccc; margin-bottom:20px; background: #ffffff url(fonsT.png) repeat-x bottom left;}
+div#dashboard #dashboard-portlets1 dl, div#dashboard #dashboard-portlets2 dl, div#dashboard #dashboard-portlets3 dl, div#dashboard #dashboard-portlets4 dl  {_border:1px solid #ccc;}
 div#dashboard > div > div > dl {margin-top: 0px;}
 div#dashboard dd.portletItem form{margin-right:25px !important; padding-top:10px;}
+div#dashboard dd.portletItem form{_margin-right:0px !important;}
 div#dashboard dt.portletCalendar dt.portletHeader a {}
 div#dashboard #banners a {margin:5px auto !important; align:center !important; display:block; border:1px solid #ccc; width:147px;margin-left:35px !important;}
 div#dashboard #banners a:hover {border:1px solid #007dcc;}
@@ -1484,15 +1495,16 @@ div#dashboard table.ploneCalendar td {text-align:center;}
 div#dashboard dl.portletCalendar dt a {float:none !important;}
 div#dashboard dl.portletCalendar dt.portletHeader {text-align:center;}
 div#dashboard .portletItem {border-top:0px;}
-div#dashboard .portletHeader {border-bottom:5px solid #e6e6e6;}
+div#dashboard .portletHeader {border-bottom:2px solid #e6e6e6;}
 div#dashboard dd {padding:5px; margin:0px !important;}
 div#dashboard .portlets-manager {border:0px; background:transparent !important;}
 div#dashboard #dashboard-portlets4 {padding-top:0px;}
 div#dashboard .portlets-manager .portletHeader {border:0px; margin:5px 0px;}
 div#dashboard dl.portlet {margin-bottom:0px;}
-div#dashboard .portletFooter {text-align:right;}
+div#dashboard .portletFooter {text-align:right; border-top: 1px solid #ccc;}
 div#dashboard table.ploneCalendar strong {font: bold 100% Verdana, Arial, sans-serif; padding-top:0;}
 div#dashboard table.ploneCalendar thead {color:#999; background:#f3f3f3;}
+div#dashboard .portletItem table {_margin: 5px 20px;}
 /*detallet*/
 .fletxatop {margin-top:30px;}
 /* .reviewHistory tret el margin top*/

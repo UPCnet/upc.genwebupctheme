@@ -19,7 +19,7 @@
                type="text"
                size="18"
                value=""
-               title=""
+               title="Cerca..."
                accesskey="4"
                tal:attributes="value request/SearchableText|nothing;
                                id view/search_input_id"

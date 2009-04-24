@@ -69,7 +69,7 @@
      tal:condition="not:view/show"
      i18n:domain="upc.genwebupc">
 
-  <h5 class="hiddenStructure" i18n:domain="plone" i18n:translate="heading_personal_tools">Personal tools</h5> 
+  <b class="hiddenStructure" i18n:domain="plone" i18n:translate="heading_personal_tools">Personal tools</b> 
 
 <ul id="portal-personaltools"
     class="visualInline">
