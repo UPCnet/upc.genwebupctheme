@@ -378,3 +378,9 @@ table.enllacosDreta .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px
    padding:10px;
    border: 1px solid #e6e6e6;
 }
+
+.image-right2 {
+clear:both;
+float:right;
+margin-top:-21px;
+}
