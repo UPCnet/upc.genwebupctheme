@@ -1,3 +1,4 @@
+#region-content caption {display:none;}
 .hiddenStructure {display:none;}
 /* CONTINGUT*/
 .contingut{
@@ -29,6 +30,9 @@
 .columnaDreta #baner {
 	margin-left:25px !important;
 	width:150px !important;}
+.columnaDreta .caixaPortlet {
+	width:148px !important;
+	}
 .columnaEsq .caixaPortlet {_width:100px;}
 .columnaEsq .caixaPortlet {
 	width:198px !important;}
@@ -654,6 +658,7 @@ ul.configlets li a:hover {
 	*background:transparent url(commutaIE7.gif) no-repeat scroll 2px 3px;
 	_background:white url(commutaIE6.gif) no-repeat scroll 0px 0px;
 	_left:0;}
+.optionsToggle label {padding:2px 5px; background:#e6e6e6;}
 #content a[href^="http:"], #content a.link-external {
 	background: none;
 	padding: 0;}
@@ -745,7 +750,7 @@ ul.formTabs li{margin-left:0em;}
 
 #parent-fieldname-subject ul {margin-left:0;}
 
-.agendaContingut ul, .columnaDreta ul, .columnaEsq ul {margin-left:0em;}
+.agendaContingut ul, .columnaDreta ul, .columnaEsq ul {margin-left:0em;padding-bottom:1px;}
 .columnaDreta .portlet200{
 	background:transparent url(bar150.gif) no-repeat scroll center top;
 	width:150px;}

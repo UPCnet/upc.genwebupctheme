@@ -173,7 +173,7 @@ pre
 	{border:1px solid <tal:propietat replace="e5">Especific5</tal:propietat>;}
 
 
-
+h6.titolPortlet,
 .titolPortlet,
 .calendariArrodonit,
 #daltCalendari,

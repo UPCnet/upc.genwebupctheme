@@ -5,7 +5,7 @@
 
 <div class="portlet150"> </div>
     <div class="caixaPortlet">
-    <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="titolPortlet"> Agenda </div>
+    <h6 i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="titolPortlet"> Agenda </h6>
    
         <ul>
         <li tal:repeat="obj entries">
@@ -17,12 +17,12 @@
             </span>
             </a>
             <br />
-            <small tal:content="python:toLocalizedTime(obj.start)">
+            <p class="small" tal:content="python:toLocalizedTime(obj.start)">
                 May 5
-            </small>
+            </p>
         </li>
         </ul>
-        <div id="portletPlus" class="miniEsde">  
+        <div class="portletPlus miniEsde">  
             <a href="#"><img src="plus.gif" alt="+"/></a> 
             <a href="" 
                tal:attributes="href view/all_events_link"

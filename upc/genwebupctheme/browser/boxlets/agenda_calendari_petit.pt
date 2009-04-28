@@ -6,8 +6,8 @@
 
 <div class="portlet200"> </div>
     <div class="caixaPortlet">
-    <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda"
-         class="titolPortlet"> Agenda </div>
+    <h6 i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda"
+         class="titolPortlet"> Agenda </h6>
    
         <ul>
         <li tal:repeat="obj entries">
@@ -19,9 +19,9 @@
             </span>
             </a>
             <br />
-            <small tal:content="python:toLocalizedTime(obj.start)">
+            <p class="small" tal:content="python:toLocalizedTime(obj.start)">
                 May 5
-            </small>
+            </p>
         </li>
         </ul>
         <div class="portletPlus">  
@@ -71,7 +71,7 @@
         <br/> 
     </span>
     
-    <table class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
+    <table summary="agenda" class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
 	<caption class="hiddenStructure"
 		i18n:domain="upc.genwebupc"
 	       i18n:translate="calendari_title"> 
@@ -124,9 +124,8 @@
         </tr>
     </tbody>    
     </table>
-    <table width="5%">
-
-    
+    <table width="5%" summary="calendari">
+    	<caption> calendari </caption>
            <tbody>
                 <tr class="weekdays"
                     ><tal:data tal:repeat="weekday view/getWeekdays"

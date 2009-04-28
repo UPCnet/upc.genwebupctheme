@@ -6,7 +6,7 @@
     <div class="logo_n2">
         <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya" title="Universitat Politècnica de Catalunya" 
             tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
-        <map name="logoUPC" id="logoUPC"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" title="Universitat Politècnica de Catalunya" alt="Universitat Politècnica de Catalunya" /></map>
+        <map name="logoUPC" id="logoUPC" title="Universitat Politècnica de Catalunya"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" title="Universitat Politècnica de Catalunya" alt="Universitat Politècnica de Catalunya" /></map>
         <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
 		<span tal:condition="python: utils.getGWConfig().enllaslogotip">
             <!-- titol en catala -->

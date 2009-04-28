@@ -10,14 +10,14 @@
 		
 	    <div class="caixaPortlet">
           <tal:block condition="news_items">	    
-	    	<div class="titolPortlet">
-	    		  <div  class="icoRSS">
+	    	<h6 class="titolPortlet">
+	    		  <span class="icoRSS">
           	          <a href=""
              	             tal:define="utils context/@@upc.genweb.utils"
              	             tal:attributes="href view/rss_news_link">RSS <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
          	          </a>
-		      	  </div> <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span>
-	    	</div>
+		      	  </span> <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span>
+	    	</h6>
 	    	
 	        <ul>
 		        <li tal:repeat="obj news_items">
@@ -30,8 +30,8 @@
 		                </span>
 		                <br/>
 		            </a>
-		            <small
-		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</small>
+		            <p class="small"
+		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</p>
 		        </li>
 	        </ul>
 	        
@@ -45,8 +45,8 @@
 	        </div>
           </tal:block>
 	        
-	        <div i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitat"  
-	             tal:attributes="class python:news_items and 'titolPortlet separadorPortlet' or 'titolPortlet'">Actualitat UPC</div>
+	        <h6 i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitat"  
+	             tal:attributes="class python:news_items and 'titolPortlet separadorPortlet' or 'titolPortlet'">Actualitat UPC</h6>
 	        <ul>
 		        <li tal:repeat="entry entries">
 		            <a href=""

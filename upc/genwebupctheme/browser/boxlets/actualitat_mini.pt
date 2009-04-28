@@ -9,7 +9,7 @@
 		
 	    <div class="caixaPortlet">
 	    
-	        <div i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitat" class="titolPortlet">Actualitat UPC</div>
+	        <h6 i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitat" class="titolPortlet">Actualitat UPC</h6>
 	        <ul>
 		        <li tal:repeat="entry entries">
 		            <a href=""

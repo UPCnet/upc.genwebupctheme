@@ -36,7 +36,7 @@
 	text-decoration:none}
 #portal-personaltools li a:hover {
 	text-decoration:underline}
-/*
+
 #portal-globalnav {
 	background: #ededed url(bgMenu.png) no-repeat bottom;
 	text-align:center;
@@ -45,41 +45,19 @@
 	margin-top:0; 
 	padding:0; 
 	font-weight:bold;
-	*margin-top:4px}
-#portal-globalnav li {
-	line-height: 25px;
-	display: inline;
-	background:white;
-	padding: 5px 10px 6px; 
-	border-top:1px solid #ccc;}
-#portal-globalnav li a {
-	line-height: 25px;
-	padding: 5px 10px 6px; 
-	color: #007dCC;
-	margin-right:-0.9em;
-	text-transform: uppercase;}
-#portal-globalnav li a, #portal-globalnav li.selected a, #portal-globalnav li a:hover, #portal-globalnav li.selected a:hover {
-	border-right: 5px solid #FFF; 
-	border-left: 5px solid #FFF; 
-	border-top: 0;
-	border-bottom: 0}
-*/
-#portal-globalnav {
-	background: #ededed url(bgMenu.png) no-repeat bottom;
-	text-align:center;
-	font-family:Verdana, sans-serif;
-	font-size:1em;
-	margin-top:0; 
-	padding:0; 
-	font-weight:bold;
-	margin-top:4px}
+	margin-top:5px}
 #portal-globalnav li {
 	line-height: 25px;
 	display: inline;
 	background:#fff;
-	padding: 5px 5px 6px;
+	padding: 6px 5px 6px;
 	margin-right:-5px;
-	margin-left:-5px;}
+	margin-left:-5px;
+	z-index:1;
+	padding /*\**/: 6px 5px 6px\9; 
+	*padding: 5px 0px 6px 5px; /*ie7i6*/
+	*margin-right:-5px;/*ie7i6*/
+	*margin-left:0px;/*ie7i6*/}
 #portal-globalnav li a {
 	background: #ededed;
 	line-height: 25px;

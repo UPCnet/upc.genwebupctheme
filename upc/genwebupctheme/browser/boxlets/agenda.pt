@@ -28,10 +28,10 @@
     
 <div class="agendaContingut agendaAjustament">
 
-<table>
-
+<table summary="agenda">
+	<caption>Agenda</caption>
         <tr>
-            <td width="100%" style="width:100%;">
+            <td style="width:100%;">
         <ul>
         <li tal:repeat="obj entries">
             <a href=""
@@ -42,9 +42,9 @@
             </span>
             </a>
             <br/>
-            <small tal:content="python:toLocalizedTime(obj.start)">
+            <p class="small" tal:content="python:toLocalizedTime(obj.start)">
                 May 5
-            </small>
+            </p>
         </li>
         </ul>
         <div class="portletPlus">  
@@ -70,7 +70,7 @@
          i18n:translate="esdeveniments_reunions"> 
          Esdeveniments i reunions.
     </div>
-    <table class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
+    <table summary="mes" class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
 	<caption class="hiddenStructure"
 		i18n:domain="upc.genwebupc"
 	       i18n:translate="calendari_title"> 
@@ -123,8 +123,8 @@
         </tr>
     </tbody>    
     </table>
-    <table width="5%">
-
+    <table width="5%" summary="calendari">
+		<caption> calendari </caption>
     
            <tbody>
                 <tr class="weekdays"

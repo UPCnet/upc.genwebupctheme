@@ -65,11 +65,14 @@ margin-bottom:10px;
 padding: 0px 5px;
 }
 
-.titolPortlet{
+h6.titolPortlet, .titolPortlet{
 background-color:#E8E2DF; /*especific6*/
-color:#4D4D4D;
+color:#4D4D4D !important;
 font-weight:bold;
-padding: 1px 5px;
+padding: 1px 5px !important;
+font-family: Verdana, sans-serif;
+font-size:100% !important;
+margin: 0 !important;
 }
 
 .separadorPortlet{
@@ -78,7 +81,7 @@ margin-top: 5px;
 }
 
 .portletPlus{
-padding: 0px 5px;
+padding: 0px 5px 5px;
 text-align:right;
 line-height: 0px;
 margin-top:0px;
@@ -249,7 +252,7 @@ html*#calendariVertical {
 	_margin-right:0px;
 	_padding-right:17px; }
 
-#calendari table, #calendariVertical table{
+#calendari table, #calendariVertical table, .small{
 font-size:0.9em;
 }
 

@@ -37,7 +37,7 @@
       </div>
       </div>
       <div class="columnaCentre" tal:define="boxescentre view/getColumn1">
-      <table><tr><td> 
+      <table summary="contingut"><caption>Contingut</caption><tr><td> 
       <!-- Columna Central -->
       <div tal:define="front view/getFrontPage">
         <!-- h1 tal:content="front/title">Titol principal</h1 -->

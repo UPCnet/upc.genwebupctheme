@@ -52,8 +52,8 @@
                 SUBTREE
             </li>
         </ul>
-        <span class="portletBottomLeft"></span>
-        <span class="portletBottomRight"></span>
+        <!--<span class="portletBottomLeft"></span>-->
+        <!--<span class="portletBottomRight"></span>-->
     </dd>
 </dl>
 </tal:block>
