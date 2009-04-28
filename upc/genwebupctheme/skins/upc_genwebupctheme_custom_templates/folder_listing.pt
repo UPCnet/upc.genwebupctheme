@@ -54,7 +54,8 @@
 
             <dl>
                 <tal:entry tal:repeat="item folderContents">
-                <tal:block tal:define="item_url item/getURL|item/absolute_url;
+                <tal:block tal:condition="not: item/exclude_from_nav"
+                           tal:define="item_url item/getURL|item/absolute_url;
                                        item_id item/getId|item/id;
                                        item_title_or_id item/pretty_title_or_id;
                                        item_description item/Description;
