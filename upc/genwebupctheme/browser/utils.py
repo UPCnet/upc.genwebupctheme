@@ -517,7 +517,7 @@ class utilitats(BrowserView):
         if not contentPath:
             return ''
         else:
-            return portal_state.portal()[contentPath[0]].Title()
+            return portal_state.portal()[contentPath[0]].Title().replace('&nbsp;','')
 
     def getFlavour(self):
         portal_skins=getToolByName(self.context, 'portal_skins')
