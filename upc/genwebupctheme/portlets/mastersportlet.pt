@@ -48,7 +48,7 @@
 			                   tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.recodifica(utils.getTextMaster('preinscripcio_open',lang_code)),utils.recodifica(utils.getTextMaster('preinscripcio_close',lang_code)))">preinscripcio </a></div></li>
 
 					<!-- Llista d'admesos -->
-			              <li class="navTreeItem visualNoMarker"><div>
+			              <li tal:condition="python: records['m_llistat_admesos']=='pdf'" class="navTreeItem visualNoMarker"><div>
 			              <a class="navItem2 visualIconPadding" target='newwindow'
 			                   tal:condition="python: records['m_llistat_admesos']=='pdf'"
 			                   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+ str(utils.getGWConfig().idestudiMaster) + '_l.pdf'" 
