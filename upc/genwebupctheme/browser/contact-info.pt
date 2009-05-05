@@ -33,7 +33,8 @@
 	
 			<!-- DIRECCION --><address>
 			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']" i18n:translate="genweb_adreca">Address</div>
-			<div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet)			
+			<div tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomCampus']) + ', ' + utils.recodifica(utils.getTextMaster('edifici', lang_code)) + ' ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['codi_edifici']) + '. ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.direccio'])+ '. ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.codi_postal']) + ' ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomLocalitat'])">
+            <!-- <div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet) -->
 			</div></adDress>
 	
 			<!-- TELEFONO -->
@@ -62,8 +63,8 @@
 		
 		<!-- Personal -->
 		
-		<div class="contacteSpan contacteSpanBaix" i18n:translate="genweb_personal">Staff</div>
-		<div class="contacteSpanBaix">
+		<div tal:condition="python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" class="contacteSpan contacteSpanBaix" i18n:translate="genweb_personal">Staff</div>
+		<div tal:condition="python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" class="contacteSpanBaix">
 			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)"
 				tal:content="python: 'Directori'"></a>
 		</div>
