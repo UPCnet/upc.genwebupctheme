@@ -73,6 +73,8 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
     firmaunitat_es = ProxyFieldProperty(IgenWebControlPanel['firmaunitat_es'])
     firmaunitat_en = ProxyFieldProperty(IgenWebControlPanel['firmaunitat_en'])
     enllaslogotip = ProxyFieldProperty(IgenWebControlPanel['enllaslogotip'])
+    enllaslogotipdret = ProxyFieldProperty(IgenWebControlPanel['enllaslogotipdret'])
+    enllaslogotipdretalt = ProxyFieldProperty(IgenWebControlPanel['enllaslogotipdretalt'])    
     contacteid = ProxyFieldProperty(IgenWebControlPanel['contacteid'])
     contactegmaps = ProxyFieldProperty(IgenWebControlPanel['contactegmaps'])
     boolmaps = ProxyFieldProperty(IgenWebControlPanel['boolmaps'])

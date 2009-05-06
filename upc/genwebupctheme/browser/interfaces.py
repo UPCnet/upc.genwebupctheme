@@ -56,6 +56,8 @@ class IgenWebControlPanelSchemaInformacio(Interface):
     firmaunitat_es = zope.schema.TextLine(title=_(u'Firma de la unitat - [castella]'),required=False)
     firmaunitat_en = zope.schema.TextLine(title=_(u'Firma de la unitat - [angles]'),required=False)
     enllaslogotip = zope.schema.TextLine(title=_(u'Enllac logotip de la unitat'),required=False)
+    enllaslogotipdret = zope.schema.TextLine(title=_(u'Enllac logotip dret de la capsalera'),required=False)
+    enllaslogotipdretalt = zope.schema.TextLine(title=_(u'Alt text de l\'enllac del logotip dret de la capsalera'),required=False)    
     contacteid = zope.schema.TextLine(title=_(u'Contacta [id unitat]'),required=False)
     contactegmaps = zope.schema.TextLine(title=_(u'Codi google maps'),required=False)
     boolmaps = zope.schema.Bool(title=_(u'per que aparegui o no el mapa del google maps'),required=False)
