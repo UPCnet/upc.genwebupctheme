@@ -78,7 +78,7 @@
 		
 		<div tal:condition="python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" class="contacteSpan contacteSpanBaix" i18n:translate="genweb_personal">Staff</div>
 		<div tal:condition="python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" class="contacteSpanBaix">
-			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)"
+			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" target="_blank"
 				tal:content="python: 'Directori'"></a>
 		</div>
 		
