@@ -30,33 +30,25 @@
         </a>
     </div>
 
+
 <!-- logo producte -->
 
     <div class="logoProducte">
-        <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
-		<span tal:condition="python: utils.getGWConfig().enllaslogotip">
-            <!-- titol en catala -->
-            
+        <a tal:attributes="href python: getattr(utils.getGWConfig(),'enllaslogotipdret', '')" target="newwindow">
+		<span tal:condition="python: getattr(utils.getGWConfig(),'enllaslogotipdret', False)">
             <img tal:attributes="src string:${portal_url}/logoProducte.gif;
-                                            alt python: utils.getGWConfig().firmaunitat_ca;
-                                            title python: utils.getGWConfig().firmaunitat_ca"
-                tal:condition="python:utils.pref_lang()=='ca'" />
-                
-            <!-- titol en castella -->
-            <img tal:attributes="src string:${portal_url}/logoProducte.gif;
-                            alt python: utils.getGWConfig().firmaunitat_es;
-                            title python: utils.getGWConfig().firmaunitat_es"
-                tal:condition="python:utils.pref_lang()=='es'" />
-            <!-- titol en angles -->
-            <img tal:attributes="src string:${portal_url}/logoProducte.gif;
-                            alt python: utils.getGWConfig().firmaunitat_en;
-                            title python: utils.getGWConfig().firmaunitat_en"
-                tal:condition="python:utils.pref_lang()=='en'"/>
+                                 href python: getattr(utils.getGWConfig(),'enllaslogotipdret', '');
+                                 alt python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '');
+                                 title python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '')" />
         </span>
         </a>
     </div>
 
 <!-- fi logo producte -->
+
+
+
+
 
     <div class="titolWeb_n2">
         <a href="" tal:attributes="href string:${view/portal_url}/">
