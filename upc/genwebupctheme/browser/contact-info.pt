@@ -31,11 +31,24 @@
 				tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['nom_'+utils.cambiaPrefijo(lang_code)])"> Servei de Comunicació i Promoció
 			</h5>
 	
-			<!-- DIRECCION --><address>
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']" i18n:translate="genweb_adreca">Address</div>
-			<div tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomCampus']) + ', ' + utils.recodifica(utils.getTextMaster('edifici', lang_code)) + ' ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['codi_edifici']) + '. ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.direccio'])+ '. ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.codi_postal']) + ' ' + utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomLocalitat'])">
-            <!-- <div tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet) -->
-			</div></adDress>
+			<!-- DIRECCION -->
+			<address>
+			<div class="contacteSpan" i18n:translate="genweb_adreca">Address</div>
+			<div tal:condition="python: utils.getContacteDireccion(utils.getGWConfig().contacteid) != None">
+                <span tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomCampus'])"></span>,
+                <span tal:content="python: utils.recodifica(utils.getTextMaster('edifici', lang_code)) + ' '"></span>
+                <span tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['codi_edifici']) + '. '"></span>
+                <span tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.direccio']) + '. '"></span>
+                <span tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.codi_postal']) + ' '"></span>
+                <span tal:content="python: utils.recodifica(utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomLocalitat'])"></span>                
+			</div>
+			
+			<div tal:condition="python: utils.getContacteDireccion(utils.getGWConfig().contacteid) == None" tal:content="python: utils.recodifica(utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion'])">Edifici BO (Bolet)
+			</div>
+
+
+			
+			</adDress>
 	
 			<!-- TELEFONO -->
 			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']" i18n:translate="genweb_telefon">Telephone</div>

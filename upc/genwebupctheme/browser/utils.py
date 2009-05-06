@@ -184,11 +184,12 @@ class utilitats(BrowserView):
         db = self.connectDatabase()
         c=db.cursor()
         c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,)) 
-
-        results = c.fetchone()
-        dictKeys = ('codi_edifici','nomEdifici','ue.direccio', 'ue.codi_postal', 'ue.id_campus','nomCampus','nomLocalitat')
-        
-        return self.remapList2Dic(dictKeys,results)
+        try:
+            results = c.fetchone()
+            dictKeys = ('codi_edifici','nomEdifici','ue.direccio', 'ue.codi_postal', 'ue.id_campus','nomCampus','nomLocalitat')
+            return self.remapList2Dic(dictKeys,results)
+        except:
+            return None
     
     def cambiaPrefijo(self, lang):
         tmp = 'ing'
