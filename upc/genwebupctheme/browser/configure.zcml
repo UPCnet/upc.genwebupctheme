@@ -55,6 +55,14 @@
          permission="zope2.View"
          />
 
+      <browser:page
+         for="*"
+         name="sitemap"
+         class=".utils.utilitats"
+         template="sitemap.pt"
+         permission="zope2.View"
+         />
+         
 <!-- Viewlets registration -->
 
 <!-- Viewlets comuns a tots els sabors -->

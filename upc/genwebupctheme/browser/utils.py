@@ -534,4 +534,5 @@ class utilitats(BrowserView):
     def getFlavour(self):
         portal_skins=getToolByName(self.context, 'portal_skins')
         return portal_skins.getDefaultSkin()
- 
+
+    

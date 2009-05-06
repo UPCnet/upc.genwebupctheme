@@ -1,0 +1,5 @@
+[default]
+title=Redireccionar pagina principal si cancelar
+
+[actions]
+action.success = redirect_to:string:@@sitemap
