@@ -96,4 +96,10 @@
         template="browser/productes/log.pt"
      />
 
+ 	<browser:viewlet
+ 		name="plone.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".browser.viewlets.GlobalSections"
+        permission="zope2.View" 
+        />
 </configure>

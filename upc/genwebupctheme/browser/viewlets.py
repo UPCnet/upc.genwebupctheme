@@ -2,6 +2,7 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets.content import DocumentActionsViewlet, DocumentBylineViewlet 
 from plone.app.layout.viewlets.common import PathBarViewlet
+from plone.app.layout.viewlets.common import GlobalSectionsViewlet
 from zope.component import getMultiAdapter
 from Products.CMFPlone.utils import safe_unicode
 from cgi import escape
@@ -17,7 +18,10 @@ class DocumentActions(DocumentActionsViewlet):
 class PathBar(PathBarViewlet):
     
     render = ViewPageTemplateFile('path_bar.pt')
-
+    
+class GlobalSections(GlobalSectionsViewlet):
+    
+    render = ViewPageTemplateFile('global_sections.pt')    
 
 class PathBarRoot(PathBarViewlet):
 
