@@ -37,7 +37,6 @@
         <a tal:attributes="href python: getattr(utils.getGWConfig(),'enllaslogotipdret', '')" target="newwindow">
 		<span tal:condition="python: getattr(utils.getGWConfig(),'enllaslogotipdret', False)">
             <img tal:attributes="src string:${portal_url}/logoProducte.gif;
-                                 href python: getattr(utils.getGWConfig(),'enllaslogotipdret', '');
                                  alt python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '');
                                  title python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '')" />
         </span>
