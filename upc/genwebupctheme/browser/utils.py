@@ -138,7 +138,7 @@ class utilitats(BrowserView):
         return _dictResult
 
     def connectDatabase(self):
-        return MySQLdb.connect(host='raiden.upc.es',user='www-estudis',passwd='bdestudis',db='www-estudis')
+        return MySQLdb.connect(host='raiden.upc.es',user='consulta',passwd='c0ns4lt4',db='www-estudis')
     
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
