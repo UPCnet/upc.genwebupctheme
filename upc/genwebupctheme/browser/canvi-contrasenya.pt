@@ -22,7 +22,7 @@
 <img tal:attributes="src python:'contrasenya_'+ utils.pref_lang() +'.gif'" alt="Contrasenya UPC" />
 <br /><br />
 
-<div class="titular2" i18n:translate="genweb-canvi_de_contrasenya1">Per entrar...</div>
+<div class="titular2" i18n:translate="genweb-canvi_de_contrasenya1">To enter...</div>
 <p i18n:translate="genweb-canvi_de_contrasenya2">
 Put your UPC intranet username with a dot <strong>(name.surname)</strong> and <a href="https://gauss.upc.edu/gauss/canvicontrasenya/index.jsp" target="_blank">change your password</a> if you haven't already done so since 01/04/06.
 </p>
