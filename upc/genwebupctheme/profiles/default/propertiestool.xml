@@ -64,6 +64,7 @@
  
  <object name="fckeditor_properties" meta_type="Plone Property Sheet">
   <property name="fck_default_skin" type="string">silver</property>
+  <property name="keyboard_entermode" type="string">br</property>
   <property name="fck_menu_styles" type="text">
 	  &lt;Style name="Sense format" element="div"&gt; 
 		&lt;Attribute name="class" value="" /&gt;
