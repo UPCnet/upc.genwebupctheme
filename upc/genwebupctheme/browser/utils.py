@@ -159,8 +159,8 @@ class utilitats(BrowserView):
         c.execute("""SELECT personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
         results = c.fetchone()
         dictKeys = ('personal',)     
-        _result = self.remapList2Dic(dictKeys,results)       
-        if _result['personal'] == None or len(_result['personal']) < 8:
+        _result = self.remapList2Dic(dictKeys,results)     
+        if _result['personal'] == None:
             return "http://directori.upc.edu/directori/dadesUE.jsp?id=" + id
         else:
             return _result['personal']
@@ -173,11 +173,23 @@ class utilitats(BrowserView):
         db = self.connectDatabase()
         c=db.cursor()     
         c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
+
+
         results = c.fetchone()
         dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
            
         return self.remapList2Dic(dictKeys,results)
 
+    def getContacteDireccion(self, id): 
+        db = self.connectDatabase()
+        c=db.cursor()
+        c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,)) 
+
+        results = c.fetchone()
+        dictKeys = ('codi_edifici','nomEdifici','ue.direccio', 'ue.codi_postal', 'ue.id_campus','nomCampus','nomLocalitat')
+        
+        return self.remapList2Dic(dictKeys,results)
+    
     def cambiaPrefijo(self, lang):
         tmp = 'ing'
         if lang == 'ca':
