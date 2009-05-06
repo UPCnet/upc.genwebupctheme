@@ -16,7 +16,6 @@ utranslate = context.utranslate
 format = '%Y;%m;%d;%w;%H;%M;%S'
 
 # fallback formats, english
-young_format_en = '%A %H:%M' 
 old_format_en = '%d/%m/%Y %H:%M'
 
 
@@ -29,7 +28,7 @@ try:
     (year, month, day, wday, hours, minutes, seconds) = time.strftime(format).split(';')
  
 
-    ploneboard_time = utranslate("old_date_format: ${day} ${month} ${year} ${hours}:${minutes}",
+    ploneboard_time = utranslate("${day} ${month} ${year} ${hours}:${minutes}",
                                      {'day':day, 'month':utranslate(ts.month_msgid(month)), 
                                       'year':year, 'hours':hours, 'minutes':minutes},
                                       default=time.strftime(old_format_en))  
