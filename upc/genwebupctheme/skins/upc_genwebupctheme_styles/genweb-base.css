@@ -1,4 +1,4 @@
-#region-content caption {display:none;}
+caption {display:none;}
 .hiddenStructure {display:none;}
 /* CONTINGUT*/
 .contingut{
@@ -1569,4 +1569,5 @@ clear:both !important;
 }
 
 /*pagina no trobada*/
-.template-default_error_message #region-content .documentFirstHeading {color: crimson !important; font-size:2.5em !important;}
+.template-default_error_message #region-content div div {background: url(warning_48.png) no-repeat top right;}
+.template-default_error_message #region-content .documentFirstHeading {color: crimson !important; font-size:2em !important;}

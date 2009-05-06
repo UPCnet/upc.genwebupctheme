@@ -4,17 +4,18 @@
 	background-color:#F60;
 	font-size:0.05em;}
 .logo {
-	margin:20px 0 0 25px;
+	margin:17px 0 0 25px;
 	min-width:160px;
 	float:left;
 	_width:160px}
+.logoProducte {float:right;	margin:17px 0 0 25px; clear:both;}
 .logo a {
 	margin-right:3px}
 .logo img {
 	float: left}
 .titolWeb {
 	text-align:center;
-	margin:10px 180px 15px 180px}
+	margin:10px 180px 10px 180px}
 .imatgeCapcalera{
 	width:958px;
 	height:95px;

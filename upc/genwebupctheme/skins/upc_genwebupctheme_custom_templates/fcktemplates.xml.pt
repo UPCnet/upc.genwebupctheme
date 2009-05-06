@@ -157,8 +157,8 @@
 							<!-- ////fi columna esquerra-->
 						</td>
 						<td class="columnaseparador20"> </td>
-				            <td class="columnaEnllacosDreta">
-				            <div>
+				            <td>
+				            <div class="columnaEnllacosDreta">
 				            <div class="dalt200"> </div>
 				            <div class="caixaPortlet">
 				            <h2>Enllaços Relacionats</h2>

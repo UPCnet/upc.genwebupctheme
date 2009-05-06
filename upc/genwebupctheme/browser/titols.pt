@@ -1,5 +1,35 @@
 <tal:capsalera define="utils context/@@upc.genweb.utils;
                          portal_url context/@@plone_portal_state/portal_url;">
+
+
+<!-- logo producte -->
+
+    <div class="logoProducte">
+        <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
+		<span tal:condition="python: utils.getGWConfig().enllaslogotip">
+            <!-- titol en catala -->
+            
+            <img tal:attributes="src string:${portal_url}/logoProducte.gif;
+                                            alt python: utils.getGWConfig().firmaunitat_ca;
+                                            title python: utils.getGWConfig().firmaunitat_ca"
+                tal:condition="python:utils.pref_lang()=='ca'" />
+                
+            <!-- titol en castella -->
+            <img tal:attributes="src string:${portal_url}/logoProducte.gif;
+                            alt python: utils.getGWConfig().firmaunitat_es;
+                            title python: utils.getGWConfig().firmaunitat_es"
+                tal:condition="python:utils.pref_lang()=='es'" />
+            <!-- titol en angles -->
+            <img tal:attributes="src string:${portal_url}/logoProducte.gif;
+                            alt python: utils.getGWConfig().firmaunitat_en;
+                            title python: utils.getGWConfig().firmaunitat_en"
+                tal:condition="python:utils.pref_lang()=='en'"/>
+        </span>
+        </a>
+    </div>
+
+<!-- fi logo producte -->
+
                          
     <div class="logo">
         <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya" alt="Universitat Politècnica de Catalunya"       
@@ -29,6 +59,8 @@
           </span>
         </a>
     </div>
+
+
     <div class="titolWeb">
         <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
@@ -48,5 +80,6 @@
                tal:condition="python:utils.pref_lang()=='en'"/>
         </a>
     </div>
+
 
 </tal:capsalera>

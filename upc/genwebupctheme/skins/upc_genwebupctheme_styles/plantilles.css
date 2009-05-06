@@ -349,9 +349,9 @@ body#content a {color:#007dcc; text-decoration:none;}
 /*enllacos dreta*/
 table.enllacosDreta {width:100%;}
 table.enllacosDreta td {vertical-align:top;}
-table.enllacosDreta .columnaEnllacosDreta {width:200px;}
-table.enllacosDreta h2 {border-top:0px;margin:0px;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
-table.enllacosDreta li {
+.columnaEnllacosDreta {width:200px;}
+.columnaEnllacosDreta h2 {border-top:0px;margin:0px;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
+.columnaEnllacosDreta li {
 	list-style-image:url(quadret.gif);
 	list-style-position:outside;
 	list-style-type:disc;
@@ -359,9 +359,9 @@ table.enllacosDreta li {
 	padding:5px 5px 5px 0px !important;
 	line-height:1.5em;
 	border:0px !important;}
-table.enllacosDreta ul {padding-bottom:20px;}
-table.enllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
-table.enllacosDreta .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
+.columnaEnllacosDreta ul {padding-bottom:5px;}
+.columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
+.columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
 .columnaseparador20 {width:20px !important;}
 /*cancella classes kupu als floats imatges*/
 .image-left {
