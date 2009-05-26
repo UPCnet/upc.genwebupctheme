@@ -4,25 +4,9 @@
     tal:condition="view/site_actions"
     i18n:domain="plone">
     <a id="amuntDeTot"></a>
-<!--     <div class="bandaSuperior"></div> -->
-   <div class="barraCerca">
-<script language="javascript" type="text/javascript">
-	<!--
-	function mostram(){
-	    document.getElementById("LSBox").style.display="block";
-	    document.getElementById("NoLSBox").style.display="none";
-	    document.getElementById("CheckCercaLSBox").checked="";
-	    document.getElementById("CheckCercaNoLSBox").checked="checked";
-	}
 
-	function mostram2(){
-	    document.getElementById("NoLSBox").style.display="block";
-	    document.getElementById("LSBox").style.display="none";
-	    document.getElementById("CheckCercaLSBox").checked="";
-	    document.getElementById("CheckCercaNoLSBox").checked="checked";
-	}
-	-->
-</script>
+   <div class="barraCerca">
+
     <form name="searchform"
           action="search"
           tal:attributes="action string:${view/portal_url}/search">
@@ -34,12 +18,14 @@
         <div class="LSBox" id="LSBox">
 	
 	<label for="CheckCercaLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">
-		<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" onFocus="javascript:mostram2(); return false;" />Cerca a la Intranet</label>
+		<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" 
+		       name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" 
+		       onFocus="javascript:mostram2(); return false;" />Cerca a la Intranet</label>
         <input name="SearchableText"
                type="text"
                size="18"
                value=""
-               title="Cerca Intranet..."
+               title="Cerca Google..."
                accesskey="4"
                tal:attributes="value request/SearchableText|nothing;
                                id view/search_input_id"
@@ -55,21 +41,24 @@
 
 <!-- cerca 2: cerca google -->
 	 <div class="NoLSBox" id="NoLSBox" style="display:none;">
-	<label for="CheckCercaNoLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;"><input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" name="CheckCercaNoLSBox" id="CheckCercaNoLSBox" type="checkbox" value="1" onFocus="javascript:mostram(); return false;" /> Cerca a la Intranet</label>
+	<label for="CheckCercaNoLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">
+	<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" 
+	       name="CheckCercaNoLSBox" id="CheckCercaNoLSBox" type="checkbox" value="1" 
+	       onFocus="javascript:mostram(); return false;" />Cerca a la Intranet</label>
         <label for="searchIntranetGadget" class="hiddenStructure"
                     i18n:translate="text_search">Search Intranet</label>
 
-        <input name="SearchableIntranetText"
+          <input name=""
                type="text"
                size="18"
                value=""
                title="Cerca..."
                accesskey="4"
-		 id="searchIntranetGadget"
-               tal:attributes="value request/SearchableIntranetText|nothing;"
+		       id="searchIntranetGadget"
+               tal:attributes="value nothing;"
                class="text inputLabel" />
 
-           <input class="submitGo" type="submit" value ="" />
+          <input class="submitGo" type="submit" value ="" />
 	</div>
     </form>
 
