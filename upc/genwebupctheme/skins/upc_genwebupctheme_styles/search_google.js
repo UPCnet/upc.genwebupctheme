@@ -14,8 +14,9 @@
 		}
 		else
 		{ 
-			jq('#LSResult').hide();
-		    jq('#livesearch0').attr('action','http://cercador.upc.edu/search');
+			jq('#LSResult').hide();		
+			jq('#plone_search_url').hide();
+		    jq('#livesearch0').attr('action','http://cercador.upc.edu/cercaUPC/search');
 		    jq('#searchGadget').hide();
 		    jq('#q').show();		    
 		}

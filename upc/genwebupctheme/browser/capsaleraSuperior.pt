@@ -1,6 +1,7 @@
 <div id="capcaplera"
     tal:define="accesskeys python: {'sitemap' : '3', 'accessibility' : '0', 'contact' : '9'};
-                portal_url context/@@plone_portal_state/portal_url;"
+                portal_url context/@@plone_portal_state/portal_url;
+                global utils context/@@upc.genweb.utils"
     tal:condition="view/site_actions"
     i18n:domain="plone">
     <a id="amuntDeTot"></a>
@@ -8,7 +9,7 @@
    <div class="barraCerca">
 
     <form name="searchform"
-          action="http://cercador.upc.edu/search" >
+          action="http://cercador.upc.edu/cercaUPC/search" >
 
 		
         <label for="searchGadget" class="hiddenStructure"
@@ -44,8 +45,8 @@
                class="text inputLabel" 
                />               
 
-            <input type="hidden" name="config" value="4" />
-            <input type="hidden" name="hl" value="ca" />            
+            <input type="hidden" name="config" tal:attributes="value python: getattr(utils.getGWConfig(),'codigoogle', '')"/>
+            <input type="hidden" name="hl" tal:attributes="value python:utils.pref_lang()" />                       
 		    <input type="hidden" name="op" value="1" />
 		    <input type="hidden" name="ie" value="UTF-8" />
 		    <input type="hidden" name="oe" value="UTF-8" /> 

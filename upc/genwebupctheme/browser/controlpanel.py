@@ -78,6 +78,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
     contacteid = ProxyFieldProperty(IgenWebControlPanel['contacteid'])
     contactegmaps = ProxyFieldProperty(IgenWebControlPanel['contactegmaps'])
     boolmaps = ProxyFieldProperty(IgenWebControlPanel['boolmaps'])
+    codigoogle = ProxyFieldProperty(IgenWebControlPanel['codigoogle'])
     
     
     tipusintranet = ProxyFieldProperty(IgenWebControlPanel['tipusintranet'])
