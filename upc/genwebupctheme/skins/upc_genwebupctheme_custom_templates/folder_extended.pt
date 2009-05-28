@@ -77,9 +77,7 @@
                         <span class="summary"
                               tal:attributes="class string:$item_type_class summary"
                               tal:condition="python:item_type != 'Link'">
-                            <img
-					tal:attributes="alt string:$item_type"
-					tal:replace="structure item_icon/html_tag" />
+						
                             <a href="#"
                                tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
                                                class string:${item_wf_state_class} url"
@@ -91,8 +89,7 @@
                         <span class=""
                               tal:attributes="class string:$item_type_class"
                               tal:condition="python:item_type == 'Link'">
-                            <img tal:replace="structure item_icon/html_tag"	
-					tal:attributes="alt item_icon/html_tag" />
+                                   
                             <a href="#"
                                class="link-plain"
                                tal:content="item_title_or_id"
@@ -101,7 +98,7 @@
                                 External Link
                             </a>
                         </span>
-<br />
+						<br />
                         <span class="documentByLine">
 
                             <span tal:condition="python: item_type == 'Event'"
@@ -122,26 +119,9 @@
                                        i18n:name="end">to date</abbr>)
                             </span>
 
-<!--                            <tal:byline condition="show_about"> -->
                             <tal:byline>
                                 <strong><span i18n:translate="genweb_create">creaci&oacute;</span></strong> 18/09/2008 
 
-<!--
-                                <tal:name tal:condition="item_creator"
-                                    tal:define="author python:mtool.getMemberInfo(item_creator)">
-                                  <span i18n:translate="label_by_author">
-                                    by
-                                  <a href="#"
-                                     tal:attributes="href string:${portal_url}/author/${item_creator}"
-                                     tal:content="python:author and author['fullname'] or item_creator"
-                                     tal:omit-tag="not:author"
-                                     i18n:name="author">
-                                    Bob Dobalina
-                                  </a>
-                                  </span>
-
-                                </tal:name>
--->
                                 <tal:modified condition="python: item_type != 'Event'">
                                    &mdash; 
                                     <strong><tal:mod i18n:translate="box_last_modified">
@@ -163,11 +143,7 @@
                     </dt>
 
                     <dd>
-<!--
-                        <span tal:omit-tag="" tal:condition="not:item_description"> 
-                            &nbsp; 
-                        </span> 
--->
+
                         <span class="description" tal:content="item_description">
                             description 
                         </span> 
