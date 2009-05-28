@@ -1,22 +1,24 @@
 /* Script per seleccionar el cercador de Plone o el de Google (GSA)*/
 
-/* Aquest és el de Google*/
 	function mostram(){
-	    document.getElementById("LSBox").style.display="block";
-	    document.getElementById("NoLSBox").style.display="none";
-	    document.getElementById("CheckCercaLSBox").checked="";
-	    document.getElementById("CheckCercaNoLSBox").checked="checked";
+		
+		checkbox = jq('#CheckCercaLSBox').attr('checked');
+		if (checkbox)
+		{
+			jq('#LSResult').show();
+		    url=jq('#plone_search_url').attr('value');
+		    jq('#livesearch0').attr('action',url);
+		    jq('#searchGadget').show();
+		    jq('#q').hide();
+		    jq('#searchGadget').attr('style', 'background-color:#F1F8E5');
+		}
+		else
+		{ 
+			jq('#LSResult').hide();
+		    jq('#livesearch0').attr('action','http://cercador.upc.edu/search');
+		    jq('#searchGadget').hide();
+		    jq('#q').show();		    
+		}
 	}
-
-	
-
-/* I aquest el de Plone */
-	function mostram2(){
-	    document.getElementById("NoLSBox").style.display="block";
-	    document.getElementById("LSBox").style.display="none";
-	    document.getElementById("CheckCercaLSBox").checked="";
-	    document.getElementById("CheckCercaNoLSBox").checked="checked";
-	}
-
 
 /* END */

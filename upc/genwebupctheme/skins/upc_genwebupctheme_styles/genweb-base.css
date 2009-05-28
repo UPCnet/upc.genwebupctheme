@@ -348,7 +348,7 @@ html*.sobreElWeb {
 	text-transform: lowercase; }
 #searchGadget {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-	background:transparent url(fonsInput.gif) repeat-x scroll 0%;
+	background:transparent repeat-x scroll 0%;
 	border:1px solid #F60;
 	font-size:11px;
 	padding:0 1px 1px;}

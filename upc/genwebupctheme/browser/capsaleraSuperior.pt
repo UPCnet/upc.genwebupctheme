@@ -8,59 +8,60 @@
    <div class="barraCerca">
 
     <form name="searchform"
-          action="search"
-          tal:attributes="action string:${view/portal_url}/search">
+          action="http://cercador.upc.edu/search" >
 
+		
         <label for="searchGadget" class="hiddenStructure"
                     i18n:translate="text_search">Search Site</label>
-
+               
 <!-- cerca 1: cerca de plone -->
-        <div class="LSBox" id="LSBox">
+    <div class="LSBox" id="LSBox">        
+        
 	
 	<label for="CheckCercaLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">
 		<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" 
 		       name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" 
-		       onFocus="javascript:mostram2(); return false;" />Cerca a la Intranet</label>
+		       onChange="javascript:mostram(); return false;" />Cerca a la Intranet</label>
         <input name="SearchableText"
-               type="text"
-               size="18"
-               value=""
-               title="Cerca Google..."
-               accesskey="4"
-               tal:attributes="value request/SearchableText|nothing;
-                               id view/search_input_id"
-               class="text inputLabel" />
-
-           <input class="submitGo" type="submit" value ="" />
-    
-        <div class="LSResult" id="LSResult" style="">
-            <div class="LSShadow" id="LSShadow"></div>
-        </div>
-        
-        </div>
-
-<!-- cerca 2: cerca google -->
-	 <div class="NoLSBox" id="NoLSBox" style="display:none;">
-	<label for="CheckCercaNoLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">
-	<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" 
-	       name="CheckCercaNoLSBox" id="CheckCercaNoLSBox" type="checkbox" value="1" 
-	       onFocus="javascript:mostram(); return false;" />Cerca a la Intranet</label>
-        <label for="searchIntranetGadget" class="hiddenStructure"
-                    i18n:translate="text_search">Search Intranet</label>
-
-          <input name=""
                type="text"
                size="18"
                value=""
                title="Cerca..."
                accesskey="4"
-		       id="searchIntranetGadget"
-               tal:attributes="value nothing;"
-               class="text inputLabel" />
+               tal:attributes="value request/SearchableText|nothing;
+                               id view/search_input_id"
+               class="text inputLabel" 
+               style="display:none;"/>
+        <input name="q"
+               type="text"
+               size="18"
+               value=""
+               title="Cerca Google..."
+               accesskey="4"
+               id="q"
+               tal:attributes="value request/q|nothing"
+                               
+               class="text inputLabel" 
+               />               
 
-          <input class="submitGo" type="submit" value ="" />
-	</div>
-    </form>
+            <input type="hidden" name="config" value="4" />
+            <input type="hidden" name="hl" value="ca" />            
+		    <input type="hidden" name="op" value="1" />
+		    <input type="hidden" name="ie" value="UTF-8" />
+		    <input type="hidden" name="oe" value="UTF-8" /> 
+
+        <input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search"/>
+
+        <input class="submitGo" type="submit" value ="" />		    
+		 
+		    
+        <div class="LSResult" id="LSResult" style="">
+            <div class="LSShadow" id="LSShadow"></div>
+        </div>
+               
+        
+    </div>
+	</form>
 
 
     <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>

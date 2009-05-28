@@ -29,12 +29,18 @@ class capsaleraSuperior(ViewletBase):
     def update(self):
         
         super(capsaleraSuperior, self).update()  # nuevo de Plone 3.1.1
-        
+               
+      
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
 
-        portal_url = context_state.current_base_url() # para q funcionen las urls /?
-
+#(Pdb) self.context
+#<PloneSite at /nuevo>
+#(Pdb) self.request
+#<HTTPRequest, URL=http://localhost:8300/nuevo/homepage>  
+     
+        portal_url = context_state.current_base_url() # para q funcionen las urls /?  
+              
         self.site_actions = context_state.actions().get('site_actions', None)
         
         props = getToolByName(self.context, 'portal_properties')
