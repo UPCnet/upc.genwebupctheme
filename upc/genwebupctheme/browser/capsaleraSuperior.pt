@@ -8,7 +8,7 @@
 
    <div class="barraCerca">
 
-    <form name="searchform"
+    <form name="searchform" 
           action="http://cercador.upc.edu/cercaUPC/search" >
 
 		
@@ -22,12 +22,13 @@
 	<label for="CheckCercaLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">
 		<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;" 
 		       name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" 
-		       onChange="javascript:mostram(); return false;" />Cerca a la Intranet</label>
+		       onChange="javascript:mostram(); return false;"  i18n:domain="upc.genwebupc" i18n:translate="cerca_intranet"/></label>
         <input name="SearchableText"
                type="text"
                size="18"
-               value=""
-               title="Cerca..."
+               value=""     
+               i18n:domain="upc.genwebupc"           
+       		   i18n:attributes="title cerca"        		        
                accesskey="4"
                tal:attributes="value request/SearchableText|nothing;
                                id view/search_input_id"
@@ -36,22 +37,22 @@
         <input name="q"
                type="text"
                size="18"
-               value=""
-               title="Cerca Google..."
+               value=""    
+               i18n:domain="upc.genwebupc"             
+       		   i18n:attributes="title cerca_google"         		       		           
                accesskey="4"
                id="q"
-               tal:attributes="value request/q|nothing"
-                               
-               class="text inputLabel" 
+               tal:attributes="value request/q|nothing"                               
+               class="text inputLabel"                        
                />               
 
-            <input type="hidden" name="config" tal:attributes="value python: getattr(utils.getGWConfig(),'codigoogle', '')"/>
+            <input type="hidden" name="config" tal:attributes="value python: getattr(utils.getGWConfig(),'codigoogle', '')" />
             <input type="hidden" name="hl" tal:attributes="value python:utils.pref_lang()" />                       
 		    <input type="hidden" name="op" value="1" />
 		    <input type="hidden" name="ie" value="UTF-8" />
 		    <input type="hidden" name="oe" value="UTF-8" /> 
 
-        <input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search"/>
+        <input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search" />
 
         <input class="submitGo" type="submit" value ="" />		    
 		 
