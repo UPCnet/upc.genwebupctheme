@@ -97,8 +97,8 @@
     <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
-       tal:condition="here/portal_membership/isAnonymousUser"
-       tal:attributes="href string:${view/portal_url}/login_form" 
+       tal:condition="here/portal_membership/isAnonymousUser"       
+       tal:attributes="href python:(view.portal_url +'/login_form').replace('http', 'https')" 
        i18n:domain="upc.genwebupc"
        i18n:translate="identificat"> 
        Identifica't
