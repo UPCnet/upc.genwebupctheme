@@ -362,9 +362,15 @@ html*.sobreElWeb {
 	float: right;
 	margin: 0px !important;
 	padding-right:0;
+/* Modificat per treure la cerca de Google, Victor 11/6
 	padding-left:0px;
 	*padding-left:0px;
-	_padding-left:0;}
+	_padding-left:0;*/
+	padding-left:3px;
+    *padding-left:3px;
+    _padding-left:3px;
+	
+	}
 #cercaIntranetForm, #livesearch0 {}
 
 
