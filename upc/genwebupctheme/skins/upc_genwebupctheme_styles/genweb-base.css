@@ -426,7 +426,8 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 	padding-top:0;
 	position:relative;
 	text-align:right;
-	z-index:3;}
+	z-index:3;
+	margin-top:10px;}
 .LSIEFix {
 	border:1px solid #666;
 	background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom;}
