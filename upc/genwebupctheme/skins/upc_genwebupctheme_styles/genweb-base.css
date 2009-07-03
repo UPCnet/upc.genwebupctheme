@@ -1590,3 +1590,8 @@ dt.contenttype-servei{
 	border-bottom:1px dashed #333333;
 	margin-top:20px !important;
 }
+
+#getProducte{
+	height:200px;
+	width:400px;
+}
