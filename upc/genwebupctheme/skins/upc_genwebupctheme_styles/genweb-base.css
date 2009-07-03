@@ -1584,3 +1584,9 @@ clear:both !important;
 /*pagina no trobada*/
 .template-default_error_message #region-content div div {background: url(warning_48.png) no-repeat top right;}
 .template-default_error_message #region-content .documentFirstHeading {color: crimson !important; font-size:2em !important;}
+
+dt.contenttype-servei{
+	font-size:20px !important;	
+	border-bottom:1px dashed #333333;
+	margin-top:20px !important;
+}
