@@ -2,15 +2,17 @@
 <object name="portal_actions" meta_type="Plone Actions Tool"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <action-provider name="portal_workflow"/>
- <!-- Comento aquesta linia perque surten dos pestanyes de log al Poi!
+ 
+<!-- Per treure pestanya LOG -->
  <action-provider name="portal_types">
   <action title="Log" action_id="log" category="object"
      condition_expr="nocall: object/@@log|nothing"
-     url_expr="string:$object_url/log" visible="True">
+     url_expr="string:$object_url/log" visible="False">
    <permission>View</permission>
   </action>
  </action-provider>
- -->
+ <!--  No ho fa! -->
+
  <action-provider name="portal_actions"/>
  
  <object name="portal_tabs" meta_type="CMF Action Category">

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <dc-workflow workflow_id="poi_response_workflow"
-             title="poi_response_workflow" description=""
+             title="Poi response workflow" description=""
              state_variable="review_state"
              initial_state="new">
  <permission>Delete objects</permission>
@@ -12,14 +12,12 @@
  <state state_id="new" title="Being created">
   <exit-transition transition_id="post"/>
   <permission-map name="Delete objects" acquired="False">
-   <permission-role>Anonymous</permission-role>
    <permission-role>Editor</permission-role>
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
   </permission-map>
   <permission-map name="Modify portal content"
                   acquired="False">
-   <permission-role>Anonymous</permission-role>
    <permission-role>Editor</permission-role>
    <permission-role>Manager</permission-role>
    <permission-role>Owner</permission-role>
