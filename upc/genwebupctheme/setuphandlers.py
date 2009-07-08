@@ -1,3 +1,7 @@
+from StringIO import StringIO
+from Products.CMFCore.utils import getToolByName
+from Products.Poi.Extensions.utils import addAction, removeAction
+
 def setupVarious(context):
 
     # Ordinarily, GenericSetup handlers check for the existence of XML files.
@@ -18,4 +22,11 @@ def setupVarious(context):
                 '%s/skins/fckeditor/editor/skins/silver/fck_strip.gif' % (fckeditor_path)) 
     #sobreescrivim el fck_editor.css
     shutil.copyfile('%s/skins/upc_genwebupctheme_styles/fck_editor.css' % (genwebtheme_path),
-                '%s/skins/fckeditor/editor/skins/silver/fck_editor.css' % (fckeditor_path)) 
+                '%s/skins/fckeditor/editor/skins/silver/fck_editor.css' % (fckeditor_path))
+    
+    # Remove the log action inserted by POI
+    out = StringIO()
+    portal= context.getSite()
+    ttool = getToolByName(portal, 'portal_types')
+    removeAction(context, out, ttool, 'log', 'object')
+    
