@@ -421,13 +421,14 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 	_padding:0 10px;}
 .LSResult { 
 	left:0;
-	margin:0;
+	margin:0 !important;
 	display:block;
 	padding-top:0;
 	position:relative;
 	text-align:right;
 	z-index:3;
-	margin-top:10px;}
+	top:10px;
+	*top:0;}
 .LSIEFix {
 	border:1px solid #666;
 	background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom;}
