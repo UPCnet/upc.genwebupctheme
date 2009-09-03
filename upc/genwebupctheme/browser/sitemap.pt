@@ -25,12 +25,13 @@
     over an item for a few seconds to get its description.
     </p>
 
-	<div tal:define="records python: view.getMasterInfoGeneral(view.getGWConfig().idtitulacioMaster,view.getGWConfig().idestudiMaster)">
+	<div tal:condition="python: flav == 'Tema genwebUPC Master'" id="portal-sitemap" class="navTreeLevel0 visualNoMarker"
+	     tal:define="flav view/getFlavour;">
+	     
 	<ul tal:define="langtool nocall:context/portal_languages;
 	                lang_code langtool/getPreferredLanguage;
-                    flav view/getFlavour;
-                    pURL python:context.portal_url()"
-	    tal:condition="python: flav == 'Tema genwebUPC Master'" id="portal-sitemap" class="navTreeLevel0 visualNoMarker">
+                    pURL python:context.portal_url();
+                    records python: view.getMasterInfoGeneral(view.getGWConfig().idtitulacioMaster,view.getGWConfig().idestudiMaster);">
 	    
 	    <li>    
    			<div>
