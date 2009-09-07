@@ -1,0 +1,52 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="upc.genwebupc">
+      
+<body>
+         
+    <div metal:fill-slot="main">
+  
+      <div metal:define-macro="plonearticle_model">
+        
+        <metal:body_macro metal:define-macro="body" 
+                          tal:define="len_text python:len(here.getText());
+                                      image_brains view/getImageBrains;
+">
+                                      
+         <div style="padding-top:10px;">                             
+         <h1 tal:content="here/title_or_id" />   
+
+          <div class="documentDescription" tal:content="here/Description">
+          </div>
+          
+          <fieldset class="rightPlaced"
+                    tal:condition="image_brains">
+            <legend i18n:translate="legend_images">Images</legend>
+             <tal:block tal:repeat="image_brain python: images_brains">
+                    <a href="" style="display: block;" tal:attributes="href image_brain/getURL">
+                      <img tal:attributes="src image_brain/getURL;" width="100">
+                    </a>
+                      <span class="discreet" tal:content="image_brain/Title"></span>
+                
+            </tal:block>
+          </fieldset>
+            
+            <div class="middlePlacedBody">
+                <div class="plain">
+                  <span tal:replace="structure here/getText"></span> 
+                </div>
+            </div>
+         </div> 
+        </metal:body_macro>
+     <!--   
+        <metal:images_macro metal:define-macro="images">
+        </metal:images_macro>
+    -->     
+      </div>
+    </div>
+  </body>
+</html>

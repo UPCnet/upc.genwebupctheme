@@ -342,6 +342,24 @@
       permission="zope2.View"
       />
 
+
+    <browser:page
+      name="article1"
+      for="Products.ATContentTypes.interface.IATDocument"
+      class=".article.ArticleView"
+      template="article.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      name="article2"
+      for="Products.ATContentTypes.interface.IATDocument"
+      class=".article.ArticleView"
+      template="article2.pt"      
+      permission="zope2.View"
+      />
+
+
 <!-- Home Page Neutre2 -->
     <browser:page
       name="homepage"
