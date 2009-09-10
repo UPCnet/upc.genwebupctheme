@@ -14,28 +14,18 @@
         
         <metal:body_macro metal:define-macro="body" 
                           tal:define="len_text python:len(here.getText());
-                                      image_brains view/getImageBrains;
-                                      first_image python: len(image_brains)>0 and image_brains[0] or [];
-                                      other_images python: len(image_brains)>0 and image_brains[1:] or [];">
+                                      image_brains view/getImageBrains;">
                                       
          <div style="padding-top:10px;">                             
          <h1 tal:content="here/title_or_id" />   
-                
-              <div class="leftPlaced" tal:condition="first_image">
-                    <a href="" style="display: block;" tal:attributes="href first_image/getURL">
-                      <img tal:attributes="src first_image/getURL;" width="100">
-                    </a>
-                      <span class="discreet" tal:content="first_image/Title"></span>
-              </div>
-
 
           <div class="documentDescription" tal:content="here/Description">
           </div>
           
           <fieldset class="rightPlaced"
-                    tal:condition="other_images">
+                    tal:condition="image_brains">
             <legend i18n:translate="legend_images">Images</legend>
-             <tal:block tal:repeat="image_brain python: other_images">
+             <tal:block tal:repeat="image_brain image_brains">
                     <a href="" style="display: block;" tal:attributes="href image_brain/getURL">
                       <img tal:attributes="src image_brain/getURL;" width="100">
                     </a>
@@ -67,8 +57,12 @@
         </fieldset>
     </div>
 
+
         </metal:body_macro>
+
         
+    
+
      <!--   
         <metal:images_macro metal:define-macro="images">
         </metal:images_macro>
