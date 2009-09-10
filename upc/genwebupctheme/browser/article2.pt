@@ -41,7 +41,29 @@
                 </div>
             </div>
          </div> 
+
+    <div tal:define="items view/getFiles" tal:condition="items" class="relatedItems">
+        <div class="visualClear" id="clear-space-before-relatedItemBox"><!-- --></div>
+        <fieldset id="relatedItemBox">
+            <legend>Contingut relacionat</legend>
+            <ul class="visualNoMarker">
+               <tal:block repeat="item items">
+                <li>
+                    <span class="contenttype-image">
+                        <a tal:attributes="href string:${item/url}/view" class="state-" tal:content="item/title"></a>
+                    </span>
+                </li>
+             </tal:block>
+            </ul>
+        </fieldset>
+    </div>
+
+
         </metal:body_macro>
+
+        
+    
+
      <!--   
         <metal:images_macro metal:define-macro="images">
         </metal:images_macro>

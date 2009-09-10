@@ -347,7 +347,7 @@
       name="article1"
       for="Products.ATContentTypes.interface.IATDocument"
       class=".article.ArticleView"
-      template="article.pt"
+      template="article1.pt"
       permission="zope2.View"
       />
 

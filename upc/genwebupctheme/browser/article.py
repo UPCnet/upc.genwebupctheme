@@ -14,8 +14,8 @@ class ArticleView(BrowserView):
         folder_path = '/'.join(self.context.getPhysicalPath()[:-1])
         return catalog.searchResults(path=folder_path,portal_type='Image')
 
-    def getFileBrains(self):
-        catalog = self.context.portal_catalog;
-        folder_path = '/'.join(self.context.getPhysicalPath()[:-1])
-        return catalog.searchResults(path=folder_path,portal_type='File')
+    def getFiles(self):
+        items = self.context.getRelatedItems()
+        result = [dict(title=item.title_or_id(),url=item.absolute_url()) for item in items]
+        return result
         
