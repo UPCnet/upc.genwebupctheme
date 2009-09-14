@@ -12,7 +12,7 @@ class ArticleView(BrowserView):
     def getImageBrains(self):
         catalog = self.context.portal_catalog;
         folder_path = '/'.join(self.context.getPhysicalPath()[:-1])
-        return catalog.searchResults(path=folder_path,portal_type='Image')
+        return catalog.searchResults(path={query=folder_path,depth=1},portal_type='Image')
 
     def getFiles(self):
         items = self.context.getRelatedItems()
