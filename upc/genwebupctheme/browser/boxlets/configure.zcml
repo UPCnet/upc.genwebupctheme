@@ -83,4 +83,11 @@
 		permission="zope2.View"
 		/>
 
+    <browser:page
+        for="*"
+        name="box.Noticies_mini"
+        class=".boxletsviews.noticies_mini"
+        permission="zope2.View"
+        />  
+
 </configure>

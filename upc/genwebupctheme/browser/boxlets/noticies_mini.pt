@@ -1,0 +1,53 @@
+<tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                            plone_view context/@@plone;
+                            news_items view/published_news_items"
+                tal:condition="news_items"
+                i18n:domain="plone">
+
+	<tal:block>
+	
+		<div class="portlet150"> </div>
+		
+	    <div class="caixaPortlet">
+	        
+	        <h6 class="titolPortlet">
+	          <span class="icoRSS">
+          	        <a href=""
+             	        tal:define="utils context/@@upc.genweb.utils"
+             	        tal:attributes="href view/rss_news_link">RSS
+             	        <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+         	         </a>
+        	   </span> 
+        	   <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span> 
+	        </h6>
+	        
+	        <ul>
+		        <li tal:repeat="obj news_items">
+		            <a href=""
+		               class="tile"
+		               tal:attributes="href obj/getURL;
+		                               title obj/Description">
+		                <span tal:replace="obj/pretty_title_or_id">
+		                Notícies RSS
+		                </span>
+		                <br/>
+		            </a>
+		            <p class="small"
+		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</p>
+		        </li>
+	        </ul>
+	        
+	        <div class="portletPlus">  
+	            <a href="#"><img src="plus.gif" alt="+"/></a> 
+	            <a href=""
+	               tal:attributes="href view/all_news_link"
+	               i18n:translate="box_more_news_link">
+	               More news&hellip;
+	            </a>
+	        </div>
+	        
+	    </div> 
+	    <div class="baix150"> </div>
+	        	
+	</tal:block>
+</tal:newsitems>
