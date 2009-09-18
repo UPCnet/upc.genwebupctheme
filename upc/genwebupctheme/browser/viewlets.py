@@ -71,6 +71,6 @@ class TitleViewlet(ViewletBase):
             TITLE_GW = "Genweb UPC"
                                     
         if page_title == portal_title:
-            return u"<title> %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('Universitat Politècnica de Catalunya')))
+            return u"<title> %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('Universitat Politècnica de Catalunya. UPC')))
         else:
-            return u"<title> %s &mdash; %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('Universitat Politècnica de Catalunya')), escape(safe_unicode(page_title)))
+            return u"<title> %s &mdash; %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('Universitat Politècnica de Catalunya. UPC')), escape(safe_unicode(page_title)))
