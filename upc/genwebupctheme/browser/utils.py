@@ -361,11 +361,14 @@ class utilitats(BrowserView):
                     'm_web_preinscripcio',
                     )
         tmp = self.remapList2Dic(dictKeys,results)
+        condicion =  True 
+
         if len(tmp['m_web_preinscripcio']) == 0:
             url = 'http://www.upc.es/estudis-upc/masters-eees/preinscripcio_cat.php'
-            cond = False
-            return url
-        return cond
+            condicion = False
+            return dict(preinscripcio = url, condicion = condicion)
+        else:
+            return dict(preinscripcio = tmp, condicion = condicion)
 
     def getMasterRequisits(self, id_titulacio, id_estudi):
         

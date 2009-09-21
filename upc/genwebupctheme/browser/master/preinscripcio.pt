@@ -16,7 +16,8 @@
        			tal:define="langtool nocall:context/portal_languages;
                   			lang_code langtool/getPreferredLanguage;
                   			global utils context/@@upc.genweb.utils;
-                            data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);">
+                            data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
+							preinscripcion_data python: utils.getPreinscripcioData(utils.getGWConfig().idestudiMaster)">
 		
 		
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
@@ -27,7 +28,9 @@
 
 		
 				<span tal:content="python: utils.getTextMaster('preinscripcio_interuniversitari',lang_code)">Aquest és un Màster... nom_universitat_coordinadora</span> 
-                <a tal:content="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)]  + ' ('+data['unitat.sigles']+')'"></a>
+                <a tal:content="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)]  + ' ('+data['unitat.sigles']+')'"
+                   tal:define="p preinscripcion_data/preinscripcio"
+                   tal:attributes="href p/m_web_preinscripcio"></a>
 
 
 
