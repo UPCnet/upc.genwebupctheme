@@ -31,11 +31,5 @@
        title="Masters portlet"
        description="A portlet which can show a fake nav."
        />
-       
-    <portlet
-      addview="upc.genweb.masters.ExamplePortlet"
-      title="Example portlet"
-       description=""
-     />
    
 </portlets>
