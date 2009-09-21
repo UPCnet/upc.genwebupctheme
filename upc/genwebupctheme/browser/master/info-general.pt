@@ -21,14 +21,15 @@
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-        		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('info_gral',lang_code))">Informació General</h1>
+        		<h1 class="documentFirstHeading" tal:content="python: utils.getTextMaster('info_gral',lang_code)">Informació General</h1>
 		
-				<div class="plain" tal:define="data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
+				<div class="plain" tal:define="data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
+                                               mobilitat python: utils.getMobilitatEstudis(utils.getGWConfig().idtitulacioMaster)">
 											   
 					<!-- OBJECTIUS DOCENT  -->
 			        <div class="textDestacat"
 			        	 tal:condition="python: data['objectius_docents_cat']"
-			             tal:content="python: utils.recodifica(data['objectius_docents_'+utils.cambiaPrefijo(lang_code)])"> Servei de Comunicació i Promoció        
+			             tal:content="python: data['objectius_docents_'+utils.cambiaPrefijo(lang_code)]"> Servei de Comunicació i Promoció        
 					</div>
 
 
@@ -39,66 +40,66 @@
 					
 					        <tr tal:condition="python: (data['m_interuniversitari']==1) and (data['m_erasmus_mundus']==1)">
 					            <td >&nbsp;</td>
-            					<td tal:content="python: utils.recodifica(utils.getTextMaster('es_inter_erasmus',lang_code))">InterUniversitariErasmus</td>
+            					<td tal:content="python: utils.getTextMaster('es_inter_erasmus',lang_code)">InterUniversitariErasmus</td>
 					        </tr>
 					
 					<!-- INTERUNIVERSITARI -->
 					
 					        <tr tal:condition="python: (data['m_interuniversitari']==1)">
 					            <td>&nbsp;</td>
-            					<td tal:content="python: utils.recodifica(utils.getTextMaster('es_interuniversitari',lang_code))">InterUniversitariErasmus</td>
+            					<td tal:content="python: utils.getTextMaster('es_interuniversitari',lang_code)">InterUniversitariErasmus</td>
 					        </tr>
 					
 					<!-- ERASMUS MUNDUS -->
 					
 					        <tr tal:condition="python: (data['m_erasmus_mundus']==1)">
 					            <td>&nbsp;</td>
-            					<td tal:content="python: utils.recodifica(utils.getTextMaster('es_erasmus',lang_code))">InterUniversitariErasmus</td>
+            					<td tal:content="python: utils.getTextMaster('es_erasmus',lang_code)">InterUniversitariErasmus</td>
 					        </tr>
 
 					<!-- ORIENTACIO -->
 					
-					        <tr tal:condition="python: utils.recodifica(data['orientacio_'+utils.cambiaPrefijo(lang_code)])">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('orientacio', lang_code))" class="titular2">Orientacio</td>
-					            <td tal:content="python: utils.recodifica(data['orientacio_'+utils.cambiaPrefijo(lang_code)])">recerca</td>
+					        <tr tal:condition="python: data['orientacio_'+utils.cambiaPrefijo(lang_code)]">
+					            <td tal:content="python: utils.getTextMaster('orientacio', lang_code)" class="titular2">Orientacio</td>
+					            <td tal:content="python: data['orientacio_'+utils.cambiaPrefijo(lang_code)]">recerca</td>
 					        </tr>					
 
 					<!-- DATA INICI -->
 					
-					        <tr tal:condition="python: utils.recodifica(data['m_data_inici_'+utils.cambiaPrefijo(lang_code)])">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('inici_activitat', lang_code))" class="titular2">inici_activitat</td>
-					            <td tal:content="python: utils.recodifica(data['m_data_inici_'+utils.cambiaPrefijo(lang_code)])">data_inici</td>
+					        <tr tal:condition="python: data['m_data_inici_'+utils.cambiaPrefijo(lang_code)]">
+					            <td tal:content="python: utils.getTextMaster('inici_activitat', lang_code)" class="titular2">inici_activitat</td>
+					            <td tal:content="python: data['m_data_inici_'+utils.cambiaPrefijo(lang_code)]">data_inici</td>
 					        </tr>
 					
 					<!-- DURADA -->
 					
-					        <tr tal:condition="python: utils.recodifica(data['durada_' + utils.cambiaPrefijo(lang_code)])">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('durada', lang_code))" class="titular2">durada</td>
-					            <td tal:content="python: utils.recodifica(data['durada_'+utils.cambiaPrefijo(lang_code)])">dosCursos</td>
+					        <tr tal:condition="python: data['durada_' + utils.cambiaPrefijo(lang_code)]">
+					            <td tal:content="python: utils.getTextMaster('durada', lang_code)" class="titular2">durada</td>
+					            <td tal:content="python: data['durada_'+utils.cambiaPrefijo(lang_code)]">dosCursos</td>
 					        </tr>
 					
 					<!-- CRÈDITS ECTS -->
 					
 					        <tr tal:condition="python: data['carrega_lectiva']">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('carrega_lectiva',lang_code))" class="titular2">durada</td>
+					            <td tal:content="python: utils.getTextMaster('carrega_lectiva',lang_code)" class="titular2">durada</td>
 					            <td tal:content="python: int(data['carrega_lectiva'])">120</td>
 					        </tr>
 
 					<!-- MODALITAT DOCENT -->
 					
-					        <tr tal:condition="python: utils.recodifica(data['up.nom_'+utils.cambiaPrefijo(lang_code)+' '+'pNom_'+utils.cambiaPrefijo(lang_code)])">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('modalitat_docent',lang_code))" class="titular2">modalitat</td>
-					            <td tal:content="python: utils.recodifica(data['up.nom_'+utils.cambiaPrefijo(lang_code)+' '+'pNom_'+utils.cambiaPrefijo(lang_code)])">presencial</td>
+					        <tr tal:condition="python: data['up.nom_'+utils.cambiaPrefijo(lang_code)+' '+'pNom_'+utils.cambiaPrefijo(lang_code)]">
+					            <td tal:content="python: utils.getTextMaster('modalitat_docent',lang_code)" class="titular2">modalitat</td>
+					            <td tal:content="python: data['up.nom_'+utils.cambiaPrefijo(lang_code)+' '+'pNom_'+utils.cambiaPrefijo(lang_code)]">presencial</td>
 					        </tr>
 
 					<!-- IDIOMES -->
 					
 					        <tr tal:condition="python: utils.select_idiomes(utils.getGWConfig().idestudiMaster)">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('idiomes',lang_code))" class="titular2">idiomes</td>
+					            <td tal:content="python: utils.getTextMaster('idiomes',lang_code)" class="titular2">idiomes</td>
 					            <td>
 					               <span tal:repeat="idiomes python: utils.select_idiomes(utils.getGWConfig().idestudiMaster)">
 					                    <tal:last tal:define="is_last repeat/idiomes/end">
-					                    <span tal:content="python: utils.recodifica(idiomes['ui.nom_'+utils.cambiaPrefijo(lang_code)])">catala</span><span tal:condition="python:not is_last">,</span>
+					                    <span tal:content="python: idiomes['ui.nom_'+utils.cambiaPrefijo(lang_code)]">catala</span><span tal:condition="python:not is_last">,</span>
 					                    </tal:last>
 					               </span>
 					            </td>
@@ -107,19 +108,27 @@
 					<!-- UNITATS ORGANITZADORES -->
 					
 					        <tr tal:condition="python: utils.select_organitzadors(utils.getGWConfig().idestudiMaster)">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('unitats_organitzadores',lang_code))" class="titular2">unitats_organitzadores</td>
+					            <td tal:content="python: utils.getTextMaster('unitats_organitzadores',lang_code)" class="titular2">unitats_organitzadores</td>
 					            <td>
 					               <span tal:repeat="organitzadors python:utils.select_organitzadors(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
 
 					                     <div><a tal:attributes="href python: utils.recuperaLinkUnitats(str(organitzadors['uu.id_unitat']),lang_code)" target="newwindow"
-					                             tal:content="python: utils.recodifica(organitzadors['uu.nom_'+utils.cambiaPrefijo(lang_code)])">UPC</a>
+					                             tal:content="python: organitzadors['uu.nom_'+utils.cambiaPrefijo(lang_code)]">UPC</a>
 					                     <span tal:condition="python:organitzadors['uu.sigles']"
-					                           tal:content="python:'  ('+utils.recodifica(organitzadors['uu.sigles'])+')'"
+					                           tal:content="python:'  ('+organitzadors['uu.sigles']+')'"
 					                           tal:omit-tag="">sigles</span></div>
 					                            
 					               </span>
 					            </td>
 					        </tr>
+
+					<!-- MOBILITAT DELS ESTUDIS -->
+					
+					        <tr tal:condition="python: mobilitat['m_movilitat_'+utils.cambiaPrefijo(lang_code)]">
+					            <td tal:content="python: utils.getTextMaster('Mobilitat', lang_code)" class="titular2">Orientacio</td>
+					            <td tal:content="python: mobilitat['m_movilitat_'+utils.cambiaPrefijo(lang_code)]">recerca</td> 
+					        </tr>		
+
 
 					<!-- SEPARACIO -->
 					        <tr>
@@ -131,35 +140,35 @@
 					        
 					<!-- NOM TITULACIO -->
 					
-					        <tr tal:condition="python: utils.recodifica(data['m_nom_titulacio_'+utils.cambiaPrefijo(lang_code)])">
+					        <tr tal:condition="python: data['nom_'+utils.cambiaPrefijo(lang_code)]">
 					            <td>&nbsp;</td>
-					            <td tal:content="python: utils.recodifica(data['m_nom_titulacio_'+utils.cambiaPrefijo(lang_code)])" class="titular2">titulacio</td>
+					            <td tal:content="python: data['nom_'+utils.cambiaPrefijo(lang_code)]" class="titular2">titulacio</td>
 					        </tr>
 
 					<!-- UNIVERSITATS PARTICIPANTS -->
 					
 					        <tr tal:condition="python: utils.select_participants(utils.getGWConfig().idestudiMaster)">
-					            <td tal:content="python: utils.recodifica(utils.getTextMaster('universitats_participants',lang_code))" class="titular2">universitats_participants</td>
+					            <td tal:content="python: utils.getTextMaster('universitats_participants',lang_code)" class="titular2">universitats_participants</td>
 					            <td>
 					               <span tal:repeat="participants python: utils.select_participants(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
 					            <!-- Si no son universitats externes -->
 					                             <div tal:repeat="externes python: utils.select_tipus(participants['uu.id_unitat'])">
 					                                  <a tal:condition="python:externes['sut.id id']!=14"
 					                                     tal:attributes="href python: utils.recuperaLinkUnitats(str(participants['uu.id_unitat']),lang_code)" target="newwindow"
-					                                     tal:content="python: utils.recodifica(participants['uu.nom_'+utils.cambiaPrefijo(lang_code)])">universitat</a>
+					                                     tal:content="python: participants['uu.nom_'+utils.cambiaPrefijo(lang_code)]">universitat</a>
 					
 					            <!-- Si son universitats externes -->
 					  
 					                                  <a tal:condition="python:(externes['sut.id id']==14) and (externes['web']!='http://')"
 					                                     tal:attributes="href python:externes['web']" target="newwindow"
-					                                     tal:content="python: utils.recodifica(participants['uu.nom_'+utils.cambiaPrefijo(lang_code)])">universitat</a>
+					                                     tal:content="python: participants['uu.nom_'+utils.cambiaPrefijo(lang_code)]">universitat</a>
 					
 					                                  <span tal:condition="python:(externes['sut.id id']==14) and (externes['web']=='http://')"
 					                                        tal:omit-tag=""
-					                                        tal:content="python: utils.recodifica(participants['uu.nom_'+utils.cambiaPrefijo(lang_code)])">universitat</span>
+					                                        tal:content="python: participants['uu.nom_'+utils.cambiaPrefijo(lang_code)]">universitat</span>
 					
 					                             <span tal:condition="python: participants['uu.sigles']"
-					                                   tal:content="python: '  (' + utils.recodifica(participants['uu.sigles']) + ')'"
+					                                   tal:content="python: '  (' + participants['uu.sigles'] + ')'"
 					                                   tal:omit-tag="">sigles</span>
 					                             </div>
 					               </span>
@@ -169,55 +178,55 @@
 					<!-- UNIVERSITAT COORDINADORA -->
 					
 					        <tr tal:condition="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)]">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('universitat_coordinadora',lang_code))">universitat_coordinadora</td>
-					            <td tal:content="python: utils.recodifica(data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)])  + ' ('+utils.recodifica(data['unitat.sigles'])+')'">UPC</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('universitat_coordinadora',lang_code)">universitat_coordinadora</td>
+					            <td tal:content="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)]  + ' ('+data['unitat.sigles']+')'">UPC</td>
 					        </tr>
 	
 					<!-- MOBILITAT -->
 					
-					        <tr tal:condition="python: data['m_nom_titulacio_'+utils.cambiaPrefijo(lang_code)]">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('mobilitat',lang_code))">mobilitat</td>
-					            <td tal:content="python: utils.recodifica(data['m_nom_titulacio_'+utils.cambiaPrefijo(lang_code)]) ">mobilitat</td>
+					        <tr tal:condition="python: data['nom_'+utils.cambiaPrefijo(lang_code)]">
+					            <td class="titular2" tal:content="python: utils.getTextMaster('mobilitat',lang_code)">mobilitat</td>
+					            <td tal:content="python: data['nom_'+utils.cambiaPrefijo(lang_code)] ">mobilitat</td>
 					        </tr>
 
 					<!-- DESTINATARIS -->
 					
 					        <tr tal:condition="python: data['m_destinataris_'+utils.cambiaPrefijo(lang_code)]">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('destinataris',lang_code))">destinataris</td>
-					            <td tal:content="structure python: utils.recodifica(data['m_destinataris_'+utils.cambiaPrefijo(lang_code)])">destinataris</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('destinataris',lang_code)">destinataris</td>
+					            <td tal:content="structure python: data['m_destinataris_'+utils.cambiaPrefijo(lang_code)]">destinataris</td>
 					        </tr>
 
 					<!-- LLOC IMPARTICIO -->
 					
 					        <tr tal:condition="python: data['m_lloc_imp_'+utils.cambiaPrefijo(lang_code)]">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('lloc_imparticio',lang_code))">lloc_imparticio</td>
-					            <td tal:content="structure python: utils.recodifica(data['m_lloc_imp_'+utils.cambiaPrefijo(lang_code)])">lloc</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('lloc_imparticio',lang_code)">lloc_imparticio</td>
+					            <td tal:content="structure python: data['m_lloc_imp_'+utils.cambiaPrefijo(lang_code)]">lloc</td>
 					        </tr>
 
 					<!-- PROFESSORAT -->
 					
 					        <tr tal:condition="python: data['m_professorat_'+utils.cambiaPrefijo(lang_code)]">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('professorat',lang_code))">professorat</td>
-					            <td tal:content="python: utils.recodifica(data['m_professorat_'+utils.cambiaPrefijo(lang_code)])">profes</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('professorat',lang_code)">professorat</td>
+					            <td tal:content="python: data['m_professorat_'+utils.cambiaPrefijo(lang_code)]">profes</td>
 					        </tr>
 
 					<!-- PREU -->
 					
 					        <tr>
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('preu',lang_code))">preu</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('preu',lang_code)">preu</td>
 					            <td>
 					               <span tal:condition="python: data['m_erasmus_mundus']==1"
-					                     tal:content="python: utils.recodifica(utils.getTextMaster('preu_erasmus',lang_code))">preu_erasmus</span>
+					                     tal:content="python: utils.getTextMaster('preu_erasmus',lang_code)">preu_erasmus</span>
 					
 					               <span tal:condition="python: data['m_erasmus_mundus']!=1"
-					                     tal:content="python: utils.recodifica(utils.getTextMaster('preu_no_erasmus',lang_code))">preu_no_erasmus</span>
+					                     tal:content="python: utils.getTextMaster('preu_no_erasmus',lang_code)">preu_no_erasmus</span>
 					            </td>
 					        </tr>
 
 					<!-- PLACES -->
 					
 					        <tr tal:condition="python: data['places']">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('places',lang_code))">places</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('places',lang_code)">places</td>
 					            <td tal:content="python: data['places']">20</td>
 					        </tr>
 
@@ -229,7 +238,7 @@
 					        </tr>
 					
 					        <tr tal:condition="python: data['m_email']">
-					            <td class="titular2" tal:content="python: utils.recodifica(utils.getTextMaster('a_e',lang_code))">a_e</td>
+					            <td class="titular2" tal:content="python: utils.getTextMaster('a_e',lang_code)">a_e</td>
 					            <td>
 					               <tal:repe tal:repeat="mail python: data['m_email'].split(';')">
 					                                 <div><a tal:attributes="href python:'mailto:'+ mail" target="newwindow"

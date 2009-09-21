@@ -19,12 +19,12 @@
             	</div>
             	<div class="titolBranca_m" 
             		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Master') or utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
-            	     tal:content="python: utils.recodifica(data['ua.nom_'+utils.cambiaPrefijo(lang_code)])">Titol de capsalera del master
+            	     tal:content="python: data['ua.nom_'+utils.cambiaPrefijo(lang_code)]">Titol de capsalera del master
             	</div>
            	</td> 
             
             <td class="imatgeCapcalera_m">
-                <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg; alt python: utils.recodifica(data['ua.nom_'+utils.cambiaPrefijo(lang_code)])"/>
+                <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg; alt python: data['ua.nom_'+utils.cambiaPrefijo(lang_code)]"/>
             </td>
         </tr>
     </tbody>

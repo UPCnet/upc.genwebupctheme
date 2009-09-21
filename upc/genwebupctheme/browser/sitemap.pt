@@ -37,7 +37,7 @@
    			<div>
 				<a class="state-published" 
 				   tal:attributes="href string:${pURL}/info-general"
-				   tal:content="python: view.recodifica(view.getTextMaster('info_gral',lang_code))"></a>
+				   tal:content="python: view.getTextMaster('info_gral',lang_code)"></a>
 			</div>
 	    
 		    <ul class="navTree navTreeLevel2">
@@ -47,7 +47,7 @@
 					<div>
 						<a class="state-published" 
 						   tal:attributes="href string:${pURL}/competencies"
-						   tal:content="python: view.recodifica(view.getTextMaster('competencies',lang_code))"></a>
+						   tal:content="python: view.getTextMaster('competencies',lang_code)"></a>
 					</div>
 				</li>
 
@@ -56,7 +56,7 @@
 			    <li tal:condition="python: data['upc_estudi.m_pla_estudis_'+view.cambiaPrefijo(lang_code)]"><div>
 					<a class="state-published" 
 					   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(view.getGWConfig().idestudiMaster)+'_p_'+view.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
-					   tal:content="python: view.recodifica(view.getTextMaster('pla_estudis',lang_code))"></a>
+					   tal:content="python: view.getTextMaster('pla_estudis',lang_code)"></a>
 				</div></li>
 				</tal:block>
 
@@ -64,26 +64,26 @@
 				<span tal:condition="python: records['acces_'+view.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+view.cambiaPrefijo(lang_code)]" tal:omit-tag="">
 				<li class="navTreeItem visualNoMarker"><div>
 				<a tal:attributes="href string:${pURL}/requisits"
-				   tal:content="python:view.recodifica(view.getTextMaster('com_accedir',lang_code))">Com accedir-hi </a></div></li></span>
+				   tal:content="python:view.getTextMaster('com_accedir',lang_code)">Com accedir-hi </a></div></li></span>
 
 				<!-- Preinscripcio -->
 		              <li class="navTreeItem visualNoMarker"><div>
 		              <a class="navItem2 visualIconPadding" target='newwindow'
 		                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/preinscripcio_'+view.cambiaPrefijo(lang_code)+'.php'"
-		                   tal:content="python: view.test(records['m_activar_preinscripcio']==1,view.recodifica(view.getTextMaster('preinscripcio_open',lang_code)),view.recodifica(view.getTextMaster('preinscripcio_close',lang_code)))">preinscripcio </a></div></li>
+		                   tal:content="python: view.test(records['m_activar_preinscripcio']==1,view.getTextMaster('preinscripcio_open',lang_code),view.getTextMaster('preinscripcio_close',lang_code))">preinscripcio </a></div></li>
 
 				<!-- Llista d'admesos -->
 		              <li tal:condition="python: records['m_llistat_admesos']=='pdf'" class="navTreeItem visualNoMarker"><div>
 		              <a class="navItem2 visualIconPadding" target='newwindow'
 		                   tal:condition="python: records['m_llistat_admesos']=='pdf'"
 		                   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+ str(view.getGWConfig().idestudiMaster) + '_l.pdf'" 
-		                   tal:content="python: view.recodifica(view.getTextMaster('llistat_admesos',lang_code))">llistat_admesos </a></div></li>
+		                   tal:content="python: view.getTextMaster('llistat_admesos',lang_code)">llistat_admesos </a></div></li>
 
 				<!-- Matricula -->
 		              <li class="navTreeItem visualNoMarker"><div>
 		              <a class="navItem2 visualIconPadding" target='newwindow'
 		                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/matricula_'+view.cambiaPrefijo(lang_code)+'.php'" 
-		                   tal:content="python: view.recodifica(view.getTextMaster('matricula',lang_code))">matricula </a></div></li>
+		                   tal:content="python: view.getTextMaster('matricula',lang_code)">matricula </a></div></li>
 
 		    </ul>
 		</li>

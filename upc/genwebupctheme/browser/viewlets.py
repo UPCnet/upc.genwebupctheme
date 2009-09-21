@@ -9,7 +9,7 @@ from cgi import escape
 from upc.genwebupctheme.browser import utils
 from Products.CMFCore.utils import getToolByName
 
-from upc.genwebupctheme.browser.master.information import IinfoGeneral, Icompetencies, Irequisits
+from upc.genwebupctheme.browser.master.information import IinfoGeneral, Icompetencies, Irequisits, Ipreinscripcio
 
 class DocumentActions(DocumentActionsViewlet):
 
@@ -33,6 +33,8 @@ class PathBarRoot(PathBarViewlet):
             self.render = ViewPageTemplateFile('bCompetencies.pt')
         elif Irequisits.providedBy(self.view):
             self.render = ViewPageTemplateFile('bRequisits.pt')
+        elif Ipreinscripcio.providedBy(self.view):
+            self.render = ViewPageTemplateFile('bPreinscripcio.pt')
         else:
             self.render = ViewPageTemplateFile('null.pt')
 

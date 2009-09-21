@@ -12,6 +12,9 @@ class Icompetencies(Interface):
 class Irequisits(Interface):
 	""" Marker interface """
 
+class Ipreinscripcio(Interface):
+	""" Marker interface """
+
 class infoGeneralView(BrowserView):
     implements(IinfoGeneral)
     __call__=ViewPageTemplateFile('info-general.pt')
@@ -23,3 +26,7 @@ class competenciesView(BrowserView):
 class requisitsView(BrowserView):
 	implements(Irequisits)
 	__call__=ViewPageTemplateFile('requisits.pt')
+
+class preinscripcioView(BrowserView):
+	implements(Ipreinscripcio)
+	__call__=ViewPageTemplateFile('preinscripcio.pt')

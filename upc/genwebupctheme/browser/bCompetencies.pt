@@ -7,7 +7,7 @@
     <a i18n:translate="tabs_home" tal:attributes="href view/navigation_root_url">Home</a>
    <span class="breadcrumbSeparator"> » </span>
   <span dir="ltr">
-    <span tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">competencies</span>
+    <span tal:content="python: utils.getTextMaster('competencies',lang_code)">competencies</span>
   </span>
 </div>
 

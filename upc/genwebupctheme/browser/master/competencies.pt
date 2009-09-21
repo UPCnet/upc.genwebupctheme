@@ -21,7 +21,7 @@
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-        		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('competencies',lang_code))">Competències</h1>
+        		<h1 class="documentFirstHeading" tal:content="python: utils.getTextMaster('competencies',lang_code)">Competències</h1>
 		
 
 				<div class="plain" tal:define="data python: utils.getMasterCompentencies(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
@@ -34,8 +34,8 @@
 				<!-- SORTIDES PROFESSIONALS -->
 				         <span tal:condition="python: data['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
 	                         <br /><br />
-	                         <div class="titular1" tal:content="python: utils.recodifica(utils.getTextMaster('sortides_professionals',lang_code))">sortides_professionals</div> 
-	                         <span tal:content="structure python: utils.recodifica(data['sortides_professionals_'+utils.cambiaPrefijo(lang_code)])">sortides</span>
+	                         <div class="titular1" tal:content="python: utils.getTextMaster('sortides_professionals',lang_code)">sortides_professionals</div> 
+	                         <span tal:content="structure python: data['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]">sortides</span>
 				         </span>
          				
 				</div>

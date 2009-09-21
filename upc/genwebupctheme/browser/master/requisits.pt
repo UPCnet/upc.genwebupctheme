@@ -21,12 +21,12 @@
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-        		<h1 class="documentFirstHeading" tal:content="python: utils.recodifica(utils.getTextMaster('com_accedir',lang_code))">Com accedir-hi</h1>
+        		<h1 class="documentFirstHeading" tal:content="python: utils.getTextMaster('com_accedir',lang_code)">Com accedir-hi</h1>
 		
 					<div class="plain" tal:define="data python: utils.getMasterRequisits(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster)">
 					
 					<!-- ACCES -->
-						<span tal:condition="python: utils.recodifica(data['acces_'+utils.cambiaPrefijo(lang_code)])" tal:omit-tag="">
+						<span tal:condition="python: data['acces_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
 					
 							<!-- en català -->
 			                    <span tal:condition="python:lang_code=='ca'" tal:omit-tag=""><b>Requisits generals</b><br />
@@ -42,14 +42,14 @@
 
                             <br /><br />
 
-                            <span tal:replace="structure python: utils.recodifica(data['acces_'+utils.cambiaPrefijo(lang_code)])">acces</span> 												
+                            <span tal:replace="structure python: data['acces_'+utils.cambiaPrefijo(lang_code)]">acces</span> 												
 						</span>
 
 					<!-- CRITERIS D'ADMISSIO -->
 						<span tal:condition="python: data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
 						<br /><br />
-	                        <div class="titular1" tal:content="python: utils.recodifica(utils.getTextMaster('criteris_admissio',lang_code))">criteris_admissio</div> 
-	                        <span tal:replace="structure python: utils.recodifica(data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)])">criteris</span>
+	                        <div class="titular1" tal:content="python: utils.getTextMaster('criteris_admissio',lang_code)">criteris_admissio</div> 
+	                        <span tal:replace="structure python: data['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]">criteris</span>
 						</span>
 
 					</div>

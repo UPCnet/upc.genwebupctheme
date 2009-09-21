@@ -138,15 +138,23 @@ class utilitats(BrowserView):
         return _dictResult
 
     def connectDatabase(self):
-        return MySQLdb.connect(host='raiden.upc.es',user='consulta',passwd='c0ns4lt4',db='www-estudis')
-    
+        return MySQLdb.connect(host='raiden.upc.es',user='cons-webupc',passwd='qstacll',db='www-webupc')
+        #return MySQLdb.connect(host='raiden.upc.es',user='consulta',passwd='c0ns4lt4',db='www-estudis')
+
+    def change2UTF(self,c):
+        c.execute('SET NAMES utf8;')
+        c.execute('SET CHARACTER SET utf8;')
+        c.execute('SET character_set_connection=utf8;')  
+        return c
+ 
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
 
     def verificaIdUnitat(self, id):
         try:
             db = self.connectDatabase()
-            c=db.cursor()     
+            c=db.cursor()   
+            c=self.change2UTF(c)  
             c.execute("""SELECT id_unitat FROM upc_unitat WHERE id_unitat = %s""", (id,))
             results = c.fetchone()
         except:
@@ -156,6 +164,7 @@ class utilitats(BrowserView):
     def verificaIdEnlace(self, id):
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
         results = c.fetchone()
         dictKeys = ('personal',)     
@@ -171,7 +180,8 @@ class utilitats(BrowserView):
             de acuerdo a un id.
         """      
         db = self.connectDatabase()
-        c=db.cursor()     
+        c=db.cursor()
+        c=self.change2UTF(c)
         c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
 
 
@@ -183,6 +193,7 @@ class utilitats(BrowserView):
     def getContacteDireccion(self, id): 
         db = self.connectDatabase()
         c=db.cursor()
+        c=self.change2UTF(c)
         c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,)) 
         try:
             results = c.fetchone()
@@ -204,6 +215,7 @@ class utilitats(BrowserView):
                     
         db = self.connectDatabase()
         c=db.cursor()  
+        c=self.change2UTF(c)
         c.execute("""SELECT cat,esp,ing FROM upc_textos WHERE id = %s""", (str,))
         results = c.fetchone()
 
@@ -220,7 +232,8 @@ class utilitats(BrowserView):
         
         db = self.connectDatabase()
         c=db.cursor()     
-        c.execute("""SELECT upc_titulacio.*, upc_estudi.*, orientacio_cat, orientacio_esp, orientacio_ing, up.nom_cat pNom_cat,up.nom_esp pNom_esp, up.nom_ing pNom_ing, unitat.nom_cat uNom_cat, unitat.nom_esp uNom_esp, unitat.nom_ing uNom_ing, unitat.sigles,m_destinataris_cat, m_destinataris_esp, m_destinataris_ing, m_criteris_adm_cat, m_criteris_adm_esp, m_criteris_adm_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing, m_professorat_cat, m_professorat_esp, m_professorat_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
+        c=self.change2UTF(c)
+        c.execute("""SELECT upc_titulacio.*,upc_estudi.*, orientacio_cat, orientacio_esp, orientacio_ing, up.nom_cat pNom_cat,up.nom_esp pNom_esp, up.nom_ing pNom_ing, unitat.nom_cat uNom_cat, unitat.nom_esp uNom_esp, unitat.nom_ing uNom_ing, unitat.sigles,m_destinataris_cat, m_destinataris_esp, m_destinataris_ing, m_criteris_adm_cat, m_criteris_adm_esp, m_criteris_adm_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing, m_professorat_cat, m_professorat_esp, m_professorat_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
         results = c.fetchone()
         dictKeys = ('id_titulacio',
                     'nom_cat',
@@ -242,10 +255,7 @@ class utilitats(BrowserView):
                     'id_cicle',                    
                     'es_master',                   
                     'id_tipus',                    
-                    'id_ambit',                    
-                    'm_nom_titulacio_cat',         
-                    'm_nom_titulacio_esp',         
-                    'm_nom_titulacio_ing', 
+                    'id_ambit',                 
                     'id_estudi',                
                     'id_presencialitat',        
                     'nom_abreujat_cat',         
@@ -296,7 +306,8 @@ class utilitats(BrowserView):
                     'beques_ing',               
                     'nota_pla_estudis_cat',     
                     'nota_pla_estudis_esp',     
-                    'nota_pla_estudis_ing',                        
+                    'nota_pla_estudis_ing', 
+                    'id_titulacio',
                     'orientacio_cat', 
                     'orientacio_esp', 
                     'orientacio_ing', 
@@ -322,11 +333,45 @@ class utilitats(BrowserView):
         
         return self.remapList2Dic(dictKeys,results)
 
+    def getMobilitatEstudis(self, id_titulacio):
+
+        db = self.connectDatabase()
+        c=db.cursor()
+        c=self.change2UTF(c)
+        c.execute("""SELECT m_movilitat_cat,m_movilitat_esp,m_movilitat_ing FROM upc_titulacio_plus WHERE id_titulacio=%s""", (id_titulacio,))
+
+        results = c.fetchone()
+        dictKeys = (
+                    'm_movilitat_cat',
+                    'm_movilitat_esp',
+                    'm_movilitat_ing',
+                    )
+
+        return self.remapList2Dic(dictKeys,results)
+
+    def getPreinscripcioData(self, id_estudi):
+ 
+        db = self.connectDatabase()
+        cond = True
+        c=db.cursor()
+        c=self.change2UTF(c)
+        c.execute("""SELECT m_web_preinscripcio FROM upc_estudi WHERE id_estudi=%s""", (id_estudi,))
+        results = c.fetchone()
+        dictKeys = (
+                    'm_web_preinscripcio',
+                    )
+        tmp = self.remapList2Dic(dictKeys,results)
+        if len(tmp['m_web_preinscripcio']) == 0:
+            url = 'http://www.upc.es/estudis-upc/masters-eees/preinscripcio_cat.php'
+            cond = False
+            return url
+        return cond
 
     def getMasterRequisits(self, id_titulacio, id_estudi):
         
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT acces_cat,acces_esp,acces_ing,m_criteris_adm_cat,m_criteris_adm_esp,m_criteris_adm_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
         results = c.fetchone()
         dictKeys = (    
@@ -343,7 +388,8 @@ class utilitats(BrowserView):
     def getMasterCompentencies(self, id_titulacio, id_estudi):
         
         db = self.connectDatabase()
-        c=db.cursor()     
+        c=db.cursor()    
+        c=self.change2UTF(c) 
         c.execute("""SELECT sortides_professionals_cat,sortides_professionals_cat,sortides_professionals_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
         results = c.fetchone()
         dictKeys = (    
@@ -361,6 +407,7 @@ class utilitats(BrowserView):
         
         db = self.connectDatabase()
         c=db.cursor()  
+        c=self.change2UTF(c)
         c.execute("""SELECT ui.nom_cat, ui.nom_esp, ui.nom_ing FROM upc_estudis_idioma uei, upc_idioma ui WHERE uei.id_estudi=%s AND uei.id_idioma=ui.id_idioma""", (id_estudi,))
         results = c.fetchall()
 
@@ -379,6 +426,7 @@ class utilitats(BrowserView):
 
         db = self.connectDatabase()
         c=db.cursor() 
+        c=self.change2UTF(c)
         c.execute("""SELECT DISTINCT uu.id_unitat, uu.nom_cat, uu.nom_esp, uu.nom_ing, uu.sigles, CASE WHEN sub.id=2 THEN 1 WHEN sub.id=1 THEN 2 ELSE 99 END orden_tipus FROM upc_on_simparteix uos,upc_unitat uu LEFT JOIN scp_unitat_basiques sub ON uu.id_unitat=sub.id_unitat WHERE uos.id_estudi=%s AND uos.id_unitat=uu.id_unitat ORDER BY uu.nom_cat""", (id_estudi,))
         results = c.fetchall()
 
@@ -396,6 +444,7 @@ class utilitats(BrowserView):
 
         db = self.connectDatabase()
         c=db.cursor() 
+        c=self.change2UTF(c)
         c.execute("""SELECT DISTINCT uu.id_unitat, uu.nom_cat, uu.nom_esp, uu.nom_ing , uu.sigles, CASE WHEN sut.id=2 AND sub.id=2 THEN 1 WHEN sut.id=2 AND sub.id=1 THEN 2 ELSE 99 END orden_tipus FROM upc_on_simparteix uos, upc_unitat uu LEFT JOIN scp_unitat_tipus sut ON uu.id_unitat=sut.id_unitat LEFT JOIN scp_unitat_basiques sub ON uu.id_unitat=sub.id_unitat WHERE uos.id_estudi=%s AND uos.id_unitat=uu.id_unitat ORDER BY orden_tipus, uu.nom_cat""", (id_estudi,))
         results = c.fetchall()
 
@@ -412,6 +461,7 @@ class utilitats(BrowserView):
 
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT sub.id FROM scp_unitat_basiques sub , scp_basiques sb WHERE sub.id_unitat=%s AND sub.id = sb.id""", (id_unitat,))
         results = c.fetchone()
         dictKeys = ('sub.id',)
@@ -422,6 +472,7 @@ class utilitats(BrowserView):
         
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT sut.id id, web FROM scp_unitat_tipus sut, upc_unitat uni WHERE sut.id_unitat=%s AND uni.id_unitat=%s""", (id_unitat,id_unitat,))
         results = c.fetchall()
         
@@ -438,6 +489,7 @@ class utilitats(BrowserView):
         
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT ua.nom_cat, ua.nom_esp, ua.nom_ing FROM upc_titulacio LEFT JOIN upc_ambits ua ON ua.id_ambit=upc_titulacio.id_ambit WHERE upc_titulacio.id_titulacio=%s""", (id_tit,))
         results = c.fetchone()
         dictKeys = ('ua.nom_cat', 
@@ -479,6 +531,7 @@ class utilitats(BrowserView):
 
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT uu.id_unitat, uu.nom_cat, uu.nom_esp, uu.nom_ing, uu.sigles FROM upc_unitat uu, upc_master_universitat umu WHERE umu.id_estudi=%s AND umu.id_unitat=uu.id_unitat""", (id_estudi,))
         results = c.fetchall()
         
@@ -510,6 +563,7 @@ class utilitats(BrowserView):
 
         db = self.connectDatabase()
         c=db.cursor()     
+        c=self.change2UTF(c)
         c.execute("""SELECT upc_estudi.m_pla_estudis_cat, upc_estudi.m_pla_estudis_esp, upc_estudi.m_pla_estudis_ing FROM upc_estudi WHERE upc_estudi.id_estudi=%s""", (id_estudi,))
         results = c.fetchone()
         dictKeys = ('upc_estudi.m_pla_estudis_cat', 
