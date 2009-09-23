@@ -81,16 +81,8 @@ class Renderer(base.Renderer):
 # NOTE: If this portlet does not have any configurable parameters, you can
 # inherit from NullAddForm and remove the form_fields variable.
 
-class AddForm(base.AddForm):
-    """Portlet add form.
+class AddForm(base.NullAddForm):
 
-    This is registered in configure.zcml. The form_fields variable tells
-    zope.formlib which fields to display. The create() method actually
-    constructs the assignment that is being added.
-    """
-    form_fields = form.Fields(IMastersPortlet)
-    label = _(u"Add masters portlet")
-    description = _(u"This portlet displays the nav masters.")
-
-    def create(self, data):
-        return Assignment(**data)
+    def create(self):
+        return Assignment()
+                                     
