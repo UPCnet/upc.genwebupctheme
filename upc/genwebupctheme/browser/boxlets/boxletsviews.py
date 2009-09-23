@@ -225,8 +225,14 @@ class noticies_actualitat(noticies):
         return self.utils.dia_semana(dia)
     
     def getRSS (self):
+
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+
+        url = 'http://www.upc.edu/saladepremsa/home-upc/RSS?set_language=' + idioma
+
         items = []
-        url = 'http://www.upc.edu/catala/RSS/actualitatUpc.php'
+        #url = 'http://www.upc.edu/catala/RSS/actualitatUpc.php'
         d = feedparser.parse(url)
         for item in d['items']:
             try:
