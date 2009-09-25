@@ -6,7 +6,7 @@
  <tbody>
 
   <tr class="daltMenu" tal:condition="not:esSeccio">
-    <tal:repeat tal:repeat="tab view/portal_tabs">
+    <tal:repeat tal:repeat="tab view/UnitatsPortal_tabs">
     <td class="daltMenu" tal:attributes="class python:path('repeat/tab/start') and 'daltMenu daltMenuPrimer' or 'daltMenu';
                                          width python:view.claseDaltUltim(path('repeat/tab/end'))">
      <a href="" 
@@ -18,7 +18,7 @@
   </tr>
 
   <tr class="daltMenu" tal:condition="esSeccio">
-    <tal:repeat tal:repeat="tab view/portal_tabs">
+    <tal:repeat tal:repeat="tab view/UnitatsPortal_tabs">
     <td class="daltMenu" tal:attributes="class python:view.claseDalt(view.selected_portal_tab==tab['id'],path('repeat/tab/start'));
                                          width python:view.claseDaltUltim(path('repeat/tab/end'))">
      <a href=""
@@ -30,7 +30,7 @@
   </tr>
 
   <tr tal:condition="not:esSeccio">
-    <td class="baixMenu" tal:repeat="tab view/portal_tabs">
+    <td class="baixMenu" tal:repeat="tab view/UnitatsPortal_tabs">
       <a href="" 
          tal:attributes="href tab/url;
                          title tab/description|nothing">
@@ -40,7 +40,7 @@
   </tr>
 
   <tr tal:condition="esSeccio">
-    <td class="baixMenu" tal:repeat="tab view/portal_tabs"
+    <td class="baixMenu" tal:repeat="tab view/UnitatsPortal_tabs"
                          tal:attributes="class python:view.selected_portal_tab==tab['id'] and 'baixMenu alphaCustom' or 'baixMenu alpha'">
       <a href="" 
          tal:attributes="href tab/url;
@@ -53,13 +53,13 @@
 
 
   <tr tal:condition="not:esSeccio">
-    <td class="descripcioMenu" tal:repeat="tab view/portal_tabs">
+    <td class="descripcioMenu" tal:repeat="tab view/UnitatsPortal_tabs">
       <tal:descripcio content="tab/description|nothing">Descripcio</tal:descripcio>
     </td>
   </tr>
   
   <tr tal:condition="esSeccio">
-    <td tal:repeat="tab view/portal_tabs"
+    <td tal:repeat="tab view/UnitatsPortal_tabs"
         tal:attributes="class python:view.selected_portal_tab==tab['id'] and 'seleccionatMenu alphaCustom' or 'actiuMenu'">
     </td>
   </tr>
