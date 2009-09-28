@@ -52,7 +52,7 @@
 		            <a href=""
 		                tal:attributes="title entry/summary | nothing;
 		                           href entry/url | nothing" target=newwindow>
-		                <span tal:replace="entry/summary | nothing">
+		                <span tal:replace="entry/title | nothing">
 		                Notícies RSS
 		                </span>
 		            </a>
