@@ -13,10 +13,17 @@
 		        <ul class="portletNavigationTree navTreeLevel0">
 		        
 				<li class="navTreeItem visualNoMarker" >
-				<div><a tal:attributes="class python: utils.test(url_actual=='info-general','navItem1 visualIconPadding navTreeCurrentItem','navItem1 visualIconPadding');
-		                                   href string:${pURL}/info-general"		                                  
-		                   tal:content="python: utils.getTextMaster('info_gral',lang_code)">InfoGeneral </a>
-
+				<div>
+                                   <a tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
+                                      tal:attributes="class python: utils.test(url_actual=='info-general','navItem1 visualIconPadding navTreeCurrentItem','navItem1 visualIconPadding');
+		                                      href string:${pURL}/info-general"		                                  
+		                      tal:content="python: utils.getTextMaster('info_gral_masters',lang_code)">InfoGeneral 
+                                   </a>
+                                   <a tal:condition="python: not utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
+                                      tal:attributes="class python: utils.test(url_actual=='info-general','navItem1 visualIconPadding navTreeCurrentItem','navItem1 visualIconPadding');
+		                                      href string:${pURL}/info-general"		                                  
+		                      tal:content="python: utils.getTextMaster('info_gral',lang_code)">InfoGeneral 
+                                   </a>
 				</div><div>
 				<ul tal:condition="python: url_actual=='info-general' or url_actual=='competencies' or url_actual=='requisits' or url_actual=='preinscripcio'" class="navTree navTreeLevel2">
 					<!-- Competencies -->

@@ -7,7 +7,8 @@
     <a i18n:translate="tabs_home" tal:attributes="href view/navigation_root_url">Home</a>
    <span class="breadcrumbSeparator"> » </span>
   <span dir="ltr">
-    <span tal:content="python: utils.getTextMaster('info_gral',lang_code)">information</span>
+    <span tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral_masters',lang_code)">information</span>
+    <span tal:condition="python: not utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral',lang_code)">information</span>
   </span>
 </div>
 

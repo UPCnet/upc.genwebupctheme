@@ -21,7 +21,8 @@
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-        		<h1 class="documentFirstHeading" tal:content="python: utils.getTextMaster('info_gral',lang_code)">Informació General</h1>
+        		<h1 class="documentFirstHeading" tal:condition="python: not utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral',lang_code)">Informació General</h1>
+        		<h1 class="documentFirstHeading" tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral_masters',lang_code)">Informació General</h1>
 		
 				<div class="plain" tal:define="data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
                                                mobilitat python: utils.getMobilitatEstudis(utils.getGWConfig().idtitulacioMaster)">
