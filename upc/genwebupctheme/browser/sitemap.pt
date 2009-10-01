@@ -36,8 +36,15 @@
 	    <li>    
    			<div>
 				<a class="state-published" 
+                                   tal:condition="python: view.getGWConfig().masterdoctorado==('Master i Doctorat')"
 				   tal:attributes="href string:${pURL}/info-general"
-				   tal:content="python: view.getTextMaster('info_gral',lang_code)"></a>
+				   tal:content="python: view.getTextMaster('info_gral_masters',lang_code)">
+                                </a>
+				<a class="state-published" 
+                                   tal:condition="python: not view.getGWConfig().masterdoctorado==('Master i Doctorat')"
+				   tal:attributes="href string:${pURL}/info-general"
+				   tal:content="python: view.getTextMaster('info_gral',lang_code)">
+                                </a>
 			</div>
 	    
 		    <ul class="navTree navTreeLevel2">
@@ -53,11 +60,13 @@
 
 				<!-- Pla estudis -->
 				<tal:block tal:define="data python: view.select_plaEstudis(view.getGWConfig().idestudiMaster)">
-			    <li tal:condition="python: data['upc_estudi.m_pla_estudis_'+view.cambiaPrefijo(lang_code)]"><div>
+			        <li tal:condition="python: data['upc_estudi.m_pla_estudis_'+view.cambiaPrefijo(lang_code)]">
+                                      <div>
 					<a class="state-published" 
 					   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(view.getGWConfig().idestudiMaster)+'_p_'+view.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
 					   tal:content="python: view.getTextMaster('pla_estudis',lang_code)"></a>
-				</div></li>
+				      </div>
+                                </li>
 				</tal:block>
 
 				<!-- Requisits d'accés -->
