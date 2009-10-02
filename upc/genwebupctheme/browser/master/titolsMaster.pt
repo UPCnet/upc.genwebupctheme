@@ -110,8 +110,10 @@
     		
     </div>                         
     <div class="logo_m">
-        <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya" title="Universitat Politècnica de Catalunya"  
-        tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
+        <a title="Universitat Politècnica de Catalunya" tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
+          <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya" title="Universitat Politècnica de Catalunya"  
+               tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
+        </a>
         <map title="Universitat Politècnica de Catalunya" name="logoUPCMaster" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya"/></map>
         <a title="Universitat Politècnica de Catalunya" tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
 		<span tal:condition="python: utils.getGWConfig().enllaslogotip">
