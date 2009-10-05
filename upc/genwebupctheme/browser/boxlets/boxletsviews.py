@@ -229,7 +229,7 @@ class noticies_actualitat(noticies):
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()
 
-        url = 'http://www.upc.edu/saladepremsa/home-upc/RSS?set_language=' + idioma
+        url = 'http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=' + idioma
 
         items = []
         #url = 'http://www.upc.edu/catala/RSS/actualitatUpc.php'
