@@ -29,7 +29,6 @@
                     <a href="" style="display: block;" tal:attributes="href image_brain/getURL">
                       <img tal:attributes="src image_brain/getURL;" width="100">
                     </a>
-                      <span class="discreet" tal:content="image_brain/Title"></span>
                 
             </tal:block>
           </fieldset>
