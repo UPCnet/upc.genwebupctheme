@@ -27,6 +27,7 @@ class IgenWebUtility(Interface):
     
 class IgenWebControlPanelSchemaGeneral(Interface):
 
+    tipusUnitats = zope.schema.Bool(title=_(u'Sabor Unitats - Permet afegir el contingut Secció'),required=False)
     columna1 = zope.schema.List(__name__='columna1', title=u"Columna 1",value_type=zope.schema.Choice(values=['Agenda', 'Noticies', 'Noticies_Actualitat']), default=[])
     columna2 = zope.schema.List(__name__='columna2', title=u"Columna 2",value_type=zope.schema.Choice(values=['Agenda_Calendari', 'Actualitat_Noticies','Actualitat','Noticies']), default=[])
     columna3 = zope.schema.List(__name__='columna3', title=u"Columna 3",value_type=zope.schema.Choice(values=['Agenda', 'Actualitat_Noticies','Banners', 'Enquesta','Actualitat','Noticies']), default=[])
@@ -80,7 +81,6 @@ class IgenWebControlPanel(IgenWebControlPanelSchemaGeneral, ISkinsSchema, IgenWe
     """ Marker interface de la unio del schema especific de genweb i el dels skins estandar
         de plone i segregat en la pestanya principal
     """  
-
 class IFormularioContact(Interface):
     """Define the fields of our form
     """

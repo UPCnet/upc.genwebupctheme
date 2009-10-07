@@ -22,6 +22,7 @@ from zope.schema.vocabulary import SimpleTerm
 from zope.schema.vocabulary import SimpleVocabulary
 
 from plone.fieldsets.fieldsets import FormFieldsets
+from upc.genwebupctheme.browser import utils
 
 from persistent import Persistent
 
@@ -44,6 +45,11 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         ptool = getToolByName(context, 'portal_properties')
         self.props = ptool.site_properties
         self.context = ptool.genwebupc_properties
+        self.ptypes = getToolByName(context, 'portal_types')
+        if utils.getGWConfig(self).tipusUnitats:
+             self.ptypes['Plone Site'].allowed_content_types = ['Document','File','Folder','Image','Seccio']
+        else:
+             self.ptypes['Plone Site'].allowed_content_types = ['Document','File','Folder','Image']
 
     def get_theme(self):
         return self.contextps.getDefaultSkin()
@@ -82,6 +88,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
     
     
     tipusintranet = ProxyFieldProperty(IgenWebControlPanel['tipusintranet'])
+    tipusUnitats = ProxyFieldProperty(IgenWebControlPanel['tipusUnitats'])
     tipusNeutre2 = ProxyFieldProperty(IgenWebControlPanel['tipusNeutre2'])
     titolcapsaleraMaster = ProxyFieldProperty(IgenWebControlPanel['titolcapsaleraMaster'])    
     idestudiMaster = ProxyFieldProperty(IgenWebControlPanel['idestudiMaster'])    

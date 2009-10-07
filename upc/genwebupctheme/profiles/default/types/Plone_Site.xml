@@ -17,7 +17,6 @@
     <element value="File"/>
     <element value="Folder"/>
     <element value="Image"/>
-    <element value="Seccio"/>
  </property>
  <property name="allow_discussion">False</property>
  <property name="default_view">homepage</property>
