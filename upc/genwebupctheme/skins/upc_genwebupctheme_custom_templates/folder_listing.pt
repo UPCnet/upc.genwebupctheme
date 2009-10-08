@@ -54,8 +54,7 @@
 
             <dl>
                 <tal:entry tal:repeat="item folderContents">
-                <tal:block tal:condition="not: item/exclude_from_nav"
-                           tal:define="item_url item/getURL|item/absolute_url;
+                <tal:block tal:define="item_url item/getURL|item/absolute_url;
                                        item_id item/getId|item/id;
                                        item_title_or_id item/pretty_title_or_id;
                                        item_description item/Description;
@@ -70,9 +69,8 @@
                                        item_creator item/Creator;
                                        item_start item/start/ISO|item/StartDate|nothing;
                                        item_end item/end/ISO|item/EndDate|nothing;
-                                       item_finestranova python: item.getObject().obrirfinestra;
+                                       item_finestranova python: item_type == 'Link' and item.getObject().obrirfinestra or False;
                                    ">
-
                     <dt metal:define-macro="listitem"
                         tal:attributes="class python:test(item_type in ['Event','Meeting'], 'vevent', '')"
 >
@@ -90,25 +88,28 @@
                         </span>
 
                         <span class=""
-                              tal:condition="python:item_type == 'Link'">
+                              tal:condition="python:item_type == 'Link' and item_finestranova">
                             <img tal:replace="structure item_icon/html_tag" />
                             <a href="#" target="_newwindow"
                                class="link-plain"
-                               tal:condition="item_finestranova"
                                tal:content="item_title_or_id"
                                tal:attributes="href item/getRemoteUrl;
                                                class string:${item_wf_state_class} link-plain">
                                 External Link
                             </a>
-                            <a href="#" 
+                        </span>
+
+                        <span class=""
+                              tal:condition="python:item_type == 'Link' and not item_finestranova">
+                            <img tal:replace="structure item_icon/html_tag" />
+                            <a href="#"
                                class="link-plain"
                                tal:content="item_title_or_id"
-                               tal:condition="not: item_finestranova"
                                tal:attributes="href item/getRemoteUrl;
                                                class string:${item_wf_state_class} link-plain">
                                 External Link
                             </a>
-                        </span> 
+                        </span>
 <!--
                         <span class="documentByLine">
 
