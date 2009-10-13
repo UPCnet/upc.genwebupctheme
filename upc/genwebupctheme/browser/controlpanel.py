@@ -46,7 +46,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
         self.props = ptool.site_properties
         self.context = ptool.genwebupc_properties
         self.ptypes = getToolByName(context, 'portal_types')
-        if utils.getGWConfig(self).tipusUnitats:
+        if utils.getGWConfig(self).allowContentSeccio:
              self.ptypes['Plone Site'].allowed_content_types = ['Document','File','Folder','Image','Seccio']
         else:
              self.ptypes['Plone Site'].allowed_content_types = ['Document','File','Folder','Image']
@@ -88,7 +88,7 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
     
     
     tipusintranet = ProxyFieldProperty(IgenWebControlPanel['tipusintranet'])
-    tipusUnitats = ProxyFieldProperty(IgenWebControlPanel['tipusUnitats'])
+    allowContentSeccio = ProxyFieldProperty(IgenWebControlPanel['allowContentSeccio'])
     tipusNeutre2 = ProxyFieldProperty(IgenWebControlPanel['tipusNeutre2'])
     titolcapsaleraMaster = ProxyFieldProperty(IgenWebControlPanel['titolcapsaleraMaster'])    
     idestudiMaster = ProxyFieldProperty(IgenWebControlPanel['idestudiMaster'])    
