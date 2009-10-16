@@ -62,12 +62,12 @@
            >Site action</a>
      </tal:block>
 
-    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Discreta'">
+    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
     <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
        tal:condition="here/portal_membership/isAnonymousUser"
-       tal:attributes="href string:${view/portal_url}/login_form" 
+       tal:attributes="href here/castle_login_url"
        i18n:domain="upc.genwebupc"
        i18n:translate="identificat"> 
        Identifica't

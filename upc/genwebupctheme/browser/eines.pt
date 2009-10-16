@@ -1,5 +1,7 @@
 <tal:block i18n:domain="plone">
 
+<!-- Eliminades les caixes de login pel CAS -->
+<!--
 <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
 <div class="validacio"
      tal:condition="view/show"> 
@@ -62,8 +64,9 @@
     </div>
     
 </div>
-</tal:identificacio>
 
+</tal:identificacio>
+-->
 <!--  PERSONAL BAR  -->
 <div id="portal-personaltools-wrapper"
      tal:condition="not:view/show"
@@ -131,7 +134,7 @@
     </span>
     <a  
     i18n:translate="genweb-logout"
-    tal:attributes="href string:${view/portal_url}/logout">
+    tal:attributes="href string:${view/portal_url}/cas_logout">
     Log out</a>
    </span>
 </li>
