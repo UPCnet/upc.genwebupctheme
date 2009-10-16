@@ -39,6 +39,7 @@
     <property name="contacteid" type="string" purge="False">200</property>
     <property name="contactegmaps" type="string" purge="False">&lt;iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/?ie=UTF8&amp;s=AARTsJqzARj-Z8VnW5pkPMLMmZbqrJcYpw&amp;ll=41.390075,2.115383&amp;spn=0.007727,0.013733&amp;z=16&amp;output=embed"&gt;&lt;/iframe&gt;</property>
     <property name="boolmaps" type="boolean" purge="False">True</property>    
+    <property name="allowContentSeccio" type="boolean">False</property>    
     <property name="codigoogle" type="string" purge="False">0</property>   
     
     <property name="tipusintranet" type="string" purge="False">Visible</property>
