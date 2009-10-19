@@ -67,7 +67,7 @@
         tal:condition="here/portal_membership/isAnonymousUser"/>
     <a href=""
        tal:condition="here/portal_membership/isAnonymousUser"
-       tal:attributes="href here/castle_login_url"
+       tal:attributes="href here/cas_login_url"
        i18n:domain="upc.genwebupc"
        i18n:translate="identificat"> 
        Identifica't

@@ -473,11 +473,4 @@
       permission="zope2.View"
       />      
 
-    <browser:page
-        for="*"
-        name="cas_logout"
-        class=".cas.Logout"
-        permission="zope2.Public"
-        />      
-
 </configure>
