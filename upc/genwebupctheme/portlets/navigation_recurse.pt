@@ -17,7 +17,7 @@
                 li_class        python:is_current and ' navTreeCurrentNode' or '';
                 li_extr_class   python:is_in_path and ' navTreeItemInPath' or '';
                 li_folder_class python:show_children and ' navTreeFolderish' or '';
-                item_finestra   python: node['portal_type'] == 'Link' and node['item'].getObject().obrirfinestra or False"
+                item_finestra   python: node['portal_type'] == 'Link' and getattr(node['item'].getObject(),'obrirfinestra','') or False"
     tal:attributes="class string:navTreeItem visualNoMarker${li_class}${li_extr_class}${li_folder_class}"
     tal:condition="python:bottomLevel &lt;= 0 or level &lt;= bottomLevel">
 
