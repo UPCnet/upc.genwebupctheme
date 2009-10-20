@@ -69,7 +69,7 @@
                                        item_creator item/Creator;
                                        item_start item/start/ISO|item/StartDate|nothing;
                                        item_end item/end/ISO|item/EndDate|nothing;
-                                       item_finestranova python: item_type == 'Link' and item.getObject().obrirfinestra or False;
+                                       item_finestranova python: item_type == 'Link' and getattr(item.getObject(),'obrirfinestra','') or False;
                                    ">
                     <dt metal:define-macro="listitem"
                         tal:attributes="class python:test(item_type in ['Event','Meeting'], 'vevent', '')"
