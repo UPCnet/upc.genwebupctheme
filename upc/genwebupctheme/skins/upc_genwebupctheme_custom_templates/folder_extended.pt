@@ -69,6 +69,7 @@
                                        item_creator item/Creator;
                                        item_start item/start/ISO|item/StartDate|nothing;
                                        item_end item/end/ISO|item/EndDate|nothing;
+                                       item_finestranova python: item_type == 'Link' and getattr(item.getObject(),'obrirfinestra','') or False;
                                    ">
 
                     <dt metal:define-macro="listitem"
@@ -88,9 +89,22 @@
 
                         <span class=""
                               tal:attributes="class string:$item_type_class"
-                              tal:condition="python:item_type == 'Link'">
-                                   
+                              tal:condition="python:item_type != 'Link'">
+
                             <a href="#"
+                               class="link-plain"
+                               tal:content="item_title_or_id"
+                               tal:attributes="href item/getRemoteUrl;
+                                               class string:${item_wf_state_class} link-plain">
+                                External Link
+                            </a>
+                        </span>
+
+                        <span class=""
+                              tal:attributes="class string:$item_type_class"
+                              tal:condition="python:item_type == 'Link' and item_finestranova">
+                                   
+                            <a href="#" target="_newwindow"
                                class="link-plain"
                                tal:content="item_title_or_id"
                                tal:attributes="href item/getRemoteUrl;
