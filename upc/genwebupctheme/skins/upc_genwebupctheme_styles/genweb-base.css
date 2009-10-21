@@ -259,10 +259,10 @@ h3 {
 h2{
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
-	font-size:1.25em;
+	font-size:1.5em;
 	margin-top:25px;
 	padding-bottom:10px;
-	padding-top:10px;}
+	padding-top:5px;}
 h1 {
 	font-size:1.65em;
 	margin:0;
@@ -866,12 +866,13 @@ iframe.kupu-editor-iframe:active {
 	width:100.9%;}
 #login-form {
 	width:500px;}
+#login-form p {margin-bottom:5px;}
 #login_form {
 	margin:20px auto;}
 #forgotten-password{
 	border-left:3px solid #ff6600;
 	padding: 0px 0px 0px 10px;
-	margin:5px 0px 0px 0px;}
+	margin:25px 0px 0px 0px;}
 #forgotten-password h3{
 	color: #c00;
 	font-size: 1.65em;

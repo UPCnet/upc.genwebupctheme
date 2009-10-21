@@ -36,14 +36,12 @@ form{ margin: 0; }
 	background: url(../img/custom/fletxaD.gif) no-repeat 0 7px;
 	*background: url(../img/custom/fletxaD.gif) no-repeat 0 9px;
 	border-top: 2px dotted #DFE3D3; 
-	font-size:1.3em}
+	font-size:1.4em}
 .titular2, #content h5, #collage h5{
-	font-size: 1.1em;
 	margin-bottom: 0.5em;
 	margin-top: 0.75em;
-	font-size:1.3em}
+	font-size:1.25em}
 .titular3, #content h6, #collage h6{
-	font-size: 1.05em;
 	margin-bottom: 0.5em;
 	margin-top: 1em;
 	font-size:1.1em}
