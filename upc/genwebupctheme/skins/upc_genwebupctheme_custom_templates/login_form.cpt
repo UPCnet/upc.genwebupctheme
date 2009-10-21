@@ -99,7 +99,7 @@ If you do not have an account here, head over to the
            i18n:translate="genweb-single-sign-on">
            Single sign on 
            <span i18n:name="genweb-log-in-title">
-                    <a tal:attributes="href here/cas_login_url"
+                    <a tal:attributes="href here/cas_loginform_url"
                        i18n:domain="upc.genwebupc"
                        i18n:translate="genweb-log-in">log in</a></span>.         
         </p>
