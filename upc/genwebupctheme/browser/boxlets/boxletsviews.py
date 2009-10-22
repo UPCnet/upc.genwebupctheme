@@ -245,7 +245,7 @@ class noticies_actualitat(noticies):
             except AttributeError:
                 continue
             items.append(itemdict)
-        return items
+        return items[:5]
 
 class noticies_actualitat_petit(noticies_actualitat):
     _template = ViewPageTemplateFile('actualitat_noticies_petit.pt')
