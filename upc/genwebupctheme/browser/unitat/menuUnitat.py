@@ -42,15 +42,19 @@ class GlobalSections(GlobalSectionsViewlet):
                                         name=u'plone_context_state')
         
         path = urltool.getPortalPath()        
-        folders = portal_catalog.searchResults(portal_type = 'Seccio',                                                                                       
+        folders = portal_catalog.searchResults(portal_type = ['Seccio', 'Folder'],                                                                                       
                                                path = dict(query=path, depth=1),     
-                                               review_state=['internally_published','external','published'],
+                                               review_state=['internally_published','external','published','intranet'],
                                                sort_on='getObjPositionInParent')           
         
         results = []
         for fold in folders:  
+            if fold.portal_type == 'Seccio':
+                name_t = fold.getObject().getText
+            if fold.portal_type == 'Folder':
+                name_t = fold.Title
             if fold.exclude_from_nav == False:                  
-                results.append(dict(name = fold.getObject().getText,
+                results.append(dict(name = name_t,
                                     url = fold.getURL(),
                                     id = fold.getId,
                                     description = fold.Description
