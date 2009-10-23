@@ -130,7 +130,6 @@
 					            <td tal:content="python: mobilitat['m_movilitat_'+utils.cambiaPrefijo(lang_code)]">recerca</td> 
 					        </tr>		
 
-
 					<!-- SEPARACIO -->
 					        <tr>
 					            <td class="separadorH" colspan="2"></td>
@@ -141,10 +140,12 @@
 					        
 					<!-- NOM TITULACIO -->
 					
+<!--
 					        <tr tal:condition="python: data['nom_'+utils.cambiaPrefijo(lang_code)]">
 					            <td>&nbsp;</td>
 					            <td tal:content="python: data['nom_'+utils.cambiaPrefijo(lang_code)]" class="titular2">titulacio</td>
 					        </tr>
+-->
 
 					<!-- UNIVERSITATS PARTICIPANTS -->
 					
@@ -184,11 +185,12 @@
 					        </tr>
 	
 					<!-- MOBILITAT -->
-					
+<!--					
 					        <tr tal:condition="python: data['nom_'+utils.cambiaPrefijo(lang_code)]">
 					            <td class="titular2" tal:content="python: utils.getTextMaster('mobilitat',lang_code)">mobilitat</td>
 					            <td tal:content="python: data['nom_'+utils.cambiaPrefijo(lang_code)] ">mobilitat</td>
 					        </tr>
+-->
 
 					<!-- DESTINATARIS -->
 					
