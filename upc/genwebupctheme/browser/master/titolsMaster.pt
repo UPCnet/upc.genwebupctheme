@@ -110,7 +110,7 @@
     		
     </div>                         
     <div class="logo_m">
-        <a title="Universitat Politècnica de Catalunya" tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
+        <a title="Universitat Politècnica de Catalunya" tal:attributes="href string: http://www.upc.edu" target="newwindow">
           <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya" title="Universitat Politècnica de Catalunya"  
                tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
         </a>
