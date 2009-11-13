@@ -58,7 +58,7 @@
 
 					<!-- Preinscripcio (existe url)-->
 			              <li class="navTreeItem visualNoMarker" tal:define="tmp preinscripcion_data/condicion" tal:condition="tmp"><div>
-			              <a class="navItem2 visualIconPadding" target='newwindow'
+			              <a class="navItem2 visualIconPadding"
 			                   tal:attributes="href string:${pURL}/preinscripcio"
 			                   tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.getTextMaster('preinscripcio_open',lang_code),utils.getTextMaster('preinscripcio',lang_code))">preinscripcio </a></div></li>
 

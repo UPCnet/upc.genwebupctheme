@@ -364,7 +364,7 @@ class utilitats(BrowserView):
         condicion =  True 
 
         if len(tmp['m_web_preinscripcio']) == 0:
-            url = 'http://www.upc.es/estudis-upc/masters-eees/preinscripcio_cat.php'
+            url = 'http://www.upc.es/estudis-upc/masters-eees/preinscripcio_' + self.cambiaPrefijo(self.pref_lang()) + '.php'
             condicion = False
             return dict(preinscripcio = url, condicion = condicion)
         else:

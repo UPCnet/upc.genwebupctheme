@@ -234,12 +234,12 @@
 					        </tr>
 
 					<!-- CONTACTE -->
-					
+					<!--
 					        <tr tal:condition="python: data['m_web']">
 					            <td class="titular2">Web</td>
 					            <td><a tal:attributes="href python: data['m_web']" target="newwindow" tal:content="python: data['m_web']">www.upc.edu</a></td>
 					        </tr>
-					
+					-->
 					        <tr tal:condition="python: data['m_email']">
 					            <td class="titular2" tal:content="python: utils.getTextMaster('a_e',lang_code)">a_e</td>
 					            <td>
