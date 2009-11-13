@@ -118,7 +118,7 @@
 		&lt;/Style&gt;</property>
     <property name="fck_toolbar" type="string">Custom</property>
     <property name="fck_custom_toolbar" type="text">[
-    ['Source','DocProps','-','Save','Preview','-','Templates'],
+    ['FitWindow','Source','DocProps','-','Save','Preview','-','Templates'],
     
 ['Cut','Copy','Paste','PasteText','PasteWord','-','Print','rtSpellCheck'],
     ['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
@@ -130,7 +130,7 @@
     
 ['Image','Flash','Table','SpecialChar','UniversalKey','Smiley'],
     ['Style'],
-    ['FitWindow','-','About']
+    ['-','About']
    ]</property>    
  </object> 
  
