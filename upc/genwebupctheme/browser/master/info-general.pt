@@ -179,7 +179,7 @@
 
 					<!-- UNIVERSITAT COORDINADORA -->
 					
-					        <tr tal:condition="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)]">
+					        <tr tal:condition="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)] and data['unitat.sigles']">
 					            <td class="titular2" tal:content="python: utils.getTextMaster('universitat_coordinadora',lang_code)">universitat_coordinadora</td>
 					            <td tal:content="python: data['unitat.nom_'+utils.cambiaPrefijo(lang_code)+' '+'uNom_'+utils.cambiaPrefijo(lang_code)]  + ' ('+data['unitat.sigles']+')'">UPC</td>
 					        </tr>
