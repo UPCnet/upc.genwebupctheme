@@ -279,6 +279,7 @@ class utilitats(BrowserView):
                     'm_data_inici_esp',         
                     'm_data_inici_ing',         
                     'm_web',                    
+                    'm_genweb',
                     'm_web_preinscripcio',      
                     'paraules_clau',            
                     'cfis',                     
