@@ -25,6 +25,7 @@
                     <a href="" style="display: block;" tal:attributes="href first_image/getURL">
                       <img tal:attributes="src first_image/getURL;" width="100">
                     </a>
+                    <div class="discreet" tal:content="first_image/Title"></div>
               </div>
 
 
@@ -38,7 +39,7 @@
                     <a href="" style="display: block;" tal:attributes="href image_brain/getURL">
                       <img tal:attributes="src image_brain/getURL;" width="100">
                     </a>
-                
+                    <div class="discreet" tal:content="image_brain/Title"></div>                
             </tal:block>
           </fieldset>
             
