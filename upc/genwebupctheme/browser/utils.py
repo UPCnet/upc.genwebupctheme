@@ -363,9 +363,16 @@ class utilitats(BrowserView):
                     )
         tmp = self.remapList2Dic(dictKeys,results)
         condicion =  True 
+        idioma = self.pref_lang()
 
         if len(tmp['m_web_preinscripcio']) == 0:
-            url = 'http://www.upc.es/estudis-upc/masters-eees/preinscripcio_' + self.cambiaPrefijo(self.pref_lang()) + '.php'
+            if idioma == 'ca':
+                url = 'http://www.upc.edu/aprendre/estudis/acces/masters_universitaris_quecalfer#preinscripcio_mu'
+            elif idioma == 'es':
+                url = 'http://www.upc.edu/aprender/estudios/acceso/masters-universitarios-queserequiere#preinscripcion_mu'
+            elif idioma == 'en':
+                url = 'http://www.upc.edu/master/preinscripcio_ing.php'                
+            
             condicion = False
             return dict(preinscripcio = url, condicion = condicion)
         else:
@@ -529,7 +536,7 @@ class utilitats(BrowserView):
                 urltemp='15x'
   
         idioma = self.cambiaPrefijo(lang)
-        return 'http://www.upc.edu/unitats/fitxa_unitat.php?id_unitat=' + str(id_unitat) + '&tip=' + urltemp + '&lang=' + idioma
+        return 'http://www.upc.edu/unitat/fitxa_unitat.php?id_unitat=' + str(id_unitat) + '&tip=' + urltemp + '&lang=' + idioma
 
     def select_participants(self, id_estudi):
 

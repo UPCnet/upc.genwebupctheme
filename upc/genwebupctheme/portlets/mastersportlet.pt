@@ -72,9 +72,17 @@
 
 					<!-- Matricula -->
 			              <li class="navTreeItem visualNoMarker"><div>
-			              <a class="navItem2 visualIconPadding" target='newwindow'
-			                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/matricula_'+utils.cambiaPrefijo(lang_code)+'.php'" 
-			                   tal:content="python: utils.getTextMaster('matricula',lang_code)">matricula </a></div></li>
+			            
+						  <a tal:condition="python: lang_code == 'ca'" class="navItem2 visualIconPadding" target='newwindow'
+							  href="http://www.upc.edu/aprendre/estudis/acces/masters_universitaris_quecalfer#matricula_mu" tal:content="python: utils.getTextMaster('matricula',lang_code)"> Matrícula </a> 
+
+      					  <a tal:condition="python: lang_code == 'es'" class="navItem2 visualIconPadding" target='newwindow'
+							  href="http://www.upc.edu/aprender/estudios/acceso/masters-universitarios-queserequiere#matricula_mu" tal:content="python: utils.getTextMaster('matricula',lang_code)"> Matrícula </a>
+      								
+      					  <a tal:condition="python: lang_code == 'en'" class="navItem2 visualIconPadding" target='newwindow'
+      						  href="http://www.upc.edu/master/matricula_ing.php" tal:content="python: utils.getTextMaster('matricula',lang_code)"> Registration </a>
+    			              			              
+    			          </div></li>
 				</ul></div></li>
 		        </ul>
 		        <!--<span class="portletBottomLeft"></span>
