@@ -1,0 +1,54 @@
+<div class="portlet portletCollection"
+    i18n:domain="plone"
+    tal:define="collection_url view/collection_url;
+                plone_view context/@@plone;
+                toLocalizedTime nocall:plone_view/toLocalizedTime;
+                getIcon nocall:plone_view/getIcon;">
+ 
+ <div class="portlet200"> </div>
+ <div class="caixaPortlet">
+
+   <h6 class="titolPortlet">
+     <span class="icoRSS">
+       <a href=""
+          tal:attributes="href python:view.collection_url() + '/RSS'">RSS
+          <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+       </a>
+     </span>
+     <a tal:attributes="href collection_url" tal:omit-tag="not:view/data/show_more">
+         <span tal:content="view/data/header" />
+     </a>
+   </h6>
+   
+  <tal:results>
+    <ul>
+      <li tal:repeat="obj view/results">
+        <a href="#"
+           class="tile"
+           tal:define="item_icon python:getIcon(obj);"
+           tal:attributes="href obj/getURL;
+                           title obj/Description">
+            <img tal:replace="structure item_icon/html_tag" />
+            <span tal:replace="obj/pretty_title_or_id">
+             Title
+            </span>
+            <span class="portletItemDetails"
+                  tal:condition="view/data/show_dates"
+                  tal:content="python:toLocalizedTime(obj.Date)">
+                Date
+            </span>
+        </a>
+      </li>
+    </ul>
+  </tal:results>
+
+  <div class="portletPlus" tal:condition="view/data/show_more">  
+      <a href="#"><img src="plus.gif" alt="+"/></a> 
+      <a tal:attributes="href collection_url" i18n:translate="more_url">
+         More&hellip;
+      </a>
+  </div>
+
+ </div>
+ <div class="baix200"> </div>
+</div>

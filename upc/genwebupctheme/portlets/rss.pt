@@ -1,0 +1,42 @@
+<div class="portlet portletRss"
+     i18n:domain="plone"
+     tal:condition="view/enabled">
+
+ <div class="portlet200"> </div>
+ <div class="caixaPortlet">
+   <h6 class="titolPortlet">
+     <span class="icoRSS">
+       <a href=""
+          tal:attributes="href view/url">RSS
+          <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+       </a>
+     </span>
+     <a href=""
+           tal:attributes="href view/siteurl"
+           tal:content="view/title"
+           class="tile">
+            Tags
+     </a>
+   </h6>
+ 
+   <tal:rss tal:condition="view/feedAvailable"
+                tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+        <ul>
+          <li tal:repeat="item view/items">
+            <a href="#"
+                tal:attributes="href string:${item/url}"
+                class="tile">
+                <span tal:replace="item/title">
+                    Title
+                </span>
+                <span class="portletItemDetails" 
+                      tal:condition="exists:item/updated">
+                      <span tal:omit-tag="" tal:content="python:toLocalizedTime(item['updated'])">19.02.2007</span>
+                </span>
+            </a>
+          </li>
+        </ul>
+   </tal:rss>
+  </div>
+  <div class="baix200"> </div>
+</div>
