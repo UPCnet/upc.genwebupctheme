@@ -15,7 +15,7 @@
                                 src string:${portal_url}/logo_masters_ca.gif" />
  		<!--</a>-->
 			<map name="MapaMastersCA" id="MapaMastersCA" title="Màsters Universitaris">
-            	<area shape="poly" coords="77,25,75,33,58,33,58,43,169,43,168,19,75,19" href="http://mastersuniversitaris.upc.edu" target="newwindow" alt="Màsters Universitaris" title="Màsters Universitaris" />
+            	<area shape="poly" coords="77,25,75,33,58,33,58,43,169,43,168,19,75,19" href="http://mastersuniversitaris.upc.edu" target="_blank" alt="Màsters Universitaris" title="Màsters Universitaris" />
     		</map> 
         <!-- titol en castella -->
         <!--<a href="" tal:attributes="href python: 'http://mastersuniversitarios.upc.edu'">-->
@@ -25,7 +25,7 @@
                                 src string:${portal_url}/logo_masters_es.gif" />
 		<!--</a>-->       
 			<map name="MapaMastersES" id="MapaMastersES" title="Másters Universitarios">
-            	<area shape="poly" coords="75,20,75,35,51,35,51,43,169,43,169,20" href="http://mastersuniversitarios.upc.edu" target="newwindow" alt="Másters Universitarios" title="Másters Universitarios" />
+            	<area shape="poly" coords="75,20,75,35,51,35,51,43,169,43,169,20" href="http://mastersuniversitarios.upc.edu" target="_blank" alt="Másters Universitarios" title="Másters Universitarios" />
     		</map>                          
         <!-- titol en angles -->
         <!--<a href="" tal:attributes="href python: 'http://mastersdegrees.upc.edu'">-->
@@ -35,7 +35,7 @@
                                 src string:${portal_url}/logo_masters_en.gif" />
 		<!--</a>-->                                
 			<map name="MapaMastersEN" id="MapaMastersEN" title="Master's Degrees">
-            	<area shape="poly" coords="80,43,169,43,169,20,73,20,73,31,81,31,80,44" href="http://mastersdegrees.upc.edu" target="newwindow" alt="Master's Degrees" title="Master's Degrees" />
+            	<area shape="poly" coords="80,43,169,43,169,20,73,20,73,31,81,31,80,44" href="http://mastersdegrees.upc.edu" target="_blank" alt="Master's Degrees" title="Master's Degrees" />
     		</map>              
 		
 	</span>    		
@@ -50,7 +50,7 @@
                                 src string:${portal_url}/logo_doctorat_ca.gif" />
  		<!--</a>-->
 		<map name="MapaDoctoratCA" id="MapaDoctoratCA" title="Doctorat">
-            	<area shape="poly" coords="72,26,71,37,138,37,142,46,155,48,166,41,169,26,161,16,145,17,135,26" href="http://doctorat.upc.edu/index.php?id=1" target="newwindow" alt="Doctorado" title="Doctorat" />
+            	<area shape="poly" coords="72,26,71,37,138,37,142,46,155,48,166,41,169,26,161,16,145,17,135,26" href="http://doctorat.upc.edu/index.php?id=1" target="_blank" alt="Doctorado" title="Doctorat" />
     		</map> 
         <!-- titol en castella -->
         <!--<a href="" tal:attributes="href python: 'http://doctorado.upc.edu'">-->
@@ -60,7 +60,7 @@
                                 src string:${portal_url}/logo_doctorat_es.gif" />
 		<!--</a>-->    
 		<map name="MapaDoctoratES" id="MapaDoctoratES" title="Doctorado">
-            	<area shape="poly" coords="80,43,169,43,169,20,73,20,73,31,81,31,80,44" href="http://doctorat.upc.edu/index.php?id=2" target="newwindow" alt="Doctorado" title="Doctorado" />
+            	<area shape="poly" coords="80,43,169,43,169,20,73,20,73,31,81,31,80,44" href="http://doctorat.upc.edu/index.php?id=2" target="_blank" alt="Doctorado" title="Doctorado" />
     		</map>                              
         <!-- titol en angles -->
         <!--<a href="" tal:attributes="href python: 'http://doctorate.upc.edu'">-->
@@ -70,7 +70,7 @@
                                 src string:${portal_url}/logo_doctorat_en.gif" />
 		<!--</a>-->                                
 		<map name="MapaDoctoratEN" id="MapaDoctoratEN" title="Doctorate">
-            	<area shape="poly" coords="155,48,167,39,166,25,159,18,144,18,136,26,64,26,63,36,136,37,143,46,159,47" href="http://doctorat.upc.edu/index.php?id=3" target="newwindow" alt="Doctorate" title="Doctorate" />
+            	<area shape="poly" coords="155,48,167,39,166,25,159,18,144,18,136,26,64,26,63,36,136,37,143,46,159,47" href="http://doctorat.upc.edu/index.php?id=3" target="_blank" alt="Doctorate" title="Doctorate" />
     		</map>              
 		
 	</span>  
@@ -84,7 +84,7 @@
 	                        src string:${portal_url}/logo_masters_doctorat_ca.gif" />                      
 		<map name="MapaMDCA" id="MapaMDCA" title="Màsters Universitaris i Doctorat">
 		<area shape="poly" coords="155,63,167,54,166,40,159,33,144,33,136,41,70,41,70,52,136,52,143,61,159,62" href="http://doctorat.upc.edu/index.php?id=1" target="newwindow" alt="Doctorat" title="Doctorat" />
-		<area shape="poly" coords="57,16,56,27,169,27,169,9,168,4,76,4,76,16"  href="http://mastersuniversitaris.upc.edu" target="newwindow" alt="Màsters Universitaris" title="Màsters Universitaris" />
+		<area shape="poly" coords="57,16,56,27,169,27,169,9,168,4,76,4,76,16"  href="http://mastersuniversitaris.upc.edu" target="_blank" alt="Màsters Universitaris" title="Màsters Universitaris" />
 		</map>
         <!-- titol en castella -->
         <img title="Màsters Universitaris i Doctorat" alt="Másters Universitarios y Doctorado" width="172" height="65" border="0" usemap="#MapaMDES"
@@ -102,7 +102,7 @@
                             src string:${portal_url}/logo_masters_doctorat_en.gif" />
 		<map name="MapaMDEN" id="MapaMDEN" title="Master's Degrees and Doctorate">
 		<area shape="poly" coords="155,63,167,54,166,40,159,33,144,33,136,41,64,41,65,52,136,52,143,61,159,62" href="http://doctorat.upc.edu/index.php?id=3" target="newwindow" title="Doctorate" alt="Doctorate" />
-		<area shape="poly" coords="58,16,56,27,169,27,169,9,168,4,72,4,73,16" href="http://mastersdegrees.upc.edu" target="newwindow" title="Master's Degrees" alt="Master's Degrees" />
+		<area shape="poly" coords="58,16,56,27,169,27,169,9,168,4,72,4,73,16" href="http://mastersdegrees.upc.edu" target="_blank" title="Master's Degrees" alt="Master's Degrees" />
 		</map>
                                                            
 	
@@ -110,12 +110,12 @@
     		
     </div>                         
     <div class="logo_m">
-        <a title="Universitat Politècnica de Catalunya" tal:attributes="href string: http://www.upc.edu" target="newwindow">
-          <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya" title="Universitat Politècnica de Catalunya"  
+        <a title="Universitat Politècnica de Catalunya. BarcelonaTech" tal:attributes="href string: http://www.upc.edu" target="_blank">
+          <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya. BarcelonaTech" title="Universitat Politècnica de Catalunya. BarcelonaTech"  
                tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
         </a>
-        <map title="Universitat Politècnica de Catalunya" name="logoUPCMaster" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya"/></map>
-        <a title="Universitat Politècnica de Catalunya" tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="newwindow">
+        <map title="Universitat Politècnica de Catalunya. BarcelonaTech" name="logoUPCMaster" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya. BarcelonaTech"/></map>
+        <a title="Universitat Politècnica de Catalunya. BarcelonaTech" tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
 		<span tal:condition="python: utils.getGWConfig().enllaslogotip">
             <!-- titol en catala -->
             <img 

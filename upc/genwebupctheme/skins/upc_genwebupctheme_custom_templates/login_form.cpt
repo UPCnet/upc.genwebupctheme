@@ -94,14 +94,16 @@ If you do not have an account here, head over to the
             
         </div>
 
-        <!-- Enllac cap el CAS -->
-        <p i18n:domain="upc.genwebupc" 
+
+
+    	        <!-- Enllac cap el CAS -->
+        <p  class="iuu" i18n:domain="upc.genwebupc" 
            i18n:translate="genweb-single-sign-on">
-           Single sign on 
+           Single sign on  
            <span i18n:name="genweb-log-in-title">
                     <a tal:attributes="href here/cas_loginform_url"
                        i18n:domain="upc.genwebupc"
-                       i18n:translate="genweb-log-in">log in</a></span>.         
+                       i18n:translate="genweb-log-in">log in</a><br /><br /></span>.         
         </p>
         
         <input type="hidden"
@@ -115,9 +117,18 @@ If you do not have an account here, head over to the
         <input type="hidden" name="login_name" id="login_name" value="" />
         <input type="hidden" name="pwd_empty" id="pwd_empty" value="0" />
 
+
+<div>
+      <dl id="history" class="collapsible inline collapsedOnLoad" >
+        <dt class="collapsibleHeader"><span class="iuu iul"  i18n:domain="upc.genwebupc" i18n:translate="genweb_loginlocal">Log in only in this site</span></dt>
+        <dd class="collapsibleContent">
+<div class="imgEsquerra">
+
+
+<!-- oculto form provisionalment -->
         <div class="field"
              tal:define="error python:errors.get(ac_name, None);"
-             tal:attributes="class python:test(error, 'field error', 'field')">
+             tal:attributes="class python:test(error, 'field error', 'field leftF')">
 
             <label i18n:translate="label_login_name"
                    tal:attributes="for ac_name">Login Name</label>
@@ -135,7 +146,7 @@ If you do not have an account here, head over to the
 
     <div class="field"
              tal:define="error python:errors.get(ac_password, None);"
-             tal:attributes="class python:test(error, 'field error', 'field')">
+             tal:attributes="class python:test(error, 'field error', 'field leftF')">
 
             <label i18n:translate="label_password"
                    tal:attributes="for ac_password">Password</label>
@@ -169,7 +180,7 @@ If you do not have an account here, head over to the
 
         </div>
 
-        <div class="formControls">
+        <div class="formControls rightF">
 
             <input class="context"
                    type="submit"
@@ -179,6 +190,20 @@ If you do not have an account here, head over to the
                    />
 
         </div>
+
+</div>
+    </dd>
+</dl>
+</div>
+
+
+
+
+
+
+
+
+
 
     </fieldset>
 

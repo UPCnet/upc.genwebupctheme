@@ -1,6 +1,6 @@
 <tal:tabs tal:condition="view/portal_tabs"
           i18n:domain="plone">
-    <b class="hiddenStructure" i18n:translate="heading_sections">Sections</b>
+    <strong class="hiddenStructure" i18n:translate="heading_sections">Sections</strong>
 
     <ul id="portal-globalnav">
         <tal:tabs tal:repeat="tab view/portal_tabs"><li tal:attributes="id string:portaltab-${tab/id};

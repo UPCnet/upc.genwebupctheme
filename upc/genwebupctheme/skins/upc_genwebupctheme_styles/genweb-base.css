@@ -318,9 +318,8 @@ h1.documentFirstHeading img {display:none;}
 	font-size: 0.9em;
 	border-top: 3px solid #f60;
 	padding-top: 4px;
-	margin-left: 25px;
 	float:left;
-	width:733px;}
+	width:958px;}
 .sobreElWeb {
 	text-align:right;
 	float:right;
@@ -675,6 +674,13 @@ ul.configlets li a:hover {
 	padding:0 15px 2px 15px;
 	*padding:0 0 2px 0;
 	_padding:0 0 2px 0;}
+#login-form input {font-size:100% !important;}
+.iuu {font-size:135%; font-family: Helvetica, Arial, Verdana, sans-serif; font-weight:bold; padding-left:22px;}
+.iul {font-size:150%; padding:0;}
+#signText .gris {color:#999;}
+.leftF {float:left; margin: 0.25em 0.5em 0 !important;}
+.rightF {clear:left;float:right; margin: 0.25em 0.5em 0 !important;}
+.formControls.leftF {margin: 1.85em 0.5em 0 !important;}
 /* COMMUTA AMB VOLUM */
 .optionsToggle {
 	background:transparent url(commuta.gif) no-repeat scroll left 2px;
@@ -872,7 +878,7 @@ iframe.kupu-editor-iframe:active {
 #forgotten-password{
 	border-left:3px solid #ff6600;
 	padding: 0px 0px 0px 10px;
-	margin:25px 0px 0px 0px;}
+	margin:0px;}
 #forgotten-password h3{
 	color: #c00;
 	font-size: 1.65em;
