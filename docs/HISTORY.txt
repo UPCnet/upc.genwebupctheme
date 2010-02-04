@@ -1,9 +1,10 @@
-Changelog for upc.genwebupctheme
+Changelog
+=========
 
-    (name of developer listed in brackets)
+3.2.1
+-----
 
-upc.genwebupctheme - 0.1 Unreleased
-
-    - Initial package structure.
-      [zopeskel]
-
+- Canvis d'accessibilitat a varis llocs (Title/Peus/enllaços) [SCP]
+- Canvi en el formulari de login per acomodar millor la opció de CAS [SCP]
+- Estil de Genweb als portlets de RSS i de Col·lecció
+- Altres peties correccions de bugs
