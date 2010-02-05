@@ -1619,3 +1619,15 @@ dt.contenttype-servei{
 	height:200px;
 	width:400px;
 }
+
+
+
+
+
+.goout { position: absolute; top: -99999px;}
+#baners ul li { background:#fff; padding:0; margin: 0 0 1em 0;}
+#baners a {display:inline; padding:0 0 2px 0; background: url(hs1.png) no-repeat 0 -20px; height:50px;}
+#baners a img {vertical-align:top; background: #000; border: 1px solid #e6e6e6; margin-bottom: 0;}
+#baners a img:hover {border: 1px solid #0076cc; margin-bottom:0;}
+#content #baners a { background:none !important; padding:0 0 2px 0 !important;}
+#baners{margin-left:25px !important; }
