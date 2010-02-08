@@ -10,10 +10,12 @@ class Peu(ViewletBase):
         context = self.context
         catalog = getToolByName(self, 'portal_catalog')
         logos_container = catalog.searchResults(portal_type='Logos_Container',
-                                                 review_state='published')
+                                                 review_state=['published','intranet'],)
+						 #review_state='published',)
         if logos_container:
             return catalog.searchResults(portal_type='Logos_Footer',
-                       review_state='published',
+                       review_state=['published','intranet'],
+		       #review_state='published',
                        path=logos_container[0].getPath(),
                        sort_on='getObjPositionInParent',
                        sort_limit=5)[:5]
