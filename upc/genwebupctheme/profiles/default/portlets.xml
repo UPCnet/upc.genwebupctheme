@@ -32,4 +32,10 @@
        description="A portlet which can show a fake nav."
        />
    
+    <portlet
+      addview="upc.genwebupctheme.agenda.AgendaPortlet"
+      title="Agenda Portlet"
+      description="Portlet showing recent events, the current date, and a calendar."
+      />
+
 </portlets>

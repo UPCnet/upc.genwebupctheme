@@ -27,6 +27,10 @@ setup(name='upc.genwebupctheme',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
+          'Products.PlonePopoll',
+          'Products.LinguaPlone',
+          'Products.Poi',
+          'Products.FCKEditor',
       ],
       entry_points="""
       # -*- Entry points: -*-
