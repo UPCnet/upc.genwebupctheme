@@ -4,6 +4,8 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="upc.genweb.banners">
 
+    <include package="plone.app.portlets" />
+    
     <!-- Register the portlet -->
 
     <!-- If the portlet has no configurable parameters, you can remove
@@ -23,13 +25,13 @@
 
     <!-- Agenda Portlet -->
     <plone:portlet
-        name="upc.genwebtheme.agenda"
+        name="upc.genwebupctheme.AgendaPortlet"
         interface=".agenda.IAgendaPortlet"
         assignment=".agenda.Assignment"
-        view_permission="zope2.View"
-        edit_permission="cmf.ManagePortal"
         renderer=".agenda.Renderer"
         addview=".agenda.AddForm"
+        view_permission="zope2.View"
+        edit_permission="cmf.ManagePortal"
         />
 
 </configure>

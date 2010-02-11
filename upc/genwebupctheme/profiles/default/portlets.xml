@@ -1,41 +1,41 @@
 <?xml version="1.0"?>
 <portlets>
- <assignment remove="True" name="calendar" category="context" key="/"
-    manager="plone.rightcolumn" type="portlets.Calendar">
- </assignment>
-  <assignment remove="True" name="events" category="context" key="/"
-    manager="plone.rightcolumn" type="portlets.Events">
- </assignment>
- <assignment remove="True" name="news" category="context" key="/"
-    manager="plone.rightcolumn" type="portlets.News">
- </assignment>
- <assignment remove="True" name="review" category="context" key="/"
-    manager="plone.rightcolumn" type="portlets.Review">
- </assignment>
- <assignment remove="True" name="login" category="context" key="/"
-    manager="plone.leftcolumn" type="portlets.Login">
- </assignment>
- 
-    <assignment 
-      name="navigation" 
-      category="context" 
-      key="/"
-      manager="plone.leftcolumn" 
-      type="portlets.Navigation">
-     
-      <property name="bottomLevel">2</property>    
- </assignment>
 
-    <portlet
-       addview="upc.genweb.masters.portlet"
-       title="Masters portlet"
-       description="A portlet which can show a fake nav."
-       />
-   
-    <portlet
-      addview="upc.genwebupctheme.agenda.AgendaPortlet"
-      title="Agenda Portlet"
-      description="Portlet showing recent events, the current date, and a calendar."
-      />
+  <assignment remove="True" name="calendar" category="context" key="/"
+              manager="plone.rightcolumn" type="portlets.Calendar">
+  </assignment>
+  <assignment remove="True" name="events" category="context" key="/"
+              manager="plone.rightcolumn" type="portlets.Events">
+  </assignment>
+  <assignment remove="True" name="news" category="context" key="/"
+              manager="plone.rightcolumn" type="portlets.News">
+  </assignment>
+  <assignment remove="True" name="review" category="context" key="/"
+              manager="plone.rightcolumn" type="portlets.Review">
+  </assignment>
+  <assignment remove="True" name="login" category="context" key="/"
+              manager="plone.leftcolumn" type="portlets.Login">
+  </assignment>
+  <assignment 
+     name="navigation" 
+     category="context" 
+     key="/"
+     manager="plone.leftcolumn" 
+     type="portlets.Navigation">
+     
+    <property name="bottomLevel">2</property>    
+  </assignment>
+
+  <portlet
+    addview="upc.genweb.masters.portlet"
+    title="Masters portlet"
+    description="A portlet which can show a fake nav."
+    />
+
+  <portlet
+    addview="upc.genwebupctheme.AgendaPortlet"
+    title="Agenda Portlet"
+    description="Portlet showing recent events, the current date, and a calendar."
+    />
 
 </portlets>
