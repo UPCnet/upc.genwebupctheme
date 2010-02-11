@@ -38,14 +38,6 @@ class TestPortlet(TestCase):
         self.assertEquals(len(mapping), 1)
         self.failUnless(isinstance(mapping.values()[0], agendaportlet.Assignment))
 
-    def testInvokeEditView(self):
-        mapping = PortletAssignmentMapping()
-        request = self.folder.REQUEST
-
-        mapping['foo'] = agendaportlet.Assignment()
-        editview = getMultiAdapter((mapping['foo'], request), name='edit')
-        self.failUnless(isinstance(editview, agendaportlet.EditForm))
-
     def testRenderer(self):
         context = self.folder
         request = self.folder.REQUEST
