@@ -16,6 +16,8 @@ from plone.memoize.instance import memoize
 
 from Products.CMFCore.utils import getToolByName
 
+from Products.CMFPlone.utils import safe_unicode
+
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from plone.app.portlets import cache
