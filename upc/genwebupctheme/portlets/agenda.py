@@ -109,6 +109,8 @@ class Renderer(base.Renderer):
         base.Renderer.__init__(self, context, request, view, manager, data)
         self.updated = False
 
+        self.utils = getMultiAdapter((self.context, self.request),
+                                        name=u'upc.genweb.utils')
         self.now = localtime()
         portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
         self.portal_url = portal_state.portal_url()
@@ -293,7 +295,6 @@ class Renderer(base.Renderer):
 
     @memoize
     def _data(self):
-        import ipdb; ipdb.set_trace()
         context = aq_inner(self.context)
         catalog = getToolByName(context, 'portal_catalog')
         limit = 5
