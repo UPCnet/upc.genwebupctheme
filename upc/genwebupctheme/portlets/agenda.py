@@ -44,7 +44,7 @@ class Assignment(base.Assignment):
 
     @property
     def title(self):
-        return _(u"Agenda Porlet")
+        return _(u"Agenda Portlet")
 
 # copy from plone.app.portlets
 def _render_cachekey(fun, self):
