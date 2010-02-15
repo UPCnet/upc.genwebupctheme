@@ -8,11 +8,91 @@
                 url_quote_plus nocall:view/url_quote_plus;
                 showPrevMonth view/showPrevMonth;
                 showNextMonth view/showNextMonth;
-                year view/year;">
-<h1>foo</h1>
-    <dt class="portletHeader">
-        <span class="portletTopLeft"></span>
-        <a href="#" rel="nofollow"
+                year view/year;
+                entries view/published_events;
+                portal_url context/@@plone_portal_state/portal_url;
+                query_string view/getQueryString;
+                url_quote_plus nocall:view/url_quote_plus;
+                toLocalizedTime nocall:context/@@plone/toLocalizedTime">
+
+<div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="agendaDalt">Agenda </div>
+<div class="agendaData">     
+    <a class="agendaNumero" href="" 
+         tal:content="python:view.now[2]"
+         tal:attributes="href view/portal_url">
+         number_day
+    </a>
+    <div class="agendaMes">
+        <div class="agendaDia"
+            tal:content="python:view.dia_semana(view.now[6])">
+            text_day
+        </div>
+        <span tal:content="python:view.mes(view.now[1])">
+        text_week_day </span>
+    </div>
+</div>
+
+<div class="agendaContingut agendaAjustament">
+
+<table summary="agenda">
+    <caption>Agenda</caption>
+        <tr>
+        <ul>
+        <li tal:repeat="obj entries">
+            <a href=""
+               tal:attributes="href obj/getURL;
+                               title obj/Description">
+            <span tal:replace="obj/pretty_title_or_id">
+             Some Event 
+            </span>
+            </a>
+            <br/>
+            <p class="small" tal:content="python:toLocalizedTime(obj.start)">
+                May 5
+            </p>
+        </li>
+        </ul>
+        <div class="portletPlus">  
+            <a href="#"><img src="plus.gif" alt="+"/></a> 
+            <a href=""
+               tal:attributes="href view/all_events_link"
+               i18n:translate="box_upcoming_events">
+               Upcoming events&hellip;
+            </a>
+        </div>
+
+
+        </tr>
+            <tr class="TDRegulaCalendari">
+<!-- ini calendari -->
+<div id="calendari">
+    <b i18n:domain="upc.genwebupc"
+       i18n:translate="calendari_title"> 
+       Calendari
+    </b>
+    <div id="esdeveni_text"
+         i18n:domain="upc.genwebupc"
+         i18n:translate="esdeveniments_reunions"> 
+         Esdeveniments i reunions.
+    </div>
+    <table summary="mes" class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
+    <caption class="hiddenStructure"
+        i18n:domain="upc.genwebupc"
+           i18n:translate="calendari_title"> 
+        Calendari
+    </caption>
+      <thead>
+        <tr class="arrodonimentTR">
+            <td class="arrodonimentTD" align="center" colspan="7">
+                <img class="imgCA" src="daltCalendari.gif"
+                    tal:attributes="alt view/monthName;"/>
+            </td>
+        </tr>
+      </thead>
+     <tbody>
+        <tr id="daltCalendari">
+           <td class="calendariMes">
+                      <a href="#" rel="nofollow"
            title="Previous month"
            tal:define="prevMonthMonth view/prevMonthMonth;
                        prevMonthYear view/prevMonthYear"
@@ -20,45 +100,46 @@
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, prevMonthMonth, prevMonthYear, url_quote_plus(query_string)); 
                            class string:kssCalendarChange kssattr-year-${prevMonthYear} kssattr-month-${prevMonthMonth} calendarPrevious;"
            tal:condition="showPrevMonth"
-           i18n:attributes="title title_previous_month;">&laquo;</a>
-
-        <span i18n:translate="" tal:omit-tag="">
-            <span i18n:name="monthname" i18n:translate=""
-                  tal:content="view/monthName"
-                  tal:omit-tag="">monthname</span>
-            <span i18n:name="year" i18n:translate=""
-                  tal:content="year"
-                  tal:omit-tag="">year</span>
-        </span>
-
-        <a href="#" rel="nofollow"
-           title="Next month"
-           tal:define="nextMonthMonth view/nextMonthMonth;
+           i18n:attributes="title title_previous_month;"><img src="fletxaE.gif" alt="&lt;"/></a>
+    
+                <a href="#" rel="nofollow"
+               title="Next month"
+                tal:define="nextMonthMonth view/nextMonthMonth;
                        nextMonthYear view/nextMonthYear"
-           tal:attributes="id python:showNextMonth and 'calendar-next' or '';
+                tal:attributes="id python:showNextMonth and 'calendar-next' or '';
                            href python:'?%smonth:int=%d&amp;year:int=%d&amp;orig_query=%s' % (query_string, nextMonthMonth, nextMonthYear, url_quote_plus(query_string));
                            class string:kssCalendarChange kssattr-year-${nextMonthYear} kssattr-month-${nextMonthMonth} calendarNext;"
-           tal:condition="showNextMonth"
-           i18n:attributes="title title_next_month;">&raquo;</a>
-        <span class="portletTopRight"></span>
-    </dt>
+                tal:condition="showNextMonth"
+                i18n:attributes="title title_next_month;"><img src="fletxaD.gif" alt="&gt;"/> </a>       
 
-    <dd class="portletItem">
-        <table class="ploneCalendar"
-               summary="Calendar"
-               i18n:domain="plone"
-               i18n:attributes="summary summary_calendar;">
-            <caption class="hiddenStructure"
-                     tal:content="view/monthName">Month name</caption>
-            <thead>
+                <span i18n:translate="" tal:omit-tag=""> 
+                    <span style="color: red;" 
+                    i18n:name="monthname"
+                    tal:content="view/monthName"
+                    tal:omit-tag="">
+                    monthname </span>
+                    
+                    <span i18n:name="year"
+                    tal:content="year"
+                    tal:omit-tag="">
+                    year</span>
+                </span>
+            </td>
+        </tr>
+    </tbody>    
+    </table>
+    
+    <table width="5%" summary="calendari">
+        <caption> calendari </caption>
+    
+           <tbody>
                 <tr class="weekdays"
                     ><tal:data tal:repeat="weekday view/getWeekdays"
                         ><th scope="col"
-                             i18n:translate=""
                              tal:content="weekday">Su</th
                     ></tal:data>
                 </tr>
-            </thead>
+            </tbody>
             <tbody>
                 <tr tal:repeat="week view/getEventsForCalendar"
                     ><tal:block repeat="day week"
@@ -70,7 +151,7 @@
                                         tal:condition="day_event"
                                         tal:attributes="class python:is_today and 'todayevent' or 'event'"
                                        ><strong><a href=""
-                                           tal:attributes="href string:${navigation_root_url}/search?${view/getReviewStateString}start.query:record:list:date=${day/date_string}+23%3A59%3A59&amp;start.range:record=max&amp;end.query:record:list:date=${day/date_string}+00%3A00%3A00&amp;end.range:record=min;
+                                           tal:attributes="href string:${portal_url}/search?${view/getReviewStateString}start.query:record:list:date=${day/date_string}+23%3A59%3A59&amp;start.range:record=max&amp;end.query:record:list:date=${day/date_string}+00%3A00%3A00&amp;end.range:record=min;
                                                            title day/eventstring;"
                                            tal:content="daynumber">
                                            31
@@ -86,15 +167,23 @@
                                 ></tal:block
                             ></tal:isday
                             ><tal:notisday condition="not: daynumber"
-                                ><td></td
+                                ><td></td 
                             ></tal:notisday
                         ></tal:day
                     ></tal:block>
                 </tr>
             </tbody>
+    </table>
+    
+</div>
 
-        </table>
-        <span class="portletBottomLeft"></span>
-        <span class="portletBottomRight"></span>
-    </dd>
+<!-- fi calendari -->
+
+
+
+        </tr>
+    </table>
+
+</div>
+
 </dl>
