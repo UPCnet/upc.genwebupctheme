@@ -93,11 +93,13 @@ def _render_cachekey(fun, self):
 # base.Assignment).
 
 class Renderer(base.Renderer):
-
-    updated = False
+    """This is a pseudo-mixin class of the plone.app.portlet calendar renderer class,
+       and methods from the upc.genwebupctheme calendar boxlet.
+    """
     
-    # render() will be called to render the portlet
-    #render = ViewPageTemplateFile('agenda.pt')
+    #
+    # METHODS COPIED FROM: plone.app.portlets/plone/app/portlets/portlets/calendar.py
+    #    
 
     _template = ViewPageTemplateFile('agenda.pt')
     updated = False
@@ -107,6 +109,12 @@ class Renderer(base.Renderer):
         base.Renderer.__init__(self, context, request, view, manager, data)
         self.updated = False
 
+        self.now = localtime()
+        portal_state = getMultiAdapter((self.context, self.request), name=u'plone_portal_state')
+        self.portal_url = portal_state.portal_url()
+        self.portal = portal_state.portal()
+        self.have_events_folder = 'esdeveniments' in self.portal.objectIds()
+        
     def update(self):
         if self.updated:
             return
@@ -248,6 +256,55 @@ class Renderer(base.Renderer):
             query_string = '%s&amp;' % query_string
         return query_string
 
+    #
+    # METHODS COPIED FROM: upc.genwebupctheme/upc/genwebupctheme/browser/boxletviews.py
+    #
+    
+    #funciones correspondientes a la parte genweb del boxlet    
+
+    def mes(self, mes):
+        return self.utils.mes(mes)
+    
+    def dia_semana(self, dia):
+        return self.utils.dia_semana(dia)
+
+    #funciones correspondientes a la parte de adquisicion de eventos    
+
+    #@property
+    #def available(self):
+    #    return len(self._data())
+    
+    def published_events(self):
+        return self._data()
+
+    def all_events_link(self):
+        if self.have_events_folder:
+            events = self.portal.esdeveniments.getTranslation()
+            return '%s' % events.absolute_url()
+        else:
+            return '%s/events_listing' % self.portal_url
+
+    def prev_events_link(self):
+        previous_events = self.portal.esdeveniments.aggregator.anteriors.getTranslation()
+        if self.have_events_folder:
+            return '%s' % previous_events.absolute_url()
+        else:
+            return None
+
+    @memoize
+    def _data(self):
+        import ipdb; ipdb.set_trace()
+        context = aq_inner(self.context)
+        catalog = getToolByName(context, 'portal_catalog')
+        limit = 5
+        state = ['published','intranet']
+        return catalog(portal_type=('Event','Meeting'),
+                       review_state=state,
+                       end={'query': DateTime(),
+                            'range': 'min'},
+                       sort_on='start',
+                       sort_limit=limit)[:limit]
+                               
 # Define the add forms, based on zope.formlib. These use
 # the interface to determine which fields to render.
 
