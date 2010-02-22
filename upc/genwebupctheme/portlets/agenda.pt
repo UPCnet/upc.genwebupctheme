@@ -16,7 +16,7 @@
                 toLocalizedTime nocall:context/@@plone/toLocalizedTime">
 
 <div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="agendaDalt">Agenda </div>
-<div class="agendaData">     
+<div class="agendaVerticalData">     
     <a class="agendaNumero" href="" 
          tal:content="python:view.now[2]"
          tal:attributes="href view/portal_url">
@@ -32,7 +32,7 @@
     </div>
 </div>
 
-<div class="agendaContingut agendaAjustament">
+<div class="agendaContingut agendaVerticalContingut">
 
 <table summary="agenda">
     <caption>Agenda</caption>
@@ -65,7 +65,7 @@
         </tr>
             <tr class="TDRegulaCalendari">
 <!-- ini calendari -->
-<div id="calendari">
+<div id="calendariVertical">
     <b i18n:domain="upc.genwebupc"
        i18n:translate="calendari_title"> 
        Calendari
