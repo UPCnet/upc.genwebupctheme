@@ -28,6 +28,7 @@ from Products.PythonScripts.standard import url_quote_plus
 
 from zope.i18nmessageid import MessageFactory
 _ = MessageFactory('upc.genweb.banners')
+PLMF = MessageFactory('plonelocales')
 
 # This interface defines the configurable options (if any) for the portlet.
 # It will be used to generate add and edit forms.
@@ -140,7 +141,7 @@ class Renderer(base.Renderer):
         self.prevMonthYear, self.prevMonthMonth = self.getPreviousMonth(year, month)
         self.nextMonthYear, self.nextMonthMonth = self.getNextMonth(year, month)
 
-        self.monthName = _(self._ts.month_msgid(month),
+        self.monthName = PLFM(self._ts.month_msgid(month),
                               default=self._ts.month_english(month))
 
     @ram.cache(_render_cachekey)
@@ -234,7 +235,7 @@ class Renderer(base.Renderer):
         weekdays = []
         # list of ordered weekdays as numbers
         for day in self.calendar.getDayNumbers():
-            weekdays.append(_(self._ts.day_msgid(day, format='s'),
+            weekdays.append(PLMF(self._ts.day_msgid(day, format='s'),
                                  default=self._ts.weekday_english(day, format='a')))
 
         return weekdays
