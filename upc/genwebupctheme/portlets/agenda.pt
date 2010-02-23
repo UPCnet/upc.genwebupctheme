@@ -75,7 +75,7 @@
          i18n:translate="esdeveniments_reunions"> 
          Esdeveniments i reunions.
     </div>
-    <table summary="mes" class="sobreCalendari" style="border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
+    <table summary="mes" class="sobreCalendari" style="margin-left:20px; border: medium none; border-spacing:0px; margin-top: 5px;" border="0" cellspacing="0" cellpadding="0">
     <caption class="hiddenStructure"
         i18n:domain="upc.genwebupc"
            i18n:translate="calendari_title"> 
@@ -129,7 +129,7 @@
     </tbody>    
     </table>
     
-    <table width="5%" summary="calendari">
+    <table width="5%" style="margin-left:20px;" summary="calendari">
         <caption> calendari </caption>
     
            <tbody>
