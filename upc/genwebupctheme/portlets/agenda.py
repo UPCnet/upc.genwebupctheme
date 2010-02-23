@@ -141,7 +141,7 @@ class Renderer(base.Renderer):
         self.prevMonthYear, self.prevMonthMonth = self.getPreviousMonth(year, month)
         self.nextMonthYear, self.nextMonthMonth = self.getNextMonth(year, month)
 
-        self.monthName = PLFM(self._ts.month_msgid(month),
+        self.monthName = PLMF(self._ts.month_msgid(month),
                               default=self._ts.month_english(month))
 
     @ram.cache(_render_cachekey)
