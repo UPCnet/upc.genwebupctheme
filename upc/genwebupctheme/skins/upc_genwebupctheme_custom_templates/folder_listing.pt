@@ -48,7 +48,7 @@
                             use_view_action site_properties/typesUseViewActionInListings|python:();
                             over_limit python: limit_display and len(folderContents) > limit_display;
                             folderContents python: (over_limit and folderContents[:limit_display]) or folderContents;
-                            folderContents python:[i for i in folderContents if i.exclude_from_nav == False];
+                            folderContents python:[i for i in folderContents if i.exclude_from_nav != True];
                             batch folderContents;
                             show_about python:not isAnon or site_properties.allowAnonymousViewAbout;">
         <tal:listing condition="folderContents">
