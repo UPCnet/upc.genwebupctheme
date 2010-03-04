@@ -50,7 +50,7 @@ blockquote,
 
 
 label,
-h1, h4, h5, h6,
+h1, h3, h4, h5, h6,
 h2.kssattr-atfieldname-title,
 .divCarpetaTitol,
 .modificacio,
@@ -112,6 +112,7 @@ pre
 .titular1,
 .titular2,
 .titular3,
+#content h3,
 #content h4,
 #content h5,
 #content h6
@@ -126,6 +127,8 @@ pre
 .titular1,
 #content h4
 	{border-top: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}
+#content h3
+	{border-bottom: 2px solid <tal:propietat replace="e4">Especific4</tal:propietat>;}
 .fitxa .titular1,
 .fitxa .separadorH
 	{border-bottom: 2px dotted <tal:propietat replace="e4">Especific4</tal:propietat>;}

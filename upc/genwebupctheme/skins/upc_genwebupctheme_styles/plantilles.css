@@ -36,7 +36,7 @@ form{ margin: 0; }
 	background: url(../img/custom/fletxaD.gif) no-repeat 0 7px;
 	*background: url(../img/custom/fletxaD.gif) no-repeat 0 9px;
 	border-top: 2px dotted #DFE3D3; 
-	font-size:1.4em}
+	font-size:1.3em}
 .titular2, #content h5, #collage h5{
 	margin-bottom: 0.5em;
 	margin-top: 0.75em;
@@ -62,10 +62,31 @@ form{ margin: 0; }
 	list-style: url(fletxa.gif) outside;}
 .llistatEnllacos ul{
 	margin: -5px 0 15px 0}
-.llistatEnllacos li{
+
+.documentContent .llistatEnllacos li, .llistatEnllacos li{
 	padding: 0 0 10px 0;
-	list-style: url(quadret.gif) outside;
-	margin: 0 0 0 23px}
+	list-style: url(fletxa.gif) inside;
+	margin: 0 0 0 10px}
+.documentContent .llistatDestacat ul{
+	background:transparent url(fonsT.png) repeat-x scroll center bottom;
+	border:1px solid #ccc;
+	border-bottom:2px solid #ccc;
+	margin:0;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	-khtml-border-radius:5px;
+	-o-border-radius:5px;
+	border-radius:5px;
+	padding: 0 0 0 1em;
+}
+.documentContent .llistatDestacat li{
+	background:transparent url(fletxaLD.gif) no-repeat scroll left center;
+	line-height:2em;
+	list-style-image:none !important;
+	list-style-type:none !important;
+	margin:0;
+	padding:0.5em 0 0.5em 1.5em;
+}
 .llistat { padding: 0 0 15px 0}
 .llistat ul{ margin: 0 0 0 12px; *margin: 0 0 0 16px}
 .llistat li{
@@ -182,6 +203,8 @@ html*.taulaRegistres table{
 	margin: 0px; padding:10px; margin-top:-36px;
 	background: url(borderTopDiagonal.gif) repeat-x top;}
 .fletxa_fitxa{ background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
+.fitxa h2 {margin:-0.2em 0 1em 0; padding-bottom:0.3em; border-top:0 !important; border-bottom:5px solid #e6e6e6;}
+.fitxa h3 {margin:-0.2em 0 1em 0;}
 .fitxa h4{ display:block;margin: -0.2em 0 1.2em 0 !important; padding:0.2em 0 0.5em 0; border:0px; border-bottom: 2px dotted #a29386; background:none;border-top:0 !important;}
 .fitxa h5{ margin-bottom: 1em;}
 .fitxa img{background:#FFF; padding: 0 20px 10px 0; margin: 0;}
@@ -377,3 +400,20 @@ float:right;
 margin:0.5em;
 padding:10px;
 }
+/*contenidor*/
+.gb {background:transparent url(fonsT.png) repeat-x scroll center bottom;border:1px solid #E6E6E6;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
+/*columnats deco*/
+div.fila {display:block;float:left;position:relative;width:100%;margin-bottom:1em;}
+div.cella {position: relative; float: left; left: 100%;}
+div.p0  { margin-left: -100%}
+div.w1\3a 2, div.w2\3a 4 { width:    47.91667% } /* 1:2 / 2:4 */
+div.w1\3a 4 { width:    22.91667% } /* 1:4 */
+div.w3\3a 4 { width:    72.91667% } /* 3:4 */
+div.p1\3a 4 {margin-left:    -75% } /* 1:4 */
+div.p1\3a 2, div.p2\3a 4 {margin-left:    -50% } /* 1:2 / 2:4 */
+div.p3\3a 4 {margin-left:    -25% } /* 3:4 */
+div.w1\3a 3 { width: 31.25%; } /* 1:3 */
+div.w2\3a 3 { width: 64.5%; } /* 2:3 */
+div.p1\3a 3 {margin-left: -66.7%;} /* 1:3 */
+div.p2\3a 3 {margin-left: -33.4%;} /* 2:3 */
+div.w1 { width: 97.916% }

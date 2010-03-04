@@ -16,6 +16,7 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="llistatIndex">
+					<h2>Llistat</h2>
 					<ul>
 					    <li><a href="#">JDuis tellus</a></li>
 					    <li><a href="#">Maecenas elit orci</a></li>
@@ -33,19 +34,24 @@
 
 
 
-<!-- PLANTILLA DE TEXT HABITUAL ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Text habitual" image="++resource++upc.genwebupctheme.images/FCKTplantilla.png">
+<!-- PLANTILLA DE TOTS ELS TITULARS I TEXT HABITUAL ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Text habitual amb tots els titulars" image="++resource++upc.genwebupctheme.images/FCKTplantilla.png">
         <Description>Com utilitzar la jerarquia de títols</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
+
+				<h2>Duis tellus</h2>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.</p>
+				<h3>In aliquam rhoncus sem</h3>
+				<p>Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
 				<h4>Duis tellus</h4>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.</p>
 				<h5>In aliquam rhoncus sem</h5>
 				<img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" class="imgEsquerra" />
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
+				<p>Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
 				<h6>In hac habitasse platea dictumst</h6>
-				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
-				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
+				<p>Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
+				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</p>
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" />  
         </Html>
@@ -96,7 +102,7 @@
         <Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="textDestacat">In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</div>
+				<div class="textDestacat"><p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p></div>
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
@@ -110,7 +116,7 @@
         <Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="destacatBandejat">In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar  quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium  interdum, malesuada ac, augue. </div>
+				<div class="destacatBandejat"><p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar  quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium  interdum, malesuada ac, augue.</p></div>
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
@@ -125,7 +131,7 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="destacatQuadres">
-				<div class="destacatQuadresDins">In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.</div>
+				<div class="destacatQuadresDins"><p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.</p></div>
 				</div>
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
@@ -199,7 +205,7 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="llistat">
-				<h4>Sed ultricies cursus lectus</h4>
+				<h2>Sed ultricies cursus lectus</h2>
 				<ul>
 				    <li>Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</li>
 				    <li>Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</li>
@@ -221,8 +227,8 @@
         <Description>Per construir un document que conté un apartat d'enllaços relacionats.</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-		             <h2>Enllaços relacionats</h2>
 				<div class="llistatEnllacos">
+ 		              <h2>Enllaços relacionats</h2>
 					<ul>
 					    <li><a href="#">JDuis tellus</a></li>
 					    <li><a href="#">Maecenas elit orci</a></li>
@@ -241,7 +247,7 @@
     	<Description>Per definir una taula de registres estructurada per columnes. Es pot ampliar en files i columnes.</Description>    	
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>Lorem vs Ipsum </h4>
+				<h2>Lorem vs Ipsum </h2>
 				<div class="taulaRegistres">
 				<table summary="taula registres">
 				<caption>Taula registres</caption>
@@ -292,7 +298,7 @@
     	<Description>Per definir una taula de registres estructurada per files i columnes. Es pot ampliar en files i columnes.</Description>   	
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>Lorem vs Ipsum setmanal </h4>
+				<h2>Lorem vs Ipsum setmanal </h2>
 				<div class="taulaRegistres">
 				<table summary="taula registres">
 				<caption>Taula resgistres</caption>
@@ -362,7 +368,7 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="calendari">
-				<h5>Gener 2009 </h5>
+				<p class="titular2">Gener 2009 </p>
 				<table summary="calendari">
 				<caption>Calendari</caption>
 				    <tbody>
@@ -442,21 +448,21 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="fletxa_fitxa"> </div>
 				<div class="fitxa">
-				<h4>Duis tellus</h4>
-				<h5>At ipsum vitae est lacinia tincidunt</h5>
-				<div class="align_left"><img alt="fotoMostra" src="++resource++upc.genwebupctheme.images/mostra.jpg" /></div>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
-				<h6>Lorem Ipsum</h6>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				<h2>Duis tellus</h2>
+				<h3>At ipsum vitae est lacinia tincidunt</h3>
+				<div class="align_left"><img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" /></div>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</p>
+				<br /><h4>Lorem Ipsum</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p><br />
 				<div class="separadorH"> </div>
-				<h6>Duis tellus</h6>
-				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.
+				<h5>Duis tellus</h5>
+				<p>Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</p><br />
 				<div class="separadorH"> </div>
 				<h6>Mauris Vestibulum</h6>
-				Felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
+				<p>Felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</p>
 				<div class="separadorH"> </div>
 				<h6>gravida ac</h6>
-				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</div>
+				<p>Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</p></div>
 				<br /><br />
         	<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
@@ -472,18 +478,21 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="fletxa_fitxa"> </div>
 				<div class="fitxa">
-				<h4>Duis tellus</h4>
-				<h5>At ipsum vitae est lacinia tincidunt</h5>
-				<div class="align_right"><img alt="fotoMostra" src="++resource++upc.genwebupctheme.images/mostra.jpg" /></div>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.
-				<h6>Lorem Ipsum</h6>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+				<h2>Duis tellus</h2>
+				<h3>At ipsum vitae est lacinia tincidunt</h3>
+				<div class="align_right"><img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" /></div>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros. Mauris vestibulum, felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</p>
+				<br /><h4>Lorem Ipsum</h4>
+				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p><br />
 				<div class="separadorH"> </div>
-				<h6>Duis tellus</h6>
-				Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.
+				<h5>Duis tellus</h5>
+				<p>Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</p><br />
 				<div class="separadorH"> </div>
 				<h6>Mauris Vestibulum</h6>
-				felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</div>
+				<p>Felis et egestas ullamcorper, purus nibh vehicula sem, eu egestas ante nisl non justo.</p>
+				<div class="separadorH"> </div>
+				<h6>gravida ac</h6>
+				<p>Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.</p></div>
 				<br /><br />
         	<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
@@ -586,64 +595,6 @@
 
 
 
-<!-- TITULAR BLOC ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Titular bloc + text" image="++resource++upc.genwebupctheme.images/FCKTtitularGris.png">
-    	<Description>Per escriure text de bloc.</Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h2>In aliquam rhoncus sem</h2>
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR BLOC  -->
-
-
-
-<!-- TITULAR 1 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Títol 1 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular1.png">
-    	<Description> </Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h4>In aliquam rhoncus sem</h4>
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR 1  -->
-
-
-
-<!-- TITULAR 2 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Títol 2 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular2.png">
-    	<Description> </Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h5>In aliquam rhoncus sem</h5>
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR 2  -->
-
-
-
-<!-- TITULAR 3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <Template title="Títol 3 + text" image="++resource++upc.genwebupctheme.images/FCKTtitular3.png">
-    	<Description> </Description>
-        <Html>
-			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<h6>In hac habitasse platea dictumst</h6>
-				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros.
-				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa.
-				<br /><br />
-			<tal:cdata replace="structure string:]]&gt;" /> 
-        </Html>
-    </Template>
-<!-- //// FI TITULAR 3  -->
  
   </Templates>
 </tal:defines>

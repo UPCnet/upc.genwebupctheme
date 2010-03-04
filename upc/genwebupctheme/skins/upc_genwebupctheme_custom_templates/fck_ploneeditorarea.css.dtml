@@ -2,7 +2,7 @@
 
 body#content
 {
-    font-size: <dtml-var expr="'\x25' in fontBaseSize and  str(int(fontBaseSize.replace('\x25',''))*110/100) + '\x25' or '100\x25'">;
+    font-size: 70%;
     background:none;
     padding: 10px !important;
     margin: 0px !important;

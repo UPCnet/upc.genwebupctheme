@@ -74,7 +74,7 @@ padding-top:0px;
 	width:148px !important;} 	
 */
 /* GENERAL */
-body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#fff url(fons.png) center repeat-y;}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#f9f9f9 url(fons.png) center repeat-y;}
 a:link, a:visited, a:active {color:#007dcc; text-decoration: none;}	
 a:hover {text-decoration: underline;} 
 /*a:focus {outline: none;}*/
@@ -249,22 +249,21 @@ h1,h2{
 	line-height:1em;
 	font-weight:bold;}
 h3 {
-	border-top:5px solid #E6E6E6;
-	color:#4D4D4D;
-	font-size:14px;
+	border-bottom:2px solid #ccc;
+	color:#557C95;
+	font-size:1.55em;
 	font-weight:bold;
-	margin-top:25px;
-	padding-bottom:10px;
-	padding-top:10px;}	
+	margin:25px 0 15px;
+	padding:5px 0;}	
 h2{
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
-	font-size:1.5em;
+	font-size:1.55em;
 	margin-top:25px;
 	padding-bottom:10px;
 	padding-top:5px;}
 h1 {
-	font-size:1.65em;
+	font-size:1.75em;
 	margin:0;
 	padding:0.2em 0.2em 0.2em 0;
 	position:static;}
@@ -1114,7 +1113,7 @@ h1 span.discreet {
 	padding: 0 0 0 15px;
 	margin-top:15px;}
 /*elimina img vistes*/
-.collage-item dl dt span img, .collage-item tr td span img, .template-atct_album_view #content dl dt span img, .template-folder_summary_view #content dl dt span img, .template-folder_tabular_view #content tr td span img, .template-atct_topic_view #content dl dt span img{ float:right; display:none;}
+/*.collage-item dl dt span img, .collage-item tr td span img, .template-atct_album_view #content dl dt span img, .template-folder_summary_view #content dl dt span img, .template-folder_tabular_view #content tr td span img, .template-atct_topic_view #content dl dt span img{ float:right; display:none;}*/
 
 /* vista estandard i colleccio simulant-la */
 .template-atct_topic_view table.listing {
@@ -1627,7 +1626,9 @@ dt.contenttype-servei{
 .goout { position: absolute; top: -99999px;}
 #baners ul li { background:#fff; padding:0; margin: 0 0 1em 0;}
 #baners a {display:inline; padding:0 0 2px 0; background: url(hs1.png) no-repeat 0 -20px; height:50px;}
-#baners a img {vertical-align:top; background: #000; border: 1px solid #e6e6e6; margin-bottom: 0;}
+#baners a img {vertical-align:top; background: #fff; border: 1px solid #e6e6e6; margin-bottom: 0;}
 #baners a img:hover {border: 1px solid #0076cc; margin-bottom:0;}
 #content #baners a { background:none !important; padding:0 0 2px 0 !important;}
 #baners{margin-left:25px !important; }
+
+#login-form dl#history .collapsibleHeader {display:block; line-height:2em; background:transparent url(treeCollapsed.gif) no-repeat scroll 10px 50%;}
