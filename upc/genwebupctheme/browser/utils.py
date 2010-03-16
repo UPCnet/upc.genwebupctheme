@@ -233,7 +233,7 @@ class utilitats(BrowserView):
         db = self.connectDatabase()
         c=db.cursor()     
         c=self.change2UTF(c)
-        c.execute("""SELECT upc_titulacio.*,upc_estudi.*, orientacio_cat, orientacio_esp, orientacio_ing, up.nom_cat pNom_cat,up.nom_esp pNom_esp, up.nom_ing pNom_ing, unitat.nom_cat uNom_cat, unitat.nom_esp uNom_esp, unitat.nom_ing uNom_ing, unitat.sigles,m_destinataris_cat, m_destinataris_esp, m_destinataris_ing, m_criteris_adm_cat, m_criteris_adm_esp, m_criteris_adm_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing, m_professorat_cat, m_professorat_esp, m_professorat_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
+        c.execute("""SELECT upc_titulacio.*,upc_estudi.*, orientacio_cat, orientacio_esp, orientacio_ing, up.nom_cat pNom_cat,up.nom_esp pNom_esp, up.nom_ing pNom_ing, unitat.nom_cat uNom_cat, unitat.nom_esp uNom_esp, unitat.nom_ing uNom_ing, unitat.sigles,m_destinataris_cat, m_destinataris_esp, m_destinataris_ing, m_criteris_adm_cat, m_criteris_adm_esp, m_criteris_adm_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing, m_professorat_cat, m_professorat_esp, m_professorat_ing, m_preu_cat, m_preu_esp, m_preu_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
         results = c.fetchone()
         dictKeys = ('id_titulacio',
                     'nom_cat',
@@ -330,7 +330,10 @@ class utilitats(BrowserView):
                     'm_competencies_ing', 
                     'm_professorat_cat', 
                     'm_professorat_esp', 
-                    'm_professorat_ing',)
+                    'm_professorat_ing',
+                    'm_preu_cat',
+                    'm_preu_esp',
+                    'm_preu_ing',)
         
         return self.remapList2Dic(dictKeys,results)
 

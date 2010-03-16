@@ -218,11 +218,8 @@
 					        <tr>
 					            <td class="titular2" tal:content="python: utils.getTextMaster('preu',lang_code)">preu</td>
 					            <td>
-					               <span tal:condition="python: data['m_erasmus_mundus']==1"
-					                     tal:content="python: utils.getTextMaster('preu_erasmus',lang_code)">preu_erasmus</span>
-					
-					               <span tal:condition="python: data['m_erasmus_mundus']!=1"
-					                     tal:content="python: utils.getTextMaster('preu_no_erasmus',lang_code)">preu_no_erasmus</span>
+					               <span tal:condition="python: data['m_preu_'+utils.cambiaPrefijo(lang_code)]"
+					                     tal:content="python: data['m_preu_'+utils.cambiaPrefijo(lang_code)]">preu</span>
 					            </td>
 					        </tr>
 
