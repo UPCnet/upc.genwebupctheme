@@ -380,9 +380,9 @@ html*.sobreElWeb {
 	padding-left:0px;
 	*padding-left:0px;
 	_padding-left:0;*/
-	padding-left:3px;
-    *padding-left:3px;
-    _padding-left:3px;
+	padding-left:0px;
+    *padding-left:0px;
+    _padding-left:0px;
 	
 	}
 #cercaIntranetForm, #livesearch0 {}
