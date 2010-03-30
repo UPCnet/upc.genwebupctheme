@@ -3,7 +3,7 @@
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <action-provider name="portal_workflow"/>
  
-<!-- Per treure pestanya LOG -->
+<!-- Solved: Per treure pestanya LOG -->
  <action-provider name="portal_types">
   <action title="Log" action_id="log" category="object"
      condition_expr="nocall: object/@@log|nothing"
@@ -31,9 +31,9 @@
  </object>
  </object>
  
-<object name="site_actions" meta_type="CMF Action Category">
- <property name="title"></property> 
- <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
+ <object name="site_actions" meta_type="CMF Action Category">
+  <property name="title"></property> 
+  <object name="accessibility" meta_type="CMF Action" i18n:domain="plone">
    <property name="title" i18n:translate="">Accessibility</property>
    <property name="description" i18n:translate=""></property>
    <property
@@ -45,7 +45,7 @@
    </property>
    <property name="visible">False</property>
   </object>
- <object name="plone_setup" meta_type="CMF Action" i18n:domain="plone">
+  <object name="plone_setup" meta_type="CMF Action" i18n:domain="plone">
    <property name="title" i18n:translate="">Site Setup</property>
    <property name="description" i18n:translate=""></property>
    <property
@@ -57,7 +57,7 @@
    </property>
    <property name="visible">False</property>
   </object>
- <object name="contact" meta_type="CMF Action" i18n:domain="plone">
+  <object name="contact" meta_type="CMF Action" i18n:domain="plone">
    <property name="title" i18n:translate="">Contact</property>
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:${portal_url}/contact</property>
@@ -68,5 +68,16 @@
    </property>
    <property name="visible">True</property>
   </object>
-</object>
+ </object>
+
+<!-- Solved: No es veu el rename pels editors -->
+  <object name="object_buttons" meta_type="CMF Action Category">
+   <object name="rename" meta_type="CMF Action" i18n:domain="plone">
+    <property name="title" i18n:translate="">Rename</property>
+    <property name="available_expr">
+     python:checkPermission("Delete objects", object) and checkPermission("Copy or Move", object) and checkPermission("Add portal content", object) and not globals_view.isPortalOrPortalDefaultPage()
+    </property>
+   </object>
+  </object>
+
 </object>
