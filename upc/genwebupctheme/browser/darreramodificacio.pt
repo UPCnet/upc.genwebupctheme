@@ -2,10 +2,10 @@
                 portal_url context/@@plone_portal_state/portal_url"
         tal:condition="python: not utils.isFolder()"
         i18n:domain="plone">
-         
+       
 	<div class="fletxatop">
 	    <a tal:attributes="href python:context.absolute_url()+'/#amuntDeTot'">
-        	<img alt="Top of page" title="Top of page" tal:attributes="src string:${portal_url}/fletxa16blava.png"/>
+        	<img i18n:domain="upc.genwebupc" i18n:attributes="alt Top_of_page; title Top_of_page" tal:attributes="src string:${portal_url}/fletxa16blava.png"/>
     	</a>
 	</div>
 
