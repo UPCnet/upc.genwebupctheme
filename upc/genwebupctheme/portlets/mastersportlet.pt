@@ -51,14 +51,14 @@
 
 					<!-- Preinscripcio (NO url)-->
 			              <li tal:define="tmp preinscripcion_data/condicion" tal:condition="not: tmp" class="navTreeItem visualNoMarker"><div>
-			                <a tal:attributes="class python: utils.test(url_actual=='preinscripcio','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
+			                <a target='newwindow' tal:attributes="class python: utils.test(url_actual=='preinscripcio','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
                                                href preinscripcion_data/preinscripcio"
 			                   tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.getTextMaster('preinscripcio_open',lang_code),utils.getTextMaster('preinscripcio',lang_code))">preinscripcio </a></div></li>
 
 
 					<!-- Preinscripcio (existe url)-->
 			              <li class="navTreeItem visualNoMarker" tal:define="tmp preinscripcion_data/condicion" tal:condition="tmp"><div>
-			              <a class="navItem2 visualIconPadding"
+			              <a class="navItem2 visualIconPadding" target='newwindow'
 			                   tal:attributes="href string:${pURL}/preinscripcio"
 			                   tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.getTextMaster('preinscripcio_open',lang_code),utils.getTextMaster('preinscripcio',lang_code))">preinscripcio </a></div></li>
 
