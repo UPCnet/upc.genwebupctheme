@@ -24,15 +24,16 @@
     <tal:level define="item_class string:state-${node/normalized_review_state}">
 
       <div tal:define="item_class python:is_current and item_class + ' navTreeCurrentItem' or item_class">
-
+        
         <a tal:attributes="href python:link_remote and remote_url or item_url;
                            title node/Description;
                            class string:$item_class${li_class}${li_extr_class}${li_folder_class}"
            target="_newwindow"
-           tal:condition="python: item_type == 'Link' and item_finestra">
+           tal:condition="python: item_type == 'Link' and item_finestra">           
             <img tal:replace="structure item_icon/html_tag" />
             <span tal:content="node/Title">Selected Item Title</span>
         </a>
+
         <a tal:attributes="href python:link_remote and remote_url or item_url;
                            title node/Description;
                            class string:$item_class${li_class}${li_extr_class}${li_folder_class}"
@@ -40,11 +41,12 @@
             <img tal:replace="structure item_icon/html_tag" />
             <span tal:content="node/Title">Selected Item Title</span>
         </a>
+
         <a tal:attributes="href python:link_remote and remote_url or item_url;
                            title node/Description;
                            class string:$item_class${li_class}${li_extr_class}${li_folder_class}"
            tal:condition="python: item_type != 'Link'">
-            <img tal:replace="structure item_icon/html_tag" />
+            <img tal:condition="python: user.has_role(['Manager','Editor'])" tal:replace="structure item_icon/html_tag" />
             <span tal:content="node/Title">Selected Item Title</span>
         </a>
         
