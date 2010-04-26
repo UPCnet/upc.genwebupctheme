@@ -91,7 +91,7 @@
 <!--		</div>-->
 			
 		<div class="iframeContacte" tal:condition="python: utils.getGWConfig().boolmaps">
-	  		<span class="contacteSpan">
+	  		<span class="contacteSpan" i18n:attributes="title Planol_UPC">
 	      		<img alt="Google Maps" src="googleMaps.gif"/>
 	   		</span>
 	   		<div tal:replace="structure python: utils.getGWConfig().contactegmaps"></div>	
