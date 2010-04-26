@@ -25,6 +25,7 @@
             <div class="">
                 <label for=""
                        tal:attributes="for ac_name"
+		       i18n:attributes="title nom_usuari"
                        i18n:translate="nom_usuari"
                        i18n:domain="upc.genwebupc">
                        User</label>
@@ -84,8 +85,8 @@
        <li><b><span i18n:translate="genweb-usuari_connectat">
         User:
      </span></b> <a 
-           id="user-name"
-           tal:attributes="href view/homelink_url">
+           id="user-name"                  
+           tal:attributes="href view/homelink_url">           
            <span class="visualCaseSensitive"
                  tal:content="view/user_name">John</span></a></li>
    </tal:block>
@@ -100,26 +101,29 @@
     <span tal:condition="view/canSeeToolLink">
     <a  
     i18n:translate="genweb-accesarrel" 
+    i18n:attributes="title genweb-accesarrel"
     tal:attributes="href string:${view/portal_url}/folder_contents">
     Root folder</a>
     |
     </span>
     <a 
     i18n:translate="genweb-preferencies"
+    i18n:attributes="title genweb-preferencies"
     tal:attributes="href string:${view/portal_url}/personalize_form">
     Preferences</a>
      |
     <span>
     <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="newwindow"
-       i18n:translate="genweb-ajuda">
+       i18n:translate="genweb-ajuda"
+       i18n:attributes="title genweb-ajuda">
        Help
      </a>
      |
     </span>
     <span tal:condition="python: user.has_role(['Manager'])">
-    <a 
+    <a     
     i18n:domain="plone"
-    i18n:translate="Site Setup" 
+    i18n:translate="Site Setup"     
     tal:attributes="href string:${view/portal_url}/plone_control_panel">
     Site setup</a>
      |
@@ -128,12 +132,14 @@
     <a  
     i18n:domain="plone"
     i18n:translate="Undo" 
+    i18n:attributes="title Undo"
     tal:attributes="href string:${view/portal_url}/undo_form">
     Undo</a>    
     |
     </span>
     <a  
     i18n:translate="genweb-logout"
+    i18n:attributes="title genweb-logout"
     tal:attributes="href string:${view/portal_url}/cas_logout">
     Log out</a>
    </span>

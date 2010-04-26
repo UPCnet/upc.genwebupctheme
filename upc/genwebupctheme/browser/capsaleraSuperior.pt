@@ -55,7 +55,7 @@
  
         <input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search" /> 
   
-        <input class="submitGo" type="submit" value ="" /> 
+        <input class="submitGo" type="submit" value ="" i18n:domain="upc.genwebupc" i18n:attributes="title submitGo"   /> 
     
         <div class="LSResult" id="LSResult" style="">
             <div class="LSShadow" id="LSShadow"></div>
@@ -80,7 +80,7 @@
 	 	               tal:attributes="value nothing;" 
 	 	               class="text inputLabel" /> 
 	 	 
-	 	          <input class="submitGo" type="submit" value ="" /> 
+	 	          <input class="submitGo" type="submit" value =""/> 
         
         </div>
     </form>
@@ -89,6 +89,7 @@
     <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
     <a accesskey="1" href=""
        tal:attributes="href string:${view/portal_url}/"
+       i18n:attributes="title inici"
        i18n:domain="upc.genwebupc"
        i18n:translate="inici"> 
        Inici 
@@ -119,6 +120,7 @@
     <a href=""
        tal:condition="here/portal_membership/isAnonymousUser"
        tal:attributes="href here/cas_login_url"
+       i18n:attributes="title identificat"
        i18n:domain="upc.genwebupc"
        i18n:translate="identificat"> 
        Identifica't
@@ -128,6 +130,7 @@
     <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
     <a accesskey="5" href=""
        tal:attributes="href string:${view/portal_url}/search_form"
+       i18n:attributes="title cercaavancada"
        i18n:translate="cercaavancada"
        i18n:domain="upc.genwebupc">  
        Cerca Avançada 

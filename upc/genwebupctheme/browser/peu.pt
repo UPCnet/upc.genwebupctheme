@@ -18,7 +18,8 @@
    <div id="signText"> 
         <span class="sobreElWeb">
             <a accesskey="0" href="sobre-el-web"
-                i18n:translate="genweb-sobre_aquest_web">
+                i18n:attributes="title genweb-sobre_aquest_web"
+		i18n:translate="genweb-sobre_aquest_web">
             	About this web
             </a>
         </span>
