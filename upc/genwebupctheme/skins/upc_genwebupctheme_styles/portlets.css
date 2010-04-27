@@ -65,14 +65,15 @@ margin-bottom:10px;
 padding: 0px 5px;
 }
 
-h6.titolPortlet, .titolPortlet{
-background-color:#E8E2DF; /*especific6*/
+h2.titolPortlet, .titolPortlet{
+background-color:#F3F3F3; /*especific6*/
 color:#4D4D4D !important;
 font-weight:bold;
 padding: 1px 5px !important;
 font-family: Verdana, sans-serif;
 font-size:100% !important;
 margin: 0 !important;
+border-top:5px solid #F3F3F3;
 }
 
 .separadorPortlet{

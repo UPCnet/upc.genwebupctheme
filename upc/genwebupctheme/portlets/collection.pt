@@ -8,7 +8,7 @@
  <div class="portlet200"> </div>
  <div class="caixaPortlet">
 
-   <h6 class="titolPortlet">
+   <h2 class="titolPortlet">
      <span class="icoRSS">
        <a href=""
           tal:attributes="href python:view.collection_url() + '/RSS'">RSS
@@ -18,7 +18,7 @@
      <a tal:attributes="href collection_url" tal:omit-tag="not:view/data/show_more">
          <span tal:content="view/data/header" />
      </a>
-   </h6>
+   </h2>
    
   <tal:results>
     <ul>

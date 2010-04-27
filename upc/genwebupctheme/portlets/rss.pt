@@ -4,7 +4,7 @@
 
  <div class="portlet200"> </div>
  <div class="caixaPortlet">
-   <h6 class="titolPortlet">
+   <h2 class="titolPortlet">
      <span class="icoRSS">
        <a href=""
           tal:attributes="href view/url">RSS
@@ -17,7 +17,7 @@
            class="tile">
             Tags
      </a>
-   </h6>
+   </h2>
  
    <tal:rss tal:condition="view/feedAvailable"
                 tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime">
