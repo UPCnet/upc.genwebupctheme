@@ -11,7 +11,7 @@
     tal:condition="view/has_polls"
     i18n:domain="plonepopoll">
 
-  <h6 class="titolPortlet">
+  <h2 class="titolPortlet">
 
     <span i18n:translate="heading_portlet_polls"
 	  tal:condition="view/has_more_polls">Polls</span>
@@ -20,7 +20,7 @@
        tal:content="poll/title"
        tal:attributes="href poll/url">Poll title</a>
 
-  </h6>
+  </h2>
 
   <tal:poll tal:repeat="poll polls">
     <tal:block  tal:define="canVote poll/can_vote;">

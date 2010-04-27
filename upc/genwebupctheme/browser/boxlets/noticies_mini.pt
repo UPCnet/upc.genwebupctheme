@@ -10,7 +10,7 @@
 		
 	    <div class="caixaPortlet">
 	        
-	        <h6 class="titolPortlet">
+	        <h2 class="titolPortlet">
 	          <span class="icoRSS">
           	        <a href=""
              	        tal:define="utils context/@@upc.genweb.utils"
@@ -19,7 +19,7 @@
          	         </a>
         	   </span> 
         	   <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span> 
-	        </h6>
+	        </h2>
 	        
 	        <ul>
 		        <li tal:repeat="obj news_items">
