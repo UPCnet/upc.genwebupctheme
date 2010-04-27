@@ -31,7 +31,7 @@
 
     <p i18n:translate="text_size">Text size:</p>
 
-    <ul><ul>
+    <ul>
         <li><a href="javascript:setBaseFontSize('largeText', 1);"
                                           title="Large Text"
                                           i18n:attributes="title title_large_text;"
@@ -44,7 +44,7 @@
                                           title="Small Text"
                                           i18n:attributes="title title_small_text;"
                                           i18n:translate="small_text">Small</a></li>
-    </ul></ul>
+    </ul>
                                               
 <br />
     <p>
