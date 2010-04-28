@@ -85,56 +85,58 @@
         </div>
     </form>
 
+    <ul>
+	    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+	    <li><a accesskey="1" href=""
+	       tal:attributes="href string:${view/portal_url}/"
+	       i18n:attributes="title inici"
+	       i18n:domain="upc.genwebupc"
+	       i18n:translate="inici"> 
+	       Inici 
+	    </a></li>
 
-    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
-    <a accesskey="1" href=""
-       tal:attributes="href string:${view/portal_url}/"
-       i18n:attributes="title inici"
-       i18n:domain="upc.genwebupc"
-       i18n:translate="inici"> 
-       Inici 
-    </a>
 
+	    <tal:block repeat="saction view/site_actions"
+		tal:attributes="id string:siteaction-${saction/id}">
+		
+		<img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
+		<li><a
+		   href=""
+		   tal:define="title saction/title;
+		               id saction/id;
+		               accesskey python: accesskeys.get(id, '');"
+		   i18n:attributes="title"
+		   i18n:translate=""
+		   tal:content="title"
+		   tal:attributes="href saction/url;
+		                   title title;
+		                   accesskey accesskey;"
+		   >Site action</a></li>
+	     </tal:block>
 
-    <tal:block repeat="saction view/site_actions"
-        tal:attributes="id string:siteaction-${saction/id}">
-        
-        <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
-        <a
-           href=""
-           tal:define="title saction/title;
-                       id saction/id;
-                       accesskey python: accesskeys.get(id, '');"
-           i18n:attributes="title"
-           i18n:translate=""
-           tal:content="title"
-           tal:attributes="href saction/url;
-                           title title;
-                           accesskey accesskey;"
-           >Site action</a>
-     </tal:block>
+	    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
+	    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
+		tal:condition="here/portal_membership/isAnonymousUser"/>
+	    <li
+	       tal:condition="here/portal_membership/isAnonymousUser">
+	       <a href=""
+	       tal:attributes="href here/cas_login_url"
+	       i18n:attributes="title identificat"
+	       i18n:domain="upc.genwebupc"
+	       i18n:translate="identificat"> 
+	       Identifica't
+	    </a></li>
+	    </tal:identificacio>
 
-    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
-    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
-        tal:condition="here/portal_membership/isAnonymousUser"/>
-    <a href=""
-       tal:condition="here/portal_membership/isAnonymousUser"
-       tal:attributes="href here/cas_login_url"
-       i18n:attributes="title identificat"
-       i18n:domain="upc.genwebupc"
-       i18n:translate="identificat"> 
-       Identifica't
-    </a>
-    </tal:identificacio>
-
-    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
-    <a accesskey="5" href=""
-       tal:attributes="href string:${view/portal_url}/search_form"
-       i18n:attributes="title cercaavancada"
-       i18n:translate="cercaavancada"
-       i18n:domain="upc.genwebupc">  
-       Cerca Avançada 
-    </a>
+	    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+	    <li><a accesskey="5" href=""
+	       tal:attributes="href string:${view/portal_url}/search_form"
+	       i18n:attributes="title cercaavancada"
+	       i18n:translate="cercaavancada"
+	       i18n:domain="upc.genwebupc">  
+	       Cerca Avançada 
+	    </a>&nbsp;</li>
+   </ul>
 
    </div>
 
