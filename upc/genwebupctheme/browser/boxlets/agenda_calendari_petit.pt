@@ -153,7 +153,8 @@
                                     ></strong></td
                                     ><tal:notdayevent tal:condition="not: day_event"
                                         ><td tal:condition="python:is_today"
-                                             class="todaynoevent"><strong 
+                                             class="todaynoevent"><strong
+					     tal:attributes="title daynumber"
                                              tal:content="daynumber">31</strong></td
                                         ><td tal:condition="python:not is_today"
                                              tal:content="daynumber">31</td
