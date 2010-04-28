@@ -86,7 +86,7 @@
     </form>
 
     <ul>
-	    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+	    <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
 	    <li><a accesskey="1" href=""
 	       tal:attributes="href string:${view/portal_url}/"
 	       i18n:attributes="title inici"
@@ -99,7 +99,7 @@
 	    <tal:block repeat="saction view/site_actions"
 		tal:attributes="id string:siteaction-${saction/id}">
 		
-		<img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
+		<img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
 		<li><a
 		   href=""
 		   tal:define="title saction/title;
@@ -115,7 +115,7 @@
 	     </tal:block>
 
 	    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
-	    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
+	    <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
 		tal:condition="here/portal_membership/isAnonymousUser"/>
 	    <li
 	       tal:condition="here/portal_membership/isAnonymousUser">
@@ -128,7 +128,7 @@
 	    </a></li>
 	    </tal:identificacio>
 
-	    <img alt="separador" class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+	    <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
 	    <li><a accesskey="5" href=""
 	       tal:attributes="href string:${view/portal_url}/search_form"
 	       i18n:attributes="title cercaavancada"
