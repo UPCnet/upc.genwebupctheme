@@ -1,5 +1,6 @@
 <tal:block tal:define="entries view/getRSS;
                        toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                       utils context/@@upc.genweb.utils;
                        plone_view context/@@plone;
                        news_items view/published_news_items"
            tal:condition="entries"
@@ -59,6 +60,7 @@
 				              <span tal:replace="entry/title | nothing">
 				              Notícies RSS
 				              </span>
+					      <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc">
 				          </a>
 				      </li>
 				     </ul>

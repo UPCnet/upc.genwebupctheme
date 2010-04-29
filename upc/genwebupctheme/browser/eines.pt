@@ -1,4 +1,5 @@
-<tal:block i18n:domain="plone">
+<tal:block tal:define="utils context/@@upc.genweb.utils;"
+	               i18n:domain="plone">
 
 <!-- Eliminades les caixes de login pel CAS -->
 <!--
@@ -7,7 +8,7 @@
      tal:condition="view/show"> 
 
     <div class=""
-        tal:define="ac_name view/login_name;
+        tal:define="ac_name view/login_name;                   
                     ac_password view/login_password">
         <form action="login_form"
               name="loginform"
@@ -69,8 +70,9 @@
 </tal:identificacio>
 -->
 <!--  PERSONAL BAR  -->
+
 <div id="portal-personaltools-wrapper"
-     tal:condition="not:view/show"
+     tal:condition="not:view/show"         
      i18n:domain="upc.genwebupc">
 
   <b class="hiddenStructure" i18n:domain="plone" i18n:translate="heading_personal_tools">Personal tools</b> 
@@ -113,10 +115,9 @@
     Preferences</a>
      |
     <span>
-    <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="newwindow"
-       i18n:translate="genweb-ajuda"
-       i18n:attributes="title genweb-ajuda">
-       Help
+    <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="newwindow">
+       <span i18n:translate="genweb-ajuda" i18n:attributes="title genweb-ajuda">Help</span>
+       <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc">  
      </a>
      |
     </span>

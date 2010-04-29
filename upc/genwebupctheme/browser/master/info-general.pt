@@ -14,7 +14,7 @@
 		<metal:main fill-slot="main">
 		    <tal:main-macro metal:define-macro="main"
        			tal:define="langtool nocall:context/portal_languages;
-                  			lang_code langtool/getPreferredLanguage;
+                  			lang_code langtool/getPreferredLanguage;                                       
                   			global utils context/@@upc.genweb.utils;">
 		
 		
@@ -114,7 +114,8 @@
 					               <span tal:repeat="organitzadors python:utils.select_organitzadors(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
 
 					                     <div><a tal:attributes="href python: utils.recuperaLinkUnitats(str(organitzadors['uu.id_unitat']),lang_code)" target="newwindow"
-					                             tal:content="python: organitzadors['uu.nom_'+utils.cambiaPrefijo(lang_code)]">UPC</a>
+					                             tal:content="python: organitzadors['uu.nom_'+utils.cambiaPrefijo(lang_code)]">UPC
+								  </a>
 					                     <span tal:condition="python:organitzadors['uu.sigles']"
 					                           tal:content="python:'  ('+organitzadors['uu.sigles']+')'"
 					                           tal:omit-tag="">sigles</span></div>

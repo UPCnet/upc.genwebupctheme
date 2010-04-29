@@ -1632,3 +1632,8 @@ dt.contenttype-servei{
 #baners{margin-left:25px !important; }
 
 #login-form dl#history .collapsibleHeader {display:block; line-height:2em; background:transparent url(treeCollapsed.gif) no-repeat scroll 10px 50%;}
+
+/* Imatge que afegim als links externs */
+img.link_blank {float:none !important; margin-top:0 !important;}
+.portletNavigationTree img.link_blank_navegacio {display:inline;}
+

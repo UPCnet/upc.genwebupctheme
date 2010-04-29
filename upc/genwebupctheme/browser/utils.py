@@ -604,4 +604,16 @@ class utilitats(BrowserView):
         portal_skins=getToolByName(self.context, 'portal_skins')
         return portal_skins.getDefaultSkin()
 
-    
+    def assignAltAcc(self):
+        """ Assignar alt per accessibilitat a links en finestra nova
+        """
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+        url = ''
+        if idioma == 'ca':
+            label = "Obriu l'enllaç en una finestra nova"
+        if idioma == 'es':
+            label = "Abrir el enlace en una nueva ventana"
+        if idioma == 'en':
+            label = "Open link in new window"      
+        return label             
