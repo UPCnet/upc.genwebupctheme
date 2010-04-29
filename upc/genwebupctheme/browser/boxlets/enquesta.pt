@@ -33,7 +33,7 @@
 	       tal:attributes="href poll/url">The title</a>
 	  </legend>
 -->
-	  <a href="" tal:attributes="href poll/url"><h5 tal:content="poll/question">Question</h5></a>
+	  <h5><a href="" tal:attributes="href poll/url" tal:content="poll/question">Question</a></h5>
 
 	  <form action="vote" name="results" method="post" enctype="multipart/form-data"
 	        tal:define="portal_url view/portal_url"
@@ -49,7 +49,7 @@
 		  tal:define="elt_id string:popoll_cb_${repeat/poll/index}_${repeat/choice/index}"
 		  tal:attributes="value repeat/choice/index;
 				  id string:popoll_cb_${repeat/poll/index}_${repeat/choice/index};
-				  type poll/input_widget">
+				  type poll/input_widget" />
 	      <label tal:attributes="for string:popoll_cb_${repeat/poll/index}_${repeat/choice/index}"
 	             tal:content="python:choice[0]">Choice</label>
 		<tal:results tal:condition="poll/show_results">
