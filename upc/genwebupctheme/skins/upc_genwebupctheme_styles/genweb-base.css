@@ -1156,6 +1156,13 @@ dl dt span.summary {
 	display:none;}
 .template-folder_extended #content dl dt .documentByLine, .template-folder_listing #content dl dt .documentByLine {
 	display:block;}
+
+.template-folder_extended #content img.link_blank {		
+	display:inline;}
+
+.template-folder_listing #content img.link_blank {		
+	display:inline;}
+
 .ultimamodificacio{
 	margin-top:5px;
 	padding-top:5px;

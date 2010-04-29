@@ -12,6 +12,7 @@
     <metal:main-macro define-macro="main"
                       tal:define="kssClassesView context/@@kss_field_decorator_view;
                                   getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
+                                  utils context/@@upc.genweb.utils;
                                   templateId template/getId">
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
@@ -92,14 +93,14 @@
                         <span class=""
                               tal:attributes="class string:$item_type_class"
                               tal:condition="python:item_type == 'Link' and item_finestranova">
-                                   
+                                  
                             <a href="#" target="_newwindow"
-                               class="link-plain"
-                               tal:content="item_title_or_id"
+                               class="link-plain">
+                               <span tal:content="item_title_or_id"
                                tal:attributes="href item/getRemoteUrl;
                                                class string:${item_wf_state_class} link-plain">
-                                External Link
-                            </a>
+                                External Link</span>
+                            <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>
                         </span>
 						<br />
                         <span class="documentByLine">
