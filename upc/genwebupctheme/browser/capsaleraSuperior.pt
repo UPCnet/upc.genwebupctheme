@@ -11,7 +11,7 @@
     <form name="searchform"
           action="http://cercador.upc.edu/cercaUPC/search">
 
-        <label for="searchGadget" class="hiddenStructure"
+        <label for="searchGadget" class="goout"
                     i18n:translate="text_search">Search Site</label>
 
         <!-- cerca 1: cerca de plone --> 
@@ -67,7 +67,7 @@
 	 	        <input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;"  
 	 	               name="CheckCercaNoLSBox" id="CheckCercaNoLSBox" type="checkbox" value="1"  
 	 	               onFocus="javascript:mostram(); return false;" />Cerca a la Intranet</label> 
-	 	        <label for="searchIntranetGadget" class="hiddenStructure" 
+	 	        <label for="searchIntranetGadget" class="goout" 
 	 	                    i18n:translate="text_search">Search Intranet</label> 
 	 	 
 	 	          <input name="" 
