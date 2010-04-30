@@ -1648,3 +1648,13 @@ img.link_blank {float:none !important; margin-top:0 !important;}
 font-weight:bold;
 color:#000000;
 }
+
+.logo_Master {
+border: 0 !important;
+width:172 !important;
+height:65 !important;
+}
+
+.noborder {
+border: 0 !important;
+}

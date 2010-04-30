@@ -12,7 +12,7 @@
 <table>
     <tbody>
         <tr valign="bottom">	
-            <td width="155"> 
+            <td> 
             	<div class="titolBranca_m" 
             		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')"
             	     tal:content="python: utils.fields2Dic(utils.getGWConfig().ambitdoctorat_ca,utils.getGWConfig().ambitdoctorat_es,utils.getGWConfig().ambitdoctorat_en)['doc_'+lang_code]">Titol de capsalera del master

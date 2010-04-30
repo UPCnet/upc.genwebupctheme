@@ -9,7 +9,7 @@
         <!-- MASTERS -->
         <!-- titol en catala -->
         <!--<a href="" tal:attributes="href python: 'http://mastersuniversitaris.upc.edu'">-->
-            <img title="Màsters Universitaris" alt="Màsters Universitaris" border="0" usemap="#MapaMastersCA"
+            <img class="noborder" title="Màsters Universitaris" alt="Màsters Universitaris" usemap="#MapaMastersCA"
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="
                                 src string:${portal_url}/logo_masters_ca.gif" />
@@ -19,7 +19,7 @@
     		</map> 
         <!-- titol en castella -->
         <!--<a href="" tal:attributes="href python: 'http://mastersuniversitarios.upc.edu'">-->
-            <img title="Másters Universitarios" alt="Másters Universitarios" border="0" usemap="#MapaMastersES"
+            <img class="noborder" title="Másters Universitarios" alt="Másters Universitarios" usemap="#MapaMastersES"
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="
                                 src string:${portal_url}/logo_masters_es.gif" />
@@ -29,7 +29,7 @@
     		</map>                          
         <!-- titol en angles -->
         <!--<a href="" tal:attributes="href python: 'http://mastersdegrees.upc.edu'">-->
-            <img title="Master's Degrees" alt="Master's Degrees" border="0" usemap="#MapaMastersEN"             
+            <img class="noborder" title="Master's Degrees" alt="Master's Degrees" usemap="#MapaMastersEN"             
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="
                                 src string:${portal_url}/logo_masters_en.gif" />
@@ -44,7 +44,7 @@
         <!-- DOCTORAT -->
         <!-- titol en catala -->
         <!--<a href="" tal:attributes="href python: 'http://doctorat.upc.edu'">-->
-            <img alt="Doctorat" title="Doctorat" border="0" usemap="#MapaDoctoratCA"
+            <img class="noborder" alt="Doctorat" title="Doctorat" usemap="#MapaDoctoratCA"
                tal:condition="python:utils.pref_lang()=='ca'"
                tal:attributes="
                                 src string:${portal_url}/logo_doctorat_ca.gif" />
@@ -54,7 +54,7 @@
     		</map> 
         <!-- titol en castella -->
         <!--<a href="" tal:attributes="href python: 'http://doctorado.upc.edu'">-->
-            <img alt="Doctorado" title="Doctorado" border="0" usemap="#MapaDoctoratES"
+            <img class="noborder" alt="Doctorado" title="Doctorado" usemap="#MapaDoctoratES"
                tal:condition="python:utils.pref_lang()=='es'"
                tal:attributes="
                                 src string:${portal_url}/logo_doctorat_es.gif" />
@@ -64,7 +64,7 @@
     		</map>                              
         <!-- titol en angles -->
         <!--<a href="" tal:attributes="href python: 'http://doctorate.upc.edu'">-->
-            <img alt="Doctorate" title="Doctorate" border="0" usemap="#MapaDoctoratEN"             
+            <img class="noborder" alt="Doctorate" title="Doctorate" usemap="#MapaDoctoratEN"             
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="
                                 src string:${portal_url}/logo_doctorat_en.gif" />
@@ -78,7 +78,7 @@
     <span tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">
         <!-- MASTERS I DOCTORAT -->
         <!-- titol en catala -->
-	    <img title="Màsters Universitaris i Doctorat" alt="Màsters Universitaris i Doctorat" width="172" height="65" border="0" usemap="#MapaMDCA"
+	    <img class="logo_Master" title="Màsters Universitaris i Doctorat" alt="Màsters Universitaris i Doctorat" usemap="#MapaMDCA"
 	       tal:condition="python:utils.pref_lang()=='ca'"
 	       tal:attributes="
 	                        src string:${portal_url}/logo_masters_doctorat_ca.gif" />                      
@@ -87,7 +87,7 @@
 		<area shape="poly" coords="57,16,56,27,169,27,169,9,168,4,76,4,76,16"  href="http://mastersuniversitaris.upc.edu" target="_blank" alt="Màsters Universitaris" title="Màsters Universitaris" />
 		</map>
         <!-- titol en castella -->
-        <img title="Màsters Universitaris i Doctorat" alt="Másters Universitarios y Doctorado" width="172" height="65" border="0" usemap="#MapaMDES"
+        <img class="logo_Master" title="Màsters Universitaris i Doctorat" alt="Másters Universitarios y Doctorado" usemap="#MapaMDES"
            tal:condition="python:utils.pref_lang()=='es'"
            tal:attributes="
                             src string:${portal_url}/logo_masters_doctorat_es.gif" />     
@@ -96,7 +96,7 @@
 		<area shape="poly" coords="49,16,49,27,169,27,169,9,168,4,76,4,76,16" href="http://mastersuniversitarios.upc.edu" target="newwindow" title="Másters Universitarios" alt="Másters Universitarios" />
 		</map>                        
         <!-- titol en angles -->
-        <img title="Master's Degrees and Doctorate" alt="Master's Degrees and Doctorate" width="172" height="65" border="0" usemap="#MapaMDEN"             
+        <img class="logo_Master" title="Master's Degrees and Doctorate" alt="Master's Degrees and Doctorate" usemap="#MapaMDEN"             
            tal:condition="python:utils.pref_lang()=='en'"
            tal:attributes="
                             src string:${portal_url}/logo_masters_doctorat_en.gif" />
