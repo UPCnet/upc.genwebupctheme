@@ -33,7 +33,7 @@
 	       tal:attributes="href poll/url">The title</a>
 	  </legend>
 -->
-	  <h5><a href="" tal:attributes="href poll/url" tal:content="poll/question">Question</a></h5>
+	  <a href="" tal:attributes="href poll/url" tal:content="poll/question">Question</a>
 
 	  <form action="vote" name="results" method="post" enctype="multipart/form-data"
 	        tal:define="portal_url view/portal_url"
