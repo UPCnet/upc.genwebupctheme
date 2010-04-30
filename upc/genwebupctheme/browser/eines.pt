@@ -17,9 +17,9 @@
      
     
    <tal:block>
-       <li><b><span i18n:translate="genweb-usuari_connectat">
+       <li><span class="negreta" i18n:translate="genweb-usuari_connectat">
         User:
-     </span></b> <a 
+     </span> <a 
            id="user-name"                  
            tal:attributes="href view/homelink_url">           
            <span class="visualCaseSensitive"
@@ -27,11 +27,11 @@
    </tal:block>
    
 <li>
-    <b>
-     <span i18n:translate="genweb-opcionspathbar">
+    
+     <span class="negreta" i18n:translate="genweb-opcionspathbar">
         Options:
      </span>
-    </b>
+    
     <span>
     <span tal:condition="view/canSeeToolLink">
     <a  

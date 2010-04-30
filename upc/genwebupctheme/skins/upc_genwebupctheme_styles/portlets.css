@@ -376,6 +376,7 @@ height: 4px;
 background-color:#E8E2DF; 
 padding: 0px; 
 font-size:0.05em;
+text-align:center !important;
 }
 
 #calendar_text {

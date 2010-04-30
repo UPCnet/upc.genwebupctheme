@@ -1644,3 +1644,7 @@ dt.contenttype-servei{
 img.link_blank {float:none !important; margin-top:0 !important;}
 .portletNavigationTree img.link_blank_navegacio {display:inline;}
 
+.negreta {
+font-weight:bold;
+color:#000000;
+}
