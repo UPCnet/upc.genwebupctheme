@@ -92,7 +92,8 @@ please contact the </span><span><a href="/contact-info"
         <li i18n:translate="accesskey_contact"><code>9</code> &mdash; Contact information</li>
         <li i18n:translate="accesskey_accesskey_details"><code>0</code> &mdash; Access Key details</li>
     </ul>
-<p>&nbsp;</p>
+
+    <br/>
 
     <div class="titular2"><h3><span i18n:translate="genweb-heading_accessibility_statement">Accessibility statement</span></h3></div>
 
