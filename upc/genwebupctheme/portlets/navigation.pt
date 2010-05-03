@@ -2,7 +2,7 @@
 
 <!-- irene -->
     <div class="titolSeccio" tal:define="utils context/@@upc.genweb.utils">
-        <div class="textetSeccioneta"><span tal:replace="structure utils/getSectionFromURL">Seccio</span></div>
+        <div class="textetSeccioneta"><h2><span tal:replace="structure utils/getSectionFromURL">Seccio</span></h2></div>
     </div>
     <div class="flotaTapa"></div>
 
