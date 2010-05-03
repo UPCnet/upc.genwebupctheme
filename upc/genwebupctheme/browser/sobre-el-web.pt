@@ -64,7 +64,7 @@ please contact the </span><span><a href="/contact-info"
        tal:attributes="href string:${portal_url}/contact-info">webmaster</a></span>.
     </p>
     <br />
-    <div class="titular2" i18n:translate="genweb-heading_access_keys">Access keys</div>
+    <div class="titular2"><h3><span i18n:translate="genweb-heading_access_keys">Access keys</span></h3></div>
 
     <div i18n:translate="description_access_keys">
     Access keys are a navigation device enabling you to get around this web site using your keyboard.
@@ -76,7 +76,7 @@ please contact the </span><span><a href="/contact-info"
     </div>
 
 
-    <div class="titular3" i18n:translate="heading_available_access_keys">Available access keys</div>
+    <div class="titular3"><h4> <span i18n:translate="heading_available_access_keys">Available access keys</span></h4></div>
 
     <p i18n:translate="description_available_access_keys">This site uses a setup that closely matches most international 
        recommendations on access keys. These are: 
@@ -94,7 +94,7 @@ please contact the </span><span><a href="/contact-info"
     </ul>
 <p>&nbsp;</p>
 
-    <div class="titular2" i18n:translate="genweb-heading_accessibility_statement">Accessibility statement</div>
+    <div class="titular2"><h3><span i18n:translate="genweb-heading_accessibility_statement">Accessibility statement</span></h3></div>
 
     <p i18n:translate="genweb-description_accessibility_statement">
     We have undertaken to use our knowledge and understanding of 
@@ -102,7 +102,7 @@ please contact the </span><span><a href="/contact-info"
     that is clear and simple for everybody to use.
     </p>
 
-    <div class="titular3" i18n:translate="heading_validation">Validation</div>
+    <div class="titular3"><h4> <span i18n:translate="heading_validation">Validation</span></h4></div>
 
     <p i18n:translate="genweb-description_validation">
     We have used XHTML 1.0 and CSS that conforms to 
