@@ -1,9 +1,9 @@
 <tal:block i18n:domain="plone">
 
 <!-- irene -->
-    <div class="titolSeccio" tal:define="utils context/@@upc.genweb.utils">
-        <div class="textetSeccioneta"><h2><span tal:replace="structure utils/getSectionFromURL">Seccio</span></h2></div>
-    </div>
+    <h2 class="titolSeccio" tal:define="utils context/@@upc.genweb.utils">
+        <span class="textetSeccioneta" tal:replace="structure utils/getSectionFromURL">Seccio</span>
+    </h2>
     <div class="flotaTapa"></div>
 
 <!-- fi irene -->
