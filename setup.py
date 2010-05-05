@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '3.2.1'
+version = '3.2'
 
 setup(name='upc.genwebupctheme',
       version=version,
@@ -27,10 +27,10 @@ setup(name='upc.genwebupctheme',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          'Products.PlonePopoll',
-          'Products.LinguaPlone',
-          'Products.Poi',
-          'Products.FCKEditor',
+#          'Products.PlonePopoll',
+#          'Products.LinguaPlone',
+#          'Products.Poi',
+#          'Products.FCKEditor',
       ],
       entry_points="""
       # -*- Entry points: -*-
