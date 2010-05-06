@@ -16,7 +16,7 @@
 		        <li tal:repeat="entry entries">
 		            <a href=""
 		                tal:attributes="title entry/summary | nothing;
-		                           href entry/url | nothing" target=newwindow>
+		                           href entry/url | nothing" target="_blank">
 		                <span tal:replace="entry/title | nothing">
 		                Notícies RSS
 		                </span>

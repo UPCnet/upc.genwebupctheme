@@ -2,7 +2,7 @@
 
 
 <div class="banda">
-        <img alt="banda" tal:attributes="src string:${portal_url}/banda.gif"/>
+        <img alt=" " tal:attributes="src string:${portal_url}/banda.gif"/>
 </div>
 
 

@@ -23,7 +23,7 @@
                               >Language          
                     </a>
                 <span tal:condition="not:repeat/lang/end">  
-                    <img class="quadradet" alt="separador" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+                    <img class="quadradet" alt=" " tal:attributes="src string:${portal_url}/quadradet.gif"/>
                 </span>                      
 <!--                </id>-->
               </span> 

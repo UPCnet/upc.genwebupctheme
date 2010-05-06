@@ -17,7 +17,7 @@
           	          <a href=""
              	          tal:define="utils context/@@upc.genweb.utils"
              	          tal:attributes="href view/rss_news_link">RSS
-            	          <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+            	          <img src="rss.gif" alt=" " /> 
          	           </a>
 		      	  </span>
 		      	  <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span>
@@ -55,7 +55,7 @@
 		        <li tal:repeat="entry entries">
 		            <a href=""
 		                tal:attributes="title entry/summary | nothing;
-		                           href entry/url | nothing" target=newwindow>
+		                           href entry/url | nothing" target="_blank">
 		                <span tal:replace="entry/title | nothing">
 		                Notícies RSS
 		                </span>

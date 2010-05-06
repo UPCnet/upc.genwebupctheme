@@ -24,7 +24,7 @@
            	</td> 
             
             <td class="imatgeCapcalera_m">
-                <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg; alt python: data['ua.nom_'+utils.cambiaPrefijo(lang_code)]"/>
+                <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg" alt=" "/>
             </td>
         </tr>
     </tbody>

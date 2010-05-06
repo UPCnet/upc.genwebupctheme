@@ -18,10 +18,14 @@
 
                          
     <div class="logo">
+
+
         <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya. BarcelonaTech" alt="Universitat Politècnica de Catalunya. BarcelonaTech"       
         tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
         
-        <map name="logoUPC" id="logoUPC"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya. BarcelonaTech" title="Universitat Politècnica de Catalunya. BarcelonaTech" /></map>
+        <map name="logoUPC" id="logoUPC">
+		<area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya. BarcelonaTech" title="Universitat Politècnica de Catalunya. BarcelonaTech" />
+	 </map>
         <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
           <span tal:condition="python: utils.getGWConfig().enllaslogotip">
             <!-- titol en catala -->
@@ -48,6 +52,7 @@
 
 
     <div class="titolWeb">
+	<h1>
         <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
             <img tal:attributes="src string:${portal_url}/titolWeb_ca.gif;
@@ -65,6 +70,7 @@
                                                             title python: utils.getGWConfig().titolespai_en"               
                tal:condition="python:utils.pref_lang()=='en'"/>
         </a>
+	</h1>
     </div>
 
 

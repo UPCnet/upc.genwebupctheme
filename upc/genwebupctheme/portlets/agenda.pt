@@ -85,7 +85,7 @@
         <tr class="arrodonimentTR">
             <td class="arrodonimentTD" colspan="7">
                 <img class="imgCA" src="daltCalendari.gif"
-                    tal:attributes="alt view/monthName;"/>
+                    alt=" "/>
             </td>
         </tr>
       </thead>

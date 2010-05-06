@@ -8,7 +8,7 @@
      <span class="icoRSS">
        <a href=""
           tal:attributes="href view/url">RSS
-          <img src="rss.gif" alt="Sindicaci&oacute; RSS" /> 
+          <img src="rss.gif" alt=" " /> 
        </a>
      </span>
      <a href=""

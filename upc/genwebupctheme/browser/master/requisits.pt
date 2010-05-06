@@ -29,16 +29,22 @@
 						<span tal:condition="python: data['acces_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
 					
 							<!-- en català -->
+
 			                    <span tal:condition="python:lang_code=='ca'" tal:omit-tag=""><span class="negreta">Requisits generals</span><br />
-			                    Vegeu <a href="http://www.upc.edu/aprendre/estudis/acces/masters_universitaris_quecalfer#regs_academics_mu" target="newwindow">complir els requisits acadèmics d'accés a un Màster Universitari <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>.</span>
+			                    Vegeu <a href="http://www.upc.edu/aprendre/estudis/acces/masters_universitaris_quecalfer#regs_academics_mu" target="_blank">complir els requisits acadèmics d'accés a un Màster Universitari <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>.</span>
+
 		
 							<!-- en espanyol -->
+
 		                        <span tal:condition="python:lang_code=='es'" tal:omit-tag=""><span class="negreta">Requisitos generales</span><br />
-		                        Ver <a href="http://www.upc.edu/aprender/estudios/acceso/masters-universitarios-queserequiere#regs_academicos_mu" target="newwindow">cumplir los requisitos académicos de acceso a un Máster Universitario <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>.</span>
+		                        Ver <a href="http://www.upc.edu/aprender/estudios/acceso/masters-universitarios-queserequiere#regs_academicos_mu" target="_blank">cumplir los requisitos académicos de acceso a un Máster Universitario <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>.</span>
+
 							
 							<!-- en anglès -->
+
 		                        <span tal:condition="python:lang_code=='en'" tal:omit-tag=""><span class="negreta">General requirements</span><br />
-		                        See <a href="http://www.upc.edu/master/requisits_ing.php" target="newwindow">academic regulations <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>.</span>
+		                        See <a href="http://www.upc.edu/master/requisits_ing.php" target="_blank">academic regulations <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>.</span>
+
 
                             <br /><br />
 

@@ -113,7 +113,7 @@
 					            <td>
 					               <span tal:repeat="organitzadors python:utils.select_organitzadors(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
 
-					                     <div><a tal:attributes="href python: utils.recuperaLinkUnitats(str(organitzadors['uu.id_unitat']),lang_code)" target="newwindow"
+					                     <div><a tal:attributes="href python: utils.recuperaLinkUnitats(str(organitzadors['uu.id_unitat']),lang_code)" target="_blank"
 					                             tal:content="python: organitzadors['uu.nom_'+utils.cambiaPrefijo(lang_code)]">UPC
 								  </a>
 					                     <span tal:condition="python:organitzadors['uu.sigles']"
@@ -157,13 +157,13 @@
 					            <!-- Si no son universitats externes -->
 					                             <div tal:repeat="externes python: utils.select_tipus(participants['uu.id_unitat'])">
 					                                  <a tal:condition="python:externes['sut.id id']!=14"
-					                                     tal:attributes="href python: utils.recuperaLinkUnitats(str(participants['uu.id_unitat']),lang_code)" target="newwindow"
+					                                     tal:attributes="href python: utils.recuperaLinkUnitats(str(participants['uu.id_unitat']),lang_code)" target="_blank"
 					                                     tal:content="python: participants['uu.nom_'+utils.cambiaPrefijo(lang_code)]">universitat</a>
 					
 					            <!-- Si son universitats externes -->
 					  
 					                                  <a tal:condition="python:(externes['sut.id id']==14) and (externes['web']!='http://')"
-					                                     tal:attributes="href python:externes['web']" target="newwindow"
+					                                     tal:attributes="href python:externes['web']" target="_blank"
 					                                     tal:content="python: participants['uu.nom_'+utils.cambiaPrefijo(lang_code)]">universitat</a>
 					
 					                                  <span tal:condition="python:(externes['sut.id id']==14) and (externes['web']=='http://')"
@@ -235,14 +235,14 @@
 					<!--
 					        <tr tal:condition="python: data['m_web']">
 					            <td class="titular2">Web</td>
-					            <td><a tal:attributes="href python: data['m_web']" target="newwindow" tal:content="python: data['m_web']">www.upc.edu</a></td>
+					            <td><a tal:attributes="href python: data['m_web']" target="_blank" tal:content="python: data['m_web']">www.upc.edu</a></td>
 					        </tr>
 					-->
 					        <tr tal:condition="python: data['m_email']">
 					            <td class="titular2" tal:content="python: utils.getTextMaster('a_e',lang_code)">a_e</td>
 					            <td>
 					               <tal:repe tal:repeat="mail python: data['m_email'].split(';')">
-					                                 <div><a tal:attributes="href python:'mailto:'+ mail" target="newwindow"
+					                                 <div><a tal:attributes="href python:'mailto:'+ mail" target="_blank"
 					                                     tal:content="python:mail">www@edu</a>
 					                                 </div>
 					                                 </tal:repe>

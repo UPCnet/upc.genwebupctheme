@@ -139,6 +139,7 @@
         </a>
     </div>
     <div class="titolWeb_m">
+	<h1>
         <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
             <img src="titolWebMaster_ca.gif"               
@@ -153,8 +154,7 @@
                tal:condition="python:utils.pref_lang()=='en'"
                tal:attributes="title python: utils.getGWConfig().titolespai_en; alt python: utils.getGWConfig().titolespai_en" />
         </a>
-        <br/>
-
+	</h1>
         <span class="cursMaster"
         		i18n:domain="upc.genwebupc"
         		i18n:translate="master_curso"></span> 

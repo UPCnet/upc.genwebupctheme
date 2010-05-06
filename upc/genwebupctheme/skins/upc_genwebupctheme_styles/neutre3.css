@@ -7,7 +7,8 @@
 	margin:17px 0 0 25px;
 	min-width:160px;
 	float:left;
-	_width:160px}
+	_width:160px;
+	min-height:45px;}
 .logoProducte {float:right;	margin:17px 0 0 25px; clear:both;}
 .logo a {
 	margin-right:3px}
@@ -16,12 +17,13 @@
 .titolWeb {
 	text-align:center;
 	margin:10px 180px 10px 180px}
+.titolWeb h1 {padding:0 !important;}
 .imatgeCapcalera{
 	width:958px;
 	height:95px;
 	text-align:right}
-.barraIdiomes{
-	padding: 75px 5px 0 0}
+.barra_idiomes{
+	clear:both;}
 #portal-personaltools {
 	font-size:0.9em;
 	background-color: transparent;
@@ -45,7 +47,8 @@
 	font-size:1em;
 	margin-top:0; 
 	padding:0; 
-	font-weight:bold;}
+	font-weight:bold;
+	clear:both;}
 #portal-globalnav li {
 	line-height: 25px;
 	display: inline;

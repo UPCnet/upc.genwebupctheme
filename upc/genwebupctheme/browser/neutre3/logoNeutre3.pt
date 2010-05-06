@@ -1,7 +1,7 @@
 <div id="logoNeutre3" tal:define="portal_url context/@@plone_portal_state/portal_url;">
 
     <div class="logoNeutre3">
-        <img alt="Imatge del Portal" tal:attributes="src string:${portal_url}/imatgeNeutre3.jpg"/>
+        <img alt=" " tal:attributes="src string:${portal_url}/imatgeNeutre3.jpg"/>
     </div>
     
 </div>

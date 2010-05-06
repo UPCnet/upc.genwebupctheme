@@ -51,6 +51,7 @@
 
 
     <div class="titolWeb_n2">
+	<h1>
         <a href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
             <img tal:attributes="src string:${portal_url}/titolWeb_ca.gif;
@@ -68,6 +69,7 @@
                                     title python: utils.getGWConfig().titolespai_en"               
                tal:condition="python:utils.pref_lang()=='en'"/>
         </a>
+	</h1>
     </div>
     
 </div>

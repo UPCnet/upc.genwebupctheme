@@ -84,7 +84,7 @@
 		
 		<!-- Planos y transportes -->
 		
-<!--	  	<span tal:condition="python: not utils.getGWConfig().boolmaps" class="contacteSpan"><img src="googleMaps.gif"/></span>-->
+<!--	  	<span tal:condition="python: not utils.getGWConfig().boolmaps" class="contacteSpan"><img alt=" " src="googleMaps.gif"/></span>-->
 <!--		<div tal:condition="python: not utils.getGWConfig().boolmaps">-->
 <!--			<a 	tal:attributes="href python: '#'"-->
 <!--				tal:content="python: 'Plànols i transports'"></a>-->
