@@ -59,9 +59,9 @@ a tool that allows to the creation and management of web pages according to the&
 <span i18n:translate="description_accessibility_info6">This site has been designed to be completely accessible and usable, working in accordance 
 with the W3C accessibility guidelines. If there is anything on this site &mdash;accessibility 
 or validation related&mdash; that is not according to this standard, 
-please contact the </span><span><a href="/contact-info" 
+please contact the </span><span><a href="/contact" 
        i18n:translate="genweb-webmaster"
-       tal:attributes="href string:${portal_url}/contact-info">webmaster</a></span>.
+       tal:attributes="href string:${portal_url}/contact">webmaster</a></span>.
     </p>
     <br />
     <div class="titular2"><h3><span i18n:translate="genweb-heading_access_keys">Access keys</span></h3></div>
@@ -110,9 +110,9 @@ please contact the </span><span><a href="/contact-info"
     specification, as laid out by the W3C because we believe 
     that usability and accessibility must have a solid foundation. 
     If anything on this web site does not validate correctly, please contact the
-    <span i18n:name="site_admin"><a href="/contact-info" 
+    <span i18n:name="site_admin"><a href="/contact" 
        i18n:translate="genweb-webmaster"
-       tal:attributes="href string:${portal_url}/contact-info">webmaster</a>
+       tal:attributes="href string:${portal_url}/contact">webmaster</a>
     </span>.
     </p>
 
@@ -143,9 +143,9 @@ please contact the </span><span><a href="/contact-info"
         University of Catalonia for the purposes of administration and to respond to the queries or suggestions 
         that users might include in these forms. <br />
         Users may exercise their right to access, rectify, cancel and oppose this data through the 
-    <span i18n:name="site_admin"><a href="/contact-info" 
+    <span i18n:name="site_admin"><a href="/contact" 
        i18n:translate="genweb-webmaster"
-       tal:attributes="href string:${portal_url}/contact-info">webmaster</a>
+       tal:attributes="href string:${portal_url}/contact">webmaster</a>
     </span>.
     </p>
 

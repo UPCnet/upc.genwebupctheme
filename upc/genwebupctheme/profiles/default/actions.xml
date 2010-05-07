@@ -3,6 +3,7 @@
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <action-provider name="portal_workflow"/>
  
+ 
 <!-- Solved: Per treure pestanya LOG -->
  <action-provider name="portal_types">
   <action title="Log" action_id="log" category="object"

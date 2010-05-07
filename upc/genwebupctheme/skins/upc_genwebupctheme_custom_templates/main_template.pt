@@ -129,7 +129,7 @@
                 <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" />
 
                 <metal:slot metal:define-slot="body">
-                <tal:comment replace="nothing">
+                <tal:comment replace="nothing"> 
                     The div with ID #content will only show up if we're actually on a content
                     view, never on edit forms, control panels etc. It's meant to only wrap the
                     actual content that gets rendered on a page, not the other UI elements.
