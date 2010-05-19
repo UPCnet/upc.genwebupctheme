@@ -92,11 +92,11 @@
                         <span class=""
                               tal:condition="python:item_type == 'Link' and item_finestranova">
                             <img tal:replace="structure item_icon/html_tag" />
-                            <a href="#" target="_newwindow"
-                               class="link-plain">
-                               <span tal:content="item_title_or_id"
+                            <a href="#" target="_newwindow" 
+                               class="link-plain" 
                                tal:attributes="href item/getRemoteUrl;
                                                class string:${item_wf_state_class} link-plain">
+                               <span tal:content="item_title_or_id">
                                 External Link</span>
                             <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>
                         </span>
