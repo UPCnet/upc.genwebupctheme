@@ -11,8 +11,7 @@
     <div metal:fill-slot="main">
     <metal:main-macro define-macro="main"
                       tal:define="kssClassesView context/@@kss_field_decorator_view;
-                                  getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;
-				  utils context/@@upc.genweb.utils;
+                                  getKssClasses nocall:kssClassesView/getKssClassesInlineEditable;				  				  
                                   templateId template/getId">
 
         <div tal:replace="structure provider:plone.abovecontenttitle" />
@@ -98,7 +97,7 @@
                                                class string:${item_wf_state_class} link-plain">
                                <span tal:content="item_title_or_id">
                                 External Link</span>
-                            <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>
+                            <img class="link_blank"  src="icon_blank.gif" i18n:domain="upc.genwebupc" i18n:attributes="alt obrir_link_finestra_nova"></a>
                         </span>
 
                         <span class=""
