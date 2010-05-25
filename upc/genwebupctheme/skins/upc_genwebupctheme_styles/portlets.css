@@ -82,10 +82,12 @@ margin-top: 5px;
 }
 
 .portletPlus{
-padding: 0px 5px 5px;
+padding: 5px 5px 5px;
 text-align:right;
 line-height: 0px;
 margin-top:0px;
+width:200px!important;
+padding-bottom:10px!important;
 }
 
 .portletPlus img{
@@ -385,6 +387,7 @@ text-align:center !important;
 
 #esdeveni_text {
      text-align: left;
+     width:200px!important; 
 }
 
 .divCarpetaTitol{
