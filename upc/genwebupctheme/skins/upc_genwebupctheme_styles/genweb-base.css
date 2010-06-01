@@ -195,6 +195,8 @@ input.searchButton {
 	padding:0 3px 2px 17px;
 	*border:0;
 	*padding:2px 0 2px 14px;}
+#CheckCercaLSBox{ margin: 0px 5px 2px; }
+
 form.searchPage input.searchButton{
 	background-position:0px 0px;
 	padding:0 3px 2px 17px;

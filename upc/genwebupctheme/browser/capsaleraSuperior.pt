@@ -8,82 +8,68 @@
 
    <div class="barraCerca">
 
-    <form name="searchform"
-          action="http://cercador.upc.edu/cercaUPC/search">         
+    <form name="searchform" action="http://cercador.upc.edu/cercaUPC/search">         
 
         <label for="searchGadget" class="goout"
                     i18n:translate="text_search">Search Site</label>
                     
-        <!-- cerca 1: cerca de plone -->  
-	    <div class="LSBox" id="LSBox">    
-	                          
-	    	<label for="CheckCercaLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">  
-            	<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;"   
-                       name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1"   
-	                   onChange="javascript:mostram(); return false;"  i18n:domain="upc.genwebupc" i18n:translate="cerca_intranet"/></label>     
-        
-        <input name="SearchableText"
-               type="text"
-               size="18"
-               value=""
-               i18n:domain="upc.genwebupc"
-               i18n:attributes="title cerca"
-               accesskey="4"
-               tal:attributes="value request/SearchableText|nothing;
-                               id view/search_input_id"
-               class="text inputLabel"
-               style="display:none;" />              
-         
-        <input name="q"  
- 		       type="text"  
- 		       size="18"  
- 		       value=""      
+<!-- cerca 1: cerca de plone si estas identificat, checkbox i input -->  
+	    <div class="LSBox" id="LSBox">
+	    	<tal:noAnonim define="utils context/@@upc.genweb.utils" condition="python: not here.portal_membership.isAnonymousUser() and utils.getGWConfig().tipusNeutre2!='Intranet'">
+				&nbsp;
+	    			<label for="CheckCercaLSBox" >
+	    				<input name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" onChange="javascript:mostram(); return false;" i18n:domain="upc.genwebupc" i18n:translate="cerca_intranet" />
+	    			</label>
+	    	</tal:noAnonim>
+	    
+	    	
+	    			&nbsp;
+        		<input name="SearchableText" type="text" size="18" value="" accesskey="4"
+               		i18n:domain="upc.genwebupc"
+               		i18n:attributes="title cerca"
+               		tal:attributes="value request/SearchableText|nothing;
+                               		id view/search_input_id"
+               		class="text inputLabel"
+               		style="display:none;" />
+               		
+			<tal:mostraIntranet define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusNeutre2=='Intranet'">
+				<script language="javascript">
+					//mostram();					
+					document.searchform.action="./search"; document.getElementById('searchGadget').style.display = '';
+				</script>
+	    </tal:mostraIntranet>               
+               
+<!-- cerca 2: cerca GSA, nomes si no es model intranet -->
+			<tal:tipusIntranet define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusNeutre2!='Intranet'">   
+              
+        <input name="q" class="text inputLabel" type="text" size="18" value=""      
  		       i18n:domain="upc.genwebupc"               
  		       i18n:attributes="title cerca_google"                                                      
- 	           accesskey="4"  
- 	           id="q"  
- 	           tal:attributes="value request/q|nothing"                                 
-               class="text inputLabel"                          
- 		       />                 
-            
- 		<input type="hidden" name="config" tal:attributes="value python: getattr(utils.getGWConfig(),'codigoogle', '')" />  
- 		<input type="hidden" name="hl" tal:attributes="value python:utils.pref_lang()" />                         
- 		<input type="hidden" name="op" value="1" />  
- 		<input type="hidden" name="ie" value="UTF-8" />  
- 		<input type="hidden" name="oe" value="UTF-8" />   
- 		  
- 		<input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search" />  
- 	   
- 		<input class="submitGo" type="submit" value ="" />  
-    
-        <div class="LSResult" id="LSResult" style="">
-            <div class="LSShadow" id="LSShadow"></div>
-        </div>
-        
-        <!-- cerca 2: cerca google -->  
- 		<div class="NoLSBox" id="NoLSBox" style="display:none;">  
- 		
- 		<label for="CheckCercaNoLSBox" style="position:absolute;margin:18px 0 0 0;font-weight:normal;">  
- 		<input style="margin:0;padding:0;border:0;background:none;width:15px;height:15px;"   
- 		       name="CheckCercaNoLSBox" id="CheckCercaNoLSBox" type="checkbox" value="1"   
- 		       onFocus="javascript:mostram(); return false;" />Cerca a la Intranet</label>  
- 	    <label for="searchIntranetGadget" class="hiddenStructure" i18n:translate="text_search">Search Intranet</label>  
- 		                  
- 		<input name=""  
- 		       type="text"  
- 		       size="18"  
- 		       value=""  
- 		       title="Cerca..."  
- 		       accesskey="4"  
- 	           id="searchIntranetGadget"  
- 		       tal:attributes="value nothing;"  
- 		       class="text inputLabel" />  
- 		                  
- 		<input class="submitGo" type="submit" value ="" />  
-        
-        </div>
-    </form>
+														accesskey="4"  
+														id="q"  
+														tal:attributes="value request/q|nothing"
+ 		     />
+ 		    </tal:tipusIntranet>
 
+
+
+
+        <input class="submitGo" type="submit" value ="" />  
+        <div class="LSResult" id="LSResult" style="">
+        <div class="LSShadow" id="LSShadow"></div>
+        
+        <input type="hidden" name="config" tal:attributes="value python: getattr(utils.getGWConfig(),'codigoogle', '')" />  
+        <input type="hidden" name="hl" tal:attributes="value python:utils.pref_lang()" />                         
+        <input type="hidden" name="op" value="1" />  
+        <input type="hidden" name="ie" value="UTF-8" />  
+        <input type="hidden" name="oe" value="UTF-8" />   
+        <input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search" />  
+	    </div>
+        
+
+    </form>
+    
+    
     <ul>
 	    
 	    <li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
@@ -97,21 +83,19 @@
 
 
 	    <tal:block repeat="saction view/site_actions"
-		tal:attributes="id string:siteaction-${saction/id}">
+		   tal:attributes="id string:siteaction-${saction/id}">
 		
 		
-		<li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
-		   <a href=""
-		   tal:define="title saction/title;
-		               id saction/id;
-		               accesskey python: accesskeys.get(id, '');"
-		   i18n:attributes="title"
-		   i18n:translate=""
-		   tal:content="title"
-		   tal:attributes="href saction/url;
+				<li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
+		   			<a href="" tal:define="title saction/title;
+		               								 id saction/id;
+		               								 accesskey python: accesskeys.get(id, '');"
+		               		 i18n:attributes="title"
+		               		 i18n:translate=""
+		               		 tal:content="title"
+		               		 tal:attributes="href saction/url;
 		                   title title;
-		                   accesskey accesskey;"
-		   >Site action</a></li>
+		                   accesskey accesskey;">Site action</a></li>
 	     </tal:block>
 
 	    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
@@ -127,17 +111,8 @@
 	       Identifica't
 	    </a></li>
 	    </tal:identificacio>
-
-	    
-	    <li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
-		<a accesskey="5" href=""
-	       tal:attributes="href string:${view/portal_url}/search_form"
-	       i18n:attributes="title cercaavancada"
-	       i18n:translate="cercaavancada"
-	       i18n:domain="upc.genwebupc">  
-	       Cerca Avançada 
-	    </a>&nbsp;</li>
    </ul>
+
 
    </div>
 	
