@@ -58,7 +58,7 @@ html*.imgUnitatsClick{
 	vertical-align:top}
 .actiuMenu{
 	height:8px;
-	border-bottom:3px solid #ff784d;
+	border-bottom:2px solid #ff784d;
 	*border-bottom:2px solid #ff784d}
 /*\*/
 html*.actiuMenu{border-bottom:2px solid #ff784d;}
@@ -72,13 +72,13 @@ html*.actiuMenu{border-bottom:2px solid #ff784d;}
 	border-right:2px solid #ff784d}
 .liniaActivaEsq{
 	float:left;
-	width:151px;
+	width:152px;
 	margin-top:-2px;
 	border-top:2px solid #ff784d;
 	font-size:0em}
 .liniaActivaDreta{
 	float:right;
-	width:151px;
+	width:152px;
 	margin-top:-2px;
 	border-top:2px solid #ff784d;
 	font-size:0em}

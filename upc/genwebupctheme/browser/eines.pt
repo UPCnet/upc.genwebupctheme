@@ -50,7 +50,7 @@
     <span>
     <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="newwindow">
        <span i18n:translate="genweb-ajuda" i18n:attributes="title genweb-ajuda">Help</span>
-       <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc">  
+       <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" />  
      </a>
      |
     </span>

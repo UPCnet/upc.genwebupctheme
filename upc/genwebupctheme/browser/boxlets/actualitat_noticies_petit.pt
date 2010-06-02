@@ -59,7 +59,7 @@
 		                <span tal:replace="entry/title | nothing">
 		                Notícies RSS
 		                </span>
-				<img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc">     
+				<img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" />     
 		            </a>
 		        </li>
 	        </ul>	        

@@ -17,7 +17,7 @@
 	    <div class="LSBox" id="LSBox">
 	    	<tal:noAnonim define="utils context/@@upc.genweb.utils" condition="python: not here.portal_membership.isAnonymousUser() and utils.getGWConfig().tipusNeutre2!='Intranet'">
 				&nbsp;
-	    			<label for="CheckCercaLSBox" >
+	    			<label for="CheckCercaLSBox" class="checkIntranet" >
 	    				<input name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" onChange="javascript:mostram(); return false;" i18n:domain="upc.genwebupc" i18n:translate="cerca_intranet" />
 	    			</label>
 	    	</tal:noAnonim>
@@ -33,9 +33,10 @@
                		style="display:none;" />
                		
 			<tal:mostraIntranet define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusNeutre2=='Intranet'">
-				<script language="javascript">
-					//mostram();					
+				<script type="text/javascript">					
+					<!--					
 					document.searchform.action="./search"; document.getElementById('searchGadget').style.display = '';
+					-->
 				</script>
 	    </tal:mostraIntranet>               
                

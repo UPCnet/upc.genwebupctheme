@@ -34,8 +34,8 @@ form{ margin: 0; }
 .titular1, #content h4, #collage h4{
 	margin: 1em 0 0.5em -1px;
 	padding:0.35em 0.2em 0.2em 0;
-	background: url(fletxaD.gif) no-repeat 0 7px;
-	*background: url(fletxaD.gif) no-repeat 0 9px;
+	background: none;
+	*background: none;
 	border-top: 2px dotted #DFE3D3; 
 	font-size:1.3em}
 .titular2, .titular2 h3, #content h5, #collage h5{
@@ -375,20 +375,7 @@ body#content a {color:#007dcc; text-decoration:none;}
 /*enllacos dreta*/
 table.enllacosDreta {width:100%;}
 table.enllacosDreta td {vertical-align:top;}
-.columnaEnllacosDreta {width:200px;}
-.columnaEnllacosDreta h2 {border-top:0px;margin:0px;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
-.columnaEnllacosDreta li {
-	list-style-image:url(quadret.gif);
-	list-style-position:outside;
-	list-style-type:disc;
-	margin:0 0 0 35px;
-	padding:5px 5px 5px 0px !important;
-	line-height:1.5em;
-	border:0px !important;}
-.columnaEnllacosDreta ul {padding-bottom:5px;}
-.columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
-.columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
-.columnaseparador20 {width:20px !important;}
+
 /*cancella classes kupu als floats imatges*/
 .image-left {
    float: left;
@@ -421,3 +408,22 @@ div.w2\3a 3 { width: 64.5%; } /* 2:3 */
 div.p1\3a 3 {margin-left: -66.7%;} /* 1:3 */
 div.p2\3a 3 {margin-left: -33.4%;} /* 2:3 */
 div.w1 { width: 97.916% }
+
+/*nova columna suport*/
+.colSupContenidor {position:relative;}
+.colSupDreta {position: absolute; right: 0; width: 200px;}
+.colSupEsq {margin-right: 220px;}
+.colSupDreta, .columnaEnllacosDreta {width:200px;}
+.colSupDreta h2, .columnaEnllacosDreta h2 {border-top:0px;margin:0px;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
+.colSupDreta li, .columnaEnllacosDreta li {
+	list-style-image:url(quadret.gif);
+	list-style-position:outside;
+	list-style-type:disc;
+	margin:0 0 0 35px;
+	padding:5px 5px 5px 0px !important;
+	line-height:1.5em;
+	border:0px !important;}
+.colSupDreta ul, .columnaEnllacosDreta ul {padding-bottom:5px;}
+.colSupDreta img, .columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
+.colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
+.columnaseparador20 {width:20px !important;}

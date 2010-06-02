@@ -196,6 +196,7 @@ input.searchButton {
 	*border:0;
 	*padding:2px 0 2px 14px;}
 #CheckCercaLSBox{ margin: 0px 5px 2px; }
+.checkIntranet{position: absolute; margin: 18px 0px 0px 3px; color: #666666;}
 
 form.searchPage input.searchButton{
 	background-position:0px 0px;
@@ -1334,6 +1335,7 @@ a img,a:hover img,a:hover br{text-decoration:none;}
 	font-size:1.75em;
 	font-weight:bold;
 	padding:15px 0 0 3px;
+	border-top:0;
 	margin-top:18px !important;
 	*margin-top:15px;}
 html*.titolSeccio{

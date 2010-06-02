@@ -40,19 +40,27 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 
-				<h2>Duis tellus</h2>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.</p>
+				<h2>In aliquam rhoncus sem</h2>
+				<p>Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
+				<br />
+				<br />
 				<h3>In aliquam rhoncus sem</h3>
 				<p>Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
-				<h4>Duis tellus</h4>
-				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.</p>
-				<h5>In aliquam rhoncus sem</h5>
-				<img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" class="imgEsquerra" />
+				<br />
+				<br />
+				<h4>In aliquam rhoncus sem</h4>
 				<p>Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
+				<br />
+				<br />
+				<h5>In aliquam rhoncus sem</h5>
+				<p>Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
+				<br />
+				<br />
 				<h6>In hac habitasse platea dictumst</h6>
-				<p>Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
-				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</p>
-				<br /><br />
+				<p>Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa.</p>
+				<br />
+				<br />
+
 			<tal:cdata replace="structure string:]]&gt;" />  
         </Html>
     </Template>
@@ -65,45 +73,67 @@
         <Description>A cada columna s'hi poden afegir altres plantilles.</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<table class="columnes" summary="dues columnes">
-				<caption>Dues columnes de text</caption>
-				    <tbody>
-				        <tr>
-				            <td>
-				            <h4>In aliquam rhoncus sem</h4>
-				            </td>
-				            <td>
-				            <h4>Ut facilisis</h4>
-				            </td>
-				        </tr>
-				        <tr>
-				            <td> Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
-				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.<br />
-				            Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis   tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum   diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est   nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id   eros. <br />
-				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst.   Donec aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus   tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</td>
-				            <td class="separadorV">               Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
-				            <h5>In aliquam rhoncus sem</h5>
-				            Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				            <h6>In hac habitasse platea dictumst</h6>
-				            Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
-				            Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.</td>
-				        </tr>
-				    </tbody>
-				</table>
+				<h2>Columnat 2 columnes</h2>
+				<div class="fila">
+					<div class="cella w1:2 p0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+					<div class="cella w1:2 p1:2">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
+				</div>
+				<div class="clearBoth"> </div>
 				<br /><br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
     </Template>   
 <!-- //// FI DUESCOLUMNES  -->
 
+<!-- COMBINACIONS COLUMNES ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Combinacions de columnes" image="++resource++upc.genwebupctheme.images/FCKTcolumnesCombinacions.png">
+        <Description>Podeu fer d'1 a 4 columnes i fusionar-les entre elles.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<h2>Columnat 4 columnes</h2>
+				<div class="fila">
+					<div class="cella w1:4 p0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+					<div class="cella w1:4 p1:4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+					<div class="cella w1:4 p2:4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+					<div class="cella w1:4 p3:4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+				</div>
+				<div class="visualClear"> </div>
+				<h2>Columnat de 4 columnes amb 2 i 3 fusionades</h2>
+				<div class="fila">
+					<div class="cella w1:4 p0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+					<div class="cella w2:4 p1:4">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</div>
+					<div class="cella w1:4 p3:4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+				</div>
+				<div class="visualClear"> </div>
+				<h2>Columnat de 3 columnes</h2>
+				<div class="fila">
+					<div class="cella w1:3 p0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+					<div class="cella w1:3 p1:3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+					<div class="cella w1:3 p2:3">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+				</div>
+				<div class="visualClear"> </div>
+				<h2>Columnat de 2 columnes amb 1, 2 i 3 fusionades</h2>
+				<div class="fila">
+					<div class="cella w3:4 p0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type book.</div>
+					<div class="cella w1:4 p3:4">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+				</div>
+				<div class="visualClear"> </div>
+				<br /><br />
+			<tal:cdata replace="structure string:]]&gt;" /> 
+        </Html>
+    </Template>   
+<!-- //// COMBINACIONS DUESCOLUMNES  -->
 
 <!-- DESTACAT ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <Template title="Destacat" image="++resource++upc.genwebupctheme.images/FCKTdestacat.png">
         <Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="textDestacat"><p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p></div>
-				<br /><br />
+				<div class="textDestacat">
+					<p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.</p>
+				</div>
+				<br />
+				<br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
     </Template>
@@ -116,8 +146,11 @@
         <Description> </Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<div class="destacatBandejat"><p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar  quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium  interdum, malesuada ac, augue.</p></div>
-				<br /><br />
+				<div class="destacatBandejat">
+					<p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar  quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium  interdum, malesuada ac, augue.</p>
+				</div>
+				<br />
+				<br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
     </Template>
@@ -131,9 +164,12 @@
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="destacatQuadres">
-				<div class="destacatQuadresDins"><p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.</p></div>
+					<div class="destacatQuadresDins">
+						<p>In aliquam rhoncus sem. Morbi dictum. Vestibulum adipiscing pulvinar quam. In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis pellentesque risus.</p>
+					</div>
 				</div>
-				<br /><br />
+				<br />
+				<br />
 			<tal:cdata replace="structure string:]]&gt;" /> 
         </Html>
     </Template>
@@ -145,54 +181,31 @@
         <Description>Afegeix enllaços i contingut de suport.</Description>
         <Html>
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
-				<table class="enllacosDreta" summary="columna suport">
-				<caption>Columna Suport</caption>
-				    <tbody>
-				        <tr>
-				            <td>
-							<!--columna esquerra-->
-				<h4>Duis tellus</h4>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.
-				<h5>In aliquam rhoncus sem</h5>
-				<img src="++resource++upc.genwebupctheme.images/mostra.jpg" alt="fotoMostra" class="imgEsquerra" />
-				Morbi dictum. Vestibulum adipiscing pulvinar quam.  In aliquam rhoncus sem. In mi erat, sodales eget, pretium interdum, malesuada  ac, augue. Aliquam sollicitudin, massa ut vestibulum posuere, massa arcu  elementum purus, eget vehicula lorem metus vel libero. Sed in dui id lectus  commodo elementum. Etiam rhoncus tortor. Proin a lorem. Ut nec velit. Quisque  varius. Proin nonummy justo dictum sapien tincidunt iaculis. Duis lobortis  pellentesque risus.
-				<h6>In hac habitasse platea dictumst</h6>
-				Nulla non orci. In egestas porttitor quam. Duis nec diam eget nibh mattis  tempus. Curabitur accumsan pede id odio. Nunc vitae libero. Aenean condimentum  diam et turpis. Vestibulum non risus. Ut consectetuer gravida elit. Aenean est  nunc, varius sed, aliquam eu, feugiat sit amet, metus. Sed venenatis odio id  eros. <br />
-				Phasellus placerat purus vel mi. In hac habitasse platea dictumst. Donec  aliquam porta odio. Ut facilisis. Donec ornare ipsum ut massa. In tellus  tellus, imperdiet ac, accumsan at, aliquam vitae, velit.
-				<br /><br />
-							<!-- ////fi columna esquerra-->
-						</td>
-						<td class="columnaseparador20"> </td>
-				            <td>
-				            <div class="columnaEnllacosDreta">
-				            <div class="dalt200"> </div>
-				            <div class="caixaPortlet">
-				            <h2>Enllaços Relacionats</h2>
-				            <ul>
-				                <li><a href="#">Enllaç primer</a></li>
-				                <li><a href="#">Enllaç segon</a></li>
-				                <li><a href="#">Enllaç tercer</a></li>
-				            </ul>
-				            <br />
-				            <h2>Bàners</h2>
-					            <a href="#"><img alt="bàner mostra"   
-					                 tal:attributes="src string:${templatesPath}bn_1.gif" /></a>
-					            <a href="#"><img alt="bàner mostra"
-					                 tal:attributes="src string:${templatesPath}bn_2.gif" /></a>
-				            <br />
-				            <h2>Enllacos Extres</h2>
-				            <ul>
-			                <li><a href="#">Enllaç primer</a></li>
-			                <li><a href="#">Enllaç segon</a></li>
-			                <li><a href="#">Enllaç tercer</a></li>
-			            </ul>
-			            </div>
-			            <div class="baix200"> </div>
-			            </div>
-			            </td>
-			        </tr>
-			    </tbody>
-			</table><br /><br />
+
+
+				<h2>Prova de l'Albert</h2>
+				<div class="colSupContenidor">
+					<div class="colSupDreta">
+						<div class="dalt200"> </div>
+						<div class="caixaPortlet">
+							<h2>Enllaços relacionats</h2>
+							<ul>
+							    <li><a href="#">Primer</a></li>
+							    <li><a href="#">Segon</a></li>
+							    <li><a href="#">Tercer</a></li>
+							</ul>
+							<br />
+							<h2>Bàners</h2>
+							<a href="#"><img src="/genweb/infoaccessibilitat/fcksamples/bn_1.gif" alt="mostra" /></a>
+							<a href="#"><img src="/genweb/infoaccessibilitat/fcksamples/bn_2.gif" alt="mostra" /></a> 				            <br />
+						</div>
+						<div class="baix200"> </div>
+					</div>
+					<div class="colSupEsq">
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+					</div>
+				</div>
+
 			<tal:cdata replace="structure string:]]&gt;" />  
         </Html>
     </Template>
@@ -241,6 +254,39 @@
     </Template>
 <!-- //// FI ENLLACOS RELACIONATS GW3  -->
 
+<!-- LLISTAT DESTACAT GW3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Enllaços destacats" image="++resource++upc.genwebupctheme.images/FCKTenllacosDestacat.png">
+        <Description>Per construir un document que conté un apartat d'enllaços destacats.</Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="llistatDestacat">
+ 		              <h2>Llistat destacat</h2>
+					<ul>
+					    <li><a href="#">JDuis tellus</a></li>
+					    <li><a href="#">Maecenas elit orci</a></li>
+					    <li><a href="#">At ipsum vitae est lacinia tincidunt</a></li>
+					</ul>
+				</div>
+				<br /><br />
+			<tal:cdata replace="structure string:]]&gt;" />  
+        </Html>
+    </Template>
+<!-- //// FI LLISTAT DESTACAT GW3  -->
+
+<!-- CONTENIDOR GW3 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <Template title="Contenidor" image="++resource++upc.genwebupctheme.images/FCKTcontenidor.png">
+        <Description> </Description>
+        <Html>
+			<tal:cdata replace="structure string:&lt;![CDATA[" />
+				<div class="gb">
+					<h2>Duis tellus</h2>
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing  elit. Duis tellus. Donec ante dolor, iaculis nec, gravida ac, cursus in, eros.  Mauris vestibulum, felis et egestas ullamcorper, <a href="javascript:;">purus nibh vehicula sem</a>, eu  egestas ante nisl non justo. Fusce tincidunt, lorem nec dapibus consectetuer,  leo orci mollis ipsum, eget suscipit eros purus in ante.</p>
+				</div>
+				<br /><br />
+			<tal:cdata replace="structure string:]]&gt;" />  
+        </Html>
+    </Template>
+<!-- //// FI LLISTAT DESTACAT GW3  -->
 
 <!-- TAULA REGISTRES FILES ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
     <Template title="Taula de registres per files" image="++resource++upc.genwebupctheme.images/FCKTtaulaR1.png">
@@ -249,7 +295,7 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<h2>Lorem vs Ipsum </h2>
 				<div class="taulaRegistres">
-				<table summary="taula registres">
+				<table summary="Detall d'estructura de la taula de registres">
 				<caption>Taula registres</caption>
 				    <tbody>
 				        <tr class="cap">
@@ -300,7 +346,7 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<h2>Lorem vs Ipsum setmanal </h2>
 				<div class="taulaRegistres">
-				<table summary="taula registres">
+				<table summary="Detall d'estructura de la taula de registres">
 				<caption>Taula resgistres</caption>
 				    <tbody>
 				        <tr class="cap">
@@ -369,7 +415,7 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 				<div class="calendari">
 				<p class="titular2">Gener 2009 </p>
-				<table summary="calendari">
+				<table summary="Detall d'estructura del calendari">
 				<caption>Calendari</caption>
 				    <tbody>
 				        <tr>
@@ -512,22 +558,18 @@
                  tal:repeat="photoNumber python:range(1,12)">
                <tal:block define="photoId python:'sampleimg%i.jpg' %photoNumber;
                                   photoUrl string:$templatesPath$photoId">
-                        <a tal:attributes="href photoUrl;
-                                           title photoId">
+                        <a tal:attributes="href photoUrl;">
                             <span class="photoAlbumEntryWrapper">
                               <img tal:attributes="src photoUrl;
-                                                   alt photoId;
-                                                   title photoId"
+                                                   alt photoId;"
                                    tal:condition="python: photoNumber not in (1, 10)"                
                                    class="estilImgPhotoAlbum1" />
                               <img tal:attributes="src photoUrl;
-                                                   alt photoId;
-                                                   title photoId"
+                                                   alt photoId;"
                                    tal:condition="python: photoNumber== 10"                
                                    class="estilImgPhotoAlbum2" />     
                               <img tal:attributes="src photoUrl;
-                                                   alt photoId;
-                                                   title photoId"
+                                                   alt photoId;"
                                    tal:condition="python: photoNumber == 1"                
                                    class="estilImgPhotoAlbum3" />                                                                    
                             </span>
@@ -565,34 +607,6 @@
       </Html>
     </Template>   
 <!-- //// FI IMATGE AMB TEXT DAMUNT LATERAL  -->
-
-
-
-<!-- IMATGE AMB TEXT DAMUNT ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// --> 
-    <Template title="Imatge amb text superposat" image="++resource++upc.genwebupctheme.images/FCKTimatgetext.png">
-      <Description> </Description>
-      <Html>
-        <tal:cdata replace="structure string:&lt;![CDATA[" />
-<center>
-<table border="0" cellspacing="0" cellpadding="0" width="5%" id="FCKTtableimatgetext" summary="imatge amb text superposat">
-				<caption>Imatge amb text superposat</caption>
-  <tr>
-    <td valign="bottom" class="emmarcada">
-            <img alt="foto mostra" id="imgAmbTrans"  
-                 tal:attributes="src string:${templatesPath}sampleimg10.jpg" />
-		<div id="FCKTdivimatgetext">
-		Illum luptatum, blandit blandit erat suscipit tincidunt feugiat molestie in ex in hendrerit elit. <a href="#">Dignissim exerci</a></div>
-                   
-          </td>
-  </tr>
-</table>
-</center>         
-		<br /><br />
-        <tal:cdata replace="structure string:]]&gt;" />        
-      </Html>
-    </Template>   
-<!-- //// FI IMATGE AMB TEXT DAMUNT  -->
-
 
 
  

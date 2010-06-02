@@ -203,7 +203,7 @@ h6.titolPortlet,
 .seleccionatMenu
 	{border-left:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 .actiuMenu
-	{border-bottom:3px solid <tal:propietat replace="e1">Especific1</tal:propietat>;
+	{border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;
 	*border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}
 /*\*/
 html*.actiuMenu{border-bottom:2px solid <tal:propietat replace="e1">Especific1</tal:propietat>;}

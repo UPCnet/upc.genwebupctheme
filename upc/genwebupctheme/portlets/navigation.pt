@@ -11,22 +11,6 @@
 
 <dl class="portlet portletNavigationTree" id="portlet-navigation-tree"  
     tal:define="root view/navigation_root">
-<!--
-    <dt class="portletHeader">
-        <span class="portletTopLeft"></span>
-        <a href="#" 
-           class="tile"
-           tal:condition="not:view/title"
-           tal:attributes="href string:${root/absolute_url}/sitemap" 
-           i18n:translate="box_navigation">Navigation</a>
-       <a href="#" 
-           class="tile"
-           tal:condition="view/title"
-           tal:attributes="href string:${root/absolute_url}/sitemap"
-           tal:content="view/title">Navigation</a>
-        <span class="portletTopRight"></span>
-    </dt>
--->
 
     <dd class="portletItem lastItem">
         <ul class="navTree navTreeLevel0">
@@ -52,8 +36,6 @@
                 SUBTREE
             </li>
         </ul>
-        <!--<span class="portletBottomLeft"></span>-->
-        <!--<span class="portletBottomRight"></span>-->
     </dd>
 </dl>
 </tal:block>
