@@ -445,12 +445,18 @@
       directory="images"
       />
 
+
     <browser:page
       for="*"
       name="contact"
       class=".contact.ContactForm"
-      permission="zope2.View"
+      permission="zope.Public"
       />
+
+      <adapter
+        for="*"
+        provides=".contact.IContactForm"
+        factory=".contact.Contact" />
 
     <browser:page
       for="*"

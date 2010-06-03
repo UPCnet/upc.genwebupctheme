@@ -102,65 +102,7 @@
 
 	<h2 i18n:translate="genweb_formContacte">Contact form</h2>
 
-		<form action="."
-		      tal:attributes="action request/URL"
-		      class="enableAutoFocus"
-		      method="post"
-		      enctype="multipart/form-data">
-		
-		<fieldset>
-		
-			<legend>Detalls dels comentaris</legend> 
-		     
-			<tal:block tal:repeat="widget view/widgets">
-	
-	            <div class="field"
-	                 tal:define="description widget/hint;
-	                             error widget/error"
-	                 tal:attributes="class python:'field'+(error and ' error' or '')">
-	  
-	                <label i18n:translate=""
-	                       tal:attributes="for widget/name"
-	                       tal:content="widget/label">
-	                    label
-	                </label>
-	
-	                <span class="fieldRequired"
-	                      title="Required"
-	                      i18n:attributes="title title_required;"
-	                      i18n:translate="label_required"
-	                      i18n:domain="plone"
-	                      tal:condition="widget/required">
-	                    (Required)
-	                </span>
-	
-	                <div class="formHelp"
-	                     i18n:translate=""
-	                     tal:content="description"
-	                     tal:condition="description">
-	                    field description
-	                </div>
-	 
-	                <div tal:condition="error"
-	                     tal:content="structure error">
-	                    The Error
-	                </div>
-	
-	                <div class="widget" tal:content="structure widget">
-	                    <input type="text"/>
-	                </div>
-	            </div>
-	
-			</tal:block>
-
-		</fieldset>
-
-		    <span tal:condition="view/availableActions">
-		        <input tal:repeat="action view/actions" 
-		               tal:replace="structure action/render" />
-		    </span>
-		
-		</form>
+    <tal:repl tal:replace="structure view/contents" />
 
 	</tal:main-macro>
 

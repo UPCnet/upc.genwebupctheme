@@ -81,22 +81,4 @@ class IgenWebControlPanel(IgenWebControlPanelSchemaGeneral, ISkinsSchema, IgenWe
     """ Marker interface de la unio del schema especific de genweb i el dels skins estandar
         de plone i segregat en la pestanya principal
     """  
-class IFormularioContact(Interface):
-    """Define the fields of our form
-    """
-    
-    nombre = zope.schema.TextLine(title=_('label_sender_fullname', default=u"Name"),
-                                        description=_("help_sender_fullname", default="Please enter your full name."),
-                                        required=True)
-                              
-    destinatario = zope.schema.TextLine(title=_('label_sender_from_address',default=u"E-Mail"),
-                                        description=_("help_sender_from_address", default="Please enter your e-mail address."),
-                                        required=True)
- 
-    asunto = zope.schema.TextLine(title=_('label_subject', default="Subject"),
-                                        description=_("help_subject", default="Please enter the subject of the message you want to send."),
-                                        required=True)
 
-    mensaje = zope.schema.Text(title=_('label_message', default="Message"),
-                                        description=_("help_message", default="Please enter the message you want to send."),
-                                        required=True)
