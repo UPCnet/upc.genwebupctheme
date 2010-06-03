@@ -79,7 +79,7 @@
 
                         <span class="summary"
                               tal:attributes="class string:$item_type_class summary"
-                              tal:condition="python:item_type != 'Link'">
+                              tal:condition="python:item_type != 'Link' or (item_type == 'Link' and not item_finestranova)">
 						
                             <a href="#"
                                tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
@@ -94,14 +94,16 @@
                               tal:attributes="class string:$item_type_class"
                               tal:condition="python:item_type == 'Link' and item_finestranova">
                                   
-                            <a href="#" target="_newwindow"
-                               class="link-plain">
-                               <span tal:content="item_title_or_id"
+                            <a href="#" target="_blank"
+                               class="link-plain"
                                tal:attributes="href item/getRemoteUrl;
                                                class string:${item_wf_state_class} link-plain">
+                               <span tal:content="item_title_or_id">
                                 External Link</span>
-                            <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a>
+                               <img class="link_blank"  src="icon_blank.gif" i18n:domain="upc.genwebupc" i18n:attributes="alt obrir_link_finestra_nova"></a>
                         </span>
+                        
+                        
 						<br />
                         <span class="documentByLine">
 
