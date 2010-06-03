@@ -35,7 +35,7 @@
 	text-transform: none;
 	color: #4d4d4d}
 #portal-personaltools li a {
-	color:#007dCC;
+	color:#007bc0;
 	text-decoration:none}
 #portal-personaltools li a:hover {
 	text-decoration:underline}
@@ -50,7 +50,7 @@
 	font-weight:bold;
 	clear:both;}
 #portal-globalnav li {
-	line-height: 25px;
+	line-height: 2.25em;
 	display: inline;
 	background:#fff;
 	padding: 6px 5px 6px;
@@ -63,9 +63,9 @@
 	*margin-left:0px;/*ie7i6*/}
 #portal-globalnav li a {
 	background: #ededed;
-	line-height: 25px;
+	line-height: 2.25em;
 	padding: 4px 15px 5px; 
-	color: #007dCC;
+	color: #007bc0;
 	margin-right:0;
 	text-transform: uppercase;}
 #portal-globalnav li a, #portal-globalnav li.selected a, #portal-globalnav li a:hover, #portal-globalnav li.selected a:hover {
@@ -80,7 +80,7 @@
 #portal-globalnav li.selected a {
 	background-color: #808080}
 #portal-globalnav li a:hover {
-	color:#0076CC; 
+	color:#007bc0; 
 	background-color:#CCC; 
 	text-decoration:underline;}
 #portal-globalnav li.selected a:hover {
@@ -93,8 +93,7 @@
 	font-size:0.9em;
 	color:#4D4D4D;
 	padding-left: 5px;
-	*margin-top: -24px;
-	_margin-top: -24px;}
+	*margin-top: -24px;}
 .PortletCalendar {
 	float:right;
 	margin-right: 10px;

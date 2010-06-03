@@ -6,8 +6,8 @@
 
 <div class="portlet200"> </div>
     <div class="caixaPortlet">
-    <h6 i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda"
-         class="titolPortlet"> Agenda </h6>
+    <h2 i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda"
+         class="titolPortlet"> Agenda </h2>
    
         <ul>
         <li tal:repeat="obj entries">

@@ -21,12 +21,8 @@
 	background: no-repeat;
 	margin: 10px 0}
 .daltMenu{
-	height:109px;
+	height:103px;
 	border-right: 2px solid #fff}
-/*\*/
-html*.daltMenu{
-	height:103px}
-.daltMenu {*height:103px !important; height /*\**/:103px\9;}
 .alpha{
 	background:url(pixelAlpha.png);
 	_background: none; 
@@ -36,6 +32,7 @@ html*.daltMenu{
 html*.imgUnitatsClick{
 	height:97px}
 .imgUnitatsClick {
+	height: 103px !important;
 	*height:103px !important;}
 .daltMenuPrimer{
 	border-left: 2px solid #fff}
@@ -49,6 +46,7 @@ html*.imgUnitatsClick{
 	font-weight:bold;
 	border-left: 2px solid #ff784d;
 	padding:4px 25px 1px 8px;
+	*padding:4px 25px 2px 8px;
 	vertical-align:top}
 .descripcioMenu{
 	text-align:left;
@@ -57,12 +55,14 @@ html*.imgUnitatsClick{
 	font-size: 0.9em;
 	vertical-align:top}
 .actiuMenu{
-	height:8px;
+	height:0;
+	*height:8px;
 	border-bottom:2px solid #ff784d;
 	*border-bottom:2px solid #ff784d}
 /*\*/
 html*.actiuMenu{border-bottom:2px solid #ff784d;}
 .seleccionatMenu{
+
 	border-left:2px solid #ff784d;
 	border-right:2px solid #ff784d}
 .alphaCustom{
@@ -91,7 +91,10 @@ html*.liniaActivaEsq, html*.liniaActivaDreta {width:152px}
 	margin-top:0; 
 	*margin-top:-2px;
 	width:958px;
-	padding-top:1px}
+	padding-top:1px;
+	position:relative;
+	margin-top:-1px;
+	z-index:-1;}
 /*\*/
 html*.degradat{margin-top:0px; float:right}
 .degradat {*float:none !important;*margin-top:-2px !important;}

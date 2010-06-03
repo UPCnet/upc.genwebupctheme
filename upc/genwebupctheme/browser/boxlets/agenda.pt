@@ -9,7 +9,7 @@
            i18n:domain="plone"
            tal:condition="entries">
 
-<div i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda" class="agendaDalt">Agenda </div>
+<div class="agendaDalt"><h2 i18n:domain="upc.genwebupc" i18n:translate="genweb-agenda">Agenda </h2></div>
 <div class="agendaData">     
     <a class="agendaNumero" href="" 
          tal:content="python:view.now[2]"

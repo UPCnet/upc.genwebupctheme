@@ -40,7 +40,7 @@ sup {font-size: smaller; line-height: 1px;}
 .slide ul ul {line-height: 1;}
 .slide ul ul li {margin: .2em; font-size: 85%; list-style: square;}
 .slide img.leader {display: block; margin: 0 auto;}
-.slide a { text-decoration: none; border-bottom: 2px solid #0077cc !important; color:#0077cc !important;}
+.slide a { text-decoration: none; border-bottom: 2px solid #007bc0 !important; color:#007bc0 !important;}
 
 ul.urls {list-style: none; display: inline; margin: 0;}
 .urls li {display: inline; margin: 0;}
@@ -66,7 +66,7 @@ h1 abbr {
 */
 
 div#header {
-	background-color:#0077cc !important;
+	background-color:#007bc0 !important;
 	border-bottom:5px solid #ccc !important;
 	color:#ffffff !important;
 	line-height:1px;
@@ -90,7 +90,7 @@ div#header {
 
 div#footer {
     background: White url(LogoUPC.gif) 10px 10px no-repeat; 
-    border-top: 1px solid #0077cc;    
+    border-top: 1px solid #007bc0;    
     color: Black;
     font-size: 0.5em; 
     font-weight: bold; 
@@ -157,7 +157,7 @@ div#controls form {
     margin: 0 0.5em;
     background: White; 
     border: none; 
-    color: #0077cc; 
+    color: #007bc0; 
     cursor: pointer;
     text-decoration: none;
     font-family: Verdana;

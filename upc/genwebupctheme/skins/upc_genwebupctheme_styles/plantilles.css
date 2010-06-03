@@ -79,7 +79,6 @@ form{ margin: 0; }
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	-khtml-border-radius:5px;
-	-o-border-radius:5px;
 	border-radius:5px;
 	padding: 0 0 0 1em;
 }
@@ -242,7 +241,7 @@ html*.taulaRegistres table{
 .formulari .botoblau1{
 	background: url(botoblau1.gif) no-repeat center right;
 	padding: 2px 21px 2px 0px;
-	color:#0076cc;
+	color:#007bc0;
 	border: 0px;
 	text-align: center;
 	height: 22px;
@@ -325,7 +324,7 @@ background:url(borderTopDiagonal.gif) repeat-x;
 	*border-collapse:collapse;}
 /*ajusta FCKeditor en edit*/
 body#content {font-size:70%}
-body#content a {color:#007dcc; text-decoration:none;}
+body#content a {color:#007bc0; text-decoration:none;}
 /*imatge text damunt*/
 .emmarcada{
     text-align:center;
@@ -425,5 +424,5 @@ div.w1 { width: 97.916% }
 	border:0px !important;}
 .colSupDreta ul, .columnaEnllacosDreta ul {padding-bottom:5px;}
 .colSupDreta img, .columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
-.colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007dCC;}
+.colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007bc0;}
 .columnaseparador20 {width:20px !important;}

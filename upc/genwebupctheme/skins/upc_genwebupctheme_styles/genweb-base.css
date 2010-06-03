@@ -1,3 +1,4 @@
+#recaptcha_widget_div {margin-bottom:1em;}
 caption {display:none;}
 
 .field.error .error {
@@ -55,7 +56,6 @@ padding-top:0px;
 .columnaDreta .caixaPortlet {
 	width:148px !important;
 	}
-.columnaEsq .caixaPortlet {_width:100px;}
 .columnaEsq .caixaPortlet {
 	width:198px !important;}
 .columnaDreta #caixaPortlet {
@@ -81,7 +81,7 @@ padding-top:0px;
 */
 /* GENERAL */
 body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#f9f9f9 url(fons.png) center repeat-y;}
-a:link, a:visited, a:active {color:#007dcc; text-decoration: none;}	
+a:link, a:visited, a:active {color:#007bc0; text-decoration: none;}	
 a:hover {text-decoration: underline;} 
 /*a:focus {outline: none;}*/
 img {border:0;} 
@@ -299,7 +299,7 @@ h1.documentFirstHeading img {display:none;}
 /*baners*/
 #baner {text-align:right;margin-bottom:10px;}
 #baner img { border: 1px solid #e6e6e6;margin-bottom:10px;}
-#baner img:hover {border: 1px solid #0076cc;margin-bottom:10px;}
+#baner img:hover {border: 1px solid #007bc0;margin-bottom:10px;}
 #visual-portal-wrapper{
 	margin: 0px auto;
 	padding: 0;
@@ -499,7 +499,7 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 	border-top:1px solid #999;
 	padding-top:10px !important; }
 .contentViews li a {
-	color:#007dcc;
+	color:#007bc0;
 	border:1px solid #999;}
 .contentViews {
 	background-color:transparent;
@@ -550,7 +550,7 @@ table.listing,
 	background-color:#f1f1f4;}
 /*estats*/
 .state-published {
-	color:#007dcc !important; }
+	color:#007bc0 !important; }
 .state-private {
 	color:crimson !important;
 	background: none !important;}
@@ -640,20 +640,20 @@ dl.error dd {
     background-color:#fcf4f2 !important;}
 .documentContent dd a:visited {
 	background-color:transparent;
-	color:#0076cc;}
+	color:#007bc0;}
 .documentContent dd a:active {
 	background-color:transparent;
-	color:#0076cc;}
+	color:#007bc0;}
 .documentContent dd a:link {
 	background-color:transparent;
-	color:#0076cc;}
+	color:#007bc0;}
 .documentContent dd a:hover {
 	background-color:transparent;
-	color:#0076cc;
+	color:#007bc0;
 	text-decoration:underline;}
 /* ANULLACIO DALGUNS ESTILS DE PLONE EN ENLLACOS */
 ul.configlets li a:visited {
-    color:#0076CC;}
+    color:#007bc0;}
 ul.configlets li a:hover {
     text-decoration:underline;}
 /* CANVI DELS BOTONS DE PLONE */
@@ -721,14 +721,14 @@ ul.configlets li a:hover {
 	background-color:transparent;}
 abbr, acronym, .explain {
 	background-color:transparent;
-	border-bottom:0px dashed #0076CC;
+	border-bottom:0px dashed #007bc0;
 	color:#333;}
 abbr span {
 	display: block;}
 .documentContent dd a {
 	border-bottom:0px solid #CCC;
 	text-decoration:none;
-	color:#0077cc;}
+	color:#007bc0;}
 .documentContent dd a:hover {
 	text-decoration:underline;}
 dl.collapsible {
@@ -771,10 +771,10 @@ dl.collapsedInlineCollapsible {
 .documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {
 	border-bottom:0px solid #CCC;
 	text-decoration:none;
-	color:#007dcc;}
+	color:#007bc0;}
 .documentContent p a:hover {
 	text-decoration:underline;
-	color:#007dcc;}
+	color:#007bc0;}
 .discreet{ 
 	margin-bottom:25px;
 	margin-top:0px;
@@ -905,10 +905,10 @@ iframe.kupu-editor-iframe:active {
 #forgotten-password p{
 	margin:3px 0 0 0;}
 #forgotten-password a, #forgotten-password a:active, #forgotten-password a:link, #forgotten-password a:visited{
-	color: #007dcc;
+	color: #007bc0;
 	text-decoration:none;}
 #forgotten-password a:hover{
-	color:#007dcc;
+	color:#007bc0;
 	text-decoration:underline;}
 #Type_criteria, 
 #Title_criteria, 
@@ -1066,11 +1066,11 @@ div#kupu-resourceitems {
 	width:408px;}
 .kupu a {
 	border-bottom:0px solid #CCC !important;
-	color:#007dcc !important;
+	color:#007bc0 !important;
 	text-decoration:none !important;}
 .kupu a:hover {
 	border-bottom:0px solid #CCC !important;
-	color:#007d7cc !important;
+	color:#007bc0 !important;
 	text-decoration:underline !important;}
 /* mapa del lloc */
 #portal-sitemap .navTreeLevel2 {
@@ -1122,7 +1122,7 @@ h1 span.discreet {
 	clear:both;
 	margin-bottom:10px;}
 .summary {
-	color:#007dcc !important;}
+	color:#007bc0 !important;}
 .tileItem {
 	background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
 	border-color:#CCC #E6E6E6 #E6E6E6;
@@ -1320,8 +1320,8 @@ table.vertical .summary {color: #333 !important;}
 	margin-left:10px;
 	margin-right:25px;}
 /** per si de cas hi ha interferencies */
-a,a:active,a:link,a:visited{color:#0077cc;text-decoration:none;}
-a:hover{color:#0077cc;text-decoration:underline;}
+a,a:active,a:link,a:visited{color:#007bc0;text-decoration:none;}
+a:hover{color:#007bc0;text-decoration:underline;}
 a img,a:hover img,a:hover br{text-decoration:none;}
 
 
@@ -1347,6 +1347,7 @@ a img,a:hover img,a:hover br{text-decoration:none;}
 	font-weight:bold;
 	padding:15px 0 0 3px;
 	border-top:0;
+	margin-bottom: 0;
 	margin-top:18px !important;
 	*margin-top:15px;}
 html*.titolSeccio{
@@ -1365,7 +1366,7 @@ ul.navTreeLevel0 {
 	border-top:1px dashed #333;}
 ul.navTreeLevel0 li{
 	border-bottom: 1px dashed #333;}
-ul.navTree div{ color:#0076cc; }
+ul.navTree div{ color:#007bc0; }
 ul.navTree li div a img {float:right;}
 ul.navTree{ padding: 0;}
 ul.navTree li, .navTreeLevel0 {
@@ -1478,7 +1479,7 @@ dd.portletItem .navTreeItem a:hover {
 	padding:3px;
 	background:white;
 	margin:0 0 0.5em 0.5em;}
-.link-plain {color:#0077cc !important;}
+.link-plain {color:#007bc0 !important;}
 
 
 
@@ -1560,7 +1561,7 @@ div#dashboard dd.portletItem form{margin-right:25px !important; padding-top:10px
 div#dashboard dd.portletItem form{_margin-right:0px !important;}
 div#dashboard dt.portletCalendar dt.portletHeader a {}
 div#dashboard #banners a {margin:5px auto !important; align:center !important; display:block; border:1px solid #ccc; width:147px;margin-left:35px !important;}
-div#dashboard #banners a:hover {border:1px solid #007dcc;}
+div#dashboard #banners a:hover {border:1px solid #007bc0;}
 div#dashboard table.ploneCalendar {border:1px solid #ccc; margin:5px 25px;}
 div#dashboard table.ploneCalendar td {text-align:center;}
 div#dashboard dl.portletCalendar dt a {float:none !important;}
@@ -1596,13 +1597,13 @@ clear:both !important;
 
 #portal-column-content fieldset > * input:focus,
 #portal-column-content fieldset > * textarea:focus {
-    border-color: #007dcc;
+    border-color: #007bc0;
     border-width: 1px;
     background:#f3f3f3;
     /*outline:none;*/}
 #portal-column-content fieldset input[type="submit"]:focus, #portal-column-content fieldset input.standalone:focus, #portal-column-content fieldset input.context:focus,
 #portal-column-content fieldset input[type="submit"]:active, #portal-column-content fieldset input.standalone:active, #portal-column-content fieldset input.context:active{
-    border-color: #007dcc;
+    border-color: #007bc0;
     border-width: 1px;
     background:#3af;
     /*outline:none;*/}   
@@ -1657,7 +1658,7 @@ dt.contenttype-servei{
 #baners ul li { background:#fff; padding:0; margin: 0 0 1em 0;}
 #baners a {display:inline; padding:0 0 2px 0; background: url(hs1.png) no-repeat 0 -20px; height:50px;}
 #baners a img {vertical-align:top; background: #fff; border: 1px solid #e6e6e6; margin-bottom: 0;}
-#baners a img:hover {border: 1px solid #0076cc; margin-bottom:0;}
+#baners a img:hover {border: 1px solid #007bc0; margin-bottom:0;}
 #content #baners a { background:none !important; padding:0 0 2px 0 !important;}
 #baners{margin-left:25px !important; }
 
