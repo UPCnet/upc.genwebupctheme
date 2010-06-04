@@ -6,9 +6,6 @@ version = '3.3.1'
 setup(name='upc.genwebupctheme',
       version=version,
       description="Paquet de sabors de Genweb UPC",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
-      # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         "Framework :: Plone",
         "Framework :: Zope2",
@@ -26,13 +23,6 @@ setup(name='upc.genwebupctheme',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
-#          'Products.PlonePopoll',
-#          'Products.LinguaPlone',
-#          'Products.Poi',
-#          'Products.FCKEditor',
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
       )
+
