@@ -114,7 +114,6 @@ class ContactBaseForm(form.Form):
         email_charset = portal.getProperty('email_charset')
         
         to_address = portal.getProperty('email_from_address')
-        to_address = 'laura.perez-mayos@upcnet.es'
         from_name = portal.getProperty('email_from_name')
         titulo_web = portal.getProperty('title')
 
