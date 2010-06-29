@@ -40,26 +40,27 @@ class IContactForm(Interface):
     """
     
     nombre = schema.TextLine(title=_('label_sender_fullname', default=u"Name"),
-                                        description=_("help_sender_fullname", default="Please enter your full name."),
-                                        required=True)
+                             description=_("help_sender_fullname", default="Please enter your full name."),
+                             required=True)
                               
     destinatario = schema.TextLine(title=_('label_sender_from_address',default=u"E-Mail"),
-                                        description=_("help_sender_from_address", default="Please enter your e-mail address."),
-                                        required=True,
-                                        constraint=validate_email)
+                                   description=_("help_sender_from_address", default="Please enter your e-mail address."),
+                                   required=True,
+                                   constraint=validate_email)
  
     asunto = schema.TextLine(title=_('label_subject', default="Subject"),
-                                        description=_("help_subject", default="Please enter the subject of the message you want to send."),
-                                        required=True)
+                             description=_("help_subject", default="Please enter the subject of the message you want to send."),
+                             required=True)
 
     mensaje = schema.Text(title=_('label_message', default="Message"),
-                                        description=_("help_message", default="Please enter the message you want to send."),
-                                        required=True)
+                          description=_("help_message", default="Please enter the message you want to send."),
+                          required=True)
 
-    captcha = schema.TextLine(title=_(u'Type the code'),
-                      description=_(u'Type the code from the picture shown below'), required=True)
+    captcha = schema.TextLine(title=_('Type the code', default="Type the code"),
+                              description=_('Type the code from the picture shown below', default="Type the code from the picture shown below"),
+                              required=True)
 
-z3c.form.validator.WidgetValidatorDiscriminators(upc.genweb.recaptcha.validator.ReCaptchaValidator, field=IContactForm['captcha'])
+#z3c.form.validator.WidgetValidatorDiscriminators(upc.genweb.recaptcha.validator.ReCaptchaValidator, field=IContactForm['captcha'])
 
 class Contact(object):
     nombre = u""
@@ -113,6 +114,7 @@ class ContactBaseForm(form.Form):
         email_charset = portal.getProperty('email_charset')
         
         to_address = portal.getProperty('email_from_address')
+        to_address = 'laura.perez-mayos@upcnet.es'
         from_name = portal.getProperty('email_from_name')
         titulo_web = portal.getProperty('title')
 
