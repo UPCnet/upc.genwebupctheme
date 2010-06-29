@@ -77,4 +77,4 @@ class TitleViewlet(ViewletBase):
         if page_title == portal_title:
             return u"<title> %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('UPC. Universitat Politècnica de Catalunya BarcelonaTech.')))
         else:
-            return u"<title> %s &mdash; %s &mdash; %s </title>" % (escape(safe_unicode(TITLE_GW)), escape(safe_unicode('UPC. Universitat Politècnica de Catalunya BarcelonaTech.')), escape(safe_unicode(page_title)))
+            return u"<title> %s &mdash; %s &mdash; %s </title>" % (escape(safe_unicode(page_title)), escape(safe_unicode(TITLE_GW)), escape(safe_unicode('UPC. Universitat Politècnica de Catalunya BarcelonaTech.')))
