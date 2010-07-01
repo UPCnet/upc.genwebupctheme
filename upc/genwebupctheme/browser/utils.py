@@ -610,11 +610,11 @@ class utilitats(BrowserView):
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()
         url = ''
-        label = "Obriu l'enllaç en una finestra nova"
+        label = "(obriu en una finestra nova)"
         if idioma == 'ca':
-            label = "Obriu l'enllaç en una finestra nova"
+            label = "(obriu en una finestra nova)"
         if idioma == 'es':
-            label = "Abrir el enlace en una nueva ventana"
+            label = "(abre en ventana nueva)"
         if idioma == 'en':
-            label = "Open link in new window"      
+            label = "(open in new window)"      
         return label
