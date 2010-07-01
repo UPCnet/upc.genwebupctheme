@@ -357,16 +357,18 @@ html*.sobreElWeb {
 	padding: 10px 0;}
 /*sou a*/
 #portal-breadcrumbs {
+	font-size:0.9em;
+	border-bottom: 0;
+	padding:0;
+	line-height:1em;
+	margin:5px 0 15px;
+	*margin:5px 0 15px;}
+#breadcrumbs-you-are-here {
 	padding-left:8px;
 	background-repeat: no-repeat;
 	background-image: url(fletxes_strip.gif);
 	background-position: 0px 2px;
-	font-size:0.9em;
-	border-bottom: 0;
-	padding-right:0;
-	line-height:1em;
-	margin:5px 0 15px;
-	*margin:5px 0 15px;}
+}
 #portal-breadcrumbs a {
 	text-decoration:none;}
 #portal-breadcrumbs a:hover {
