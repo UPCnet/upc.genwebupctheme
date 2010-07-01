@@ -125,7 +125,6 @@ class agenda(BrowserView,calendar_render):
     def __call__(self):
         return xhtml_compress(self._template())
 
-#funciones correspondientes a la parte genweb del boxlet    
 
     def mes(self, mes):
         return self.utils.mes(mes)
@@ -205,7 +204,6 @@ class noticies(BrowserView, news_render):
                        sort_order='reverse',
                        sort_limit=limit)[:limit]
 
-# Vistes de noticies
 
 class noticies_actualitat(noticies):
     _template = ViewPageTemplateFile('noticies_actualitat.pt')
@@ -228,11 +226,14 @@ class noticies_actualitat(noticies):
 
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()
+        
+        if idioma == 'zh':  #Force RSS en anglès a web en chino 
+           idioma = 'en' 
 
         url = 'http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=' + idioma
 
         items = []
-        #url = 'http://www.upc.edu/catala/RSS/actualitatUpc.php'
+        
         d = feedparser.parse(url)
         for item in d['items']:
             try:
