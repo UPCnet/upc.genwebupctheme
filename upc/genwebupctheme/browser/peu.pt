@@ -4,32 +4,25 @@
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
 		<tal:block tal:repeat="obj python: view.bannersPeu()">		
 			<tal:items tal:define="tmp obj/getObject">
-
 				<a	tal:attributes="href tmp/URLdesti; target python: view.test(tmp.Obrirennovafinestra,'newwindow','_self')">									
-<!--         		<img tal:replace="structure python:view.resizeImage(tmp.Imatge,100,100)"/>-->
-                        <tal:co tal:condition="tmp/getImatge">
-         		  <span tal:replace="structure tmp/Imatge"/>
-                        </tal:co>
+	                <tal:co tal:condition="tmp/getImatge">
+						<span tal:replace="structure tmp/Imatge"/>
+                    </tal:co>
 				</a>
-<!--				<img tal:replace="structure python:tmp.Imatge.tag(scale='tile')"/>-->
 			</tal:items>       	 					
 		</tal:block>
 	</div>
-	
 
    <div id="signText"> 
-        <span class="sobreElWeb">
+        <span tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
             <a accesskey="0" href="sobre-el-web"
                 i18n:attributes="title genweb-sobre_aquest_web"
-		i18n:translate="genweb-sobre_aquest_web">
+				i18n:translate="genweb-sobre_aquest_web">
             	About this web
             </a>
         </span>
-	<span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció.</span><br />
+		<span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció.</span><br />
         © <a href="http://www.upc.edu" target="newwindow">UPC <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"/></a>. Universitat Politècnica de Catalunya  <span class="gris">●</span>  BarcelonaTech.
-        
-
-        
         
     </div>
 </div>
