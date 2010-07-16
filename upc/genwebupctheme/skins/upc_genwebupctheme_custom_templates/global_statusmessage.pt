@@ -6,7 +6,7 @@
 <body>
 <tal:block i18n:domain="plone" metal:define-macro="portal_message">
 
-    <div class="portalMessage info laura" id="kssPortalMessage" style="display:none">
+    <div class="portalMessage info" id="kssPortalMessage" style="display:none">
         <div class="portalMessage_left">Info</div>
         <div class="portalMessage_right"><tal:block replace="nothing">KSS portal message</tal:block></div>
     </div>
