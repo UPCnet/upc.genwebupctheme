@@ -1,33 +1,26 @@
-<tal:langbar
-    tal:define="portal_url context/@@plone_portal_state/portal_url;
-                available view/available;
-                languages view/languages;
-                showFlags view/showFlags;
-                otra python:view.trim_selected_lang(languages)">
-                
+<tal:langbar tal:define="portal_url context/@@plone_portal_state/portal_url;
+                         available view/available;
+                         languages view/languages;
+                         showFlags view/showFlags;
+                         otra python:view.trim_selected_lang(languages)">
     <div class="barra_idiomes"> 
-
-    <span tal:repeat="lang otra">
-        <span tal:condition="python:available and len(languages)>=2"
-              tal:define="code lang/code;
-                          selected lang/selected">
-             <span tal:condition="not: selected"> 
+        <tal:rep tal:repeat="lang otra">
+            <tal:def tal:condition="python:available and len(languages)>=2"
+                     tal:define="code lang/code;
+                                 selected lang/selected">
+                <tal:co tal:condition="not: selected"> 
                     <a tal:define="flag lang/flag|nothing;
                                    name lang/native"
-                       i18n:translate=""
                        i18n:attributes="title"
                        tal:attributes="href lang/url;
-                                       title name" 
-                       tal:content="name"
-                              >Language          
+                                       title name">
+                        <span tal:attributes="lang lang/code" i18n:translate="" tal:content="name"></span>
                     </a>
-                <span tal:condition="not:repeat/lang/end">  
-                    <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
-                </span>                      
-              </span> 
-        </span>
-    
-    </span>
-                     
+                    <tal:co tal:condition="not:repeat/lang/end">  
+                        <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+                    </tal:co>                      
+                </tal:co> 
+            </tal:def>
+        </tal:rep>
     </div>
 </tal:langbar>
