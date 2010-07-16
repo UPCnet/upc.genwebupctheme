@@ -593,7 +593,45 @@ td.state-intranet {
 a span.state-intranet {
 	color: #7d00cc !important;
 	background: none !important;}
+
+
 /*missatges info*/
+
+div.portalMessage { 
+    width:100%; 
+    padding:0;
+    background-color:#F2F6FA !important; 
+    float:left; 
+    border:1px solid #ddd; 
+    vertical-align:middle; 
+    background-image:none;
+}
+div.portalMessage_left { 
+    width:10%; 
+    float:left; 
+    background:#F9F9F9 url(info_message.gif) no-repeat scroll left bottom;
+    color: #00589A !important;
+    vertical-align:middle;
+    border-right:1px solid #DDDDDD;
+    font-size:1.6em;
+    font-weight:bold;
+    line-height:1.25em;
+    margin:0 0.5em 0 0;
+    padding:4px 10px 5px 30px;
+    font-family:Arial,Helvetica,sans-serif;
+}
+div.portalMessage_right { 
+    width:90%; 
+    vertical-align:middle; 
+    display:table-cell; 
+    font-weight:normal; 
+    padding:0.55em 0.5em;
+    color:#333333;
+    font-size:1.15em;
+    padding-top:0.5em;
+}
+
+
 dl.portalMessage dt {
 	background-color:transparent;
 	float:left;
