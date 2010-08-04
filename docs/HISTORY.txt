@@ -1,6 +1,11 @@
 Changelog
 =========
 
+3.3.3 (2010-08-04)
+------------------
+
+* Afegides les linies del autoinclude. [sneridagh]
+
 3.2.1
 -----
 

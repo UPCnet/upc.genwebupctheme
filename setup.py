@@ -1,11 +1,13 @@
 from setuptools import setup, find_packages
 import os
 
-version = '3.3.2'
+version = '3.3.3'
 
 setup(name='upc.genwebupctheme',
       version=version,
       description="Paquet de sabors de Genweb UPC",
+      long_description=open("README.txt").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
         "Framework :: Plone",
         "Framework :: Zope2",
@@ -24,5 +26,9 @@ setup(name='upc.genwebupctheme',
       install_requires=[
           'setuptools',
       ],
+      entry_points="""
+      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
+      """,
       )
-
