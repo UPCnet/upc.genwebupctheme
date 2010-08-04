@@ -2,13 +2,13 @@ upc.genwebupctheme
 ==================
 
 Introducció
-------------
+---------------------
 
 Aquest és el producte Plone que conté tots els elements necessaris per tots els sabors de Genweb.
 
 
 Instal·lació de Genweb
-------------------------
+------------------------------------
 
 XXX ToDO.
 
