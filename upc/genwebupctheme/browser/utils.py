@@ -618,3 +618,5 @@ class utilitats(BrowserView):
         if idioma == 'en':
             label = "(open in new window)"      
         return label
+
+

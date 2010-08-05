@@ -468,9 +468,65 @@
     <browser:page
       for="*"
       name="sobre-el-web"
-      template="sobre-el-web.pt"
+      template="pages/sobre-el-web.pt"
       permission="zope2.View"
       />
+      
+    <browser:page
+      for="*"
+      name="about-the-web"
+      template="pages/about-the-web.pt"
+      permission="zope2.View"
+      />      
+      
+    <browser:page
+      for="*"
+      name="acerca-del-web"
+      template="pages/acerca-del-web.pt"
+      permission="zope2.View"
+      />      
+      
+    <browser:page
+      for="*"
+      name="rss-ca"
+      template="pages/rss-ca.pt"
+      permission="zope2.View"
+      />       
+      
+    <browser:page
+      for="*"
+      name="rss-en"
+      template="pages/rss-en.pt"
+      permission="zope2.View"
+      />             
+
+    <browser:page
+      for="*"
+      name="rss-es"
+      template="pages/rss-es.pt"
+      permission="zope2.View"
+      />        
+      
+    <browser:page
+      for="*"
+      name="accesibilidad"
+      template="pages/accesibilidad.pt"
+      permission="zope2.View"
+      />
+      
+	<browser:page
+      for="*"
+      name="accessibilitat"
+      template="pages/accessibilitat.pt"
+      permission="zope2.View"
+      />     
+      
+	<browser:page
+      for="*"
+      name="accessibility"
+      template="pages/accessibility.pt"
+      permission="zope2.View"
+      />           
       
     <browser:page
       for="*"

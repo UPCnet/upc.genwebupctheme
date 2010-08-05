@@ -27,3 +27,24 @@ class Peu(ViewletBase):
             return a
         return b
         
+
+    def linksPeu(self):
+        """ links fixats per accessibilitat/rss/about
+        """
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+        
+        if idioma == 'ca':
+            rss_link = "rss-ca"
+            about_link = "sobre-el-web"
+            access_link = "accessibilitat"
+        if idioma == 'es':
+            rss_link = "rss-es"
+            about_link = "acerca-del-web"
+            access_link = "accesibilidad"
+        if idioma == 'en':
+            rss_link = "rss-en"
+            about_link = "about-the-web"
+            access_link = "accessibility"    
+
+        return dict(rss=rss_link, about=about_link, access=access_link)
