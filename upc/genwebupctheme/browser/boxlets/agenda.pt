@@ -61,10 +61,10 @@
             <td class="TDRegulaCalendari">
 <!-- ini calendari -->
 <div id="calendari">
-    <b i18n:domain="upc.genwebupc"
+    <strong i18n:domain="upc.genwebupc"
        i18n:translate="calendari_title"> 
        Calendari
-    </b>
+    </strong>
     <div id="esdeveni_text"
          i18n:domain="upc.genwebupc"
          i18n:translate="esdeveniments_reunions"> 

@@ -1,4 +1,5 @@
-<div id="peu" tal:define="utils context/@@upc.genweb.utils" 
+<div id="peu" tal:define="utils context/@@upc.genweb.utils;
+													portal_url context/@@plone_portal_state/portal_url" 
                      i18n:domain="upc.genwebupc">   
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
@@ -15,11 +16,18 @@
 
    <div id="signText"> 
         <span tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
+        <!-- <img alt=" " src="rss.gif" /> -->
+            <a accesskey="0" href="rss"
+                i18n:attributes="title genweb-rss"
+				i18n:translate="genweb-rss">RSS</a>
+				<img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
             <a accesskey="0" href="sobre-el-web"
                 i18n:attributes="title genweb-sobre_aquest_web"
-				i18n:translate="genweb-sobre_aquest_web">
-            	About this web
-            </a>
+				i18n:translate="genweb-sobre_aquest_web">About this web</a>
+				<img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+            <a accesskey="0" href="accessibility-info"
+                i18n:attributes="title accessibility-info "
+				i18n:translate="accessibility-info">Accessibility</a>
         </span>
 		<span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció.</span><br />
         © <a href="http://www.upc.edu" target="newwindow">UPC <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"/></a>. Universitat Politècnica de Catalunya  <span class="gris">●</span>  BarcelonaTech.

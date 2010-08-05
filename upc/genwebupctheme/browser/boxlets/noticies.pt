@@ -13,7 +13,7 @@
              	          tal:attributes="href view/rss_news_link">RSS <img src="rss.gif" alt=" " /> 
          	           </a>
 		      	  </div> 
-		      	  <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span> 
+		      	  <h2 i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </h2> 
         </div>
     <div class="agendaContingut">
         <ul>

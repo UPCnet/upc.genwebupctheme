@@ -82,11 +82,9 @@ margin-top: 5px;
 }
 
 .portletPlus{
-padding: 5px 5px 5px;
+padding: 0 0.5em 0 0 !important;
 text-align:right;
-line-height: 0px;
 margin-top:0px;
-padding-bottom:10px!important;
 }
 
 .portletPlus img{

@@ -9,10 +9,10 @@
 <!-- fi irene -->
 
 
-<dl class="portlet portletNavigationTree" id="portlet-navigation-tree"  
+<div class="portlet portletNavigationTree" id="portlet-navigation-tree"  
     tal:define="root view/navigation_root">
 
-    <dd class="portletItem lastItem">
+    <div class="portletItem lastItem">
         <ul class="navTree navTreeLevel0">
             <li class="navTreeItem"
                 tal:condition="view/include_top">
@@ -36,6 +36,6 @@
                 SUBTREE
             </li>
         </ul>
-    </dd>
-</dl>
+    </div>
+</div>
 </tal:block>

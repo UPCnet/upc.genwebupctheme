@@ -1,3 +1,4 @@
+#eRelacionats {position:relative;}
 /*ajustaments dalt200 ie6. es un problema amb els espais i la tipo que te lie*/
 #content #dalt200, #content #baix200 {_background-repeat:no-repeat;_line-height:0px;color:#fff;}
 
