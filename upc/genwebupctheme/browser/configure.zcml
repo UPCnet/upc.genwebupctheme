@@ -467,22 +467,22 @@
 
     <browser:page
       for="*"
-      name="sobre-el-web"
-      template="pages/sobre-el-web.pt"
+      name="sobre-aquest-web"
+      template="pages/sobre-aquest-web.pt"
       permission="zope2.View"
       />
       
     <browser:page
       for="*"
-      name="about-the-web"
-      template="pages/about-the-web.pt"
+      name="about-this-web"
+      template="pages/about-this-web.pt"
       permission="zope2.View"
       />      
       
     <browser:page
       for="*"
-      name="acerca-del-web"
-      template="pages/acerca-del-web.pt"
+      name="sobre-esta-web"
+      template="pages/sobre-esta-web.pt"
       permission="zope2.View"
       />      
       

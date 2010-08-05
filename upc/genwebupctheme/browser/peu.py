@@ -36,15 +36,15 @@ class Peu(ViewletBase):
         
         if idioma == 'ca':
             rss_link = "rss-ca"
-            about_link = "sobre-el-web"
+            about_link = "sobre-aquest-web"
             access_link = "accessibilitat"
         if idioma == 'es':
             rss_link = "rss-es"
-            about_link = "acerca-del-web"
+            about_link = "sobre-esta-web"
             access_link = "accesibilidad"
         if idioma == 'en':
             rss_link = "rss-en"
-            about_link = "about-the-web"
+            about_link = "about-this-web"
             access_link = "accessibility"    
 
         return dict(rss=rss_link, about=about_link, access=access_link)
