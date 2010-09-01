@@ -427,3 +427,8 @@ div.w1 { width: 97.916% }
 .colSupDreta img, .columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
 .colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007bc0;}
 .columnaseparador20 {width:20px !important;}
+
+
+/*accessibilitat*/
+p.blockquote, div.blockquote {border:1px solid #d9d9d9; background: #f7f7f7; padding:5px 10px; border-top-width:1px; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;}
+.blockquote img{background: transparent;}
