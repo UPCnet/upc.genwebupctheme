@@ -1,10 +1,11 @@
 Changelog
 =========
 
-3.3.3 (2010-08-04)
+3.3.3 (2010-09-02)
 ------------------
 
 * Afegides les linies del autoinclude. [sneridagh]
+* Canvis en el peu, pàgines de RSS, sobre aquest web i accessibilitat [SCP]
 
 3.2.1
 -----
