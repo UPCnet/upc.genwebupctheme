@@ -33,7 +33,7 @@ class Peu(ViewletBase):
         """
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()
-        
+                        
         if idioma == 'ca':
             rss_link = "rss-ca"
             about_link = "sobre-aquest-web"
@@ -45,6 +45,10 @@ class Peu(ViewletBase):
         if idioma == 'en':
             rss_link = "rss-en"
             about_link = "about-this-web"
-            access_link = "accessibility"    
-
+            access_link = "accessibility"
+        if idioma == 'zh':
+            rss_link = "rss-en"
+            about_link = "about-this-web"
+            access_link = "accessibility"      
+     
         return dict(rss=rss_link, about=about_link, access=access_link)
