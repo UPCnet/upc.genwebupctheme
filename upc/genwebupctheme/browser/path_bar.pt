@@ -1,7 +1,9 @@
 <div id="portal-breadcrumbs"
      i18n:domain="plone">
 
-    <span id="breadcrumbs-you-are-here" i18n:translate="genweb-you_are_here" i18n:domain="upc.genwebupc">You are here:</span>
+    <span id="breadcrumbs-you-are-here" 
+    	  i18n:translate="genweb-you_are_here">You are here:
+    </span>
     <a i18n:translate="tabs_home" tal:attributes="href view/navigation_root_url">Home</a>
     <span tal:condition="view/breadcrumbs" class="breadcrumbSeparator">
         <tal:ltr condition="not: view/is_rtl">&raquo;</tal:ltr>
@@ -22,7 +24,7 @@
                 <tal:rtl condition="view/is_rtl">&raquo;d</tal:rtl>
             </span>
             <span tal:condition="is_last"
-                  tal:content="python:crumb['Title'].replace('<br/>','').replace('<br>','').replace('<br />','').replace('&nbsp;','')"></span>
+				tal:content="python:crumb['Title'].replace('<br/>','').replace('<br>','').replace('<br />','').replace('&nbsp;','')"></span>
          </tal:last>
     </span>
 
