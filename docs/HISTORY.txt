@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.3.4 (dev)(2010-10-05)
+------------------
+
+* Afegit enllaç a més notícies que porta cap a Sala de Premsa en tots els portlets d'Actualitat UPC.
+
+
 3.3.3 (2010-09-02)
 ------------------
 

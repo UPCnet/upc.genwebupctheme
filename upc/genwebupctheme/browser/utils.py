@@ -618,5 +618,15 @@ class utilitats(BrowserView):
         if idioma == 'en':
             label = "(open in new window)"      
         return label
-
+    
+    def premsa_url(self):
+        """Funcio que extreu idioma actiu
+        """
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+        if idioma == 'zh':
+            url = 'http://www.upc.edu/saladepremsa/?set_language=en'
+        else:
+            url = 'http://www.upc.edu/saladepremsa/?set_language='+idioma
+        return url
 
