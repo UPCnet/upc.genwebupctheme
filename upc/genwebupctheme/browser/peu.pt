@@ -1,4 +1,4 @@
-<div id="peu" tal:define="utils context/@@upc.genweb.utils;
+﻿<div id="peu" tal:define="utils context/@@upc.genweb.utils;
 													portal_url context/@@plone_portal_state/portal_url" 
                      i18n:domain="upc.genwebupc">   
 
@@ -16,7 +16,7 @@
 
    <div id="signText"> 
         <span tal:define="links view/linksPeu" tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
-            <img src="rss.gif" alt="RSS"> <a accesskey="0" href=""
+            <img src="rss.gif" class="rsspeu" alt="RSS"> <a accesskey="0" href=""
                 i18n:attributes="title genweb-rss"
 				i18n:translate="genweb-rss"
 				tal:attributes="href links/rss">RSS</a>

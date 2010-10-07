@@ -374,6 +374,7 @@ html*.sobreElWeb {
 	text-decoration:underline;}
 #breadcrumbs-you-are-here{
 	font-weight:bold;}
+.rsspeu {margin-bottom:3px;}
 /*cerca*/
 .barraCerca { 
 	text-transform: lowercase; }
@@ -600,7 +601,7 @@ div.portalMessage {
     width:100%; 
     padding:0;
     background-color:#F2F6FA !important; 
-    float:left; 
+    float:none !immportant; 
     border:1px solid #ddd; 
     vertical-align:middle; 
     background-image:none;

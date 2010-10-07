@@ -934,6 +934,7 @@ font-weight:bold;
     background:#FFF !important; color:#333 !important;
 } 
 /*index continguts automatic plone*/
+.toc .portletHeader { display:none !important;}
 #document-toc .portletHeader {
 	border-top:5px solid #E6E6E6;
 	color:#4D4D4D;
