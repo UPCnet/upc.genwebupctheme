@@ -205,7 +205,7 @@ html*.taulaRegistres table{
 	border: 1px solid #ccc;
 	border-bottom: 4px solid #ccc;
 	margin: 0px; padding:10px; margin-top:-36px;
-/*	background: url(borderTopDiagonal.gif) repeat-x top;}*/
+	/*background: url(borderTopDiagonal.gif) repeat-x top;*/}
 .fletxa_fitxa{ background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
 .fitxa h2 {margin:-0.2em 0 1em 0; padding-bottom:0.3em; border-top:0 !important; border-bottom:5px solid #e6e6e6;}
 .fitxa h3 {margin:-0.2em 0 1em 0;}
@@ -228,7 +228,7 @@ html*.taulaRegistres table{
 	vertical-align:middle;
 	background:#FFFFFF;}
 .formulari select{
-/*	background: url(degradat.jpg) repeat-x;*/
+	/*background: url(degradat.jpg) repeat-x;*/
 	margin: 10px 0px 10px 0px;
 	border: #a29386 1px solid;
 	border-left:#a29386 5px solid;
@@ -240,7 +240,7 @@ html*.taulaRegistres table{
 	background:white;
 	padding-left:7px;}
 .formulari .botoblau1{
-/*	background: url(botoblau1.gif) no-repeat center right;*/
+	/*background: url(botoblau1.gif) no-repeat center right;*/
 	padding: 2px 21px 2px 0px;
 	color:#007bc0;
 	border: 0px;
@@ -248,7 +248,7 @@ html*.taulaRegistres table{
 	height: 22px;
 	width: 100px;}
 .formulari .botoblau2{
-/*	background: url(botoblau2.gif) no-repeat center right;*/
+	/*background: url(botoblau2.gif) no-repeat center right;*/
 	padding: 2px 21px 2px 0px;
 	color:#ffffff;
 	border: 0px;
@@ -257,10 +257,10 @@ html*.taulaRegistres table{
 	width: 100px;}
 /*errors i missatges gw3*/
 .avis{
-/*	background: url(avis.gif) no-repeat top left;*/
+	/*background: url(avis.gif) no-repeat top left;*/
 	padding-top: 7em;}
 .error{
-/*	background: url(error.gif) no-repeat top left;*/
+	/*background: url(error.gif) no-repeat top left;*/
 	padding-top: 7em;}
 .avis_legal{
 	padding: 1em 0 0 0;}
@@ -274,13 +274,15 @@ html*.taulaRegistres table{
 	padding:5px 10px 8px 10px;
 	background:#f8f7f5;}
 
-.taula img{ /*en principi no cal */
+.taula img{ 
+	/*en principi no cal */
 	margin:0px;
 	float:none;}
 .imgBoto{
 	vertical-align:top;
 	margin:0px;
 	float:none;}
+
 /*destacats genweb 1.5*/
 .destacatBandejat {
 	background: #f8f7f5;
@@ -301,6 +303,7 @@ html*.taulaRegistres table{
 	margin: 8px;
 	padding: 2px 4px;
 	font-size: 0.95em;}
+
 /*solucions IE*/
 .taulaRegistres .cap td{
 background:url(borderTopDiagonal.gif) repeat-x;
@@ -323,9 +326,11 @@ background:url(borderTopDiagonal.gif) repeat-x;
 	*border: 1px solid #ccc;	
 	*border-bottom:3px solid #ccc;	
 	*border-collapse:collapse;}
+
 /*ajusta FCKeditor en edit*/
 body#content {font-size:70%}
 body#content a {color:#007bc0; text-decoration:none;}
+
 /*imatge text damunt*/
 .emmarcada{
     text-align:center;
@@ -367,8 +372,7 @@ body#content a {color:#007bc0; text-decoration:none;}
 	background-color: white; 
 	opacity: 0.8; 
 	filter:alpha(opacity=80);}
-#FCKTdiv3imatgedamunttext{
-	padding:10px}
+#FCKTdiv3imatgedamunttext{padding:10px}
 .estilImgPhotoAlbum1 {width:128px; height:96px;}
 .estilImgPhotoAlbum2 {width:96px; height:128px;}
 .estilImgPhotoAlbum3 {width:128px; height:83px;}
