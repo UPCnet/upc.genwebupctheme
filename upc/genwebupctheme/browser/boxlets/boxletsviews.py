@@ -231,6 +231,7 @@ class noticies_actualitat(noticies):
            idioma = 'en' 
 
         url = 'http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=' + idioma
+        #url = 'http://localhost:8304/saladepremsa/actualitat-upc/RSS?set_language=' + idioma
 
         items = []
         
@@ -240,7 +241,7 @@ class noticies_actualitat(noticies):
                 link = item.links[0]['href']
                 itemdict = {
                     'title' : item.title,
-                    'url' : link,
+                    'url' : link + '?set_language=' + idioma,
                     'summary' : item.get('description',''),
                 }
             except AttributeError:
