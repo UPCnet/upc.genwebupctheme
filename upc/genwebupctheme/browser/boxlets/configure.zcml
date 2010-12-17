@@ -24,7 +24,14 @@
         name="box.Noticies_Actualitat"
         class=".boxletsviews.noticies_actualitat"
         permission="zope2.View"
-        />        
+        />    
+        
+    <browser:page
+        for="*"
+        name="box.Noticies_ActualitatPDIPAS"
+        class=".boxletsviews.noticies_actualitatPDIPAS"
+        permission="zope2.View"
+        />       
         
 <!-- Columna Central (2) -->        
         
@@ -34,7 +41,12 @@
         class=".boxletsviews.noticies_actualitat_petit"
         permission="zope2.View"
         />  
-
+    <browser:page
+        for="*"
+        name="box.ActualitatPDIPAS_Noticies_petit"
+        class=".boxletsviews.actualitatPDIPAS_noticies_petit"
+        permission="zope2.View"
+        />  
     <browser:page
         for="*"
         name="box.Agenda_Calendari_petit"
@@ -46,6 +58,13 @@
         for="*"
         name="box.Actualitat_petit"
         class=".boxletsviews.actualitat_petit"
+        permission="zope2.View"
+        />  
+        
+    <browser:page
+        for="*"
+        name="box.ActualitatPDIPAS_petit"
+        class=".boxletsviews.actualitatPDIPAS_petit"
         permission="zope2.View"
         />  
 
@@ -72,8 +91,20 @@
         />  
     <browser:page
         for="*"
+        name="box.ActualitatPDIPAS_Noticies_mini"
+        class=".boxletsviews.actualitatPDIPAS_noticies_mini"
+        permission="zope2.View"
+        />  
+    <browser:page
+        for="*"
         name="box.Actualitat_mini"
         class=".boxletsviews.actualitat_mini"
+        permission="zope2.View"
+        />  
+    <browser:page
+        for="*"
+        name="box.ActualitatPDIPAS_mini"
+        class=".boxletsviews.actualitatPDIPAS_mini"
         permission="zope2.View"
         />  
 	<browser:page

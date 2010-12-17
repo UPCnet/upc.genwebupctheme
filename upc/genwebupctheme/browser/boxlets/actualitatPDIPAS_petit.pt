@@ -1,0 +1,45 @@
+<tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                            utils context/@@upc.genweb.utils;
+                            plone_view context/@@plone;
+                            isAnon here/portal_membership/isAnonymousUser;"
+                i18n:domain="plone"
+                tal:condition="not: isAnon">
+
+	<tal:block tal:define="entries view/getRSS"
+	           tal:condition="entries">
+	
+		<div class="portlet200"> </div>
+		
+	    <div class="caixaPortlet">
+	    
+	    	<h2 i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitatPDIPAS" 
+	    	     class="titolPortlet"> Actualitat PDI/PAS </h2>
+	    	
+	        <ul>
+		        <li tal:repeat="entry entries">
+		            <a href=""
+		                tal:attributes="title entry/summary | nothing;
+		                           href entry/url | nothing" target="_blank">
+		                <span tal:replace="entry/title | nothing">
+		                Notícies RSS
+		                </span>
+				<img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" />
+		            </a>
+		        </li>
+	        </ul>
+	        
+	        <div class="portletPlus">  
+	            <a href="#"><img src="plus.gif" alt="+"/></a> 
+	            <a href=""
+	               tal:define="url utils/premsa_PDIPAS_url"
+	               tal:attributes="href url"
+	               i18n:translate="box_more_news_link">
+	               More news&hellip;
+	            </a>
+	        </div>    
+	        
+	    </div> 
+	    <div class="baix200"> </div>
+	        	
+	</tal:block>
+</tal:newsitems>

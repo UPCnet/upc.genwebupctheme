@@ -229,7 +229,7 @@ class noticies_actualitat(noticies):
         
         if idioma == 'zh':  #Force RSS en anglès a web en chino 
            idioma = 'en' 
-
+      
         url = 'http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=' + idioma
         #url = 'http://localhost:8304/saladepremsa/actualitat-upc/RSS?set_language=' + idioma
 
@@ -242,6 +242,49 @@ class noticies_actualitat(noticies):
                 itemdict = {
                     'title' : item.title,
                     'url' : link + '?set_language=' + idioma,
+                    'summary' : item.get('description',''),
+                }
+            except AttributeError:
+                continue
+            items.append(itemdict)
+        return items[:5]
+
+class noticies_actualitatPDIPAS(noticies):
+    _template = ViewPageTemplateFile('noticies_actualitatPDIPAS.pt')
+    
+    def __init__(self, context, request):
+        self.context = context
+        self.request = request
+
+        self.utils = getMultiAdapter((self.context, self.request),
+                                        name=u'upc.genweb.utils')
+        self.now = localtime()
+        
+    def mes(self, mes):
+        return self.utils.mes(mes)
+    
+    def dia_semana(self, dia):
+        return self.utils.dia_semana(dia)
+    
+    def getRSS (self):
+
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+        
+        if idioma == 'zh':  #Force RSS en anglès a web en chino 
+           idioma = 'en' 
+                
+        url = 'http://www.upc.edu/saladepremsa/actualitat-pdi-pas/RSS?set_language=' + idioma
+
+        items = []
+        
+        d = feedparser.parse(url)
+        for item in d['items']:
+            try:
+                link = item.links[0]['href']
+                itemdict = {
+                    'title' : item.title,
+                    'url' : link,
                     'summary' : item.get('description',''),
                 }
             except AttributeError:
@@ -265,5 +308,16 @@ class noticies_petit(noticies):
     _template = ViewPageTemplateFile('noticies_petit.pt')
 
 class noticies_mini(noticies):
-    _template = ViewPageTemplateFile('noticies_mini.pt')    
+    _template = ViewPageTemplateFile('noticies_mini.pt')   
+
+class actualitatPDIPAS_mini(noticies_actualitatPDIPAS):
+    _template = ViewPageTemplateFile('actualitatPDIPAS_mini.pt') 
     
+class actualitatPDIPAS_petit(noticies_actualitatPDIPAS):
+    _template = ViewPageTemplateFile('actualitatPDIPAS_petit.pt') 
+
+class actualitatPDIPAS_noticies_mini(noticies_actualitatPDIPAS):
+    _template = ViewPageTemplateFile('actualitatPDIPAS_noticies_mini.pt') 
+
+class actualitatPDIPAS_noticies_petit(noticies_actualitatPDIPAS):
+    _template = ViewPageTemplateFile('actualitatPDIPAS_noticies_petit.pt') 

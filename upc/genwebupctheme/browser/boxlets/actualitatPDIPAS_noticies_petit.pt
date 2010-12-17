@@ -1,0 +1,83 @@
+<tal:newsitems  tal:define="toLocalizedTime nocall:context/@@plone/toLocalizedTime;
+                            utils context/@@upc.genweb.utils;
+                            plone_view context/@@plone;
+                            news_items view/published_news_items;
+                            isAnon here/portal_membership/isAnonymousUser;"
+                i18n:domain="plone"
+                tal:condition="not: isAnon">
+
+	<tal:block tal:define="entries view/getRSS"
+	           tal:condition="entries">
+	
+		<div class="portlet200"> </div>
+		
+	    <div class="caixaPortlet">
+	        
+	      <tal:block condition="news_items">  
+	    	<h2 class="titolPortlet">
+	           <span class="icoRSS">
+          	          <a href=""
+             	          tal:define="utils context/@@upc.genweb.utils"
+             	          tal:attributes="href view/rss_news_link">RSS
+            	          <img src="rss.gif" alt=" " /> 
+         	           </a>
+		      	  </span>
+		      	  <span i18n:domain="upc.genwebupc" i18n:translate="genweb-noticies"> Notícies </span>
+	    	</h2>
+	    	
+	        <ul>
+		        <li tal:repeat="obj news_items">
+		            <a href=""
+		               class="tile"
+		               tal:attributes="href obj/getURL;
+		                               title obj/Description">
+		                <span tal:replace="obj/pretty_title_or_id">
+		                Notícies RSS
+		                </span>
+		                <br/>
+		            </a>
+		            <p class="small"
+		                  tal:content="python:toLocalizedTime(obj.Date)">May 5</p>
+		        </li>
+	        </ul>
+
+	        <div class="portletPlus">  
+	            <a href="#"><img src="plus.gif" alt="+"/></a> 
+	            <a href=""
+	               tal:attributes="href view/all_news_link"
+	               i18n:translate="box_more_news_link">
+	               More news&hellip;
+	            </a>
+	        </div>
+	      </tal:block>  
+	        
+	        <h2 i18n:domain="upc.genwebupc" i18n:translate="genweb-actualitatPDIPAS"
+	             tal:attributes="class python:news_items and 'titolPortlet separadorPortlet' or 'titolPortlet'">Actualitat PDI/PAS</h2>
+	        <ul>
+		        <li tal:repeat="entry entries">
+		            <a href=""
+		                tal:attributes="title entry/summary | nothing;
+		                           href entry/url | nothing" target="_blank">
+		                <span tal:replace="entry/title | nothing">
+		                Notícies RSS
+		                </span>
+				<img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" />     
+		            </a>
+		        </li>
+	        </ul>	        
+	        
+	        <div class="portletPlus">  
+	            <a href="#"><img src="plus.gif" alt="+"/></a> 
+	            <a href=""
+	               tal:define="url utils/premsa_PDIPAS_url"
+	               tal:attributes="href url"
+	               i18n:translate="box_more_news_link">
+	               More news&hellip;
+	            </a>
+	        </div>   
+	        
+	    </div> 
+	    <div class="baix200"> </div>
+	        	
+	</tal:block>
+</tal:newsitems>
