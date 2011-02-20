@@ -26,7 +26,7 @@ class GlobalSections(GlobalSectionsViewlet):
 
 class PathBarRoot(PathBarViewlet):
     index = ViewPageTemplateFile('null.pt')
-    # GW4 posat a la nevera
+    # GW4 Superseeded afegint directives al overrides.zcml (previament, posat a la nevera)
     # def __init__(self, context, request, view, manager=None):
     #     super(PathBarViewlet, self).__init__(context,request,view, manager)
     # 

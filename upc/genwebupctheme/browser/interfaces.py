@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 from plone.theme.interfaces import IDefaultPloneLayer
 from Products.CMFPlone import PloneMessageFactory as _
-from zope.interface import Interface, Attribute
+from zope.interface import Interface
 from plone.app.controlpanel.skins import ISkinsSchema
 import zope.schema
+
+class IHomepage(Interface):
+    """Marker interface de les homes
+    """
 
 class IThemeSpecificNeutre3(IDefaultPloneLayer):
     """Marker interface del sabor Neutre3

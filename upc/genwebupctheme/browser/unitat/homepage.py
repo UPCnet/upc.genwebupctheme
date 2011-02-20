@@ -1,10 +1,13 @@
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.component import getMultiAdapter, getUtility
+from zope.component import getMultiAdapter
 from upc.genwebupctheme.browser import utils
-
+from upc.genwebupctheme.browser.interfaces import IHomepage
+from zope.interface import implements
 
 class HomePageView(BrowserView):
+    implements(IHomepage)
+    
     __call__=ViewPageTemplateFile('homepage.pt')
 
     def getFrontPage(self):
