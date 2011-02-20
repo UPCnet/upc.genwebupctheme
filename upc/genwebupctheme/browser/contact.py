@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 import re
-import z3c.form.validator
-import upc.genweb.recaptcha
 
 from zope.interface import Interface
+from zope.component import getUtility
 from zope import schema
 from z3c.form import form, field, button
 from plone.z3cform.layout import wrap_form
@@ -12,12 +11,10 @@ from Products.statusmessages.interfaces import IStatusMessage
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from plone.z3cform.templates import ZopeTwoFormTemplateFactory
 from Products.CMFPlone import PloneMessageFactory as _ 
 from Products.CMFPlone.utils import safe_unicode
 from cgi import escape
-from zope.component import getMultiAdapter
-
+from Products.CMFCore.interfaces import ISiteRoot
 
 # Define a valiation method for email addresses
 class NotAnEmailAddress(schema.ValidationError):

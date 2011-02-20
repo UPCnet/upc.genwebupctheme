@@ -107,12 +107,12 @@
         class=".boxletsviews.actualitatPDIPAS_mini"
         permission="zope2.View"
         />  
-	<browser:page
+	<!-- <browser:page
 		for="*"
 		name="box.Enquesta_mini"
 		class=".boxletsviews.enquesta"
 		permission="zope2.View"
-		/>
+		/> -->
 
     <browser:page
         for="*"

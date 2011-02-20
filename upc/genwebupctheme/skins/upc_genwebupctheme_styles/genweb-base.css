@@ -1722,3 +1722,19 @@ height:65 !important;
 .noborder {
 border: 0 !important;
 }
+/* GW4 */
+#content, #edit-bar {
+    font-size: 100%;
+}
+#portal-personaltools{
+    float:none;
+}
+#portal-globalnav li a {
+    display: inline;
+}
+.LSBox label {
+    font-weight: normal;
+}
+.barra_idiomes{
+    z-index:4 !important;
+}

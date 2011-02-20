@@ -110,13 +110,14 @@
         permission="zope2.View"
         />  
 
-    <browser:page
+	<!-- GW4 nevera -->
+    <!-- <browser:page
         name="log"
         for="Products.Poi.interfaces.ITracker"
         permission="cmf.ChangeLocalRoles"
         class="Products.Poi.browser.log.LogView"
         template="browser/productes/log.pt"
-     />
+     /> -->
 
  	<browser:viewlet
  		name="plone.global_sections"

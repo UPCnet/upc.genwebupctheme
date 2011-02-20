@@ -6,7 +6,7 @@
 <body>
 <tal:block i18n:domain="plone" metal:define-macro="portal_message">
 
-    <tal:statusmsg tal:define="messages python: putils.showPortalMessages()"
+    <tal:statusmsg tal:define="messages python:context.plone_utils.showPortalMessages()"
                    tal:repeat="message messages">
         <div class="portalMessage info"
              tal:define="mtype message/type | nothing;"

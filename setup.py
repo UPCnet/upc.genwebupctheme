@@ -3,12 +3,12 @@
 from setuptools import setup, find_packages
 import os
 
-version = '3.3.6'
+version = '4.0b1'
 
 setup(name='upc.genwebupctheme',
       version=version,
       description="Paquet de sabors de Genweb UPC",
-      long_description=open("README.txt").read() + "\n" +
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
         "Framework :: Plone",

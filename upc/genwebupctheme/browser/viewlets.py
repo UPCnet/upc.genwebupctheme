@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets.content import DocumentActionsViewlet, DocumentBylineViewlet 
@@ -24,19 +25,21 @@ class GlobalSections(GlobalSectionsViewlet):
     render = ViewPageTemplateFile('global_sections.pt')    
 
 class PathBarRoot(PathBarViewlet):
-
-    def __init__(self, context, request, view, manager=None):
-        super(PathBarViewlet, self).__init__(context,request,view, manager)
-        if IinfoGeneral.providedBy(self.view):
-            self.render = ViewPageTemplateFile('bGeneral_inf.pt')
-        elif Icompetencies.providedBy(self.view):
-            self.render = ViewPageTemplateFile('bCompetencies.pt')
-        elif Irequisits.providedBy(self.view):
-            self.render = ViewPageTemplateFile('bRequisits.pt')
-        elif Ipreinscripcio.providedBy(self.view):
-            self.render = ViewPageTemplateFile('bPreinscripcio.pt')
-        else:
-            self.render = ViewPageTemplateFile('null.pt')
+    index = ViewPageTemplateFile('null.pt')
+    # GW4 posat a la nevera
+    # def __init__(self, context, request, view, manager=None):
+    #     super(PathBarViewlet, self).__init__(context,request,view, manager)
+    # 
+    #     if IinfoGeneral.providedBy(self.view):
+    #         self.index = ViewPageTemplateFile('bGeneral_inf.pt')
+    #     elif Icompetencies.providedBy(self.view):
+    #         self.index = ViewPageTemplateFile('bCompetencies.pt')
+    #     elif Irequisits.providedBy(self.view):
+    #         self.index = ViewPageTemplateFile('bRequisits.pt')
+    #     elif Ipreinscripcio.providedBy(self.view):
+    #         self.index = ViewPageTemplateFile('bPreinscripcio.pt')
+    #     else:
+    #         self.index = ViewPageTemplateFile('null.pt')
 
 class DarreraModificacio(ViewletBase):
     

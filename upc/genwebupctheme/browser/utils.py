@@ -1,17 +1,8 @@
-from StringIO import StringIO
-from time import localtime
-from plone.memoize import ram
-from plone.memoize.compress import xhtml_compress
 from zope.i18nmessageid import MessageFactory
-from zope.interface import implements
-from Acquisition import aq_inner
-from DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
 from Products.CMFPlone import PloneMessageFactory as _
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.Five.browser import BrowserView
-from zope.component import getMultiAdapter, getUtility
-from upc.genwebupctheme.browser.interfaces import IgenWebUtility
+from zope.component import getMultiAdapter
 from Products.ATContentTypes.interface.folder import IATFolder
 from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 
@@ -22,10 +13,10 @@ import MySQLdb
 PLMF = MessageFactory('plonelocales')
 
 
-def getGWConfig(self):
+def getGWConfig(context):
     """ Funcio que retorna les configuracions del controlpanel
     """
-    ptool = getToolByName(self.context, 'portal_properties')    
+    ptool = getToolByName(context, 'portal_properties')    
     try:
         gwconfig = ptool.genwebupc_properties
     except:
