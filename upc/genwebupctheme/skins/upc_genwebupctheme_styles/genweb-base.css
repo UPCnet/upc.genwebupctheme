@@ -754,9 +754,12 @@ ul.configlets li a:hover {
 #content a[href^="http:"], #content a.link-external {
 	background: none;
 	padding: 0;}
+
+/* GW4 - Per fer servir Deco cal comentar la definicio seguent i esborrar el columns.css de l'skin */
 #portal-column-content {
 	margin:0em;
 	padding:0em;}
+
 #portal-personaltools, .visualInline, #portal-personaltools-wrapper {
 	background-color:transparent;}
 abbr, acronym, .explain {
@@ -1738,3 +1741,126 @@ border: 0 !important;
 .barra_idiomes{
     z-index:4 !important;
 }
+/*missatges info*/
+dl.portalMessage dt {
+    background-color:transparent;
+    float:left;
+    line-height:1.25em;
+    margin:0 0.5em 0 0 !important;
+    padding:0.3em 1em 0.25em 2em !important;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:1.25em;
+    font-weight:bold;
+    padding:4px 10px 5px 30px;
+    border-right:1px solid #ddd;
+    /*border-bottom:1px solid #ddd;*/
+    _border-bottom:0px solid #ddd;}
+#dashboard-info-message {
+    padding:0 0 0.3em 0;padding-top:0;}
+dl.portalMessage {
+    border:1px solid #ddd;
+    /*font-size:100%;*/}
+.visualClear {
+    clear:both;
+    display:block;}
+dl.portalMessage dd {
+    line-height:1.25em;
+    margin:0;
+    padding:0.5em 0.5em;
+    _padding:0.6em 0.5em 0.55em;}
+.info{
+    background-color:#f2f6fa !important; }
+.info dt{
+    color:#00589a !important; 
+    background:url(info_message.gif) no-repeat bottom left #f9f9f9;}
+.warning{
+    background-color:#fdfbf3 !important; }
+.warning dt, dl.warning dt{ 
+    color:#333333 !important; 
+    background:url(alert_message.gif) no-repeat bottom left #f9f9f9 !important;}
+dl.warning dd {
+    background-color:#fdfbf3 !important;}
+.error{
+    padding-top:0em !important;
+    background-color:#fcf4f2 !important;}
+.error dt{ 
+    color:#c63103 !important;
+    background:url(error_message.gif) no-repeat bottom left #f9f9f9;}
+dl.error dd {
+    background-color:#fcf4f2 !important;}
+
+/*pestanyes edicio*/ 
+#edit-bar{
+    background-color: #ededed;
+    border-color: #ededed;
+}
+#content-views{
+    background-color: transparent;
+}
+#content-views li a{
+    color: #007bc0;
+}
+#contentActionMenus {
+	background-color: #ededed;
+}
+#contentActionMenus dl.actionMenu a, 
+#contentActionMenus dl.actionMenu.activated dd {
+    background-color: #ededed;
+    color: #007bc0;    
+}
+#contentActionMenus dl.actionMenu.activated dd {
+border-color: #ededed;
+}
+.contentActions li {
+	border:none;
+}
+#contentActionMenus dl.actionMenu a{
+    line-height: 2em;
+}
+
+/* GW4 ve del deprecated columns.css.dtml */
+/*
+#portal-column-one {
+  float:left;
+  width: 16em;
+  padding: 0;
+  font-size: 100%;
+}
+
+#portal-column-content {
+  padding: 1em 1em 0 1em;
+  margin: 0em 0em 2em 0em;
+}
+#portal-column-content.sl {
+  margin-left: 16em;
+}
+#portal-column-content.sr {
+  margin-right: 16em;
+}
+#portal-content-wrapper {
+  float:left;
+  width:100%;
+}
+
+#portal-column-two {
+  float:right;
+  width: 16em;
+  padding: 0;
+  font-size: 100% !important;
+}
+*/
+/* fullscreen */
+/*
+body.fullscreen #portal-column-one,
+body.fullscreen #portal-column-two {
+  display: none;
+}
+body.fullscreen #portal-column-content {
+  margin: 0;
+  padding: 0;
+}
+
+dl.portlet {
+    font-size: 100%;
+}
+*/

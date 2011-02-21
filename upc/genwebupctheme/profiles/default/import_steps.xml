@@ -5,6 +5,7 @@
                handler="upc.genwebupctheme.setuphandlers.setupVarious"
                title="Tema genwebUPC: miscellaneous import steps">
     <dependency step="skins" />
+    <dependency step="propertiestool" />
     Various import steps that are not handled by GS import/export
     handlers.
   </import-step>

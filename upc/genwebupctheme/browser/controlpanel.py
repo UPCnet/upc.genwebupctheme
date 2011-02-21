@@ -71,7 +71,6 @@ class GenWebControlPanelAdapter(SchemaAdapterBase):
     especific6 = ProxyFieldProperty(IgenWebControlPanel['especific6'])
     
     imatgedefonsprops = ProxyFieldProperty(IgenWebControlPanel['imatgedefonsprops'])
-
     titolespai_ca = ProxyFieldProperty(IgenWebControlPanel['titolespai_ca'])
     titolespai_es = ProxyFieldProperty(IgenWebControlPanel['titolespai_es'])
     titolespai_en = ProxyFieldProperty(IgenWebControlPanel['titolespai_en'])

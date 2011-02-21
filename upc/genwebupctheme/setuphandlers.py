@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from StringIO import StringIO
 from Products.CMFCore.utils import getToolByName
 # from Products.Poi.Extensions.utils import addAction, removeAction
@@ -10,6 +11,11 @@ def setupVarious(context):
     # The file is found in profiles/default.
     if context.readDataFile('upc.genwebupctheme_various.txt') is None:
         pass
+    
+    properties = getToolByName(context, 'portal_properties')
+    #import ipdb; ipdb.set_trace()
+    properties.genwebupc_properties.titolespai_ca = 'à'.decode('utf-8')
+    
     # import os,shutil
     # import upc.genwebupctheme
     # import Products.FCKeditor
