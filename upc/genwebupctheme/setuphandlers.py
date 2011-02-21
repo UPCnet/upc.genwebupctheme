@@ -12,10 +12,19 @@ def setupVarious(context):
     if context.readDataFile('upc.genwebupctheme_various.txt') is None:
         pass
     
+    # GW4, per solucionar el problema de unicode en les portal_properties
     properties = getToolByName(context, 'portal_properties')
-    #import ipdb; ipdb.set_trace()
-    properties.genwebupc_properties.titolespai_ca = 'à'.decode('utf-8')
-    
+    properties.genwebupc_properties.titolespai_ca = "Títol de l'espai en català".decode('utf-8')
+    properties.genwebupc_properties.titolespai_es = "Títol de l'espai en castellà".decode('utf-8')
+    properties.genwebupc_properties.titolespai_en = "Títol de l'espai en anglès".decode('utf-8')
+    properties.genwebupc_properties.firmaunitat_ca = "Firma de la unitat en català".decode('utf-8')
+    properties.genwebupc_properties.firmaunitat_es = "Firma de la unitat en castellà".decode('utf-8')
+    properties.genwebupc_properties.firmaunitat_en = "Firma de la unitat en anglès".decode('utf-8')
+    properties.genwebupc_properties.enllaslogotipdretalt = "Universitat Politècnica de Catalunya".decode('utf-8')
+    properties.genwebupc_properties.ambitdoctorat_ca = "Àmbit doctorat - [català]".decode('utf-8')
+    properties.genwebupc_properties.ambitdoctorat_es = "Àmbit doctorat - [castellà]".decode('utf-8')
+    properties.genwebupc_properties.ambitdoctorat_en = "Àmbit doctorat - [anglès]".decode('utf-8')
+                                    
     # import os,shutil
     # import upc.genwebupctheme
     # import Products.FCKeditor

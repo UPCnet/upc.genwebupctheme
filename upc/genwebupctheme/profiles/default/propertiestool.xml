@@ -27,7 +27,7 @@
     <property name="especific6" type="string" purge="False">#f3f3f3</property>
     <property name="imatgedefonsprops" type="string" purge="False">repeat-y</property>
 
-    <property name="titolespai_ca" type="string" purge="False">Titol de l'espai en catala'</property>
+    <property name="titolespai_ca" type="string" purge="False">Titol de l'espai en catala</property>
     <property name="titolespai_es" type="string" purge="False">Titol de l'espai en castella</property>
     <property name="titolespai_en" type="string" purge="False">Titol de l'espai en angles</property>
     <property name="firmaunitat_ca" type="string" purge="False">Firma de la unitat en catala.</property>
