@@ -5,33 +5,19 @@
     <b class="hiddenStructure" i18n:translate="heading_document_actions">Document Actions</b>
 
     <ul tal:define="normalizeString nocall: context/@@plone/normalizeString">
-    
     <tal:actions repeat="daction view/actions">
         <li tal:attributes="id python:'document-action-' + normalizeString(daction['id'])">
             <a href=""
-               tal:define="icon python:view.getIconFor('plone', daction['id']);
-                           id_accio daction/id;
-                           accio python:context.translate(id_accio + '_accio', domain='upc.genwebupc') + ' ' + context.Title();"
                tal:attributes="href daction/url;
-                               title accio"
-               tal:condition="icon" >
-               <img tal:attributes="alt daction/title; src string:$icon;"/>
-            </a>
-            <a href=""
-               tal:define="icon python:view.getIconFor('plone', daction['id']);
-			   id_accio daction/id;
-                           accio python:context.translate(id_accio + '_accio', domain='upc.genwebupc') + ' ' + context.Title();"
-               tal:attributes="href daction/url;
-                               title accio"
-               tal:condition="python:not icon"
-               tal:content="daction/title">
+                               title daction/description">
+            
+            <img tal:attributes="title daction/title;
+                                 alt daction/title;
+                                 src daction/icon" />
             </a>
         </li>
     </tal:actions>
-
-    </ul>
+    </ul>  
     </tal:docactions>
-
     <div tal:replace="structure provider:plone.documentactions" />
-
 </div>

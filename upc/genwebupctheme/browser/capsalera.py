@@ -1,25 +1,10 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
-from plone.app.layout.viewlets import common
-from plone.app.layout.globals.interfaces import IViewView
 from plone.memoize.instance import memoize
 from zope.component import getMultiAdapter
 from Products.CMFCore.utils import getToolByName
-from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from zope.interface import implements, alsoProvides
-from zope.component import getMultiAdapter
-from zope.viewlet.interfaces import IViewlet
-from zope.deprecation.deprecation import deprecate
 from AccessControl import getSecurityManager
-from Acquisition import aq_base, aq_inner
-from Products.CMFPlone.utils import safe_unicode
-from Products.Five.browser import BrowserView
-from cgi import escape
 from urllib import quote_plus
-
-from Products.Five.browser.pagetemplatefile import ZopeTwoPageTemplateFile
-from Products.LinguaPlone.interfaces import ITranslatable
-from plone.app.i18n.locales.browser.selector import LanguageSelector
 
 from upc.genwebupctheme.browser.utils import havePermissionAtRoot
 
@@ -28,21 +13,13 @@ class capsaleraSuperior(ViewletBase):
 
     def update(self):
         
-        super(capsaleraSuperior, self).update()  # nuevo de Plone 3.1.1
-               
-      
+        super(capsaleraSuperior, self).update()
+
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
 
-#(Pdb) self.context
-#<PloneSite at /nuevo>
-#(Pdb) self.request
-#<HTTPRequest, URL=http://localhost:8300/nuevo/homepage>  
-     
-        portal_url = context_state.current_base_url() # para q funcionen las urls /?  
-              
-        self.site_actions = context_state.actions().get('site_actions', None)
-        
+        self.site_actions = context_state.actions('site_actions')
+
         props = getToolByName(self.context, 'portal_properties')
         livesearch = props.site_properties.getProperty('enable_livesearch', False)
         if livesearch:
@@ -172,7 +149,7 @@ class eines(ViewletBase):
         
         sm = getSecurityManager()
 
-        self.user_actions = context_state.actions().get('user', None)
+        self.user_actions = context_state.actions('user')
 
         plone_utils = getToolByName(self.context, 'plone_utils')
         self.getIconFor = plone_utils.getIconFor
