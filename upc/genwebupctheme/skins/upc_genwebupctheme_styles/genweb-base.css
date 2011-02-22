@@ -299,10 +299,18 @@ h1.documentFirstHeading img {display:none;}
 #baner {text-align:right;margin-bottom:10px;}
 #baner img { border: 1px solid #e6e6e6;margin-bottom:10px;}
 #baner img:hover {border: 1px solid #007bc0;margin-bottom:10px;}
+/* GW4 ojo Albert! */
+/* Al final, de moment amb Deco!! */
+/* 
 #visual-portal-wrapper{
 	margin: 0px auto;
 	padding: 0;
 	width: 958px !important;}
+*/
+#visual-portal-wrapper{
+    margin: 0px auto;
+    padding: 0;
+    width: 980px !important;}
 /* CAPCALERA COMUNS */
 .barraCerca{
 	margin: 7px 3px 0 0;
@@ -755,10 +763,15 @@ ul.configlets li a:hover {
 	background: none;
 	padding: 0;}
 
+/* GW4 ojo Albert! */
+/* Al final, de moment amb Deco!! */
+/* 
 /* GW4 - Per fer servir Deco cal comentar la definicio seguent i esborrar el columns.css de l'skin */
+/*
 #portal-column-content {
 	margin:0em;
 	padding:0em;}
+*/
 
 #portal-personaltools, .visualInline, #portal-personaltools-wrapper {
 	background-color:transparent;}
@@ -1862,5 +1875,90 @@ body.fullscreen #portal-column-content {
 
 dl.portlet {
     font-size: 100%;
+}
+*/
+.documentByLine {
+    color: #76797C;
+    font-size: 90%;
+    font-weight: normal;
+    margin-bottom: 0.5em;
+}
+
+/* GW4 ve del navtree.css antic navtree styles */
+
+.portletNavigationTree {
+    padding: 0; 
+    list-style: none !important;
+    list-style-image: none !important; 
+    line-height: 1em;
+}
+.navTree {
+    list-style: none; 
+    list-style-image: none; 
+    margin-top: 1px;
+}
+.navTree li {
+    margin-bottom: 1px;
+}
+.navTreeItem {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.navTreeItem a,
+dd.portletItem .navTreeItem a {
+    border: 1px solid White;
+    display: block;
+    text-decoration: none;
+    padding-top: 0.2em;
+    padding-bottom: 0.25em;
+}
+.navTreeItem a:hover,
+dd.portletItem .navTreeItem a:hover {
+    background-color: #dee7ec;
+    color: #436976;
+    border: 1px solid #8cacbb;
+}
+.navTreeCurrentItem {
+    background-color: #dee7ec;
+    color: #436976;
+    border: 1px solid #8cacbb !important;
+}
+li.navTreeCurrentItem {
+    display: block;
+    padding: 0 0 0 1px;
+    margin: 0 0 2px -1px;
+}
+li.navTreeCurrentItem a,
+li.navTreeCurrentItem a:hover {
+    display: block;
+    border: 1px solid #dee7ec;
+    min-height: 1.6em;
+    line-height: 1.6em;
+    height: auto;
+}
+
+/* Another workaround for broken Internet Explorer */
+* html li.navTreeCurrentItem a,
+* html li.navTreeCurrentItem a:hover {
+    height: 1.6em;
+}
+
+.navTreeLevel0 { margin: 0; }
+.navTreeLevel1 { margin-left: 1em;}
+.navTreeLevel2 { margin-left: 0.75em; }
+.navTreeLevel3 { margin-left: 0.75em; }
+.navTreeLevel4 { margin-left: 0.75em; }
+.navTreeLevel5 { margin-left: 0.75em; }
+
+/*  */
+
+/* GW4 ojo Albert! */
+/* Al final, de moment amb Deco!! */
+/* 
+/* GW4, canvia la classe del portal-column-content */
+/*
+#portal-column-content {
+    margin-left:227px;
 }
 */

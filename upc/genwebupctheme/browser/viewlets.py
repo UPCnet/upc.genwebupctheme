@@ -20,6 +20,12 @@ class PathBar(PathBarViewlet):
     
     render = ViewPageTemplateFile('path_bar.pt')
     
+    def eliminaBRs(self, crumb):
+        title = crumb['Title']
+        if isinstance(title, str):
+            title = title.decode('utf-8')
+        return title.replace(u'<br/>','').replace(u'<br>','').replace(u'<br />','').replace(u'&nbsp;','')
+    
 class GlobalSections(GlobalSectionsViewlet):
     
     render = ViewPageTemplateFile('global_sections.pt')    

@@ -1,6 +1,7 @@
-﻿<div id="peu" tal:define="utils context/@@upc.genweb.utils;
-													portal_url context/@@plone_portal_state/portal_url" 
-                     i18n:domain="upc.genwebupc">   
+﻿<div id="peu" class="row"
+              tal:define="utils context/@@upc.genweb.utils;
+                          portal_url context/@@plone_portal_state/portal_url" 
+              i18n:domain="upc.genwebupc">   
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
 		<tal:block tal:repeat="obj python: view.bannersPeu()">		
@@ -14,7 +15,7 @@
 		</tal:block>
 	</div>
 
-   <div id="signText"> 
+   <div id="signText" class="cell width-full position-0"> 
         <span tal:define="links view/linksPeu" tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
             <img src="rss.gif" class="rsspeu" alt="RSS"> <a accesskey="0" href=""
                 i18n:attributes="title genweb-rss"

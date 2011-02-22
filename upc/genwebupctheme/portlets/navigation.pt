@@ -8,7 +8,6 @@
 
 <!-- fi irene -->
 
-
 <div class="portlet portletNavigationTree" id="portlet-navigation-tree"  
     tal:define="root view/navigation_root">
 

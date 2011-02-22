@@ -17,7 +17,7 @@
     <browser:viewlet
 	    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
         name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".browser.viewlets.PathBarRoot"
 		view="upc.genwebupctheme.browser.interfaces.IHomepage"
         permission="zope2.View" 
@@ -76,7 +76,7 @@
 	<!-- path_bar per totes les altres vistes -->
     <browser:viewlet
         name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".browser.viewlets.PathBar"
         permission="zope2.View" 
         />

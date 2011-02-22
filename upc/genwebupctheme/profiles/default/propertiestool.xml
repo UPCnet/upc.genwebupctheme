@@ -55,15 +55,19 @@
   </object>
   
  <object name="site_properties" meta_type="Plone Property Sheet">
-  
+  <!-- GW4 eliminat -->
+  <!-- 
   <property name="available_editors" type="lines">
    <element value="FCKeditor"/>
    <element value="Kupu"/>
    <element value="None"/>
   </property>
+   -->
   <property name="external_links_open_new_window" type="string">True</property>
  </object> 
- 
+
+<!-- GW4 eliminat -->
+<!--  
  <object name="fckeditor_properties" meta_type="Plone Property Sheet">
   <property name="fck_default_skin" type="string">silver</property>
   <property name="keyboard_entermode" type="string">br</property>
@@ -133,5 +137,5 @@
 ['About']
 ]</property>    
  </object> 
- 
+--> 
 </object>

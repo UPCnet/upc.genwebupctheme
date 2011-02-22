@@ -16,7 +16,7 @@
                tal:omit-tag="not: crumb/absolute_url"
                tal:condition="python:not is_last"
                tal:attributes="href crumb/absolute_url"
-               tal:content="python:crumb['Title'].replace('<br/>','').replace('<br>','').replace('<br />','').replace('&nbsp;','')">
+               tal:content="python:view.eliminaBRs(crumb)">
                 crumb
             </a>
             <span class="breadcrumbSeparator" tal:condition="not: is_last">
@@ -24,7 +24,7 @@
                 <tal:rtl condition="view/is_rtl">&raquo;d</tal:rtl>
             </span>
             <span tal:condition="is_last"
-				tal:content="python:crumb['Title'].replace('<br/>','').replace('<br>','').replace('<br />','').replace('&nbsp;','')"></span>
+				tal:content="python:view.eliminaBRs(crumb)"></span>
          </tal:last>
     </span>
 
