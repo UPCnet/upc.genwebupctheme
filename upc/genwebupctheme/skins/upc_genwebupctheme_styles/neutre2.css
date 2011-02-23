@@ -3,10 +3,11 @@
 	float:right;
 	margin-bottom:5px;
 	*margin-bottom:0px}
+/* GW4  canviat padding-right:25px; a 24*/ 
 .logoNeutre2 { 
 	padding-top:36px;
 	padding-left:0px;
-	padding-right:25px;
+	padding-right:24px;
 	float:left;
 	margin-bottom:5px;
 	*margin-bottom:0px}
@@ -34,11 +35,13 @@
 	font-size:0.05em;
 	margin:5px 0;
 	clear:both}
+
+/* GW4 eliminat la position absolute i width 800px */
 #portal-personaltools{
 	background-color:transparent;
-	position: absolute;
 	margin: -29px 0px 0px 5px;
-	width: 800px}
+}
+
 .barra_idiomes {
 	float: right;
 	position:relative;
@@ -77,4 +80,5 @@ select[id="form.masterdoctorado"] option {color: #999}
 /*contactePersonalitzat*/
 .iframeContacte iframe {width:538px;height:500px}
 /*#portal-column-content {margin-left:227px !important;}*/
-.template-plone_control_panel #portal-column-content {margin-left:0px !important;}
+/* GW4 eing?? Perque aquesta definicio? */
+/* .template-plone_control_panel #portal-column-content {margin-left:0px !important;} */

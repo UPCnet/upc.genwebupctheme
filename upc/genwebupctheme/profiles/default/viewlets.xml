@@ -187,4 +187,16 @@
   <viewlet name="plone.personal_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
  </hidden>
+ <hidden manager="plone.abovecontent" skinname="Tema genwebUPC Neutre2">
+  <viewlet name="plone.path_bar"/>
+ </hidden>
+ <hidden manager="plone.abovecontent" skinname="Tema genwebUPC Neutre3">
+  <viewlet name="plone.path_bar"/>
+ </hidden>
+ <hidden manager="plone.abovecontent" skinname="Tema genwebUPC Master">
+  <viewlet name="plone.path_bar"/>
+ </hidden>
+ <hidden manager="plone.abovecontent" skinname="Tema genwebUPC Unitat">
+  <viewlet name="plone.path_bar"/>
+ </hidden>
 </object>

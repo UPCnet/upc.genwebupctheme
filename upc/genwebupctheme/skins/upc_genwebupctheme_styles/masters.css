@@ -1,8 +1,8 @@
 #contenidor {margin-top:0px !important;}
+/* GW4 eliminat position: absolute */ 
 #portal-personaltools{
 	background-color:transparent;
 	z-index: 1;
-	position: absolute;
 	margin: -31px 0 0 5px}
 #portal-breadcrumbs {
 	clear:both;

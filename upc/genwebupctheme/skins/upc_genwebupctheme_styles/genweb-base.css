@@ -1953,6 +1953,14 @@ li.navTreeCurrentItem a:hover {
 
 /*  */
 
+/* Aquest ve de que ha d'estar despres de lo que havia en el navtree.css */ 
+ul.navTree li, .navTreeLevel0 {
+    padding: 5px 0 5px 20px;
+    margin: 0;
+    background: url(fletxaGo.gif) no-repeat top left;
+    list-style-type: none;
+    line-height:1.5em;}
+
 /* GW4 ojo Albert! */
 /* Al final, de moment amb Deco!! */
 /* 
@@ -1962,3 +1970,17 @@ li.navTreeCurrentItem a:hover {
     margin-left:227px;
 }
 */
+
+#content fieldset{
+    background:transparent url(fonsT.png) repeat-x scroll center bottom;
+    border:1px solid #E6E6E6;
+    padding:10px;
+    margin:25px 0;
+}
+#login_form {
+    width: 500px;
+}
+#forgotten-password {
+    float: right;
+    width: 35%;
+}
