@@ -15,7 +15,6 @@
 
 .submitGo {background: transparent url(cerca_<tal:propietat replace="language">language</tal:propietat>.gif) repeat scroll 0 0;}
 
-#content a[href ^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"], #content a.link-https { background:none; padding:0px; }
 
 #content .columnaEsq a[href^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"],
 #content .columnaEsq a.link-https, #content .columnaDreta a[href^="<tal:propietat replace="portal_url">portal_url</tal:propietat>"],

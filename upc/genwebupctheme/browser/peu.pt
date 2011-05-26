@@ -1,7 +1,6 @@
-﻿<div id="peu" class="row"
-              tal:define="utils context/@@upc.genweb.utils;
-                          portal_url context/@@plone_portal_state/portal_url" 
-              i18n:domain="upc.genwebupc">   
+﻿<div id="peu" tal:define="utils context/@@upc.genweb.utils;
+													portal_url context/@@plone_portal_state/portal_url" 
+                     i18n:domain="upc.genwebupc">   
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
 		<tal:block tal:repeat="obj python: view.bannersPeu()">		
@@ -15,7 +14,7 @@
 		</tal:block>
 	</div>
 
-   <div id="signText" class="cell width-full position-0"> 
+   <div id="signText"> 
         <span tal:define="links view/linksPeu" tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
             <img src="rss.gif" class="rsspeu" alt="RSS"> <a accesskey="0" href=""
                 i18n:attributes="title genweb-rss"
@@ -33,7 +32,7 @@
 				tal:attributes="href links/access">Accessibility</a>
         </span>
 		<span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció.</span><br />
-        © <a href="http://www.upc.edu" target="newwindow">UPC <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"/></a>. Universitat Politècnica de Catalunya  <span class="gris">●</span>  BarcelonaTech.
+        © <a href="http://www.upc.edu" target="newwindow">UPC <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"/></a>. Universitat Politècnica de Catalunya. BarcelonaTech.
         
     </div>
 </div>

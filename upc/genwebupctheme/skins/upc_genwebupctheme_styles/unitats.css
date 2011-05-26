@@ -94,7 +94,7 @@ html*.liniaActivaEsq, html*.liniaActivaDreta {width:152px}
 	padding-top:1px;
 	position:relative;
 	margin-top:-1px;
-	z-index:-1;}
+	z-index:0;}
 /*\*/
 html*.degradat{margin-top:0px; float:right}
 .degradat {*float:none !important;*margin-top:-2px !important;}

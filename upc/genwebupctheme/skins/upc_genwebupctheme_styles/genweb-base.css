@@ -80,7 +80,7 @@ padding-top:0px;
 	width:148px !important;} 	
 */
 /* GENERAL */
-body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#f9f9f9 url(fons.png) center repeat-y;}
+body {font-family: Verdana, Arial, Helvetica, sans-serif; color: #333; font-size: 0.7em; background:#f7f7f7 url(fons.png) center repeat-y; padding:0; margin:0;}
 a:link, a:visited, a:active {color:#007bc0; text-decoration: none;}	
 a:hover {text-decoration: underline;} 
 /*a:focus {outline: none;}*/
@@ -119,10 +119,10 @@ code {
 legend {
 	background:transparent none repeat scroll 0%;
 	background-color:transparent;
-	font-size:0%;
+	font-size:100%;
 	padding:0 0 0.5em 0;
 	color:#999;
-	*font-size:90%;
+	*font-size:100%;
 	*display:none;}
 fieldset{
 	background:transparent url(fonsT.png) repeat-x scroll center bottom;
@@ -150,7 +150,12 @@ label {
 textarea {
 	padding:1px 3px;
 	font-family:Verdana, Arial, Helvetica, sans-serif;
-	width:98%;}	
+	width:98%;
+	border:1px solid #b2b2b2;
+	font-size:115%;
+	-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
+	background: white url(input_background.gif) repeat-x scroll 0% 0%;}	
+input#recaptcha_response_field { border:1px solid #b2b2b2 !important; font-size:115% !important; }
 [type="submit"], button {
 	background:url(botoFons.gif) repeat-x center center;
 	border:1px solid #006DA3;
@@ -158,15 +163,17 @@ textarea {
 	font-size:90%;
 	font-family:Verdana, Helvetica, Arial, sans-serif;
 	font-weight:bold;
-	padding:0 3px 2px 3px;
+	padding:3px 6px 5px 6px;
+	-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
 	*border:0;
-	*padding:2px;}
+	*padding:5px;}
 input.text, 
 input.password {
 	font-size: 11px;
 	padding: 0 1px 1px 1px;
 	border: 1px solid #F60; 
 	background: url(fonsInput.gif) repeat-x;}
+input.text:hover, input.password:hover {background:#fffcef;}
 input.radio {
 	margin-right:5px;   
 	margin-bottom:-2px;
@@ -202,14 +209,15 @@ input.searchButton {
 	*border:0;
 	*padding:2px 0 2px 14px;}
 #CheckCercaLSBox{ margin: 0px 5px 2px; }
-.checkIntranet{position: absolute; margin: 18px 0px 0px 3px; color: #666666;}
+.checkIntranet{position: absolute; margin: 18px 0px 0px 5px; color: #666666;}
 
 form.searchPage input.searchButton{
 	background-position:0px 0px;
-	padding:0 3px 2px 17px;
+	padding:2px 6px 3px 20px;
 	*background-position:center left;
-	*padding:0 0 0 14px;
-	font-weight:normal;}
+	*padding:2px 3px 1px 17px;
+	font-weight:normal;
+	background-position:0 -6px;}
 .template-login_form .context {
 	font-weight:normal;}
 form.searchPage {
@@ -238,17 +246,21 @@ input[id="description"] {
 	font-weight:normal;}
 input {
 	background:#fff url(input_background.gif) repeat-x scroll 0% 0%;
-	border-color:#ccc;
+	border-color:#b2b2b2;
 	border-style:solid;
 	border-width:1px;
 	color:#333;
-	padding:1px 3px;
+	padding:3px;
 	font-family:Verdana,Helvetica,Arial,sans-serif;
 	vertical-align:middle;
-	visibility:visible;}	
+	font-size:115%;
+	visibility:visible;
+	-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
+	margin-left:0;}	
 select {
 	font-family:Verdana,Helvetica,Arial,sans-serif;
-	font-size:90%;}	
+	font-size:100%;
+	max-width:98%;}	
 /*titulars*/
 h1, h2, h3, h4, h5, h6 {
 	color: #C00;
@@ -310,10 +322,11 @@ h1.documentFirstHeading img {display:none;}
 #visual-portal-wrapper{
     margin: 0px auto;
     padding: 0;
-    width: 980px !important;}
+    width: 980px !important;
+    background:#fff;}
 /* CAPCALERA COMUNS */
 .barraCerca{
-	margin: 7px 3px 0 0;
+	margin: 7px 0px 0 0;
 	text-align: right;
 	float:none;}
 .barraCerca img {
@@ -340,8 +353,10 @@ h1.documentFirstHeading img {display:none;}
 	font-size: 0.9em;
 	border-top: 3px solid #f60;
 	padding-top: 4px;
+	padding-bottom:1em;
 	float:left;
-	width:958px;}
+	width:958px;
+	margin-left:11px}
 .sobreElWeb {
 	text-align:right;
 	float:right;
@@ -363,12 +378,13 @@ html*.sobreElWeb {
 	margin-right: 15px;
 	padding: 10px 0;}
 /*sou a*/
+#portal-top {margin-bottom:1.5em;}
 #portal-breadcrumbs {
 	font-size:0.9em;
 	border-bottom: 0;
 	padding:0;
 	line-height:1em;
-	margin:5px 0 15px;
+	margin:5px 0 5px;
 	*margin:5px 0 15px;}
 #breadcrumbs-you-are-here {
 	padding-left:8px;
@@ -382,7 +398,7 @@ html*.sobreElWeb {
 	text-decoration:underline;}
 #breadcrumbs-you-are-here{
 	font-weight:bold;}
-.rsspeu {margin-bottom:3px;}
+.rsspeu {margin-bottom:-1px;}
 /*cerca*/
 .barraCerca { 
 	text-transform: lowercase; }
@@ -401,6 +417,7 @@ html*.sobreElWeb {
 .LSBox, .NoLSBox {
 	float: right;
 	margin: 0px !important;
+	margin-top:-2px !important;
 	padding-right:0;
 /* Modificat per treure la cerca de Google, Victor 11/6*/
 	padding-left:0px;
@@ -514,13 +531,14 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 .contentViews {
 	background-color:transparent;
 	border-color:#999;}
+.contentViews li { display:inline;}
 .contentActions li {
 	border-left:1px solid #999;}
 .contentActions {
-	background-color:#EDEDED;
+	/*background-color:#EDEDED;
 	border-left:1px solid #999;
 	border-right:1px solid #999;
-	color:#999;}
+	color:#999;*/}
 .contentViews li a:hover {
 	background-color:#ededed;
 	background:#ededed url(taulaMenu_bg_on.gif) repeat-x bottom left;
@@ -592,27 +610,26 @@ a span.state-esborrany {
 	background: none !important;
 }
 .state-intranet {
-	color: #7d00cc !important;
-	background: none !important;}
+	color: #7d00cc !important;}
 span.state-intranet, 
 td.state-intranet {
-	color: #7d00cc !important;
-	background: none !important;}
+	color: #7d00cc !important;}
 a span.state-intranet {
-	color: #7d00cc !important;
-	background: none !important;}
+	color: #7d00cc !important;}
 
 
 /*missatges info*/
 
 div.portalMessage { 
     width:100%; 
-    padding:0;
+    padding:0 0 4px;
+    margin:.5em 0;
     background-color:#F2F6FA !important; 
     float:none !immportant; 
-    border:1px solid #ddd; 
+    border:1px solid #b2b2b2; 
     vertical-align:middle; 
     background-image:none;
+    font-size:90%;
 }
 div.portalMessage_left { 
     width:10%; 
@@ -697,7 +714,7 @@ dl.error dd {
 	color:#007bc0;}
 .documentContent dd a:hover {
 	background-color:transparent;
-	color:#007bc0;
+	color:#005EA0;
 	text-decoration:underline;}
 /* ANULLACIO DALGUNS ESTILS DE PLONE EN ENLLACOS */
 ul.configlets li a:visited {
@@ -706,39 +723,43 @@ ul.configlets li a:hover {
     text-decoration:underline;}
 /* CANVI DELS BOTONS DE PLONE */
 .context, .formControls .actionButtons .button, .documentEditable * .context {
-	background:url(botoFons.gif) repeat-x center center;
+	background:#006DA3 url(botoFons.gif) repeat-x center center;
 	border:1px solid #006DA3;
 	color:white;
 	font-size:90%;
-	padding:0px 3px 2px 3px;
+	padding:3px 6px 5px 6px;
 	font-weight:bold;
 	*border:0px;
-	*padding:2px 2px 2px 2px;}
+	*padding:5px;}
 .standalone, .documentEditable * .standalone {
-	background:url(botoFonsClar.gif) repeat-x center center;
+	background:#8dcde3 url(botoFonsClar.gif) repeat-x center center;
 	border:1px solid #8dcde3;
 	color:#333;
 	font-size:90%;
-	padding:0px 3px 2px 3px;
+	padding:3px 6px 5px 6px;
 	font-weight:bold;
 	*border:0px;
-	*padding:2px 2px 2px 2px;}
+	*padding:5px;}
 .destructive, .documentEditable * .destructive {
-	background:url(botoFonsAlert.gif) repeat-x center center;
+	background:#e3a38d url(botoFonsAlert.gif) repeat-x center center;
 	border:1px solid #e3a38d;
 	color:#333;
 	font-size:90%;
 	font-weight:bold;
-	padding:0px 3px 2px 3px;
+	padding:3px 6px 5px 6px;
 	*border:0px;
-	*padding:2px 2px 2px 2px;}
+	*padding:5px;}
+.destructive:hover, .documentEditable * .destructive:focus {background: #f6b784 !important; border-color:#c1755b !important; cursor:pointer;}
+.standalone:hover, .documentEditable * .standalone:hover {background: #7ee8f1 !important; border-color:#6cbad5 !important; cursor:pointer;}
+.context:hover, .formControls .actionButtons .button:hover, .documentEditable * .context:hover {background: #099bdf !important; border-color:#1d4d84 !important; cursor:pointer;}
+
 #login-form input.context {
 	background-position:center center;
 	margin-bottom:0em;
 	padding:0 15px 2px 15px;
 	*padding:0 0 2px 0;
 	_padding:0 0 2px 0;}
-#login-form input {font-size:100% !important;}
+#login-form input {font-size:100% !important; margin-bottom:.5em;}
 .iuu {font-size:135%; font-family: Helvetica, Arial, Verdana, sans-serif; font-weight:bold; padding-left:22px;}
 .iul {font-size:150%; padding:0;}
 #signText .gris {color:#999;}
@@ -760,7 +781,6 @@ ul.configlets li a:hover {
 	_left:0;}
 .optionsToggle label {padding:2px 5px; background:#e6e6e6;}
 #content a[href^="http:"], #content a.link-external {
-	background: none;
 	padding: 0;}
 
 /* GW4 ojo Albert! */
@@ -819,9 +839,9 @@ dl.collapsedInlineCollapsible {
 #region-content, .documentContent{
 	padding:1em 0em !important;}
 .documentEditable {
-	margin:0; padding:0px !important;margin-top:20px;}
+	margin:0; padding:0px !important;margin-top:10px;}
 #content{
-	margin: 0;}
+	margin: 0; clear:both;}
 #fieldset-default{
 	margin-bottom:10px;}
 .documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {
@@ -830,7 +850,7 @@ dl.collapsedInlineCollapsible {
 	color:#007bc0;}
 .documentContent p a:hover {
 	text-decoration:underline;
-	color:#007bc0;}
+	color:#005EA0;}
 .discreet{ 
 	margin-bottom:25px;
 	margin-top:0px;
@@ -866,7 +886,7 @@ ul.formTabs li{margin-left:0em;}
 	background-image:url(baix150.gif);
 	width:150px;}
 .formHelp {
-	color:#b8b8b8;
+	color:#7f7f7f;
 	font-size:90%;
 	margin:0 0 0.2em;}
 .formHelp:hover {
@@ -889,7 +909,7 @@ ul.formTabs li{margin-left:0em;}
 	font-weight:bold !important;}
 .kssattr-atfieldname-description textarea {
 	color:#333;
-	font-size:100%;}
+	font-size:110%;}
 .formPanel {
 	border: 1px solid #e6e6e6;}
 .formTab a:hover {
@@ -917,7 +937,7 @@ li.formTab a:hover {
 .actionMenuContent a:hover {
 	text-decoration:none;}
 .actionSeparator a {
-	border-top:1px dotted #999 !important;}
+	border-top:1px dotted #fff !important;}
 .kupu-tb {
 	background-color:#e6e6e6;
 	border:1px solid #ccc;
@@ -957,14 +977,14 @@ iframe.kupu-editor-iframe:active {
 	padding:0;
 	margin:0;
 	line-height:1.15em;
-	border:0;}
+	border:0 !important;}
 #forgotten-password p{
 	margin:3px 0 0 0;}
 #forgotten-password a, #forgotten-password a:active, #forgotten-password a:link, #forgotten-password a:visited{
 	color: #007bc0;
 	text-decoration:none;}
 #forgotten-password a:hover{
-	color:#007bc0;
+	color:#005EA0;
 	text-decoration:underline;}
 #Type_criteria, 
 #Title_criteria, 
@@ -998,7 +1018,7 @@ table.listing tbody th {
 	font-weight:bold;
 	font-size:90% !important;}
 table.listing {
-	font-size:85%;}
+	font-size:100%; margin:.5em 0;}
 .template-zmi_docs .contents {
 	border:1px solid #e6e6e6;
 	background:#fff;
@@ -1126,7 +1146,7 @@ div#kupu-resourceitems {
 	text-decoration:none !important;}
 .kupu a:hover {
 	border-bottom:0px solid #CCC !important;
-	color:#007bc0 !important;
+	color:#005EA0 !important;
 	text-decoration:underline !important;}
 /* mapa del lloc */
 #portal-sitemap .navTreeLevel2 {
@@ -1241,6 +1261,8 @@ dl dt span.summary {
 .template-folder_listing #content img.link_blank {		
 	display:inline;}
 
+.template-folder_contents #content table.listing a {padding:5px 0;}
+
 .ultimamodificacio{
 	margin-top:5px;
 	padding-top:5px;
@@ -1261,6 +1283,7 @@ dl dt span.summary {
 	padding-left:14px;
 	font-size:90%;}
 /*menu vistes*/
+
 #folder_summary_view,
 #folder_tabular_view,
 #atct_album_view,
@@ -1288,41 +1311,123 @@ dl dt span.summary {
 #workflow-transition-retracttointranet,
 #workflow-transition-make_freeforall,
 #workflow-transition-make_moderated,
-#workflow-transition-make_private {
+#workflow-transition-make_private,
+.contenttype-folder,
+.contenttype-collage,
+.contenttype-topic,
+.contenttype-link,
+.contenttype-event,
+.contenttype-file,
+.contenttype-image,
+.contenttype-news-item,
+.contenttype-document,
+.contenttype-window,
+.actionicon-object_buttons-cut,
+.actionicon-object_buttons-copy,
+.actionicon-object_buttons-paste,
+.actionicon-object_buttons-delete,
+.contenttype-logos_container,
+.contenttype-bannercontainer,
+.contenttype-logos_footer,
+.contenttype-banner,
+.contenttype-formfolder,
+.contenttype-formbooleanfield,
+.contenttype-formcustomscriptadapter,
+.contenttype-formdatefield,
+.contenttype-formfixedpointfield,
+.contenttype-fieldsetfolder,
+.contenttype-formfilefield,
+.contenttype-formlabelfield,
+.contenttype-formlinesfield,
+.contenttype-formmaileradapter,
+.contenttype-formmultiselectionfield,
+.contenttype-formpasswordfield,
+.contenttype-formlikertfield,
+.contenttype-formrichlabelfield,
+.contenttype-formrichtextfield,
+.contenttype-formsavedataadapter,
+.contenttype-formselectionfield,
+.contenttype-formstringfield,
+.contenttype-formtextfield,
+.contenttype-formthankspage,
+.contenttype-formintegerfield {
 	background-repeat: no-repeat;
-	background-image: url(actions_strip.gif);
-	padding-left:25px;}
-#folder_summary_view{background-position:5px -15px;}
-#folder_tabular_view{background-position:5px -31px;}
-#atct_album_view{background-position:5px -47px;}
-#folder_listing{background-position:5px -63px;}
-#homepage{background-position:5px 1px;}
-#folder_extended {background-position:5px -79px;}
-#atct_topic_view {background-position:5px -95px;}
-#board_view_global{background-position:5px -127px;}
-#board_view{background-position:5px -143px;}
-#poi_tracker_view{background-position:5px -111px;}
+	background-image: url(spriteStates.png);
+	padding-left:25px !important;}
+
+#folder_summary_view{background-position:3px -917px;}
+#folder_tabular_view{background-position:3px -997px;}
+#atct_album_view{background-position:3px -957px;}
+#folder_listing{background-position:3px -1037px;}
+#homepage{background-position:3px -877px;}
+#folder_extended {background-position:3px -1077px;}
+#atct_topic_view {background-position:3px -95px;}
+#board_view_global{background-position:3px -127px;}
+#board_view{background-position:3px -143px;}
+#poi_tracker_view{background-position:3px -111px;}
+.contenttype-folder{background-position:3px -197px;}
+.contenttype-collage{background-position:3px -237px;}
+.contenttype-topic {background-position:3px -277px;}
+.contenttype-link {background-position:3px -317px;} 
+.contenttype-event{background-position:3px -357px;} 
+.contenttype-file{background-position:3px -397px;} 
+.contenttype-image{background-position:3px -597px;} 
+.contenttype-news-item{background-position:3px -635px;} 
+.contenttype-document{background-position:3px -675px;} 
+.contenttype-window{background-position:3px -835px;} 
+.actionicon-object_buttons-cut{background-position:3px -1116px;}
+.actionicon-object_buttons-copy{background-position:3px -1155px;}
+.actionicon-object_buttons-paste{background-position:3px -1195px;}
+.actionicon-object_buttons-delete {background-position:3px -1237px;}
+.contenttype-logos_container, .contenttype-logos_footer {background-position:3px -1277px;}
+.contenttype-bannercontainer  {background-position:3px -1317px;}
+.contenttype-banner  {background-position:3px -1357px;}
+.contenttype-formfolder {background-position:3px -1397px;}
+.contenttype-formbooleanfield {background-position:3px -1436px;}
+.contenttype-formcustomscriptadapter {background-position:3px -1476px;}
+.contenttype-formdatefield {background-position:3px -1516px;}
+.contenttype-formfixedpointfield {background-position:3px -1556px;}
+.contenttype-fieldsetfolder {background-position:3px -1596px;}
+.contenttype-formfilefield {background-position:3px -1636px;}
+.contenttype-formlabelfield {background-position:3px -1676px;}
+.contenttype-formlinesfield {background-position:3px -1715px;}
+.contenttype-formmaileradapter {background-position:3px -1755px;}
+.contenttype-formmultiselectionfield {background-position:3px -1795px;}
+.contenttype-formpasswordfield {background-position:3px -1835px;}
+.contenttype-formlikertfield {background-position:3px -1875px;}
+.contenttype-formrichlabelfield {background-position:3px -1916px;}
+.contenttype-formrichtextfield {background-position:3px -1956px;}
+.contenttype-formsavedataadapter {background-position:3px -1996px;}
+.contenttype-formselectionfield {background-position:3px -2037px;}
+.contenttype-formstringfield {background-position:3px -2077px;}
+.contenttype-formtextfield {background-position:3px -2117px;}
+.contenttype-formthankspage {background-position:3px -2157px;}
+.contenttype-formintegerfield {background-position:3px -2197px;}
+
+
+
+
 /* menu estat*/
 #workflow-transition-hide, 
 #workflow-transition-close, 
-#workflow-transition-complete{background-position:5px -207px;}
+#workflow-transition-complete{background-position:3px 3px;}
 #workflow-transition-retract,
 #workflow-transition-reject, 
 #workflow-transition-retiraaesborrany,
-#workflow-transition-show{background-position:5px -239px;}
-#workflow-transition-submit {background-position:5px -223px;}
+#workflow-transition-show{background-position:3px -77px;}
+#workflow-transition-submit {background-position:3px -117px;}
 #workflow-transition-publish, 
 #workflow-transition-open, 
-#workflow-transition-review {background-position:5px -255px;}
+#workflow-transition-review {background-position:3px -117px;}
 #workflow-transition-retiraalaintranet,
 #workflow-transition-publicaalaintranet,
 #workflow-transition-publishtointranet,
-#workflow-transition-retracttointranet {background-position:5px -271px;}
-#workflow-transition-make_freeforall{background-position:5px -159px;}
-#workflow-transition-make_moderated{background-position:5px -175px;}
-#workflow-transition-make_private{background-position:5px -191px;}
+#workflow-transition-retracttointranet {background-position:3px -157px;}
+#workflow-transition-make_freeforall{background-position:3px -77px;}
+#workflow-transition-make_moderated{background-position:3px -37px;}
+#workflow-transition-make_private{background-position:3px 3px;}
 
-
+#contentActionMenus dl.actionMenu.activated dd.actionMenuContent ul li a.actionMenuSelected {background-color: #eaf3da !important; color:#333 !important;}
 
 .template- h1.documentFirstHeading img{
 	width: 23px !important;
@@ -1350,7 +1455,7 @@ dl dt span.summary {
 */
 #baner a[href^="https:"], #baner a.link-https {background:none !important; padding:0 !important;}
 #portal-personaltools li {
-	margin-left:0em;}
+	margin-left:0em;display: inline;}
 #portal-personaltools b span{
 	color:#4d4d4d;}
 /** per mes preferencia que en els portlets */
@@ -1377,7 +1482,7 @@ table.vertical .summary {color: #333 !important;}
 	margin-right:25px;}
 /** per si de cas hi ha interferencies */
 a,a:active,a:link,a:visited{color:#007bc0;text-decoration:none;}
-a:hover{color:#007bc0;text-decoration:underline;}
+a:hover{color:#005EA0;text-decoration:underline;}
 a img,a:hover img,a:hover br{text-decoration:none;}
 
 
@@ -1404,8 +1509,8 @@ a img,a:hover img,a:hover br{text-decoration:none;}
 	padding:15px 0 0 3px;
 	border-top:0;
 	margin-bottom: 0;
-	margin-top:18px !important;
-	*margin-top:15px;}
+	margin-top:10px !important;
+	*margin-top:10px;}
 html*.titolSeccio{
 	margin-top:15px !important;}
 .titolSeccio .textetSeccioneta {
@@ -1465,7 +1570,8 @@ dd.portletItem .navTreeItem a:hover {
 	border-color:#E6E6E6;
 	border-style:solid;
 	border-width:1px;
-	padding:5px 0;}
+	padding:5px 0;
+	margin:5px 0;}
 .listingBar .next {
 	background:transparent url(fletxaD.gif) no-repeat scroll right bottom;
 	padding-right:15px;
@@ -1569,7 +1675,7 @@ dd.portletItem .navTreeItem a:hover {
 /*revisio documents*/
 #diff-table {margin-top:10px !important;}
 /*revisio contenidor noticies i agenda*/
-#contenidor{ margin-top:20px;}
+#contenidor{ margin-top:0px;}
 .agendaDalt{ margin-top:20px;}
 /*contacte*/
 div.contacte {padding:10px !important; margin-bottom:10px;}
@@ -1609,7 +1715,7 @@ fieldset#fieldset-genWebControlPanelinformacio label[for="form.boolmaps"] {font-
 	padding:0em 26px 0 0;
 	width:220px;
 }
-#dashboard-portlets4 {width:220px;}
+#dashboard-portlets4 {width:220px; float:left;}
 div#dashboard > div > div {border:1px solid #ccc; margin-bottom:20px; background: #ffffff url(fonsT.png) repeat-x bottom left;}
 div#dashboard #dashboard-portlets1 dl, div#dashboard #dashboard-portlets2 dl, div#dashboard #dashboard-portlets3 dl, div#dashboard #dashboard-portlets4 dl  {_border:1px solid #ccc;}
 div#dashboard > div > div > dl {margin-top: 0px;}
@@ -1617,7 +1723,7 @@ div#dashboard dd.portletItem form{margin-right:25px !important; padding-top:10px
 div#dashboard dd.portletItem form{_margin-right:0px !important;}
 div#dashboard dt.portletCalendar dt.portletHeader a {}
 div#dashboard #banners a {margin:5px auto !important; align:center !important; display:block; border:1px solid #ccc; width:147px;margin-left:35px !important;}
-div#dashboard #banners a:hover {border:1px solid #007bc0;}
+div#dashboard #banners a:hover {border:1px solid #005EA0;}
 div#dashboard table.ploneCalendar {border:1px solid #ccc; margin:5px 25px;}
 div#dashboard table.ploneCalendar td {text-align:center;}
 div#dashboard dl.portletCalendar dt a {float:none !important;}
@@ -1655,7 +1761,7 @@ clear:both !important;
 #portal-column-content fieldset > * textarea:focus {
     border-color: #007bc0;
     border-width: 1px;
-    background:#f3f3f3;
+    background:#fea;
     /*outline:none;*/}
 #portal-column-content fieldset input[type="submit"]:focus, #portal-column-content fieldset input.standalone:focus, #portal-column-content fieldset input.context:focus,
 #portal-column-content fieldset input[type="submit"]:active, #portal-column-content fieldset input.standalone:active, #portal-column-content fieldset input.context:active{
@@ -1803,6 +1909,11 @@ dl.error dd {
     background-color:#fcf4f2 !important;}
 
 /*pestanyes edicio*/ 
+#contentActionMenus dl.actionMenu a{
+    line-height: 2em;
+    padding-left: .5em;
+    padding-right: .5em;
+}
 #edit-bar{
     background-color: #ededed;
     border-color: #ededed;
@@ -1811,11 +1922,13 @@ dl.error dd {
     background-color: transparent;
 }
 #content-views li a{
-    color: #007bc0;
+    color: #fff;
 }
 #contentActionMenus {
 	background-color: #ededed;
 }
+#contentActionMenus li { display:inline; }
+#contentActionMenus img {display:none;}
 #contentActionMenus dl.actionMenu a, 
 #contentActionMenus dl.actionMenu.activated dd {
     background-color: #ededed;
@@ -1827,9 +1940,7 @@ border-color: #ededed;
 .contentActions li {
 	border:none;
 }
-#contentActionMenus dl.actionMenu a{
-    line-height: 2em;
-}
+
 
 /* GW4 ve del deprecated columns.css.dtml */
 /*
@@ -1973,7 +2084,7 @@ ul.navTree li, .navTreeLevel0 {
 
 #content fieldset{
     background:transparent url(fonsT.png) repeat-x scroll center bottom;
-    border:1px solid #E6E6E6;
+    border:1px solid #d9d9d9;
     padding:10px;
     margin:25px 0;
 }
@@ -1983,4 +2094,537 @@ ul.navTree li, .navTreeLevel0 {
 #forgotten-password {
     float: right;
     width: 35%;
+}
+
+/* plone4 ******************************************************************************************************************************/
+
+/* @group Editing */
+
+/* @group Tabs */
+
+/* Color differences between the two tab types */
+#content ul.formTabs {
+    background-color: #d9d9d9;
+    border: 0.3em solid #d9d9d9;
+}
+#edit-bar {
+    background-color: #75AD0A;
+    border: 0.25em solid #75AD0A;
+    font-size: 100%;
+    min-height: 2em;
+    margin-bottom: 1em;
+    padding-top: 0.05em;
+}
+
+#content-views {
+    float: left;
+    background-color: #75AD0A;
+}
+#content-views a {
+    color: White;
+}
+#edit-bar #plone-contentmenu-workflow .state-private {background:#c00 !important; border-color: #c00 !important;}
+#edit-bar #plone-contentmenu-workflow .state-intranet {background:#70c !important; border: 1px solid #70c !important; color:#fff !important;
+padding: 0 0.5em; -moz-border-radius: 0.5em; -webkit-border-radius: 0.5em; border-radius: 0.5em;}
+
+/* Shared CSS between the two tab types */
+#edit-bar,
+#content ul.formTabs {
+    display: block;
+    border-style: solid solid none solid;
+    margin-left: 0;
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+#content li.formTab {
+    display: inline;
+    margin-right:0.25em;
+}
+#content-views a,
+#content li.formTab a {
+    /* this isn't supported by all browsers, so we keep it in a separate rule */
+    display: inline-block;
+}
+#content-views a,
+#content li.formTab a {
+    line-height: 2em;
+    padding: 0 0.75em;
+    text-decoration: none;
+    border: 0;
+    margin: 0 ;
+     border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+#content-views li.selected a,
+#content li.formTab a.selected {
+    font-weight: bold;
+-webkit-border-radius: .5em .5em 0 0 !important;
+-moz-border-radius: .5em .5em 0 0 !important;
+border-radius: .5em .5em 0 0 !important;
+}
+#content-views li.selected a,
+#content-views li a:hover,
+#content li.formTab a.selected,
+#content li.formTab a:hover {
+    background: White;
+    color: Black;
+}
+#content-views li.selected a,
+#content-views li a:hover,
+#content li.formTab a.selected,
+#content li.formTab a:hover {
+    border-top-right-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    -webkit-border-top-right-radius: 0.5em;
+    -webkit-border-top-left-radius: 0.5em;
+    -moz-border-radius-topleft: 0.5em;
+    -moz-border-radius-topright: 0.5em;
+}
+#content li.formTab a.notify {
+    background-color: red;
+    color: White;
+}
+#content li.formTab a.required span {
+    background-image: url(required.png);
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding-right: 1em;
+}
+/*
+#content fieldset.formPanel {
+    border: none;
+}
+*/
+#content fieldset.formPanel.hidden {
+    display: none;
+}
+#content div.formControls input.hidden {
+    display: none;
+}
+
+/* @end */
+
+/* @group Pulldown menus */
+
+/* @group Personal tools pulldown */
+#portal-personaltools dl {
+}
+#portal-personaltools dt {
+    font-weight: normal;
+}
+#portal-personaltools dt.actionMenuHeader a:after {
+    content: " ▼";
+}
+#portal-personaltools dd {
+    right: 0;
+    padding-top: 0.5em;
+}
+#portal-personaltools dd {
+    background: #e3e3e3;
+    padding-bottom: 0.5em;
+}
+#portal-personaltools dd a {
+    line-height: 2em;
+    padding: 0 0.75em;
+}
+#portal-personaltools dd a:hover {
+    background: #205c90;
+    color: White;
+}
+
+/* @end */
+
+/* @group Content pulldowns */
+
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+    background-color: #75AD0A;
+    color: White;
+    z-index: 5;
+}
+#contentActionMenus dl.actionMenu.activated dd {
+    border-bottom: 0.5em solid #75AD0A;
+        right: -3px;
+	-webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .25);-moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .25);box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+
+}
+#contentActionMenus dl.actionMenu.activated dd a:hover,
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+    background-color: White !important;
+    color: #666;
+}
+#contentActionMenus dl.actionMenu {
+    line-height: 2em;
+}
+
+#folderHeader, #contextHeader {
+        border-bottom: 2px solid white;
+}
+
+#contextHeader { margin-top: 5px; }
+
+
+/* @end */
+
+#contentActionMenus {
+    float: right;
+    background: #75AD0A;
+    margin: 0;
+    position: relative;
+    top: -0.23em;
+    right:-0.24em;
+    padding: 0.1em 0.24em 0 0;
+    border-radius: 0.5em;
+    border-top-left-radius: 0;
+    -webkit-border-radius: 0.5em;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 0.5em;
+    -moz-border-radius-topleft: 0;
+}
+
+.actionMenuContent {
+    padding: 0 0.25em;
+}
+
+dl.actionMenu {
+    float: right;
+    white-space: nowrap;
+    position: relative;
+    margin: 0 0 0 .5em;
+}
+dl.actionMenu a,
+dl.actionMenu div {
+    display: block !important;
+    white-space: nowrap;
+}
+dl.actionMenu dt {
+    font-weight: normal;
+}
+span.arrowDownAlternative {
+    font-size: 80%;
+}
+dl.actionMenu.deactivated dt {
+    margin: 0 0.25em;
+}
+dl.actionMenu.deactivated dd {
+    display: none;
+}
+dl.actionMenu.activated dd {
+    position: absolute;
+    width: auto;
+    min-width: 100%;
+    border-bottom-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    -webkit-border-bottom-right-radius: 0.5em;
+    -webkit-border-bottom-left-radius: 0.5em;
+    -moz-border-radius-bottomleft: 0.5em;
+    -moz-border-radius-bottomright: 0.5em;
+}
+dl.actionMenu.activated dt a,
+dl.actionMenu.activated dd a,
+dl.actionMenu.activated dd div {
+    margin: 0 0.25em;
+}
+
+dd.actionMenuContent li a {margin:0 !important;}
+
+/* @end */
+
+/* @group Control panel */
+
+#setup-link {
+    font-size: 90%;
+}
+
+#content ul.configlets {
+    margin: 1em 0;
+    list-style-image: none;
+    list-style: none;
+}
+#content ul.configlets li {
+    margin-bottom: 1em;
+    list-style: none;
+    display: block;
+}
+#content ul.configlets li a {
+    text-decoration: none;
+    border: none;
+}
+#content ul.configlets li a:visited {
+    background-color: transparent;
+}
+#content ul.configlets li a:active {
+    background-color: transparent;
+}
+#content ul.configlets li label {
+    font-weight: bold;
+}
+#content ul.configletDetails {
+    margin: 0em 1em 1em 4em;
+    list-style-image: none;
+    list-style: none;
+}
+#content ul.configletDetails li {
+    margin-bottom: 1em;
+    display: inline;
+}
+#content ul.configletDetails li a {
+    text-decoration: none;
+}
+#content ul.configletDetails li label {
+    font-weight: bold;
+}
+#content ul.configletDetails li.configletDescription {
+    display: block;
+    color: #76797c;
+    margin: 0;
+}
+.inlineDisplay {
+    display:inline
+}
+table.controlpanel-listing {
+    width:100%;
+}
+table.controlpanel-listing td, table.controlpanel-listing th {
+    font-size:120%;
+}
+table.controlpanel-listing dl {
+    margin-top:0;
+}
+table.controlpanel-listing dd {
+    margin-left: 1em;
+}
+table.controlpanel-listing dl dt a .trigger{
+    font-weight:normal;
+}
+table .controlpanel-listing td {
+    vertical-align:top;
+}
+table.controlpanel-listing td.checker{
+    text-align:center;
+}
+table.controlpanel-listing th.smallcolumn {
+    width:1.5em;
+}
+.chooser-right {
+    float:right;
+    margin-right:0;
+    margin-bottom:0;
+}
+.rule-element {
+    background-color:#EEF3F5;
+    margin:0.5em 0pt 0.5em;
+    padding:0.3em 1em 0.3em 1em;
+    width:auto;
+}
+.rule-element dl {
+}
+.rule-element dl dd {
+    margin-left:1em;
+}
+.rule-updown, .rule-operations {
+    float:right;
+    padding-top:0.8em;
+}
+/* @end */
+
+/* @group Collapsible */
+dl.collapsible {
+    border: 0.1em solid #8cacbb;
+    margin: 1em 0;
+    padding: 0;
+}
+dl.collapsible dt.collapsibleHeader {
+    display: block;
+    float: left;
+    background: White;
+    line-height: 1.2em;
+    vertical-align: middle;
+    font-size: 90%;
+    position: relative;
+    top: -0.6em;
+    width: auto;
+    margin: 0 0 -0.6em 1em;
+    padding: 0 0.5em;
+}
+dl.collapsible dd.collapsibleContent {
+    margin: 0;
+    padding: 0 1em 0.4em;
+    clear: left;
+}
+
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+    margin: 0;
+    padding: 0;
+}
+
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+    padding: 0 0.5em 0 2em;
+    background: White url(treeExpanded.png) no-repeat 0.5em 50%;
+    cursor: pointer;
+}
+
+dl.collapsedBlockCollapsible {
+    border: none;
+    height: 1em;
+    width: auto;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader,
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+    float: none;
+    position: relative;
+    margin: 0 0 0 1em;
+    padding: 0 0.5em 0 2em;
+    line-height: 1.2em;
+    cursor: pointer;
+    background: White url(treeCollapsed.png) no-repeat 0.5em 50%;
+}
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+    display: none;
+}
+dl.collapsedInlineCollapsible {
+    border: none;
+    height: 1em;
+    width: auto;
+    display: inline;
+}
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+    position: static;
+    float: none;
+    margin: 0;
+    padding: 0 0 0 2em;
+    line-height: 1em;
+    cursor: pointer;
+    display: inline;
+}
+
+/* @end */
+
+/* @group Comments */
+
+.comment {
+    margin-top: 1.5em;
+    font-size: 80%;
+}
+
+.comment .documentByLine {
+    margin-left: 1em;
+}
+
+.comment .formControls {
+    margin-left: 0;
+}
+
+.commentTime {
+    color: #666;
+}
+
+.commentBody {
+    padding: 1em;
+    margin: 0.5em 0;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    box-shadow: 0 0 1em 0 #888;
+    -moz-box-shadow: 0 0 0.5em 0 #888;
+    -webkit-box-shadow: 0 0 0.5em #888;
+}
+
+.comment h1,
+.comment h2,
+.comment h3,
+.comment h4,
+.comment h5,
+.comment h6 {
+    font-weight: normal;
+}
+
+/* @end */
+
+.reviewHistory,
+.contentHistory {
+    display: inline;
+    color: Black;
+}
+.spacer {
+    margin: 1em;
+}
+
+.label {
+    font-weight: bold;
+    display: inline;
+    padding-right: 0.5em;
+}
+.optionsToggle {
+    border: 0.1em solid #8cacbb;
+    color: Black;
+    background-color: #dee7ec;
+    font-weight: normal;
+    font-size: 90%;
+}
+
+/* for highlighting of search terms */
+.highlightedSearchTerm {
+   background-color: #ffa;
+}
+
+dl.searchResults .highlightedSearchTerm {
+    background-color: transparent;
+    font-weight: bold;
+}
+/* for greying out inherited roles */
+.noInheritedRoles {
+    color: #a0a0a0;
+}
+/* for highlighting current items, like the language or today in the calendar */
+.currentItem {
+    border-collapse: collapse;
+    border: 0.2em solid #ffa500;
+    padding: 0.1em;
+}
+
+
+/* @end */
+
+/*collage*/
+.collage-row .collage-header {background:#feeded}
+.collage-column .collage-header {background:#edf7fe}
+.collage-item .collage-header {background:#fafeed}
+.expandable-content {font-size:100% !important;}
+#collage.edit .expandable-content a, #collage.edit .expandable-content span  {font-size:100% !important;}
+.collage-header span {color:#555 !important;}
+
+
+/* Deco ***********************************************************************************************************************/
+
+/*Arrodoneix malament els percentatges pel que ho poso amb pixels*/
+/*fa un deco que no es a quarts sino 200-240-240-200 amb mitjanes 13+13*/
+div.position-0.width-1\3a 4, div.position-3\3a 4.width-1\3a 4 { width:200px;}
+div.position-3\3a 4.width-1\3a 4 { margin-left:-213px;}
+div.position-1\3a 4.width-1\3a 4, div.position-2\3a 4.width-1\3a 4 { width:240px; }
+div.position-1\3a 4.width-1\3a 2 { width:506px; margin-left:-742px;}
+div.position-1\3a 4.width-3\3a 4 { width:732px; margin-left:-742px;}
+
+
+
+#contextSetDefaultPage {max-width: 200px;white-space: initial;}
+
+
+/* Comments ************************************************************************************************************/
+
+.row #commenting, .comment {font-size:100% !important;}
+.row #commenting textarea, .row .discussion textarea {
+font: 115% Arial, Helvetica, sans-serif !important;
+width: 98% !important;
 }

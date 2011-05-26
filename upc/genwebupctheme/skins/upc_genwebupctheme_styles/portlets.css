@@ -547,7 +547,7 @@ margin-left:227px;
 	background: url(fonsIconesAccions.gif) no-repeat bottom right;}
 .documentActions ul {
 	margin:0pt;
-	padding:0pt;}
+	padding:0pt; text-align:right;}
 .documentActions li {
 	background-color:White;
 	display:inline;
@@ -730,7 +730,7 @@ background:transparent url(fonsT.png) repeat-x scroll center bottom !important;
 .matrixTable {font-size:110% !important;}
 #content a[href^="mailto:"], #content a.link-mailto {
 background:transparent url(mail_icon.gif) no-repeat scroll 0 0;
-padding:1px 0 1px 16px;
+padding:1px 0 1px 20px;
 }
 
 #parent-fieldname-eventUrl, .link-presentation{
@@ -1046,7 +1046,7 @@ margin: -0.2em 0em 1em 0em !important;}
 
 /*error per falta de titol en formularis*/
 div.error {background: #fcf4f2 url(fonsError.gif) no-repeat top right !important;}
-
+div div.error { background-color: #fcf4f2 !important;}
 /* notify hover per a pestanyes obligatories*/
 li.formTab a.notify:hover {
 	background-color:#fcf4f2;
@@ -1064,7 +1064,7 @@ li.formTab a.notify {
 .kssattr-viewname-manage-portlets {border: 1px solid #e6e6e6; padding:3px; border-top:5px solid #e6e6e6;}
 
 .managePortletsLink{
-	Background: #f9f9f9;
+	Background: #f7f7f7;
 	padding:3px;
 	border: 1px solid #e6e6e6;}
 
