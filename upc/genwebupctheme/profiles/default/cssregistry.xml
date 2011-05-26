@@ -96,4 +96,12 @@
  <stylesheet title="" position-bottom="True" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="print.css" media="print" rel="stylesheet"
     rendering="import"/>
+    
+<!-- Deshabilitem -->
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="False" expression="" id="public.css" media="screen" rel="stylesheet"
+    rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="False" expression="" id="mobile.css" media="handheld"
+    rel="stylesheet" rendering="import"/>
 </object>
