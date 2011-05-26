@@ -4,6 +4,17 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="upc.genwebupctheme">     
 
+    <!-- Home Portlets -->
+    <!-- Sobreescrivim la homepage en el cas que es compleixin les dues interfícies de les layer -->
+    <browser:page
+      name="homepage"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class="upc.genwebupctheme.browser.homepage.HomePageView"
+      template="browser/homepage.pt"
+      layer="genweb.portlets.browser.interfaces.IGenwebPortlets"
+      permission="zope2.View"
+      />
+
     <!-- Render the document actions -->
     <browser:viewlet
         name="plone.abovecontenttitle.documentactions"
