@@ -329,20 +329,7 @@
          permission="zope2.View"
          />
 
-
-<!-- Específic Portal -->        
-        
-        
-<!-- Home Page Neutre3 --> 
-    <browser:page
-      name="homepage"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      class=".neutre3.homepage.HomePageView"
-      layer=".interfaces.IThemeSpecificNeutre3"
-      permission="zope2.View"
-      />
-
-
+<!-- Vistes per emular l'article -->      
     <browser:page
       name="article1"
       for="Products.ATContentTypes.interface.IATDocument"
@@ -358,32 +345,13 @@
       template="article2.pt"      
       permission="zope2.View"
       />
-
-
-<!-- Home Page Neutre2 -->
+        
+<!-- Home Page --> 
     <browser:page
       name="homepage"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      class=".neutre2.homepage.HomePageView"
-      layer=".interfaces.IThemeSpecificNeutre2"
-      permission="zope2.View"
-      />
-
-<!-- Home Page Unitat -->
-    <browser:page
-      name="homepage"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      class=".unitat.homepage.HomePageView"
-      layer=".interfaces.IThemeSpecificUnitat"
-      permission="zope2.View"
-      />
-     
-<!-- Home Page Master -->
-    <browser:page
-      name="homepage"
-      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-      class=".master.homepage.HomePageView"
-      layer=".interfaces.IThemeSpecificMaster"
+      class=".homepage.HomePageView"
+      template="homepageNoPortlets.pt"
       permission="zope2.View"
       />
 
