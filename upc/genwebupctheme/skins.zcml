@@ -7,11 +7,5 @@
    <cmf:registerDirectory name="upc_genwebupctheme_custom_images" recursive="True" />
    <cmf:registerDirectory name="upc_genwebupctheme_custom_templates" />
    <cmf:registerDirectory name="upc_genwebupctheme_styles" />
-  
-
-   <!-- Note: This could also be done for all folders at once
-        by replacing the previous lines with this one:
-   <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
-   -->
 
 </configure>
