@@ -88,14 +88,14 @@
         name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".browser.viewlets.PathBar"
-        layer=".interfaces.IThemeSpecificNeutre3"
+        layer=".browser.interfaces.IThemeSpecificNeutre3"
         permission="zope2.View" 
         />
     <browser:viewlet
         name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".browser.viewlets.PathBar"
-        layer=".interfaces.IThemeSpecificNeutre2"
+        layer=".browser.interfaces.IThemeSpecificNeutre2"
         permission="zope2.View" 
         />
     <browser:viewlet
