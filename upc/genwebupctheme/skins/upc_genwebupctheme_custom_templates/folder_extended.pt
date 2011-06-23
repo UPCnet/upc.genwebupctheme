@@ -91,7 +91,7 @@
                                            class string:$item_wf_state_class url link-plain"
                            tal:content="item_title_or_id">
                             External Link
-                        <img class="link_blank"  src="icon_blank.gif" i18n:domain="upc.genwebupc" i18n:attributes="alt obrir_link_finestra_nova">
+                        <img class="link_blank" src="icon_blank.gif" i18n:domain="upc.genwebupc" i18n:attributes="alt obrir_link_finestra_nova" />
                         </a>
                     </span>
 

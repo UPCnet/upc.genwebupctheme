@@ -75,6 +75,8 @@
                                                 obj_wf_state_class python:'state-' + normalizeString(obj_wf_state);
                                                 obj_url python:test(obj_type in use_view_action, url+'/view', url);
                                                 title_or_id obj/pretty_title_or_id">
+
+
                             <tal:block define="value python: getattr(obj, field, None)">
                                 <td tal:condition="python: field != 'Title'"
                                     tal:content="python:here.formatCatalogMetadata(value)"

@@ -74,6 +74,7 @@ font-family: Verdana, sans-serif;
 font-size:100% !important;
 margin: 0 !important;
 border-top:5px solid #F3F3F3;
+text-shadow:0 -1px #fff;
 }
 
 .separadorPortlet{
@@ -535,7 +536,7 @@ margin-left:227px;
 .summary {
 	background: url(quadret.gif) no-repeat left 0px;
 	padding: 0px 0px 0px 10px;}
-
+.tileHeadline .summary {background:none;}
 
 /*************************** ICONES DOCUMENT ACTIONS ******************************/
 .documentActions {
@@ -580,7 +581,7 @@ font-size:95%;
 	background:transparent none repeat scroll 0 0;
 	border:1px solid #e0cece;/*espe5*/
 	margin-bottom:1em;
-	padding:0.5em;
+	padding:0em;
 }
 .commentBody {
 margin:0px 0px 1em 0px;
@@ -1008,7 +1009,7 @@ visibility:hidden;
 
 /*plantilla document imatge*/
 .discreet img {
-	border: 1px solid #e6e6e6;
+	border: 1px solid #d9d9d9;
 	padding: 3px;
 	background:white;
 	margin-bottom: 10px;
@@ -1210,3 +1211,17 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 
 /*formulari thanks page*/
 .template-fg_thankspage_view blockquote {border:1px solid #e6e6e6; border-left:15px solid #e6e6e6;padding:10px;margin:10px 0;}
+
+
+/*portlets nous gw4*/
+#portal-column-content .columnaDreta .portlet {background: url(bar150.gif) no-repeat top; padding-top:5px; width:150px; margin-left:15px; margin-bottom:15px}
+#portal-column-content .columnaEsq .portlet {background: url(bar200.gif) no-repeat top; padding-top:5px; width:200px; margin-left:15px; margin-bottom:15px}
+#portal-column-content .portlet .portletHeader {border:1px solid #e6e6e6; border-top:0; border-bottom:0;}
+#portal-column-content .portlet .even {background: #fcfcfc;}
+#portal-column-content .portlet dd, #portal-column-content .portlet .portletItem {border:1px solid #e6e6e6 !important; border-top:0 !important; display:block; padding:0 5px 5px; font-weight:normal; margin-bottom:0;}
+#portal-column-content .portlet dd strong, #portal-column-content .portlet .portletItem strong {font-size:1em;}
+#portal-column-content .portlet dd, #portal-column-content .portlet .portletItem {border-top:1px dashed #e6e6e6 !important; border-bottom:0 !important;}
+#portal-column-content .portlet dd:last-child, #portal-column-content .portlet .portletItem:last-child {border-bottom:1px solid #e6e6e6 !important; border-radius: 0 0 5px 5px;}
+#portal-column-content div .portlet dd:first-child, #portal-column-content .portlet .portletItem:first-child {border-top:0 !important;}
+#portal-column-content .portlet {*border-bottom:1px solid #e6e6e6;}
+

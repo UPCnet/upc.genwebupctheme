@@ -3,10 +3,10 @@
 #portal-personaltools{
 	background-color:transparent;
 	z-index: 1;
-	margin: -31px 0 0 5px}
+	margin: -31px 0 0 0}
 #portal-breadcrumbs {
 	clear:both;
-	margin:0;}
+	margin:15px 0 5px;}
 .barra_idiomes {
 	float: right;
 	position:relative;

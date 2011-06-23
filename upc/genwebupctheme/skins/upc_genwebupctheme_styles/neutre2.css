@@ -39,8 +39,9 @@
 /* GW4 eliminat la position absolute i width 800px */
 #portal-personaltools{
 	background-color:transparent;
-	margin: -29px 0px 0px 5px;
+	margin: -29px 0 0 0;
 }
+#portal-breadcrumbs {margin: 12px 0 5px;}
 
 .barra_idiomes {
 	float: right;

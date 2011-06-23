@@ -149,7 +149,7 @@
                                url python:result_url+'/view' if result_type in use_view_action else result_url">
                 <dt tal:define="item_wf_state_class string:state-${result/review_state};"
                     tal:attributes="class python:'contenttype-' + normalizeString(result.portal_type)">
-                  <img tal:replace="structure item_icon/html_tag" />
+                  <!--<img tal:replace="structure item_icon/html_tag" />-->
                    <a
                      href="#"
                      tal:attributes="href url;
