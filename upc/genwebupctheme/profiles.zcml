@@ -5,9 +5,9 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="Genweb UPC flavours"
+      title="Genweb UPC Flavours"
       directory="profiles/default"
-      description='Extension profile for Genweb UPC flavours.'
+      description='Diferents sabors de Genweb UPC.'
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 

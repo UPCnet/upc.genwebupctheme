@@ -36,6 +36,30 @@
         name="Tema genwebUPC Master"
         />
 
+    <interface
+        interface=".interfaces.IThemeSpecificNeutre3"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Neutre3"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificUnitat"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Unitat"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificNeutre2"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Neutre2"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificMaster"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Master"
+        />
+
 <!-- Recursos Z3 -->        
     <browser:resourceDirectory
         name="upc.genwebupctheme.images"
