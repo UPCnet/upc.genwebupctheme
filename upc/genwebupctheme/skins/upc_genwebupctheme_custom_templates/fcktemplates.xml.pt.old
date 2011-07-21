@@ -183,7 +183,7 @@
 			<tal:cdata replace="structure string:&lt;![CDATA[" />
 
 
-				<h2>Prova de l'Albert</h2>
+				<h2>Columna de Suport</h2>
 				<div class="colSupContenidor">
 					<div class="colSupDreta">
 						<div class="dalt200"> </div>

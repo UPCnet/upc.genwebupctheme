@@ -1690,6 +1690,7 @@ dd.portletItem .navTreeItem a:hover {
 #contenidor{ margin-top:0px;}
 .agendaDalt{ margin-top:20px;}
 /*contacte*/
+div.iframeContacte iframe {border:1px solid #bbb;}
 div.contacte {padding:10px !important; margin-bottom:10px;}
 div.contacte h5 {color:#666;margin:0px !important;}
 div .contacteSpan {float:left; width:70px; text-align:right; margin-right:15px;font-weight:bold; color:#666; margin-left:20px;}
@@ -2725,5 +2726,6 @@ width: 98% !important;
 .vid {background:url(play.gif) no-repeat center right; padding-right:15px;}
 .img {background:url(img.gif) no-repeat center right; padding-right:15px;}
 
+.margezero {margin:0 !important;}
 
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }

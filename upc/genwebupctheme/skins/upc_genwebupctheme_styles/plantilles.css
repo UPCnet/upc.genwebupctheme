@@ -59,7 +59,7 @@ form{ margin: 0; }
 	padding: 10px 0 5px 1px;
 	background-color: #F7F7F7;
 	background:url(fonsTG.gif) repeat-x bottom #F7F7F7;
-	border: 1px solid #E6E6E6;	
+	border: 1px solid #d9d9d9;	
 	border-top: 2px solid #CCC}
 .llistatIndex li{
 	padding: 0 0 8px 0;
@@ -72,7 +72,7 @@ form{ margin: 0; }
 	padding: 0 0 10px 0;
 	list-style: url(fletxa.gif) inside;
 	margin: 0 0 0 10px}
-.documentContent .llistatDestacat ul{
+#content .llistatDestacat ul{
 	background:transparent url(fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #ccc;
 	border-bottom:2px solid #ccc;
@@ -83,7 +83,7 @@ form{ margin: 0; }
 	border-radius:5px;
 	padding: 0 0 0 1em;
 }
-.documentContent .llistatDestacat li{
+#content .llistatDestacat li{
 	background:transparent url(fletxaLD.gif) no-repeat scroll left center;
 	line-height:2em;
 	list-style-image:none !important;
@@ -387,7 +387,7 @@ margin:0.5em;
 padding:10px;
 }
 /*contenidor*/
-.gb {background:transparent url(fonsT.png) repeat-x scroll center bottom;border:1px solid #E6E6E6;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
+.gb {background:transparent url(fonsT.png) repeat-x scroll center bottom;border:1px solid #d9d9d9;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
 /*columnats deco*/
 div.fila {display:block;float:left;position:relative;width:100%;margin-bottom:1em;}
 div.cella {position: relative; float: left; left: 100%;}
@@ -419,7 +419,7 @@ div.w1 { width: 97.916% }
 	line-height:1.5em;
 	border:0px !important;}
 .colSupDreta ul, .columnaEnllacosDreta ul {padding-bottom:5px;}
-.colSupDreta img, .columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #e6e6e6;}
+.colSupDreta img, .columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #d9d9d9;}
 .colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007bc0;}
 .columnaseparador20 {width:20px !important;}
 

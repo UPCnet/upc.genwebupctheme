@@ -170,7 +170,7 @@ line-height:6px;
 .agendaContingut{
 margin-top:0px;
 margin-bottom:0px;
-border: 1px solid #E6E6E6;
+border: 1px solid #d9d9d9;
 background:url(fonsT.png) repeat-x bottom;
 position:relative;
 }
@@ -1209,13 +1209,18 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 .columnaDreta label {vertical-align:bottom;}
 /*.columnaDreta form div {padding-bottom:5px;margin-bottom:5px; border-bottom:1px dashed #999;}*/
 
+
+.collapser { padding:2px 15px 1px 0; font-size:1.2em; cursor:pointer;}
+.collapsed {background: url(plus.gif) center right no-repeat; }
+
+
 /*formulari thanks page*/
 .template-fg_thankspage_view blockquote {border:1px solid #e6e6e6; border-left:15px solid #e6e6e6;padding:10px;margin:10px 0;}
 
 
 /*portlets nous gw4*/
-#portal-column-content .columnaDreta .portlet {background: url(bar150.gif) no-repeat top; padding-top:5px; width:150px; margin-left:15px; margin-bottom:15px}
-#portal-column-content .columnaEsq .portlet {background: url(bar200.gif) no-repeat top; padding-top:5px; width:200px; margin-left:15px; margin-bottom:15px}
+#portal-column-content .columnaDreta .portlet {background: url(bar150.gif) no-repeat top; padding-top:5px; width:150px; margin-left:25px; margin-bottom:15px}
+#portal-column-content .columnaEsq .portlet {background: url(bar200.gif) no-repeat top; padding-top:5px; width:200px; margin-left:25px; margin-bottom:15px}
 #portal-column-content .portlet .portletHeader {border:1px solid #e6e6e6; border-top:0; border-bottom:0;}
 #portal-column-content .portlet .even {background: #fcfcfc;}
 #portal-column-content .portlet dd, #portal-column-content .portlet .portletItem {border:1px solid #e6e6e6 !important; border-top:0 !important; display:block; padding:0 5px 5px; font-weight:normal; margin-bottom:0;}
@@ -1224,4 +1229,4 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 #portal-column-content .portlet dd:last-child, #portal-column-content .portlet .portletItem:last-child {border-bottom:1px solid #e6e6e6 !important; border-radius: 0 0 5px 5px;}
 #portal-column-content div .portlet dd:first-child, #portal-column-content .portlet .portletItem:first-child {border-top:0 !important;}
 #portal-column-content .portlet {*border-bottom:1px solid #e6e6e6;}
-
+#portal-column-content dd.portletFooter {text-align:right; border-top:0 !important;}
