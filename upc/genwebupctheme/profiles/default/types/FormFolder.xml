@@ -4,4 +4,5 @@
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title">Form Folder</property>
  <property name="description">A folder which can contain form fields.</property>
+ <property name="content_icon"></property>
 </object>

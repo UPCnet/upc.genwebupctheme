@@ -3,4 +3,5 @@
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Forum</property>
  <property name="description" i18n:translate="">A Forum contains conversations.</property>
+ <property name="content_icon"></property>
 </object>

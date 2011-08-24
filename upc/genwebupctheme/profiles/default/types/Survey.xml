@@ -4,6 +4,7 @@
    i18n:domain="plone" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Survey</property>
  <property name="description" i18n:translate="">You can add questions to surveys.</property>
+ <property name="content_icon"></property>
  <action title="Sharing" action_id="local_roles" category="object"
     condition_expr="" url_expr="string:${object_url}/sharing" visible="False">
   <permission value="Manage properties"/>
