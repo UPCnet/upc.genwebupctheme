@@ -200,7 +200,7 @@
   <viewlet name="plone.path_bar"/>
  </hidden>
  
-  <order manager="plone.portalheader" skinname="GenwebUPC_Master">
+ <order manager="plone.portalheader" skinname="GenwebUPC_Master">
   <viewlet name="plone.skip_links"/>
   <viewlet name="plone.site_actions"/>
   <viewlet name="upc.genweb.capsaleraSuperior"/>
