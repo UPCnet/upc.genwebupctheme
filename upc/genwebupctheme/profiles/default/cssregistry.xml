@@ -75,6 +75,7 @@
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="neutre3.css" media="all" rel="stylesheet"
     rendering="import"/>
+
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on"
     expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Unitat'"
@@ -87,12 +88,27 @@
     enabled="on"
     expression="python:path('object/@@upc.genweb.utils/getFlavour')=='Tema genwebUPC Master'"
     id="masters.css" media="all" rel="stylesheet" rendering="import"/>
+
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:path('object/@@upc.genweb.utils/getFlavour')=='GenwebUPC_Unitat'"
+    id="unitats.css" media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:path('object/@@upc.genweb.utils/getFlavour')=='GenwebUPC_Neutre2'"
+    id="neutre2.css" media="all" rel="stylesheet" rendering="import"/>
+ <stylesheet title="" cacheable="True" compression="safe" cookable="True"
+    enabled="on"
+    expression="python:path('object/@@upc.genweb.utils/getFlavour')=='GenwebUPC_Master'"
+    id="masters.css" media="all" rel="stylesheet" rendering="import"/>
+
  <stylesheet title="" cacheable="False" compression="safe" cookable="True"
     enabled="on" expression="" id="dynamic.css" media="all" rel="stylesheet"
     rendering="import"/>
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="ploneCustom.css" media="all"
     rel="stylesheet" rendering="import"/>
+
  <stylesheet title="" position-bottom="True" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="print.css" media="print" rel="stylesheet"
     rendering="import"/>
