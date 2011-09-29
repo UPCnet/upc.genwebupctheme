@@ -4,14 +4,17 @@
       i18n:domain="plonesurvey">
 <body>
 <metal:main fill-slot="main">
+    <tal:comment tal:replace="nothing">Plone 4 fix rename IndexIterator to RealIndex: http://plone.org/products/maps/issues/30</tal:comment>
     <tal:main-macro metal:define-macro="main"
         tal:define="errors options/state/getErrors;
-                    Iterator python:modules['Products.CMFPlone'].IndexIterator;
+                    Iterator python:modules['Products.CMFPlone'].utils.RealIndexIterator;
                     tabindex python:Iterator();
                     member_id here/getSurveyId;
                     questions here/getQuestions;
                     completed python:here.checkCompletedFor(member_id);
-                    pagetype here/portal_type">
+                    pagetype here/portal_type;
+                    isAnon context/@@plone_portal_state/anonymous;
+                    object_title context/@@plone_context_state/object_title;">
 
         <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontenttitle" />
         <h1 class="documentFirstHeading"
