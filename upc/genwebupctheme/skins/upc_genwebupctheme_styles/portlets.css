@@ -744,9 +744,11 @@ padding:1px 0 1px 20px;
 	padding:0px !important;}
 
 .newsImage {
-border:1px solid #e6e6e6;
-padding:5px;
-background:#f9f9f9 url(fonsTG.png) repeat-x scroll center bottom !important;
+border:1px solid #d9d9d9;
+padding:1em;
+background:#fff !important;
+/*background:#f7f7f7 url(fonsTG.png) repeat-x scroll center bottom !important;*/
+border-radius:3px;
 }
 .newsImageContainer {
 float:right;
@@ -1009,10 +1011,10 @@ visibility:hidden;
 
 /*plantilla document imatge*/
 .discreet img {
-	border: 1px solid #d9d9d9;
-	padding: 3px;
+	border: 0;
+	padding: 0;
 	background:white;
-	margin-bottom: 10px;
+	margin-bottom: 0;
 }
 .template-board_view .discreet img, .template-forum_view .discreet img{
 	border: 0px solid #e6e6e6;

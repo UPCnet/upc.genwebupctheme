@@ -100,9 +100,9 @@
                         <img tal:replace="structure item_icon/html_tag" />
                         <a href="#"
                            tal:attributes="href item/getRemoteUrl;
-                                           class string:$item_type_class $item_wf_state_class url link-plain"
+                                           class string:$item_wf_state_class url link-plain"
                            tal:content="item_title_or_id">
-                            External Link
+                            Internal Link
                         </a>
                     </span>
 
