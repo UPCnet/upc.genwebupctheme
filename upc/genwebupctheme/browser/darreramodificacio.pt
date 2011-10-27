@@ -4,7 +4,8 @@
         i18n:domain="plone">
        
 	<div class="fletxatop">
-	    <a tal:attributes="href python:context.absolute_url()+'/#amuntDeTot'">
+	    <a tal:attributes="href python: request['ACTUAL_URL']
++'#amuntDeTot'">
         	<img i18n:domain="upc.genwebupc" i18n:attributes="alt Top_of_page; title Top_of_page" tal:attributes="src string:${portal_url}/fletxa16blava.png"/>
     	</a>
 	</div>
