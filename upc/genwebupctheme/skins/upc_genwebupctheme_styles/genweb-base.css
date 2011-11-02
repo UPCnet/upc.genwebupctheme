@@ -290,7 +290,7 @@ h3 {
 	margin:25px 0 15px;
 	padding:5px 0;}	
 h2{
-	border-top:5px solid #E6E6E6;
+	border-top:3px solid #E6E6E6;
 	color:#4D4D4D;
 	font-size:1.55em;
 	margin-top:25px;
@@ -630,7 +630,7 @@ a span.state-intranet {
 
 div.portalMessage { 
     width:100%; 
-    padding:0 0 4px;
+    padding:0 0 2px;
     margin:.5em 0;
     background-color:#F2F6FA !important; 
     float:none !immportant; 
@@ -638,15 +638,16 @@ div.portalMessage {
     vertical-align:middle; 
     background-image:none;
     font-size:90%;
+    clear:both;
 }
 div.portalMessage_left { 
-    width:10%; 
+    width:15%; 
     float:left; 
     background:#F9F9F9 url(info_message.gif) no-repeat scroll left bottom;
     color: #00589A !important;
     vertical-align:middle;
     border-right:1px solid #DDDDDD;
-    font-size:1.6em;
+    font-size:1.45em;
     font-weight:bold;
     line-height:1.25em;
     margin:0 0.5em 0 0;
@@ -654,7 +655,7 @@ div.portalMessage_left {
     font-family:Arial,Helvetica,sans-serif;
 }
 div.portalMessage_right { 
-    width:90%; 
+    width:85%; 
     vertical-align:middle; 
     display:table-cell; 
     font-weight:normal; 
@@ -1219,6 +1220,8 @@ h1 span.discreet {
 	background: transparent url(plus.gif) no-repeat scroll left 4px;
 	padding: 0 0 0 15px;
 	margin-top:15px;}
+#relatedItemBox span {padding:5px 0;}
+#relatedItemBox dt {font-weight: bold;color: #4d4d4d;font-size: 1.35em;font-family: Arial, Helvetica, sans-serif;margin-bottom: 0.35em;}
 /*elimina img vistes*/
 /*.collage-item dl dt span img, .collage-item tr td span img, .template-atct_album_view #content dl dt span img, .template-folder_summary_view #content dl dt span img, .template-folder_tabular_view #content tr td span img, .template-atct_topic_view #content dl dt span img{ float:right; display:none;}*/
 
@@ -1239,6 +1242,7 @@ dl dt span.summary {
 .template-atct_topic_view #content dl, .template-folder_extended #content dl, .template-folder_listing #content dl{
 	background:#F7F7F7 url(fonsTG.gif) repeat-x scroll center bottom;
 	border-color:#b2b2b2 #d9d9d9 #d9d9d9;
+	border-radius:3px;
 	border-style:solid;
 	border-width:1px;
 	padding:10px 10px 0 10px;
@@ -1329,7 +1333,7 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-event,
 .contenttype-file,
 .contenttype-image,
-.contenttype-news-item,
+.contenttype-news-item, .contenttype-news,
 .contenttype-document,
 .contenttype-window,
 .actionicon-object_buttons-cut,
@@ -1361,7 +1365,15 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-formtextfield,
 .contenttype-formthankspage,
 .contenttype-formintegerfield,
-.contenttype-seccio {
+.contenttype-seccio,
+.contenttype-plonepopoll,
+.contenttype-ploneboard,
+.contenttype-meeting,
+.contenttype-survey,
+.contenttype-simpletask,
+.contenttype-formcaptchafield,
+.contenttype-fieldsetstart,
+.contenttype-fieldsetend {
 	background-repeat: no-repeat;
 	background-image: url(spriteStates.png);
 	padding-left:25px !important;
@@ -1373,7 +1385,7 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 #folder_listing{background-position:3px -1037px;}
 #homepage{background-position:3px -877px;}
 #folder_extended {background-position:3px -1077px;}
-#atct_topic_view {background-position:3px -95px;}
+#atct_topic_view {background-position:3px -2434px;}
 #board_view_global{background-position:3px -127px;}
 #board_view{background-position:3px -143px;}
 #poi_tracker_view{background-position:3px -111px;}
@@ -1384,7 +1396,7 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-event{background-position:3px -397px;} 
 .contenttype-file{background-position:3px -477px;} 
 .contenttype-image{background-position:3px -597px;} 
-.contenttype-news-item{background-position:3px -635px;} 
+.contenttype-news-item, .contenttype-news {background-position:3px -635px;} 
 .contenttype-document{background-position:3px -675px;} 
 .contenttype-window{background-position:3px -835px;} 
 .actionicon-object_buttons-cut{background-position:3px -1116px;}
@@ -1416,7 +1428,14 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-formthankspage {background-position:3px -2157px;}
 .contenttype-formintegerfield {background-position:3px -2197px;}
 .contenttype-seccio {background-position:3px -2316px;}
-
+.contenttype-plonepopoll {background-position: 3px -357px;}
+.contenttype-ploneboard {background-position: 3px -437px}
+.contenttype-meeting {background-position: 3px -2395px}
+.contenttype-survey {background-position: 3px -717px;}
+.contenttype-simpletask {background-position: 3px -2355px;}
+.contenttype-formcaptchafield {background-position: 3px -2475px;}
+.contenttype-fieldsetstart {background-position: 3px -2515px;}
+.contenttype-fieldsetend {background-position: 3px -2555px;}
 
 
 /* menu estat*/
@@ -1475,7 +1494,7 @@ table.vertical tbody th {
 	font-size: 150% !important;
 	width:115px;}
 table.vertical .summary {color: #333 !important;}
-.fletxatop{text-align:right; margin-bottom:0;padding-right:2px;}
+.fletxatop{text-align:right; margin-bottom:0;padding-right:2px; clear:both;}
 
 /*collage*/
 .collage-item dl dt img{ float:right;}
@@ -2723,9 +2742,51 @@ width: 98% !important;
 .ppt {background:url(ppt.gif) no-repeat center right; padding-right:15px;}
 .txt {background:url(txt.gif) no-repeat center right; padding-right:15px;}
 .down {background:url(down.gif) no-repeat center right; padding-right:15px;}
+	.portletAssignments .down {background:none; padding-right:0;}
 .vid {background:url(play.gif) no-repeat center right; padding-right:15px;}
 .img {background:url(img.gif) no-repeat center right; padding-right:15px;}
 
 .margezero {margin:0 !important;}
+
+#content-core table.listing img {display:none;}
+
+/* canvi titols provisional */
+#content h3 {border:0 !important; font-size:1.35em !important;}
+#content h4 {border:0 !important; font-size:1.2em !important;}
+#content h5 {border:0 !important; font-size:1.05em !important;}
+#content h6 {border:0 !important; font-size:.95em !important;}
+
+/*toolbox form*/
+html #pfgWidgetWrapper {width:20%; border:1px solid #d9d9d9 !important; background:#f2f2f2 !important; font-size:.9em;}
+#pfgWidgetWrapper .header {background: #e5e5e5 !important;}
+#pfgWidgetWrapper h2 {border:0; font-size:1.25em !important; margin:0 !important; padding:0; text-align:left !important;}
+#pfgWidgetWrapper h4 {margin:0 !important; padding:5px !important; border:1px solid #f2f2f2 !important;;} 
+#pfgWidgetWrapper h4:hover {background:#fea; border:1px solid #ccc !important;;}
+#fieldWidgets, #fieldsetWidgets, #actionWidgets {padding:5px !important;}
+div.widget {width:auto !important;}
+
+/*categoritzacio*/
+#selectedTagsSection, #noTagsSelected, #oneOrMoreTagsSelected {display:none;}
+#existingTags, #newTagsSection {margin-left:2em;}
+#existingTags dd label {font-weight:normal !important; color:#333 !important;}
+
+.overlaycontent {font-size:100% !important;}
+div.overlay a:hover {color:#007bc0;}
+#contextSetDefaultPage span.subMenuTitle {white-space: normal;}
+
+html #document-toc.portlet  dd.portletItem {border-top-style:solid !important;}
+.TOC1Digit {padding-left:1em; margin: .5em 0;}
+.TOC1Digit ol {padding-left:1em;}
+#document-toc .portletItem li {list-style-image: url(quadretGris.gif);}
+
+
+
+.ploneSkin table, .ploneSkin tbody, .ploneSkin a, .ploneSkin img, .ploneSkin tr, .ploneSkin div, .ploneSkin td, .ploneSkin iframe, .ploneSkin span, .ploneSkin *, .ploneSkin .mceText {white-space:normal !important;}
+.template-translate_item #fieldset-default table, .template-translate_item #fieldset-default tr, .template-translate_item #fieldset-default td {display:block !important; width:99% !important;}
+.template-translate_item #fieldset-default table table {display:table !important; width:auto !important;}
+.template-translate_item #fieldset-default table table tr {display:table-row !important; width:auto !important;}
+.template-translate_item #fieldset-default table table td {display:table-cell !important; width:auto !important;}
+.template-translate_item #fieldset-default .canonicalLanguage {background:#f9f5ff; border:1px solid #f0e8fc;}
+#content.dialog-wrapper fieldset {margin:0 !important;}
 
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }
