@@ -67,7 +67,7 @@
                                    item_end item/end|item/EndDate|nothing;
                                    item_sametime python: item_start == item_end;
                                    item_samedate python: (item_end - item_start &lt; 1) if item_type == 'Event' else False;
-                                   item_finestranova python: item_type == 'Link' and getattr(item.getObject(),'obrirfinestra','') or False;">
+                                   item_finestranova python: item_type == 'Link' and getattr(item,'obrirEnFinestraNova','') or False;">
                 <metal:block define-slot="entry">
                 <dt metal:define-macro="listitem"
                     tal:attributes="class python:test(item_type in ['Event','Meeting'], 'vevent', '')">
