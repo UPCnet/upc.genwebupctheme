@@ -23,12 +23,13 @@
   <element value="homepage"/>
   <element value="folder_listing"/>
   <element value="folder_summary_view"/>
+  <element value="folder_full_view"/>
   <element value="folder_tabular_view"/>
   <element value="atct_album_view"/>
  </property>
  <property name="default_view_fallback">True</property>
  <alias from="(Default)" to="(dynamic view)"/>
- <alias from="edit" to="folder_edit_form"/>
+ <alias from="edit" to="@@site-controlpanel"/>
  <alias from="index.html" to="(dynamic view)"/>
  <alias from="sharing" to="folder_localrole_form"/>
  <alias from="view" to="(selected layout)"/>
@@ -36,17 +37,10 @@
     url_expr="string:${object_url}" visible="True">
   <permission value="View"/>
  </action>
- <action title="Edit" action_id="edit" category="object" condition_expr=""
-    url_expr="string:${object_url}/edit" visible="True">
-  <permission value="Manage properties"/>
- </action>
+
  <action title="Folder view" action_id="folderlisting" category="folder"
     condition_expr="" url_expr="string:${folder_url}/view" visible="False">
   <permission value="View"/>
  </action>
- <action title="External Edit" action_id="external_edit" category="object"
-    condition_expr="" url_expr="string:$object_url/external_edit"
-    visible="False">
-  <permission value="Modify portal content"/>
- </action>
+ 
 </object>

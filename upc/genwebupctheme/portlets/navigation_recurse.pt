@@ -18,7 +18,7 @@
                 li_extr_class   python:is_in_path and ' navTreeItemInPath' or '';
                 li_folder_class python:show_children and ' navTreeFolderish' or '';
                 normalizeString nocall: context/plone_utils/normalizeString;
-                item_finestra   python: node['portal_type'] == 'Link' and getattr(node['item'].getObject(),'obrirfinestra','') or False;"
+                item_finestra   python: node['portal_type'] == 'Link' and getattr(node['item'],'obrirEnFinestraNova','') or False;"
     tal:attributes="class string:navTreeItem visualNoMarker${li_class}${li_extr_class}${li_folder_class}"
     tal:condition="python:bottomLevel &lt;= 0 or level &lt;= bottomLevel">
 
@@ -33,7 +33,7 @@
            target="_blank" 
            tal:condition="python: item_type == 'Link' and item_finestra">           
             <img tal:replace="structure item_icon/html_tag" />
-            <span tal:content="node/Title">Selected Item Title</span>finestranova
+            <span tal:content="node/Title">Selected Item Title</span>
         </a>
 
         <a tal:attributes="href python:link_remote and remote_url or item_url;
