@@ -16,13 +16,13 @@
 	margin-top: -31px}  
 .logo_m{
 	float:left;
-	margin:7px 0 0 25px;
+	margin:7px 0 0 0;
 	min-width:160px}
 .logo_m img {
 	float:left}
 .banerMasters{
 	float:right;
-	padding-top:5px}
+	padding-top:8px}
 .titolWeb_m{
 	text-align:left;
 	margin-left:255px;
@@ -53,7 +53,7 @@
 	text-align:right !important;
 	vertical-align:bottom !important;
 	width: 958px !important;}
-.titolBranca_m {margin: 5px 5px 18px 5px}
+.titolBranca_m {margin: 5px 5px 18px 5px; display:none;}
 .barraBranca_m table td {width:190px; text-align:right !important;}
 .barraBranca_m table, .barraBranca_m tr, .barraBranca_m th, .barraBranca_m td, .barraBranca_m tbody, .barraBranca_m tfoot, .barraBranca_m thead {padding:0px !important;}
 .liniaPrincipal_m{
