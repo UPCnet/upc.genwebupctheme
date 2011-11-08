@@ -267,7 +267,8 @@ html*.taulaRegistres table{
 	line-height: 1.5em;
 	margin: 1em 0em 1em 0em;
 	padding:5px 10px 8px 10px;
-	background:#f8f7f5;}
+	background:#f8f7f5;
+	border-radius:5px;}
 
 .taula img{ /*en principi no cal */
 	margin:0px;

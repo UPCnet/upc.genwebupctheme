@@ -14,8 +14,8 @@
 .logo_n2 {
 	float:left;
 	min-width:200px;
-	margin: 10px 0px 0px 25px;
-	*margin: 15px 0px 0px 25px;
+	margin: 7px 0px 0px 0px;
+	*margin: 12px 0px 0px 0px;
 	}
 .logoProducte {float:right;		
 	margin: 10px 0px 0px 25px;
@@ -39,7 +39,8 @@
 /* GW4 eliminat la position absolute i width 800px */
 #portal-personaltools{
 	background-color:transparent;
-	margin: -29px 0 0 0;
+	margin: -29px 0 0 0;	
+	position:absolute;
 }
 #portal-breadcrumbs {margin: 12px 0 5px;}
 
