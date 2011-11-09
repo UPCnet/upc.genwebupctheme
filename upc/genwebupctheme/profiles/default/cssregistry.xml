@@ -66,6 +66,13 @@
  <stylesheet title="" cacheable="True" compression="safe" cookable="False"
     enabled="on" expression="" id="popoll.css" media="screen" rel="stylesheet"
     rendering="import"/> -->
+ 
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="False" compression="safe" conditionalcomment="" cookable="True"
+    enabled="on" expression=""
+    id="++resource++plone.app.jquerytools.overlays.css" media="screen"
+    rel="stylesheet" rendering="import"/>
+
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
     enabled="on" expression="" id="genweb-base.css" media="all"
     rel="stylesheet" rendering="import"/>
