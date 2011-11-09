@@ -14,9 +14,9 @@
 <!-- logo producte -->
 
     <div class="logoProducte">
-        <a tal:define="text_alt python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '') + u', ' + context.translate('obrir_link_finestra_nova', domain='upc.genwebupc')"
-		tal:attributes="href python: getattr(utils.getGWConfig(),'enllaslogotipdret', ''); title text_alt" target="newwindow">
-		<span tal:condition="python: getattr(utils.getGWConfig(),'enllaslogotipdret', False)">
+        <a tal:define="text_alt python: utils.getGWProperty('enllaslogotipdretalt') + u', ' + context.translate('obrir_link_finestra_nova', domain='upc.genwebupc')"
+		tal:attributes="href python: utils.getGWProperty('enllaslogotipdret'); title text_alt" target="newwindow">
+		<span tal:condition="python: utils.getGWProperty('enllaslogotipdret')">
             <img tal:attributes="src string:${portal_url}/logoProducte.gif;
                                  alt text_alt;
                                  title text_alt" />
