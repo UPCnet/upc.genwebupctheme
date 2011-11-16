@@ -27,12 +27,12 @@
     <property name="especific6" type="string" purge="False">#f3f3f3</property>
     <property name="imatgedefonsprops" type="string" purge="False">repeat-y</property>
 
-    <property name="titolespai_ca" type="string" purge="False">Titol de l'espai en catala</property>
-    <property name="titolespai_es" type="string" purge="False">Titol de l'espai en castella</property>
-    <property name="titolespai_en" type="string" purge="False">Titol de l'espai en angles</property>
-    <property name="firmaunitat_ca" type="string" purge="False">Firma de la unitat en catala.</property>
-    <property name="firmaunitat_es" type="string" purge="False">Firma de la unitat en castella.</property>
-    <property name="firmaunitat_en" type="string" purge="False">Firma de la unitat en angles.</property>
+    <property name="titolespai_ca" type="string" purge="False">Titol de l'espai en català</property>
+    <property name="titolespai_es" type="string" purge="False">Titol de l'espai en castellà</property>
+    <property name="titolespai_en" type="string" purge="False">Titol de l'espai en anglès</property>
+    <property name="firmaunitat_ca" type="string" purge="False">Firma de la unitat en català.</property>
+    <property name="firmaunitat_es" type="string" purge="False">Firma de la unitat en castellà.</property>
+    <property name="firmaunitat_en" type="string" purge="False">Firma de la unitat en anglès.</property>
     <property name="enllaslogotip" type="string" purge="False">http://www.upc.edu</property>
     <property name="enllaslogotipdret" type="string" purge="False">http://www.upc.edu</property>
     <property name="enllaslogotipdretalt" type="string" purge="False">Universitat Politecnica de Catalunya</property>        
@@ -48,9 +48,9 @@
     <property name="idestudiMaster" type="string" purge="False">50</property>
     <property name="idtitulacioMaster" type="string" purge="False">114</property>
     <property name="masterdoctorado" type="string" purge="False">Master</property>
-    <property name="ambitdoctorat_ca" type="string" purge="False">Ambit doctorat - [catala]</property>
-    <property name="ambitdoctorat_es" type="string" purge="False">Ambit doctorat - [castella]</property>
-    <property name="ambitdoctorat_en" type="string" purge="False">Ambit doctorat - [angles]</property>
+    <property name="ambitdoctorat_ca" type="string" purge="False">Ambit doctorat - [català]</property>
+    <property name="ambitdoctorat_es" type="string" purge="False">Ambit doctorat - [castellà]</property>
+    <property name="ambitdoctorat_en" type="string" purge="False">Ambit doctorat - [anglès]</property>
 
   </object>
   

@@ -5,11 +5,11 @@
 <!-- logo producte -->
 
     <div class="logoProducte">
-        <a tal:attributes="href python: getattr(utils.getGWConfig(),'enllaslogotipdret', '')" target="_blank">
-		<span tal:condition="python: getattr(utils.getGWConfig(),'enllaslogotipdret', False)">
+        <a tal:attributes="href python: utils.getGWProperty('enllaslogotipdret')" target="_blank">
+		<span tal:condition="python: utils.getGWProperty('enllaslogotipdret')">
             <img tal:attributes="src string:${portal_url}/logoProducte.gif;
-                                 alt python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '');
-                                 title python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '')" />
+                                 alt python: utils.getGWProperty('enllaslogotipdretalt');
+                                 title python: utils.getGWProperty('enllaslogotipdretalt')" />
         </span>
         </a>
     </div>

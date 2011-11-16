@@ -8,11 +8,12 @@ from urllib import quote_plus
 
 from upc.genwebupctheme.browser.utils import havePermissionAtRoot
 
+
 class capsaleraSuperior(ViewletBase):
     render = ViewPageTemplateFile('capsaleraSuperior.pt')
 
     def update(self):
-        
+
         super(capsaleraSuperior, self).update()
 
         context_state = getMultiAdapter((self.context, self.request),
@@ -30,39 +31,47 @@ class capsaleraSuperior(ViewletBase):
         folder = context_state.folder()
         self.folder_path = '/'.join(folder.getPhysicalPath())
 
-        
+
 class titolsMaster(ViewletBase):
-    render = ViewPageTemplateFile('master/titolsMaster.pt')        
-    
+    render = ViewPageTemplateFile('master/titolsMaster.pt')
+
+
 class titolsNeutre2(ViewletBase):
     render = ViewPageTemplateFile('neutre2/titolsNeutre2.pt')
-    
+
+
 class titols(ViewletBase):
-    render = ViewPageTemplateFile('titols.pt')    
-        
+    render = ViewPageTemplateFile('titols.pt')
+
+
 class logoNeutre3(ViewletBase):
     render = ViewPageTemplateFile('neutre3/logoNeutre3.pt')
-    
+
+
 class barraSuperior (ViewletBase):
     render = ViewPageTemplateFile('neutre3/barraSuperior.pt')
-    
+
+
 class logoNeutre2(ViewletBase):
     render = ViewPageTemplateFile('neutre2/logoNeutre2.pt')
-    
+
+
 class logoMaster(ViewletBase):
-    render = ViewPageTemplateFile('master/logoMaster.pt')    
+    render = ViewPageTemplateFile('master/logoMaster.pt')
+
 
 class barraColor (ViewletBase):
     render = ViewPageTemplateFile('barra.pt')
+
 
 class eines(ViewletBase):
     render = ViewPageTemplateFile('eines.pt')
 
     def __init__(self, context, request, view, manager):
         ViewletBase.__init__(self, context, request, view, manager)
-        
+
         self.membership = getToolByName(self.context, 'portal_membership')
-        
+
         self.context_state = getMultiAdapter((context, request), name=u'plone_context_state')
         self.portal_state = getMultiAdapter((context, request), name=u'plone_portal_state')
         self.pas_info = getMultiAdapter((context, request), name=u'pas_info')
@@ -70,7 +79,7 @@ class eines(ViewletBase):
     def show(self):
         if not self.portal_state.anonymous():
             return False
-        if not self.pas_info.hasLoginPasswordExtractor():         
+        if not self.pas_info.hasLoginPasswordExtractor():
             return False
         page = self.request.get('URL', '').split('/')[-3]
         return page not in ('login_form', 'join_form')
@@ -82,9 +91,9 @@ class eines(ViewletBase):
     def login_form(self):
         url = self.portal_state.portal_url()
         url_split = url.split(":")
-        if len(url_split)>0:
-            if url_split[0]=='http':
-                url = url.replace('http','https')  
+        if len(url_split) > 0:
+            if url_split[0] == 'http':
+                url = url.replace('http', 'https')
         return '%s/login_form' % url
 
     def mail_password_form(self):
@@ -102,11 +111,10 @@ class eines(ViewletBase):
     def came_from(self):
         current_page = self.context_state.current_page_url()
         current_page_split = current_page.split(":")
-        if len(current_page_split)>0:
-            if current_page_split[0]=='http':
-                current_page = current_page.replace('http','https')
+        if len(current_page_split) > 0:
+            if current_page_split[0] == 'http':
+                current_page = current_page.replace('http', 'https')
         return current_page
-
 
     def login_password(self):
         auth = self.auth()
@@ -138,15 +146,14 @@ class eines(ViewletBase):
         acl_users = getToolByName(self.context, 'acl_users')
         return getattr(acl_users, 'credentials_cookie_auth', None)
 
-    
-# Lo del personal_bar    
+# Lo del personal_bar
     def update(self):
         super(eines, self).update()
 
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
         tools = getMultiAdapter((self.context, self.request), name=u'plone_tools')
-        
+
         sm = getSecurityManager()
 
         self.user_actions = context_state.actions('user')
@@ -157,15 +164,15 @@ class eines(ViewletBase):
         self.anonymous = self.portal_state.anonymous()
 
         if not self.anonymous:
-        
+
             member = self.portal_state.member()
             userid = member.getId()
-            
+
             if sm.checkPermission('Portlets: Manage own portlets', self.context):
                 self.homelink_url = self.site_url + '/dashboard'
             else:
                 self.homelink_url = self.site_url + '/author/' + quote_plus(userid)
-            
+
             member_info = tools.membership().getMemberInfo(member.getId())
             fullname = member_info.get('fullname', '')
             if fullname:

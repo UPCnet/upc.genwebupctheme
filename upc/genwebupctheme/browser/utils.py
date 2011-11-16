@@ -16,82 +16,86 @@ PLMF = MessageFactory('plonelocales')
 def getGWConfig(context):
     """ Funcio que retorna les configuracions del controlpanel
     """
-    ptool = getToolByName(context, 'portal_properties')    
+    ptool = getToolByName(context, 'portal_properties')
     try:
         gwconfig = ptool.genwebupc_properties
     except:
         gwconfig = None
-    
-    return gwconfig        
+
+    return gwconfig
+
 
 def havePermissionAtRoot(self):
-     """Funcio que retorna si es Editor a l'arrel"""
-     
-     pm= getToolByName(self, 'portal_membership')   
-     tools = getMultiAdapter((self.context, self.request),
-                                        name=u'plone_tools')       
-     proot = tools.url().getPortalObject()
-     #proot=pu.getPortalObject()
-     sm = getSecurityManager()
-     user = pm.getAuthenticatedMember()
-     
-     return sm.checkPermission('Modify portal content', proot) or ('WebMaster' in user.getRoles())    
+    """Funcio que retorna si es Editor a l'arrel"""
+
+    pm = getToolByName(self, 'portal_membership')
+    tools = getMultiAdapter((self.context, self.request), name=u'plone_tools')
+    proot = tools.url().getPortalObject()
+    #proot=pu.getPortalObject()
+    sm = getSecurityManager()
+    user = pm.getAuthenticatedMember()
+
+    return sm.checkPermission('Modify portal content', proot) or ('WebMaster' in user.getRoles())
+
 
 def portal_url(self):
-        """ Funcion a que retorna el path 
-        """
-        context_state = getMultiAdapter((self.context, self.request),
-                                        name=u'plone_context_state')
-        return context_state.current_base_url()
+    """ Funcion a que retorna el path"""
+    context_state = getMultiAdapter((self.context, self.request), name=u'plone_context_state')
+    return context_state.current_base_url()
+
 
 class utilitats(BrowserView):
+
+    def getGWProperty(self, gwproperty):
+        """Retorna de manera segura una propietat del GW"""
+        property_value = getattr(self.getGWConfig(), gwproperty, '')
+        if property_value is None:
+            property_value = ''
+        return property_value
 
     def llistaEstats(self):
         """Retorna una llista dels estats dels workflows indicats
         """
-        wtool = getToolByName(self,'portal_workflow')
-        workflows = ['genweb_simple','genweb_review']
+        wtool = getToolByName(self, 'portal_workflow')
+        workflows = ['genweb_simple', 'genweb_review']
         estats = []
         for w in workflows:
             estats = estats + [s[0] for s in wtool.getWorkflowById(w).states.items()]
-    
+
         return [w for w in wtool.listWFStatesByTitle() if w[0] in estats]
 
     def llistaContents(self):
-        """Retorna tots els tipus de contingut, exclosos els de la llista types_to_exclude 
-        """
-        types_to_exclude = ['Banner', 'BannerContainer', 'CollageAlias', 'CollageColumn', 'CollageRow', 'Favorite', 'Large Plone Folder', 'Logos_Container', 'Logos_Footer', 'PoiPscTracker', 'SubSurvey', 'SurveyMatrix', 'SurveyMatrixQuestion', 'SurveySelectQuestion', 'SurveyTextQuestion',]
+        """Retorna tots els tipus de contingut, exclosos els de la llista types_to_exclude"""
+        types_to_exclude = ['Banner', 'BannerContainer', 'CollageAlias', 'CollageColumn', 'CollageRow', 'Favorite', 'Large Plone Folder', 'Logos_Container', 'Logos_Footer', 'PoiPscTracker', 'SubSurvey', 'SurveyMatrix', 'SurveyMatrixQuestion', 'SurveySelectQuestion', 'SurveyTextQuestion', ]
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
         ptypes = portal_state.friendly_types()
         for typeEx in types_to_exclude:
             if typeEx in ptypes:
                 ptypes.remove(typeEx)
-        
+
         return ptypes
-        
+
     def portal_url(self):
-        """ Funcion a que retorna el path 
-        """
+        """ Funcion a que retorna el path"""
         context_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_context_state')
         return context_state.current_base_url()
 
-    def dia_semana(self,day):
-        """ Funcion a la que le pasas el dia y te lo devuelve en modo texto
-        """
+    def dia_semana(self, day):
+        """ Funcion a la que le pasas el dia y te lo devuelve en modo texto"""
         _ts = getToolByName(self, 'translation_service')
-        dia = day+1
+        dia = day + 1
         if dia == 7:
             dia = 0
         return PLMF(_ts. day_msgid(dia), default=_ts.weekday_english(dia, format='a'))
-        
-    def mes(self,month):
+
+    def mes(self, month):
         """ Funcion a la que le pasas el mes y te lo devuelve en modo texto
         """
         _ts = getToolByName(self, 'translation_service')
         return PLMF(_ts.month_msgid(month), default=_ts.month_english(month, format='a'))
-    
+
     def pref_lang(self):
         """Funcio que extreu idioma actiu
         """
@@ -101,14 +105,14 @@ class utilitats(BrowserView):
     def getGWConfig(self):
         """ Funcio que retorna les configuracions del controlpanel
         """
-        ptool = getToolByName(self.context, 'portal_properties')    
+        ptool = getToolByName(self.context, 'portal_properties')
         try:
             gwconfig = ptool.genwebupc_properties
         except:
             gwconfig = None
-    
-        return gwconfig     
-    
+
+        return gwconfig
+
     def isFolder(self):
         """ Funcio que retorna si es carpeta per tal de mostrar o no el last modified
         """
@@ -116,36 +120,36 @@ class utilitats(BrowserView):
             return True
 
     def remapList2Dic(self, dictkeys, results):
-        
+
         _dictResult = {}
         _dictKeys = dictkeys
         _results = results
-        c=0
-        
-        for ii in _dictKeys: 
-            _dictResult[ii]=_results[c]
-            c=c+1        
+        c = 0
+
+        for ii in _dictKeys:
+            _dictResult[ii] = _results[c]
+            c = c + 1
 
         return _dictResult
 
     def connectDatabase(self):
-        return MySQLdb.connect(host='raiden.upc.es',user='cons-webupc',passwd='qstacll',db='www-webupc')
+        return MySQLdb.connect(host='raiden.upc.es', user='cons-webupc', passwd='qstacll', db='www-webupc')
         #return MySQLdb.connect(host='raiden.upc.es',user='consulta',passwd='c0ns4lt4',db='www-estudis')
 
-    def change2UTF(self,c):
+    def change2UTF(self, c):
         c.execute('SET NAMES utf8;')
         c.execute('SET CHARACTER SET utf8;')
-        c.execute('SET character_set_connection=utf8;')  
+        c.execute('SET character_set_connection=utf8;')
         return c
- 
+
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
 
     def verificaIdUnitat(self, id):
         try:
             db = self.connectDatabase()
-            c=db.cursor()   
-            c=self.change2UTF(c)  
+            c = db.cursor()
+            c = self.change2UTF(c)
             c.execute("""SELECT id_unitat FROM upc_unitat WHERE id_unitat = %s""", (id,))
             results = c.fetchone()
         except:
@@ -154,84 +158,81 @@ class utilitats(BrowserView):
 
     def verificaIdEnlace(self, id):
         db = self.connectDatabase()
-        c=db.cursor()     
-        c=self.change2UTF(c)
+        c = db.cursor()
+        c = self.change2UTF(c)
         c.execute("""SELECT personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
         results = c.fetchone()
-        dictKeys = ('personal',)     
-        _result = self.remapList2Dic(dictKeys,results)     
+        dictKeys = ('personal',)
+        _result = self.remapList2Dic(dictKeys, results)
         if _result['personal'] == None:
             return "http://directori.upc.edu/directori/dadesUE.jsp?id=" + id
         else:
             return _result['personal']
 
-          
     def getContacteDataSql(self, id):
-        """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis 
+        """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis
             de acuerdo a un id.
-        """      
+        """
         db = self.connectDatabase()
-        c=db.cursor()
-        c=self.change2UTF(c)
+        c = db.cursor()
+        c = self.change2UTF(c)
         c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
-
 
         results = c.fetchone()
         dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
-           
-        return self.remapList2Dic(dictKeys,results)
 
-    def getContacteDireccion(self, id): 
+        return self.remapList2Dic(dictKeys, results)
+
+    def getContacteDireccion(self, id):
         db = self.connectDatabase()
-        c=db.cursor()
-        c=self.change2UTF(c)
-        c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,)) 
+        c = db.cursor()
+        c = self.change2UTF(c)
+        c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,))
         try:
             results = c.fetchone()
-            dictKeys = ('codi_edifici','nomEdifici','ue.direccio', 'ue.codi_postal', 'ue.id_campus','nomCampus','nomLocalitat')
-            return self.remapList2Dic(dictKeys,results)
+            dictKeys = ('codi_edifici', 'nomEdifici', 'ue.direccio', 'ue.codi_postal', 'ue.id_campus', 'nomCampus', 'nomLocalitat')
+            return self.remapList2Dic(dictKeys, results)
         except:
             return None
-    
+
     def cambiaPrefijo(self, lang):
         tmp = 'ing'
         if lang == 'ca':
             tmp = 'cat'
-        elif lang == 'es':  
+        elif lang == 'es':
             tmp = 'esp'
-        
-        return tmp    
-            
+
+        return tmp
+
     def getTextMaster(self, str, lang):
-                    
+
         db = self.connectDatabase()
-        c=db.cursor()  
-        c=self.change2UTF(c)
+        c = db.cursor()
+        c = self.change2UTF(c)
         c.execute("""SELECT cat,esp,ing FROM upc_textos WHERE id = %s""", (str,))
         results = c.fetchone()
 
-        dictKeys = ('cat', 'esp', 'ing',)    
-             
-        _result = self.remapList2Dic(dictKeys,results)
+        dictKeys = ('cat', 'esp', 'ing',)
+
+        _result = self.remapList2Dic(dictKeys, results)
 
         tmp = self.cambiaPrefijo(lang)
-        
-        return _result[tmp]        
-        
-        
+
+        return _result[tmp]
+
     def getMasterInfoGeneral(self, id_titulacio, id_estudi):
-        
+
         db = self.connectDatabase()
-        c=db.cursor()     
-        c=self.change2UTF(c)
-        c.execute("""SELECT upc_titulacio.*,upc_estudi.*, orientacio_cat, orientacio_esp, orientacio_ing, up.nom_cat pNom_cat,up.nom_esp pNom_esp, up.nom_ing pNom_ing, unitat.nom_cat uNom_cat, unitat.nom_esp uNom_esp, unitat.nom_ing uNom_ing, unitat.sigles,m_destinataris_cat, m_destinataris_esp, m_destinataris_ing, m_criteris_adm_cat, m_criteris_adm_esp, m_criteris_adm_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing, m_professorat_cat, m_professorat_esp, m_professorat_ing, m_preu_cat, m_preu_esp, m_preu_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio,id_estudi,id_titulacio,id_estudi,))
+        c = db.cursor()
+        c = self.change2UTF(c)
+        c.execute("""SELECT upc_titulacio.*,upc_estudi.*, orientacio_cat, orientacio_esp, orientacio_ing, up.nom_cat pNom_cat,up.nom_esp pNom_esp, up.nom_ing pNom_ing, unitat.nom_cat uNom_cat, unitat.nom_esp uNom_esp, unitat.nom_ing uNom_ing, unitat.sigles,m_destinataris_cat, m_destinataris_esp, m_destinataris_ing, m_criteris_adm_cat, m_criteris_adm_esp, m_criteris_adm_ing,m_competencies_cat, m_competencies_esp, m_competencies_ing, m_professorat_cat, m_professorat_esp, m_professorat_ing, m_preu_cat, m_preu_esp, m_preu_ing FROM upc_titulacio,upc_titulacio_orientacio, upc_presencialitat up, upc_titulacio_plus plus,upc_estudi_plus plusEstudi, upc_estudi LEFT JOIN upc_unitat unitat ON upc_estudi.m_uni_coordinadora=unitat.id_unitat WHERE upc_titulacio.id_titulacio=%s AND upc_estudi.id_estudi=%s AND upc_titulacio_orientacio.m_id_orientacio=upc_titulacio.m_id_orientacio AND upc_estudi.id_presencialitat=up.id_presencialitat AND plus.id_titulacio=%s AND plusEstudi.id_estudi=%s""", (id_titulacio, id_estudi, id_titulacio, id_estudi,))
         results = c.fetchone()
         dictKeys = ('id_titulacio',
                     'nom_cat',
-                    'nom_esp', 
-                    'nom_ing', 
-                    'descripcio_promocional_cat', 
-                    'descripcio_promocional_esp', 
+                    'nom_esp',
+                    'nom_ing',
+                    'descripcio_promocional_cat',
+                    'descripcio_promocional_esp',
                     'descripcio_promocional_ing', 
                     'acces_cat',                  
                     'acces_esp',                  
@@ -325,8 +326,8 @@ class utilitats(BrowserView):
                     'm_preu_cat',
                     'm_preu_esp',
                     'm_preu_ing',)
-        
-        return self.remapList2Dic(dictKeys,results)
+
+        return self.remapList2Dic(dictKeys, results)
 
     def getMobilitatEstudis(self, id_titulacio):
 

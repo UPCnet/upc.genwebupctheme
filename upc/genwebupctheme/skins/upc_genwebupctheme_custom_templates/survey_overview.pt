@@ -7,13 +7,13 @@
 <metal:main fill-slot="main">
     <tal:main-macro metal:define-macro="main"
         tal:define="errors python:request.get('errors', {});
-                    Iterator python:modules['Products.CMFPlone'].IndexIterator;
+                    Iterator python:modules['Products.CMFPlone'].utils.RealIndexIterator;
                     tabindex python:Iterator();
                     pages python:here.getFolderContents(
                         contentFilter={'portal_type':['SubSurvey',]},
                             full_objects=True);">
-
-        <div metal:use-macro="here/document_actions/macros/document_actions" />
+        
+        <div tal:replace="structure provider:plone.documentactions" />        
         <h1 i18n:translate="heading_survey_overview">Survey Overview</h1>
         <form style="float: left;"
               method="post"
