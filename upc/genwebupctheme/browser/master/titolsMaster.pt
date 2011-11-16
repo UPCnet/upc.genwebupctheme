@@ -105,7 +105,7 @@
     		
     <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">
 		<a class="bMmd" tal:condition="python:utils.pref_lang()=='ca'"
- 			href="http://mastersuniversitaris.upc.edu" target="_blank" title=Altres màsters Universitaris">
+ 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="Altres màsters Universitaris">
 			<span>Altres màsters Universitaris</span>
 		</a>
 		<a class="bMmd" tal:condition="python:utils.pref_lang()=='es'"
