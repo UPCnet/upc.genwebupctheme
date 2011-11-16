@@ -31,6 +31,19 @@ Content Management System <a target="_blank" href="http://plone.org">Plone <img 
 This site has been designed to be completely accessible and usable, working in accordance with the W3C accessibility guidelines. If there is anything on this site &mdash;accessibility 
 or validation related&mdash; that is not according to this standard, please contact the <a href="/contact" tal:attributes="href string:${portal_url}/contact">webmaster</a>.
 </p>
+<h2>Pautes WAI</h2>
+<p><a title="(obriu en finestra nova)" target="_blank" href="http://www.w3.org/WAI/WCAG1AA-Conformance">
+<img src="http://www.upc.edu/config-ca/imatges/wcag-1.0-aa" alt="validat wai-aa wcag 1.0, (obriu en finestra nova)" class="align_left"></a> 
+Els continguts del web de la UPC han estat validats amb la certificació Doble-A, 
+segons les recomanacions de la WAI (<span lang="en">Web Accessibility Iniciative</span>), grup de treball internacional que pertany al W3C 
+(<span lang="en">World Wide Web Consortium</span>) , organisme que vetlla perquè cap col·lectiu pateixi discriminacions de cap mena que 
+puguin ser causa de fractures socials en el món virtual.</p>
+<br /><br />
+<p><a title="(obriu en finestra nova)" target="_blank" href="http://jigsaw.w3.org/css-validator/"><img src="http://www.upc.edu/config-ca/imatges/valid-css" alt="validat css, (obriu en finestra nova)" class="align_left"></a>
+<a title="(obriu en finestra nova)" target="_blank" href="http://validator.w3.org/check?uri=referer"><img src="http://www.upc.edu/config-ca/imatges/valid-xhtml-1.0" alt="validat xhtml 1.0, (obriu en finestra nova)" class="align_left"></a>
+En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que la WAI preconitza, tant per al marcat XHTML 1.0 com per al CSS.</p>
+<br /><br />
+
 
 <br />
 <h2>Text size</h2>

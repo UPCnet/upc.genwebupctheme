@@ -72,7 +72,7 @@ form{ margin: 0; }
 	padding: 0 0 10px 0;
 	list-style: url(fletxa.gif) inside;
 	margin: 0 0 0 10px}
-#content .llistatDestacat ul{
+#content .llistatDestacat ul, #mceTemplatePreview .llistatDestacat ul {
 	background:transparent url(fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #ccc;
 	border-bottom:2px solid #ccc;
@@ -83,7 +83,7 @@ form{ margin: 0; }
 	border-radius:5px;
 	padding: 0 0 0 1em;
 }
-#content .llistatDestacat li{
+#content .llistatDestacat li, #mceTemplatePreview .llistatDestacat li {
 	background:transparent url(fletxaLD.gif) no-repeat scroll left center;
 	line-height:2em;
 	list-style-image:none !important;
@@ -207,7 +207,7 @@ html*.taulaRegistres table{
 	margin: 0px; padding:10px; margin-top:-36px;
 	}
 .fletxa_fitxa{ background: url(puntets.jpg) no-repeat right 7px; height: 35px; margin: 30px 10px 0 0;}
-.fitxa h2 {margin:-0.2em 0 1em 0; padding-bottom:0.3em; border-top:0 !important; border-bottom:5px solid #e6e6e6;}
+.fitxa h2 {margin:-0.2em 0 1em 0 !important; padding-bottom:0.3em !important; border-top:0 !important; border-bottom:5px solid #e6e6e6;}
 .fitxa h3 {margin:-0.2em 0 1em 0;}
 .fitxa h4{ display:block;margin: -0.2em 0 1.2em 0 !important; padding:0.2em 0 0.5em 0; border:0px; border-bottom: 2px dotted #a29386; background:none;border-top:0 !important;}
 .fitxa h5{ margin-bottom: 1em;}
@@ -388,7 +388,7 @@ margin:0.5em;
 padding:10px;
 }
 /*contenidor*/
-.gb {background:transparent url(fonsT.png) repeat-x scroll center bottom;border:1px solid #d9d9d9;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
+.gb {background:#fff url(fonsT.png) repeat-x scroll center bottom;border:1px solid #d9d9d9;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
 /*columnats deco*/
 div.fila {display:block;float:left;position:relative;width:100%;margin-bottom:1em;}
 div.cella {position: relative; float: left; left: 100%;}
@@ -410,7 +410,7 @@ div.w1 { width: 97.916% }
 .colSupDreta {position: absolute; right: 0; width: 200px;}
 .colSupEsq {margin-right: 220px;}
 .colSupDreta, .columnaEnllacosDreta {width:200px;}
-.colSupDreta h2, .columnaEnllacosDreta h2 {border-top:0px;margin:0px;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
+.colSupDreta h2, .columnaEnllacosDreta h2 {border-top:0;margin:0 !important;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
 .colSupDreta li, .columnaEnllacosDreta li {
 	list-style-image:url(quadret.gif);
 	list-style-position:outside;
@@ -420,7 +420,7 @@ div.w1 { width: 97.916% }
 	line-height:1.5em;
 	border:0px !important;}
 .colSupDreta ul, .columnaEnllacosDreta ul {padding-bottom:5px;}
-.colSupDreta img, .columnaEnllacosDreta img {margin:0 25px 10px 25px;border:1px solid #d9d9d9;}
+.colSupDreta img, .columnaEnllacosDreta img {margin:5px 25px;border:1px solid #d9d9d9;}
 .colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007bc0;}
 .columnaseparador20 {width:20px !important;}
 

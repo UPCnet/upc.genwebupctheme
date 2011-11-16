@@ -123,7 +123,7 @@ font-size:1.1em;
 color:#4D4D4D;
 font-weight:bold;
 }
-.noticiesDalt h2 , .agendaDalt h2 {border:0; font-size:1em; padding:0.25em; margin:0; font-family: Verdana, Arial, sans-serif;}
+.noticiesDalt h2 , .agendaDalt h2 {border:0; font-size:1em; padding:0.25em; margin:0 !important; font-family: Verdana, Arial, sans-serif;}
 
 .agendaData{
 float:none;
@@ -378,6 +378,11 @@ text-align:center !important;
      text-align: left;
      width:200px!important; 
 }
+
+.TDRegulaCalendari #esdeveni_text {
+     width:auto !important; 
+}
+.agendaContingut > table {width:100%;}
 
 .divCarpetaTitol{
 font-size:1.25em;
@@ -746,18 +751,14 @@ padding:1px 0 1px 20px;
 
 .newsImage {
 border:1px solid #d9d9d9;
-padding:1em;
+padding:.5em;
 background:#fff !important;
 /*background:#f7f7f7 url(fonsTG.png) repeat-x scroll center bottom !important;*/
 border-radius:3px;
 }
-.newsImageContainer {
-float:right;
-margin:0 0 0.5em 1em;
-clear:both;
-background: #fff;
-padding: 0 0 10px 10px;
-}
+.newsImageContainer {float:right;margin:0 0 0.5em 1em;clear:both;background: #fff;padding: 0 0 10px 10px;}
+.newsImageContainer .discreet {text-align:center;}
+
 .kssattr-atfieldname-imageCaption {
 text-align:center;
 font-size:90%;
@@ -1215,7 +1216,8 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 
 
 .collapser { padding:2px 15px 1px 0; font-size:1.2em; cursor:pointer;}
-.collapsed {background: url(plus.gif) center right no-repeat; }
+.collapsed {background: url(searchMes.gif) center right no-repeat; }
+.expanded {background: url(searchMenys.gif) center right no-repeat; }
 
 
 /*formulari thanks page*/
