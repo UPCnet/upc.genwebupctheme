@@ -272,7 +272,7 @@ select {
 	font-family:Verdana,Helvetica,Arial,sans-serif;
 	font-size:110%;
 	max-width:98%;
-	background:transparent url(fonsInput.gif) repeat-x scroll 0% 0%;
+	background:#fff url(fonsInput.gif) repeat-x scroll 0% 0%;
 	border:1px solid #b2b2b2;
 	padding:2px;
 	-moz-border-radius:3px;-webkit-border-radius:3px;border-radius:3px;
@@ -932,6 +932,10 @@ ul.formTabs li{margin-left:0em;}
 	font-size:110%;}
 .formPanel {
 	border: 1px solid #e6e6e6;}
+html #content.dialog-wrapper #search_panel, html #content.dialog-wrapper #replace_panel, html #content.dialog-wrapper #advanced_panel {margin-top: 25px !important;}
+html #content.dialog-wrapper #general_panel .column {margin-right:5px !important;}
+html #content.dialog-wrapper #general_panel .columnlibraries {width:183px !important;}
+html #content.dialog-wrapper #general_panel fieldset .field {margin-bottom:5px !important;}
 .formTab a:hover {
 	text-decoration:none;}
 li.formTab a.selected {
@@ -1122,7 +1126,8 @@ dl dd {margin-left:0px;}
 	margin-bottom:0.4em;
 	padding:3px 3px 0 3px;}
 .eventDetails .vertical {background:#fff !important; border-bottom:1px solid #aaa !important; box-shadow:0 0 5px #eee; margin:0 !important;}
-.eventDetails .vertical tbody tr.even {background:#f7f7f7 !important;}
+.eventDetails .vertical tbody tr {border-bottom:1px dashed #d9d9d9 !important;}
+.eventDetails .vertical tbody tr.even {background:#fff !important;}
 .eventDetails .vertical tbody th, 
 .eventDetails .vertical tbody td {padding:5px}
 #content .eventDetails td a[href^="mailto:"] {background-position: 0 4px;}
@@ -1407,7 +1412,9 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 #folder-folder_tabular_view, 
 #folder-atct_album_view, 
 #folder-folder_listing, 
-#folder-folder_extended {
+#folder-folder_extended,
+#workflow-transition-lock,
+#workflow-transition-unlock {
 	background-repeat: no-repeat;
 	background-image: url(spriteStates.png);
 	padding-left:25px !important;
@@ -1491,6 +1498,10 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 #workflow-transition-make_freeforall{background-position:3px -77px;}
 #workflow-transition-make_moderated{background-position:3px -37px;}
 #workflow-transition-make_private{background-position:3px 3px;}
+#workflow-transition-lock {background-position:3px -2595px;}
+#workflow-transition-unlock {background-position:3px -2635px;}
+
+
 
 #contentActionMenus dl.actionMenu.activated dd.actionMenuContent ul li a.actionMenuSelected {background-color: #f2f2f2 !important; color:#333 !important;}
 
@@ -1696,17 +1707,20 @@ dd.portletItem .navTreeItem a:hover {
 	border:1px solid #d9d9d9;
 	background: #f7f7f7;
 	padding: 3px;
-	margin: 1em 0;}
+	margin: 1em 0;
+	font-size:.95em;
+	font-weight:normal;}
 #relatedItemBox {
 	border:1px solid #d9d9d9;
 	background: #f7f7f7;	
 	padding:5px;
 }
-/*
-#relatedItemBox dt {font-size:1em; font-weight:normal; font-family: Verdana, sans-serif;}
-#relatedItemBox dd {font-size:1em; margin:0;}
-#relatedItemBox dd span {background:none !important; padding:0 !important;}
+
+#relatedItemBox dt {font-size:.95em !important; font-weight:bold !important; font-family: Verdana, sans-serif !important; color: #76797C !important;}
+#relatedItemBox dd {font-size:.95em !important; margin: .5em 0 !important;}
 #relatedItemBox dd span img {display:none !important;}
+/*
+#relatedItemBox dd span {background:none !important; padding:0 !important;}
 */
 #content .link-category {
 	color:#D96245 !important;/*espe2*/}
@@ -2007,6 +2021,9 @@ dl.error dd {
 }
 #contentActionMenus {
 	background-color: #ededed;
+	display:inline-block;
+	float:right;
+	
 }
 #contentActionMenus li { display:inline; }
 #contentActionMenus img {display:none;}
@@ -2199,6 +2216,7 @@ ul.navTree li, .navTreeLevel0 {
 
 #content-views {
     float: left;
+	*float:none;
     background-color: #777;
 }
 #content-views a {
@@ -2347,11 +2365,7 @@ border-radius: .5em .5em 0 0 !important;
     background-repeat: no-repeat;
     padding-right: 1em;
 }
-/*
-#content fieldset.formPanel {
-    border: none;
-}
-*/
+
 #content fieldset.formPanel.hidden {
     display: none;
 }
@@ -2407,7 +2421,7 @@ border-radius: .5em .5em 0 0 !important;
 }
 #contentActionMenus dl.actionMenu.activated dd a:hover,
 #contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
-    background-color: White !important;
+    background-color:#fff;
     color: #666;
 }
 #contentActionMenus dl.actionMenu {
@@ -2772,7 +2786,7 @@ div.position-2\3a 4, div.position-1\3a 2 { margin-left:-466px;}
 div.position-3\3a 4 { margin-left:-213px;}
 
 
-#contextSetDefaultPage {max-width: 200px;white-space: initial;}
+#contextSetDefaultPage {max-width: 200px;white-space: initial; *max-width: auto !important;}
 
 
 /* Comments ************************************************************************************************************/
@@ -2801,7 +2815,7 @@ width: 98% !important;
 #content-core table.listing  .listingCheckbox img {display:block;}
 
 /* canvi titols provisional */
-#content h3 {border:0 !important; font-size:1.35em !important;}
+#content h3 {border:0 !important; font-size:1.5em !important;}
 #content h4 {border:0 !important; font-size:1.2em !important;}
 #content h5 {border:0 !important; font-size:1.05em !important;}
 #content h6 {border:0 !important; font-size:.95em !important;}
@@ -2822,7 +2836,7 @@ div.widget {width:auto !important;}
 
 .overlaycontent {font-size:100% !important;}
 div.overlay a:hover {color:#007bc0;}
-#contextSetDefaultPage span.subMenuTitle {white-space: normal;}
+#contextSetDefaultPage span.subMenuTitle {white-space: normal; *white-space: pre;}
 
 html #document-toc.portlet  dd.portletItem {border-top-style:solid !important;}
 .TOC1Digit {padding-left:1em; margin: .5em 0;}
@@ -2840,6 +2854,11 @@ html #document-toc.portlet  dd.portletItem {border-top-style:solid !important;}
 #content-core form dt label {padding:5px 0;}
 #content-core form dt img {display:none;}
 
+/* tiny */
+.fieldUploadFile{ display:none; }
+.suppressVisualEditor{ display:none; }
+.mceLast{ margin-bottom: 15px !important; }
+
 /* popups tiny */
 .plonepopup .mceTop .mceLeft {width:4px !important; height:19px !important;}
 .plonepopup .mceTop .mceCenter {height:19px !important;}
@@ -2855,5 +2874,36 @@ html #content.dialog-wrapper fieldset {margin:0 !important;}
 html #document-toc.toc dd.portletItem {border-radius:5px !important; border:1px solid #d9d9d9 !important; border-top:1px solid #b2b2b2 !important;}
 .template-image_view #content-core a.discreet > img {border:1px solid #d9d9d9; box-shadow:0 0 5px #eee; padding:.5em;}
 #kss-spinner {box-shadow: 0 0 1500px 150px #fff;}
+.ploneSkin .mceEditorFocus .mceIframeContainer { background: #fff !important;border:1px solid #000 !important;box-shadow: 0 0 5px #ccc !important;}
+
+#commenting fieldset {border: 1px solid #d9d9d9 !important;}
+.reply p {color: #333 !important;}
+.reply {margin-left: 25px !important;}
+#commenting.reply {margin-left: 0 !important;}
+.row #commenting fieldset, .row .reply fieldset {border-style: solid !important;}
+
+
+#archetypes-schemata-links {background: #d9d9d9; border-radius:5px !important; padding:.25em; margin:.5em 0;}
+#archetypes-schemata-links a, #archetypes-schemata-links strong {color:#d9d9d9 !important; display:inline-block; padding:.5em 0; border-radius:.25em;}
+#archetypes-schemata-links strong {background:#fff !important; color:#fff !important;}
+#archetypes-schemata-links span {padding:.5em; color:#007bc0;}
+#archetypes-schemata-links strong span {background:#fff !important; color:#333;}
+#archetypes-schemata-links a:hover {background:#fff !important; color:#fff !important;}
+#archetypes-schemata-links a:hover span {color:#333 !important;}
+
+h2.questionTitle {font-size:1.05em !important; border-top:0 !important;}
+.template-survey_view form fieldset legend {font-size:0 !important;}
+
+.controlDreta .caixaPortlet fieldset {background:#fff !important; border:0 !important; padding:5px !important;}
+#content.mceContentBody, #mceTemplatePreview.mceContentBody {margin:0px 5px 5px 5px;}
+
+div.formQuestion {display:block;}
+div.field.error {background-color: #fcf4f2 !important;margin: 1em 0 !important;border: 1px solid #c00;padding: 5px !important;}
+
+/*formulari*/
+html #pfgWidgetWrapper {position:absolute; right:0;}
+html #pfgWidgetWrapper + .pfg-form {margin-right: 100%;}
+
+.forumTitleCell .listingForum {background:none !important;}
 
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }

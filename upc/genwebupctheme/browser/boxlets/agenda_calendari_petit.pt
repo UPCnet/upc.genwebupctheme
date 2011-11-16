@@ -123,7 +123,7 @@
         </tr>
     </tbody>    
     </table>
-    <table width="5%" summary="calendari">
+    <table width="100%" summary="calendari">
     	<caption> calendari </caption>
            <tbody>
                 <tr class="weekdays"

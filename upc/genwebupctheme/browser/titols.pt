@@ -12,7 +12,18 @@
                                  title python: getattr(utils.getGWConfig(),'enllaslogotipdretalt', '')" />
         </span>
         </a>
-        <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
+    </div>
+
+<!-- fi logo producte -->
+
+                         
+    <div class="logo">
+
+
+        <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya. BarcelonaTech" alt="Universitat Politècnica de Catalunya. BarcelonaTech"       
+        tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
+        
+                <a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
           <span tal:condition="python: utils.getGWConfig().enllaslogotip">
             <!-- titol en catala -->
             <img  tal:attributes="src string:${portal_url}/logoPropi.gif;
@@ -34,16 +45,6 @@
                 />
           </span>
         </a>
-    </div>
-
-<!-- fi logo producte -->
-
-                         
-    <div class="logo">
-
-
-        <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya. BarcelonaTech" alt="Universitat Politècnica de Catalunya. BarcelonaTech"       
-        tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
         
         <map name="logoUPC" id="logoUPC">
 		<area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya. BarcelonaTech" title="Universitat Politècnica de Catalunya. BarcelonaTech" />
