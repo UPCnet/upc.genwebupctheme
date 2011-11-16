@@ -19,6 +19,14 @@ ul {     list-style-type: square;}
 /*imatges dels models*/
 
 #portal-column-content.sl {margin-left:0px !important;}
+#portal-column-content, #content {display:block !important; position:relative !important; width:auto !important; margin:0 !important; padding:0 !important;}
+
+html .cell, html .row {float:none !important; margin:0 !important; margin-left:0 !important; display:block !important; position:relative !important; width:auto !important;}
+
+.banerMasters, .barraBranca_m, #edit-bar {display:none !important;}
+.titolSeccio, .portletNavigationTree {display:none !important;}
+.columnaCentre {width:auto !important; margin:0;}
+
 
 /*** capcaleres per sabors ******************************************************************************************************************************************************/
 #visual-portal-wrapper {width:100% !important;}
@@ -48,7 +56,7 @@ html>/**/body .titolWeb_m, x:-moz-any-link, x:default {padding-left:150px !impor
 /*
 .banerMasters {width:20%;height:20%;}
 .banerMasters img {width:100%; height:100%;}
-html>body*.banerMasters img {    height:33%;}
+html>body*.banerMasters img {height:33%;}
 .banerMasters {float:right; border:0;}
 */
 

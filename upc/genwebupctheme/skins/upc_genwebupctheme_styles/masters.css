@@ -23,10 +23,11 @@
 .banerMasters{
 	float:right;
 	padding-top:8px}
-.titolWeb_m{
+.titolWeb_m {
 	text-align:left;
 	margin-left:255px;
 	margin-top:3px;}
+.titolWeb_m h1 {font-weight:normal !important; font-size:1.7em;}
 .cursMaster{
 	font-family:Arial, Helvetica, Verdana, sans-serif;
 	font-size:1.4em;
@@ -47,13 +48,13 @@
 	width:958px;
 	padding: 0px;
 	font-weight:bold;
-	font-size:1.1em;
+	font-size:0.8em;
 	color:#B0D73C;}
 .barraBranca_m table{
 	text-align:right !important;
 	vertical-align:bottom !important;
 	width: 958px !important;}
-.titolBranca_m {margin: 5px 5px 18px 5px; display:none;}
+.titolBranca_m {margin: 5px 5px 18px 5px;}
 .barraBranca_m table td {width:190px; text-align:right !important;}
 .barraBranca_m table, .barraBranca_m tr, .barraBranca_m th, .barraBranca_m td, .barraBranca_m tbody, .barraBranca_m tfoot, .barraBranca_m thead {padding:0px !important;}
 .liniaPrincipal_m{
@@ -65,7 +66,8 @@
 .clearAll_m{
 	clear:both;
 	padding: 10px 0 10px 0;
-	*padding:4px 0 15px 0;}
+	*padding:4px 0 15px 0;
+	min-height: 63px;}
 /*columnes*/
 .columnaEsq {
 	display:none;}
@@ -108,7 +110,7 @@ select[id="form.tipusNeutre2"] option {color: #999}
 /*corregeix navegacio sota navmasters*/
 .portal-breadcumbs-null {height:11px;}
 #region-content, .documentContent {padding:0 0 1em 0 !important;}
-/*subpagines info masters*/
+/*subpagines info masters
 .plain {margin-top:20px;line-height:1.5em;}
 .plain strong {padding-top:20px; display:block;}
 .plain br {margin-top:-20px;}
@@ -117,6 +119,13 @@ select[id="form.tipusNeutre2"] option {color: #999}
 .plain .taulaDades td.titular2 {text-align:right;font-size:1.1em}
 .plain .taulaDades td+td {font-weight:bold;font-size:1.0em;color:#666;}
 .plain .taulaDades td.titular2+td {font-weight:normal;}
+*/
+
+.banerMasters a {border:1px solid #d9d9d9; background:#f7f7f7; display:block; padding:.3em .5em .3em; border-radius:.5em; text-decoration:none;}
+.banerMasters a:hover, .banerMasters a:active {border:1px solid #bbb; background:#f2f2f2;}
+.banerMasters a span {background: url(fletxaGo.gif) no-repeat -5px -9px; padding-left:1.25em;}
+.banerMasters .bMm, .banerMasters .bMd {margin-top:1.25em;}
+.banerMasters .bMmd {margin-top:.5em;}
 
 
 #navMasters .navTreeCurrentNode {

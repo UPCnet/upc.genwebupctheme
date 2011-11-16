@@ -12,7 +12,13 @@
 <table>
     <tbody>
         <tr valign="bottom">	
-            <td> 
+            <td>
+            <div class="titolBranca_m">
+            	<span class="cursMaster" i18n:domain="upc.genwebupc" i18n:translate="master_curso"></span> 
+			        <span class="cursMaster" tal:content="python: utils.getTextMaster('any_academic', lang_code)"> 2008/2009 </span>
+			      </div>
+<!--
+        
             	<div class="titolBranca_m" 
             		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')"
             	     tal:content="python: utils.fields2Dic(utils.getGWConfig().ambitdoctorat_ca,utils.getGWConfig().ambitdoctorat_es,utils.getGWConfig().ambitdoctorat_en)['doc_'+lang_code]">Titol de capsalera del master
@@ -21,6 +27,7 @@
             		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Master') or utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
             	     tal:content="python: data['ua.nom_'+utils.cambiaPrefijo(lang_code)]">Titol de capsalera del master
             	</div>
+-->
            	</td> 
             
             <td class="imatgeCapcalera_m">
