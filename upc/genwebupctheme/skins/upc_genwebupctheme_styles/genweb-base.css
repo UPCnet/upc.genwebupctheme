@@ -1,5 +1,7 @@
 #recaptcha_widget_div {margin-bottom:1em;}
 caption {display:none;}
+ins {color:#538300; text-decoration:underline;}
+del {color:#c00; text-decoration: line-through;}
 
 .field.error .error {
     padding:0;
