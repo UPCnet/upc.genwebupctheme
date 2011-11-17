@@ -12,8 +12,8 @@
                     pages python:here.getFolderContents(
                         contentFilter={'portal_type':['SubSurvey',]},
                             full_objects=True);">
-        
-        <div tal:replace="structure provider:plone.documentactions" />        
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" /> 
         <h1 i18n:translate="heading_survey_overview">Survey Overview</h1>
         <form style="float: left;"
               method="post"
@@ -58,7 +58,8 @@
                    />
         </form>
         <div tal:repeat="page pages">
-            <h2 tal:define="page_wf_state page/review_state|python: wtool.getInfoFor(page, 'review_state', '');
+            <h2 tal:define="page_wf_state page/review_state|python: context.portal_workflow.getInfoFor(page, 'review_state', '');
+							normalizeString nocall:context/@@plone/normalizeString;
                             page_wf_state_class python:'state-' + normalizeString(page_wf_state);"
                 tal:attributes="class page_wf_state_class"
                 tal:content="page/Title" />
@@ -67,7 +68,7 @@
                   tal:attributes="action string:${here/absolute_url}/${page/getId}/base_edit">
                 <input class="context"
                        type="submit"
-                       value="Edit Page"
+                       value="Edit Survey"
                        tal:attributes="tabindex tabindex/next;"
                        i18n:attributes="value label_overview_edit"
                        />
@@ -76,7 +77,7 @@
                   tal:attributes="action string:${here/absolute_url}/${page/getId}/folder_contents">
                 <input class="context"
                        type="submit"
-                       value="Page Contents"
+                       value="Survey Contents"
                        tal:attributes="tabindex tabindex/next;"
                        i18n:attributes="value label_overview_contents"
                        />

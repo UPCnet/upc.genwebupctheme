@@ -2,6 +2,21 @@
       lang="en"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="plonesurvey">
+<head>
+<metal:block metal:fill-slot="style_slot">
+    <style type="text/css" media="all"
+           tal:content="string:@import url($portal_url/jscalendar/calendar-system.css);" />
+</metal:block>
+<metal:block metal:fill-slot="javascript_head_slot"
+    tal:condition="context/hasDateQuestion">
+    <script type="text/javascript" charset="iso-8859-1"
+            tal:attributes="src string:$portal_url/jscalendar/calendar_stripped.js">
+    </script>
+    <script type="text/javascript" charset="iso-8859-1"
+            tal:attributes="src string:$portal_url/jscalendar/calendar-en.js">
+    </script>
+</metal:block>
+</head>
 <body>
 <metal:main fill-slot="main">
     <tal:comment tal:replace="nothing">Plone 4 fix rename IndexIterator to RealIndex: http://plone.org/products/maps/issues/30</tal:comment>
@@ -12,16 +27,25 @@
                     member_id here/getSurveyId;
                     questions here/getQuestions;
                     completed python:here.checkCompletedFor(member_id);
-                    pagetype here/portal_type;
+                    show_captcha here/getShowCaptcha|nothing;
+                    captcha_installed context/isCaptchaInstalled;
                     isAnon context/@@plone_portal_state/anonymous;
+                    pagetype here/portal_type;
                     object_title context/@@plone_context_state/object_title;">
 
-        <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontenttitle" />
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
         <h1 class="documentFirstHeading"
-            tal:content="object_title" />
+            tal:content="context/Title" />
+
+        <div tal:replace="structure provider:plone.belowcontenttitle" />
+
         <div class="documentDescription"
              tal:condition="here/Description"
              tal:content="here/Description" />
+
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
         <div tal:condition= "python:pagetype=='Survey'"
              tal:content="structure here/getBody"/> 
         <form name="edit_form"
@@ -32,14 +56,19 @@
             <input type="hidden" name="came_from"
                    tal:attributes="value request/came_from | nothing"
                    tal:condition="request/came_from | nothing" />
+            <input type="hidden" name="survey_user_id"
+                   tal:attributes="value context/getSurveyId" />
             <fieldset>
-                <legend i18n:translate="legend_question_details">Question details</legend>
+                <legend class="legendQuestionDetails" i18n:translate="legend_question_details">Question details</legend>
 
                 <tal:question repeat="question questions">
                     <div tal:condition="python:question.getBody() and question.getTextLocation() == 1"
                           tal:content="structure question/getBody" />
                     <tal:condition condition="python:question.meta_type == 'SurveyTextQuestion'">
                         <div metal:use-macro="here/question_macro/macros/question" />
+                    </tal:condition>
+                    <tal:condition condition="python:question.meta_type == 'SurveyDateQuestion'">
+                        <div metal:use-macro="here/question_date_macro/macros/question" />
                     </tal:condition>
                     <tal:condition condition="python:question.meta_type == 'SurveyMatrix'">
                         <div metal:use-macro="here/question_matrix_macro/macros/question" />
@@ -53,6 +82,10 @@
                     <div tal:condition="python:question.getBody() and question.getTextLocation() == 3"
                           tal:content="structure question/getBody" />
                 </tal:question>
+
+                <tal:captcha tal:condition="python:show_captcha and captcha_installed">
+                    <div metal:use-macro="here/captcha_widget/macros/captcha" />
+                </tal:captcha>
 
                 <div class="formControls">
                     <input class="context"
@@ -107,6 +140,8 @@
                 </div>
             </fieldset>
         </form>
+        
+	<div tal:replace="structure provider:plone.belowcontentbody" />
     </tal:main-macro>
 </metal:main>
 </body>
