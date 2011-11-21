@@ -104,9 +104,9 @@
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
  <order manager="plone.belowcontent" skinname="GenwebUPC_Neutre3">
-  <viewlet name="plone.nextprevious"/>
   <viewlet name="plone.belowcontenttitle.keywords"/>
   <viewlet name="upc.genweb.darreramodificacio"/>
+  <viewlet name="plone.nextprevious"/>
   <viewlet name="plone.manage_portlets_fallback"/>
  </order>
  <order manager="plone.portalfooter" skinname="GenwebUPC_Neutre3">
