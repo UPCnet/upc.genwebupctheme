@@ -9,14 +9,14 @@ class AddthisViewlet(ViewletBase):
 
     render = ViewPageTemplateFile('addthis.pt')
 
-    def isEnabledOnContent(self):
+    """def isEnabledOnContent(self):
         """ retorna True si estem a una Noticia
         """
         context = self.context
         if context.portal_type == 'News Item' or context.portal_type == 'Document':
             return True
         return False
-
+    """
     def retIdiomaActual(self):
         """ retorna l'idioma actual (p.ex. 'ca')
         """
