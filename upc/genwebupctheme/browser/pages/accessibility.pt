@@ -45,7 +45,6 @@ En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que 
 <br /><br />
 
 
-<br />
 <h2>Text size</h2>
 <ul>
         <li><code><big>A</big></code> &mdash; <a title="Large Text" href="javascript:setBaseFontSize('largeText', 1);">Large</a></li>
@@ -53,54 +52,73 @@ En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que 
         <li><code><small>A</small></code> &mdash; <a title="Small Text" href="javascript:setBaseFontSize('smallText',1);">Small</a></li>
 </ul>                         
 
+<h3>Changing text size in common web browsers</h3>
+<div class="blockquote">
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/ff-icon.png" class="align_left" />Mozilla Firefox</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, CTRL + + (plus key), or View &gt; Text Size &gt; Increase<br />
+	<strong>Decrease text size</strong>: CTRL + mouse wheel down, CTRL + – (minus key), or View &gt; Text Size &gt; Decrease<br />
+	<strong>Restore default size</strong>: CTRL + 0 (zero), or View &gt; Text Size &gt; Normal</p>
+	
+  <div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/sf-icon.png" class="align_left" />Safari</h4>
+	<p><strong>Increase text size</strong>: Command (Mac) / CTRL (PC) + + (plus key), or View &gt; Make Text Bigger<br />
+	<strong> Decrease text size</strong>: Command (Mac) / CTRL (PC) + – (minus key), or View &gt; Make Text Smaller<br />
+	<strong> Restore default size</strong>: Command (Mac) / CTRL (PC) + 0, or View &gt; Make Text Normal Size</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/ie-icon.png" class="align_left" />Internet  Explorer</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, CTRL + + (plus key), or View &gt; Text Size &gt; Larger / Largest<br />
+	<strong> Decrease text size</strong>: CTRL + mouse wheel down, CTRL + – (minus key), or View &gt; Text Size &gt; Smaller / Smallest<br />
+	<strong> Restore default size</strong>: CTRL + 0 (zero, not with numeric keypad), or View &gt; Text Size &gt; Medium</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/op-icon.png" class="align_left" />Opera</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, or View &gt; Zoom &gt; 120% (or more)<br />
+	<strong> Decrease text size</strong>: CTRL + mouse wheel down, or View &gt; Zoom &gt; 80% (or less)<br />
+	<strong> Restore default size</strong>: View &gt; Zoom &gt; 100%</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/ch-icon.png" class="align_left" />Chrome</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, CTRL + + (plus key), or Page icon &gt; Zoom &gt; Larger<br />
+	<strong> Decrease text size</strong>:  CTRL + mouse wheel down, CTRL + – (minus key), or Page icon &gt; Zoom &gt; Smaller<br />
+	<strong> Restore default size</strong>: CTRL + 0 (zero, not with numeric keypad), or Page icon &gt; Zoom &gt; Normal</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+</div>
 <br />
 <br />
 
 <h2>Access keys</h2>
 <p>
-In-depth information about access keys can be found at <span class="link-external"><a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">W3C Accessibility Guidelines <img alt="(open in new window)" src="icon_blank.gif" class="link_blank"></a>.
+Access keys enable you to browse this website using your keyboard. Further information is available at <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">W3C Accessibility Guidelines <img alt="(open in new window)" src="icon_blank.gif" class="link_blank" /></a>.
 </p>
+<p>This website follows most international recommendations on access keys.</p>
 
 
-<h3>Available access keys</h3>
-
-<p>This site uses a setup that closely matches most international recommendations on access keys. These are:</p>
-<br />
-
+<h3>Access keys available on this website</h3>
     <ul>
         <li><code>1</code> &mdash; Home Page</li>
         <li><code>2</code> &mdash; Skip to content</li>
         <li><code>3</code> &mdash; Site Map</li>
         <li><code>4</code> &mdash; Search field focus</li>
-        <li><code>5</code> &mdash; Advanced Search</li>
         <li><code>6</code> &mdash; Site navigation tree</li>
         <li><code>9</code> &mdash; Contact information</li>
-        <li><code>0</code> &mdash; Access Key details</li>
+        <li><code>0</code> &mdash; Accessibility information</li>
     </ul>
 
-<br />
-<br />
 
-<h2>Accessibility statement</h2>
-<p>We have undertaken to use our knowledge and understanding of the ways in which different people access the Internet, to develop a web site that is clear and simple for everybody to use.</p>
+<br /><br />
+<h2 class="liniaBaix">Optimisation</h2> 
+<p>The website is optimised for viewing at a minimum resolution of 1024 x 768 pixels. To ensure maximum compatibility, its behaviour has been thoroughly checked with the most common web browsers: <strong>Firefox 3</strong> or later, <strong>Explorer 7</strong> or later, <strong>Safari 4</strong>, <strong>Chrome 3</strong> and <strong>Opera 10</strong>.</p> 
 <br /><br />
 
+<h2 class="liniaBaix">Contact</h2> 
+<p>We are working to maintain and improve the accessibility of this website. If you notice any accessibility-related anomalies on any of its pages, please contact the <a href="/contact" tal:attributes="href string:${portal_url}/contact">webmaster</a>.</p>
 
-<h2>Validation</h2>
 
-<p>
-We have used XHTML 1.0 and CSS that conforms to specification, as laid out by the W3C because we believe that usability and accessibility must have a solid foundation. 
-If anything on this web site does not validate correctly, please contact the <a href="/contact" tal:attributes="href string:${portal_url}/contact">webmaster</a>.
-</p>
-
-<p>
-We have also endeavoured to achieve AA accessibility as measured against version 1.0 of the WCAG.
-We are aware however, that a number of the checkpoints of the WCAG are subjective &mdash; and although we are sure that we have met them squarely, 
-there may be instances where interpretation may vary. <br />
-This Web site has been optimized for a minimum resolution of&nbsp;1024 x&nbsp;768 pixels.
-</p>
 
 
     </div>
+
 </body>
 </html>

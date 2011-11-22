@@ -1367,8 +1367,8 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-topic,
 .contenttype-link,
 .contenttype-event,
-.contenttype-file,
-.contenttype-image,
+.contenttype-file, .icons-on .collage-content-menu .contenttype-file,
+.contenttype-image,.icons-on .collage-content-menu .contenttype-image,
 .contenttype-news-item, .contenttype-news,
 .contenttype-document,
 .contenttype-window,
@@ -1416,7 +1416,11 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 #folder-folder_listing, 
 #folder-folder_extended,
 #workflow-transition-lock,
-#workflow-transition-unlock {
+#workflow-transition-unlock,
+.contenttype-ploneboardforum,
+#board_view_global,
+#ploneboard_view,
+#folder-folder_full_view, #folder_full_view {
 	background-repeat: no-repeat;
 	background-image: url(spriteStates.png);
 	padding-left:25px !important;
@@ -1437,8 +1441,8 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-topic {background-position:3px -277px;}
 .contenttype-link {background-position:3px -317px;} 
 .contenttype-event{background-position:3px -397px;} 
-.contenttype-file{background-position:3px -477px;} 
-.contenttype-image{background-position:3px -597px;} 
+.contenttype-file, .icons-on .collage-content-menu .contenttype-file {background-position:3px -477px;} 
+.contenttype-image, .icons-on .collage-content-menu .contenttype-image {background-position:3px -597px;} 
 .contenttype-news-item, .contenttype-news {background-position:3px -635px;} 
 .contenttype-document{background-position:3px -675px;} 
 .contenttype-window{background-position:3px -835px;} 
@@ -1479,6 +1483,10 @@ table.listing a {padding-top:5px !important;padding-bottom:5px !important;}
 .contenttype-formcaptchafield {background-position: 3px -2475px;}
 .contenttype-fieldsetstart {background-position: 3px -2515px;}
 .contenttype-fieldsetend {background-position: 3px -2555px;}
+.contenttype-ploneboardforum {background-position: 3px -2755px;}
+#board_view_global {background-position: 3px -2715px;}
+#ploneboard_view {background-position: 3px -2675px;}
+#folder-folder_full_view, #folder_full_view {background-position: 3px -2795px;}
 
 
 /* menu estat*/
@@ -1653,7 +1661,8 @@ dd.portletItem .navTreeItem a:hover {
 	border-style:solid;
 	border-width:1px;
 	padding:5px 0;
-	margin:5px 0;}
+	margin:5px 0;
+	clear:both;}
 .listingBar .next {
 	background:transparent url(fletxaD.gif) no-repeat scroll right bottom;
 	padding-right:15px;
@@ -2698,7 +2707,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 }
 
 .commentBody {
-    padding: .25em .5em .5em;
+    padding: .5em .5em .5em;
     margin: 0.5em 0;
     border-radius: 0.5em;
     -webkit-border-radius: 0.5em;
@@ -2883,7 +2892,14 @@ html #document-toc.toc dd.portletItem {border-radius:5px !important; border:1px 
 .reply {margin-left: 25px !important;}
 #commenting.reply {margin-left: 0 !important;}
 .row #commenting fieldset, .row .reply fieldset {border-style: solid !important;}
-
+.comment .commentImage {display:none;}
+.comment .documentByLine {margin-left:0!important;}
+.comment .documentByLine a,.comment .documentByLine div {display:inline!important;}
+.forumTitleCell, .forumConversationsCell, .forumMostRecentCell {text-align:left !important; vertical-align:top; width:22%; }
+.forumTitleCell .discreet, .forumConversationsCell .discreet, .forumMostRecentCell .discreet,
+.portaltype-ploneboardforum table.listing td .discreet {text-align:left !important; margin:0;}
+.forumTitleCell {width:56%;}
+.boardCommentActions {padding:0 1em 1em 1em !important;}
 
 #archetypes-schemata-links {background: #d9d9d9; border-radius:5px !important; padding:.25em; margin:.5em 0;}
 #archetypes-schemata-links a, #archetypes-schemata-links strong {color:#d9d9d9 !important; display:inline-block; padding:.5em 0; border-radius:.25em;}
@@ -2906,6 +2922,27 @@ div.field.error {background-color: #fcf4f2 !important;margin: 1em 0 !important;b
 html #pfgWidgetWrapper {position:absolute; right:0;}
 html #pfgWidgetWrapper + .pfg-form {margin-right: 100%;}
 
-.forumTitleCell .listingForum {background:none !important;}
+/* window */
+#window-base-edit .kssattr-atfieldname-obrirfinestra { display:none !important;}
+.field { padding-top:10px;} /* afecta als camps dedicio de tots els productes */
+
+.largeText {font-size:.8em;}
+.smallText {font-size:.6em;}
+
+.collage-content-menu .visualIcon a {padding:5px 0;}
+.collage-content-menu .visualIcon span {padding:5px 0;}
+.collage-content-menu .visualIcon img {display:none;}
+.collage-content-menu .visualIcon {padding:5px 0; margin:0;}
+.navTreeItem div a img {display:none;}
+#portal-sitemap {border:0 !important;}
+#portal-sitemap li {border:1px solid #d9d9d9 !important; background-color:#f7f7f7 !important; border-radius:.5em; padding-left:10px !important;}
+#portal-sitemap li a {font-weight:bold !important;}
+#portal-sitemap li li {border:0 !important;}
+#portal-sitemap li li a {font-weight:normal !important;}
+#portal-sitemap li {background-image:none !important;}
+#portal-sitemap li li {background-image:url(quadret.gif) !important;}
+.o2k7Skin span.mce_plonetemplates {background-position: -820px -20px;}
+.mceLast .mceStatusbar {margin-bottom:0 !important;}
+div.position-2\3a 3 {margin-left: -31.08%;} /* .position-2:3 */
 
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }

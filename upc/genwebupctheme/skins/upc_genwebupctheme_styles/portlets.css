@@ -694,9 +694,9 @@ font-size:1em;
 }
 .template-conversation_view .documentContent {position:relative;}
 .discussion {
-padding-top:1em;
-border-top:1px dashed #e6e6e6;
-margin-top:1em;
+padding-top:0em;
+border-top:5px solid #e6e6e6;
+margin-top:3em;
 clear:both;
 }
 table.listing .listingCheckbox {

@@ -52,8 +52,8 @@ function TinyMCEConfig(id) {
 
             labels : this.widget_config.labels,
             theme_advanced_styles : this.getStyles(),
-            theme_advanced_buttons1 : "fullscreen,|,code,|,save,newdocument,|,bold,italic,underline,|,justifyleft,justifycenter,justifyright,|,cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor",
-            theme_advanced_buttons2 : "formatselect,|,cleanup,removeformat,|,image,media,|,tablecontrols,styleprops,|,visualaid,|,sub,sup,|,charmap,attribs,plonetemplates",
+            theme_advanced_buttons1 : "fullscreen,|,code,|,save,newdocument,|,plonetemplates,|,bold,|,italic,underline,|,justifyleft,justifycenter,justifyright,|,cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor",
+            theme_advanced_buttons2 : "formatselect,|,cleanup,removeformat,|,image,media,|,tablecontrols,styleprops,|,visualaid,|,sub,sup,|,charmap,attribs",
             theme_advanced_buttons3 : "",
             //theme_advanced_buttons4 : this.getToolbar(3),
             theme_advanced_toolbar_location : this.getToolbarLocation(),
@@ -65,6 +65,8 @@ function TinyMCEConfig(id) {
             theme_advanced_resize_horizontal : this.getResizeHorizontal(),
             theme_advanced_source_editor_width : this.getEditorWidth(),
             theme_advanced_source_editor_height : this.getEditorHeight(),
+            theme_advanced_styles : "",
+
 
             table_styles : this.getTableStyles(),
             table_firstline_th : true,
@@ -89,9 +91,8 @@ extended_valid_elements : "strong/b,em/i",
             fix_list_elements : false,
 forced_root_block : false,
 force_br_newlines : true,
-force_p_newlines : false
-
-
+force_p_newlines : false,
+preformatted : true
         });
     };
 

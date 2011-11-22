@@ -27,6 +27,12 @@
     <tal:comment replace="nothing">
       Forces IE8+ into newest rendering engine even if on an intranet. This has to be defined before any script/style tags.
     </tal:comment>
+
+<!--[if lte IE 6]>              
+<style> div#visual-portal-wrapper {display:none !important;}</style>
+<![endif]-->
+
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <metal:baseslot define-slot="base">
@@ -57,6 +63,50 @@
                   sunburst_view python:context.restrictedTraverse('@@sunburstview')"
     tal:attributes="class body_class;
                     dir python:isRTL and 'rtl' or 'ltr'">
+
+
+<!--[if lte IE 6]>
+
+
+	<div style="margin:0 auto; width:740px; margin-top:50px;"><h1 style="text-align: center;"><img src="logogw.gif" alt="Genweb" /><br /><br /></h1></div>
+	
+	<div class="glob" style="text-align: center; margin:0 auto; width:740px;">
+	<h2 style="text-align: center; margin:0;">Saps que estàs una mica antiquat?</h2>
+	<p style="text-align: center;">La UPC no dóna cobertura al teu navegador.</p>
+	<h2 style="text-align: center; margin:0;">¿Sabes que estás un poco anticuado?</h2>
+	<p style="text-align: center; margin:0;">La UPC no da cobertura a tu navegador.</p>
+	<h2 style="text-align: center; margin:0;">Did you know you're a bit outdated?</h2>
+	<p style="text-align: center; margin:0;">The UPC does not support your browser.</p>
+
+	<br />
+	<img src="ie6.jpg" />
+	<h3 style="text-align: center; margin:0;">Rejoveneix-te! Dóna una oportunitat a un navegador més jove.</h3>
+	<p style="text-align: center;">Tria el que t'agradi més, si no d'aquí poc estaràs vivint en el passat!</p>
+
+	<h3 style="text-align: center; margin:0;">¡Rejuvenécete! Da una oportunidad a un navegador más joven.</h3>
+	<p style="text-align: center; margin:0;">Escoge el que prefieras, si no dentro de poco estarás viviendo en el pasado.</p>
+	<h3 style="text-align: center; margin:0;">Rejuvenate your browser!</h3>
+	<p style="text-align: center; margin:0;">Choose the one you like the most or you'll soon be living in the past!</p>
+
+	<br />
+	<table>
+	<tbody>
+	<tr>
+	<td style="text-align: center; "><a href="http://www.mozilla.com/es-ES/firefox/"><img src="ff-icon.png" /><br />Firefox</a></td>
+	<td style="text-align: center; "><a href="http://www.apple.com/es/safari/download/"><img src="sf-icon.png" /><br />Safari</a></td>
+	<td style="text-align: center; "><a href="http://www.google.com/chrome?hl=es"><img src="ch-icon.png" /><br />Chrome</a></td>
+	<td style="text-align: center; "><a href="http://www.opera.com/"><img src="op-icon.png" /><br />Opera</a></td>
+	<td style="text-align: center; "><a href="http://windows.microsoft.com/es-ES/internet-explorer/downloads/ie"><img src="ie-icon.png" /><br />Explorer</a></td>
+	</tr>
+	</tbody>
+	</table>
+	<br />
+	<p style="text-align: center; "> </p>
+	</div>
+<![endif]-->
+
+
+
 
 <div id="visual-portal-wrapper">
 

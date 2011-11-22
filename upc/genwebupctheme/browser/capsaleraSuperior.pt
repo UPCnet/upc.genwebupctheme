@@ -38,7 +38,7 @@
 					document.searchform.action="./search"; document.getElementById('searchGadget').style.display = '';
 					-->
 				</script>
-	    </tal:mostraIntranet>               
+	    </tal:mostraIntranet>
                
 <!-- cerca 2: cerca GSA, nomes si no es model intranet -->
 			<tal:tipusIntranet define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusNeutre2!='Intranet'">   

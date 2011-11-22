@@ -54,7 +54,9 @@ En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que 
 </ul>
 
 <h3>Canvis de mides als principals navegadors</h3>
+
 <div class="blockquote">
+
 	<img height="80" width="80" alt="mozilla firefox" class="align_left" src="http://www.upc.edu/config-ca/imatges/ff-icon.png"> 
 	<h4>Mozilla Firefox</h4> 
 	<p><strong>Augmentar la mida del text</strong>: CTRL + Roda del ratolí endarrere, CTRL + + (tecla més) o Visualitza &gt; Mida de la pàgina &gt; Augmenta<br /> 
@@ -89,6 +91,7 @@ En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que 
 	<strong> Reduir la mida del text</strong>:  CTRL + Roda del ratolí endarrere, CTRL + &ndash; (tecla menys) o Control de pàgina &gt; Zoom &gt; Més petit<br /> 
 	<strong> Recuperar la vista original</strong>:  CTRL + 0 (zero, no amb el teclat numèric) o Control de pàgina &gt; Zoom &gt; Normal</p>
 	<br /><br />
+
 </div>
 
 
@@ -105,7 +108,6 @@ W3C <img class="link_blank" alt="(obriu en finestra nova)" src="icon_blank.gif">
      <li><code>2</code> &mdash; Vés al contingut</li>
      <li><code>3</code> &mdash; Mapa del web</li>
      <li><code>4</code> &mdash; Focus al camp de cerca</li>
-     <li><code>5</code> &mdash; Cerca avançada</li>
      <li><code>6</code> &mdash; Arbre de navegació</li>
      <li><code>9</code> &mdash; Informació de contacte</li>
      <li><code>0</code> &mdash; Consulta accessibilitat</li>
