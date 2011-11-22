@@ -9,7 +9,7 @@
 	<div tal:define="records python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
                      preinscripcion_data python: utils.getPreinscripcioData(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
 
-		 <ul class="portletNavigationTree navTreeLevel0">
+		<ul class="portletNavigationTree navTreeLevel0">
 		 	<li class="navTreeItem visualNoMarker" >
 				<div>
                                    <a tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
@@ -22,68 +22,9 @@
 		                                      href string:${pURL}/info-general"		                                  
 		                      tal:content="python: utils.getTextMaster('info_gral',lang_code)">InfoGeneral 
                                    </a>
-
-
-				<ul tal:condition="python: url_actual=='info-general' or url_actual=='competencies' or url_actual=='requisits' or url_actual=='preinscripcio'" class="navTree navTreeLevel2">
-					<!-- Competencies -->
-					<tal:span condition="python: records['m_competencies_'+utils.cambiaPrefijo(lang_code)] or records['sortides_professionals_'+utils.cambiaPrefijo(lang_code)]">
-					<li class="navTreeItem visualNoMarker"><div>
-					<a tal:attributes="class python: utils.test(url_actual=='competencies','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-					                                   href string:${pURL}/competencies"
-					                   tal:content="python: utils.getTextMaster('competencies',lang_code)">Competències 
-					                </a></div></li></tal:span>
-
-					<!-- Pla estudis -->
-					<!-- aquest tal fa fallar el peu de la pagina i no ho puc reparar -->
-					<tal:block tal:define="data python: utils.select_plaEstudis(utils.getGWConfig().idestudiMaster)">
-				       <li class="navTreeItem" tal:condition="python: data['upc_estudi.m_pla_estudis_'+utils.cambiaPrefijo(lang_code)]"><div>				
-				       <a class="visualIconPadding" target="_blank"
-				                          tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(utils.getGWConfig().idestudiMaster)+'_p_'+utils.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];">
-				                          <span tal:content="python: utils.getTextMaster('pla_estudis',lang_code)">Pla d'estudis [pdf] </span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /> </a></div></li></tal:block>		
-
-					<!-- Requisits d'accés -->
-					<tal:span condition="python: records['acces_'+utils.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+utils.cambiaPrefijo(lang_code)]" tal:omit-tag="">
-					<li class="navTreeItem visualNoMarker"><div>
-					<a tal:attributes="class python: utils.test(url_actual=='requisits','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-					                                   href string:${pURL}/requisits"
-					                   tal:content="python:utils.getTextMaster('com_accedir',lang_code)">Com accedir-hi </a></div></li></tal:span>
-
-					<!-- Preinscripcio (NO url)-->
-			              <li tal:define="tmp preinscripcion_data/condicion" tal:condition="not: tmp" class="navTreeItem visualNoMarker"><div>
-			                <a target='newwindow' tal:attributes="class python: utils.test(url_actual=='preinscripcio','navItem2 visualIconPadding navTreeCurrentItem','navItem2 visualIconPadding');
-                                               href preinscripcion_data/preinscripcio">
-			                   <span tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.getTextMaster('preinscripcio_open',lang_code),utils.getTextMaster('preinscripcio',lang_code))">preinscripcio </span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /> </a></div></li>
-
-
-					<!-- Preinscripcio (existe url)-->
-			              <li class="navTreeItem visualNoMarker" tal:define="tmp preinscripcion_data/condicion" tal:condition="tmp"><div>
-			              <a class="navItem2 visualIconPadding" target='newwindow'
-			                   tal:attributes="href string:${pURL}/preinscripcio">
-			                   <span tal:content="python: utils.test(records['m_activar_preinscripcio']==1,utils.getTextMaster('preinscripcio_open',lang_code),utils.getTextMaster('preinscripcio',lang_code))">preinscripcio </span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /></a></div></li>
-
-
-					<!-- Llista d'admesos -->
-			              <li tal:condition="python: records['m_llistat_admesos']=='pdf'" class="navTreeItem visualNoMarker"><div>
-			              <a class="navItem2 visualIconPadding" target='_blank'
-			                   tal:condition="python: records['m_llistat_admesos']=='pdf'"
-			                   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+ str(utils.getGWConfig().idestudiMaster) + '_l.pdf'"> 
-			                   <span tal:content="python: utils.getTextMaster('llistat_admesos',lang_code)">llistat_admesos </span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /> </a></div></li>
-
-					<!-- Matricula -->
-			              <li class="navTreeItem visualNoMarker"><div>
-			            
-						  <a tal:condition="python: lang_code == 'ca'" class="navItem2 visualIconPadding" target='_blank'
-							  href="http://www.upc.edu/aprendre/estudis/acces/masters_universitaris_quecalfer#matricula_mu"> <span tal:content="python: utils.getTextMaster('matricula',lang_code)"> Matrícula </span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /></a> 
-
-      					  <a tal:condition="python: lang_code == 'es'" class="navItem2 visualIconPadding" target='_blank'
-							  href="http://www.upc.edu/aprender/estudios/acceso/masters-universitarios-queserequiere#matricula_mu"> <span tal:content="python: utils.getTextMaster('matricula',lang_code)"> Matrícula</span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /> </a>
-      								
-      					  <a tal:condition="python: lang_code == 'en'" class="navItem2 visualIconPadding" target='_blank'
-      						  href="http://www.upc.edu/master/matricula_ing.php"> <span tal:content="python: utils.getTextMaster('matricula',lang_code)"> Registration </span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" /></a>
-    			              			              
-    			          </li>
-				</ul>				</div></li>
-		        </ul>
+                </div>
+			</li>
+        </ul>
 	
 	</div>
 </div>

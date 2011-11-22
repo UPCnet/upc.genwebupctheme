@@ -7,7 +7,10 @@
       i18n:domain="upc.genwebupc">
 
   <body class="template-contacte" dir="ltr">
+<script type="text/javascript">
+		RecaptchaOptions = { theme : 'white' };
 
+	</script>
 	<metal:block metal:fill-slot="top_slot"
     	tal:define="dummy python:request.set('disable_border', 1)" />
 
@@ -104,7 +107,7 @@
 
     <tal:repl tal:replace="structure view/contents" />
 
-	</tal:main-macro>
+	</tal:main-macro>	
 
 </div>      
 

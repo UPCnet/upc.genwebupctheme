@@ -389,32 +389,32 @@
       />
 
 <!-- Browser page competencies MASTERS -->
-
+<!--
     <browser:page
       for="*"
       name="competencies"
       class=".master.information.competenciesView"
       permission="zope2.View"
       />
-
+-->
 <!-- Browser page requisits MASTERS -->
-
+<!--
     <browser:page
       for="*"
       name="requisits"
       class=".master.information.requisitsView"
       permission="zope2.View"
       />
-         
+-->         
 <!-- Browser page requisits MASTERS -->
-
+<!--
     <browser:page
       for="*"
       name="preinscripcio"
       class=".master.information.preinscripcioView"
       permission="zope2.View"
       />
-
+-->
 <!-- CSS dinamic -->
     <browser:page
       name="dynamic.css"
