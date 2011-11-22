@@ -140,6 +140,14 @@
          permission="zope2.View"
          />
          
+     <browser:viewlet
+         name="upc.genweb.addthis"
+         class=".addthis.AddthisViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+         permission="zope2.View"
+         />
+
+         
   <!-- Comuns Unitat -->
      <browser:viewlet
          name="upc.genweb.eines"
@@ -525,6 +533,8 @@
       name="canvidecontrasenya"
       template="canvi-contrasenya.pt"
       permission="zope2.View"
-      />      
+      />
+
+
 
 </configure>
