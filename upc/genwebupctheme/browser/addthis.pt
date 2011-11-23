@@ -1,0 +1,42 @@
+<tal:con tal:condition="view/isEnabledOnContent"
+         tal:define="idioma view/retIdiomaActual; url view/retUrl"
+         i18n:domain="upc.genwebupc">
+
+    <tal:repl tal:replace='structure string:
+    <script type="text/javascript">
+        var addthis_config = {
+            ui_click: false,
+            ui_delay: 0,
+            ui_hover_direction: -1,
+            ui_language: "$idioma",
+            services_expanded: "",
+            services_compact: "facebook, twitter, tuenti, meneame, linkedin, delicious, favorites, myspace, more, ",
+            services_exclude: "",
+            ui_open_windows: true,
+        }
+
+    </script> ' />
+    <style>
+        .socialtools {
+            height: 16px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        .socialtools a, .socialtools span {
+            float: left;
+            margin-right: 2px;
+        }
+        
+        </style>
+    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+    <div class="socialtools">    
+        <span i18n:translate="Comparteix">Comparteix:</span>            
+        <a class="addthis_button_twitter" i18n:attributes="title comparteix_twitter"></a>
+        <a class="addthis_button_facebook" i18n:attributes="title comparteix_facebook"></a>            
+        <a class="addthis_button_email" i18n:attributes="title send_mail"></a>
+        <a class="addthis_button" i18n:attributes="title Comparteix" href="http://www.addthis.com/bookmark.php">
+            <img src="http://s7.addthis.com/static/btn/sm-plus.gif" width="16" height="16" border="0" alt="Share" />
+        </a>        
+    </div>
+<div style="clear:both"></div>
+</tal:con>

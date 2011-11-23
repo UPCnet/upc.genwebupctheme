@@ -140,6 +140,14 @@
          permission="zope2.View"
          />
          
+     <browser:viewlet
+         name="upc.genweb.addthis"
+         class=".addthis.AddthisViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+         permission="zope2.View"
+         />
+
+         
   <!-- Comuns Unitat -->
      <browser:viewlet
          name="upc.genweb.eines"
@@ -389,32 +397,32 @@
       />
 
 <!-- Browser page competencies MASTERS -->
-
+<!--
     <browser:page
       for="*"
       name="competencies"
       class=".master.information.competenciesView"
       permission="zope2.View"
       />
-
+-->
 <!-- Browser page requisits MASTERS -->
-
+<!--
     <browser:page
       for="*"
       name="requisits"
       class=".master.information.requisitsView"
       permission="zope2.View"
       />
-         
+-->         
 <!-- Browser page requisits MASTERS -->
-
+<!--
     <browser:page
       for="*"
       name="preinscripcio"
       class=".master.information.preinscripcioView"
       permission="zope2.View"
       />
-
+-->
 <!-- CSS dinamic -->
     <browser:page
       name="dynamic.css"
@@ -525,6 +533,8 @@
       name="canvidecontrasenya"
       template="canvi-contrasenya.pt"
       permission="zope2.View"
-      />      
+      />
+
+
 
 </configure>
