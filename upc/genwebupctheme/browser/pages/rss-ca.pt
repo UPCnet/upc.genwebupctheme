@@ -15,29 +15,26 @@
 <div metal:fill-slot="main" class="plain"
      tal:define="utils context/@@upc.genweb.utils;">
 
-
-    <h1>Informació RSS</h1>
-			<h2>Titulars en RSS</h2>
+<h1>Informació RSS</h1>
 			<p><strong>RSS </strong>(sigla de <em>Really Simple Syndication</em>) és un canal de distribució de continguts que s'actualitzen sovint, com ara llocs de notícies, weblogs o podcasts, i per mitjà del qual es pot compartir la informació i usar-la en altres llocs web o programes. És en essència una sindicació de continguts.<br />
 <br />
 El principal avantatge del sistema és l'agilitat, ja que no cal descarregar les imatges i els altres elements del web, només els titulars, i també es pot ajuntar el contingut de molts llocs web en un sol espai. Gràcies a aquesta tecnologia, els usuaris ja no s'han de preocupar de comprovar si hi ha novetats que els interessin en un determinat espai digital, sinó que poden rebre i organitzar els nous titulars d'un espai digital en el mateix moment que es publiquen. El web incorpora aquest servei a totes les pàgines on apareix la icona <img src="rss.gif" alt="RSS" />.</p>
 
 <br />
-<h3>RSS de la UPC</h3>
+<h2>RSS de la UPC</h2>
 <ul>
-    <li><a target="_blank" href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=ca">Oficina de Mitjans de comunicació: Actualitat UPC <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
-    <li><a target="_blank" href="http://www.canalupc.tv/search_rss/?set_language=ca&amp;SearchableText=&amp;Title=&amp;Subject_usage%3Aignore_empty=&amp;Description=&amp;getProduction_date%3Alist%3Adate=1970%2F02%2F01&amp;getProduction_date_usage=range%3Amin&amp;portal_type%3Alist=Video&amp;portal_type%3Alist=Broadcast&amp;portal_type%3Alist=Audio&amp;getAuthor_producer=&amp;getAssociated_school=&amp;getRelated_studies=&amp;review_state%3Alist=published&amp;submit=Cerca">CanalUPC.tv <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
-    <li><a target="_blank" href="http://www.upc.edu/web/personal/Treballar/comunicacions/noticies/noticiesPDI.xml">Servei de Personal: notícies del PDI a la UPC <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
-    <li><a target="_blank" href="http://www.upc.edu/web/personal/Treballar/comunicacions/noticies/noticiesPAS.xml">Servei de Desenvolupament Profesional: notícies del PAS a la UPC <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
-    <li><a target="_blank" href="http://bibliotecnica.upc.edu/rss.xml">Bibliotècnica <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
+	<li><a href="http://www.upc.edu/agenda/totes/RSS" target="_blank">Agenda UPC <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+	<li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=ca" target="_blank">Notícies UPC [Oficina de Mitjans de comunicació] <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+	<li><a href="http://tv.upc.edu/rss/ultims-videos/RSS" target="_blank">UPCtv, ultims videos publicats <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+	<li><a href="http://bibliotecnica.upc.edu/rss.xml" target="_blank">Bibliotècnica <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
 </ul>
 <br />
-<h3>Agregadors de distribució lliure</h3>
+<h2>Agregadors de distribució lliure</h2>
 Un programa que utilitza RSS s'anomena agregador. N'hi ha de molts tipus: incrustats a navegadors web, widgets per a l'escriptori, en programes de correu electrònic, en pàgines web dedicades i en programes dedicats. Els de distribució lliure són:
-<br /><br /><ul>
+<br /><br />
+<ul>
     <li><a target="_blank" href="http://www.feedreader.com/">FeedReader <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
     <li><a target="_blank" href="http://google.com/reader">Google Reader <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
-    <li><a target="_blank" href="http://www.gnustep.it/marko/Ticker/">Ticker <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a>, per a Linux/GNUstep</li>
 </ul>
 
     </div>

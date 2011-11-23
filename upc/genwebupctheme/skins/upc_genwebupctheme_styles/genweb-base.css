@@ -23,7 +23,7 @@ padding-top:0px;
   float: right;
   margin: 0;
         }
-
+.clearBoth {clear:both !important;}
 .hiddenStructure {display:none;}
 /* CONTINGUT*/
 .contingut{
@@ -1650,9 +1650,11 @@ dd.portletItem .navTreeItem a:hover {
 	font-weight:bold;}
 .navTreeItemInPath {
 	font-weight:bold;}
-#portal-sitemap {
+#portal-sitemap, #portal-sitemap-master{
 	background: none !important;
-	padding: 0px;}
+	padding: 0px; margin:0 !important;}
+#portal-sitemap-master{margin-top:1em !important;}
+
 /*colleccio*/
 .listingBar {
 	font-size:11px;
@@ -2913,7 +2915,7 @@ h2.questionTitle {font-size:1.05em !important; border-top:0 !important;}
 .template-survey_view form fieldset legend {font-size:0 !important;}
 
 .controlDreta .caixaPortlet fieldset {background:#fff !important; border:0 !important; padding:5px !important;}
-#content.mceContentBody, #mceTemplatePreview.mceContentBody {margin:0px 5px 5px 5px;}
+#content.mceContentBody, #mceTemplatePreview.mceContentBody {margin:0px 5px 5px 5px; background-image:none !important; background-color:#fff;}
 
 div.formQuestion {display:block;}
 div.field.error {background-color: #fcf4f2 !important;margin: 1em 0 !important;border: 1px solid #c00;padding: 5px !important;}
@@ -2934,15 +2936,37 @@ html #pfgWidgetWrapper + .pfg-form {margin-right: 100%;}
 .collage-content-menu .visualIcon img {display:none;}
 .collage-content-menu .visualIcon {padding:5px 0; margin:0;}
 .navTreeItem div a img {display:none;}
-#portal-sitemap {border:0 !important;}
-#portal-sitemap li {border:1px solid #d9d9d9 !important; background-color:#f7f7f7 !important; border-radius:.5em; padding-left:10px !important;}
-#portal-sitemap li a {font-weight:bold !important;}
-#portal-sitemap li li {border:0 !important;}
-#portal-sitemap li li a {font-weight:normal !important;}
-#portal-sitemap li {background-image:none !important;}
-#portal-sitemap li li {background-image:url(quadret.gif) !important;}
+#portal-sitemap, #portal-sitemap-master {border:0 !important;}
+#portal-sitemap li, #portal-sitemap-master li {border:1px solid #d9d9d9 !important; background-color:#f7f7f7 !important; border-radius:.5em; padding-left:10px !important;}
+#portal-sitemap li a, #portal-sitemap-master li a {font-weight:bold !important; font-size:1.2em;}
+#portal-sitemap li li, #portal-sitemap-master li li {border:0 !important;}
+#portal-sitemap li li a, #portal-sitemap-master li li a {font-weight:normal !important; font-size:1em;}
+#portal-sitemap li, #portal-sitemap-master li {background-image:none !important;}
+#portal-sitemap li li, #portal-sitemap-master li li {background-image:url(quadret.gif) !important;}
 .o2k7Skin span.mce_plonetemplates {background-position: -820px -20px;}
 .mceLast .mceStatusbar {margin-bottom:0 !important;}
 div.position-2\3a 3 {margin-left: -31.08%;} /* .position-2:3 */
+
+
+
+#portal-sitemap .navTree, #portal-sitemap-master .navTree {
+	-webkit-column-count: 3;-moz-column-count: 3;column-count: 3;
+	-webkit-column-gap: 1em;-moz-column-gap: 1em;column-gap: 1em;
+	-webkit-column-fill:auto;-moz-column-fill:auto;column-fill:auto;
+	}
+#portal-sitemap .navTree .navTreeItem, #portal-sitemap-master .navTree .navTreeItem {
+	-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;column-break-inside:avoid;
+	}
+#portal-sitemap .navTreeLevel3, #portal-sitemap-master .navTreeLevel3 { -webkit-column-count: 1;-moz-column-count: 1;column-count: 1;}
+#portal-sitemap .navTreeLevel3 li, #portal-sitemap-master .navTreeLevel3 li { background-image: url(quadretGris.gif) !important; background-position: 0 5px !important;}
+#portal-sitemap .state-missing-value {display: none !important;}
+
+
+.socialtools {height: 16px; margin-bottom: 10px; margin-top: -20px !important; float:right; }
+.socialtools a, .socialtools span {float: left;margin-left: 2px; font-weight:bold; color:#666;}
+span.mceEditor{background:#f7f7f7 !important; display:block;}
+#content img.tileImage, #content div.newsImageContainer {float: right;margin: 0 1em 0.5em 1em;}
+table.mceLayout {width:100% !important;}
+dt span[class^="contenttype"] {padding:5px 0;}
 
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }
