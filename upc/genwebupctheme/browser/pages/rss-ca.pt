@@ -15,7 +15,7 @@
 <div metal:fill-slot="main" class="plain"
      tal:define="utils context/@@upc.genweb.utils;">
 
-<h1>Informació RSS</h1>
+<h1>Informació RSS</h1><br />
 			<p><strong>RSS </strong>(sigla de <em>Really Simple Syndication</em>) és un canal de distribució de continguts que s'actualitzen sovint, com ara llocs de notícies, weblogs o podcasts, i per mitjà del qual es pot compartir la informació i usar-la en altres llocs web o programes. És en essència una sindicació de continguts.<br />
 <br />
 El principal avantatge del sistema és l'agilitat, ja que no cal descarregar les imatges i els altres elements del web, només els titulars, i també es pot ajuntar el contingut de molts llocs web en un sol espai. Gràcies a aquesta tecnologia, els usuaris ja no s'han de preocupar de comprovar si hi ha novetats que els interessin en un determinat espai digital, sinó que poden rebre i organitzar els nous titulars d'un espai digital en el mateix moment que es publiquen. El web incorpora aquest servei a totes les pàgines on apareix la icona <img src="rss.gif" alt="RSS" />.</p>

@@ -36,8 +36,7 @@ function TinyMCEConfig(id) {
                 tinymce.PluginManager.load(e[0], this.getPortalUrl() + e[1]);
             }
         }
-
-        window.tinyMCE.init({
+        var init_dict = {
             mode : "exact",
             elements : this.id,
             strict_loading_mode : true,
@@ -48,12 +47,18 @@ function TinyMCEConfig(id) {
             skin_variant : "silver",
             inlinepopups_skin : "plonepopup",
             plugins : this.getPlugins(),
-            gecko_spellcheck : true,
+            // Find out if ieSpell requires gecko spellchecker...
+            gecko_spellcheck : this.geckoSpellcheckEnabled(),
+
+            atd_rpc_id : this.widget_config.atd_rpc_id,
+            atd_rpc_url : this.widget_config.atd_rpc_url,
+            atd_show_types : this.widget_config.atd_show_types,
+            atd_ignore_strings : this.widget_config.atd_ignore_strings,
 
             labels : this.widget_config.labels,
             theme_advanced_styles : this.getStyles(),
-            theme_advanced_buttons1 : "fullscreen,|,code,|,save,newdocument,|,plonetemplates,|,bold,|,italic,underline,|,justifyleft,justifycenter,justifyright,|,cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor",
-            theme_advanced_buttons2 : "formatselect,styleselect,|,cleanup,removeformat,|,image,media,|,tablecontrols,styleprops,|,visualaid,|,sub,sup,|,charmap",
+            theme_advanced_buttons1 : "fullscreen,|,code,|,save,newdocument,|,plonetemplates,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,|,cut,copy,paste,pastetext,pasteword,|,search,replace,|,bullist,numlist,|,outdent,indent,blockquote,|,undo,redo,|,link,unlink,anchor",
+            theme_advanced_buttons2 : "formatselect,style,|,cleanup,removeformat,|,image,media,|,tablecontrols,styleprops,|,visualaid,|,sub,sup,|,charmap",
             theme_advanced_buttons3 : "",
             //theme_advanced_buttons4 : this.getToolbar(3),
             theme_advanced_toolbar_location : this.getToolbarLocation(),
@@ -65,9 +70,6 @@ function TinyMCEConfig(id) {
             theme_advanced_resize_horizontal : this.getResizeHorizontal(),
             theme_advanced_source_editor_width : this.getEditorWidth(),
             theme_advanced_source_editor_height : this.getEditorHeight(),
-
-
-
 
             table_styles : this.getTableStyles(),
             table_firstline_th : true,
@@ -81,7 +83,6 @@ function TinyMCEConfig(id) {
             portal_url : this.getPortalUrl(),
             navigation_root_url : this.getNavigationRootUrl(),
             livesearch : this.getLivesearch(),
-//valid_elements : "strong/b",
             valid_elements : this.getValidElements(),
 extended_valid_elements : "strong/b,em/i",
             valid_inline_styles : this.getValidInlineStyles(),
@@ -94,10 +95,11 @@ forced_root_block : false,
 force_br_newlines : true,
 force_p_newlines : false,
 
-theme_advanced_styles : "'=,Arxiu_PDF=pdf;DOC=doc '",
-//theme_advanced_styles : '{ title: "Arxiu PDF", className: "pdf" }',
-theme_advanced_blockformats : "p,div,h2,h3,h4,code,ins,del"
-        });
+//theme_advanced_styles : "'=,Arxiu_PDF=pdf,Arxiu_DOC=doc,Arxiu_PPT=ppt,Arxiu_XLS=xls,Arxiu_TXT=txt,Arxiu_Video=vid,Arxiu_Imatge=img,Cadenat_HTTPS=https,Descarrega_Arxiu=down,Text_Petit=small;Imatge_Dreta=imgDreta,Imatge_Esquerra=imgEsquerra,Elimina_Marges=margezero,Text_correcte=ins,Text_incorrecte=del '",
+theme_advanced_blockformats : "p,div,h2,h3,h4"
+        };
+
+        window.tinyMCE.init(init_dict);
     };
 
     this.getButtonWidth = function(b) {
@@ -321,8 +323,30 @@ theme_advanced_blockformats : "p,div,h2,h3,h4,code,ins,del"
         return this.widget_config.livesearch;
     };
 
+    this.getSpellchecker = function () {
+        var sp = this.widget_config.libraries_spellchecker_choice;
+        if ((sp != '') && (sp != 'browser')) {
+            return sp
+        }
+        else {
+            return
+        }
+    };
+
+    this.geckoSpellcheckEnabled = function () {
+        if (this.widget_config.libraries_spellchecker_choice == 'browser')
+            return true
+        else
+            return false
+    };
+
     this.getPlugins = function () {
-        var plugins = "safari,pagebreak,table,save,advhr,emotions,iespell,insertdatetime,preview,media,searchreplace,print,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,inlinepopups,plonestyle,tabfocus,definitionlist,ploneinlinestyles";
+        var plugins = "safari,pagebreak,table,save,advhr,emotions,insertdatetime,preview,media,searchreplace,print,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,inlinepopups,plonestyle,tabfocus,definitionlist,ploneinlinestyles";
+
+        var sp = this.getSpellchecker()
+        if (sp)
+            plugins += ',' + sp;
+
         for (var i = 0; i < this.widget_config.customplugins.length; i++) {
             if (this.widget_config.customplugins[i].indexOf('|') == -1) {
                 plugins += ',' + this.widget_config.customplugins[i];
@@ -348,7 +372,8 @@ if (typeof(kukit) != "undefined") {
     });
 
     kukit.actionsGlobalRegistry.register("save-tinymce", function(oper) {
-        tinymce.EditorManager.activeEditor.save();
+    	if(tinymce.EditorManager != undefined && tinymce.EditorManager.activeEditor != null){
+    		tinymce.EditorManager.activeEditor.save();
+    	}
     });
 }
-

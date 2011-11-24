@@ -1225,6 +1225,7 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 
 
 /*portlets nous gw4*/
+#portal-column-content .portletLogin form .context {float:none;margin-top:0;}
 #portal-column-content .portlet .portletItem {padding:5px !important;}
 #portal-column-content .columnaDreta .portlet {background: url(bar150.gif) no-repeat top; padding-top:5px; width:150px; margin-left:25px; margin-bottom:15px}
 #portal-column-content .columnaEsq .portlet {background: url(bar200.gif) no-repeat top; padding-top:5px; width:200px; margin-left:25px; margin-bottom:15px}
@@ -1242,9 +1243,9 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 #portal-column-content .ploneCalendar strong {padding-top:0;}
 #portal-column-content .portletCalendar .portletHeader {text-align:center;}
 #portal-column-content .LSBox {padding:1em .5em 0 0;}
-#portal-column-content .columnaDreta .LSBox .searchField {width:70px !important;}
-#portal-column-content .columnaEsq .LSBox .searchField {width:120px !important;}
-#portal-column-content .columnaCentre .LSBox .searchField {width:470px !important;}
+#portal-column-content .columnaDreta .LSBox .searchField {width:65px !important;}
+#portal-column-content .columnaEsq .LSBox .searchField {width:115px !important;}
+#portal-column-content .columnaCentre .LSBox .searchField {width:460px !important;}
 #portal-column-content .columnaDreta .portletCalendar td, #portal-column-content .columnaDreta .portletCalendar tr, #portal-column-content .columnaDreta .portletCalendar table {padding:0 !important;}
 #portal-column-content .columnaDreta .portletCalendar table {font-size:.8em;}
 body #visual-portal-wrapper #portal-column-content .portlet dt + dd {border-top: 1px solid #d9d9d9 !important;}

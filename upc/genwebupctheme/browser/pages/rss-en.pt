@@ -16,7 +16,7 @@
      tal:define="utils context/@@upc.genweb.utils;">
 
 
-<h1>RSS information </h1>
+<h1>RSS information </h1><br />
 <p>
 	The <strong>RSS</strong> (abbreviation for <em><span>Really Simple Syndication</span></em>) is a news distribution 
 	channel that facilitates access to the latest news of a Web site. It is a family of web feed formats used to publish 

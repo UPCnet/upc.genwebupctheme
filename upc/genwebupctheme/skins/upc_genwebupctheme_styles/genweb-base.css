@@ -1,7 +1,7 @@
 #recaptcha_widget_div {margin-bottom:1em;}
 caption {display:none;}
-ins {color:#538300; text-decoration:underline;}
-del {color:#c00; text-decoration: line-through;}
+ins, .ins {color:#538300; text-decoration:underline;}
+del, .del {color:#c00; text-decoration: line-through;}
 
 .field.error .error {
     padding:0;
@@ -725,16 +725,16 @@ dl.warning dd {
 	background:url(error_message.gif) no-repeat bottom left #f9f9f9;}
 dl.error dd {
     background-color:#fcf4f2 !important;}
-.documentContent dd a:visited {
+#content-core dd a:visited {
 	background-color:transparent;
 	color:#007bc0;}
-.documentContent dd a:active {
+#content-core dd a:active {
 	background-color:transparent;
 	color:#007bc0;}
-.documentContent dd a:link {
+#content-core dd a:link {
 	background-color:transparent;
 	color:#007bc0;}
-.documentContent dd a:hover {
+#content-core dd a:hover {
 	background-color:transparent;
 	color:#005EA0;
 	text-decoration:underline;}
@@ -823,11 +823,11 @@ abbr, acronym, .explain {
 	color:#333;}
 abbr span {
 	display: block;}
-.documentContent dd a {
+#content-core dd a {
 	border-bottom:0px solid #CCC;
 	text-decoration:none;
 	color:#007bc0;}
-.documentContent dd a:hover {
+#content-core dd a:hover {
 	text-decoration:underline;}
 dl.collapsible {
 	border:0px solid #e6e6e6 !important;
@@ -866,11 +866,11 @@ dl.collapsedInlineCollapsible {
 	margin: 0; clear:both;}
 #fieldset-default{
 	margin-bottom:10px;}
-.documentContent p a, .documentContent p a:link, .documentContent p a:active, .documentContent p a:visited {
+#content-core p a, #content-core p a:link, #content-core p a:active, #content-core p a:visited {
 	border-bottom:0px solid #CCC;
 	text-decoration:none;
 	color:#007bc0;}
-.documentContent p a:hover {
+#content-core p a:hover {
 	text-decoration:underline;
 	color:#005EA0;}
 .discreet{ 
@@ -880,21 +880,21 @@ dl.collapsedInlineCollapsible {
 	color:#333;
 	font-size:100%;
 	font-weight:normal;}
-.documentContent ol {
+#content-core ol {
 	margin:0.5em 0 0 1.75em;
 	*margin:0.5em 0 0 2.15em;}
 /*.documentContent ul {
 	list-style-image:none;
 	list-style-type:none;}*/
-.documentContent ul li{
+#content-core ul li{
 list-style-image:url(quadret.gif);
 list-style-position:outside;
 list-style-type:square;/*he tret:  !important*/
 margin-bottom:0.5em;
 }
-.documentContent ul {margin-left:1.5em;}
-.documentContent ul li ul {margin-left:2em;}
-.documentContent ul li ul li {list-style-image:url(quadretGris.gif);}
+#content-core ul {margin-left:1.5em;}
+#content-core ul li ul {margin-left:2em;}
+#content-core ul li ul li {list-style-image:url(quadretGris.gif);}
 ul.formTabs li{margin-left:0em;}
 .agendaContingut ul li, .columnaDreta ul li, .columnaEsq ul li {list-style-image:none;list-style-position:none;list-style-type:none !important;}
 
@@ -1855,7 +1855,7 @@ form[action$="controlpanel"] legend {font-size:11px !important;}
 /**** LINKS ****/
 #content a[href ^="https://devel.upcnet.es/neutre2"], #content a.link-https { background:none; padding:0px; }
 /*repas novembre*/
-.template-folder_constraintypes_form .documentContent form .field {font-size:100%;}
+.template-folder_constraintypes_form #content form .field {font-size:100%;}
 .iframeContacte iframe {width:758px;height:300px;}
 .contacteSpanBaix {padding-bottom:10px;}
 ul.visualNoMarker, ol.visualNoMarker, ul.visualNoMarker li, ol.visualNoMarker li {
