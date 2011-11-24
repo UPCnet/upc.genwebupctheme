@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <object>
  <order manager="plone.abovecontenttitle" skinname="Tema genwebUPC Neutre2">
   <viewlet name="plone.abovecontenttitle.documentactions"/>
@@ -104,9 +104,9 @@
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
  <order manager="plone.belowcontent" skinname="GenwebUPC_Neutre3">
+  <viewlet name="plone.nextprevious"/>
   <viewlet name="plone.belowcontenttitle.keywords"/>
   <viewlet name="upc.genweb.darreramodificacio"/>
-  <viewlet name="plone.nextprevious"/>
   <viewlet name="plone.manage_portlets_fallback"/>
  </order>
  <order manager="plone.portalfooter" skinname="GenwebUPC_Neutre3">
@@ -174,6 +174,20 @@
  <order manager="plone.abovecontent" skinname="Plone Default">
   <viewlet name="plone.path_bar"/>
  </order>
+ <order manager="plone.belowcontent" skinname="Plone Default">
+  <viewlet name="plone.belowcontenttitle.keywords"/>
+  <viewlet name="plone.nextprevious"/>
+  <viewlet name="plone.manage_portlets_fallback"/>
+ </order>
+ <order manager="plone.belowcontentbody" skinname="Plone Default">
+  <viewlet name="plone.belowcontentbody.relateditems"/>
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="Plone Default">
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
  <order manager="plone.portalheader" skinname="Plone Default">
   <viewlet name="plone.personal_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
@@ -182,20 +196,6 @@
   <viewlet name="plone.searchbox"/>
   <viewlet name="plone.logo"/>
   <viewlet name="plone.global_sections"/>
- </order>
- <order manager="plone.belowcontent" skinname="Plone Default">
-  <viewlet name="plone.belowcontenttitle.keywords"/>
-  <viewlet name="plone.nextprevious"/>
-  <viewlet name="plone.manage_portlets_fallback"/>
- </order>
- <order manager="plone.portalfooter" skinname="Plone Default">
-  <viewlet name="plone.site_actions"/>
-  <viewlet name="plone.footer"/>
-  <viewlet name="plone.colophon"/>
- </order>
- <order manager="plone.belowcontentbody" skinname="Plone Default">
-  <viewlet name="plone.belowcontentbody.relateditems"/>
-  <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
  <order manager="plone.portaltop" skinname="Plone Default">
   <viewlet name="plone.header"/>
@@ -402,6 +402,7 @@
   <viewlet name="plone.global_sections"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
   <viewlet name="plone.personal_bar"/>
+  <viewlet name="plone.path_bar"/>
  </hidden>
  <hidden manager="plone.portaltop" skinname="GenwebUPC_Unitat">
   <viewlet name="plone.personal_bar"/>
