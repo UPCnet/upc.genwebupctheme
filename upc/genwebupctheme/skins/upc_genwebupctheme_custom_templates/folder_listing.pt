@@ -33,8 +33,9 @@
                         limit_display python:limit_display and int(limit_display) or None;
                         more_url more_url|request/more_url|string:folder_contents;
                         is_a_topic python:context.portal_type=='Topic';
+                        friendly_types context/@@plone_portal_state/friendly_types;
+                        dummy python:not is_a_topic and contentFilter.setdefault('portal_type', friendly_types);
                         folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
-                        folderContents python:[i for i in folderContents if i.exclude_from_nav != True];
                         site_properties context/portal_properties/site_properties;
                         use_view_action site_properties/typesUseViewActionInListings|python:();
                         Batch python:modules['Products.CMFPlone'].Batch;
@@ -45,7 +46,8 @@
                         toLocalizedTime nocall: context/@@plone/toLocalizedTime;
                         show_about python:not isAnon or site_properties.allowAnonymousViewAbout;
                         navigation_root_url context/@@plone_portal_state/navigation_root_url;
-                        pas_member context/@@pas_member;">
+                        pas_member context/@@pas_member;
+                        plone_view context/@@plone;">
     <tal:listing condition="batch">
 
         <dl metal:define-slot="entries">
@@ -77,7 +79,7 @@
                         <img tal:replace="structure item_icon/html_tag" />
                         <a href="#"
                            tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
-                                           class string:$item_wf_state_class url"
+                                           class string:$item_type_class $item_wf_state_class url"
                            tal:content="item_title_or_id">
                             Item Title
                         </a>
