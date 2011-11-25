@@ -55,14 +55,10 @@
   </object>
   
  <object name="site_properties" meta_type="Plone Property Sheet">
-  <!-- GW4 eliminat -->
-  <!-- 
   <property name="available_editors" type="lines">
-   <element value="FCKeditor"/>
-   <element value="Kupu"/>
+   <element value="TinyMCE"/>
    <element value="None"/>
   </property>
-   -->
   <property name="external_links_open_new_window" type="string">True</property>
  </object> 
 
