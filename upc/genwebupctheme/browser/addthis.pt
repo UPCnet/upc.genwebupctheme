@@ -17,14 +17,14 @@
 
     </script> ' />
 
-    <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js"></script>
+    <script type="text/javascript" src="https://s7.addthis.com/js/250/addthis_widget.js"></script>
     <div class="socialtools">    
         <span i18n:translate="Comparteix">Comparteix</span>            
         <a class="addthis_button_twitter" i18n:attributes="title comparteix_twitter"></a>
         <a class="addthis_button_facebook" i18n:attributes="title comparteix_facebook"></a>            
         <a class="addthis_button_email" i18n:attributes="title send_mail"></a>
         <a class="addthis_button" i18n:attributes="title Comparteix" href="http://www.addthis.com/bookmark.php">
-            <img src="http://s7.addthis.com/static/btn/sm-plus.gif" width="16" height="16" border="0" alt="Share" />
+            <img src="https://s7.addthis.com/static/btn/sm-plus.gif" width="16" height="16" border="0" alt="Share" />
         </a>        
     </div>
 <div style="clear:both"></div>
