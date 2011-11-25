@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<object>
+ <resourcetypes>
+  <linkable>
+   <element value="Document"/>
+   <element value="FormFolder"/>
+   <element value="Image"/>
+   <element value="ImageAttachment"/>
+   <element value="Topic"/>
+   <element value="File"/>
+   <element value="Large Plone Folder"/>
+   <element value="Folder"/>
+   <element value="News Item"/>
+   <element value="Event"/>
+   <element value="FileAttachment"/>
+  </linkable>
+  <customplugins>
+   <element value="ploneimage"/>
+   <element value="plonelink"/>
+   <element
+      value="plonetemplates|/++resource++collective.tinymcetemplates.plugin/editor_plugin.js"/>
+  </customplugins>
+  <containsanchors>
+   <element value="Event"/>
+   <element value="News Item"/>
+   <element value="Document"/>
+   <element value="ATRelativePathCriterion"/>
+  </containsanchors>
+  <allow_captioned_images value="False"/>
+  <containsobjects>
+   <element value="Folder"/>
+   <element value="Large Plone Folder"/>
+   <element value="Plone Site"/>
+  </containsobjects>
+  <entity_encoding value="raw"/>
+  <imageobjects>
+   <element value="Image"/>
+   <element value="ImageAttachment"/>
+  </imageobjects>
+  <link_using_uids value="True"/>
+  <rooted value="True"/>
+ </resourcetypes>
+ <layout>
+  <styles>
+   <element value="Arxiu PDF|span|pdf"/>
+   <element value="Arxiu DOC|span|doc"/>
+   <element value="Arxiu PPT|span|ppt"/>
+   <element value="Arxiu XLS|span|xls"/>
+   <element value="Arxiu TXT|span|txt"/>
+   <element value="Arxiu video|span|vid"/>
+   <element value="Arxiu imatge|span|img"/>
+   <element value="Cadenat HTTPS|span|https"/>
+   <element value="Descarrega fitxer|span|down"/>
+   <element value="Text petit|span|small"/>
+   <element value="Imatge dreta|span|imgDreta"/>
+   <element value="Imatge esquerra|span|imgEsquerra"/>
+   <element value="Elimina marges|margezero"/>
+   <element value="Text correcte|span|ins"/>
+   <element value="Text incorrecte|span|del"/>
+   <element value="Fons cel·la color1|td|fonsDestacat1"/>
+   <element value="Fons cel·la color2|td|fonsDestacat2"/>
+   <element value="Capçalera taula|tr|cap"/>
+  </styles>
+  <tablestyles>
+   <element value="Taula simple|minimal"/>
+   <element value="Taula simple [ample 100%]|minimal w100"/>
+   <element value="Graella invisible|invisible"/>
+   <element value="Graella invisible [ample 100%]|invisible w100"/>
+  </tablestyles>
+  <content_css value=""/>
+  <editor_height value="400"/>
+  <editor_width value="100%"/>
+  <contextmenu value="True"/>
+  <resizing value="True"/>
+  <directionality value="ltr"/>
+  <autoresize value="False"/>
+ </layout>
+ <toolbar>
+  <toolbar_anchor value="True"/>
+  <toolbar_hr value="False"/>
+  <toolbar_insertdate value="False"/>
+  <toolbar_cut value="True"/>
+  <toolbar_definitionlist value="False"/>
+  <customtoolbarbuttons>
+   <element value="plonetemplates"/>
+  </customtoolbarbuttons>
+  <toolbar_paste value="True"/>
+  <toolbar_justifycenter value="True"/>
+  <toolbar_inserttime value="False"/>
+  <toolbar_tablecontrols value="True"/>
+  <toolbar_justifyleft value="True"/>
+  <toolbar_redo value="True"/>
+  <toolbar_unlink value="True"/>
+  <toolbar_visualchars value="False"/>
+  <toolbar_media value="False"/>
+  <toolbar_nonbreaking value="False"/>
+  <toolbar_image value="True"/>
+  <toolbar_advhr value="False"/>
+  <toolbar_removeformat value="True"/>
+  <toolbar_undo value="True"/>
+  <toolbar_save value="True"/>
+  <toolbar_sub value="True"/>
+  <toolbar_numlist value="True"/>
+  <toolbar_underline value="True"/>
+  <toolbar_sup value="True"/>
+  <toolbar_preview value="False"/>
+  <toolbar_forecolor value="False"/>
+  <toolbar_code value="True"/>
+  <toolbar_style value="True"/>
+  <toolbar_link value="True"/>
+  <toolbar_emotions value="False"/>
+  <toolbar_justifyright value="True"/>
+  <toolbar_replace value="True"/>
+  <toolbar_outdent value="True"/>
+  <toolbar_strikethrough value="True"/>
+  <toolbar_pasteword value="True"/>
+  <toolbar_width value="440"/>
+  <toolbar_print value="False"/>
+  <toolbar_spellchecker value="False"/>
+  <toolbar_justifyfull value="False"/>
+  <toolbar_charmap value="False"/>
+  <toolbar_bullist value="True"/>
+  <toolbar_copy value="True"/>
+  <toolbar_pastetext value="True"/>
+  <toolbar_visualaid value="False"/>
+  <toolbar_indent value="True"/>
+  <toolbar_search value="True"/>
+  <toolbar_fullscreen value="True"/>
+  <toolbar_italic value="True"/>
+  <toolbar_attribs value="True"/>
+  <toolbar_pagebreak value="False"/>
+  <toolbar_bold value="True"/>
+  <toolbar_backcolor value="False"/>
+  <toolbar_external value="False"/>
+  <toolbar_cleanup value="True"/>
+ </toolbar>
+</object>

@@ -430,7 +430,7 @@ padding: 0pt;
 margin: 0pt;
 visibility:hidden;
 }
-ul.configlets, ul#portal-sitemap {/*authoring.css (line 199)*/
+ul.configlets, ul#portal-sitemap, ul#portal-sitemap-master {/*authoring.css (line 199)*/
 list-style-image:none;
 list-style-position:outside;
 list-style-type:none;
@@ -438,7 +438,7 @@ margin:1em 0pt;
 font-weight:normal;
 margin-left: 0px !important;
 }
-ul.configlets li, ul#portal-sitemap li{
+ul.configlets li, ul#portal-sitemap li, ul#portal-sitemap-master li {
 font-family: Verdana, Arial, Helvetica, sans-serif;
 background:transparent url(fletxaGo.gif) no-repeat scroll left top;
 border-bottom:1px dashed #333333;
@@ -694,9 +694,9 @@ font-size:1em;
 }
 .template-conversation_view .documentContent {position:relative;}
 .discussion {
-padding-top:1em;
-border-top:1px dashed #e6e6e6;
-margin-top:1em;
+padding-top:0em;
+border-top:5px solid #e6e6e6;
+margin-top:3em;
 clear:both;
 }
 table.listing .listingCheckbox {
@@ -1225,6 +1225,8 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 
 
 /*portlets nous gw4*/
+#portal-column-content .portletLogin form .context {float:none;margin-top:0;}
+#portal-column-content .portlet .portletItem {padding:5px !important;}
 #portal-column-content .columnaDreta .portlet {background: url(bar150.gif) no-repeat top; padding-top:5px; width:150px; margin-left:25px; margin-bottom:15px}
 #portal-column-content .columnaEsq .portlet {background: url(bar200.gif) no-repeat top; padding-top:5px; width:200px; margin-left:25px; margin-bottom:15px}
 #portal-column-content .portlet .portletHeader {border:1px solid #e6e6e6; border-top:0; border-bottom:0;}
@@ -1236,3 +1238,22 @@ body.template-base_view div#archetypes-fieldname-atendees {padding-bottom:25px;}
 #portal-column-content div .portlet dd:first-child, #portal-column-content .portlet .portletItem:first-child {border-top:0 !important;}
 #portal-column-content .portlet {*border-bottom:1px solid #e6e6e6;}
 #portal-column-content dd.portletFooter {text-align:right; border-top:0 !important;}
+#portal-column-content .ploneCalendar {width:100%;}
+#portal-column-content .ploneCalendar td, #portal-column-content .ploneCalendar th {text-align:right;}
+#portal-column-content .ploneCalendar strong {padding-top:0;}
+#portal-column-content .portletCalendar .portletHeader {text-align:center;}
+#portal-column-content .LSBox {padding:1em .5em 0 0;}
+#portal-column-content .columnaDreta .LSBox .searchField {width:65px !important;}
+#portal-column-content .columnaEsq .LSBox .searchField {width:115px !important;}
+#portal-column-content .columnaCentre .LSBox .searchField {width:460px !important;}
+#portal-column-content .columnaDreta .portletCalendar td, #portal-column-content .columnaDreta .portletCalendar tr, #portal-column-content .columnaDreta .portletCalendar table {padding:0 !important;}
+#portal-column-content .columnaDreta .portletCalendar table {font-size:.8em;}
+body #visual-portal-wrapper #portal-column-content .portlet dt + dd {border-top: 1px solid #d9d9d9 !important;}
+/*columna gran*/
+#portal-column-content .columnaCentre .portlet {border:0 !important;}
+#portal-column-content .columnaCentre .portletItem {border:1px solid #d9d9d9 !important; border-bottom: 0 !important; border-top:1px dashed #d9d9d9 !important;}
+#portal-column-content .columnaCentre .portlet dt + dd {border-top: 1px solid #d9d9d9 !important;}
+#portal-column-content .columnaCentre .portletItem:last-child {border:1px solid #d9d9d9 !important;}
+#portal-column-content .columnaCentre .portletHeader {border:0; border-top: 1px solid #808080;background: url(triangle.gif) no-repeat;background-position: 0px 3px;padding: 9px 0px 4px 14px;color: #4D4D4D;font-weight: bold;text-align: left;font-size: 1.1em;}
+#portal-column-content .columnaCentre .portletCalendar dt {text-align:center;}
+

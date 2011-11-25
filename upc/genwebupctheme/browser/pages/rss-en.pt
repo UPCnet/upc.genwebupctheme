@@ -16,26 +16,31 @@
      tal:define="utils context/@@upc.genweb.utils;">
 
 
-    <h1>RSS headlines</h1>
+<h1>RSS information </h1><br />
+<p>
+	The <strong>RSS</strong> (abbreviation for <em><span>Really Simple Syndication</span></em>) is a news distribution 
+	channel that facilitates access to the latest news of a Web site. It is a family of web feed formats used to publish 
+	frequently updated digital content, such as blogs, news feeds or podcasts. <br /><br /> Users of RSS content use programs called 
+	feed "readers" or "aggregators": the user subscribes to a feed by supplying to his or her reader a link to the feed; the reader 
+	can then check the user's subscribed feeds to see if any of those feeds have new content since the last time it was checked, and 
+	if so, retrieve that content and present it to the user. This site incorporates this service in all the pages where this icon 
+	appears <img alt="RSS" src="rss.gif" />.
+</p>
 <br />
-<p>The RSS (abbreviation for <em><span>Really Simple Syndication</span></em>) is a news distribution channel 
-        that facilitates access to the latest news of a Web site. It is a family of web feed formats used to 
-        publish frequently updated digital content, such as blogs, news feeds or podcasts. <br />
-        Users of RSS content use programs called feed "readers" or "aggregators": the user 
-        subscribes to a feed by supplying to his or her reader a link to the feed; the reader can then check 
-        the user's subscribed feeds to see if any of those feeds have new content since the last time it was checked, 
-        and if so, retrieve that content and present it to the user.<br />
-        This site incorporates this service in all the pages where&nbsp;this icon 
-        appears <img alt="RSS" src="rss.gif">.
-    </p>
 <h2>UPC RSS</h2>
     <ul>
-      <li>
-<a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=en" target="_blank">UPC-Barcelona Tech: News <img src="icon_blank.gif" alt="Obriu l'enllaç en una finestra nova" class="link_blank"/></a></li>
-      <li>
-<a href="http://www.canalupc.tv/search_rss/?set_language=en&amp;SearchableText=&amp;Title=&amp;Subject_usage%3Aignore_empty=&amp;Description=&amp;getProduction_date%3Alist%3Adate=1970%2F02%2F01&amp;getProduction_date_usage=range%3Amin&amp;portal_type%3Alist=Video&amp;portal_type%3Alist=Broadcast&amp;portal_type%3Alist=Audio&amp;getAuthor_producer=&amp;getAssociated_school=&amp;getRelated_studies=&am p;review_state%3Alist=published&amp;submit=Buscar" target="_blank">CanalUPC.tv <img src="icon_blank.gif" alt="Abrir el enlace en una nueva ventana" class="link_blank"></a></li>
+	    <li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=en" target="_blank">News UPC. Barcelona Tech <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
+	   	<li><a href="http://tv.upc.edu/latest-videos/RSS?set_language=en" target="_blank">UPCtv, latest videos <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
     </ul>
+<br />
 
+<h2 class="liniaBaix">Free readers</h2>
+<p>A program that uses RSS is called feed "readers" or "aggregators". Some free readers are:</p>
+<br />
+<ul>
+	<li><a href="http://www.feedreader.com/" target="_blank">FeedReader <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
+	<li><a href="http://google.com/reader" target="_blank">Google Reader <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
+</ul>
 
 
     </div>

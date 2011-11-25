@@ -162,7 +162,7 @@ html*.calendari table{
 	padding-bottom:10px
 	max-width:150px;}
 /*taulaRegistres*/
-.taulaRegistres .cap td{
+.cap td{
 	background:url(borderTopDiagonal.gif) repeat-x;
 	border-left: 2px dotted #ccc;
 	border-top:0;
@@ -172,7 +172,7 @@ html*.calendari table{
 	background-color: #fff;
 	color: #6b5c4f; 
 	font-weight: bold;}
-.taulaRegistres .cap td:first-child{
+.cap td:first-child{
 	border-left: 0px dotted #ccc;}
 .taulaRegistres td {
 	background-color: #f1efee;
@@ -298,7 +298,7 @@ html*.taulaRegistres table{
 	padding: 2px 4px;
 	font-size: 0.95em;}
 /*solucions IE*/
-.taulaRegistres .cap td{
+.cap td{
 background:url(borderTopDiagonal.gif) repeat-x;
 	*border: 2px dotted #ccc;
 	*border-top:0px;
@@ -377,7 +377,7 @@ table.enllacosDreta td {vertical-align:top;}
    float: left;
    clear: both;
    margin: 0.5em 1em 0.5em 0;
-   padding:10px;
+   padding:0 10px 10px 0;
    border: 0px solid #e6e6e6;
 }
 .image-right {
@@ -385,7 +385,7 @@ border:0 solid #E6E6E6;
 clear:both;
 float:right;
 margin:0.5em;
-padding:10px;
+padding:0 0 10px 10px;
 }
 /*contenidor*/
 .gb {background:#fff url(fonsT.png) repeat-x scroll center bottom;border:1px solid #d9d9d9;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
@@ -428,3 +428,14 @@ div.w1 { width: 97.916% }
 /*accessibilitat*/
 p.blockquote, div.blockquote {border:1px solid #d9d9d9; background: #f7f7f7; padding:5px 10px; border-top-width:1px; -moz-border-radius:10px; -webkit-border-radius:10px; -khtml-border-radius:10px; border-radius:10px;}
 .blockquote img{background: transparent;}
+
+table.minimal {border:0; font-size:1em; padding:0; margin:0; border-collapse:separate;}
+table.minimal thead {border-bottom:2px solid #bbb; color:#333;}
+table.minimal thead th {border-bottom:2px solid #bbb; color:#333; border-bottom:2px solid #bbb;}
+table.minimal tbody th {color:#666;}
+table.minimal tbody tr {border-bottom:1px solid #d9d9d9;}
+table.minimal tbody td, table.minimal tbody th {border-bottom:1px solid #d9d9d9;}
+table.minimal tfoot {font-size:.8em; color:#666; background:#f7f7f7; padding:0;} 
+table.minimal tfoot tr {padding:0;}
+.w100 {width:100% !important;}
+

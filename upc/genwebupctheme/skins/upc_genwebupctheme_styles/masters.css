@@ -58,7 +58,7 @@
 .barraBranca_m table td {width:190px; text-align:right !important;}
 .barraBranca_m table, .barraBranca_m tr, .barraBranca_m th, .barraBranca_m td, .barraBranca_m tbody, .barraBranca_m tfoot, .barraBranca_m thead {padding:0px !important;}
 .liniaPrincipal_m{
-	height:6px;
+	height:5px;
 	width:100%;
 	background-color:#B0D73C;
 	font-size:0.05em;

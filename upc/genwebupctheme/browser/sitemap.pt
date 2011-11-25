@@ -25,77 +25,30 @@
     over an item for a few seconds to get its description.
     </p>
 
-	<div tal:condition="python: flav == 'Tema genwebUPC Master'" id="portal-sitemap" class="navTreeLevel0 visualNoMarker"
-	     tal:define="flav view/getFlavour;">
-	     
-	<ul tal:define="langtool nocall:context/portal_languages;
+
+	<div tal:define="flav view/getFlavour;"
+	     tal:condition="python: flav == 'GenwebUPC_Master'"  >
+
+	<ul id="portal-sitemap-master" class="navTreeLevel0 visualNoMarker" 
+			tal:define="langtool nocall:context/portal_languages;
 	                lang_code langtool/getPreferredLanguage;
-                    pURL python:context.portal_url();
-                    utils context/@@upc.genweb.utils;
-                    records python: view.getMasterInfoGeneral(view.getGWConfig().idtitulacioMaster,view.getGWConfig().idestudiMaster);">
-	    
-	    <li>    
+                  pURL python:context.portal_url();
+                  utils context/@@upc.genweb.utils;
+                  records python: view.getMasterInfoGeneral(view.getGWConfig().idtitulacioMaster,view.getGWConfig().idestudiMaster);">
+
+	    <li class="navTreeItem visualNoMarker">    
    			<div>
 				<a class="state-published" 
-                                   tal:condition="python: view.getGWConfig().masterdoctorado==('Master i Doctorat')"
+           tal:condition="python: view.getGWConfig().masterdoctorado==('Master i Doctorat')"
 				   tal:attributes="href string:${pURL}/info-general"
 				   tal:content="python: view.getTextMaster('info_gral_masters',lang_code)">
-                                </a>
+        </a>
 				<a class="state-published" 
-                                   tal:condition="python: not view.getGWConfig().masterdoctorado==('Master i Doctorat')"
+           tal:condition="python: not view.getGWConfig().masterdoctorado==('Master i Doctorat')"
 				   tal:attributes="href string:${pURL}/info-general"
 				   tal:content="python: view.getTextMaster('info_gral',lang_code)">
-                                </a>
+        </a>
 			</div>
-	    
-		    <ul class="navTree navTreeLevel2">
-		    
-		        <!-- Competencies -->
-				<li tal:condition="python: records['m_competencies_'+view.cambiaPrefijo(lang_code)] or records['sortides_professionals_'+view.cambiaPrefijo(lang_code)]" class="navTreeItem visualNoMarker">									
-					<div>
-						<a class="state-published" 
-						   tal:attributes="href string:${pURL}/competencies"
-						   tal:content="python: view.getTextMaster('competencies',lang_code)"></a>
-					</div>
-				</li>
-
-				<!-- Pla estudis -->
-				<tal:block tal:define="data python: view.select_plaEstudis(view.getGWConfig().idestudiMaster)">
-			        <li tal:condition="python: data['upc_estudi.m_pla_estudis_'+view.cambiaPrefijo(lang_code)]">
-                                      <div>
-					<a class="state-published" 
-					   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+str(view.getGWConfig().idestudiMaster)+'_p_'+view.cambiaPrefijo(lang_code)+'.'+data['upc_estudi.m_pla_estudis_cat'];"
-					   tal:content="python: view.getTextMaster('pla_estudis',lang_code)"></a>
-				      </div>
-                                </li>
-				</tal:block>
-
-				<!-- Requisits d'accés -->
-				<span tal:condition="python: records['acces_'+view.cambiaPrefijo(lang_code)] or records['m_criteris_adm_'+view.cambiaPrefijo(lang_code)]" tal:omit-tag="">
-				<li class="navTreeItem visualNoMarker"><div>
-				<a tal:attributes="href string:${pURL}/requisits"
-				   tal:content="python:view.getTextMaster('com_accedir',lang_code)">Com accedir-hi </a></div></li></span>
- 
-				<!-- Preinscripcio -->
-		              <li class="navTreeItem visualNoMarker"><div>
-		              <a class="navItem2 visualIconPadding" target='_blank'
-		                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/preinscripcio_'+view.cambiaPrefijo(lang_code)+'.php'"> 
-		                   <span tal:content="python: view.test(records['m_activar_preinscripcio']==1,view.getTextMaster('preinscripcio_open',lang_code),view.getTextMaster('preinscripcio_close',lang_code))">preinscripcio</span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a></div></li>
-
-				<!-- Llista d'admesos -->
-		              <li tal:condition="python: records['m_llistat_admesos']=='pdf'" class="navTreeItem visualNoMarker"><div>
-		              <a class="navItem2 visualIconPadding" target='_blank'
-		                   tal:condition="python: records['m_llistat_admesos']=='pdf'"
-		                   tal:attributes="href python:'http://www.upc.edu/gestorwebupc/gestioEstudis/files/files_masters/'+ str(view.getGWConfig().idestudiMaster) + '_l.pdf'"> 
-		                   <span tal:content="python: view.getTextMaster('llistat_admesos',lang_code)">llistat_admesos</span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a></div></li>
-
-				<!-- Matricula -->
-		              <li class="navTreeItem visualNoMarker"><div>
-		              <a class="navItem2 visualIconPadding" target='_blank'
-		                   tal:attributes="href python:'http://www.upc.edu/estudis-upc/masters-eees/matricula_'+view.cambiaPrefijo(lang_code)+'.php'"> 
-		                   <span tal:content="python: view.getTextMaster('matricula',lang_code)">matricula</span> <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"></a></div></li>
-
-		    </ul>
 		</li>
 			
 	</ul> 
