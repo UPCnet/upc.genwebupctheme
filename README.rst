@@ -9,6 +9,5 @@ Instal·lació de Genweb
 
 XXX ToDO.
 
-- Code repository: https://dev.genweb.upc.edu/svn/core
+- Code repository: https://github.com/upcnet/upc.genwebupctheme
 - Questions and comments to plone.team(at)upcnet.es
-- Report bugs at http://dev.genweb.upc.edu/trac/core

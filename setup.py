@@ -3,23 +3,24 @@
 from setuptools import setup, find_packages
 import os
 
-version = '4.1b1'
+version = '4.1'
 
 setup(name='upc.genwebupctheme',
       version=version,
-      description="Paquet de sabors de Genweb UPC",
+      description="Paquet de sabors del servei Genweb UPC",
       long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
         "Framework :: Plone",
+        "Framework :: Plone :: 4.1",
         "Framework :: Zope2",
+        "Framework :: Zope3",
         "Programming Language :: Python",
-        "Topic :: Software Development :: Libraries :: Python Modules",
         ],
       keywords='genwebupctheme genwebupc upc tema theme',
       author='PloneTeam@UPCnet',
       author_email='plone.team@upcnet.es',
-      url='https://genweb.upc.edu/',
+      url='https://github.com/upcnet/upc.genwebupctheme',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['upc'],
