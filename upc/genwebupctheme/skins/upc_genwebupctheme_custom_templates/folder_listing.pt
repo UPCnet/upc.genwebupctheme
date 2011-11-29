@@ -27,19 +27,25 @@
     </div>
 
     <metal:listingmacro define-macro="listing">
+    <tal:comment tal:replace="nothing">
+      @Genweb: La definició de genwebDummy, fa que els elements exclosos de la navegació no es renderitzin,
+      cal afegir al cataleg un index exclude_from_nav (veure al profile de upc.gewnwebupc)
+    </tal:comment>
     <tal:foldercontents define="contentFilter contentFilter|request/contentFilter|nothing;
                         contentFilter python:contentFilter and dict(contentFilter) or {};
+                        genwebDummy python:contentFilter.setdefault('exclude_from_nav', False);
                         limit_display limit_display|request/limit_display|nothing;
                         limit_display python:limit_display and int(limit_display) or None;
                         more_url more_url|request/more_url|string:folder_contents;
                         is_a_topic python:context.portal_type=='Topic';
                         friendly_types context/@@plone_portal_state/friendly_types;
                         dummy python:not is_a_topic and contentFilter.setdefault('portal_type', friendly_types);
-                        folderContents folderContents|nothing; folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
+                        folderContents folderContents|nothing; 
+                        folderContents python:folderContents or is_a_topic and context.queryCatalog(batch=True, **contentFilter) or context.getFolderContents(contentFilter, batch=True, b_size=limit_display or 100);
                         site_properties context/portal_properties/site_properties;
                         use_view_action site_properties/typesUseViewActionInListings|python:();
                         Batch python:modules['Products.CMFPlone'].Batch;
-                        b_start python:request.get('b_start', 0);
+                        b_start python:request.get('b_start', 0);                        
                         batch python:isinstance(folderContents, Batch) and folderContents or Batch(folderContents, limit_display or 100, int(b_start), orphan=1);
                         isAnon context/@@plone_portal_state/anonymous;
                         normalizeString nocall: context/plone_utils/normalizeString;
@@ -73,13 +79,15 @@
                 <metal:block define-slot="entry">
                 <dt metal:define-macro="listitem"
                     tal:attributes="class python:test(item_type in ['Event','Meeting'], 'vevent', '')">
-                    
+                        <tal:comment tal:replace="nothing">
+                          @Genweb4: treiem la class que informa del tipus d'element al proper a:item_type_class 
+                        </tal:comment>
                     <span class="summary"
                           tal:condition="python:item_type != 'Link'">
                         <img tal:replace="structure item_icon/html_tag" />
                         <a href="#"
                            tal:attributes="href python:test(item_type in use_view_action, item_url+'/view', item_url);
-                                           class string:$item_type_class $item_wf_state_class url"
+                                           class string:${item_wf_state_class} url"
                            tal:content="item_title_or_id">
                             Item Title
                         </a>
