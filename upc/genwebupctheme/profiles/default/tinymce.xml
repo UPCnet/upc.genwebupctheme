@@ -38,7 +38,7 @@
    <element value="ImageAttachment"/>
   </imageobjects>
   <link_using_uids value="True"/>
-  <rooted value="True"/>
+  <rooted value="False"/>
  </resourcetypes>
  <layout>
   <styles>
