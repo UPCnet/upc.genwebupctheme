@@ -58,7 +58,7 @@
 
         <dl metal:define-slot="entries">
             <tal:entry tal:repeat="item batch" metal:define-macro="entries">
-            <tal:block tal:define="item_url item/getURL|item/absolute_url;
+            <tal:block tal:condition="python: not item.exclude_from_nav" tal:define="item_url item/getURL|item/absolute_url;
                                    item_id item/getId|item/id;
                                    item_title_or_id item/pretty_title_or_id;
                                    item_description item/Description;

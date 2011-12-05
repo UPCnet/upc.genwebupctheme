@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.1.2 (2011-11-30)
+------------------
+* Arreglar vistes per exclude_from_nav
+* override de viewlet de related items
+
 3.3.6 (dev)(2010-12-17)
 -------------------------
 * Nous portlets Actualitat PDI/PAS.

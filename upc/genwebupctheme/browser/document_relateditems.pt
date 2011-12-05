@@ -22,9 +22,6 @@
                     item_wf_state_class python: 'state-' + normalizeString(item_wf_state);
                     item_url            item/getURL|item/absolute_url;
                     item_url            python:(item_type in use_view_action) and item_url+'/view' or item_url">
-                   <tal:comment tal:replace="nothing">
-                        @Genweb4: treiem la class que informa del tipus d'element al proper span:tal:attributes="class item_type_class"
-                    </tal:comment>                    
                 <span >
                     <img tal:replace="structure item_icon/html_tag" />
                     <a href="" class=""

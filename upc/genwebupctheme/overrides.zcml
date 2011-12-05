@@ -22,7 +22,21 @@
         class=".browser.viewlets.DocumentActions"
         permission="zope2.View" 
         />
-
+    <!-- Render the related items -->
+    <!--<browser:viewlet
+        name="plone.belowcontentbody.relateditems"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class="plone.app.layout.viewlets.content.ContentRelatedItems"        
+        permission="zope2.View" 
+        />-->
+    <browser:viewlet
+        name="plone.belowcontentbody.relateditems"
+        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+        class="plone.app.layout.viewlets.content.ContentRelatedItems"
+        view="plone.app.layout.globals.interfaces.IViewView"
+        template="browser/document_relateditems.pt"        
+        permission="zope2.View"
+        />
     <!-- The breadcrumbs -->
     <!-- El viewlet null per treure el breadcrumbs de l'arrel-->
     <browser:viewlet
