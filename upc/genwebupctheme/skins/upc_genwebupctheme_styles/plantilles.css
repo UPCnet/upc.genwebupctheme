@@ -54,25 +54,25 @@ form{ margin: 0; }
 .columnes{ margin: 0 0 0 -1.7em; border-collapse: collapse; line-height:1.5em}
 .columnes td{ padding: 0 1em 0 1.7em; vertical-align: top; width:50%}
 /*LlistatIndex, Llistat I i Llistat Enllacos GW3 */
-.llistatIndex ul, .llistatEnllacos ul{
+#mceTemplatePreview .llistatIndex ul, #content .llistatIndex ul, #content .llistatEnllacos ul{
 	margin: 15px 0 15px 0;
 	padding: 10px 0 5px 1px;
 	background-color: #F7F7F7;
 	background:url(fonsTG.gif) repeat-x bottom #F7F7F7;
 	border: 1px solid #d9d9d9;	
 	border-top: 2px solid #CCC}
-.llistatIndex li{
+#mceTemplatePreview .llistatIndex li, #content .llistatIndex li{
 	padding: 0 0 8px 0;
 	margin: 0 0 0 23px;
 	list-style: url(fletxa.gif) outside;}
-.llistatEnllacos ul{
+#mceTemplatePreview .llistatEnllacos ul, #content .llistatEnllacos ul{
 	margin: -5px 0 15px 0}
 
-.documentContent .llistatEnllacos li, .llistatEnllacos li{
+#mceTemplatePreview .llistatEnllacos li, .documentContent .llistatEnllacos li, #content .llistatEnllacos li{
 	padding: 0 0 10px 0;
 	list-style: url(fletxa.gif) inside;
 	margin: 0 0 0 10px}
-#content .llistatDestacat ul, #mceTemplatePreview .llistatDestacat ul {
+#mceTemplatePreview .llistatDestacat ul, #content .llistatDestacat ul, #mceTemplatePreview .llistatDestacat ul {
 	background:transparent url(fonsT.png) repeat-x scroll center bottom;
 	border:1px solid #ccc;
 	border-bottom:2px solid #ccc;
@@ -83,7 +83,7 @@ form{ margin: 0; }
 	border-radius:5px;
 	padding: 0 0 0 1em;
 }
-#content .llistatDestacat li, #mceTemplatePreview .llistatDestacat li {
+#mceTemplatePreview .llistatDestacat li, #content .llistatDestacat li, #mceTemplatePreview .llistatDestacat li {
 	background:transparent url(fletxaLD.gif) no-repeat scroll left center;
 	line-height:2em;
 	list-style-image:none !important;
@@ -91,9 +91,9 @@ form{ margin: 0; }
 	margin:0;
 	padding:0.5em 0 0.5em 1.5em;
 }
-.llistat { padding: 0 0 15px 0}
-.llistat ul{ margin: 0 0 0 12px; *margin: 0 0 0 16px}
-.llistat li{
+#mceTemplatePreview .llistat, #content .llistat { padding: 0 0 15px 0}
+#mceTemplatePreview .llistat ul, #content .llistat ul{ margin: 0 0 0 12px; *margin: 0 0 0 16px}
+#mceTemplatePreview .llistat li, #content .llistat li{
 	padding: 0 0 6px 0;
 	list-style: url(quadretGris.gif) outside;
 	border-bottom: 1px dotted #CCC}
@@ -410,6 +410,7 @@ div.w1 { width: 97.916% }
 .colSupDreta {position: absolute; right: 0; width: 200px;}
 .colSupEsq {margin-right: 220px;}
 .colSupDreta, .columnaEnllacosDreta {width:200px;}
+.colSupDreta .caixaPortlet {padding:0 10px !important;}
 .colSupDreta h2, .columnaEnllacosDreta h2 {border-top:0;margin:0 !important;background:transparent url(fletxaGo.gif) no-repeat scroll 0px -4px;padding:5px 0 5px 20px;}
 .colSupDreta li, .columnaEnllacosDreta li {
 	list-style-image:url(quadret.gif);
@@ -420,8 +421,8 @@ div.w1 { width: 97.916% }
 	line-height:1.5em;
 	border:0px !important;}
 .colSupDreta ul, .columnaEnllacosDreta ul {padding-bottom:5px;}
-.colSupDreta img, .columnaEnllacosDreta img {margin:5px 25px;border:1px solid #d9d9d9;}
-.colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:0px 25px 10px 25px;border:1px solid #007bc0;}
+.colSupDreta img, .columnaEnllacosDreta img {margin:5px 15px;border:1px solid #d9d9d9;}
+.colSupDreta a img:hover, .columnaEnllacosDreta a img:hover {margin:5px 15px;border:1px solid #007bc0;}
 .columnaseparador20 {width:20px !important;}
 
 
