@@ -85,7 +85,9 @@ function TinyMCEConfig(id) {
             livesearch : this.getLivesearch(),
             valid_elements : this.getValidElements(),
 extended_valid_elements : "strong/b,em/i",
-            valid_inline_styles : this.getValidInlineStyles(),
+valid_inline_styles : "vertical-align,background,border,bottom, clear,clip,color,cursor,direction,display,float,font,height,left,letter-spacing,line-height,list-style,margin,max-height,max-width,min-height,min-width,overflow,padding,position,right,table-layout,text,top,visibility,width,white-space,word,z-index ",
+            //valid_inline_styles : this.getValidInlineStyles(),
+
             link_using_uids : this.getLinkUsingUids(),
             allow_captioned_images : this.getAllowCaptionedImages(),
             rooted : this.getRooted(),
@@ -95,10 +97,10 @@ forced_root_block : false,
 force_br_newlines : true,
 force_p_newlines : false,
 
+
 //theme_advanced_styles : "'=,Arxiu_PDF=pdf,Arxiu_DOC=doc,Arxiu_PPT=ppt,Arxiu_XLS=xls,Arxiu_TXT=txt,Arxiu_Video=vid,Arxiu_Imatge=img,Cadenat_HTTPS=https,Descarrega_Arxiu=down,Text_Petit=small;Imatge_Dreta=imgDreta,Imatge_Esquerra=imgEsquerra,Elimina_Marges=margezero,Text_correcte=ins,Text_incorrecte=del '",
 theme_advanced_blockformats : "p,div,h2,h3,h4"
         };
-
         window.tinyMCE.init(init_dict);
     };
 
