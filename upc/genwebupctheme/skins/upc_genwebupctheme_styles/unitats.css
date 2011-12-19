@@ -21,19 +21,19 @@
 	background: no-repeat;
 	margin: 10px 0}
 .daltMenu{
-	height:103px;
+	height:101px;
 	border-right: 2px solid #fff}
 .alpha{
 	background:url(pixelAlpha.png);
 	_background: none; 
 	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="pixelAlpha.png",sizingMethod="scale");}
-.imgUnitatsClick {
-	height:103px}
 html*.imgUnitatsClick{
 	height:97px}
 .imgUnitatsClick {
 	height: 103px !important;
-	*height:103px !important;}
+	*height:101px !important;}
+html>/**/body .imgUnitatsClick, x:-moz-any-link, x:default { height:101px !important;} /*soluciona bug a FF gecko*/
+
 .daltMenuPrimer{
 	border-left: 2px solid #fff}
 .baixMenu{
