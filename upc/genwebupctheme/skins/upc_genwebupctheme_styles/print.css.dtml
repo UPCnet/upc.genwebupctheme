@@ -25,6 +25,8 @@ html .cell, html .row {float:none !important; margin:0 !important; margin-left:0
 
 .banerMasters, .barraBranca_m, #edit-bar {display:none !important;}
 .titolSeccio, .portletNavigationTree {display:none !important;}
+.columnaEsq, .columnaDreta {width:50% !important; margin-bottom:2em;}
+.caixaPortlet {width:auto !important;}
 .columnaCentre {width:auto !important; margin:0;}
 
 
