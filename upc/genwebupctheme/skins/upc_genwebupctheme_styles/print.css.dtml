@@ -6,16 +6,19 @@ body {
     background:none !important;
 }
 h1, h2, h3, h4, h5, h6, .titular1, .titular2, .titular3 {    border: none;    font-weight:bold;    font-family: Helvetica, Arial, Verdana, sans-serif;}
+h1, h2, h3 {text-shadow: 0 2pt 5pt 3px #ccc !important;}
+p,h1,h2,h3,h4,h5,h6 {word-wrap: break-word;}
 div, p, ul, dl, ol {    width: auto;}
 ul, ol, dl {    padding-right: 0.5em;	}
 ul {     list-style-type: square;}
 .documentDescription {    font-weight: bold;}
 /* oculta elements irrellevants per imprimir */
-.discussion,.banda img,.imatgeCapcaleraUnitat,.liniaActivaDreta,.liniaActivaEsq,.degradat,.logoNeutre2,.imatgeCapcaleraNeutre2,#capcalera,.validacio,.barra_idiomes,.barraCerca,#link-presentation,
+.reply, .socialtools, .discussion,.banda img,.imatgeCapcaleraUnitat,.liniaActivaDreta,.liniaActivaEsq,.degradat,.logoNeutre2,.imatgeCapcaleraNeutre2,#capcalera,.validacio,.barra_idiomes,.barraCerca,#link-presentation,
 .fletxatop,div.top,#portal-logo,#portal-siteactions,.hiddenStructure,#portal-searchbox,#portal-globalnav,#portal-personaltools,#portal-personaltools-wrapper,.barra_idiomes,
 #portal-breadcrumbs,#portal-column-one,#portal-column-two,#portal-languageselector,.contentViews,.contentActions,.help,.legend,.portalMessage,.documentActions,.documentByLine,
 .netscape4,#portal-footer,#portal-colophon,.skipnav,#kss-spinner,#review-history,#content-history,.listingBar,.visualNoPrint {    display: none;}
 .managePortletsFallback, .imatgeCapcalera_m, #logoNeutre3 {display:none;}
+p {margin:}
 /*imatges dels models*/
 
 #portal-column-content.sl {margin-left:0px !important;}
@@ -40,6 +43,14 @@ html .cell, html .row {float:none !important; margin:0 !important; margin-left:0
 
 .titolWeb, .titolWeb_n2 {min-width:0 !important;margin:2px 0 0 0 !important; padding:0 !important;text-align:left !important;}
 .titolWeb_m {min-width:0 !important;margin:5px 0 0 125px !important; padding:0 !important;position:absolute;}
+
+
+.titolWeb img[title]:after {
+	content: attr(title);
+	font-size: 150%;
+	height:30px;
+}
+
 .titolBranca_m {margin:80px 0 0 0 !important; padding:0 !important;width:100% !important;text-align:right !important;}
 .barraBranca_m table {text-align:right !important; width: 100% !important;}
 .barraBranca_m table td {text-align:right !important; width:100% !important;}

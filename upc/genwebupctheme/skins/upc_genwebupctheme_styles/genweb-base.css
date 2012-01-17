@@ -531,10 +531,15 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 	font-size:90%;}
 .LSShadow {
 	white-space:normal !important;
-	line-height:0em;}
+	line-height:1.5em;}
 .image-inline {
 	border:0px solid #999999;
 	padding:0;}
+.LSDescr {
+	line-height: 1.5em;
+	margin: .5em 0 .5em 25px;
+	font-size: .93em;
+}
 /*idiomes*/
 .barra_idiomes {
 	font-size:0.9em;
@@ -887,11 +892,11 @@ dl.collapsedInlineCollapsible {
 	margin:0.5em 0 0 1.75em;
 	*margin:0.5em 0 0 2.15em;}
 
-.documentContent ul {list-style-image:none;list-style-type:none;}
-.documentContent ul li, #content-core ul li{list-style-image:url(quadret.gif);list-style-position:outside;list-style-type:square;margin-bottom:0.5em;}
-.documentContent ul, #content-core ul {margin-left:1.5em;}
-.documentContent ul li ul, #content-core ul li ul {margin-left:2em;}
-.documentContent ul li ul li, #content-core ul li ul li {list-style-image:url(quadretGris.gif);}
+.documentContent ul, #collage ul {list-style-image:none;list-style-type:none;}
+.documentContent ul li, #content-core ul li, #collage ul li {list-style-image:url(quadret.gif);list-style-position:outside;list-style-type:square;margin-bottom:0.5em;}
+.documentContent ul, #content-core ul, #collage ul {margin-left:1.5em;}
+.documentContent ul li ul, #content-core ul li ul, #collage ul li ul {margin-left:2em;}
+.documentContent ul li ul li, #content-core ul li ul li, #collage ul li ul li {list-style-image:url(quadretGris.gif);}
 
 
 .columnaCentre ul li{list-style-image:url(quadret.gif);list-style-position:outside;list-style-type:square;margin-bottom:0.5em;}
@@ -2966,6 +2971,7 @@ div.position-2\3a 3 {margin-left: -31.08%;} /* .position-2:3 */
 
 
 .socialtools {height: 16px; margin-bottom: 10px; margin-top: -20px !important; float:right; }
+#collage .socialtools {margin-top: 0 !important; }
 .socialtools a, .socialtools span {float: left;margin-left: 2px; font-weight:bold; color:#666;}
 span.mceEditor{background:#f7f7f7 !important; display:block;}
 #content img.tileImage, #content div.newsImageContainer {float: right;margin: 0 1em 0.5em 1em;}
