@@ -13,6 +13,14 @@
    <element value="News Item"/>
    <element value="Event"/>
    <element value="FileAttachment"/>
+   <element value="Seccio"/>
+   <element value="simpleTask"/>
+   <element value="Meeting"/>
+   <element value="Survey"/>
+   <element value="Ploneboard"/>
+   <element value="PloneboardForum"/>
+   <element value="Collage"/>
+   <element value="PlonePopoll"/>
   </linkable>
   <customplugins>
    <element value="ploneimage"/>
@@ -29,6 +37,8 @@
   <allow_captioned_images value="False"/>
   <containsobjects>
    <element value="Folder"/>
+   <element value="Seccio"/>
+   <element value="Ploneboard"/>
    <element value="Large Plone Folder"/>
    <element value="Plone Site"/>
   </containsobjects>
@@ -42,6 +52,28 @@
  </resourcetypes>
  <layout>
   <styles>
+   <element value="Heading|h2"/>
+   <element value="Subheading|h3"/>
+   <element value="Literal|pre"/>
+   <element value="Discreet|span|discreet"/>
+   <element value="Pull-quote|blockquote|pullquote"/>
+   <element value="Call-out|p|callout"/>
+   <element value="Highlight|span|visualHighlight"/>
+   <element value="Disc|ul|listTypeDisc"/>
+   <element value="Square|ul|listTypeSquare"/>
+   <element value="Circle|ul|listTypeCircle"/>
+   <element value="Numbers|ol|listTypeDecimal"/>
+   <element value="Lower Alpha|ol|listTypeLowerAlpha"/>
+   <element value="Upper Alpha|ol|listTypeUpperAlpha"/>
+   <element value="Lower Roman|ol|listTypeLowerRoman"/>
+   <element value="Upper Roman|ol|listTypeUpperRoman"/>
+   <element value="Definition term|dt"/>
+   <element value="Definition description|dd"/>
+   <element value="Odd row|tr|odd"/>
+   <element value="Even row|tr|even"/>
+   <element value="Heading cell|th|"/>
+   <element value="Page break (print only)|div|pageBreak"/>
+   <element value="Clear floats|div|visualClear"/>
    <element value="Arxiu PDF|span|pdf"/>
    <element value="Arxiu DOC|span|doc"/>
    <element value="Arxiu PPT|span|ppt"/>
@@ -62,6 +94,11 @@
    <element value="Capçalera taula|tr|cap"/>
   </styles>
   <tablestyles>
+   <element value="Subdued grid|plain"/>
+   <element value="Invisible grid|invisible"/>
+   <element value="Fancy listing|listing"/>
+   <element value="Fancy grid listing|grid listing"/>
+   <element value="Fancy vertical listing|vertical listing"/>
    <element value="Taula simple|minimal"/>
    <element value="Taula simple [ample 100%]|minimal w100"/>
    <element value="Graella invisible|invisible"/>
