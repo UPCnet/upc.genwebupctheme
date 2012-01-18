@@ -168,10 +168,7 @@ class eines(ViewletBase):
             member = self.portal_state.member()
             userid = member.getId()
 
-            if sm.checkPermission('Portlets: Manage own portlets', self.context):
-                self.homelink_url = self.site_url + '/dashboard'
-            else:
-                self.homelink_url = self.site_url + '/author/' + quote_plus(userid)
+            self.homelink_url = self.site_url + '/author/' + quote_plus(userid)
 
             member_info = tools.membership().getMemberInfo(member.getId())
             fullname = member_info.get('fullname', '')
