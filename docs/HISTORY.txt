@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.1.6 (unreleased)
+4.1.6 (2012-01-19)
 ------------------
 - Canvis SCP
 - Fixed: cerca amb livesearch al marcar el checkbox intranet
