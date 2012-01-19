@@ -27,7 +27,7 @@
 				<div class="plain" tal:define="data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
                                                mobilitat python: utils.getMobilitatEstudis(utils.getGWConfig().idtitulacioMaster)">
 				<iframe class="info-master" frameborder="0" 
-					tal:attributes="src python: 'http://www.upc.edu/master/fitxa_master.php?id_estudi='+str(utils.getGWConfig().idestudiMaster)+'&id_titulacio='+str(utils.getGWConfig().idtitulacioMaster)+'&lang=cat&origen=1'"
+					tal:attributes="src python: 'http://www.upc.edu/master/fitxa_master.php?id_estudi='+str(utils.getGWConfig().idestudiMaster)+'&id_titulacio='+str(utils.getGWConfig().idtitulacioMaster)+'&lang='+view.get_fitxa_lang(lang_code)+'&origen=1'"
 					height="1500px" width="100%">
 					</iframe>
 				</div>

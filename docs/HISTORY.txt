@@ -1,6 +1,17 @@
 Changelog
 =========
 
+4.1.6 (2012-01-19)
+------------------
+- Canvis SCP
+- Fixed: cerca amb livesearch al marcar el checkbox intranet
+
+4.1.5 (2011-12-19)
+------------------
+* Updates SCP
+* Treure addthis del sabor intranet
+* Info general dels masters segons l'idioma del genweb
+
 4.1.4 (2011-13-15)
 ------------------
 * Updates SCP
