@@ -390,7 +390,7 @@ padding:0 0 10px 10px;
 /*contenidor*/
 .gb {background:#fff url(fonsT.png) repeat-x scroll center bottom;border:1px solid #d9d9d9;margin-bottom:1em;margin-top:0;padding:0.5em 0.75em;}
 /*columnats deco*/
-div.fila {display:block;float:left;position:relative;width:100%;margin-bottom:1em;}
+div.fila {display:inline-block;float:none;position:relative;width:100%;margin-bottom:1em;}
 div.cella {position: relative; float: left; left: 100%;}
 div.p0  { margin-left: -100%}
 div.w1\3a 2, div.w2\3a 4 { width:    47.91667% } /* 1:2 / 2:4 */
@@ -440,3 +440,5 @@ table.minimal tfoot {font-size:.8em; color:#666; background:#f7f7f7; padding:0;}
 table.minimal tfoot tr {padding:0;}
 .w100 {width:100% !important;}
 
+/*solucio problemes IE7 i menus esquerres que no es colloquen be*/
+div.cell {float:left !important;}
