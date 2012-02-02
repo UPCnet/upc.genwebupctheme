@@ -215,4 +215,14 @@
         class=".browser.viewlets.GlobalSections"
         permission="zope2.View" 
         />
+
+    <!-- Portlets en Dashboard -->
+
+    <browser:view
+        for="plone.portlets.interfaces.IPortletAssignmentMapping"
+        name="+"
+        class="plone.app.portlets.browser.adding.PortletAdding"
+        allowed_interface="plone.app.portlets.browser.interfaces.IPortletAdding"
+        permission="plone.app.portlets.ManageOwnPortlets" />
+
 </configure>
