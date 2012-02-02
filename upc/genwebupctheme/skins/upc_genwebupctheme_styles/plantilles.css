@@ -440,5 +440,7 @@ table.minimal tfoot {font-size:.8em; color:#666; background:#f7f7f7; padding:0;}
 table.minimal tfoot tr {padding:0;}
 .w100 {width:100% !important;}
 
+.grid td {border:1px solid #ccc;}
+
 /*solucio problemes IE7 i menus esquerres que no es colloquen be*/
 div.cell {float:left !important;}
