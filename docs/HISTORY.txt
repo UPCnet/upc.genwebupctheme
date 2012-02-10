@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.1.7 (2012-02-10)
+------------------
+- Canvis SCP
+- Plantilles i capsalera SCP
+
 4.1.6 (2012-01-19)
 ------------------
 - Canvis SCP
