@@ -1,6 +1,10 @@
 Changelog
 =========
 
+4.1.8 (unreleased)
+------------------
+- Fixed: visualització subcapetes en una col·lecció (també en aquesta secció)
+
 4.1.7 (2012-02-10)
 ------------------
 - Canvis SCP
