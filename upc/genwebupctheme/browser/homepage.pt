@@ -34,10 +34,6 @@
     		<div class="columnaCentre">
 			<table summary="contingut"><caption>Contingut</caption><tr><td> 
 				<!-- Columna Central -->
-				<div tal:define="front view/getFrontPage">
-					<!-- h1 tal:content="front/title">Titol principal</h1 -->
-					<div tal:replace="structure front/body">Cos de la pagina principal</div>
-				</div>
 				<div>
                     <div tal:replace="structure provider:genweb.portlets.HomePortletManager1" /> 
 				</div>
