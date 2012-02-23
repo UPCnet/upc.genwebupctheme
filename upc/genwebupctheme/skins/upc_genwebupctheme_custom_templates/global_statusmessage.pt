@@ -12,7 +12,7 @@
              tal:define="mtype message/type | nothing;"
              tal:attributes="class string:portalMessage ${mtype};">
             <div class="portalMessage_left" tal:content="python:mtype.capitalize()" i18n:translate="">Info</div>
-            <div class="portalMessage_right" tal:content="message/message | nothing" i18n:translate="">
+            <div class="portalMessage_right" tal:content="structure message/message | nothing" i18n:translate="">
                 The status message.
             </div>
         </div>
