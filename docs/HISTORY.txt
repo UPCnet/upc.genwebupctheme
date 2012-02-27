@@ -6,6 +6,7 @@ Changelog
 - Fixed: visualització subcapetes en una col·lecció (també en aquesta secció)
 - Desactivar la conversió de url per part del tiny
 - Permetre missatges d'estat en format html
+- Canvi servidor MySQL a nucli.upc.edu
 
 4.1.7 (2012-02-10)
 ------------------
