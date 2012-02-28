@@ -133,7 +133,7 @@ class utilitats(BrowserView):
         return _dictResult
 
     def connectDatabase(self):
-        return MySQLdb.connect(host='nucli.upc.edu', user='cons-webupc', passwd='qstacll', db='www-webupc')
+        return MySQLdb.connect(host='raiden.upc.es', user='cons-webupc', passwd='qstacll', db='www-webupc')
         #return MySQLdb.connect(host='raiden.upc.es',user='consulta',passwd='c0ns4lt4',db='www-estudis')
 
     def change2UTF(self, c):
