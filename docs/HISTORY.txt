@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.1.8 (unreleased)
+4.1.8 (2012-03-01)
 ------------------
 - Fixed: visualització subcapetes en una col·lecció (també en aquesta secció)
 - Desactivar la conversió de url per part del tiny
