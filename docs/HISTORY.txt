@@ -1,6 +1,10 @@
 Changelog
 =========
 
+4.1.9 (2012-03-15)
+------------------
+- Fixed: Link en titol masters
+
 4.1.8 (2012-03-01)
 ------------------
 - Fixed: visualització subcapetes en una col·lecció (també en aquesta secció)
