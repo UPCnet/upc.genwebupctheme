@@ -10,15 +10,15 @@
     <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Master')">
 
 			<a class="bMm" tal:condition="python:utils.pref_lang()=='ca'"
-	 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="Màsters universitaris UPC">
+	 			href="http://www.upc.edu/aprendre/estudis/master-universitari?set_language=ca" target="_blank" title="Màsters universitaris UPC">
 				<span>Màsters universitaris UPC</span>
 			</a>
 			<a class="bMm" tal:condition="python:utils.pref_lang()=='es'"
-	 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="Másters universitarios UPC">
+	 			href="http://www.upc.edu/aprender/estudios/master-universitario?set_language=es" target="_blank" title="Másters universitarios UPC">
 				<span>Másters universitarios UPC</span>
 			</a>
 			<a class="bMm" tal:condition="python:utils.pref_lang()=='en'"
-	 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="UPC master's degrees">
+	 			href="http://www.upc.edu/learning/courses/masters-degrees-courses?set_language=en" target="_blank" title="UPC master's degrees">
 				<span>UPC master's degrees</span>
 			</a>					
 	</tal:span>    		
@@ -26,15 +26,15 @@
 <!-- DOCTORAT -->
   <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')">
 		<a class="bMd" tal:condition="python:utils.pref_lang()=='ca'"
- 			href="http://doctorat.upc.edu" target="_blank" title="Doctorats UPC">
+ 			href="http://doctorat.upc.edu/?set_language=ca" target="_blank" title="Doctorats UPC">
 			<span>Doctorats UPC</span>
 		</a>
 		<a class="bMd" tal:condition="python:utils.pref_lang()=='es'"
- 			href="http://doctorado.upc.edu" target="_blank" title="Doctorados UPC">
+ 			href="http://doctorat.upc.edu/?set_language=es"  target="_blank" title="Doctorados UPC">
 			<span>Doctorados UPC</span>
 		</a>
 		<a class="bMd" tal:condition="python:utils.pref_lang()=='en'"
- 			href="http://doctorate.upc.edu" target="_blank" title="UPC doctoral degrees">
+ 			href="http://doctorat.upc.edu/?set_language=en" target="_blank" title="UPC doctoral degrees">
 			<span>UPC doctoral degrees</span>
 		</a>
 
@@ -43,27 +43,27 @@
 <!-- MÀSTER i DOCTORAT -->    		
     <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">
 			<a class="bMmd" tal:condition="python:utils.pref_lang()=='ca'"
-	 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="Màsters universitaris UPC">
+	 			href="http://www.upc.edu/aprendre/estudis/master-universitari?set_language=ca" target="_blank" title="Màsters universitaris UPC">
 				<span>Màsters universitaris UPC</span>
 			</a>
 			<a class="bMmd" tal:condition="python:utils.pref_lang()=='es'"
-	 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="Másters universitarios UPC">
+	 			href="http://www.upc.edu/aprender/estudios/master-universitario?set_language=es" target="_blank" title="Másters universitarios UPC">
 				<span>Másters universitarios UPC</span>
 			</a>
 			<a class="bMmd" tal:condition="python:utils.pref_lang()=='en'"
-	 			href="http://mastersuniversitaris.upc.edu" target="_blank" title="UPC master's degrees">
+	 			href="http://www.upc.edu/learning/courses/masters-degrees-courses?set_language=en" target="_blank" title="UPC master's degrees">
 				<span>UPC master's degrees</span>
 			</a>
 			<a class="bMmd" tal:condition="python:utils.pref_lang()=='ca'"
-	 			href="http://doctorat.upc.edu" target="_blank" title="Doctorats UPC">
+	 			href="http://doctorat.upc.edu/?set_language=ca" target="_blank" title="Doctorats UPC">
 				<span>Doctorats UPC</span>
 			</a>
 			<a class="bMmd" tal:condition="python:utils.pref_lang()=='es'"
-	 			href="http://doctorado.upc.edu" target="_blank" title="Doctorados UPC">
+	 			href="http://doctorat.upc.edu/?set_language=es" target="_blank" title="Doctorados UPC">
 				<span>Doctorados UPC</span>
 			</a>
 			<a class="bMmd" tal:condition="python:utils.pref_lang()=='en'"
-	 			href="http://doctorate.upc.edu" target="_blank" title="UPC doctoral degrees">
+	 			href="http://doctorat.upc.edu/?set_language=en" target="_blank" title="UPC doctoral degrees">
 				<span>UPC doctoral degrees</span>
 			</a>
 		
