@@ -3,7 +3,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '4.1.9'
+version = '4.1.10'
 
 setup(name='upc.genwebupctheme',
       version=version,
