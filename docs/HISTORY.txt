@@ -1,6 +1,11 @@
 Changelog
 =========
 
+4.1.9 (unreleased)
+------------------
+
+* Cambio del servidor de la bdd raiden.upc.es por nucli.upc.edu
+
 4.1.8 (2012-03-01)
 ------------------
 - Fixed: visualització subcapetes en una col·lecció (també en aquesta secció)
