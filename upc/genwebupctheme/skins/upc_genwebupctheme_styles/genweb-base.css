@@ -2819,16 +2819,16 @@ width: 98% !important;
 }
 
 /*icones als links, fet generic al genweb per a tot element*/
-.https {background:url(lock.gif) no-repeat center right; padding-right:15px;}
-.pdf {background:url(pdfmini.gif) no-repeat center right; padding-right:15px;}
-.doc {background:url(doc.gif) no-repeat center right; padding-right:15px;}
-.xls {background:url(xls.gif) no-repeat center right; padding-right:15px;}
-.ppt {background:url(ppt.gif) no-repeat center right; padding-right:15px;}
-.txt {background:url(txt.gif) no-repeat center right; padding-right:15px;}
-.down {background:url(down.gif) no-repeat center right; padding-right:15px;}
-	.template-manage-viewlets .down, .portletAssignments .down {background:none; padding-right:0;}
-.vid {background:url(play.gif) no-repeat center right; padding-right:15px;}
-.img {background:url(img.gif) no-repeat center right; padding-right:15px;}
+.https {background:url(lock.gif) no-repeat center right; padding-right:15px !important;}
+.pdf {background:url(pdfmini.gif) no-repeat center right; padding-right:15px !important;}
+.doc {background:url(doc.gif) no-repeat center right; padding-right:15px !important;}
+.xls {background:url(xls.gif) no-repeat center right; padding-right:15px !important;}
+.ppt {background:url(ppt.gif) no-repeat center right; padding-right:15px !important;}
+.txt {background:url(txt.gif) no-repeat center right; padding-right:15px !important;}
+.down {background:url(down.gif) no-repeat center right; padding-right:15px !important;}
+	.template-manage-viewlets .down, .portletAssignments .down {background:none; padding-right:0 !important;}
+.vid {background:url(play.gif) no-repeat center right; padding-right:15px !important;}
+.img {background:url(img.gif) no-repeat center right; padding-right:15px !important;}
 
 .margezero {margin:0 !important;}
 
@@ -2979,3 +2979,5 @@ table.mceLayout {width:100% !important;}
 dt span[class^="contenttype"] {padding:5px 0;}
 
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }
+
+.kssattr-formname-gn6-recollir-dades .field { padding-top: 0px; }
