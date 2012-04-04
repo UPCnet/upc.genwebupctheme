@@ -1,8 +1,8 @@
 Changelog
 =========
 
-4.1.10 (unreleased)
-------------------
+4.1.10 (2012-04-04)
+-------------------
 * Cambio del servidor de la bdd raiden.upc.es por nucli.upc.edu
 
 4.1.9 (2012-03-15)
