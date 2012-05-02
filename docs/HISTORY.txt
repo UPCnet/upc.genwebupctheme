@@ -1,6 +1,10 @@
 Changelog
 =========
 
+4.2 (Unreleased)
+-------------------
+* Eliminación pt's y funciones obsoletas para la generación de la Info de los Masters y Postgrados
+
 4.1.10 (2012-04-04)
 -------------------
 * Cambio del servidor de la bdd raiden.upc.es por nucli.upc.edu

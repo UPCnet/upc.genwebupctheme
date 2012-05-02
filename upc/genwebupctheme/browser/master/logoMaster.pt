@@ -1,47 +1,32 @@
 <div tal:define="portal_url context/@@plone_portal_state/portal_url;
                  utils context/@@upc.genweb.utils;
                  langtool nocall:context/portal_languages;
-                 lang_code langtool/getPreferredLanguage;
-                 data python: utils.select_ambit(utils.getGWConfig().idtitulacioMaster)">
-          
-          
+                 lang_code langtool/getPreferredLanguage;">
 
-<div class="barraBranca_m">
-<div> 
+    <div class="barraBranca_m">
+        <div> 
+            <table>
+                <tbody>
+                    <tr valign="bottom">	
+                        <td>
+                            <div class="titolBranca_m">
+                            	<span class="cursMaster" i18n:domain="upc.genwebupc" i18n:translate="master_curso"></span> 
+                			    <span class="cursMaster" tal:content="python: utils.getTextMaster('any_academic', lang_code)"> 2008/2009 </span>
+                 	        </div>
 
-<table>
-    <tbody>
-        <tr valign="bottom">	
-            <td>
-            <div class="titolBranca_m">
-            	<span class="cursMaster" i18n:domain="upc.genwebupc" i18n:translate="master_curso"></span> 
-			        <span class="cursMaster" tal:content="python: utils.getTextMaster('any_academic', lang_code)"> 2008/2009 </span>
-			      </div>
-<!--
-        
-            	<div class="titolBranca_m" 
-            		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')"
-            	     tal:content="python: utils.fields2Dic(utils.getGWConfig().ambitdoctorat_ca,utils.getGWConfig().ambitdoctorat_es,utils.getGWConfig().ambitdoctorat_en)['doc_'+lang_code]">Titol de capsalera del master
-            	</div>
-            	<div class="titolBranca_m" 
-            		 tal:condition="python: utils.getGWConfig().masterdoctorado==('Master') or utils.getGWConfig().masterdoctorado==('Master i Doctorat')"
-            	     tal:content="python: data['ua.nom_'+utils.cambiaPrefijo(lang_code)]">Titol de capsalera del master
-            	</div>
--->
-           	</td> 
-            
-            <td class="imatgeCapcalera_m">
-                <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg" alt=" "/>
-            </td>
-        </tr>
-    </tbody>
-</table> 
+                       	</td> 
+                        
+                        <td class="imatgeCapcalera_m">
+                            <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg" alt=" "/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+    </div>
 
+    <div class="liniaPrincipal_m"> </div>
 
-</div>
-</div>
-
-<div class="liniaPrincipal_m"> </div>
 </div>
 
 

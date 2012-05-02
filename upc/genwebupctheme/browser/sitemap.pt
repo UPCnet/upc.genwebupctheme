@@ -33,8 +33,7 @@
 			tal:define="langtool nocall:context/portal_languages;
 	                lang_code langtool/getPreferredLanguage;
                   pURL python:context.portal_url();
-                  utils context/@@upc.genweb.utils;
-                  records python: view.getMasterInfoGeneral(view.getGWConfig().idtitulacioMaster,view.getGWConfig().idestudiMaster);">
+                  utils context/@@upc.genweb.utils;">
 
 	    <li class="navTreeItem visualNoMarker">    
    			<div>

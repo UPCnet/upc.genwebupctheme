@@ -24,8 +24,7 @@
         		<h1 class="documentFirstHeading" tal:condition="python: not utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral',lang_code)">Informació General</h1>
         		<h1 class="documentFirstHeading" tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral_masters',lang_code)">Informació General</h1>
 		
-				<div class="plain" tal:define="data python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
-                                               mobilitat python: utils.getMobilitatEstudis(utils.getGWConfig().idtitulacioMaster)">
+				<div class="plain">
 				<iframe class="info-master" frameborder="0" 
 					tal:attributes="src python: 'http://www.upc.edu/master/fitxa_master.php?id_estudi='+str(utils.getGWConfig().idestudiMaster)+'&id_titulacio='+str(utils.getGWConfig().idtitulacioMaster)+'&lang='+view.get_fitxa_lang(lang_code)+'&origen=1'"
 					height="1500px" width="100%">

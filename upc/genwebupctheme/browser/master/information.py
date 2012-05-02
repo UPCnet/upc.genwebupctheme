@@ -25,15 +25,3 @@ class infoGeneralView(BrowserView):
            return fitxa_codes[code]
         else:
            return fitxa_codes['es']
-
-class competenciesView(BrowserView):
-	implements(Icompetencies)
-	__call__=ViewPageTemplateFile('competencies.pt')
-    
-class requisitsView(BrowserView):
-	implements(Irequisits)
-	__call__=ViewPageTemplateFile('requisits.pt')
-
-class preinscripcioView(BrowserView):
-	implements(Ipreinscripcio)
-	__call__=ViewPageTemplateFile('preinscripcio.pt')

@@ -23,12 +23,6 @@
         permission="zope2.View" 
         />
     <!-- Render the related items -->
-    <!--<browser:viewlet
-        name="plone.belowcontentbody.relateditems"
-        manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
-        class="plone.app.layout.viewlets.content.ContentRelatedItems"        
-        permission="zope2.View" 
-        />-->
     <browser:viewlet
         name="plone.belowcontentbody.relateditems"
         manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
@@ -56,46 +50,7 @@
         permission="zope2.View" 
         />
 	<!-- Breadcrumbs adaptats pel sabor de masters -->
-    <browser:viewlet
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".browser.viewlets.PathBarRoot"
-		view="upc.genwebupctheme.browser.master.information.IinfoGeneral"
-        layer=".browser.interfaces.IThemeSpecificMaster"
-		template="browser/master/bGeneral_inf.pt"
-        permission="zope2.View" 
-        />	
-    <browser:viewlet
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".browser.viewlets.PathBarRoot"
-		view="upc.genwebupctheme.browser.master.information.Icompetencies"
-        layer=".browser.interfaces.IThemeSpecificMaster"
-		template="browser/master/bCompetencies.pt"
-        permission="zope2.View" 
-        />	
-    <browser:viewlet
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".browser.viewlets.PathBarRoot"
-		view="upc.genwebupctheme.browser.master.information.Irequisits"
-        layer=".browser.interfaces.IThemeSpecificMaster"
-		template="browser/master/bRequisits.pt"
-        permission="zope2.View" 
-        />	
-    <browser:viewlet
-        for="Products.CMFPlone.interfaces.IPloneSiteRoot"
-        name="plone.path_bar"
-        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class=".browser.viewlets.PathBarRoot"
-		view="upc.genwebupctheme.browser.master.information.Ipreinscripcio"
-        layer=".browser.interfaces.IThemeSpecificMaster"
-		template="browser/master/bPreinscripcio.pt"
-        permission="zope2.View" 
-        />	
+
 
 	<!-- path_bar per totes les altres vistes, per layer -->
     <browser:viewlet

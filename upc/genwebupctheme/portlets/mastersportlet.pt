@@ -6,8 +6,7 @@
 	            url_actual python: request.ACTUAL_URL.split('/')[-1];
 	            pURL python:context.portal_url()">
 	
-	<div tal:define="records python: utils.getMasterInfoGeneral(utils.getGWConfig().idtitulacioMaster,utils.getGWConfig().idestudiMaster);
-                     preinscripcion_data python: utils.getPreinscripcioData(utils.getGWConfig().idestudiMaster)" tal:omit-tag="">
+	<div>
 
 		<ul class="portletNavigationTree navTreeLevel0">
 		 	<li class="navTreeItem visualNoMarker" >

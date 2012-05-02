@@ -32,20 +32,6 @@ class GlobalSections(GlobalSectionsViewlet):
 
 class PathBarRoot(PathBarViewlet):
     index = ViewPageTemplateFile('null.pt')
-    # GW4 Superseeded afegint directives al overrides.zcml (previament, posat a la nevera)
-    # def __init__(self, context, request, view, manager=None):
-    #     super(PathBarViewlet, self).__init__(context,request,view, manager)
-    # 
-    #     if IinfoGeneral.providedBy(self.view):
-    #         self.index = ViewPageTemplateFile('bGeneral_inf.pt')
-    #     elif Icompetencies.providedBy(self.view):
-    #         self.index = ViewPageTemplateFile('bCompetencies.pt')
-    #     elif Irequisits.providedBy(self.view):
-    #         self.index = ViewPageTemplateFile('bRequisits.pt')
-    #     elif Ipreinscripcio.providedBy(self.view):
-    #         self.index = ViewPageTemplateFile('bPreinscripcio.pt')
-    #     else:
-    #         self.index = ViewPageTemplateFile('null.pt')
 
 class DarreraModificacio(ViewletBase):
     
