@@ -7,15 +7,7 @@
         <div> 
             <table>
                 <tbody>
-                    <tr valign="bottom">	
-                        <td>
-                            <div class="titolBranca_m">
-                            	<span class="cursMaster" i18n:domain="upc.genwebupc" i18n:translate="master_curso"></span> 
-                			    <span class="cursMaster" tal:content="python: utils.getTextMaster('any_academic', lang_code)"> 2008/2009 </span>
-                 	        </div>
-
-                       	</td> 
-                        
+                    <tr valign="bottom">                      
                         <td class="imatgeCapcalera_m">
                             <img tal:attributes="src string:${portal_url}/imatgeMaster.jpg" alt=" "/>
                         </td>
