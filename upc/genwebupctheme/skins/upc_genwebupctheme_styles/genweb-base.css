@@ -629,6 +629,7 @@ a span.state-pending {
 .state-esborrany {
 	color: #7dcc00 !important;
 	background: none !important;}
+.template-folder_contents .state-esborrany {background-image: url(spriteStates.png) !important;}
 span.state-esborrany,
 td.state-esborrany {
 	color: #7dcc00 !important;
