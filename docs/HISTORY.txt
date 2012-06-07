@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.2 (Unreleased)
+4.1.11 (2012-05-03)
 -------------------
 * Eliminación pt's y funciones obsoletas para la generación de la Info de los Masters y Postgrados
 
