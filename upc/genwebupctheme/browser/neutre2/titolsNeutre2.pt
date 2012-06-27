@@ -1,81 +1,41 @@
-  <tal:capsalera define="utils context/@@upc.genweb.utils;
+<tal:capsalera define="utils context/@@upc.genweb.utils;
                          portal_url context/@@plone_portal_state/portal_url;">
+
+
+                        
+    <div class="logo">
+
+        <img usemap="#logoUPC" title="Universitat Politècnica de Catalunya · BarcelonaTech" alt="Universitat Politècnica de Catalunya · BarcelonaTech"       
+        tal:attributes="src string:${portal_url}/LogoUPC.png"/>
     
-<div class="clearAll_n2">    
+        <map name="logoUPC" id="logoUPC"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" alt="Universitat Politècnica de Catalunya · BarcelonaTech" title="Universitat Politècnica de Catalunya · BarcelonaTech" /></map>
 
-    <div class="logo_n2">
-        <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya. BarcelonaTech" title="Universitat Politècnica de Catalunya. BarcelonaTech" 
-            tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
-        <map name="logoUPC" id="logoUPC" title="Universitat Politècnica de Catalunya. BarcelonaTech"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="_blank" title="Universitat Politècnica de Catalunya. BarcelonaTech" alt="Universitat Politècnica de Catalunya. BarcelonaTech" /></map>
-			<a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
-        <span tal:condition="python: utils.getGWConfig().enllaslogotip">
-            <!-- titol en catala -->
-            
-            <img tal:attributes="src string:${portal_url}/logoPropi.gif;
-                                            alt python: utils.getGWConfig().firmaunitat_ca;
-                                            title python: utils.getGWConfig().firmaunitat_ca"
-                tal:condition="python:utils.pref_lang()=='ca'" />
-                
-            <!-- titol en castella -->
-            <img tal:attributes="src string:${portal_url}/logoPropi.gif;
-                            alt python: utils.getGWConfig().firmaunitat_es;
-                            title python: utils.getGWConfig().firmaunitat_es"
-                tal:condition="python:utils.pref_lang()=='es'" />
-            <!-- titol en angles -->
-            <img tal:attributes="src string:${portal_url}/logoPropi.gif;
-                            alt python: utils.getGWConfig().firmaunitat_en;
-                            title python: utils.getGWConfig().firmaunitat_en"
-                tal:condition="python:utils.pref_lang()=='en'"/>
-            </span>
-        </a>
-    </div>
-
-
-<!-- logo producte -->
-
-    <div class="logoProducte">
-        <a tal:define="text_alt python: utils.getGWProperty('enllaslogotipdretalt') + u', ' + context.translate('obrir_link_finestra_nova', domain='upc.genwebupc')"
-		tal:attributes="href python: utils.getGWProperty('enllaslogotipdret'); title text_alt" target="newwindow">
-		<span tal:condition="python: utils.getGWProperty('enllaslogotipdret')">
-            <img tal:attributes="src string:${portal_url}/logoProducte.gif;
-                                 alt text_alt;
-                                 title text_alt" />
-        </span>
-        </a>
-        
     </div>
 
 
 
 
-<!-- fi logo producte -->
 
-
-
-
-
-    <div class="titolWeb_n2">
-	<h1>
-        <a href="" tal:attributes="href string:${view/portal_url}/">
+    <div class="titolWeb titolWeb_n2">
+			<h1>
+        <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
-            <img tal:attributes="src string:${portal_url}/titolWeb_ca.gif;
-					alt python: utils.getGWConfig().titolespai_ca;
-                                    title python: utils.getGWConfig().titolespai_ca"               
-               tal:condition="python:utils.pref_lang()=='ca'"/>
+            <tal:titol_ca tal:content="python: utils.getGWConfig().titolespai_ca"  
+								               tal:condition="python:utils.pref_lang()=='ca'">titolCAT</tal:titol_ca>
             <!-- titol en castella -->
-            <img tal:attributes="src string:${portal_url}/titolWeb_es.gif;
-					alt python: utils.getGWConfig().titolespai_es;
-                                    title python: utils.getGWConfig().titolespai_es"               
-               tal:condition="python:utils.pref_lang()=='es'" />
+            <tal:titol_es tal:content="python: utils.getGWConfig().titolespai_es" 
+                               tal:condition="python:utils.pref_lang()=='es'">titolES</tal:titol_es>
             <!-- titol en angles -->
-            <img tal:attributes="src string:${portal_url}/titolWeb_en.gif;
-					alt python: utils.getGWConfig().titolespai_en;
-                                    title python: utils.getGWConfig().titolespai_en"               
-               tal:condition="python:utils.pref_lang()=='en'"/>
+            <tal:titol_en tal:content="python: utils.getGWConfig().titolespai_en"
+                               tal:condition="python:utils.pref_lang()=='en'">titolEN</tal:titol_en>
         </a>
-	</h1>
+			</h1>
     </div>
     
-</div>
+    
+
+
 
 </tal:capsalera>
+
+

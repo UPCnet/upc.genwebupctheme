@@ -87,7 +87,8 @@ a:link, a:visited, a:active {color:#007bc0; text-decoration: none;}
 a:hover {text-decoration: underline;} 
 /*a:focus {outline: none;}*/
 img {border:0;} 
-.logo a:hover{text-decoration: none;}
+.logo a:hover, .titolWeb a:hover{text-decoration: none;}
+
 ul {margin: 0;padding: 0;}	
 dt {padding:2px 0;}
 form { margin: 0; padding: 0; vertical-align: text-bottom;}
@@ -346,10 +347,15 @@ h1.documentFirstHeading img {display:none;}
     background:#fff;
     padding-right:20px;}
 /* CAPCALERA COMUNS */
+#capcaplera{ height: 1px; }
 .barraCerca{
-	margin: 7px 0px 0 0;
+	margin: 15px 0px 0 0;
+	float:right;
+	text-transform: lowercase;
+	width: 700px;
 	text-align: right;
-	float:none;}
+
+}
 .barraCerca img {
 	vertical-align: baseline;}
 .go {
@@ -422,8 +428,7 @@ html*.sobreElWeb {
 	font-weight:bold;}
 .rsspeu {margin-bottom:-1px;}
 /*cerca*/
-.barraCerca { 
-	text-transform: lowercase; }
+
 #searchGadget {
 	font-family:Verdana, Arial, Helvetica, sans-serif;
 	background:transparent repeat-x scroll 0%;

@@ -20,17 +20,12 @@
 .logoProducte {float:right;		
 	margin: 10px 0px 0px 25px;
 	*margin: 15px 0px 0px 25px; clear:none;}
-.logo_n2 img {float:left}
-.clearAll_n2{
-	clear:both;
-	padding: 0}
+
+.clearAll_n2{ padding: 0; }
 .titolWeb_n2 {
-	text-align:center;
-	margin:10px 180px 10px 180px;
-	*margin:5px 180px 10px 180px;}
-.titolWeb_n2 img {padding-left:17px;}
-
-
+	margin:10px 0px 10px 226px;
+	*margin:5px 0px 10px 226px;
+}
 .liniaPrincipalNeutre2{ 
 	height:4px;
 	width:100%;

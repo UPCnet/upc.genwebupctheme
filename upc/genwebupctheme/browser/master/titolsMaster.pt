@@ -3,126 +3,34 @@
 	                   lang_code langtool/getPreferredLanguage;
                        portal_url context/@@plone_portal_state/portal_url;">
 
-<div class="clearAll_m">                         
-    <div class="banerMasters">
-    
-	<!-- MASTER -->
-    <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Master')">
-
-			<a class="bMm" tal:condition="python:utils.pref_lang()=='ca'"
-	 			href="http://www.upc.edu/aprendre/estudis/master-universitari?set_language=ca" target="_blank" title="Màsters universitaris UPC">
-				<span>Màsters universitaris UPC</span>
-			</a>
-			<a class="bMm" tal:condition="python:utils.pref_lang()=='es'"
-	 			href="http://www.upc.edu/aprender/estudios/master-universitario?set_language=es" target="_blank" title="Másters universitarios UPC">
-				<span>Másters universitarios UPC</span>
-			</a>
-			<a class="bMm" tal:condition="python:utils.pref_lang()=='en'"
-	 			href="http://www.upc.edu/learning/courses/masters-degrees-courses?set_language=en" target="_blank" title="UPC master's degrees">
-				<span>UPC master's degrees</span>
-			</a>					
-	</tal:span>    		
-
-<!-- DOCTORAT -->
-  <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Doctorat')">
-		<a class="bMd" tal:condition="python:utils.pref_lang()=='ca'"
- 			href="http://doctorat.upc.edu/?set_language=ca" target="_blank" title="Doctorats UPC">
-			<span>Doctorats UPC</span>
-		</a>
-		<a class="bMd" tal:condition="python:utils.pref_lang()=='es'"
- 			href="http://doctorat.upc.edu/?set_language=es"  target="_blank" title="Doctorados UPC">
-			<span>Doctorados UPC</span>
-		</a>
-		<a class="bMd" tal:condition="python:utils.pref_lang()=='en'"
- 			href="http://doctorat.upc.edu/?set_language=en" target="_blank" title="UPC doctoral degrees">
-			<span>UPC doctoral degrees</span>
-		</a>
-
-	</tal:span> 
-	 
-<!-- MÀSTER i DOCTORAT -->    		
-    <tal:span condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')">
-			<a class="bMmd" tal:condition="python:utils.pref_lang()=='ca'"
-	 			href="http://www.upc.edu/aprendre/estudis/master-universitari?set_language=ca" target="_blank" title="Màsters universitaris UPC">
-				<span>Màsters universitaris UPC</span>
-			</a>
-			<a class="bMmd" tal:condition="python:utils.pref_lang()=='es'"
-	 			href="http://www.upc.edu/aprender/estudios/master-universitario?set_language=es" target="_blank" title="Másters universitarios UPC">
-				<span>Másters universitarios UPC</span>
-			</a>
-			<a class="bMmd" tal:condition="python:utils.pref_lang()=='en'"
-	 			href="http://www.upc.edu/learning/courses/masters-degrees-courses?set_language=en" target="_blank" title="UPC master's degrees">
-				<span>UPC master's degrees</span>
-			</a>
-			<a class="bMmd" tal:condition="python:utils.pref_lang()=='ca'"
-	 			href="http://doctorat.upc.edu/?set_language=ca" target="_blank" title="Doctorats UPC">
-				<span>Doctorats UPC</span>
-			</a>
-			<a class="bMmd" tal:condition="python:utils.pref_lang()=='es'"
-	 			href="http://doctorat.upc.edu/?set_language=es" target="_blank" title="Doctorados UPC">
-				<span>Doctorados UPC</span>
-			</a>
-			<a class="bMmd" tal:condition="python:utils.pref_lang()=='en'"
-	 			href="http://doctorat.upc.edu/?set_language=en" target="_blank" title="UPC doctoral degrees">
-				<span>UPC doctoral degrees</span>
-			</a>
-		
-		</tal:span>     		
-</div>      
+<div>                         
+   
     
                        
-    <div class="logo_m">
+    <div class="logo">
         <a title="Universitat Politècnica de Catalunya. BarcelonaTech" tal:attributes="href string:http://www.upc.edu" target="_blank">
-          <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya. BarcelonaTech" title="Universitat Politècnica de Catalunya. BarcelonaTech"  
-               tal:attributes="src string:${portal_url}/LogoUPC.gif"/>
+          <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya · BarcelonaTech" title="Universitat Politècnica de Catalunya · BarcelonaTech"  
+               tal:attributes="src string:${portal_url}/LogoUPC.png"/>
         </a>
-        <map title="Universitat Politècnica de Catalunya. BarcelonaTech" name="logoUPCMaster" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya. BarcelonaTech"/></map>
+        <map title="Universitat Politècnica de Catalunya · BarcelonaTech" name="logoUPCMaster" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya · BarcelonaTech"/></map>
 
-				<a tal:attributes="href python: utils.getGWConfig().enllaslogotip" target="_blank">
-					<span tal:condition="python: utils.getGWConfig().enllaslogotip">
-            <!-- titol en catala -->
-            <img 
-                tal:condition="python:utils.pref_lang()=='ca'" 
-                tal:attributes="title python: utils.getGWConfig().firmaunitat_ca;
-			alt python: utils.getGWConfig().firmaunitat_ca;
-                src string:${portal_url}/logoPropi.gif"/>
-            <!-- titol en castella -->
-            <img 
-                tal:condition="python:utils.pref_lang()=='es'"
-                tal:attributes="title python: utils.getGWConfig().firmaunitat_es;
-			alt python: utils.getGWConfig().firmaunitat_es;
-                src string:${portal_url}/logoPropi.gif"/>
-            <!-- titol en angles -->
-            <img 
-                tal:condition="python:utils.pref_lang()=='en'"
-                tal:attributes="title python: utils.getGWConfig().firmaunitat_en;
-			alt python: utils.getGWConfig().firmaunitat_en;
-                src string:${portal_url}/logoPropi.gif"/>
-        </span>
-        </a>
+
     </div>
-    <div class="titolWeb_m">
-	<h1>
+    <div class="titolWeb titolWeb_m">
+			<h1>
         <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
             <!-- titol en catala -->
-
-            <img src="titolWebMaster_ca.gif"               
-               tal:condition="python:utils.pref_lang()=='ca'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_ca; alt python: utils.getGWConfig().titolespai_ca" />
-
- 
+            <tal:titol_ca tal:content="python: utils.getGWConfig().titolespai_ca"  
+								               tal:condition="python:utils.pref_lang()=='ca'">titolCAT</tal:titol_ca>
             <!-- titol en castella -->
-            <img src="titolWebMaster_es.gif"               
-               tal:condition="python:utils.pref_lang()=='es'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_es; alt python: utils.getGWConfig().titolespai_es" />
+            <tal:titol_es tal:content="python: utils.getGWConfig().titolespai_es" 
+                               tal:condition="python:utils.pref_lang()=='es'">titolES</tal:titol_es>
             <!-- titol en angles -->
-            <img src="titolWebMaster_en.gif"               
-               tal:condition="python:utils.pref_lang()=='en'"
-               tal:attributes="title python: utils.getGWConfig().titolespai_en; alt python: utils.getGWConfig().titolespai_en" />
+            <tal:titol_en tal:content="python: utils.getGWConfig().titolespai_en"
+                               tal:condition="python:utils.pref_lang()=='en'">titolEN</tal:titol_en>
         </a>
-	</h1>
-
-</div>
+			</h1>
+    </div>
 
 </div>
 
