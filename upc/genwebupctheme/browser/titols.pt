@@ -62,17 +62,9 @@
 
     <div class="titolWeb">
 			<h1>
-        <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
-            <!-- titol en catala -->
-            <tal:titol_ca tal:content="python: utils.getGWConfig().titolespai_ca"  
-								               tal:condition="python:utils.pref_lang()=='ca'">titolCAT</tal:titol_ca>
-            <!-- titol en castella -->
-            <tal:titol_es tal:content="python: utils.getGWConfig().titolespai_es" 
-                               tal:condition="python:utils.pref_lang()=='es'">titolES</tal:titol_es>
-            <!-- titol en angles -->
-            <tal:titol_en tal:content="python: utils.getGWConfig().titolespai_en"
-                               tal:condition="python:utils.pref_lang()=='en'">titolEN</tal:titol_en>
-        </a>
+          <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
+            <tal:titol tal:content="structure utils/getTitol">Titol</tal:titol> 
+          </a>
 			</h1>
     </div>
     

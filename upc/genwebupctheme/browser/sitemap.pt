@@ -38,14 +38,9 @@
 	    <li class="navTreeItem visualNoMarker">    
    			<div>
 				<a class="state-published" 
-           tal:condition="python: view.getGWConfig().masterdoctorado==('Master i Doctorat')"
+           tal:condition="utils/_getDadesUnitat"
 				   tal:attributes="href string:${pURL}/info-general"
-				   tal:content="python: view.getTextMaster('info_gral_masters',lang_code)">
-        </a>
-				<a class="state-published" 
-           tal:condition="python: not view.getGWConfig().masterdoctorado==('Master i Doctorat')"
-				   tal:attributes="href string:${pURL}/info-general"
-				   tal:content="python: view.getTextMaster('info_gral',lang_code)">
+				   i18n:translate="genweb_info_gral">General Information
         </a>
 			</div>
 		</li>

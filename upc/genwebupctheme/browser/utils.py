@@ -8,7 +8,10 @@ from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 
 from AccessControl import getSecurityManager
 
-import MySQLdb
+# import MySQLdb
+
+import json
+import urllib2
 
 PLMF = MessageFactory('plonelocales')
 
@@ -21,7 +24,6 @@ def getGWConfig(context):
         gwconfig = ptool.genwebupc_properties
     except:
         gwconfig = None
-
     return gwconfig
 
 
@@ -45,6 +47,29 @@ def portal_url(self):
 
 
 class utilitats(BrowserView):
+
+    _dadesUnitat = None
+
+    def _getDadesUnitat(self):
+        """ Retorna les dades proporcionades pel WebService del SCP
+        """
+        id = self.getGWConfig().contacteid
+        if id:
+            if self._dadesUnitat == None:
+                try:
+                    url = urllib2.urlopen('https://bus-soa.upc.edu/SCP/InfoUnitatv1?id=' + id, timeout=10)
+                    respuesta = url.read()
+                    self._dadesUnitat = json.loads(respuesta)
+                except:
+                    pass
+        return self._dadesUnitat
+
+    def getTitol(self):
+        lt = getToolByName(self, 'portal_languages')
+        lang = lt.getPreferredLanguage()
+        gw_config = self.getGWConfig()
+        titol = getattr(gw_config, 'titolespai_%s' % lang)
+        return titol
 
     def getGWProperty(self, gwproperty):
         """Retorna de manera segura una propietat del GW"""
@@ -120,113 +145,86 @@ class utilitats(BrowserView):
             return True
 
     def remapList2Dic(self, dictkeys, results):
-
         _dictResult = {}
         _dictKeys = dictkeys
         _results = results
         c = 0
-
         for ii in _dictKeys:
             _dictResult[ii] = _results[c]
             c = c + 1
-
         return _dictResult
 
-    def connectDatabase(self):
-        return MySQLdb.connect(host='nucli.upc.edu', user='cons-webupc', passwd='qstacll', db='www-webupc')
-        #return MySQLdb.connect(host='raiden.upc.es',user='consulta',passwd='c0ns4lt4',db='www-estudis')
+    # def connectDatabase(self):
+    #     return MySQLdb.connect(host='nucli.upc.edu', user='cons-webupc', passwd='qstacll', db='www-webupc')
 
-    def change2UTF(self, c):
-        c.execute('SET NAMES utf8;')
-        c.execute('SET CHARACTER SET utf8;')
-        c.execute('SET character_set_connection=utf8;')
-        return c
+    # def change2UTF(self, c):
+    #     c.execute('SET NAMES utf8;')
+    #     c.execute('SET CHARACTER SET utf8;')
+    #     c.execute('SET character_set_connection=utf8;')
+    #     return c
 
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
 
-    def verificaIdUnitat(self, id):
-        try:
-            db = self.connectDatabase()
-            c = db.cursor()
-            c = self.change2UTF(c)
-            c.execute("""SELECT id_unitat FROM upc_unitat WHERE id_unitat = %s""", (id,))
-            results = c.fetchone()
-        except:
-            results = None
-        return results
+    def getDirectori(self):
+        ue = self._dadesUnitat['codi_upc']
+        return "http://directori.upc.edu/directori/dadesUE.jsp?id=" + ue
 
-    def verificaIdEnlace(self, id):
-        db = self.connectDatabase()
-        c = db.cursor()
-        c = self.change2UTF(c)
-        c.execute("""SELECT personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
-        results = c.fetchone()
-        dictKeys = ('personal',)
-        _result = self.remapList2Dic(dictKeys, results)
-        if _result['personal'] == None:
-            return "http://directori.upc.edu/directori/dadesUE.jsp?id=" + id
-        else:
-            return _result['personal']
-
-    def getContacteDataSql(self, id):
-        """ Retorna un diccionario con datos de la tabla upc.unitat de la base de datos www-estudis
-            de acuerdo a un id.
+    def getNomCentre(self):
+        """ Retorna el nom del centre segons l'idioma
         """
-        db = self.connectDatabase()
-        c = db.cursor()
-        c = self.change2UTF(c)
-        c.execute("""SELECT nom_cat, nom_esp, nom_ing, direccion, telefono, fax, email, web, director, personal FROM upc_unitat WHERE id_unitat = %s""", (id,))
+        lang = self.pref_lang()
+        nom_centre = self._dadesUnitat['nom_' + lang]
+        return nom_centre
 
-        results = c.fetchone()
-        dictKeys = ('nom_cat', 'nom_esp', 'nom_ing', 'direccion', 'telefono', 'fax', 'email', 'web', 'director', 'personal')
+    def getEdifici(self):
+        """Retorna edifici en l'idioma del portal
+        """
+        lang = self.pref_lang()
+        edifici = self._dadesUnitat['edifici_' + lang]
+        return edifici
 
-        return self.remapList2Dic(dictKeys, results)
+    def getCampus(self):
+        """Retorna edifici en l'idioma del portal
+        """
+        lang = self.pref_lang()
+        campus = self._dadesUnitat['campus_' + lang]
+        return campus
 
-    def getContacteDireccion(self, id):
-        db = self.connectDatabase()
-        c = db.cursor()
-        c = self.change2UTF(c)
-        c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,))
-        try:
-            results = c.fetchone()
-            dictKeys = ('codi_edifici', 'nomEdifici', 'ue.direccio', 'ue.codi_postal', 'ue.id_campus', 'nomCampus', 'nomLocalitat')
-            return self.remapList2Dic(dictKeys, results)
-        except:
-            return None
+    # def getContacteDireccion(self, id):
+    #     # db = self.connectDatabase()
+    #     # c = db.cursor()
+    #     # c = self.change2UTF(c)
+    #     # c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,))
+    #     try:
+    #         results = c.fetchone()
+    #         dictKeys = ('codi_edifici', 'nomEdifici', 'ue.direccio', 'ue.codi_postal', 'ue.id_campus', 'nomCampus', 'nomLocalitat')
+    #         return self.remapList2Dic(dictKeys, results)
+    #     except:
+    #         return None
 
-    def cambiaPrefijo(self, lang):
-        tmp = 'ing'
-        if lang == 'ca':
-            tmp = 'cat'
-        elif lang == 'es':
-            tmp = 'esp'
+    # def getTextMaster(self, str, lang):
 
-        return tmp
+    #     tmp = 'ing'
+    #     db = self.connectDatabase()
+    #     c = db.cursor()
+    #     c = self.change2UTF(c)
+    #     c.execute("""SELECT cat,esp,ing FROM upc_textos WHERE id = %s""", (str,))
+    #     results = c.fetchone()
+    #     dictKeys = ('cat', 'esp', 'ing',)
+    #     _result = self.remapList2Dic(dictKeys, results)
 
-    def getTextMaster(self, str, lang):
+    #     if lang == 'ca':
+    #         tmp = 'cat'
+    #     elif lang == 'es':
+    #         tmp = 'esp'
 
-        db = self.connectDatabase()
-        c = db.cursor()
-        c = self.change2UTF(c)
-        c.execute("""SELECT cat,esp,ing FROM upc_textos WHERE id = %s""", (str,))
-        results = c.fetchone()
+    #     return _result[tmp]
 
-        dictKeys = ('cat', 'esp', 'ing',)
-
-        _result = self.remapList2Dic(dictKeys, results)
-
-        tmp = self.cambiaPrefijo(lang)
-
-        return _result[tmp]
-
-
-        
     def fields2Dic(self, dc, de, di):
         tmp = (dc, de, di)
-        dictKeys = ('doc_ca', 'doc_es', 'doc_en',)    
-        
-        return self.remapList2Dic(dictKeys,tmp)
+        dictKeys = ('doc_ca', 'doc_es', 'doc_en',)
+        return self.remapList2Dic(dictKeys, tmp)
 
     def test(self, value, trueVal, falseVal):
         """
@@ -236,23 +234,23 @@ class utilitats(BrowserView):
             return trueVal
         else:
             return falseVal
-    
+
     def getSectionFromURL(self):
-        context=self.context
+        context = self.context
         #portal_url=getToolByName(context, 'portal_url')
         tools = getMultiAdapter((self.context, self.request),
-                                        name=u'plone_tools')       
-        
+                                 name = u'plone_tools')
+
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
         contentPath = tools.url().getRelativeContentPath(context)
         if not contentPath:
             return ''
         else:
-            return portal_state.portal()[contentPath[0]].Title().replace('&nbsp;','')
+            return portal_state.portal()[contentPath[0]].Title().replace('&nbsp;', '')
 
     def getFlavour(self):
-        portal_skins=getToolByName(self.context, 'portal_skins')
+        portal_skins = getToolByName(self.context, 'portal_skins')
         return portal_skins.getDefaultSkin()
 
     def assignAltAcc(self):
@@ -266,9 +264,9 @@ class utilitats(BrowserView):
         if idioma == 'es':
             label = "(abre en ventana nueva)"
         if idioma == 'en':
-            label = "(open in new window)"      
+            label = "(open in new window)"
         return label
-    
+
     def premsa_url(self):
         """Funcio que extreu idioma actiu
         """
@@ -277,7 +275,7 @@ class utilitats(BrowserView):
         if idioma == 'zh':
             url = 'http://www.upc.edu/saladepremsa/?set_language=en'
         else:
-            url = 'http://www.upc.edu/saladepremsa/?set_language='+idioma
+            url = 'http://www.upc.edu/saladepremsa/?set_language=' + idioma
         return url
 
     def premsa_PDIPAS_url(self):
@@ -285,8 +283,8 @@ class utilitats(BrowserView):
         """
         lt = getToolByName(self, 'portal_languages')
         idioma = lt.getPreferredLanguage()
-        if idioma == 'zh':            
+        if idioma == 'zh':
             url = 'http://www.upc.edu/saladepremsa/pdi-pas/?set_language=en'
-        else:           
-            url = 'http://www.upc.edu/saladepremsa/pdi-pas/?set_language='+idioma
+        else:
+            url = 'http://www.upc.edu/saladepremsa/pdi-pas/?set_language=' + idioma
         return url

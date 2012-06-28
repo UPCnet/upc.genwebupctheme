@@ -18,72 +18,88 @@
 	    <tal:main-macro metal:define-macro="main"	    				 
 			   			tal:define="langtool nocall:context/portal_languages;
 			              			lang_code langtool/getPreferredLanguage;
-			              			global utils context/@@upc.genweb.utils;">
+			              			global utils context/@@upc.genweb.utils;
+			              			dades_unitat utils/_getDadesUnitat;">
 	
-	
-	    <tal:block tal:condition="python: utils.verificaIdUnitat(utils.getGWConfig().contacteid)">
+
+    <tal:block tal:condition="dades_unitat">
 	
 		<div tal:replace="structure provider:plone.abovecontenttitle" />
 
 		<h1 i18n:translate="genweb_contacte">Contact</h1>
 
 		<div class="agendaContingut contacte" style="padding: 5px;">
+
 	 		
 	 		<!-- NOMBRE -->
 			<h5 style="font-family: Arial,Helvetica,Verdana,sans-serif; font-size: 14px;"
-				tal:content="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['nom_'+utils.cambiaPrefijo(lang_code)]"> Servei de Comunicació i Promoció
+				tal:content="utils/getNomCentre"> Servei de Comunicació i Promoció
 			</h5>
-	
+
 			<!-- DIRECCION -->
 			<address>
-			<div class="contacteSpan" i18n:translate="genweb_adreca">Address</div>
-			<div tal:condition="python: utils.getContacteDireccion(utils.getGWConfig().contacteid) != None">
-                <span tal:content="python: utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomCampus']"></span>,
-                <span tal:content="python: utils.getTextMaster('edifici', lang_code) + ' '"></span>
-                <span tal:content="python: utils.getContacteDireccion(utils.getGWConfig().contacteid)['codi_edifici'] + '. '"></span>
-                <span tal:content="python: utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.direccio'] + '. '"></span>
-                <span tal:content="python: utils.getContacteDireccion(utils.getGWConfig().contacteid)['ue.codi_postal'] + ' '"></span>
-                <span tal:content="python: utils.getContacteDireccion(utils.getGWConfig().contacteid)['nomLocalitat']"></span>                
-			</div>
-			
-			<div tal:condition="python: utils.getContacteDireccion(utils.getGWConfig().contacteid) == None" tal:content="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['direccion']">Edifici BO (Bolet)
-			</div>
+
+<!-- LISTO PARA CUANDO CAMBIE EL NOMBRE DEL IDENTIFICADOR -->
+<!-- 			<tal:co tal:define="adreca dades_unitat/adreca" tal:condition="adreca">
+				<div class="contacteSpan" i18n:translate="genweb_adreca">Address</div>
+				<div tal:content="adreca">Edifici BO (Bolet)</div>
+			</tal:co> -->
 
 
-			
-			</adDress>
+			<tal:co tal:define="edifici utils/getEdifici;
+								campus utils/getCampus;
+								adreca dades_unitat/adreca;
+								codi_postal dades_unitat/codi_postal;
+								localitat dades_unitat/localitat;"
+					tal:condition="adreca">
+				<div class="contacteSpan" i18n:translate="genweb_adreca">Address</div>
+				<div>
+			    	<span tal:content="campus"/>,
+	                <span tal:content="edifici"/>. 
+	                <span tal:content="adreca"/>. 
+	                <span tal:content="codi_postal"/> 
+	                <span tal:content="localitat"/>                
+	 			</div>
+			</tal:co>
+
+			</address>
 	
 			<!-- TELEFONO -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']" i18n:translate="genweb_telefon">Telephone</div>
-			<div tal:content="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['telefono']">93 401 76 76
-			</div>
+			<tal:co tal:define="telefon dades_unitat/telefon" tal:condition="telefon">
+				<div class="contacteSpan" i18n:translate="genweb_telefon">Telephone</div>
+				<div tal:content="telefon">93 401 76 76</div>
+			</tal:co>
 			
 			<!-- FAX -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax']" i18n:translate="genweb_fax">Fax</div>
-			<div tal:content="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['fax']">93 401 78 79
-			</div>
+			<tal:co tal:define="fax dades_unitat/fax" tal:condition="fax">
+				<div class="contacteSpan" i18n:translate="genweb_fax">Fax</div>
+				<div tal:content="fax">93 401 78 79</div>
+			</tal:co>
 			
 			<!-- EMAIL -->
-			<div class="contacteSpan" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['email']" i18n:translate="genweb_ae">E-mail</div>
-			<div tal:define="mail python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['email']">
-				<a 	tal:attributes="href python: 'mailto: ' + mail"
-		   		    tal:content="mail"></a>
-			</div>
+			<tal:co tal:define="email dades_unitat/email" tal:condition="email">
+				<div class="contacteSpan" i18n:translate="genweb_ae">E-mail</div>
+				<div >
+					<a 	tal:attributes="href python: 'mailto: ' + email"
+			   		    tal:content="email"></a>
+				</div>
+			</tal:co>
 		</div>
 
 		<!-- director -->
-		
-		<div class="contacteSpan contacteSpanBaix" tal:condition="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']" i18n:translate="genweb_direccio">Director</div>
-		<div class="contacteSpanBaix" tal:content="python: utils.getContacteDataSql(utils.getGWConfig().contacteid)['director']">José Luís Vivanco
-		</div>
+		<tal:co tal:define="director dades_unitat/director" tal:condition="director">
+			<div class="contacteSpan contacteSpanBaix" i18n:translate="genweb_direccio">Director</div>
+			<div class="contacteSpanBaix" tal:content="director">Director Centro
+			</div>
+		</tal:co>
 		
 		<!-- Personal -->
-		
-		<div tal:condition="python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" class="contacteSpan contacteSpanBaix" i18n:translate="genweb_personal">Staff</div>
-		<div tal:condition="python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" class="contacteSpanBaix">
-			<a 	tal:attributes="href python: utils.verificaIdEnlace(utils.getGWConfig().contacteid)" target="_blank"
-				tal:content="python: 'Directori'"></a>
-		</div>
+		<tal:co tal:define="dir utils/getDirectori" tal:condition="dir">
+			<div class="contacteSpan contacteSpanBaix" i18n:translate="genweb_personal">Staff</div>
+			<div class="contacteSpanBaix">
+				<a 	tal:attributes="href dir" target="_blank" >Directori</a>
+			</div>
+		</tal:co>
 		
 		<!-- Planos y transportes -->
 		

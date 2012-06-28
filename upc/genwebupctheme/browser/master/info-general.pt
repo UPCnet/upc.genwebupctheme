@@ -14,15 +14,13 @@
 		<metal:main fill-slot="main">
 		    <tal:main-macro metal:define-macro="main"
        			tal:define="langtool nocall:context/portal_languages;
-                  			lang_code langtool/getPreferredLanguage;                                       
-                  			global utils context/@@upc.genweb.utils;">
-		
-		
+                  			lang_code langtool/getPreferredLanguage;
+                            global utils context/@@upc.genweb.utils;">
+				
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
 		
 		
-        		<h1 class="documentFirstHeading" tal:condition="python: not utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral',lang_code)">Informació General</h1>
-        		<h1 class="documentFirstHeading" tal:condition="python: utils.getGWConfig().masterdoctorado==('Master i Doctorat')" tal:content="python: utils.getTextMaster('info_gral_masters',lang_code)">Informació General</h1>
+        		<h1 class="documentFirstHeading" i18n:translate="genweb_info_gral">General Information</h1>
 		
 				<div class="plain">
 				<iframe class="info-master" frameborder="0" 

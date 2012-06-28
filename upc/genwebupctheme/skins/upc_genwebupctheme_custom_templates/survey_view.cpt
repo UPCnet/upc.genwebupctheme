@@ -83,9 +83,7 @@
                           tal:content="structure question/getBody" />
                 </tal:question>
 
-                <tal:captcha tal:condition="python:show_captcha and captcha_installed">
-                    <div metal:use-macro="here/captcha_widget/macros/captcha" />
-                </tal:captcha>
+
 
                 <div class="formControls">
                     <input class="context"

@@ -172,7 +172,7 @@ class eines(ViewletBase):
                 self.homelink_url = self.site_url + '/dashboard'
             else:
                 self.homelink_url = self.site_url + '/author/' + quote_plus(userid)
-                
+
             member_info = tools.membership().getMemberInfo(member.getId())
             fullname = member_info.get('fullname', '')
             if fullname:

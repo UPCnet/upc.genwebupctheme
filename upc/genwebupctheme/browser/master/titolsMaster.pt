@@ -1,36 +1,26 @@
 <tal:capsalera define="utils context/@@upc.genweb.utils;
 	                   langtool nocall:context/portal_languages;
-	                   lang_code langtool/getPreferredLanguage;
-                       portal_url context/@@plone_portal_state/portal_url;">
+                     portal_url context/@@plone_portal_state/portal_url;">
 
 <div>                         
-   
-    
                        
-    <div class="logo">
-        <a title="Universitat Politècnica de Catalunya. BarcelonaTech" tal:attributes="href string:http://www.upc.edu" target="_blank">
-          <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya · BarcelonaTech" title="Universitat Politècnica de Catalunya · BarcelonaTech"  
-               tal:attributes="src string:${portal_url}/LogoUPC.png"/>
-        </a>
-        <map title="Universitat Politècnica de Catalunya · BarcelonaTech" name="logoUPCMaster" id="logoUPCMaster"><area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya · BarcelonaTech"/></map>
+  <div class="logo">
+      <a title="Universitat Politècnica de Catalunya. BarcelonaTech" tal:attributes="href string:http://www.upc.edu" target="_blank">
+        <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya · BarcelonaTech" title="Universitat Politècnica de Catalunya · BarcelonaTech"  
+             tal:attributes="src string:${portal_url}/LogoUPC.png"/>
+      </a>
+      <map title="Universitat Politècnica de Catalunya · BarcelonaTech" name="logoUPCMaster" id="logoUPCMaster">
+        <area shape="circle" coords="23,23,20" href="http://www.upc.edu" target="newwindow" alt="Universitat Politècnica de Catalunya · BarcelonaTech"/></map>
 
+      </div>
 
-    </div>
-    <div class="titolWeb titolWeb_m">
-			<h1>
-        <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
-            <!-- titol en catala -->
-            <tal:titol_ca tal:content="python: utils.getGWConfig().titolespai_ca"  
-								               tal:condition="python:utils.pref_lang()=='ca'">titolCAT</tal:titol_ca>
-            <!-- titol en castella -->
-            <tal:titol_es tal:content="python: utils.getGWConfig().titolespai_es" 
-                               tal:condition="python:utils.pref_lang()=='es'">titolES</tal:titol_es>
-            <!-- titol en angles -->
-            <tal:titol_en tal:content="python: utils.getGWConfig().titolespai_en"
-                               tal:condition="python:utils.pref_lang()=='en'">titolEN</tal:titol_en>
-        </a>
-			</h1>
-    </div>
+      <div class="titolWeb titolWeb_m">
+  			<h1>
+          <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
+            <tal:titol tal:content="structure utils/getTitol">Titol</tal:titol> 
+          </a>
+  			</h1>
+      </div>
 
 </div>
 
