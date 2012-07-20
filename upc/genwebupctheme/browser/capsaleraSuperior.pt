@@ -6,115 +6,91 @@
     i18n:domain="plone">
     <a id="amuntDeTot"></a>
 
-   <div class="barraCerca">
+   <div class="barraCerca" i18n:domain="plone"
+        tal:define="navigation_root_url view/navigation_root_url;
+                    search_input_id view/search_input_id;">
 
-    <form name="searchform" action="http://cercador.upc.edu/cercaUPC/search">         
+    <form name="searchform" id="searchGadget_form"
+          action="search"
+          tal:attributes="action string:${navigation_root_url}/search;
+          id string:${search_input_id}_form">
 
-        <label for="searchGadget" class="goout"
-                    i18n:translate="text_search">Search Site</label>
-                    
-<!-- cerca 1: cerca de plone si estas identificat, checkbox i input -->  
-	    <div class="LSBox" id="LSBox">
-	    	<tal:noAnonim define="utils context/@@upc.genweb.utils" condition="python: not here.portal_membership.isAnonymousUser() and utils.getGWConfig().tipusNeutre2!='Intranet'">
-				&nbsp;
-	    			<label for="CheckCercaLSBox" class="checkIntranet" >
-	    				<input name="CheckCercaLSBox" id="CheckCercaLSBox" type="checkbox" value="1" onChange="javascript:mostram(); return false;" i18n:domain="upc.genwebupc" i18n:translate="cerca_intranet" />
-	    			</label>
-	    	</tal:noAnonim>
-	    
-	    	
-	    			&nbsp;
-        		<input name="SearchableText" type="text" size="18" value="" accesskey="4"
-               		i18n:domain="upc.genwebupc"
-               		i18n:attributes="title cerca"
-               		tal:attributes="value request/SearchableText|nothing;
-                               		id view/search_input_id"
-               		class="text inputLabel"
-               		style="display:none;" />
-               		
-			<tal:mostraIntranet define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusNeutre2=='Intranet'">
-				<script type="text/javascript">					
-					<!--					
-					document.searchform.action="./search"; document.getElementById('searchGadget').style.display = '';
-					-->
-				</script>
-	    </tal:mostraIntranet>
-               
-<!-- cerca 2: cerca GSA, nomes si no es model intranet -->
-			<tal:tipusIntranet define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusNeutre2!='Intranet'">   
-              
-        <input name="q" class="text inputLabel" type="text" size="18" value=""      
- 		       i18n:domain="upc.genwebupc"               
- 		       i18n:attributes="title cerca_google"                                                      
-														accesskey="4"  
-														id="q"  
-														tal:attributes="value request/q|nothing"
- 		     />
- 		    </tal:tipusIntranet>
+        <div class="LSBox" id="LSBox">
+            <label class="hiddenStructure"
+                   tal:attributes="for search_input_id"
+                   i18n:translate="text_search">Search Site</label>
 
+            <input name="SearchableText"
+                   type="text"
+                   size="18"
+                   value=""
+                   title="Search Site"
+                   accesskey="4"
+                   i18n:domain="upc.genwebupc"
+                   i18n:attributes="title cerca;"
+                   tal:attributes="value request/form/SearchableText|nothing;
+                                   id search_input_id"
+                   class="searchField inputLabel" />
 
+            <input class="submitGo"
+                   type="submit"
+                   value="" />
 
-
-        <input class="submitGo" type="submit" value ="" />  
-        <div class="LSResult" id="LSResult" style="">
-        <div class="LSShadow" id="LSShadow"></div>
-        
-        <input type="hidden" name="config" tal:attributes="value python: getattr(utils.getGWConfig(),'codigoogle', '')" />  
-        <input type="hidden" name="hl" tal:attributes="value python:utils.pref_lang()" />                         
-        <input type="hidden" name="op" value="1" />  
-        <input type="hidden" name="ie" value="UTF-8" />  
-        <input type="hidden" name="oe" value="UTF-8" />   
-        <input type="hidden" id="plone_search_url" name="plone_search_url" tal:attributes="value string:${view/portal_url}/search" />  
-	    </div>
-        
-
+            <div class="LSResult" id="LSResult" style="">
+                <div class="LSShadow" id="LSShadow">
+                </div>
+            </div>
+        </div>
     </form>
-    
-    
+
+
     <ul>
-	    
+
 	    <li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
 	       	<a accesskey="1" href=""
 	       	tal:attributes="href string:${view/portal_url}/"
 	       	i18n:attributes="title inici"
 	       	i18n:domain="upc.genwebupc"
-	       	i18n:translate="inici"> 
-	       	Inici 
+	       	i18n:translate="inici">
+	       	Inici
 	    </a></li>
 
 
 	    <tal:block repeat="saction view/site_actions"
 		   tal:attributes="id string:siteaction-${saction/id}">
-		
-		
-				<li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/> 
-		   			<a href="" tal:define="title saction/title;
-		               								 id saction/id;
-		               								 accesskey python: accesskeys.get(id, '');"
-		               		 i18n:attributes="title"
-		               		 i18n:translate=""
-		               		 tal:content="title"
-		               		 tal:attributes="href saction/url;
-		                   title title;
-		                   accesskey accesskey;">Site action</a></li>
+
+		<li><img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
+   			<a href="" tal:define="title saction/title;
+               				       id saction/id;
+               					   accesskey python: accesskeys.get(id, '');"
+               		   i18n:attributes="title"
+               		   i18n:translate=""
+               		   tal:content="title"
+               		   tal:attributes="href saction/url;
+                       title title;
+                       accesskey accesskey;">Site action
+            </a>
+        </li>
 	     </tal:block>
 
 	    <tal:identificacio define="utils context/@@upc.genweb.utils" condition="python: utils.getGWConfig().tipusintranet=='Visible'">
 
 	    <li tal:condition="here/portal_membership/isAnonymousUser">
-		<img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif" 
-		tal:condition="here/portal_membership/isAnonymousUser"/>
+		  <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"
+		  tal:condition="here/portal_membership/isAnonymousUser"/>
 	       <a href=""
-	       tal:attributes="href here/cas_login_url"
-	       i18n:attributes="title identificat"
-	       i18n:domain="upc.genwebupc"
-	       i18n:translate="identificat"> 
-	       Identifica't
-	    </a></li>
-	    </tal:identificacio>
-   </ul>
+    	       tal:attributes="href here/cas_login_url"
+    	       i18n:attributes="title identificat"
+    	       i18n:domain="upc.genwebupc"
+    	       i18n:translate="identificat">
+    	       Identifica't
+	       </a>
+        </li>
 
+        </tal:identificacio>
+
+    </ul>
 
    </div>
-	
+
 </div>

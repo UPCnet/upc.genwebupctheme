@@ -444,7 +444,7 @@ html*.sobreElWeb {
 .LSBox, .NoLSBox {
 	float: right;
 	margin: 0px !important;
-	margin-top:-2px !important;
+	margin:-2px 8px 0 !important;
 	padding-right:0;
 /* Modificat per treure la cerca de Google, Victor 11/6*/
 	padding-left:0px;
@@ -454,7 +454,6 @@ html*.sobreElWeb {
 	padding-left:3px;
     *padding-left:3px;
     _padding-left:3px;*/
-	
 	}
 #cercaIntranetForm, #livesearch0 {}
 
@@ -507,7 +506,7 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 .LSTable .LSRow {display:list-item !important; padding:5px !important;}
 .LSTable .LSRow a {padding:5px 0;}
 
-.LSResult { 
+.LSResult {
 	left:0;
 	margin:0 !important;
 	display:block;

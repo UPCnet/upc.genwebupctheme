@@ -5,31 +5,31 @@
       xml:lang="en" lang="en"
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="upc.genwebupc">
-      
+
 	<body>
-	
+
 		<metal:block metal:fill-slot="top_slot"
 	    	         tal:define="dummy python:request.set('disable_border', 1)" />
-	    	
+
 		<metal:main fill-slot="main">
 		    <tal:main-macro metal:define-macro="main"
        			tal:define="langtool nocall:context/portal_languages;
                   			lang_code langtool/getPreferredLanguage;
                             global utils context/@@upc.genweb.utils;">
-				
+
 				<div tal:replace="structure provider:plone.abovecontenttitle" />
-		
-		
+
+
         		<h1 class="documentFirstHeading" i18n:translate="genweb_info_gral">General Information</h1>
-		
+
 				<div class="plain">
-				<iframe class="info-master" frameborder="0" 
+				<iframe class="info-master" frameborder="0"
 					tal:attributes="src python: 'http://www.upc.edu/master/fitxa_master.php?id_estudi='+str(utils.getGWConfig().idestudiMaster)+'&id_titulacio='+str(utils.getGWConfig().idtitulacioMaster)+'&lang='+view.get_fitxa_lang(lang_code)+'&origen=1'"
 					height="1500px" width="100%">
 					</iframe>
 				</div>
 			</tal:main-macro>
 		</metal:main>
-	
+
 	</body>
 </html>

@@ -21,6 +21,7 @@
    <element value="PloneboardForum"/>
    <element value="Collage"/>
    <element value="PlonePopoll"/>
+   <element value="Window"/>
   </linkable>
   <customplugins>
    <element value="ploneimage"/>
