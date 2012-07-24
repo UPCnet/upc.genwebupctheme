@@ -57,6 +57,7 @@
                    value="Search"
                    i18n:attributes="value label_search;"/>
 
+<!--
             <p class="discreet"
                i18n:translate="search_results_advanced">
             Did you not find what you were looking for? Try the
@@ -67,6 +68,10 @@
             </span>
             to refine your search.
             </p>
+-->
+            <p class="discreet">Si no trobeu el que busqueu, proveu amb la <a href=""
+               i18n:translate="search_results_advanced_link"
+               tal:attributes="href string:${advanced_search_url}?${request/QUERY_STRING}">Advanced Search</a> per a realitzar una cerca més específica o amb el <a href="http://cercador.upc.edu">Cercador UPC</a> per fer cerques a tots els webs de la UPC.</p>
         </form>
 
         <div class="search-advanced"
@@ -108,6 +113,8 @@
 
 
         </script>
+
+
         <h1 class="documentFirstHeading">
             <span i18n:translate="heading_search_results">
                 Search results

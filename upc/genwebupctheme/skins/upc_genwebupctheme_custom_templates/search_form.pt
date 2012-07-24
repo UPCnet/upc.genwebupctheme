@@ -13,6 +13,10 @@
 
 <metal:main fill-slot="main">
 
+
+
+
+
     <h1 class="documentFirstHeading"
         i18n:translate="heading_advanced_search">Advanced search for content</h1>
 
@@ -23,6 +27,7 @@
         Remember that you can use the quick search anytime, it's normally
         good enough, this search form is just if you want to be more specific.
     </div>
+    <div class="documentDescription" >Recordeu que també podeu utilitzar el <a href="http://cercador.upc.edu">Cercador UPC</a> per fer cerques a tots els webs de la UPC.</div>
 
     <div id="content-core">
 
