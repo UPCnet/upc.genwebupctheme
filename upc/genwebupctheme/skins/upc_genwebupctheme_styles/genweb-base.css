@@ -513,7 +513,7 @@ html>body*#livesearchLegend {margin-top:0.35em;}
 	padding-top:0;
 	position:relative;
 	text-align:right;
-	z-index:3;
+	z-index:5;
 	top:10px;
 	*top:0;}
 .LSIEFix {
