@@ -37,7 +37,8 @@
                  portal_url context/portal_url;
                  is_advanced_search request/form/advanced_search|nothing;
                  advanced_search_url string:${context/@@plone_portal_state/navigation_root_url}/search_form;
-                 searchterm request/SearchableText|nothing;">
+                 searchterm request/SearchableText|nothing;
+                 utils context/@@upc.genweb.utils;">
 
     <div id="content-core">
         <form name="searchform"
@@ -73,7 +74,10 @@
               <a href=""
                i18n:translate="search_results_advanced_link"
                tal:attributes="href string:${advanced_search_url}?${request/QUERY_STRING}">Advanced Search
-              </a><spam i18n:translate="search_part2"> to refine your search or the <a href="http://cercador.upc.edu">Search UPC</a> to search all of the UPC's websites.</spam>
+              </a>
+              <spam i18n:translate="search_part2"> to refine your search or the </spam>
+              <a href="" tal:attributes="href utils/SearchUrl" target="_blank" i18n:translate="search_upc">Search UPC</a>
+              <spam i18n:translate="search_part3"> to search all of the UPC's websites.</spam>
             </p>
         </form>
 
@@ -165,7 +169,7 @@
                      tal:attributes="href url;
                                      class string:$item_wf_state_class">
                       <span tal:replace="structure result/pretty_title_or_id">Un resultat</span>
-                   </a>                     
+                   </a>
                 </dt>
 
                 <dd>
