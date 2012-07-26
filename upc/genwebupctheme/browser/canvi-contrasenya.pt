@@ -1,6 +1,6 @@
 <tal:canvicontrassenya define="utils context/@@upc.genweb.utils;
                               portal_url context/@@plone_portal_state/portal_url;">
-                              
+
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
       metal:use-macro="here/main_template/macros/master"
       i18n:domain="plone">

@@ -11,21 +11,25 @@ from Products.statusmessages.interfaces import IStatusMessage
 from Acquisition import aq_inner
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
-from Products.CMFPlone import PloneMessageFactory as _ 
+from Products.CMFPlone import PloneMessageFactory as _
 from Products.CMFPlone.utils import safe_unicode
 from cgi import escape
 from Products.CMFCore.interfaces import ISiteRoot
 
 # Define a valiation method for email addresses
+
+
 class NotAnEmailAddress(schema.ValidationError):
     __doc__ = _(u"Invalid email address")
 
 check_email = re.compile(r"[a-zA-Z0-9._%-]+@([a-zA-Z0-9-]+\.)*[a-zA-Z]{2,4}").match
+
+
 def validate_email(value):
     if not check_email(value):
         raise NotAnEmailAddress(value)
     return True
-    
+
 MESSAGE_TEMPLATE = """\
 Enquiry from: %(name)s <%(email_address)s>
 
@@ -33,18 +37,19 @@ Enquiry from: %(name)s <%(email_address)s>
 """
 
 class IContactForm(Interface):
+
     """Define the fields of our form
     """
-    
+
     nombre = schema.TextLine(title=_('label_sender_fullname', default=u"Name"),
                              description=_("help_sender_fullname", default="Please enter your full name."),
                              required=True)
-                              
+
     destinatario = schema.TextLine(title=_('label_sender_from_address',default=u"E-Mail"),
                                    description=_("help_sender_from_address", default="Please enter your e-mail address."),
                                    required=True,
                                    constraint=validate_email)
- 
+
     asunto = schema.TextLine(title=_('label_subject', default="Subject"),
                              description=_("help_subject", default="Please enter the subject of the message you want to send."),
                              required=True)
@@ -84,7 +89,7 @@ class ContactBaseForm(form.Form):
 
     destinatario = property(get_email_from_name)
 
-    
+
     @button.buttonAndHandler(_(u"Send"))
     def action_send(self, action):
         """Send the email to the configured mail address in properties and redirect to the

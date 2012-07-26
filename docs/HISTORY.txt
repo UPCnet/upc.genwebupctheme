@@ -5,8 +5,10 @@ Changelog
 -------------------
 * Sustituir el acceso a los datos de master de MySQL a webService
 * Modificación cabeceras para que el título se coja de la configuración del sitio
-* Sustitución del buscador por el de plone
+* Sustitución del buscador por el de plone y cambio del link "Cercador UPC" al GSS de la home
 * Añadir "Window" al tipo de contenido enlazable por TinyMCE
+* Traducciones de la página de búsqueda (search_form.pt y search.pt)
+* Cambios estilos SCP
 
 4.1.11 (2012-05-03)
 -------------------

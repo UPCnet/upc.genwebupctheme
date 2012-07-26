@@ -2,8 +2,8 @@
 	                   langtool nocall:context/portal_languages;
                      portal_url context/@@plone_portal_state/portal_url;">
 
-<div>                         
-                       
+<div>
+
   <div class="logo">
       <a title="Universitat Politècnica de Catalunya. BarcelonaTech" tal:attributes="href string:http://www.upc.edu" target="_blank">
         <img usemap="#logoUPC" alt="Universitat Politècnica de Catalunya · BarcelonaTech" title="Universitat Politècnica de Catalunya · BarcelonaTech"  
@@ -17,7 +17,7 @@
       <div class="titolWeb titolWeb_m">
   			<h1>
           <a accesskey="1" href="" tal:attributes="href string:${view/portal_url}/">
-            <tal:titol tal:content="structure utils/getTitol">Titol</tal:titol> 
+            <tal:titol tal:content="structure utils/getTitol">Titol</tal:titol>
           </a>
   			</h1>
       </div>

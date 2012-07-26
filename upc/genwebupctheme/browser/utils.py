@@ -8,8 +8,6 @@ from Products.CMFPlone.interfaces.siteroot import IPloneSiteRoot
 
 from AccessControl import getSecurityManager
 
-# import MySQLdb
-
 import json
 import urllib2
 
@@ -154,15 +152,6 @@ class utilitats(BrowserView):
             c = c + 1
         return _dictResult
 
-    # def connectDatabase(self):
-    #     return MySQLdb.connect(host='nucli.upc.edu', user='cons-webupc', passwd='qstacll', db='www-webupc')
-
-    # def change2UTF(self, c):
-    #     c.execute('SET NAMES utf8;')
-    #     c.execute('SET CHARACTER SET utf8;')
-    #     c.execute('SET character_set_connection=utf8;')
-    #     return c
-
     def recodifica(self, str):
         return str.decode('iso-8859-1').encode('utf-8')
 
@@ -191,36 +180,6 @@ class utilitats(BrowserView):
         campus = self._dadesUnitat['campus_' + lang]
         return campus
 
-    # def getContacteDireccion(self, id):
-    #     # db = self.connectDatabase()
-    #     # c = db.cursor()
-    #     # c = self.change2UTF(c)
-    #     # c.execute("""SELECT ue.codi_edifici, ue.nom_cat AS nomEdifici,ue.direccio, ue.codi_postal, ue.id_campus, uc.nom_cat AS nomCampus, ul.nom AS nomLocalitat FROM upc_unitat_edifici uue, upc_edifici ue, upc_campus uc, upc_localitats ul WHERE uue.id_unitat=%s AND uue.es_seu=1 AND uue.id_edifici=ue.id_edifici AND ue.id_campus=uc.id_campus AND uc.id_localitats=ul.id_localitats""", (id,))
-    #     try:
-    #         results = c.fetchone()
-    #         dictKeys = ('codi_edifici', 'nomEdifici', 'ue.direccio', 'ue.codi_postal', 'ue.id_campus', 'nomCampus', 'nomLocalitat')
-    #         return self.remapList2Dic(dictKeys, results)
-    #     except:
-    #         return None
-
-    # def getTextMaster(self, str, lang):
-
-    #     tmp = 'ing'
-    #     db = self.connectDatabase()
-    #     c = db.cursor()
-    #     c = self.change2UTF(c)
-    #     c.execute("""SELECT cat,esp,ing FROM upc_textos WHERE id = %s""", (str,))
-    #     results = c.fetchone()
-    #     dictKeys = ('cat', 'esp', 'ing',)
-    #     _result = self.remapList2Dic(dictKeys, results)
-
-    #     if lang == 'ca':
-    #         tmp = 'cat'
-    #     elif lang == 'es':
-    #         tmp = 'esp'
-
-    #     return _result[tmp]
-
     def fields2Dic(self, dc, de, di):
         tmp = (dc, de, di)
         dictKeys = ('doc_ca', 'doc_es', 'doc_en',)
@@ -237,7 +196,6 @@ class utilitats(BrowserView):
 
     def getSectionFromURL(self):
         context = self.context
-        #portal_url=getToolByName(context, 'portal_url')
         tools = getMultiAdapter((self.context, self.request),
                                  name = u'plone_tools')
 
@@ -287,4 +245,15 @@ class utilitats(BrowserView):
             url = 'http://www.upc.edu/saladepremsa/pdi-pas/?set_language=en'
         else:
             url = 'http://www.upc.edu/saladepremsa/pdi-pas/?set_language=' + idioma
+        return url
+
+    def SearchUrl(self):
+        idioma = self.pref_lang()
+        url = "http://www.upc.edu/cerca"
+        if idioma == 'ca':
+            url = "http://www.upc.edu/cerca"
+        if idioma == 'es':
+            url = "http://www.upc.edu/busqueda"
+        if idioma == 'en':
+            url = "http://www.upc.edu/search-upc"
         return url

@@ -69,9 +69,12 @@
             to refine your search.
             </p>
 -->
-            <p class="discreet">Si no trobeu el que busqueu, proveu amb la <a href=""
+            <p class="discreet"><spam i18n:translate="search_part1">If you have not found what you are looking for, try the </spam>
+              <a href=""
                i18n:translate="search_results_advanced_link"
-               tal:attributes="href string:${advanced_search_url}?${request/QUERY_STRING}">Advanced Search</a> per a realitzar una cerca més específica o amb el <a href="http://cercador.upc.edu">Cercador UPC</a> per fer cerques a tots els webs de la UPC.</p>
+               tal:attributes="href string:${advanced_search_url}?${request/QUERY_STRING}">Advanced Search
+              </a><spam i18n:translate="search_part2"> to refine your search or the <a href="http://cercador.upc.edu">Search UPC</a> to search all of the UPC's websites.</spam>
+            </p>
         </form>
 
         <div class="search-advanced"

@@ -6,28 +6,22 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="plone">
 
-      <metal:block fill-slot="top_slot"
-                   tal:define="dummy python:request.set('disable_border',1);
-                               disable_column_one python:request.set('disable_plone.leftcolumn',1);
-                               disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+  <metal:block fill-slot="top_slot"
+        tal:define="dummy python:request.set('disable_border',1);
+                    disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                    disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
 
-<metal:main fill-slot="main">
-
-
-
-
+  <metal:main fill-slot="main"
+        tal:define="utils context/@@upc.genweb.utils">
 
     <h1 class="documentFirstHeading"
         i18n:translate="heading_advanced_search">Advanced search for content</h1>
 
-    <div class="documentDescription" i18n:translate="description_advanced_search">
+    <div class="documentDescription" i18n:translate="description_custom_advanced_search">
         This search form enables you to find content on the site by
         specifying one or more search terms.
-        <br />
-        Remember that you can use the quick search anytime, it's normally
-        good enough, this search form is just if you want to be more specific.
     </div>
-    <div class="documentDescription" >Recordeu que també podeu utilitzar el <a href="http://cercador.upc.edu">Cercador UPC</a> per fer cerques a tots els webs de la UPC.</div>
+    <div class="documentDescription"><spam i18n:translate="custom_search_upc_1">Remember that you can also use </spam><a href="" tal:attributes="href utils/SearchUrl" target="_blank" i18n:translate="search_upc">Search UPC</a><spam i18n:translate="custom_search_upc_2"> to search all of the UPC's websites.</spam></div>
 
     <div id="content-core">
 
@@ -442,6 +436,6 @@
 
         </metal:define>
     </div>
-</metal:main>
+  </metal:main>
 
 </html>
