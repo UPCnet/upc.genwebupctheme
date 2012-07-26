@@ -70,14 +70,14 @@
             to refine your search.
             </p>
 -->
-            <p class="discreet"><spam i18n:translate="search_part1">If you have not found what you are looking for, try the </spam>
+            <p class="discreet"><span i18n:translate="search_part1">If you have not found what you are looking for, try the </span>
               <a href=""
                i18n:translate="search_results_advanced_link"
                tal:attributes="href string:${advanced_search_url}?${request/QUERY_STRING}">Advanced Search
               </a>
-              <spam i18n:translate="search_part2"> to refine your search or the </spam>
+              <span i18n:translate="search_part2"> to refine your search or the </span>
               <a href="" tal:attributes="href utils/SearchUrl" target="_blank" i18n:translate="search_upc">Search UPC</a>
-              <spam i18n:translate="search_part3"> to search all of the UPC's websites.</spam>
+              <span i18n:translate="search_part3"> to search all of the UPC's websites.</span>
             </p>
         </form>
 
