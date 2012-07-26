@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.1.12 (unreleased)
+4.1.12 (2012-07-26)
 -------------------
 * Sustituir el acceso a los datos de master de MySQL a webService
 * Modificación cabeceras para que el título se coja de la configuración del sitio
