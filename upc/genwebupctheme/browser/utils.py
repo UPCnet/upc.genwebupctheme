@@ -60,7 +60,11 @@ class utilitats(BrowserView):
                     self._dadesUnitat = json.loads(respuesta)
                 except:
                     pass
-        return self._dadesUnitat
+        if 'error' in self._dadesUnitat:
+            if  self._dadesUnitat['error'] == 'La unitat no existeix':
+                return False
+        else:
+            return self._dadesUnitat
 
     def getTitol(self):
         lt = getToolByName(self, 'portal_languages')
@@ -156,28 +160,41 @@ class utilitats(BrowserView):
         return str.decode('iso-8859-1').encode('utf-8')
 
     def getDirectori(self):
-        ue = self._dadesUnitat['codi_upc']
-        return "http://directori.upc.edu/directori/dadesUE.jsp?id=" + ue
+        try:
+            ue = self._dadesUnitat['codi_upc']
+            directori = "http://directori.upc.edu/directori/dadesUE.jsp?id=" + ue
+        except:
+            directori = ""
+        return directori
 
     def getNomCentre(self):
         """ Retorna el nom del centre segons l'idioma
         """
         lang = self.pref_lang()
-        nom_centre = self._dadesUnitat['nom_' + lang]
+        try:
+            nom_centre = self._dadesUnitat['nom_' + lang]
+        except:
+            nom_centre = ""
         return nom_centre
 
     def getEdifici(self):
         """Retorna edifici en l'idioma del portal
         """
         lang = self.pref_lang()
-        edifici = self._dadesUnitat['edifici_' + lang]
+        try:
+            edifici = self._dadesUnitat['edifici_' + lang]
+        except:
+            edifici = ""
         return edifici
 
     def getCampus(self):
         """Retorna edifici en l'idioma del portal
         """
         lang = self.pref_lang()
-        campus = self._dadesUnitat['campus_' + lang]
+        try:
+            campus = self._dadesUnitat['campus_' + lang]
+        except:
+            campus = ""
         return campus
 
     def fields2Dic(self, dc, de, di):
@@ -196,8 +213,7 @@ class utilitats(BrowserView):
 
     def getSectionFromURL(self):
         context = self.context
-        tools = getMultiAdapter((self.context, self.request),
-                                 name = u'plone_tools')
+        tools = getMultiAdapter((self.context, self.request), name=u'plone_tools')
 
         portal_state = getMultiAdapter((self.context, self.request),
                                         name=u'plone_portal_state')
