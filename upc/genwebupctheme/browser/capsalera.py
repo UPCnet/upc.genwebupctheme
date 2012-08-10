@@ -173,7 +173,8 @@ class eines(ViewletBase):
             else:
                 self.homelink_url = self.site_url + '/author/' + quote_plus(userid)
 
-            member_info = tools.membership().getMemberInfo(member.getId())
+            member_info = tools.membership().getMemberInfo()
+
             fullname = member_info.get('fullname', '')
             if fullname:
                 self.user_name = fullname
