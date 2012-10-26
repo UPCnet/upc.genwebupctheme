@@ -1,3 +1,11 @@
+<tal:comment replace="nothing">
+<!--
+
+    GW4.2 Superseeded by personal_bar in genweb.theme.browser.viewlets.gwPersonalBarViewlet
+
+-->
+</tal:comment>
+
 <tal:block tal:define="utils context/@@upc.genweb.utils;"
 	               i18n:domain="plone">
 
@@ -5,43 +13,43 @@
 <!--  PERSONAL BAR  -->
 
 <div id="portal-personaltools-wrapper"
-     tal:condition="not:view/show"         
+     tal:condition="not:view/show"
      i18n:domain="upc.genwebupc">
 
-  <b class="hiddenStructure" i18n:domain="plone" i18n:translate="heading_personal_tools">Personal tools</b> 
+  <b class="hiddenStructure" i18n:domain="plone" i18n:translate="heading_personal_tools">Personal tools</b>
 
 <ul id="portal-personaltools"
     class="visualInline">
-    
-    
-     
-    
+
+
+
+
    <tal:block>
        <li><span class="negreta" i18n:translate="genweb-usuari_connectat">
         User:
-     </span> <a 
-           id="user-name"                  
-           tal:attributes="href view/homelink_url">           
+     </span> <a
+           id="user-name"
+           tal:attributes="href view/homelink_url">
            <span class="visualCaseSensitive"
                  tal:content="view/user_name">John</span></a></li>
    </tal:block>
-   
+
 <li>
-    
+
      <span class="negreta" i18n:translate="genweb-opcionspathbar">
         Options:
      </span>
-    
+
     <span>
     <span tal:condition="view/canSeeToolLink">
-    <a  
-    i18n:translate="genweb-accesarrel" 
+    <a
+    i18n:translate="genweb-accesarrel"
     i18n:attributes="title genweb-accesarrel"
     tal:attributes="href string:${view/portal_url}/folder_contents">
     Root folder</a>
     |
     </span>
-    <a 
+    <a
     i18n:translate="genweb-preferencies"
     i18n:attributes="title genweb-preferencies"
     tal:attributes="href string:${view/portal_url}/personalize_form">
@@ -50,28 +58,28 @@
     <span>
     <a href="https://www.upc.edu/comunicacio/www/genweb-upc/formacio" target="newwindow">
        <span i18n:translate="genweb-ajuda" i18n:attributes="title genweb-ajuda">Help</span>
-       <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" />  
+       <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc" />
      </a>
      |
     </span>
     <span tal:condition="python: user.has_role(['Manager'])">
-    <a     
+    <a
     i18n:domain="plone"
-    i18n:translate="Site Setup"     
+    i18n:translate="Site Setup"
     tal:attributes="href string:${view/portal_url}/plone_control_panel">
     Site setup</a>
      |
     </span>
     <span tal:condition="view/canSeeToolLink">
-    <a  
+    <a
     i18n:domain="plone"
-    i18n:translate="Undo" 
+    i18n:translate="Undo"
     i18n:attributes="title Undo"
     tal:attributes="href string:${view/portal_url}/undo_form">
-    Undo</a>    
+    Undo</a>
     |
     </span>
-    <a  
+    <a
     i18n:translate="genweb-logout"
     i18n:attributes="title genweb-logout"
     tal:attributes="href string:${view/portal_url}/cas_logout">
