@@ -490,7 +490,8 @@
       permission="zope2.View"
       />
 
-    <browser:page
+<!-- Ported to skins for prevent it to collide with GW42 -->
+<!--     <browser:page
       for="*"
       name="sobre-aquest-web"
       template="pages/sobre-aquest-web.pt"
@@ -552,7 +553,7 @@
       template="pages/accessibility.pt"
       permission="zope2.View"
       />
-
+ -->
     <browser:page
       for="*"
       name="canvidecontrasenya"
