@@ -1,0 +1,38 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+
+    <h1>Sobre aquest web</h1>
+<h2>Drets d'autor d'aquest web</h2>
+<p>Els textos, imatges, sons, animacions, programari i la resta de continguts inclosos en aquest web són propietat exclusiva 
+de la Universitat Politècnica de Catalunya (UPC), o bé la UPC està degudament autoritzada per utilitzar-los. Qualsevol acte de 
+transmissió, distribució, cessió, reproducció, comercialització, emmagatzematge, comunicació pública o transformació, total o 
+parcial, requereix el consentiment exprés i per escrit de la UPC.</p> <br />
+<h2>Avís legal sobre protecció de dades de caràcter personal</h2>
+<p>En compliment del que estableixen la Llei orgànica 15/1999, de 13 de desembre, 
+sobre protecció de dades de caràcter personal, i el Reial Decret que aprova el Reglament de desenvolupament 
+de la Llei Orgànica de Protecció de dades de caràcter personal, us informem que les dades personals recollides per mitjà 
+dels formularis d'aquest web seran tractades de forma confidencial. Quedaran incorporades als fitxers de la Universitat 
+Politècnica de Catalunya per dur a terme una gestió correcta i respondre les consultes o suggeriments que proposeu en 
+els formularis. Tanmateix, podeu exercir els drets d'accés, rectificació, cancel·lació i oposició contactant 
+amb l'<a href="/contact" 
+       tal:attributes="href string:${portal_url}/contact">Administració del web</a>.</p>
+
+
+    </div>
+</body>
+</html>

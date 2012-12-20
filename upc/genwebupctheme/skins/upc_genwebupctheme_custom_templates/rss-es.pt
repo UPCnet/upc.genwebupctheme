@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+
+<h1>Información RSS</h1><br />
+<p><strong>RSS </strong>(sigla de <em>Really Simple Syndication</em>) es un canal de distribución de contenidos que se actualizan a menudo, como sitios de noticias, weblogs o podcasts, por medio del cual se puede compartir la información y utilizarla en otros sitios web o programas. Es en esencia una sindicación de contenidos.<br />
+<br />
+La principal ventaja del sistema es la agilidad, puesto que ya no hay que descargar las imágenes y otros elementos del web, solo los titulares, y también se puede juntar el contenido de&nbsp; muchos sitios web en un solo espacio. Gracias a esta tecnología, los usuarios ya no deben preocuparse de comprobar si hay novedades que les interesen en un determinado espacio digital, sino que pueden recibir y organizar los nuevos titulares de un espacio digital en el momento mismo en que se publican. El web incorpora este servicio en todas las páginas donde aparece el icono <img src="rss.gif" alt="rss">.</p>
+<br />
+<h2>RSS de la UPC</h2>
+<ul>
+
+	<li><a href="http://www.upc.edu/agenda-actividades/todas/RSS?set_language=es" target="_blank">Agenda UPC <img src="icon_blank.gif" class="link_blank" alt="Abre en ventana nueva"></a></li>
+    <li><a target="_blank" href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=es">Noticias UPC [Oficina de Medios de Comunicación] <img class="link_blank" alt="Abre en ventana nueva" src="icon_blank.gif"></a></li>
+    <li><a href="http://tv.upc.edu/rss-es/ultimos-videos/RSS?set_language=es" target="_blank">UPCtv, últimos vídeos publicados <img src="icon_blank.gif" class="link_blank" alt="Abre en ventana nueva"></a></li>
+</ul>
+<br />
+<h2>Agregadores de libre distribución</h2>
+Un programa que utiliza RSS se denomina agregador. Existen muchos tipos de agregadores: incrustados en navegadores web, widgets para el escritorio, en programas de correo electrónico, en páginas web dedicadas y en programas dedicados. Los de libre distribución son:
+<br /><br />
+<ul>
+    <li><a href="http://www.feedreader.com/" target="_blank">FeedReader <img src="icon_blank.gif" alt="Abrir el enlace en una nueva ventana" class="link_blank"></a></li>
+    <li><a href="http://google.com/reader" target="_blank">Google Reader <img src="icon_blank.gif" alt="Abrir el enlace en una nueva ventana" class="link_blank"></a></li>
+</ul>
+
+
+    </div>
+</body>
+</html>

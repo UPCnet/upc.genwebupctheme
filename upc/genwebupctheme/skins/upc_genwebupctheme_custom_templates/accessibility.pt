@@ -1,0 +1,124 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+
+    <h1>Accessibility</h1>
+<br />
+<p>
+This website has been generated with <a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc"><strong>Genweb UPC v3 
+<img alt="(open in new window)" src="icon_blank.gif" class="link_blank"></strong></a>, a tool that allows to the creation and management of web pages according to the UPC institutional style guide.
+<br /><br />
+
+<a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc"><strong>Genweb UPC v3 <img alt="(open in new window)" 
+src="icon_blank.gif" class="link_blank"></strong></a> is a project co-authored by the <a target="_blank" href="http://www.upc.edu/comunicacio">
+Comunication and Promotion Service <img alt="(open in new window)" src="icon_blank.gif" class="link_blank"></a> of UPC and <a target="_blank" 
+href="http://www.upcnet.es">UPCnet <img alt="(open in new window)" src="icon_blank.gif" class="link_blank"></a> developed with the Open Source 
+Content Management System <a target="_blank" href="http://plone.org">Plone <img alt="(open in new window)" src="icon_blank.gif" class="link_blank"></a>. 
+This site has been designed to be completely accessible and usable, working in accordance with the W3C accessibility guidelines. If there is anything on this site &mdash;accessibility 
+or validation related&mdash; that is not according to this standard, please contact the <a href="/contact" tal:attributes="href string:${portal_url}/contact">webmaster</a>.
+</p>
+<h2>Pautes WAI</h2>
+<p><a title="(obriu en finestra nova)" target="_blank" href="http://www.w3.org/WAI/WCAG1AA-Conformance">
+<img src="http://www.upc.edu/config-ca/imatges/wcag-1.0-aa" alt="validat wai-aa wcag 1.0, (obriu en finestra nova)" class="align_left"></a> 
+Els continguts del web de la UPC han estat validats amb la certificació Doble-A, 
+segons les recomanacions de la WAI (<span lang="en">Web Accessibility Iniciative</span>), grup de treball internacional que pertany al W3C 
+(<span lang="en">World Wide Web Consortium</span>) , organisme que vetlla perquè cap col·lectiu pateixi discriminacions de cap mena que 
+puguin ser causa de fractures socials en el món virtual.</p>
+<br /><br />
+<p><a title="(obriu en finestra nova)" target="_blank" href="http://jigsaw.w3.org/css-validator/"><img src="http://www.upc.edu/config-ca/imatges/valid-css" alt="validat css, (obriu en finestra nova)" class="align_left"></a>
+<a title="(obriu en finestra nova)" target="_blank" href="http://validator.w3.org/check?uri=referer"><img src="http://www.upc.edu/config-ca/imatges/valid-xhtml-1.0" alt="validat xhtml 1.0, (obriu en finestra nova)" class="align_left"></a>
+En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que la WAI preconitza, tant per al marcat XHTML 1.0 com per al CSS.</p>
+<br /><br />
+
+
+<h2>Text size</h2>
+<ul>
+        <li><code><big>A</big></code> &mdash; <a title="Large Text" href="javascript:setBaseFontSize('largeText', 1);">Large</a></li>
+        <li><code>A</code> &mdash; <a title="Normal Text" href="javascript:setBaseFontSize('',1);">Normal</a></li>
+        <li><code><small>A</small></code> &mdash; <a title="Small Text" href="javascript:setBaseFontSize('smallText',1);">Small</a></li>
+</ul>                         
+
+<h3>Changing text size in common web browsers</h3>
+<div class="blockquote">
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/ff-icon.png" class="align_left" />Mozilla Firefox</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, CTRL + + (plus key), or View &gt; Text Size &gt; Increase<br />
+	<strong>Decrease text size</strong>: CTRL + mouse wheel down, CTRL + – (minus key), or View &gt; Text Size &gt; Decrease<br />
+	<strong>Restore default size</strong>: CTRL + 0 (zero), or View &gt; Text Size &gt; Normal</p>
+	
+  <div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/sf-icon.png" class="align_left" />Safari</h4>
+	<p><strong>Increase text size</strong>: Command (Mac) / CTRL (PC) + + (plus key), or View &gt; Make Text Bigger<br />
+	<strong> Decrease text size</strong>: Command (Mac) / CTRL (PC) + – (minus key), or View &gt; Make Text Smaller<br />
+	<strong> Restore default size</strong>: Command (Mac) / CTRL (PC) + 0, or View &gt; Make Text Normal Size</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/ie-icon.png" class="align_left" />Internet  Explorer</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, CTRL + + (plus key), or View &gt; Text Size &gt; Larger / Largest<br />
+	<strong> Decrease text size</strong>: CTRL + mouse wheel down, CTRL + – (minus key), or View &gt; Text Size &gt; Smaller / Smallest<br />
+	<strong> Restore default size</strong>: CTRL + 0 (zero, not with numeric keypad), or View &gt; Text Size &gt; Medium</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/op-icon.png" class="align_left" />Opera</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, or View &gt; Zoom &gt; 120% (or more)<br />
+	<strong> Decrease text size</strong>: CTRL + mouse wheel down, or View &gt; Zoom &gt; 80% (or less)<br />
+	<strong> Restore default size</strong>: View &gt; Zoom &gt; 100%</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+	<h4><img alt=" " src="http://www.upc.edu/config-ca/imatges/ch-icon.png" class="align_left" />Chrome</h4>
+	<p><strong>Increase text size</strong>: CTRL + mouse wheel up, CTRL + + (plus key), or Page icon &gt; Zoom &gt; Larger<br />
+	<strong> Decrease text size</strong>:  CTRL + mouse wheel down, CTRL + – (minus key), or Page icon &gt; Zoom &gt; Smaller<br />
+	<strong> Restore default size</strong>: CTRL + 0 (zero, not with numeric keypad), or Page icon &gt; Zoom &gt; Normal</p>
+	
+		<div class="visualClear">&nbsp;</div> 
+</div>
+<br />
+<br />
+
+<h2>Access keys</h2>
+<p>
+Access keys enable you to browse this website using your keyboard. Further information is available at <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">W3C Accessibility Guidelines <img alt="(open in new window)" src="icon_blank.gif" class="link_blank" /></a>.
+</p>
+<p>This website follows most international recommendations on access keys.</p>
+
+
+<h3>Access keys available on this website</h3>
+    <ul>
+        <li><code>1</code> &mdash; Home Page</li>
+        <li><code>2</code> &mdash; Skip to content</li>
+        <li><code>3</code> &mdash; Site Map</li>
+        <li><code>4</code> &mdash; Search field focus</li>
+        <li><code>6</code> &mdash; Site navigation tree</li>
+        <li><code>9</code> &mdash; Contact information</li>
+        <li><code>0</code> &mdash; Accessibility information</li>
+    </ul>
+
+
+<br /><br />
+<h2 class="liniaBaix">Optimisation</h2> 
+<p>The website is optimised for viewing at a minimum resolution of 1024 x 768 pixels. To ensure maximum compatibility, its behaviour has been thoroughly checked with the most common web browsers: <strong>Firefox 3</strong> or later, <strong>Explorer 7</strong> or later, <strong>Safari 4</strong>, <strong>Chrome 3</strong> and <strong>Opera 10</strong>.</p> 
+<br /><br />
+
+<h2 class="liniaBaix">Contact</h2> 
+<p>We are working to maintain and improve the accessibility of this website. If you notice any accessibility-related anomalies on any of its pages, please contact the <a href="/contact" tal:attributes="href string:${portal_url}/contact">webmaster</a>.</p>
+
+
+
+
+    </div>
+
+</body>
+</html>

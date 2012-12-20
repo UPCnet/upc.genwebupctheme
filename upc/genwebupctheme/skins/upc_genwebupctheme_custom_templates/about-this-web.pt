@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+    <h1>About this web</h1>
+
+	<h2>Intellectual property rights of this website</h2>
+	<p>The texts, images, sounds, animation, 
+        software and other content included in this website are the exclusive property of the Technical 
+        University of Catalonia, or UPC.&nbsp;The UPC is suitably authorised to use the material published. 
+        Total or partial dissemination, distribution, concession, reproduction, commercialisation, storage, public 
+        communication or modification is dependent upon the explicit written authorisation of UPC.
+    </p>
+    
+    <h2>Legal warning regarding personal data protection</h2>
+    <p>In accordance with legislation 15/1999 (13<sup>th</sup> December) concerning personal data 
+        protection, any personal data that is collected by means of the online forms on this website 
+        will be treated in a confidential manner and will be incorporated into the databases of the Technical 
+        University of Catalonia for the purposes of administration and to respond to the queries or suggestions 
+        that users might include in these forms. <br>
+        Users may exercise their right to access, rectify, cancel and oppose this data through the 
+    <span><a href="/contact" 
+       tal:attributes="href string:${portal_url}/contact">webmaster</a></span>.
+    </p>
+
+    </div>
+</body>
+</html>

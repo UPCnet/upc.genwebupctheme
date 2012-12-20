@@ -1,0 +1,42 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+<h1>Informació RSS</h1><br />
+			<p><strong>RSS </strong>(sigla de <em>Really Simple Syndication</em>) és un canal de distribució de continguts que s'actualitzen sovint, com ara llocs de notícies, weblogs o podcasts, i per mitjà del qual es pot compartir la informació i usar-la en altres llocs web o programes. És en essència una sindicació de continguts.<br />
+<br />
+El principal avantatge del sistema és l'agilitat, ja que no cal descarregar les imatges i els altres elements del web, només els titulars, i també es pot ajuntar el contingut de molts llocs web en un sol espai. Gràcies a aquesta tecnologia, els usuaris ja no s'han de preocupar de comprovar si hi ha novetats que els interessin en un determinat espai digital, sinó que poden rebre i organitzar els nous titulars d'un espai digital en el mateix moment que es publiquen. El web incorpora aquest servei a totes les pàgines on apareix la icona <img src="rss.gif" alt="RSS" />.</p>
+
+<br />
+<h2>RSS de la UPC</h2>
+<ul>
+	<li><a href="http://www.upc.edu/agenda/totes/RSS" target="_blank">Agenda UPC <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+	<li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=ca" target="_blank">Notícies UPC [Oficina de Mitjans de comunicació] <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+	<li><a href="http://tv.upc.edu/rss/ultims-videos/RSS" target="_blank">UPCtv, ultims videos publicats <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+	<li><a href="http://bibliotecnica.upc.edu/rss.xml" target="_blank">Bibliotècnica <img src="icon_blank.gif" class="link_blank" alt="Obriu l'enllaç en una finestra nova"></a></li>
+</ul>
+<br />
+<h2>Agregadors de distribució lliure</h2>
+Un programa que utilitza RSS s'anomena agregador. N'hi ha de molts tipus: incrustats a navegadors web, widgets per a l'escriptori, en programes de correu electrònic, en pàgines web dedicades i en programes dedicats. Els de distribució lliure són:
+<br /><br />
+<ul>
+    <li><a target="_blank" href="http://www.feedreader.com/">FeedReader <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
+    <li><a target="_blank" href="http://google.com/reader">Google Reader <img class="link_blank" alt="Obriu l'enllaç en una finestra nova" src="icon_blank.gif"></a></li>
+</ul>
+
+    </div>
+</body>
+</html>

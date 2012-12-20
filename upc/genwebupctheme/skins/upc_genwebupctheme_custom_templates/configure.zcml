@@ -1,0 +1,566 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="upc.genwebupctheme">
+
+   <include package=".boxlets" />
+
+    <!-- 'Tema genwebUPC' Zope 3 browser layer
+      Register views, viewlets and resources for this layer to make sure
+      they only apply to the 'Tema genwebUPC' theme.
+      You can also use this layer to override default Plone browser views
+      and viewlets only within the 'Tema genwebUPC' theme.
+      -->
+
+    <interface
+        interface=".interfaces.IThemeSpecificNeutre3"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Tema genwebUPC Neutre3"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificUnitat"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Tema genwebUPC Unitat"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificNeutre2"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Tema genwebUPC Neutre2"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificMaster"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Tema genwebUPC Master"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificNeutre3"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Neutre3"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificUnitat"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Unitat"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificNeutre2"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Neutre2"
+        />
+
+    <interface
+        interface=".interfaces.IThemeSpecificMaster"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="GenwebUPC_Master"
+        />
+
+<!-- Recursos Z3 -->
+    <browser:resourceDirectory
+        name="upc.genwebupctheme.images"
+        directory="images"
+        />
+
+    <browser:resourceDirectory
+        name="upc.genwebupctheme.stylesheets"
+        directory="stylesheets"
+        />
+
+<!-- Utilitats i funcions comunes -->
+      <browser:page
+         for="*"
+         name="upc.genweb.utils"
+         class=".utils.utilitats"
+         permission="zope2.View"
+         />
+
+      <browser:page
+         for="*"
+         name="sitemap"
+         class=".utils.utilitats"
+         template="sitemap.pt"
+         permission="zope2.View"
+         />
+
+<!-- Viewlets registration -->
+
+<!-- Viewlets comuns a tots els sabors -->
+  <!-- Comuns Neutre3 -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titols"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titols"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.addthis"
+         class=".addthis.AddthisViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+
+  <!-- Comuns Unitat -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titols"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titols"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.barraColor"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.barraColor"
+         template="barra.pt"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.addthis"
+         class=".addthis.AddthisViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+         layer=".interfaces.IThemeSpecificUnitat"
+         permission="zope2.View"
+         />
+
+  <!-- Comuns Neutre2 -->
+       <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.addthis"
+         class=".addthis.AddthisViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+   <!-- Comuns Master -->
+     <browser:viewlet
+         name="upc.genweb.eines"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.eines"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.capsaleraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.capsaleraSuperior"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titolsMaster"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titolsMaster"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.barraIdiomes"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomes"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.darreramodificacio"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+         class=".viewlets.DarreraModificacio"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb-peu"
+         manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+         class=".peu.Peu"
+         template="peu.pt"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.addthis"
+         class=".addthis.AddthisViewlet"
+         manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+<!-- Viewlets especifics -->
+ <!-- Específic Neutre3 -->
+      <browser:viewlet
+         name="upc.genweb.barraSuperior"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.barraSuperior"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.logoNeutre3"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoNeutre3"
+         layer=".interfaces.IThemeSpecificNeutre3"
+         permission="zope2.View"
+         />
+
+<!-- Específic Neutre2 -->
+     <browser:viewlet
+         name="upc.genweb.logoNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.barraIdiomesNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".barraIdiomes.barraIdiomesNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+     <browser:viewlet
+         name="upc.genweb.titolsNeutre2"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.titolsNeutre2"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         permission="zope2.View"
+         />
+
+
+<!-- Específic Unitat -->
+    <browser:viewlet
+      name="upc.genweb.menuUnitat"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".unitat.menuUnitat.GlobalSections"
+      layer=".interfaces.IThemeSpecificUnitat"
+      permission="zope2.View"
+      />
+
+    <browser:viewlet
+        name="plone.path_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.PathBar"
+        layer=".interfaces.IThemeSpecificUnitat"
+        permission="zope2.View"
+        />
+
+<!-- Específic Master -->
+     <browser:viewlet
+         name="upc.genweb.logoMaster"
+         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+         class=".capsalera.logoMaster"
+         layer=".interfaces.IThemeSpecificMaster"
+         permission="zope2.View"
+         />
+
+<!-- Vistes per emular l'article -->
+    <browser:page
+      name="article1"
+      for="Products.ATContentTypes.interface.IATDocument"
+      class=".article.ArticleView"
+      template="article1.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      name="article2"
+      for="Products.ATContentTypes.interface.IATDocument"
+      class=".article.ArticleView"
+      template="article2.pt"
+      permission="zope2.View"
+      />
+
+<!-- Home Page -->
+    <browser:page
+      name="homepage"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".homepage.HomePageView"
+      template="homepageNoPortlets.pt"
+      permission="zope2.View"
+      />
+
+<!-- Browser page info-general MASTERS -->
+
+    <browser:page
+      for="*"
+      name="info-general"
+      class=".master.information.infoGeneralView"
+      permission="zope2.View"
+      />
+
+<!-- Browser page competencies MASTERS -->
+<!--
+    <browser:page
+      for="*"
+      name="competencies"
+      class=".master.information.competenciesView"
+      permission="zope2.View"
+      />
+-->
+<!-- Browser page requisits MASTERS -->
+<!--
+    <browser:page
+      for="*"
+      name="requisits"
+      class=".master.information.requisitsView"
+      permission="zope2.View"
+      />
+-->
+<!-- Browser page requisits MASTERS -->
+<!--
+    <browser:page
+      for="*"
+      name="preinscripcio"
+      class=".master.information.preinscripcioView"
+      permission="zope2.View"
+      />
+-->
+<!-- CSS dinamic -->
+    <browser:page
+      name="dynamic.css"
+      for="*"
+      class=".dynamic.DynamicCssView"
+      permission="zope2.View"
+      />
+<!-- utility del theme -->
+    <adapter factory=".controlpanel.GenWebControlPanelAdapter" />
+
+    <browser:page
+      name="genwebupc-controlpanel"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".controlpanel.GenWebControlPanel"
+      permission="cmf.ManagePortal"
+      />
+
+    <browser:resourceDirectory
+      name="upc.genwebupc.images"
+      directory="images"
+      />
+
+
+    <browser:page
+      for="*"
+      name="contact"
+      class=".contact.ContactForm"
+      permission="zope.Public"
+      />
+
+      <adapter
+        for="*"
+        provides=".contact.IContactForm"
+        factory=".contact.Contact" />
+
+    <browser:page
+      for="*"
+      name="contact_feedback"
+      template="send_feedback_confirm.pt"
+      permission="zope2.View"
+      />
+
+<!-- Ported to skins for prevent it to collide with GW42 -->
+<!--     <browser:page
+      for="*"
+      name="sobre-aquest-web"
+      template="pages/sobre-aquest-web.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
+      name="about-this-web"
+      template="pages/about-this-web.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
+      name="sobre-esta-web"
+      template="pages/sobre-esta-web.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
+      name="rss-ca"
+      template="pages/rss-ca.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
+      name="rss-en"
+      template="pages/rss-en.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
+      name="rss-es"
+      template="pages/rss-es.pt"
+      permission="zope2.View"
+      />
+
+    <browser:page
+      for="*"
+      name="accesibilidad"
+      template="pages/accesibilidad.pt"
+      permission="zope2.View"
+      />
+
+	<browser:page
+      for="*"
+      name="accessibilitat"
+      template="pages/accessibilitat.pt"
+      permission="zope2.View"
+      />
+
+	<browser:page
+      for="*"
+      name="accessibility"
+      template="pages/accessibility.pt"
+      permission="zope2.View"
+      />
+ -->
+    <browser:page
+      for="*"
+      name="canvidecontrasenya"
+      template="canvi-contrasenya.pt"
+      permission="zope2.View"
+      />
+
+
+
+</configure>

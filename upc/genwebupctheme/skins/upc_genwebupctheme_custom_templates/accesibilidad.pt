@@ -1,0 +1,130 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+
+    <h1>Accesibilidad</h1>
+    <br />
+
+<p>
+Este sitio web ha sido generado con <a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc">
+<strong>Genweb UPC v3 <img alt="(abre en ventana nueva)" src="icon_blank.gif" class="link_blank"></strong></a>, 
+una herramienta que permite la creación y gestión de webs según el libro de estilo institucional de la UPC.<br /><br />
+El <a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc"><strong>Genweb UPC v3 <img alt="(abre en ventana nueva)" 
+src="icon_blank.gif" class="link_blank"> </strong></a> ha sido desarrollado conjuntamente por el <a target="_blank" 
+href="http://www.upc.edu/comunicacio">Servicio de Comunicación y Promoción <img alt="(abre en ventana nueva)" 
+src="icon_blank.gif" class="link_blank"></a> de la UPC y <a target="_blank" href="http://www.upcnet.es">UPCnet 
+<img alt="(abre en ventana nueva)" src="icon_blank.gif" class="link_blank"></a> utilizando como base el sistema de gestión de contenidos de 
+software libre <a target="_blank" href="http://plone.org">Plone <img alt="(abre en ventana nueva)" src="icon_blank.gif" class="link_blank"></a>. 
+Se ha diseñado para que sea completamente accesible i usable, funcionando de acuerdo con las guias de accesibilidad W3C de contenido web. 
+</p>
+
+
+<br />
+<h2>Pautas WAI</h2> 
+<p><a href="http://www.w3.org/WAI/WCAG1AA-Conformance" target="_blank" title="(abre en ventana nueva)"><img src="http://www.upc.edu/config-ca/imatges/wcag-1.0-aa" class="align_left" alt="validat wai-aa
+wcag 1.0, (abre en ventana nueva)"></a> Los contenidos de la web  de la UPC han sido validados con la certificación Doble-A, 
+según las  recomendaciones de la WAI (Web Accessibility Iniciative), grupo de  trabajo internacional perteneciente al W3C (
+World Wide Web  Consortium), organismo que vela porque ningún colectivo sufra  discriminaciones de ningún tipo que puedan ser causa de 
+fracturas  sociales en el mundo virtual.</p>
+
+<br /><br />
+<p><a href="http://jigsaw.w3.org/css-validator/" target="_blank" title="(abre en ventana nueva)">
+<img src="http://www.upc.edu/config-ca/imatges/valid-css" class="align_left" alt="validat css, (abre en ventana nueva)"></a>
+<a href="http://validator.w3.org/check?uri=referer" target="_blank" title="(abre en ventana nueva)">
+<img src="http://www.upc.edu/config-ca/imatges/valid-xhtml-1.0" class="align_left" alt="validat xhtml 1.0, (abre en ventana nueva)"></a> 
+En este sentido, las  técnicas empleadas en la web de la UPC encajan con lo que la WAI  preconiza, tanto para el marcado XHTML 1.0 como para el CSS.
+</p>
+
+<br /><br />
+<h2>Tamaño del texto</h2>
+<ul>
+     <li><code><big>A</big></code> &mdash; <a href="javascript: setBaseFontSize('largeText', 1);" title="Text gran">Grande</a></li>
+     <li><code>A</code> &mdash; <a href="javascript:setBaseFontSize('',1);" title="Text normal">Normal</a></li>
+     <li><code><small>A</small></code> &mdash; <a href="javascript:setBaseFontSize('smallText',1);" title="Text petit">Pequeño</a></li>
+</ul>
+
+<h3>Cambios de tamaños en los principales navegadores</h3>
+<div class="blockquote">
+	<img height="80" width="80" src="http://www.upc.edu/config-ca/imatges/ff-icon.png" alt="mozilla firefox" class="align_left">
+	<h4>Mozilla Firefox</h4>
+	<p><strong>Aumentar el tamaño del texto</strong>: CTRL + Rueda del ratón atrás, CTRL + + (tecla más) o Ver &gt; Tamaño &gt; Aumentar<br /> 
+	<strong>Reducir el tamaño del texto</strong>: CTRL + Rueda del ratón adelante, CTRL + &ndash; (tecla menos) o Ver &gt;Tamaño &gt; Reducir<br /> 
+	<strong>Recuperar la vista original</strong>: CTRL + 0 (cero) o Ver &gt; Tamaño &gt; Restablecer</p> 
+	<div class="visualClear">&nbsp;</div> 
+	
+	<img height="80" width="80" src="http://www.upc.edu/config-ca/imatges/sf-icon.png" alt="safari" class="align_left"> 
+	<h4>Safari</h4> 
+	<p><strong>Aumentar el tamaño del texto</strong>: Command (Mac) / CTRL (PC) + + (tecla más) o Ver &gt; Incrementar texto<br /> 
+	<strong>Reducir el tamaño del texto</strong>: Command (Mac) / CTRL (PC) + &ndash; (tecla menos) o Ver &gt; Disminuir texto<br /> 
+	<strong>Recuperar la vista original</strong>: Command (Mac) / CTRL (PC) + 0 o Ver &gt; Tamaño normal del texto</p> 
+	<div class="visualClear">&nbsp;</div> 
+	
+	<img height="80" width="80" src="http://www.upc.edu/config-ca/imatges/ie-icon.png" alt="internet explorer" class="align_left"> 
+	<h4>Internet Explorer</h4> <p><strong>Aumentar el tamaño del texto</strong>: CTRL + Rueda del ratón adelante, CTRL + + (tecla más) o Ver &gt; Tamaño del texto &gt; Grande, Muy grande<br /> 
+	<strong>Reducir el tamaño del texto</strong>: CTRL + Rueda del ratón atrás, CTRL + &ndash; (tecla menos) o Ver &gt; Tamaño del texto &gt; Pequeño, Muy pequeño<br /> 
+	<strong>Recuperar la vista original</strong>: CTRL + 0 (cero, no con el teclado numérico) o Ver &gt; Tamaño del texto &gt; Mediano</p> 
+	<div class="visualClear">&nbsp;</div> 
+	
+	<img height="80" width="80" src="http://www.upc.edu/config-ca/imatges/op-icon.png" alt="opera" class="align_left"> 
+	<h4>Opera</h4> <p><strong>Aumentar el tamaño del texto</strong>: CTRL + Rueda del ratón adelante o Ver &gt; Zoom &gt; 120% y más<br /> 
+	<strong>Reducir el tamaño del texto</strong>: CTRL + Rueda del ratón atrás o Ver &gt; Zoom &gt; 80% y menos<br /> 
+	<strong>Recuperar la vista original</strong>: Ver &gt; Zoom &gt; 100%</p> 
+	<div class="visualClear">&nbsp;</div>
+	
+	<img height="80" width="80" src="http://www.upc.edu/config-ca/imatges/ch-icon.png" alt="chrome" class="align_left"> 
+	<h4>Chrome</h4> <p><strong>Aumentar el tamaño del texto</strong>: CTRL + Rueda del ratón adelante, CTRL + + (tecla más) o Control de página &gt; Tamaño&gt; Mayor<br /> 
+	<strong>Reducir el tamaño del texto</strong>: CTRL + Rueda del ratón atrás, CTRL + &ndash; (tecla menos) o Control de página &gt; Tamaño&gt; Menor<br /> 
+	<strong>Recuperar la vista original</strong>: CTRL + 0 (cero, no con el teclado numérico) o Control de página &gt; Tamaño &gt; Normal</p>
+<br /><br />
+</div> 
+	
+<br /><br />
+<h2>Teclas de acceso</h2> 
+<p>Las teclas de acceso son un dispositivo de navegación que permite visitar este web utilizando el teclado.<br /> 
+Más información sobre las teclas de acceso: <a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey" target="_blank">Guías de 
+accesibilidad W3C <img src="icon_blank.gif" alt="Abrir el enlace en una nueva ventana" class="link_blank"></a>.</p> 
+<p>Este web utiliza una configuración que coincide con la mayoría de recomendaciones de accesibilidad internacionales.</p> 
+
+<h3>Teclas de acceso disponibles</h3>
+<ul>
+     <li><code>1</code> &mdash; Página de inicio</li>
+     <li><code>2</code> &mdash; Ir al contenido</li>
+     <li><code>3</code> &mdash; Mapa del web</li>
+     <li><code>4</code> &mdash; Foco en el campo de búsqueda</li>
+     <li><code>6</code> &mdash; Árbol de navegación</li>
+     <li><code>9</code> &mdash; Información de contacto</li>
+     <li><code>0</code> &mdash; Consulta accesibilidad</li>
+</ul>
+
+<br /><br />
+
+
+<h2>Optimización</h2>
+<p>El web se ha  optimizado para visualizar con una resolución mínima de 1024 x 768  píxeles y, para asegurar la máxima compatibilidad, 
+se ha verificado  cuidadosamente el comportamiento con los principales navegadores de  Internet: <strong>Firefox 3</strong> y posteriores,
+<strong>Explorer</strong> 6 y posteriores, <strong>Safari</strong> 4, <strong>Chrome</strong> 3 y <strong>Opera</strong> 10.</p> 
+
+<br /><br />
+<h2>Contacto</h2> 
+<p>Actualmente, continuamos trabajando para mantener y mejorar la accesibilidad de  todas las páginas de la web. 
+Si observa alguna  anomalía, relacionada con la accesibilidad, contacte por favor con la <a href="/contact" tal:attributes="href string:${portal_url}/contact">Administración del web</a>.</p>
+
+
+
+    </div>
+</body>
+</html>

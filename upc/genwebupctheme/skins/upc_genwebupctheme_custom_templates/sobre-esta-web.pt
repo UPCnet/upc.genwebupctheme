@@ -1,0 +1,38 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="plone">
+
+<head>
+    <metal:noborder fill-slot="top_slot"
+                 tal:define="dummy python:request.set('disable_border',1)" />
+</head>
+
+<body>
+<div metal:fill-slot="main" class="plain"
+     tal:define="utils context/@@upc.genweb.utils;">
+
+
+        <h1>Sobre esta web</h1>
+<h2>Derechos de autor de este web</h2>
+<p>Los textos, imágenes, sonidos, animaciones, software y el resto de contenidos incluidos en este web son 
+propiedad exclusiva de la Universitat Politècnica de Catalunya (UPC), o bien la UPC está debidamente autorizada para utilizarlos. 
+Cualquier acto de transmisión, distribución, cesión, reproducción, comercialización, almacenaje, comunicación pública o 
+transformación, total o parcial, requiere el consentimiento expreso y por escrito de la UPC.</p> <br /> 
+
+
+<h2>Aviso legal sobre protección de datos de carácter personal</h2>
+<p>En cumplimiento de lo que establecen la Ley orgánica 15/1999, de 13 de diciembre, sobre protección de datos de 
+carácter personal, y el Real Decreto que aprueba el Reglamento de desarrollo de la Ley Orgánica de Protección de datos de 
+carácter personal, le informamos que los datos personales recogidos por medio de los formularios de este web serán tratados de 
+forma confidencial. Quedarán incorporados a los ficheros de la Universitat Politècnica de Catalunya para llevar a cabo una 
+gestión correcta y dar respuesta a las consultas o sugerencias que se propongan en los formularios. Sin embargo, puede ejercer 
+los derechos de acceso, rectificación, cancelación y oposición contactando con <a href="/contact" 
+       tal:attributes="href string:${portal_url}/contact">Administración del web</a>.</p>
+
+    </div>
+</body>
+</html>
