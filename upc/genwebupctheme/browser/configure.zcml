@@ -85,8 +85,35 @@
          class=".utils.utilitats"
          template="sitemap.pt"
          permission="zope2.View"
+         layer=".interfaces.IThemeSpecificNeutre3"
          />
 
+      <browser:page
+         for="*"
+         name="sitemap"
+         class=".utils.utilitats"
+         template="sitemap.pt"
+         permission="zope2.View"
+         layer=".interfaces.IThemeSpecificUnitat"
+         />
+
+      <browser:page
+         for="*"
+         name="sitemap"
+         class=".utils.utilitats"
+         template="sitemap.pt"
+         permission="zope2.View"
+         layer=".interfaces.IThemeSpecificNeutre2"
+         />
+
+      <browser:page
+         for="*"
+         name="sitemap"
+         class=".utils.utilitats"
+         template="sitemap.pt"
+         permission="zope2.View"
+         layer=".interfaces.IThemeSpecificMaster"
+         />
 <!-- Viewlets registration -->
 
 <!-- Viewlets comuns a tots els sabors -->
