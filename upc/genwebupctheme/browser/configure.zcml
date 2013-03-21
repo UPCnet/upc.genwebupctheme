@@ -413,6 +413,7 @@
          permission="zope2.View"
          />
 
+<!-- GW4 Traspassar? -->
 <!-- Vistes per emular l'article -->
     <browser:page
       name="article1"
@@ -431,22 +432,23 @@
       />
 
 <!-- Home Page -->
-    <browser:page
+<!-- * -->
+<!--     <browser:page
       name="homepage"
       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
       class=".homepage.HomePageView"
       template="homepageNoPortlets.pt"
       permission="zope2.View"
-      />
+      /> -->
 
 <!-- Browser page info-general MASTERS -->
-
-    <browser:page
+<!-- * -->
+<!--     <browser:page
       for="*"
       name="info-general"
       class=".master.information.infoGeneralView"
       permission="zope2.View"
-      />
+      /> -->
 
 <!-- Browser page competencies MASTERS -->
 <!--
@@ -476,12 +478,14 @@
       />
 -->
 <!-- CSS dinamic -->
-    <browser:page
+<!-- * -->
+<!--     <browser:page
       name="dynamic.css"
       for="*"
       class=".dynamic.DynamicCssView"
       permission="zope2.View"
-      />
+      /> -->
+
 <!-- utility del theme -->
     <adapter factory=".controlpanel.GenWebControlPanelAdapter" />
 
@@ -497,25 +501,26 @@
       directory="images"
       />
 
-
-    <browser:page
+<!-- * -->
+<!--     <browser:page
       for="*"
       name="contact"
       class=".contact.ContactForm"
       permission="zope.Public"
       />
 
-      <adapter
-        for="*"
-        provides=".contact.IContactForm"
-        factory=".contact.Contact" />
+    <adapter
+      for="*"
+      provides=".contact.IContactForm"
+      factory=".contact.Contact" /> -->
 
-    <browser:page
+<!-- * -->
+<!--     <browser:page
       for="*"
       name="contact_feedback"
       template="send_feedback_confirm.pt"
       permission="zope2.View"
-      />
+      /> -->
 
 <!-- Ported to skins for prevent it to collide with GW42 -->
 <!--     <browser:page
@@ -581,13 +586,12 @@
       permission="zope2.View"
       />
  -->
+ <!-- GW4 Traspassar? -->
     <browser:page
       for="*"
       name="canvidecontrasenya"
       template="canvi-contrasenya.pt"
       permission="zope2.View"
       />
-
-
 
 </configure>
