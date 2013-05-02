@@ -4,6 +4,7 @@ Changelog
 4.1.13 (unreleased)
 -------------------
 * Solucionar problema del contact con datos vacíos del webservice
+* Cambio estilos estado borrador del workflow de revisión
 
 4.1.12 (2012-07-26)
 -------------------
