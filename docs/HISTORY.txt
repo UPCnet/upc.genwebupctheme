@@ -1,10 +1,14 @@
 Changelog
 =========
 
-4.1.13 (unreleased)
+4.1.14 (2013-05-02)
 -------------------
 * Solucionar problema del contact con datos vacíos del webservice
 * Cambio estilos estado borrador del workflow de revisión
+
+4.1.13 (2012-08-10)
+-------------------
+* New CAS implementation corrections
 
 4.1.12 (2012-07-26)
 -------------------
