@@ -3,9 +3,7 @@ Changelog
 
 4.1.15 (unreleased)
 -------------------
-
-- Nothing changed yet.
-
+* Fix relative path of peu links [Victor Fernandez de Alba]
 
 4.1.14 (2013-05-02)
 -------------------
