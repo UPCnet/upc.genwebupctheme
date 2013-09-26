@@ -1,6 +1,12 @@
 Changelog
 =========
 
+4.1.15 (unreleased)
+-------------------
+
+- Nothing changed yet.
+
+
 4.1.14 (2013-05-02)
 -------------------
 * Solucionar problema del contact con datos vacíos del webservice
