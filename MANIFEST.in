@@ -1,2 +1,6 @@
-recursive-include upc *
-global-exclude *pyc
+include *.txt *.rst
+
+recursive-include ulearn *
+recursive-include docs *
+
+global-exclude *.pyc
