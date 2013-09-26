@@ -1,38 +1,38 @@
 <div id="peu" tal:define="utils context/@@upc.genweb.utils;
-													portal_url context/@@plone_portal_state/portal_url" 
-                     i18n:domain="upc.genwebupc">   
+													portal_url context/@@plone_portal_state/portal_url"
+                     i18n:domain="upc.genwebupc">
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
-		<tal:block tal:repeat="obj python: view.bannersPeu()">		
+		<tal:block tal:repeat="obj python: view.bannersPeu()">
 			<tal:items tal:define="tmp obj/getObject">
-				<a	tal:attributes="href tmp/URLdesti; target python: view.test(tmp.Obrirennovafinestra,'_blank','_blank')">									
+				<a	tal:attributes="href tmp/URLdesti; target python: view.test(tmp.Obrirennovafinestra,'_blank','_blank')">
 	                <tal:co tal:condition="tmp/getImatge">
 						<span tal:replace="structure tmp/Imatge"/>
                     </tal:co>
 				</a>
-			</tal:items>       	 					
+			</tal:items>
 		</tal:block>
 	</div>
 
-   <div id="signText"> 
+   <div id="signText">
         <span tal:define="links view/linksPeu" tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
             <img src="rss.gif" class="rsspeu" alt="RSS"> <a accesskey="0" href=""
                 i18n:attributes="title genweb-rss"
 				i18n:translate="genweb-rss"
-				tal:attributes="href links/rss">RSS</a>
+				tal:attributes="href string:${portal_url}/${links/rss}">RSS</a>
 				<img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
             <a accesskey="0" href=""
                 i18n:attributes="title genweb-sobre_aquest_web"
 				i18n:translate="genweb-sobre_aquest_web"
-				tal:attributes="href links/about">About this web</a>
+				tal:attributes="href string:${portal_url}/${links/about}">About this web</a>
 				<img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
             <a accesskey="0" href=""
                 i18n:attributes="title genweb-accessibility"
 				i18n:translate="genweb-accessibility"
-				tal:attributes="href links/access">Accessibility</a>
+				tal:attributes="href string:${portal_url}/${links/access}">Accessibility</a>
         </span>
 		<span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span><span tal:condition="python:utils.pref_lang()=='en'" tal:content="python: utils.getGWConfig().firmaunitat_en">Servei de Comunicació i Promoció.</span><br />
         © <a href="http://www.upc.edu" target="_blank">UPC <img class="link_blank"  src="icon_blank.gif" tal:attributes="alt utils/assignAltAcc"/></a>. Universitat Politècnica de Catalunya <span class="gris">●</span> BarcelonaTech
-        
+
     </div>
 </div>
