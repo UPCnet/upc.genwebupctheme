@@ -1,7 +1,7 @@
 Changelog
 =========
 
-4.1.17 (unreleased)
+4.1.17 (2013-09-27)
 -------------------
 * Problems with packaging [Victor Fernandez de Alba]
 
