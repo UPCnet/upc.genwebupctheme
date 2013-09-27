@@ -1,6 +1,6 @@
 include *.txt *.rst
 
-recursive-include ulearn *
+recursive-include upc *
 recursive-include docs *
 
 global-exclude *.pyc
