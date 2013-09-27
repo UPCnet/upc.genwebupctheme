@@ -1,11 +1,9 @@
 Changelog
 =========
 
-4.1.16 (unreleased)
+4.1.17 (unreleased)
 -------------------
-
-- Nothing changed yet.
-
+* Problems with packaging [Victor Fernandez de Alba]
 
 4.1.15 (2013-09-26)
 -------------------
