@@ -18,113 +18,52 @@
 
     <h1>Accessibilitat</h1>
     <br />
-    <p>
-    Aquest lloc web ha estat generat amb el <a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc"><strong>Genweb UPC v3 <img alt="(obriu en una finestra nova)" src="icon_blank.gif" class="link_blank"></strong></a>, 
-    una eina que permet la creació i gestió de webs segons el llibre d'estil institucional de la UPC.<br /><br />
-    El <a target="_blank" href="https://www.upc.edu/comunicacio/www/genweb-upc"><strong>Genweb UPC v3 <img alt="(obriu en una finestra nova)" src="icon_blank.gif" class="link_blank"></strong></a> 
-    ha estat desenvolupat conjuntament pel <a target="_blank" href="http://www.upc.edu/comunicacio">Servei de Comunicació i Promoció <img alt="(obriu en una finestra nova)" src="icon_blank.gif" class="link_blank"></a> 
-    de la UPC i <a target="_blank" href="http://www.upcnet.es">UPCnet <img alt="(obriu en una finestra nova)" src="icon_blank.gif" class="link_blank"></a> 
-    utilitzant com a base el sistema de gestió de continguts de programari lliure <a target="_blank" href="http://plone.org">Plone <img alt="(obriu en una finestra nova)" src="icon_blank.gif" class="link_blank"></a>. 
-    S'ha dissenyat perquè sigui completament accessible i usable, funcionant d'acord amb les guies d'accessibilitat W3C de contingut web.
-    </p>
-    
-    
-<br />
+<p>La <strong>Universitat Politècnica de Catalunya · BarcelonaTech (UPC)</strong> té entre els seus objectius posar a l'abast de la comunitat universitària i de la societat una web amb disseny accessible independentment de les possibles limitacions que poguessin condicionar l'accés al lloc web, ja siguin ocasionades per l'entorn, la connexió o de caràcter personal.</p>
+<p>Segons el Reial decret 1494/2007, de 12 de novembre , “La informació disponible a les pàgines d'Internet de les administracions públiques haurà de ser accessibles a les persones majors i persones amb discapacitat, amb un nivell mínim d'accessibilitat que compleixi les prioritats 1 i 2 de la Norma UNEIX 139803:2004.” (…) “Així mateix, serà obligatori allò expressat en aquest apartat per a les pàgines d'Internet i els seus continguts, dels centres públics educatius, de formació i universitaris, així com, dels centres privats sostinguts, total o parcialment, amb fons públics.”</p>
+<p><br />Aquest lloc web ha estat generat amb el <a href="https://www.upc.edu/comunicacio/www/genweb-upc" target="_blank"><strong>Genweb UPC v3 <img alt="(obriu en una finestra nova)" class="link_blank" src="http://www.upc.edu/comunicacio/icon_blank.gif" /></strong></a>, una eina que permet la creació i gestió de webs segons el llibre d'estil institucional de la UPC.</p>
+<p>El <a href="https://www.upc.edu/comunicacio/www/genweb-upc" target="_blank"><strong>Genweb UPC v3 <img alt="(obriu en una finestra nova)" class="link_blank" src="http://www.upc.edu/comunicacio/icon_blank.gif" /></strong></a> ha estat desenvolupat conjuntament pel Servei de Comunicació de la UPC i <a href="http://www.upcnet.es/" target="_blank">UPCnet <img alt="(obriu en una finestra nova)" class="link_blank" src="http://www.upc.edu/comunicacio/icon_blank.gif" /></a> utilitzant com a base el sistema de gestió de continguts de programari lliure <a href="http://plone.org/" target="_blank">Plone <img alt="(obriu en una finestra nova)" class="link_blank" src="http://www.upc.edu/comunicacio/icon_blank.gif" /></a>. S'ha dissenyat perquè sigui completament accessible i usable, funcionant d'acord amb les guies d'accessibilitat W3C de contingut web.</p>
 <h2>Pautes WAI</h2>
-<p><a title="(obriu en finestra nova)" target="_blank" href="http://www.w3.org/WAI/WCAG1AA-Conformance">
-<img src="http://www.upc.edu/config-ca/imatges/wcag-1.0-aa" alt="validat wai-aa wcag 1.0, (obriu en finestra nova)" class="align_left"></a> 
-Els continguts del web de la UPC han estat validats amb la certificació Doble-A, 
-segons les recomanacions de la WAI (<span lang="en">Web Accessibility Iniciative</span>), grup de treball internacional que pertany al W3C 
-(<span lang="en">World Wide Web Consortium</span>) , organisme que vetlla perquè cap col·lectiu pateixi discriminacions de cap mena que 
-puguin ser causa de fractures socials en el món virtual.</p>
+<p><a href="http://www.w3.org/WAI/WCAG1AA-Conformance" target="_blank" title="(obriu en finestra nova)"><img alt="validat wai-aa wcag 1.0, (obriu en finestra nova)" class="align_left" src="http://www.upc.edu/config-ca/imatges/wcag-1.0-aa" /></a>Els continguts del web de la UPC han estat validats amb la certificació Doble-A, segons les recomanacions de la WAI (<span>Web Accessibility Iniciative</span>), grup de treball internacional que pertany al W3C (<span>World Wide Web Consortium</span>) , organisme que vetlla perquè cap col·lectiu pateixi discriminacions de cap mena que puguin ser causa de fractures socials en el món virtual.</p>
 <br /><br />
-
-
-<p><a title="(obriu en finestra nova)" target="_blank" href="http://jigsaw.w3.org/css-validator/"><img src="http://www.upc.edu/config-ca/imatges/valid-css" alt="validat css, (obriu en finestra nova)" class="align_left"></a>
-<a title="(obriu en finestra nova)" target="_blank" href="http://validator.w3.org/check?uri=referer"><img src="http://www.upc.edu/config-ca/imatges/valid-xhtml-1.0" alt="validat xhtml 1.0, (obriu en finestra nova)" class="align_left"></a>
-En aquest sentit, les tècniques emprades al  web de la UPC encaixen amb el que la WAI preconitza, tant per al marcat XHTML 1.0 com per al CSS.</p>
-
-
-<br /><br />
-<h2>Mida del text</h2>
-<ul>
-     <li><code><big>A</big></code> &mdash; <a title="Text gran" href="javascript:setBaseFontSize('largeText',1);">Gran</a></li>
-     <li><code>A</code> &mdash; <a title="Text normal" href="javascript:setBaseFontSize('',1);">Normal</a></li>
-     <li><code><small>A</small></code> &mdash; <a title="Text petit" href="javascript:setBaseFontSize('smallText',1);">Petit</a></li>
-</ul>
-
-<h3>Canvis de mides als principals navegadors</h3>
-
-<div class="blockquote">
-
-	<img height="80" width="80" alt="mozilla firefox" class="align_left" src="http://www.upc.edu/config-ca/imatges/ff-icon.png"> 
-	<h4>Mozilla Firefox</h4> 
-	<p><strong>Augmentar la mida del text</strong>: CTRL + Roda del ratolí endarrere, CTRL + + (tecla més) o Visualitza &gt; Mida de la pàgina &gt; Augmenta<br /> 
-	<strong> Reduir la mida del text</strong>:  CTRL + Roda del ratolí endavant, CTRL + &ndash; (tecla menys) o Visualitza &gt; Mida de la pàgina &gt; Redueix<br /> 
-	<strong> Recuperar la vista original</strong>:  CTRL + 0 (zero) o Visualitza &gt; Mida de la pàgina &gt; Restableix</p> 
-	<div class="visualClear">&nbsp;</div> 
-	
-	<img height="80" width="80" class="align_left" alt="safari" src="http://www.upc.edu/config-ca/imatges/sf-icon.png"> 
-	<h4>Safari</h4> 
-	<p><strong>Augmentar la mida del text</strong>: Command (Mac) / CTRL (PC) + + (tecla més) o Ver &gt; Incrementar texto<br /> 
-	<strong> Reduir la mida del text</strong>: Command (Mac) / CTRL (PC) + &ndash; (tecla menys) o Ver &gt; Disminuir texto<br /> 
-	<strong> Recuperar la vista original</strong>: Command (Mac) / CTRL (PC) + 0 o Ver &gt; Tamaño normal del texto</p> 
-	<div class="visualClear">&nbsp;</div> 
-	
-	<img height="80" width="80" class="align_left" alt="internet explorer" src="http://www.upc.edu/config-ca/imatges/ie-icon.png"> 
-	<h4>Internet  Explorer</h4> 
-	<p><strong>Augmentar la mida del text</strong>:  CTRL + Roda del ratolí endavant, CTRL + + (tecla més) o Visualitza &gt; Mida del text &gt; Gran, Molt gran<br /> 
-	<strong> Reduir la mida del text</strong>: CTRL + Roda del ratolí endarrere, CTRL + &ndash; (tecla menys) o Visualitza &gt; Mida del text &gt; Petit, Molt petit<br /> 
-	<strong> Recuperar la vista original</strong>:  CTRL + 0 (zero, no amb el teclat numèric) o Visualitza &gt; Mida del text &gt; Mitjà</p> 
-	<div class="visualClear">&nbsp;</div> 
-	
-	<img height="80" width="80" class="align_left" alt="opera" src="http://www.upc.edu/config-ca/imatges/op-icon.png"> 
-	<h4>Opera</h4> 
-	<p><strong>Augmentar la mida del text</strong>:  CTRL + Roda del ratolí endavant o Visualitza &gt; Escala &gt; 120% i més<br /> 
-	<strong> Reduir la mida del text</strong>:  CTRL + Roda del ratolí endarrere o Visualitza &gt; Escala &gt; 80% i menys<br /> 
-	<strong> Recuperar la vista original</strong>:  Visualitza &gt; Escala &gt; 100%</p> 
-	<div class="visualClear">&nbsp;</div> 
-	
-	<img height="80" width="80" class="align_left" alt="chrome" src="http://www.upc.edu/config-ca/imatges/ch-icon.png"> 
-	<h4>Chrome</h4> 
-	<p><strong>Augmentar la mida del text</strong>:  CTRL + Roda del ratolí endavant, CTRL + + (tecla més) o Control de pàgina &gt; Zoom &gt; Més gran<br /> 
-	<strong> Reduir la mida del text</strong>:  CTRL + Roda del ratolí endarrere, CTRL + &ndash; (tecla menys) o Control de pàgina &gt; Zoom &gt; Més petit<br /> 
-	<strong> Recuperar la vista original</strong>:  CTRL + 0 (zero, no amb el teclat numèric) o Control de pàgina &gt; Zoom &gt; Normal</p>
-	<br /><br />
-
+<p><a href="http://jigsaw.w3.org/css-validator/" target="_blank" title="(obriu en finestra nova)"><img alt="validat css, (obriu en finestra nova)" class="align_left" src="http://www.upc.edu/config-ca/imatges/valid-css" /></a><a href="http://validator.w3.org/check?uri=referer" target="_blank" title="(obriu en finestra nova)"><img alt="validat xhtml 1.0, (obriu en finestra nova)" class="align_left" src="http://www.upc.edu/config-ca/imatges/valid-xhtml-1.0" /></a>En aquest sentit, les tècniques emprades al web de la UPC encaixen amb el que la WAI preconitza, tant per al marcat XHTML 1.0 com per al CSS.</p>
+<h2>Canvis de mides als principals navegadors</h2>
+<div class="blockquote"><img alt="mozilla firefox" class="align_left" height="80" src="http://www.upc.edu/config-ca/imatges/ff-icon.png" width="80" />
+<h3>Mozilla Firefox</h3>
+<p><strong>Augmentar la mida del text</strong>: CTRL + Roda del ratolí endarrere, CTRL + + (tecla més) o Visualitza &gt; Mida de la pàgina &gt; Augmenta<br /><strong>Reduir la mida del text</strong>: CTRL + Roda del ratolí endavant, CTRL + – (tecla menys) o Visualitza &gt; Mida de la pàgina &gt; Redueix<br /><strong>Recuperar la vista original</strong>: CTRL + 0 (zero) o Visualitza &gt; Mida de la pàgina &gt; Restableix</p>
+<div class="visualClear"></div>
+<img alt="safari" class="align_left" height="80" src="http://www.upc.edu/config-ca/imatges/sf-icon.png" width="80" />
+<h3>Safari</h3>
+<p><strong>Augmentar la mida del text</strong>: Command (Mac) / CTRL (PC) + + (tecla més) o Ver &gt; Incrementar texto<br /><strong>Reduir la mida del text</strong>: Command (Mac) / CTRL (PC) + – (tecla menys) o Ver &gt; Disminuir texto<br /><strong>Recuperar la vista original</strong>: Command (Mac) / CTRL (PC) + 0 o Ver &gt; Tamaño normal del texto</p>
+<div class="visualClear"></div>
+<img alt="internet explorer" class="align_left" height="80" src="http://www.upc.edu/config-ca/imatges/ie-icon.png" width="80" />
+<h3>Internet Explorer</h3>
+<p><strong>Augmentar la mida del text</strong>: CTRL + Roda del ratolí endavant, CTRL + + (tecla més) o Visualitza &gt; Mida del text &gt; Gran, Molt gran<br /><strong>Reduir la mida del text</strong>: CTRL + Roda del ratolí endarrere, CTRL + – (tecla menys) o Visualitza &gt; Mida del text &gt; Petit, Molt petit<br /><strong>Recuperar la vista original</strong>: CTRL + 0 (zero, no amb el teclat numèric) o Visualitza &gt; Mida del text &gt; Mitjà</p>
+<div class="visualClear"></div>
+<img alt="opera" class="align_left" height="80" src="http://www.upc.edu/config-ca/imatges/op-icon.png" width="80" />
+<h3>Opera</h3>
+<p><strong>Augmentar la mida del text</strong>: CTRL + Roda del ratolí endavant o Visualitza &gt; Escala &gt; 120% i més<br /><strong>Reduir la mida del text</strong>: CTRL + Roda del ratolí endarrere o Visualitza &gt; Escala &gt; 80% i menys<br /><strong>Recuperar la vista original</strong>: Visualitza &gt; Escala &gt; 100%</p>
+<div class="visualClear"></div>
+<img alt="chrome" class="align_left" height="80" src="http://www.upc.edu/config-ca/imatges/ch-icon.png" width="80" />
+<h3>Chrome</h3>
+<p><strong>Augmentar la mida del text</strong>: CTRL + Roda del ratolí endavant, CTRL + + (tecla més) o Control de pàgina &gt; Zoom &gt; Més gran<br /><strong>Reduir la mida del text</strong>: CTRL + Roda del ratolí endarrere, CTRL + – (tecla menys) o Control de pàgina &gt; Zoom &gt; Més petit<br /><strong>Recuperar la vista original</strong>: CTRL + 0 (zero, no amb el teclat numèric) o Control de pàgina &gt; Zoom &gt; Normal</p>
 </div>
-
-
 <br /><br />
-<h2>Tecles d'accés</h2> 
-<p>Les tecles d'accés són un dispositiu de navegació que permet visitar aquest web utilitzant el teclat.<br /> 
-Més informació sobre les tecles d'accés: <a target="_blank" href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey">Guies d'accessibilitat 
-W3C <img class="link_blank" alt="(obriu en finestra nova)" src="icon_blank.gif"></a>.</p> 
-<p>Aquest web utilitza una configuració que coincideix amb la majoria de recomanacions d'accessibilitat internacionals.</p> 
-
-<h3>Tecles d'accés disponibles</h3> 
-<ul>
-     <li><code>1</code> &mdash; Pàgina d'inici</li>
-     <li><code>2</code> &mdash; Vés al contingut</li>
-     <li><code>3</code> &mdash; Mapa del web</li>
-     <li><code>4</code> &mdash; Focus al camp de cerca</li>
-     <li><code>6</code> &mdash; Arbre de navegació</li>
-     <li><code>9</code> &mdash; Informació de contacte</li>
-     <li><code>0</code> &mdash; Consulta accessibilitat</li>
+<h2>Tecles d'accés</h2>
+<p>Les tecles d'accés són un dispositiu de navegació que permet visitar aquest web utilitzant el teclat.<br />Més informació sobre les tecles d'accés: <a href="http://www.w3.org/TR/WCAG10-HTML-TECHS/#link-accesskey" target="_blank">Guies d'accessibilitat W3C <img alt="(obriu en finestra nova)" class="link_blank" src="http://www.upc.edu/comunicacio/icon_blank.gif" /></a>.</p>
+<p>Aquest web utilitza una configuració que coincideix amb la majoria de recomanacions d'accessibilitat internacionals.</p>
+<h3>Tecles d'accés disponibles</h3>
+<ul style="margin-left: 0px; ">
+<li style="list-style: none; "><code style="font-size: 12px; ">1</code> — Pàgina d'inici</li>
+<li style="list-style: none; "><code style="font-size: 12px; ">2</code> — Vés al contingut</li>
+<li style="list-style: none; "><code style="font-size: 12px; ">3</code> — Mapa del web</li>
+<li style="list-style: none; "><code style="font-size: 12px; ">4</code> — Focus al camp de cerca</li>
+<li style="list-style: none; "><code style="font-size: 12px; ">6</code> — Arbre de navegació</li>
+<li style="list-style: none; "><code style="font-size: 12px; ">9</code> — Informació de contacte</li>
+<li style="list-style: none; "><code style="font-size: 12px; ">0</code> — Consulta accessibilitat</li>
 </ul>
-
 <br /><br />
-<h2>Optimització</h2> 
-<p>El web s'ha optimitzat per visualitzar-lo amb una resolució mínima de 1024 x 768 píxels i, per assegurar-ne la màxima compatibilitat, 
-se n'ha verificat acuradament el comportament amb els principals navegadors d'Internet: <strong>Firefox 3</strong> i posteriors, 
-<strong>Explorer 6</strong> i posteriors, <strong>Safari </strong>4, <strong>Chrome </strong>3 i <strong>Opera </strong>10.</p> 
-
-<br /><br />
-<h2>Contacte</h2> 
-<p>Actualment, continuem treballant per mantenir i millorar l'accessibilitat de totes les pàgines del web. 
-Si observeu alguna anomalia, relacionada amb l'accessibilitat, contacteu sisplau amb l'<a href="/contact" 
-       tal:attributes="href string:${portal_url}/contact">Administració del web</a>.</p>
-
+<h2>Contacte</h2>
+<p>Actualment, continuem treballant per mantenir i millorar l'accessibilitat de totes les pàgines del web. Si observeu alguna anomalia, relacionada amb l'accessibilitat, contacteu si us plau amb l'<a href="http://www.upc.edu/comunicacio/contact">Administració del web</a>.</p>
     </div>
 </body>
 </html>
