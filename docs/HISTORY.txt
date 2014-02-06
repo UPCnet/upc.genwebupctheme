@@ -1,11 +1,10 @@
 Changelog
 =========
 
-4.1.18 (unreleased)
+4.1.18 (2014-02-06)
 -------------------
 
-- Nothing changed yet.
-
+* Cambio pie, texto accesibilidad y enlace y nombre de la información de máster [Corina Riba]
 
 4.1.17 (2013-09-27)
 -------------------
