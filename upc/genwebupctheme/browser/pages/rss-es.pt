@@ -16,26 +16,25 @@
      tal:define="utils context/@@upc.genweb.utils;">
 
 
-<h1>Información RSS</h1><br />
+<h2 class="liniaBaix">Titulares en RSS</h2>
 <p><strong>RSS </strong>(sigla de <em>Really Simple Syndication</em>) es un canal de distribución de contenidos que se actualizan a menudo, como sitios de noticias, weblogs o podcasts, por medio del cual se puede compartir la información y utilizarla en otros sitios web o programas. Es en esencia una sindicación de contenidos.<br />
 <br />
-La principal ventaja del sistema es la agilidad, puesto que ya no hay que descargar las imágenes y otros elementos del web, solo los titulares, y también se puede juntar el contenido de&nbsp; muchos sitios web en un solo espacio. Gracias a esta tecnología, los usuarios ya no deben preocuparse de comprobar si hay novedades que les interesen en un determinado espacio digital, sino que pueden recibir y organizar los nuevos titulares de un espacio digital en el momento mismo en que se publican. El web incorpora este servicio en todas las páginas donde aparece el icono <img src="rss.gif" alt="rss">.</p>
+La principal ventaja del sistema es la agilidad, puesto que ya no hay que descargar las imágenes y otros elementos del web, solo los titulares, y también se puede juntar el contenido de&nbsp; muchos sitios web en un solo espacio. Gracias a esta tecnología, los usuarios ya no deben preocuparse de comprobar si hay novedades que les interesen en un determinado espacio digital, sino que pueden recibir y organizar los nuevos titulares de un espacio digital en el momento mismo en que se publican.<br />
 <br />
-<h2>RSS de la UPC</h2>
-<ul>
-
-	<li><a href="http://www.upc.edu/agenda-actividades/todas/RSS?set_language=es" target="_blank">Agenda UPC <img src="icon_blank.gif" class="link_blank" alt="Abre en ventana nueva"></a></li>
-    <li><a target="_blank" href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=es">Noticias UPC [Oficina de Medios de Comunicación] <img class="link_blank" alt="Abre en ventana nueva" src="icon_blank.gif"></a></li>
-    <li><a href="http://tv.upc.edu/rss-es/ultimos-videos/RSS?set_language=es" target="_blank">UPCtv, últimos vídeos publicados <img src="icon_blank.gif" class="link_blank" alt="Abre en ventana nueva"></a></li>
-</ul>
+<span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16.799999237060547px;">Los programas que utilizan RSS se denominan <strong>agregadores</strong>. Existen muchos tipos de agregadores: incrustados en navegadores web, widgets para el escritorio, en programas de correo electrónico, en páginas web dedicadas y en programas dedicados.</span></p>
 <br />
-<h2>Agregadores de libre distribución</h2>
-Un programa que utiliza RSS se denomina agregador. Existen muchos tipos de agregadores: incrustados en navegadores web, widgets para el escritorio, en programas de correo electrónico, en páginas web dedicadas y en programas dedicados. Los de libre distribución son:
-<br /><br />
+<div class="cols trescols">
+<div class="col1">
+<h3>RSS UPC</h3>
 <ul>
-    <li><a href="http://www.feedreader.com/" target="_blank">FeedReader <img src="icon_blank.gif" alt="Abrir el enlace en una nueva ventana" class="link_blank"></a></li>
-    <li><a href="http://google.com/reader" target="_blank">Google Reader <img src="icon_blank.gif" alt="Abrir el enlace en una nueva ventana" class="link_blank"></a></li>
+    <li><a href="http://www.upc.edu/agenda-actividades/todas/RSS?set_language=es" target="_blank">Agenda UPC <img src="icon_blank.gif" class="link_blank" alt="Abrir el enlace en una nueva ventana" /></a></li>
+    <li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=es" target="_blank">Noticias UPC <img src="icon_blank.gif" class="link_blank" alt="Abrir el enlace en una nueva ventana" /></a></li>
+    <li><a href="http://tv.upc.edu/rss-es/ultimos-videos/RSS?set_language=es" target="_blank">UPCtv, últimos videos publicados <img src="icon_blank.gif" class="link_blank" alt="Abrir el enlace en una nueva ventana" /></a></li>
+    <li><a href="http://bibliotecnica.upc.edu/rss.xml" target="_blank">Biblioteca <img src="icon_blank.gif" class="link_blank" alt="Abrir el enlace en una nueva ventana" /></a></li>
 </ul>
+</div>
+</div>
+<br type="_moz" />
 
 
     </div>

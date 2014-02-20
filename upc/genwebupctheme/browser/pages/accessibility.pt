@@ -13,7 +13,8 @@
 
 <body>
 <div metal:fill-slot="main" class="plain"
-     tal:define="utils context/@@upc.genweb.utils;">
+     tal:define="utils context/@@upc.genweb.utils;
+                 portal_url context/@@plone_portal_state/portal_url">
 
 
     <h1>Accessibility</h1>
@@ -68,7 +69,7 @@
 </ul>
 <br />
 <h2 class="liniaBaix">Contact</h2>
-<p>We are working to maintain and improve the accessibility of this website. If you notice any accessibility-related anomalies on any of its pages, please contact the<a href="http://www.upc.edu/sri/contact">webmaster</a>.</p>    </div>
+<p>We are working to maintain and improve the accessibility of this website. If you notice any accessibility-related anomalies on any of its pages, please contact the <a tal:attributes="href string:${portal_url}/contact" href="">webmaster</a>.</p>    </div>
 
 </body>
 </html>

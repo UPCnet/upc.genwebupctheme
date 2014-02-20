@@ -1,6 +1,6 @@
 <div id="peu" tal:define="utils context/@@upc.genweb.utils;
-													portal_url context/@@plone_portal_state/portal_url"
-                     i18n:domain="upc.genwebupc">
+						  portal_url context/@@plone_portal_state/portal_url"
+              i18n:domain="upc.genwebupc">
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
 		<tal:block tal:repeat="obj python: view.bannersPeu()">
@@ -28,9 +28,11 @@
                 <img alt=" " class="quadradet" tal:attributes="src string:${portal_url}/quadradet.gif"/>
             <a accesskey="0" href=""
                 i18n:attributes="title genweb-disclaimer"
-                i18n:translate="genweb-disclaimer"
                 tal:attributes="href links/disclaimer"
-                target="_blank">Disclaimer<img class="link_blank" src="icon_blank.gif"/></a>
+                target="_blank">
+                <tal:trans i18n:translate="genweb-disclaimer">Disclaimer</tal:trans>
+                <img class="link_blank" src="icon_blank.gif"/>&nbsp;
+            </a>
         </span>
 		<span tal:condition="python:utils.pref_lang()=='ca'" tal:content="python: utils.getGWConfig().firmaunitat_ca">Servei de Comunicació i Promoció.</span>
         <span tal:condition="python:utils.pref_lang()=='es'" tal:content="python: utils.getGWConfig().firmaunitat_es">Servei de Comunicació i Promoció.</span>

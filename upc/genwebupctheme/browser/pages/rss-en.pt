@@ -16,31 +16,22 @@
      tal:define="utils context/@@upc.genweb.utils;">
 
 
-<h1>RSS information </h1><br />
-<p>
-	The <strong>RSS</strong> (abbreviation for <em><span>Really Simple Syndication</span></em>) is a news distribution 
-	channel that facilitates access to the latest news of a Web site. It is a family of web feed formats used to publish 
-	frequently updated digital content, such as blogs, news feeds or podcasts. <br /><br /> Users of RSS content use programs called 
-	feed "readers" or "aggregators": the user subscribes to a feed by supplying to his or her reader a link to the feed; the reader 
-	can then check the user's subscribed feeds to see if any of those feeds have new content since the last time it was checked, and 
-	if so, retrieve that content and present it to the user. This site incorporates this service in all the pages where this icon 
-	appears <img alt="RSS" src="rss.gif" />.
-</p>
+<h2 class="liniaBaix">RSS headlines</h2>
+<p><strong>RSS </strong>(<em>Really Simple Syndication</em>) feeds are content feeds used to publish frequently updated material, such as items on news sites, blogs and podcasts. RSS feeds allow you to share information and use it on other sites and programs. It is essentially a content syndication format.<br />
 <br />
-<h2>UPC RSS</h2>
-    <ul>
-	    <li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=en" target="_blank">News UPC. Barcelona Tech <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
-	   	<li><a href="http://tv.upc.edu/latest-videos/RSS?set_language=en" target="_blank">UPCtv, latest videos <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
-    </ul>
-<br />
-
-<h2 class="liniaBaix">Free readers</h2>
-<p>A program that uses RSS is called feed "readers" or "aggregators". Some free readers are:</p>
-<br />
+The main advantage of the system is its speed. With RSS feeds, users can get headlines without downloading images and other elements of a site. It also makes it easy to gather content from many sites in a single space. Thanks to this technology, users no longer need to think about checking to see if there are new items of interest to them at a particular digital space. Instead, they can receive and organise new headlines in a digital space as soon as they're published.</p>
+<span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16.799999237060547px;">A program that gathers RSS feeds is called an <strong>aggregator</strong>. There are many types of aggregators: embedded in web browsers, desktop widgets, in e-mail programs, in dedicated web pages, and in dedicated programs.</span><br />
+<div class="cols trescols">
+<div class="col1">
+<h3>UPC RSS feeds</h3>
 <ul>
-	<li><a href="http://www.feedreader.com/" target="_blank">FeedReader <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
-	<li><a href="http://google.com/reader" target="_blank">Google Reader <img alt="Open in a new window" class="link_blank" src="icon_blank.gif" /></a></li>
+    <li><a href="http://www.upc.edu/saladepremsa/actualitat-upc/RSS?set_language=en" target="_blank">UPC Today <img src="icon_blank.gif" class="link_blank" alt="Open link in a new window" /></a></li>
+    <li><a href="http://tv.upc.edu/rss-en/latest-videos/RSS?set_language=en" target="_blank">UPCtv, latest videos posted <img src="icon_blank.gif" class="link_blank" alt="Open link in a new window" /></a></li>
+    <li><a href="http://bibliotecnica.upc.edu/rss.xml" target="_blank">Library&nbsp;<img src="icon_blank.gif" class="link_blank" alt="Open link in a new window" /></a></li>
 </ul>
+</div>
+</div>
+<br type="_moz" />
 
 
     </div>

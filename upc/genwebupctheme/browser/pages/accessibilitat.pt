@@ -13,8 +13,8 @@
 
 <body>
 <div metal:fill-slot="main" class="plain"
-     tal:define="utils context/@@upc.genweb.utils;">
-
+     tal:define="utils context/@@upc.genweb.utils;
+                 portal_url context/@@plone_portal_state/portal_url">
 
     <h1>Accessibilitat</h1>
     <br />
@@ -63,7 +63,7 @@
 </ul>
 <br /><br />
 <h2>Contacte</h2>
-<p>Actualment, continuem treballant per mantenir i millorar l'accessibilitat de totes les pàgines del web. Si observeu alguna anomalia, relacionada amb l'accessibilitat, contacteu si us plau amb l'<a href="http://www.upc.edu/comunicacio/contact">Administració del web</a>.</p>
+<p>Actualment, continuem treballant per mantenir i millorar l'accessibilitat de totes les pàgines del web. Si observeu alguna anomalia, relacionada amb l'accessibilitat, contacteu si us plau amb l'<a tal:attributes="href string:${portal_url}/contact" href="">Administració del web</a>.</p>
     </div>
 </body>
 </html>
