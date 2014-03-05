@@ -2985,3 +2985,9 @@ dt span[class^="contenttype"] {padding:5px 0;}
 * html  img, div, a, input { behavior: url(&dtml-portal_url;/iepngfix.htc); }
 
 .kssattr-formname-gn6-recollir-dades .field { padding-top: 0px; }
+
+/* Accesibilty pages */
+
+.icon_nav img {
+	margin-bottom: 55px;
+}
