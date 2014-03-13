@@ -1,11 +1,10 @@
 Changelog
 =========
 
-4.1.20 (unreleased)
+4.1.20 (2014-03-13)
 -------------------
 
-- Nothing changed yet.
-
+* Estilos páginas Accesibilidad [Corina Riba]
 
 4.1.19 (2014-02-20)
 -------------------
