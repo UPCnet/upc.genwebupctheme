@@ -1,11 +1,10 @@
 Changelog
 =========
 
-4.1.22 (unreleased)
+4.1.22 (2014-10-23)
 -------------------
 
-- Nothing changed yet.
-
+* Add cookies message [hanirok]
 
 4.1.21 (2014-07-03)
 -------------------
