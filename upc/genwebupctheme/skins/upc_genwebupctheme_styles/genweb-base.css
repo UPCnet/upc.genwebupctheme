@@ -427,6 +427,12 @@ html*.sobreElWeb {
 #breadcrumbs-you-are-here{
 	font-weight:bold;}
 .rsspeu {margin-bottom:-1px;}
+
+#cookies {
+	margin-left: 22px;
+	padding: 10px 0;
+}
+
 /*cerca*/
 
 #searchGadget {

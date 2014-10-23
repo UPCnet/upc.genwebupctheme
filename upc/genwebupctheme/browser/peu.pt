@@ -1,5 +1,6 @@
 <div id="peu" tal:define="utils context/@@upc.genweb.utils;
-						  portal_url context/@@plone_portal_state/portal_url"
+						  portal_url context/@@plone_portal_state/portal_url;
+                          cookies view/idioma_cookies"
               i18n:domain="upc.genwebupc">
 
 	<div id="bandaLogos" tal:condition="view/bannersPeu">
@@ -13,8 +14,13 @@
 			</tal:items>
 		</tal:block>
 	</div>
-
-   <div id="signText">
+    <div id="cookies">
+    <tal:msg i18n:translate="cookie_policy_this_site">
+        Aquest web utilitza cookies pròpies per oferir-li una millor experiència i servei. En continuar amb la navegació entenem que accepta la nostra
+    </tal:msg>
+    <a tal:attributes="href cookies" i18n:translate="cookie_policy" target="_blank">política de cookies</a>.
+    </div>
+    <div id="signText">
         <span tal:define="links view/linksPeu" tal:condition="python:utils.pref_lang()!='zh'" class="sobreElWeb">
             <img src="rss.gif" class="rsspeu" alt="RSS"> <a accesskey="0" href=""
                 i18n:attributes="title genweb-rss"

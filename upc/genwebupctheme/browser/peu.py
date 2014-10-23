@@ -56,3 +56,20 @@ class Peu(ViewletBase):
             disclaimer_link = "https://www.upc.edu/disclaimer"
 
         return dict(rss=rss_link, about=about_link, access=access_link, disclaimer=disclaimer_link)
+
+    def idioma_cookies(self):
+        lt = getToolByName(self, 'portal_languages')
+        idioma = lt.getPreferredLanguage()
+        urltool = getToolByName(self.context, 'portal_url')
+        path = urltool.portal_url()
+
+        if idioma == 'ca':
+            return 'https://www.upc.edu/avis-legal/politica-de-cookies'
+        if idioma == 'es':
+            return 'https://www.upc.edu/aviso-legal/politica-de-cookies'
+        if idioma == 'en':
+            return 'https://www.upc.edu/disclaimer/cookies-policy'
+        if idioma == 'zh':
+            return 'https://www.upc.edu/disclaimer/cookies-policy'
+        if idioma == '':
+            return 'https://www.upc.edu/avis-legal/politica-de-cookies'
